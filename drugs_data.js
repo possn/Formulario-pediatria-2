@@ -2397,5 +2397,1824 @@ const DRUGS = [
 "Vantagem: pode ser administrada IM e em SG5%; menos flebite; ritmo mais rápido"
 ],
 "source": "Abend NS et al. Epilepsia 2019; BNF for Children 2023-24; Pro-Epanutin SmPC"
+},
+{
+"id": "aciclovir",
+"name": "Aciclovir",
+"category": "antibiotico",
+"src": "original",
+"class": "Antiviral — inibidor DNA polimerase viral (HSV, VZV, CMV)",
+"brands": "Zovirax 250 mg pó EV; comp. 200/400/800 mg; susp. 200 mg/5 ml",
+"indication": [
+"Encefalite por HSV — emergência",
+"Infecção neonatal por HSV",
+"Varicela grave / imunodeprimido",
+"Zoster disseminado",
+"Profilaxia em imunodeprimidos"
+],
+"dose": [
+{
+"ind": "Encefalite HSV / Infecção neonatal EV",
+"val": "20 mg/kg/dose EV",
+"max": "—",
+"freq": "cada 8h × 14–21 dias",
+"note": "Hidratação adequada obrigatória — nefrotóxico"
+},
+{
+"ind": "Varicela grave EV",
+"val": "10–15 mg/kg/dose EV",
+"max": "—",
+"freq": "cada 8h × 7–10 dias",
+"note": ""
+},
+{
+"ind": "Varicela oral (imunocompetente > 2 anos)",
+"val": "20 mg/kg/dose oral",
+"max": "800 mg/dose",
+"freq": "4×/dia × 5 dias",
+"note": "Iniciar < 24h do exantema"
+},
+{
+"ind": "Profilaxia oral",
+"val": "20 mg/kg/dia",
+"max": "400 mg 2×/dia",
+"freq": "2 doses/dia",
+"note": ""
+}
+],
+"prep": "EV: reconstituir e diluir em SF ou SG5% → concentração ≤ 7 mg/ml. Infusão 60 min. Manter diurese adequada.",
+"ci": [
+"Insuf. renal grave (ajustar dose)"
+],
+"alert": [
+"⚠️ Nefrotoxicidade — hidratar bem e infusão lenta",
+"⚠️ Neurotoxicidade (confusão, tremor) em insuf. renal",
+"Ajuste obrigatório se TFG < 50 ml/min"
+],
+"source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+},
+{
+"id": "flucloxacilina",
+"name": "Flucloxacilina",
+"category": "antibiotico",
+"src": "added",
+"class": "Penicilina resistente às penicilinases — antiestafilocócica",
+"brands": "Floxapen 250 mg; 500 mg; 1 g caps/pó EV",
+"indication": [
+"Infecções estafilocócicas MSSA — 1ª linha",
+"Osteomielite / artrite séptica por Staphylococcus",
+"Celulite / impétigo grave",
+"Endocardite estafilocócica MSSA"
+],
+"dose": [
+{
+"ind": "Infecção moderada oral",
+"val": "12,5–25 mg/kg/dose oral",
+"max": "500 mg/dose",
+"freq": "4×/dia (jejum)",
+"note": "Tomar 30 min antes das refeições"
+},
+{
+"ind": "Infecção grave EV",
+"val": "25–50 mg/kg/dose EV",
+"max": "2 g/dose",
+"freq": "4–6×/dia",
+"note": ""
+},
+{
+"ind": "Osteomielite / endocardite",
+"val": "50 mg/kg/dose EV",
+"max": "2 g/dose",
+"freq": "6×/dia × 4–6 semanas",
+"note": ""
+}
+],
+"prep": "EV: dissolver e diluir em SF. Administrar em 15–30 min.",
+"ci": [
+"Alergia a penicilinas",
+"Icterícia/hepatotoxicidade prévia por flucloxacilina"
+],
+"alert": [
+"⚠️ Hepatotoxicidade colestática (rara) — monitorizar LFTs em tratamentos prolongados",
+"Ineficaz em MRSA",
+"Absorção oral reduzida com alimentos"
+],
+"source": "BNF for Children 2023-24; GOSH Drug Formulary 2023"
+},
+{
+"id": "piperacilina_tazobactam",
+"name": "Piperacilina/Tazobactam",
+"category": "antibiotico",
+"src": "original",
+"class": "Penicilina + inibidor β-lactamase de amplo espectro",
+"brands": "Tazocin 2,25 g; 4,5 g pó EV",
+"indication": [
+"Sépsis nosocomial grave",
+"Infecções por Pseudomonas",
+"Febre neutropénica alto risco",
+"Infecções intra-abdominais",
+"Pneumonia hospitalar grave"
+],
+"dose": [
+{
+"ind": "Infecção grave EV",
+"val": "90 mg/kg/dose (piperacilina)",
+"max": "4,5 g/dose",
+"freq": "3–4×/dia",
+"note": "Infusão extendida 4h melhora %T>MIC contra P. aeruginosa"
+},
+{
+"ind": "Febre neutropénica",
+"val": "100 mg/kg/dia (piperacilina)",
+"max": "16 g piperacilina/dia",
+"freq": "4×/dia",
+"note": ""
+}
+],
+"prep": "Diluir em SF ou SG5%. Concentração ≤ 45 mg/ml piperacilina. Infusão 30 min (ou 4h extendida).",
+"ci": [
+"Alergia a penicilinas"
+],
+"alert": [
+"⚠️ Hipocaliemia (monitorizar K+)",
+"⚠️ Neurotoxicidade em doses altas + insuf. renal",
+"Ajuste renal obrigatório se TFG < 40 ml/min"
+],
+"source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+},
+{
+"id": "cotrimoxazol",
+"name": "Cotrimoxazol (SMZ/TMP)",
+"category": "antibiotico",
+"src": "original",
+"class": "Sulfonamida + inibidor dihidrofolato redutase",
+"brands": "Bactrim susp. 200/40 mg/5 ml; comp. 400/80 mg; EV 400/80 mg/5 ml",
+"indication": [
+"Pneumonia por Pneumocystis jirovecii (PCP) — 1ª linha",
+"Profilaxia PCP",
+"Nocardiose",
+"Toxoplasmose (alternativa)",
+"ITU por ESBL",
+"Listeria (alternativa)"
+],
+"dose": [
+{
+"ind": "Tratamento PCP (calculado em TMP)",
+"val": "15–20 mg TMP/kg/dia EV ou oral",
+"max": "—",
+"freq": "3–4 doses/dia × 21 dias",
+"note": ""
+},
+{
+"ind": "Profilaxia PCP",
+"val": "5 mg TMP/kg/dia oral",
+"max": "160 mg TMP/dia",
+"freq": "1×/dia (3 dias/semana ou diária)",
+"note": ""
+},
+{
+"ind": "ITU oral",
+"val": "6 mg TMP/kg/dia",
+"max": "320 mg TMP/dia",
+"freq": "2 doses/dia × 5–10 dias",
+"note": ""
+}
+],
+"prep": "EV: diluir 5 ml em 125 ml SF ou SG5%. Infusão 60–90 min.",
+"ci": [
+"< 6 semanas (kernicterus)",
+"Insuf. renal grave",
+"Insuf. hepática grave",
+"Défice G6PD (relativa)"
+],
+"alert": [
+"⚠️ Stevens-Johnson / NET (raro mas grave)",
+"⚠️ Mielossupressão — monitorizar hemograma",
+"⚠️ Hipercaliemia (bloqueia excreção tubular K+)",
+"⚠️ ↑ creatinina (inibe secreção tubular — não é insuf. renal verdadeira)"
+],
+"source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+},
+{
+"id": "linezolide",
+"name": "Linezolide",
+"category": "antibiotico",
+"src": "added",
+"class": "Oxazolidinona — inibidor síntese proteica 50S (bacteriostático)",
+"brands": "Zyvoxid 600 mg/300 ml (EV); comp. 600 mg; susp. 100 mg/5 ml",
+"indication": [
+"MRSA — alternativa à vancomicina",
+"Infecções por Enterococcus faecium VRE",
+"Pneumonia nosocomial por gram-positivos resistentes",
+"Infecções osteoarticulares por MRSA (boa biodisponibilidade oral)"
+],
+"dose": [
+{
+"ind": "< 12 anos EV/oral",
+"val": "10 mg/kg/dose",
+"max": "600 mg/dose",
+"freq": "3×/dia",
+"note": ""
+},
+{
+"ind": "≥ 12 anos EV/oral",
+"val": "600 mg/dose",
+"max": "600 mg/dose",
+"freq": "2×/dia",
+"note": "Biodisponibilidade oral ~100% — transição EV→oral imediata possível"
+}
+],
+"prep": "EV: pronto a usar (2 mg/ml). Infusão 30–120 min. Compatível com SF e SG5%.",
+"ci": [
+"Uso concomitante com IMAOs",
+"Hipertensão não controlada (efeito serotoninérgico)"
+],
+"alert": [
+"⚠️ Mielossupressão (trombocitopenia, anemia) — monitorizar hemograma semanal se > 2 semanas",
+"⚠️ Síndrome serotoninérgica com SSRIs/triptanos/tramadol",
+"⚠️ Neuropatia periférica e óptica em uso prolongado (> 4 semanas)",
+"Reservar para organismos resistentes — risco de resistência"
+],
+"source": "BNF for Children 2023-24; GOSH Drug Formulary 2023; Harriet Lane 23rd Ed"
+},
+{
+"id": "daptomicina",
+"name": "Daptomicina",
+"category": "antibiotico",
+"src": "added",
+"class": "Lipopeptídeo cíclico — disrupção membrana bacteriana gram-positivos",
+"brands": "Cubicin 350 mg; 500 mg pó EV",
+"indication": [
+"Bacteriemia por S. aureus incluindo MRSA",
+"Endocardite infecciosa direita por S. aureus",
+"Infecções gram-positivas resistentes (MRSA, VRE) — pele/partes moles",
+"NÃO usar em pneumonia (inactivada por surfactante)"
+],
+"dose": [
+{
+"ind": "< 1 ano",
+"val": "6 mg/kg EV",
+"max": "—",
+"freq": "1×/dia",
+"note": "Dados limitados — off-label"
+},
+{
+"ind": "1–6 anos",
+"val": "9 mg/kg EV",
+"max": "—",
+"freq": "1×/dia",
+"note": ""
+},
+{
+"ind": "7–11 anos",
+"val": "7 mg/kg EV",
+"max": "—",
+"freq": "1×/dia",
+"note": ""
+},
+{
+"ind": "≥ 12 anos",
+"val": "6–10 mg/kg EV",
+"max": "—",
+"freq": "1×/dia",
+"note": "Bacteriemia/endocardite: 6 mg/kg; Infecções complicadas: 8–10 mg/kg"
+}
+],
+"prep": "Diluir em SF. Concentração ≤ 50 mg/ml. Infusão 30 min ou bólus 2 min.",
+"ci": [
+"Pneumonia (inactivada pelo surfactante pulmonar)"
+],
+"alert": [
+"⚠️ Rabdomiólise / miopatia — monitorizar CK semanalmente. Suspender se CK > 5× LSN",
+"⚠️ Potenciada por estatinas — suspender estatinas durante tratamento",
+"⚠️ Eosinofilia pulmonar (rara)",
+"Ajuste renal se TFG < 30 ml/min"
+],
+"source": "BNF for Children 2023-24; Sader HS. Pediatr Infect Dis J 2012"
+},
+{
+"id": "caspofungina",
+"name": "Caspofungina",
+"category": "antibiotico",
+"src": "added",
+"class": "Equinocandina — inibidor síntese β-1,3-glucano (parede fúngica)",
+"brands": "Cancidas 50 mg; 70 mg pó EV",
+"indication": [
+"Candidemia / candidose invasiva — 1ª linha",
+"Aspergilose invasiva refractária ou intolerância a anfotericina",
+"Candida resistente ao fluconazol",
+"Febre neutropénica refractária (terapia empírica)"
+],
+"dose": [
+{
+"ind": "≥ 3 meses EV",
+"val": "70 mg/m² (dose de carga) → 50 mg/m²/dia",
+"max": "70 mg carga; 50 mg/dia manutenção",
+"freq": "1×/dia",
+"note": "Se sem resposta: 70 mg/m²/dia"
+},
+{
+"ind": "Alternativa por peso < 3 meses",
+"val": "25 mg/m²/dia EV",
+"max": "—",
+"freq": "1×/dia",
+"note": "Dados limitados em neonatos"
+}
+],
+"prep": "Reconstituir com 10,8 ml água estéril → diluir em SF 250 ml. Infusão 60 min. NÃO usar SG5% (precipitação).",
+"ci": [
+"Hipersensibilidade a equinocandinas"
+],
+"alert": [
+"⚠️ Ajuste na insuf. hepática moderada/grave",
+"Poucos efeitos adversos — boa tolerabilidade",
+"↑ ciclosporina (monitorizar níveis)",
+"Rifampicina e outros indutores CYP podem reduzir eficácia"
+],
+"source": "BNF for Children 2023-24; ESCMID/ECMM Guidelines 2023"
+},
+{
+"id": "lacosamida",
+"name": "Lacosamida",
+"category": "antiepileptico",
+"src": "added",
+"class": "Antiepiléptico — estabilização inactivação lenta canais Na+",
+"brands": "Vimpat comp. 50/100/150/200 mg; sol. oral 10 mg/ml; EV 200 mg/20 ml",
+"indication": [
+"Epilepsia focal com ou sem generalização secundária",
+"Status epilepticus refractário (EV — off-label crescente)",
+"Adjuvante ≥ 4 anos"
+],
+"dose": [
+{
+"ind": "Epilepsia focal oral/EV (4–17 anos)",
+"val": "INÍCIO 2 mg/kg/dia → ALVO 4–8 mg/kg/dia",
+"max": "400 mg/dia (adulto)",
+"freq": "2 doses/dia",
+"note": "Aumentar 2 mg/kg/dia por semana"
+},
+{
+"ind": "Status epilepticus refractário EV",
+"val": "5 mg/kg EV em 15 min",
+"max": "300 mg",
+"freq": "dose de carga; pode repetir",
+"note": "Evidência crescente como alternativa ao valproato/fenitoína no SE refractário"
+}
+],
+"prep": "EV: diluir em SF, SG5% ou LR. Concentração 10 mg/ml. Infusão 15–60 min.",
+"ci": [
+"Bloqueio AV 2º/3º grau (relativa)"
+],
+"alert": [
+"⚠️ Prolongamento PR — monitorizar ECG na titulação",
+"Tonturas, diplopia, ataxia (dose-dependentes)",
+"Boa tolerabilidade — sem indução enzimática",
+"Alternativa útil quando valproato/fenitoína contra-indicados"
+],
+"source": "BNF for Children 2023-24; Wusthoff CJ. Epilepsia 2021"
+},
+{
+"id": "topiramato",
+"name": "Topiramato",
+"category": "antiepileptico",
+"src": "added",
+"class": "Antiepiléptico — múltiplos mecanismos (Na+, GABA, glutamato, ANIC)",
+"brands": "Topamax comp. 25/50/100/200 mg; sprinkles 15/25 mg",
+"indication": [
+"Epilepsia focal refractária (adjuvante ≥ 2 anos)",
+"Epilepsia generalizada (Lennox-Gastaut, West)",
+"Síndrome de Dravet (adjuvante)",
+"Profilaxia enxaqueca (> 12 anos)"
+],
+"dose": [
+{
+"ind": "Epilepsia — dose inicial oral",
+"val": "0,5–1 mg/kg/dia",
+"max": "—",
+"freq": "2 doses/dia; aumentar 0,5–1 mg/kg/semana",
+"note": ""
+},
+{
+"ind": "Epilepsia — dose alvo",
+"val": "5–9 mg/kg/dia",
+"max": "400 mg/dia",
+"freq": "2 doses/dia",
+"note": "Titular lentamente para minimizar efeitos cognitivos"
+}
+],
+"prep": "Cápsulas sprinkle podem ser abertas e misturadas em alimentos moles (não mastigar).",
+"ci": [
+"Nefrolitíase recorrente (relativa)",
+"Glaucoma (relativa)"
+],
+"alert": [
+"⚠️ Efeitos cognitivos: lentificação, dificuldade de palavra ('dopiramato') — titular lentamente",
+"⚠️ Nefrolitíase (2–4%) — hidratação adequada",
+"⚠️ Hipohidrose e hipertermia (crianças) — vigilância em clima quente",
+"⚠️ Perda de peso (monitorizar crescimento em crianças)",
+"⚠️ Acidose metabólica hiperclorémica — monitorizar bicarbonato"
+],
+"source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+},
+{
+"id": "vigabatrina",
+"name": "Vigabatrina",
+"category": "antiepileptico",
+"src": "added",
+"class": "Antiepiléptico — inibidor irreversível GABA transaminase (↑GABA)",
+"brands": "Sabril comp. 500 mg; pó sachets 500 mg",
+"indication": [
+"Espasmos infantis (Síndrome de West) — especialmente associados a esclerose tuberosa",
+"Epilepsia focal refractária (adjuvante)"
+],
+"dose": [
+{
+"ind": "Espasmos infantis",
+"val": "INÍCIO 50 mg/kg/dia → até 150 mg/kg/dia",
+"max": "150 mg/kg/dia",
+"freq": "2 doses/dia",
+"note": "Resposta esperada em 2 semanas; se sem resposta descontinuar"
+},
+{
+"ind": "Epilepsia focal (adjuvante)",
+"val": "40–80 mg/kg/dia",
+"max": "3 g/dia",
+"freq": "2 doses/dia",
+"note": ""
+}
+],
+"prep": "Dissolver o pó em água ou sumo antes de administrar.",
+"ci": [
+"Neuropatia óptica prévia",
+"Campos visuais alterados"
+],
+"alert": [
+"⛔ DEFEITO DO CAMPO VISUAL permanente e irreversível em 30–50% dos doentes — avaliação oftalmológica de base e a cada 6 meses",
+"⚠️ Sedação, comportamento anormal",
+"⚠️ Anomalias de sinal MRI reversíveis em lactentes (síndrome de mielinização transitória)",
+"Uso limitado por toxicidade ocular — preferir para espasmos infantis onde benefício supera risco"
+],
+"source": "BNF for Children 2023-24; NICE Guidelines Epilepsy 2022"
+},
+{
+"id": "oxcarbazepina",
+"name": "Oxcarbazepina",
+"category": "antiepileptico",
+"src": "added",
+"class": "Antiepiléptico — bloqueador canais Na+ (análogo da carbamazepina)",
+"brands": "Trileptal comp. 150/300/600 mg; susp. 60 mg/ml",
+"indication": [
+"Epilepsia focal — 1ª ou 2ª linha (≥ 1 mês)",
+"Epilepsia focal com generalização secundária"
+],
+"dose": [
+{
+"ind": "Dose inicial oral",
+"val": "8–10 mg/kg/dia",
+"max": "600 mg/dia inicial",
+"freq": "2 doses/dia",
+"note": "Aumentar 10 mg/kg/semana"
+},
+{
+"ind": "Dose alvo",
+"val": "30–46 mg/kg/dia",
+"max": "2400 mg/dia",
+"freq": "2 doses/dia",
+"note": "Nível terapêutico (10-OH-CBZ): 3–35 mcg/ml"
+}
+],
+"prep": "Suspensão: agitar antes de usar. Pode misturar com água.",
+"ci": [
+"Hipersensibilidade à carbamazepina (reacção cruzada 25–30%)"
+],
+"alert": [
+"⚠️ HIPONATREMIA — mais frequente que com carbamazepina. Monitorizar Na+ sérico",
+"⚠️ Reacção alérgica cutânea (HLA-B*1502 em asiáticos — risco Steven-Johnson)",
+"Menos interacções que carbamazepina (indutor enzimático mais fraco)",
+"Boa tolerabilidade cognitiva"
+],
+"source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+},
+{
+"id": "stiripentol",
+"name": "Stiripentol",
+"category": "antiepileptico",
+"src": "added",
+"class": "Antiepiléptico — potenciador GABA-A + inibidor CYP enzimas",
+"brands": "Diacomit caps. 250/500 mg; pó sachets 250/500 mg",
+"indication": [
+"Síndrome de Dravet — adjuvante (com valproato + clobazam)",
+"Aprovado especificamente para Dravet — uso muito específico"
+],
+"dose": [
+{
+"ind": "Dravet — adjuvante oral",
+"val": "50 mg/kg/dia",
+"max": "3000 mg/dia",
+"freq": "2–3 doses/dia com refeições",
+"note": "Iniciar 50 mg/kg/dia. Inibidor potente CYP3A4/CYP2C19 — reduzir clobazam 25% e valproato"
+}
+],
+"prep": "Cápsulas ou pó dissolvido em água/sumo. Tomar com refeições.",
+"ci": [
+"Uso sem valproato + clobazam no Dravet"
+],
+"alert": [
+"⚠️ Inibidor CYP3A4 e CYP2C19 — ↑↑ níveis clobazam e valproato. Reduzir doses adjuvantes",
+"⚠️ Anorexia, perda de peso (monitorizar crescimento)",
+"⚠️ Sedação, ataxia",
+"Medicamento órfão — uso exclusivo em Síndrome de Dravet confirmada"
+],
+"source": "BNF for Children 2023-24; Wirrell EC. Epilepsia 2017"
+},
+{
+"id": "enalapril",
+"name": "Enalapril",
+"category": "cardiovascular",
+"src": "original",
+"class": "IECA — inibidor enzima conversão angiotensina",
+"brands": "Renitec comp. 5/10/20 mg; sol. extemporânea 1 mg/ml",
+"indication": [
+"Insuficiência cardíaca",
+"Hipertensão arterial",
+"Cardiomiopatia dilatada",
+"Nefropatia proteinúrica"
+],
+"dose": [
+{
+"ind": "ICC / HTA oral",
+"val": "INÍCIO 0,1 mg/kg/dia → ALVO 0,5 mg/kg/dia",
+"max": "40 mg/dia",
+"freq": "1–2 doses/dia",
+"note": "RN: iniciar 0,01 mg/kg/dose (hipotensão grave — monitorizar)"
+},
+{
+"ind": "Adulto",
+"val": "2,5–5 mg 1×/dia inicial → 10–40 mg/dia",
+"max": "40 mg/dia",
+"freq": "1–2 doses/dia",
+"note": ""
+}
+],
+"prep": "Comprimidos podem ser triturados. Sol. extemporânea 1 mg/ml estável 30 dias no frio.",
+"ci": [
+"Estenose artéria renal bilateral",
+"Gravidez",
+"Hipercaliemia",
+"Angioedema prévio com IECA"
+],
+"alert": [
+"⚠️ 1ª dose em RN — hipotensão grave. Monitorizar 4–6h",
+"⚠️ Hipercaliemia — especialmente com poupadores K+",
+"⚠️ Tosse seca (10%)",
+"⚠️ Angioedema (raro mas grave)",
+"Monitorizar creatinina e K+ ao início e ajustes"
+],
+"source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+},
+{
+"id": "propranolol",
+"name": "Propranolol",
+"category": "cardiovascular",
+"src": "original",
+"class": "Beta-bloqueante não selectivo — antagonista β1 e β2",
+"brands": "Inderal comp. 10/40/80 mg; sol. oral 1 mg/ml; EV 1 mg/ml",
+"indication": [
+"Taquiarritmias (TSV, flutter auricular)",
+"Hipertensão arterial",
+"Tetralogia de Fallot (crises hipóxicas)",
+"Hemangioma infantil (off-label, evidência sólida)",
+"Tirotoxicose (controlo sintomático)",
+"Profilaxia enxaqueca"
+],
+"dose": [
+{
+"ind": "Antiarrítmico EV",
+"val": "0,01–0,1 mg/kg EV lento",
+"max": "1 mg/dose (lactente); 3 mg/dose (criança)",
+"freq": "pode repetir cada 6–8h",
+"note": "Monitorização ECG e TA obrigatória"
+},
+{
+"ind": "HTA / Arritmia oral",
+"val": "0,5–1 mg/kg/dia",
+"max": "4 mg/kg/dia (máx. 160 mg/dia)",
+"freq": "3–4 doses/dia",
+"note": ""
+},
+{
+"ind": "Hemangioma infantil",
+"val": "1 mg/kg/dia (semana 1) → 2 mg/kg/dia (semana 2) → 3 mg/kg/dia",
+"max": "3 mg/kg/dia",
+"freq": "2 doses/dia",
+"note": "Monitorizar FC, glicemia e TA. Duração: até 6 meses de idade"
+},
+{
+"ind": "Crises hipóxicas (Fallot)",
+"val": "0,01–0,25 mg/kg EV lento",
+"max": "1 mg/dose",
+"freq": "dose única em crise",
+"note": ""
+}
+],
+"prep": "EV: não diluir ou diluir em SG5%. Administrar muito lentamente (1 mg/min).",
+"ci": [
+"Asma / DPOC (broncoespasmo)",
+"Bloqueio AV 2º/3º grau",
+"Choque cardiogénico",
+"Bradicardia sinusal",
+"Hipoglicemia (mascara sinais)"
+],
+"alert": [
+"⚠️ Broncoespasmo — contraindicado em asma",
+"⚠️ Bradicardia e hipotensão",
+"⚠️ Hipoglicemia em RN, lactentes e diabéticos (mascara taquicardia)",
+"⚠️ Não suspender abruptamente (angina de rebote em adultos)",
+"Antídoto: glucagon 50–150 mcg/kg EV"
+],
+"source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+},
+{
+"id": "amrinona_milrinona_alt",
+"name": "Levosimendan",
+"category": "vasoactivo",
+"src": "added",
+"class": "Sensibilizador ao cálcio + inibidor PDE3 — inodilatador",
+"brands": "Simdax 2,5 mg/ml conc. para infusão (5 ml amp.)",
+"indication": [
+"Insuficiência cardíaca aguda descompensada refractária a inotrópicos convencionais",
+"Disfunção VD grave pós-cirurgia cardíaca",
+"Choque cardiogénico refractário (off-label pediátrico)"
+],
+"dose": [
+{
+"ind": "Perfusão EV (pediátrico — off-label)",
+"val": "Carga: 6–12 mcg/kg em 10 min (opcional) → Manutenção: 0,1–0,2 mcg/kg/min",
+"max": "0,2 mcg/kg/min",
+"freq": "perfusão 24h (efeito dura 7–9 dias por metabolito activo)",
+"note": "⚠️ Carga omitida frequentemente — risco de hipotensão. Iniciar directamente a manutenção"
+},
+{
+"ind": "Adulto",
+"val": "0,1 mcg/kg/min × 24h",
+"max": "0,2 mcg/kg/min",
+"freq": "infusão única 24h",
+"note": ""
+}
+],
+"prep": "Diluir em SG5%. Concentração 0,025 mg/ml (250 ml). EV central preferido.",
+"ci": [
+"Obstrução mecânica saída VE/VD",
+"Insuf. renal grave (TFG < 30)",
+"Hipotensão grave não corrigida",
+"Taquicardia ventricular"
+],
+"alert": [
+"⚠️ Hipotensão (mais frequente com dose de carga)",
+"⚠️ Taquicardia",
+"⚠️ Hipocaliemia — monitorizar K+",
+"⚠️ Uso off-label em pediatria — evidência limitada",
+"Efeito prolongado por metabolito activo (OR-1896): 7–9 dias"
+],
+"source": "Egan JR. Pediatr Crit Care Med 2006; Namachivayam P. PCCM 2006; Simdax SmPC"
+},
+{
+"id": "adenosina_triphosphate",
+"name": "Ivabradina",
+"category": "cardiovascular",
+"src": "added",
+"class": "Inibidor canal If — reduz FC sem efeito inotrópico",
+"brands": "Procoralan comp. 5/7,5 mg; sol. oral 1 mg/ml (Corlentor)",
+"indication": [
+"ICC com FE reduzida (FC > 70/min em RS) — adulto/adolescente",
+"Taquicardia sinusal inapropriada",
+"Redução FC em UCIP pediátrica (off-label)"
+],
+"dose": [
+{
+"ind": "ICC / Taquicardia sinusal (> 6 meses)",
+"val": "INÍCIO 0,05 mg/kg/dose × 2/dia → ALVO 0,1–0,2 mg/kg/dose",
+"max": "7,5 mg/dose",
+"freq": "2×/dia",
+"note": "Titular para FC alvo 60–70/min"
+},
+{
+"ind": "Adulto",
+"val": "5 mg × 2/dia → 7,5 mg × 2/dia",
+"max": "7,5 mg × 2/dia",
+"freq": "2 doses/dia com refeições",
+"note": ""
+}
+],
+"prep": "Solução oral 1 mg/ml. Comprimidos podem ser triturados.",
+"ci": [
+"Bloqueio AV 2º/3º grau",
+"FC repouso < 60/min",
+"Choque cardiogénico",
+"IAM recente",
+"Inibidores CYP3A4 potentes (cetoconazol, claritromicina)"
+],
+"alert": [
+"⚠️ Fosfenos (fenómeno luminoso transitório) — 15% dos doentes, benigno",
+"⚠️ Bradicardia — monitorizar FC",
+"Usar apenas em ritmo sinusal (ineficaz em FA)",
+"Off-label < 18 anos — dados pediátricos em expansão"
+],
+"source": "BNF for Children 2023-24; SHIFT trial; Procoralan SmPC 2023"
+},
+{
+"id": "nitroprussiato",
+"name": "Nitroprussiato de Sódio",
+"category": "vasoactivo",
+"src": "original",
+"class": "Vasodilatador directo — dador de NO (arterial + venoso)",
+"brands": "Nipride 50 mg pó EV",
+"indication": [
+"Emergência hipertensiva grave",
+"Redução pós-carga em ICC grave / insuf. valvular aguda",
+"Dissecção aórtica (com betabloqueante)"
+],
+"dose": [
+{
+"ind": "Perfusão EV",
+"val": "0,3–0,5 mcg/kg/min (início) → 3–4 mcg/kg/min",
+"max": "8–10 mcg/kg/min (máx. 10 min)",
+"freq": "perfusão contínua",
+"note": "Duração máxima: 72h. Dose < 2 mcg/kg/min raramente tóxica"
+}
+],
+"prep": "Proteger da luz (papel alumínio). Diluir em SG5% APENAS. Concentração 200–1000 mcg/ml. EV central.",
+"ci": [
+"Insuf. hepática grave",
+"Hipotiroidismo (tiocianato agrava)",
+"Deficiência de vitamina B12"
+],
+"alert": [
+"⛔ TOXICIDADE POR CIANETO — risco em doses > 2 mcg/kg/min > 48–72h. Sintomas: acidose metabólica, elevação SvO2, confusão",
+"⚠️ Monitorizar tiocianato em uso > 48h (nível < 100 mcg/ml)",
+"⚠️ Antídoto: hidroxocobalamina 70 mg/kg EV",
+"⚠️ Proteger solução da luz",
+"⚠️ Hipotensão intensa — linha arterial obrigatória"
+],
+"source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+},
+{
+"id": "omeprazol",
+"name": "Omeprazol",
+"category": "gastro",
+"src": "original",
+"class": "Inibidor bomba de protões (IBP) — inibidor H+/K+ ATPase",
+"brands": "Losec 10/20/40 mg caps.; EV 40 mg pó; susp. extemporânea 2 mg/ml",
+"indication": [
+"Doença do refluxo gastroesofágico (DRGE)",
+"Úlcera péptica / gastropatia por AINEs",
+"Erradicação H. pylori (+ antibióticos)",
+"Prevenção úlcera de stress em UCIP",
+"Esofagite erosiva"
+],
+"dose": [
+{
+"ind": "DRGE / Úlcera (oral)",
+"val": "1–2 mg/kg/dia oral",
+"max": "40 mg/dia",
+"freq": "1 dose/dia (30 min antes refeição)",
+"note": "RN/lactente: 0,5–1 mg/kg/dia"
+},
+{
+"ind": "UCIP — profilaxia úlcera stress EV",
+"val": "1–2 mg/kg/dia EV",
+"max": "40 mg/dia",
+"freq": "1–2 doses/dia",
+"note": ""
+},
+{
+"ind": "Hemorragia digestiva alta EV",
+"val": "Carga 80 mg → 8 mg/hora perfusão",
+"max": "—",
+"freq": "perfusão 72h",
+"note": "Protocolo adulto; pediátrico: 1 mg/kg/dose 2×/dia"
+}
+],
+"prep": "EV: reconstituir em 5 ml água → diluir em SF 100 ml. Infusão 20–30 min.",
+"ci": [
+"Hipersensibilidade a IBPs"
+],
+"alert": [
+"⚠️ Hipomagnesemia em uso prolongado (> 3 meses)",
+"⚠️ Défice vitamina B12 em uso muito prolongado",
+"⚠️ ↑ risco C. difficile",
+"⚠️ Interacção clopidogrel (reduz eficácia antiagregante — usar pantoprazol)",
+"Não usar de rotina em todos os doentes de UCIP — indicação clínica rigorosa"
+],
+"source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+},
+{
+"id": "ondansetron",
+"name": "Ondansetron",
+"category": "gastro",
+"src": "original",
+"class": "Antagonista receptor 5-HT3 — antiemético",
+"brands": "Zofran 4/8 mg comp.; 4 mg/2 ml EV; 4 mg/5 ml sol. oral",
+"indication": [
+"Náuseas e vómitos pós-quimioterapia — 1ª linha",
+"Náuseas e vómitos pós-operatórios",
+"Gastroenterite aguda com vómitos incoercíveis (off-label — evidência)"
+],
+"dose": [
+{
+"ind": "Pós-quimio / Pós-op EV",
+"val": "0,1–0,15 mg/kg/dose EV",
+"max": "8 mg/dose",
+"freq": "cada 8h (3 doses/dia)",
+"note": ""
+},
+{
+"ind": "Gastroenterite oral (off-label)",
+"val": "0,15 mg/kg/dose oral",
+"max": "8 mg/dose",
+"freq": "dose única; pode repetir 1× após 8h",
+"note": "Evidência sólida: reduz internamentos e necessidade EV"
+},
+{
+"ind": "Adulto",
+"val": "4–8 mg",
+"max": "8 mg/dose",
+"freq": "3×/dia",
+"note": ""
+}
+],
+"prep": "EV: diluir em SF ou SG5%. Administrar em 15 min.",
+"ci": [
+"Síndrome QT congénito",
+"Uso concomitante apomorfina"
+],
+"alert": [
+"⚠️ Prolongamento QTc — ECG base se factores de risco",
+"⚠️ Síndrome serotoninérgica (raro) com outros serotoninérgicos",
+"Cefaleias frequentes (efeito adverso comum)",
+"Obstipação"
+],
+"source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+},
+{
+"id": "metoclopramida",
+"name": "Metoclopramida",
+"category": "gastro",
+"src": "original",
+"class": "Antagonista dopaminérgico D2 — procinético e antiemético",
+"brands": "Primperan 10 mg comp.; 5 mg/ml EV; 1 mg/ml sol. oral",
+"indication": [
+"Náuseas e vómitos (2ª linha)",
+"Gastroparesia — estímulo do esvaziamento gástrico",
+"Facilitação alimentação entérica",
+"Refluxo gastroesofágico (uso muito limitado em pediatria)"
+],
+"dose": [
+{
+"ind": "Antiemético / Procinético",
+"val": "0,1–0,15 mg/kg/dose EV/oral",
+"max": "10 mg/dose (0,5 mg/kg/dose em < 15 kg)",
+"freq": "3×/dia",
+"note": "Duração máxima: 5 dias"
+}
+],
+"prep": "EV: diluir em SF. Administrar em 15–30 min (reduz reacções extrapiramidais).",
+"ci": [
+"< 1 ano (risco reacções extrapiramidais)",
+"Obstrução/perfuração GI",
+"Epilepsia (abaixa limiar convulsivante)",
+"Feocromocitoma"
+],
+"alert": [
+"⛔ REACÇÕES EXTRAPIRAMIDAIS (espasmo oculogiro, trismos, distonia) — frequentes em crianças e adolescentes. Tratar com biperideno 0,05 mg/kg EV ou difenidramina",
+"⚠️ Síndrome neuroléptico maligno (raro)",
+"⚠️ Uso máximo 5 dias (EMA 2013)",
+"Evitar < 1 ano"
+],
+"source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; EMA Safety Review 2013"
+},
+{
+"id": "lactulose",
+"name": "Lactulose",
+"category": "gastro",
+"src": "added",
+"class": "Laxante osmótico — dissacarídeo não absorvível",
+"brands": "Duphalac 3,35 g/5 ml sol. oral; Laevolac",
+"indication": [
+"Obstipação crónica",
+"Encefalopatia hepática (reduz absorção amónia)"
+],
+"dose": [
+{
+"ind": "Obstipação — < 1 ano",
+"val": "2,5 ml/dose oral",
+"max": "—",
+"freq": "2×/dia",
+"note": ""
+},
+{
+"ind": "Obstipação — 1–5 anos",
+"val": "5 ml/dose oral",
+"max": "—",
+"freq": "2×/dia",
+"note": ""
+},
+{
+"ind": "Obstipação — 5–10 anos",
+"val": "10 ml/dose oral",
+"max": "—",
+"freq": "2×/dia",
+"note": ""
+},
+{
+"ind": "Obstipação — > 10 anos / adulto",
+"val": "15 ml/dose oral",
+"max": "—",
+"freq": "2×/dia",
+"note": "Ajustar para 1–2 dejecções moles/dia"
+},
+{
+"ind": "Encefalopatia hepática",
+"val": "30–50 ml oral ou 300 ml via retal",
+"max": "—",
+"freq": "3–4×/dia (alvo: 2–3 dejecções/dia)",
+"note": ""
+}
+],
+"prep": "Solução oral. Pode diluir em água ou sumo.",
+"ci": [
+"Galactosemia",
+"Obstrução intestinal"
+],
+"alert": [
+"Flatulência e cólicas no início — passageiros",
+"Pode causar hipernatremia em desidratação",
+"Efeito após 24–48h (não é laxante de acção imediata)"
+],
+"source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+},
+{
+"id": "sucralfato",
+"name": "Sucralfato",
+"category": "gastro",
+"src": "original",
+"class": "Protector gástrico — forma barreira sobre mucosa ulcerada",
+"brands": "Ulcogant susp. 1 g/5 ml; comp. 1 g",
+"indication": [
+"Úlcera péptica (alternativa/adjuvante a IBPs)",
+"Profilaxia úlcera de stress em UCIP (alternativa a IBPs)",
+"Esofagite por refluxo"
+],
+"dose": [
+{
+"ind": "Oral",
+"val": "40–80 mg/kg/dia oral",
+"max": "4 g/dia",
+"freq": "4×/dia (1h antes refeições e ao deitar)",
+"note": "Tomar com estômago vazio"
+}
+],
+"prep": "Suspensão oral. Não usar com antiácidos (reduz eficácia).",
+"ci": [
+"Insuf. renal grave (acumulação alumínio)"
+],
+"alert": [
+"⚠️ Obstipação frequente",
+"⚠️ Reduz absorção de múltiplos fármacos (fenitoína, fluroquinolonas, digoxina) — espaçar 2h",
+"Contém alumínio — evitar em insuf. renal"
+],
+"source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+},
+{
+"id": "mesalazina",
+"name": "Mesalazina",
+"category": "gastro",
+"src": "added",
+"class": "Aminossalicilato — anti-inflamatório intestinal local",
+"brands": "Pentasa comp. 500 mg/1 g; susp. retal; supositórios",
+"indication": [
+"Doença inflamatória intestinal (DII) — colite ulcerosa (manutenção e indução leve-moderada)",
+"Doença de Crohn colónica (adjuvante)"
+],
+"dose": [
+{
+"ind": "Colite ulcerosa activa oral",
+"val": "30–50 mg/kg/dia",
+"max": "4 g/dia",
+"freq": "2–3 doses/dia",
+"note": ""
+},
+{
+"ind": "Manutenção oral",
+"val": "15–30 mg/kg/dia",
+"max": "2 g/dia",
+"freq": "1–2 doses/dia",
+"note": ""
+},
+{
+"ind": "Doença distal — retal",
+"val": "1 g supositório ou 1–4 g enema",
+"max": "—",
+"freq": "1×/dia ao deitar",
+"note": ""
+}
+],
+"prep": "Comprimidos de libertação prolongada — engolir inteiros. Não partir.",
+"ci": [
+"Hipersensibilidade a salicilatos",
+"Insuf. renal grave",
+"Insuf. hepática grave"
+],
+"alert": [
+"⚠️ Nefrotoxicidade (rara) — monitorizar creatinina anualmente",
+"⚠️ Pancreatite (rara)",
+"Bem tolerado — perfil segurança favorável"
+],
+"source": "BNF for Children 2023-24; ECCO/ESPGHAN Guidelines 2023"
+},
+{
+"id": "hidrocortisona_replacement",
+"name": "Hidrocortisona (dose fisiológica)",
+"category": "endocrino",
+"src": "added",
+"class": "Corticoide — reposição fisiológica cortisol",
+"brands": "Solu-Cortef 100 mg; comp. 10/20 mg; Hydrocortisone 10 mg",
+"indication": [
+"Insuficiência supra-renal primária (Addison) — terapia de substituição",
+"Hiperplasia supra-renal congénita (HAC)",
+"Dose de stress em doente com ISR conhecida",
+"Pan-hipopituitarismo"
+],
+"dose": [
+{
+"ind": "Reposição fisiológica oral",
+"val": "8–10 mg/m²/dia oral",
+"max": "—",
+"freq": "3 doses/dia (manhã 50%, tarde 25%, noite 25%)",
+"note": "HAC: 10–15 mg/m²/dia (doses mais altas para supressão androgénios)"
+},
+{
+"ind": "Dose de stress (doença minor)",
+"val": "2–3× dose habitual",
+"max": "—",
+"freq": "até resolução da doença",
+"note": ""
+},
+{
+"ind": "Dose de stress major/cirurgia EV",
+"val": "50–100 mg/m² EV bólus → 50–100 mg/m²/dia",
+"max": "200 mg",
+"freq": "perfusão contínua ou cada 6h",
+"note": ""
+}
+],
+"prep": "Oral: comprimidos ou solução extemporânea. EV: ver entrada hidrocortisona farmacológica.",
+"ci": [
+"Infecção não controlada (relativa)"
+],
+"alert": [
+"⚠️ Dose de reposição é MUITO diferente da dose farmacológica",
+"⚠️ Não suspender abruptamente — desmame gradual",
+"⚠️ Bracelete de alerta médico obrigatória em ISR crónica",
+"⚠️ Pais/doente devem ter injecção EV/IM de emergência em casa",
+"Monitorizar crescimento, PA e glicemia em uso crónico"
+],
+"source": "BNF for Children 2023-24; Endocrine Society Guidelines 2016"
+},
+{
+"id": "levotiroxina",
+"name": "Levotiroxina (T4)",
+"category": "endocrino",
+"src": "added",
+"class": "Hormona tiroideia — substituto sintético T4",
+"brands": "Synthroid; Eutirox comp. 25/50/75/100/150 mcg",
+"indication": [
+"Hipotiroidismo congénito — urgência neonatal",
+"Hipotiroidismo adquirido",
+"Pan-hipopituitarismo",
+"Coma mixedematoso"
+],
+"dose": [
+{
+"ind": "Hipotiroidismo congénito (RN)",
+"val": "10–15 mcg/kg/dia oral",
+"max": "50 mcg/dia (início)",
+"freq": "1×/dia em jejum",
+"note": "Iniciar o mais cedo possível — janela crítica de desenvolvimento neurológico"
+},
+{
+"ind": "Lactente 3–12 meses",
+"val": "6–8 mcg/kg/dia",
+"max": "—",
+"freq": "1×/dia",
+"note": ""
+},
+{
+"ind": "Criança 1–5 anos",
+"val": "5–6 mcg/kg/dia",
+"max": "—",
+"freq": "1×/dia",
+"note": ""
+},
+{
+"ind": "Criança 6–12 anos",
+"val": "4–5 mcg/kg/dia",
+"max": "—",
+"freq": "1×/dia",
+"note": ""
+},
+{
+"ind": "Adolescente",
+"val": "2–3 mcg/kg/dia",
+"max": "150–200 mcg/dia",
+"freq": "1×/dia em jejum",
+"note": ""
+}
+],
+"prep": "Comprimidos podem ser dissolvidos em água ou leite (não soja). Tomar 30–60 min antes do pequeno-almoço.",
+"ci": [
+"Tirotoxicose não tratada",
+"IAM recente (relativa)"
+],
+"alert": [
+"⚠️ Hipotiroidismo congénito: iniciar nas primeiras 2 semanas — atraso causa lesão neurológica permanente",
+"⚠️ Monitorizar TSH e T4 livre a cada 4–6 semanas no início",
+"⚠️ Interacção com ferro, cálcio, IBPs (reduzem absorção — espaçar 4h)",
+"Sintomas de overdose: taquicardia, perda de peso, irritabilidade"
+],
+"source": "BNF for Children 2023-24; European Thyroid Association Guidelines 2022"
+},
+{
+"id": "glucagon",
+"name": "Glucagon",
+"category": "endocrino",
+"src": "added",
+"class": "Hormona pancreática — glicogenólise + gluconeogénese hepática",
+"brands": "GlucaGen 1 mg pó + seringa; Baqsimi 3 mg pó nasal",
+"indication": [
+"Hipoglicemia grave sem acesso venoso — 1ª linha",
+"Intoxicação por betabloqueante (doses altas)",
+"Intoxicação por bloqueadores canais cálcio",
+"Hipoglicemia neonatal transitória (sem AV)"
+],
+"dose": [
+{
+"ind": "Hipoglicemia — IM/SC/IN",
+"val": "< 25 kg: 0,5 mg IM/SC; ≥ 25 kg: 1 mg IM/SC",
+"max": "1 mg",
+"freq": "dose única; virar para lado; alimentar quando consciente",
+"note": "Nasal (Baqsimi): 3 mg numa narina (≥ 4 anos)"
+},
+{
+"ind": "Intoxicação betabloqueante EV",
+"val": "50–150 mcg/kg EV em 1 min",
+"max": "10 mg",
+"freq": "seguido de perfusão 2–5 mg/hora",
+"note": ""
+},
+{
+"ind": "Hipoglicemia neonatal EV",
+"val": "0,02–0,1 mg/kg EV",
+"max": "1 mg",
+"freq": "dose única; seguir de glucose EV",
+"note": ""
+}
+],
+"prep": "Reconstituir com o solvente fornecido. Usar imediatamente após reconstituição.",
+"ci": [
+"Feocromocitoma (libertação catecolaminas)",
+"Insulinoma (hipoglicemia rebote)"
+],
+"alert": [
+"⚠️ Náuseas e vómitos após administração — posição lateral para evitar aspiração",
+"⚠️ Hipoglicemia de rebote — alimentar logo que possível ou glucose EV",
+"Eficácia reduzida se reservas hepáticas de glicogénio baixas (desnutrição, alcoolismo)",
+"Treinar pais/cuidadores de crianças diabéticas na administração"
+],
+"source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+},
+{
+"id": "desmopressina",
+"name": "Desmopressina (DDAVP)",
+"category": "endocrino",
+"src": "added",
+"class": "Análogo sintético da vasopressina (ADH) — V2 selectivo",
+"brands": "Minirin comp. 0,1/0,2 mg; nasal 100 mcg/ml; EV 4 mcg/ml",
+"indication": [
+"Diabetes insípida central",
+"Enurese nocturna primária (≥ 5 anos)",
+"Doença de von Willebrand tipo 1 (hemostase)",
+"Hemofilia A leve-moderada (procedimentos)"
+],
+"dose": [
+{
+"ind": "Diabetes insípida central — oral",
+"val": "0,05–0,1 mg/dose oral",
+"max": "1,2 mg/dia",
+"freq": "2–3×/dia; titular pelo débito urinário e Na+",
+"note": ""
+},
+{
+"ind": "Diabetes insípida central — nasal",
+"val": "2,5–10 mcg/dose",
+"max": "40 mcg/dia",
+"freq": "1–2×/dia",
+"note": ""
+},
+{
+"ind": "Diabetes insípida central — EV",
+"val": "0,01–0,03 mcg/kg/dose",
+"max": "2 mcg",
+"freq": "cada 12–24h",
+"note": ""
+},
+{
+"ind": "Enurese nocturna (≥ 5 anos)",
+"val": "0,2 mg oral ao deitar",
+"max": "0,4 mg",
+"freq": "1×/dia",
+"note": "Restringir líquidos 1h antes e 8h depois"
+},
+{
+"ind": "von Willebrand / Hemofilia A — EV",
+"val": "0,3 mcg/kg EV em 30 min",
+"max": "20 mcg",
+"freq": "dose única pré-procedimento",
+"note": ""
+}
+],
+"prep": "EV: diluir em SF 50 ml. Infusão 30 min.",
+"ci": [
+"Polidipsia psicogénica",
+"Hiponatremia",
+"Insuf. cardíaca grave",
+"Doença de von Willebrand tipo 2B/plaquetário"
+],
+"alert": [
+"⛔ HIPONATREMIA — risco major especialmente em crianças. Restringir SEMPRE os líquidos",
+"⚠️ Convulsões por hiponatremia — monitorizar Na+ em uso crónico",
+"⚠️ Enurese: restringir líquidos 1h antes e 8h após — obrigatório",
+"Taquifilaxia com uso repetido (von Willebrand/hemofilia)"
+],
+"source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+},
+{
+"id": "octreotido",
+"name": "Octreótido",
+"category": "endocrino",
+"src": "added",
+"class": "Análogo da somatostatina — inibição multissistémica",
+"brands": "Sandostatin 0,05/0,1/0,5 mg/ml amp.; LAR (depot mensal)",
+"indication": [
+"Hiperinsulinismo neonatal / hipoglicemia hiperinsulinémica refractária",
+"Hemorragia digestiva por varizes esofágicas",
+"Quilotórax refractário",
+"Nesidioblastose"
+],
+"dose": [
+{
+"ind": "Hiperinsulinismo neonatal EV/SC",
+"val": "1–10 mcg/kg/hora EV",
+"max": "40 mcg/kg/dia",
+"freq": "perfusão contínua; titular pela glicemia",
+"note": ""
+},
+{
+"ind": "Varizes esofágicas EV",
+"val": "1–2 mcg/kg/hora EV",
+"max": "50 mcg/hora",
+"freq": "perfusão contínua × 2–5 dias",
+"note": "Bólus inicial opcional: 1–2 mcg/kg"
+},
+{
+"ind": "Quilotórax SC",
+"val": "1–4 mcg/kg/dose SC",
+"max": "—",
+"freq": "3×/dia",
+"note": ""
+}
+],
+"prep": "EV: diluir em SF ou SG5%. Estável 24h à temperatura ambiente.",
+"ci": [
+"Hipersensibilidade"
+],
+"alert": [
+"⚠️ Hipoglicemia (inibe glucagon e GH além de insulina)",
+"⚠️ Bradicardia",
+"⚠️ Litíase biliar em uso prolongado",
+"⚠️ Hipotiroidismo em uso prolongado (inibe TSH)",
+"Monitorizar glicemia frequentemente no início"
+],
+"source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+},
+{
+"id": "ondansetron_chemo",
+"name": "Granisetrona",
+"category": "oncologia",
+"src": "added",
+"class": "Antagonista selectivo receptor 5-HT3 — antiemético de alta potência",
+"brands": "Kytril 1 mg comp.; 1 mg/ml EV",
+"indication": [
+"Náuseas e vómitos induzidos por quimioterapia altamente emetogénica",
+"Náuseas e vómitos pós-operatórios refractários"
+],
+"dose": [
+{
+"ind": "Quimioterapia EV/oral",
+"val": "20–40 mcg/kg/dose EV",
+"max": "3 mg/dose",
+"freq": "30 min antes QT; pode repetir cada 12h",
+"note": "Oral: 1 mg × 2/dia (adulto)"
+}
+],
+"prep": "EV: diluir em SF ou SG5% 50 ml. Infusão 5 min.",
+"ci": [
+"Prolongamento QT congénito"
+],
+"alert": [
+"⚠️ Prolongamento QTc — monitorizar ECG se factores de risco",
+"Cefaleias (frequentes — transitórias)",
+"Obstipação"
+],
+"source": "BNF for Children 2023-24; MASCC/ESMO Antiemetic Guidelines 2023"
+},
+{
+"id": "alopurinol_onco",
+"name": "Alopurinol",
+"category": "oncologia",
+"src": "original",
+"class": "Inibidor xantina oxidase — reduz produção ácido úrico",
+"brands": "Zyloric comp. 100/300 mg",
+"indication": [
+"Prevenção síndrome lise tumoral (SLT) — risco baixo-intermédio",
+"Hiperuricemia por gota (adolescente)",
+"Litíase úrica recorrente"
+],
+"dose": [
+{
+"ind": "Profilaxia SLT oral",
+"val": "10 mg/kg/dia oral",
+"max": "300 mg/dia",
+"freq": "3 doses/dia; iniciar 1–2 dias antes QT",
+"note": "Hidratação agressiva concomitante"
+},
+{
+"ind": "Adulto / adolescente",
+"val": "300 mg/dia",
+"max": "900 mg/dia",
+"freq": "1–3 doses/dia",
+"note": ""
+}
+],
+"prep": "Comprimidos podem ser dissolvidos em água.",
+"ci": [
+"Hipersensibilidade (rash frequente)"
+],
+"alert": [
+"⚠️ Rash cutâneo — suspender imediatamente (pode progredir para SJS/TEN)",
+"⚠️ Interacção com azatioprina/mercaptopurina — reduzir dose 66–75%",
+"⚠️ Insuficiente para SLT alto risco (usar rasburicase)",
+"Monitorizar ácido úrico, creatinina e electrólitos"
+],
+"source": "Formulário de Pediatria 3ª Ed.; Howard SC. NEJM 2011"
+},
+{
+"id": "rasburicase",
+"name": "Rasburicase",
+"category": "oncologia",
+"src": "added",
+"class": "Urato oxidase recombinante — degrada ácido úrico em alantoína (mais solúvel)",
+"brands": "Fasturtec 1,5 mg; 7,5 mg pó EV",
+"indication": [
+"Síndrome lise tumoral (SLT) alto risco — tratamento e profilaxia",
+"Hiperuricemia refractária associada a neoplasia",
+"Leucemia/linfoma de alto volume tumoral"
+],
+"dose": [
+{
+"ind": "SLT — EV",
+"val": "0,1–0,2 mg/kg/dia EV",
+"max": "—",
+"freq": "1×/dia × 5–7 dias",
+"note": "Dose única 0,15 mg/kg frequentemente suficiente"
+}
+],
+"prep": "Reconstituir com tampão fornecido → diluir em SF 50 ml. Infusão 30 min. NÃO agitar. Usar imediatamente.",
+"ci": [
+"Défice G6PD (hemólise grave por H2O2 produzido)",
+"Metahemoglobinemia",
+"Gravidez"
+],
+"alert": [
+"⛔ DÉFICE G6PD — hemólise grave e fatal. Rastrear antes de administrar em populações de risco (mediterrâneos, africanos, asiáticos)",
+"⚠️ Anafilaxia (2%) — ter adrenalina disponível",
+"⚠️ Amostras de ácido úrico devem ser analisadas imediatamente em gelo (rasburicase degrada urato in vitro à temperatura ambiente)",
+"Superior ao alopurinol no SLT alto risco"
+],
+"source": "Coiffier B. JCO 2008; Howard SC. NEJM 2011; BNF for Children 2023-24"
+},
+{
+"id": "mesna",
+"name": "Mesna",
+"category": "oncologia",
+"src": "added",
+"class": "Uroprotector — neutraliza metabolitos uroterais da ifosfamida/ciclofosfamida",
+"brands": "Uromitexan amp. 400 mg/4 ml; comp. 400/600 mg",
+"indication": [
+"Profilaxia cistite hemorrágica por ifosfamida — obrigatório",
+"Profilaxia cistite hemorrágica por ciclofosfamida em altas doses"
+],
+"dose": [
+{
+"ind": "Ifosfamida — EV",
+"val": "20% da dose ifosfamida nos tempos 0, 4h e 8h",
+"max": "—",
+"freq": "3 doses (0h, 4h, 8h após cada dose ifosfamida)",
+"note": "Dose total mesna = 60% da dose ifosfamida"
+},
+{
+"ind": "Ciclofosfamida altas doses",
+"val": "60–160% da dose ciclofosfamida (dividida)",
+"max": "—",
+"freq": "0h, 3h, 6h, 9h após ciclofosfamida",
+"note": ""
+}
+],
+"prep": "EV: diluir em SF ou SG5%. Compatível com a maioria dos quimioterápicos.",
+"ci": [
+"Hipersensibilidade"
+],
+"alert": [
+"NÃO é quimioterápico — sem toxicidade sistémica relevante",
+"Náuseas, vómitos (especialmente oral)",
+"Falsos positivos no teste urina para cetonas",
+"Hidratação adequada concomitante essencial"
+],
+"source": "BNF for Children 2023-24; SIOPE Guidelines"
+},
+{
+"id": "filgrastim",
+"name": "Filgrastim (G-CSF)",
+"category": "oncologia",
+"src": "added",
+"class": "Factor estimulador de colónias granulocíticas recombinante",
+"brands": "Neupogen 300 mcg/ml seringa; Zarzio (biossimilar)",
+"indication": [
+"Neutropenia febril grave pós-quimioterapia",
+"Neutropenia congénita grave (Kostmann)",
+"Mobilização células estaminais para transplante",
+"Profilaxia neutropenia em regimes de alto risco"
+],
+"dose": [
+{
+"ind": "Neutropenia pós-QT — SC/EV",
+"val": "5–10 mcg/kg/dia SC ou EV",
+"max": "—",
+"freq": "1×/dia; iniciar 24h após QT; manter até RAN > 1000/mcL × 2 dias",
+"note": "Não iniciar < 24h após QT (nem < 24h antes)"
+},
+{
+"ind": "Neutropenia congénita",
+"val": "5 mcg/kg/dia SC",
+"max": "—",
+"freq": "1×/dia; ajustar para RAN 1500–10000/mcL",
+"note": ""
+}
+],
+"prep": "SC preferido. EV: diluir em SG5% (NÃO SF — precipita). Concentração ≥ 0,2 mcg/ml.",
+"ci": [
+"Leucemia mieloide (relativa — pode estimular clone)"
+],
+"alert": [
+"⚠️ Dores ósseas (muito frequentes) — tratar com paracetamol/ibuprofeno",
+"⚠️ Esplenomegalia e rutura esplénica (raro — dor abdominal aguda)",
+"⚠️ Síndrome de fuga capilar (raro)",
+"⚠️ NÃO usar em leucemia mielóide aguda sem guideline oncológica",
+"Monitorizar hemograma 2×/semana"
+],
+"source": "BNF for Children 2023-24; ASCO Guidelines 2015"
+},
+{
+"id": "tramadol",
+"name": "Tramadol",
+"category": "analgesico",
+"src": "original",
+"class": "Opioide fraco + inibidor recaptação serotonina/noradrenalina",
+"brands": "Tramal 50/100 mg caps.; 100 mg/2 ml EV; gotas 100 mg/ml",
+"indication": [
+"Dor moderada a intensa (não controlada com paracetamol/ibuprofeno)",
+"Analgesia pós-operatória",
+"Dor neuropática (adjuvante)"
+],
+"dose": [
+{
+"ind": "≥ 12 anos EV/oral",
+"val": "1–2 mg/kg/dose",
+"max": "100 mg/dose; 400 mg/dia",
+"freq": "cada 4–6h",
+"note": "NÃO usar < 12 anos (EMA 2019)"
+},
+{
+"ind": "Adulto",
+"val": "50–100 mg/dose",
+"max": "400 mg/dia",
+"freq": "cada 4–6h",
+"note": ""
+}
+],
+"prep": "EV: diluir em SF ou SG5%. Administrar lentamente em 15–20 min.",
+"ci": [
+"< 12 anos (EMA 2019)",
+"Epilepsia não controlada",
+"Uso com IMAOs",
+"Insuf. respiratória grave"
+],
+"alert": [
+"⛔ NÃO usar < 12 anos (risco convulsões e depressão respiratória — EMA proibiu em 2019)",
+"⛔ Evitar em amigdalectomia/adenoidectomia em crianças (mortes relatadas)",
+"⚠️ Convulsões (abaixa limiar)",
+"⚠️ Síndrome serotoninérgica com SSRIs/IMAOs",
+"Náuseas e vómitos frequentes"
+],
+"source": "Formulário de Pediatria 3ª Ed.; EMA Safety Review 2019; BNF for Children 2023-24"
+},
+{
+"id": "pregabalina",
+"name": "Pregabalina",
+"category": "analgesico",
+"src": "added",
+"class": "Análogo do GABA — ligação subunidade α2δ canais Ca2+ voltagem-dependentes",
+"brands": "Lyrica caps. 25/50/75/100/150/200/300 mg; sol. oral 20 mg/ml",
+"indication": [
+"Dor neuropática (≥ 18 anos aprovado; off-label pediátrico)",
+"Epilepsia focal refractária (adjuvante ≥ 7 anos)",
+"Dor crónica musculoesquelética",
+"Ansiedade generalizada (adulto)"
+],
+"dose": [
+{
+"ind": "Epilepsia focal (≥ 7 anos)",
+"val": "2,5 mg/kg/dia → alvo 10–14 mg/kg/dia",
+"max": "600 mg/dia",
+"freq": "2–3 doses/dia",
+"note": ""
+},
+{
+"ind": "Dor neuropática (adulto)",
+"val": "75 mg × 2/dia → 150–300 mg × 2/dia",
+"max": "600 mg/dia",
+"freq": "2–3 doses/dia",
+"note": ""
+}
+],
+"prep": "Cápsulas podem ser abertas e misturadas em alimentos.",
+"ci": [
+"Hipersensibilidade"
+],
+"alert": [
+"⚠️ Sedação e tonturas (especialmente início do tratamento)",
+"⚠️ Ganho de peso e edema periférico",
+"⚠️ Dependência e síndrome de abstinência — não suspender abruptamente",
+"⚠️ Potencial de abuso (substância controlada em alguns países)",
+"Ajuste renal obrigatório"
+],
+"source": "BNF for Children 2023-24; Lyrica SmPC 2023"
+},
+{
+"id": "naltrexona",
+"name": "Naltrexona",
+"category": "antidoto",
+"src": "added",
+"class": "Antagonista opioide de longa duração — oral",
+"brands": "Revia comp. 50 mg",
+"indication": [
+"Prevenção recaída em dependência opioides (adulto/adolescente)",
+"Síndrome de Sotos / comportamentos auto-lesivos em autismo (off-label)",
+"Prurido colestático refractário (off-label pediátrico)"
+],
+"dose": [
+{
+"ind": "Dependência opioides (adulto)",
+"val": "25 mg 1º dia → 50 mg/dia",
+"max": "50 mg/dia",
+"freq": "1×/dia",
+"note": "Iniciar APENAS após desintoxicação (≥ 7–10 dias sem opioides)"
+},
+{
+"ind": "Prurido colestático (off-label pediátrico)",
+"val": "0,5–1 mg/kg/dia",
+"max": "50 mg/dia",
+"freq": "1×/dia",
+"note": ""
+}
+],
+"prep": "Oral. Comprimidos podem ser triturados.",
+"ci": [
+"Uso activo de opioides (precipita abstinência aguda grave)",
+"Hepatite aguda / insuf. hepática",
+"Dependência opioides não desintoxicada"
+],
+"alert": [
+"⛔ PRECIPITA SÍNDROME DE ABSTINÊNCIA AGUDA se doente ainda usar opioides — risco grave",
+"⚠️ Hepatotoxicidade em doses altas",
+"Não usar para analgesia (antagonista — bloqueia efeito analgésico)"
+],
+"source": "BNF for Children 2023-24; Revia SmPC"
+},
+{
+"id": "vitamina_k",
+"name": "Vitamina K (Fitomenadiona)",
+"category": "metabolismo",
+"src": "original",
+"class": "Cofactor síntese factores coagulação II, VII, IX, X",
+"brands": "Konakion 2 mg/0,2 ml pediátrico (IM); 10 mg/ml amp.; comp. 10 mg",
+"indication": [
+"Profilaxia doença hemorrágica do RN — obrigatório",
+"Tratamento hemorragia por deficiência vitamina K",
+"Reversão sobredosagem de varfarina",
+"Colestase crónica (má absorção K lipossolúvel)"
+],
+"dose": [
+{
+"ind": "Profilaxia RN IM",
+"val": "1 mg IM dose única ao nascimento",
+"max": "—",
+"freq": "dose única",
+"note": "RN < 1,5 kg: 0,5 mg IM"
+},
+{
+"ind": "Profilaxia RN oral (alternativa)",
+"val": "2 mg oral ao nascimento → 2 mg semana 1 → 2 mg semana 4",
+"max": "—",
+"freq": "3 doses conforme protocolo",
+"note": "Menos eficaz que IM para doença hemorrágica tardia"
+},
+{
+"ind": "Reversão varfarina (hemorragia grave)",
+"val": "0,3 mg/kg EV lento",
+"max": "10 mg",
+"freq": "dose única; pode repetir",
+"note": "Efeito em 6–8h. Se hemorragia ameaçadora de vida: CCP ou PFC + vitamina K"
+},
+{
+"ind": "Deficiência / colestase",
+"val": "1–10 mg oral/EV",
+"max": "—",
+"freq": "1–3×/semana",
+"note": ""
+}
+],
+"prep": "EV: diluir em SF ou SG5%. Administrar muito lentamente (risco reacção anafilactóide).",
+"ci": [
+"Hipersensibilidade"
+],
+"alert": [
+"⚠️ Administração EV rápida — reacções anafilactóides (rubor, broncoespasmo, colapso) — infusão MUITO lenta",
+"⚠️ Reversão varfarina — aguardar 6–8h para efeito. Se urgente: CCP",
+"Vitamina K IM preferida à oral para profilaxia neonatal"
+],
+"source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+},
+{
+"id": "albumina",
+"name": "Albumina Humana",
+"category": "electrolitico",
+"src": "original",
+"class": "Coloide natural — expansor plasmático + transportador",
+"brands": "Albumina 4%; 20% (50/100 ml); 25%",
+"indication": [
+"Hipoalbuminemia grave sintomática (< 20 g/L)",
+"Expansão volémica (alternativa a cristaloides em sépsis)",
+"Paracentese de grande volume (> 5L)",
+"Síndrome nefrótico com edema grave refractário",
+"Doença hepática grave com ascite"
+],
+"dose": [
+{
+"ind": "Hipoalbuminemia / Expansão volémica EV",
+"val": "Albumina 4–5%: 10–20 ml/kg EV",
+"max": "—",
+"freq": "conforme resposta clínica",
+"note": "Albumina 20%: 1–2 g/kg (= 5–10 ml/kg) — mais utilizada em edema/hipoalbuminemia"
+},
+{
+"ind": "Paracentese (adulto)",
+"val": "8 g albumina por litro ascite retirado (de 4–5L)",
+"max": "—",
+"freq": "pós-procedimento",
+"note": ""
+}
+],
+"prep": "Pronto a usar. Filtro de 0,22 mcm recomendado. Administrar em 1–4h.",
+"ci": [
+"Insuf. cardíaca congestiva grave (risco edema)",
+"Anemia grave sem hipovolemia"
+],
+"alert": [
+"⚠️ Evidência controversa na sépsis — SAFE trial: albumina vs SF igualmente seguros",
+"⚠️ Risco sobrecarga de volume — monitorizar PA, diurese",
+"⚠️ Reacções alérgicas (febre, urticária — raras)",
+"Produto de origem humana — verificar validade"
+],
+"source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; SAFE Study NEJM 2004"
+},
+{
+"id": "magnesio",
+"name": "Sulfato de Magnésio",
+"category": "electrolitico",
+"src": "added",
+"class": "Electrólito — cofactor enzimático, estabilizador membranas",
+"brands": "MgSO4 10% (1g/10ml); 20% (2g/10ml); 50% (1g/2ml)",
+"indication": [
+"Hipomagnesemia sintomática",
+"Asma grave / status asmático refractário",
+"Arritmia por torsades de pointes",
+"Eclampsia / pré-eclampsia grave",
+"Broncoespasmo grave refractário"
+],
+"dose": [
+{
+"ind": "Hipomagnesemia sintomática EV",
+"val": "0,2 mmol/kg (50 mg/kg da sol. 10%)",
+"max": "2 g",
+"freq": "EV em 20–30 min; repetir se necessário",
+"note": ""
+},
+{
+"ind": "Asma grave / Status asmático EV",
+"val": "40–50 mg/kg EV em 20 min",
+"max": "2 g",
+"freq": "dose única (evidência: MAGNUM trial)",
+"note": "Melhora broncodilatação em asma grave não respondedora"
+},
+{
+"ind": "Torsades de pointes EV",
+"val": "25–50 mg/kg EV rápido",
+"max": "2 g",
+"freq": "bólus; pode repetir",
+"note": ""
+},
+{
+"ind": "Eclampsia (adulto)",
+"val": "4–6 g EV em 15–20 min → 1–2 g/hora",
+"max": "—",
+"freq": "manutenção até 24–48h pós-parto",
+"note": ""
+}
+],
+"prep": "Diluir sempre antes de administrar EV. Sol. 10% para infusão. Sol. 50% apenas IM.",
+"ci": [
+"Bloqueio AV",
+"Insuf. renal grave (acumulação)"
+],
+"alert": [
+"⚠️ Toxicidade: perda de reflexos patelares (nível 4–5 mmol/L) → paralisia respiratória (> 6 mmol/L) → paragem cardíaca (> 12 mmol/L)",
+"⚠️ Antídoto: gluconato de cálcio 10% 10 ml EV",
+"⚠️ Monitorizar reflexo patelar, FR e diurese em infusão contínua",
+"⚠️ Hipotensão na infusão rápida"
+],
+"source": "BNF for Children 2023-24; MAGNUM trial; Harriet Lane 23rd Ed"
+},
+{
+"id": "fosforo",
+"name": "Fosfato de Potássio/Sódio",
+"category": "electrolitico",
+"src": "added",
+"class": "Electrólito — fosfato inorgânico",
+"brands": "Fosfato Dipotássico 1 mmol/ml; Fosfato Monossódico-Dissódico",
+"indication": [
+"Hipofosfatemia grave (< 0,5 mmol/L) ou sintomática",
+"Reposição em síndrome de realimentação",
+"Manutenção em nutrição parentérica"
+],
+"dose": [
+{
+"ind": "Hipofosfatemia grave EV",
+"val": "0,15–0,25 mmol/kg EV em 6h",
+"max": "0,5 mmol/kg/dose",
+"freq": "repetir conforme nível sérico",
+"note": "Velocidade máxima 0,1 mmol/kg/hora"
+},
+{
+"ind": "Síndrome de realimentação EV",
+"val": "0,5–0,8 mmol/kg/dia EV",
+"max": "—",
+"freq": "perfusão contínua 24h; monitorizar fósforo 12–24h",
+"note": ""
+}
+],
+"prep": "Diluir sempre em SF ou SG5%. NÃO administrar não diluído. Concentração máxima 0,3 mmol/ml (EV periférico).",
+"ci": [
+"Hiperfosfatemia",
+"Hipocalcemia não corrigida",
+"Hiperparatireoidismo"
+],
+"alert": [
+"⚠️ Hipocalcemia aguda se reposto rapidamente",
+"⚠️ Hipotensão e arritmias na infusão rápida",
+"⚠️ NÃO misturar com cálcio (precipitação de fosfato de cálcio)",
+"⚠️ Monitorizar Ca2+, K+, Mg2+ e fósforo durante reposição"
+],
+"source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
 }
 ];
