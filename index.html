@@ -1,28 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt" style="color-scheme: light only;">
+<html lang="pt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="color-scheme" content="light only">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="UCIP Ped">
 <meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light only">
 <title>UCIP Pediatria</title>
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- Drug databases — modular files -->
+<script src="drugs/drugs_emergencia.js"></script>
+<script src="drugs/drugs_sedacao.js"></script>
+<script src="drugs/drugs_vasoactivos.js"></script>
+<script src="drugs/drugs_cardiovascular.js"></script>
+<script src="drugs/drugs_antibioticos.js"></script>
+<script src="drugs/drugs_antiepilepticos.js"></script>
+<script src="drugs/drugs_respiratorio.js"></script>
+<script src="drugs/drugs_corticoides.js"></script>
+<script src="drugs/drugs_gastroenterologia.js"></script>
+<script src="drugs/drugs_endocrino.js"></script>
+<script src="drugs/drugs_electroliticos.js"></script>
+<script src="drugs/drugs_neonatologia.js"></script>
+<script src="drugs/drugs_oncologia.js"></script>
+<script src="drugs/drugs_master.js"></script>
+<script src="drugs/drugs_sources.js"></script>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{
   height:100%;width:100%;
-  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-  background:#f8f7f4;color:#1a1a1a;
+  font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;
+  background:#f5f5f0;color:#1a1a1a;
   overflow:hidden;-webkit-font-smoothing:antialiased;
-  color-scheme:light only;
-  -webkit-color-scheme:light only
+  color-scheme:light only
 }
-
-/* ─── SHELL ─── */
 #app{
   position:fixed;inset:0;
   display:grid;
@@ -30,294 +45,295 @@ html,body{
   overflow:hidden
 }
 
-/* ─── TOPBAR ─── */
+/* ── TOPBAR ── */
 #topbar{
-  background:#ffffff;
-  border-bottom:1px solid #e5e5e5;
-  padding:calc(env(safe-area-inset-top,0px) + 12px) 16px 12px;
+  background:#fff;border-bottom:1px solid #e8e8e3;
+  padding:calc(env(safe-area-inset-top,0px)+12px) 16px 12px
 }
 .tb1{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.logo{
-  background:#d97757;border-radius:10px;
-  width:36px;height:36px;display:flex;align-items:center;justify-content:center;
-  font-size:10px;font-weight:900;color:white;line-height:1.1;text-align:center;flex-shrink:0
-}
-.appname{flex:1}
-.appname h1{font-size:15px;font-weight:700;color:#1a1a1a}
-.appname p{font-size:10px;color:#888;margin-top:1px}
-#gbtn{
-  width:36px;height:36px;border-radius:10px;
-  background:#f0efec;border:1px solid #e0ddd8;
-  color:#666;font-size:17px;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;flex-shrink:0
-}
-.searchbar{
-  display:flex;align-items:center;gap:8px;
-  background:#f0efec;border:1px solid #e0ddd8;border-radius:12px;
-  padding:0 14px;height:44px
-}
-.searchbar input{
-  flex:1;background:none;border:none;outline:none;
-  color:#1a1a1a;font-size:15px;-webkit-appearance:none
-}
-.searchbar input::placeholder{color:#aaa}
-.searchbar .si{color:#aaa;font-size:14px;flex-shrink:0}
-.searchbar .clr{background:none;border:none;color:#aaa;font-size:16px;cursor:pointer;display:none;padding:2px;flex-shrink:0}
+.logo{background:#d97757;border-radius:10px;width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:900;color:#fff;line-height:1.2;text-align:center;flex-shrink:0}
+.aname{flex:1}
+.aname h1{font-size:15px;font-weight:700;letter-spacing:-.3px}
+.aname p{font-size:10px;color:#999;margin-top:1px}
+#gbtn{width:36px;height:36px;border-radius:10px;background:#f0eeea;
+  border:1px solid #e0ddd8;color:#666;font-size:17px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sbar{display:flex;align-items:center;gap:8px;background:#f0eeea;
+  border:1px solid #e0ddd8;border-radius:12px;padding:0 14px;height:44px}
+.sbar input{flex:1;background:none;border:none;outline:none;
+  color:#1a1a1a;font-size:15px;-webkit-appearance:none}
+.sbar input::placeholder{color:#aaa}
+.sbar .sico{color:#aaa;font-size:14px;flex-shrink:0;pointer-events:none}
+.sbar .sclr{background:none;border:none;color:#aaa;font-size:16px;cursor:pointer;display:none;flex-shrink:0}
 
-/* ─── CONTENT ─── */
-#content{position:relative;overflow:hidden;background:#f8f7f4}
-.pane{
-  position:absolute;inset:0;
-  overflow-y:auto;-webkit-overflow-scrolling:touch;
+/* ── CONTENT ── */
+#content{position:relative;overflow:hidden}
+.screen{
+  position:absolute;inset:0;overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
   visibility:hidden;pointer-events:none
 }
-.pane.on{visibility:visible;pointer-events:auto}
-/* AI pane needs flex */
-#p-ai{display:flex;flex-direction:column}
+.screen.on{visibility:visible;pointer-events:auto}
+#s-ai{display:flex;flex-direction:column}
+#s-ai.on{display:flex!important}
 
-/* ─── TABBAR ─── */
-#tabbar{
-  background:#ffffff;border-top:1px solid #e5e5e5;
-  display:flex;padding-bottom:env(safe-area-inset-bottom,0px)
-}
-.tb{
-  flex:1;display:flex;flex-direction:column;align-items:center;
+/* ── TABBAR ── */
+#tabbar{background:#fff;border-top:1px solid #e8e8e3;
+  display:flex;padding-bottom:env(safe-area-inset-bottom,0px)}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;
   gap:3px;padding:8px 4px 6px;cursor:pointer;-webkit-user-select:none;
-  border-top:2px solid transparent
-}
-.tb .ic{font-size:20px;line-height:1}
-.tb .lb{font-size:10px;color:#999}
-.tb.on{border-top-color:#d97757}
-.tb.on .lb{color:#d97757}
+  border-top:2px solid transparent}
+.tab .ti{font-size:20px;line-height:1}
+.tab .tl{font-size:9px;color:#999;letter-spacing:.1px}
+.tab.on{border-top-color:#d97757}
+.tab.on .tl{color:#d97757}
 
-/* ─── HOME ─── */
-#p-home{padding-bottom:20px}
-.grp-hd{
-  padding:20px 16px 8px;
-  font-size:11px;font-weight:700;color:#999;
-  text-transform:uppercase;letter-spacing:1.2px
-}
+/* ── HOME ── */
+#s-home{padding-bottom:20px}
+.grp-hd{padding:18px 16px 7px;font-size:10px;font-weight:700;
+  color:#999;text-transform:uppercase;letter-spacing:1.2px}
 .grp{padding:0 12px}
-.drow{
-  background:#ffffff;border:1px solid #ebe9e4;border-radius:12px;
-  padding:13px 14px;margin-bottom:6px;cursor:pointer;
-  display:flex;align-items:center;gap:12px
-}
-.drow:active{background:#f0efec;border-color:#d97757}
+.drow{background:#fff;border:1px solid #ebe9e4;border-radius:12px;
+  padding:12px 14px;margin-bottom:6px;cursor:pointer;
+  display:flex;align-items:center;gap:12px}
+.drow:active{background:#f5f0ec;border-color:#d97757}
 .ddot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .dtxt{flex:1;min-width:0}
-.dname{font-size:14px;font-weight:600;color:#1a1a1a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dname{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dcls{font-size:11px;color:#999;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.dbadge{font-size:9px;font-weight:700;padding:3px 7px;border-radius:5px;text-transform:uppercase;letter-spacing:.4px;flex-shrink:0}
+.dbadge{font-size:9px;font-weight:700;padding:3px 7px;border-radius:5px;
+  text-transform:uppercase;letter-spacing:.4px;flex-shrink:0;white-space:nowrap}
 .darr{color:#ccc;font-size:14px;flex-shrink:0}
 
-/* ─── DETAIL ─── */
-#p-det{background:#f8f7f4;padding-bottom:24px}
-.dethd{
-  position:sticky;top:0;z-index:10;
-  background:#ffffff;border-bottom:1px solid #e5e5e5;padding:12px 16px
-}
-.backbtn{
-  display:flex;align-items:center;gap:4px;
-  background:none;border:none;color:#d97757;font-size:14px;cursor:pointer;margin-bottom:8px
-}
-.detname{font-size:20px;font-weight:700;color:#1a1a1a;line-height:1.2}
+/* ── DETAIL ── */
+#s-det{background:#f5f5f0;padding-bottom:24px}
+.dethd{position:sticky;top:0;z-index:10;background:#fff;
+  border-bottom:1px solid #e8e8e3;padding:12px 16px}
+.backbtn{display:flex;align-items:center;gap:4px;background:none;border:none;
+  color:#d97757;font-size:14px;cursor:pointer;margin-bottom:8px}
+.detname{font-size:20px;font-weight:700;line-height:1.2}
 .detcls{font-size:12px;color:#999;margin-top:4px;line-height:1.4}
-.srctag{
-  display:inline-block;margin-top:8px;font-size:10px;font-weight:700;
-  padding:3px 9px;border-radius:6px
-}
-.st1{background:rgba(74,222,128,.1);color:#4ade80;border:1px solid rgba(74,222,128,.2)}
-.st2{background:rgba(251,191,36,.1);color:#fbbf24;border:1px solid rgba(251,191,36,.2)}
+.stag{display:inline-block;margin-top:8px;font-size:10px;font-weight:700;
+  padding:3px 9px;border-radius:6px}
+.st1{background:rgba(74,222,128,.1);color:#16a34a;border:1px solid rgba(74,222,128,.25)}
+.st2{background:rgba(217,119,87,.1);color:#d97757;border:1px solid rgba(217,119,87,.25)}
 .detbody{padding:14px}
-.card{
-  background:#ffffff;border:1px solid #ebe9e4;border-radius:12px;
-  padding:14px;margin-bottom:10px
-}
-.ctit{
-  font-size:10px;font-weight:700;color:#d97757;
-  text-transform:uppercase;letter-spacing:.9px;
-  padding-bottom:9px;margin-bottom:10px;border-bottom:1px solid #ebe9e4
-}
+.card{background:#fff;border:1px solid #ebe9e4;border-radius:12px;padding:14px;margin-bottom:10px}
+.ctit{font-size:10px;font-weight:700;color:#d97757;text-transform:uppercase;
+  letter-spacing:.9px;padding-bottom:9px;margin-bottom:10px;border-bottom:1px solid #f0eeea}
 .ilist{list-style:none}
-.ilist li{
-  font-size:13px;color:#444;line-height:1.5;
-  padding:5px 0;border-bottom:1px solid #f0efec;
-  display:flex;align-items:flex-start;gap:8px
-}
+.ilist li{font-size:13px;color:#444;line-height:1.5;padding:5px 0;
+  border-bottom:1px solid #f5f5f0;display:flex;align-items:flex-start;gap:8px}
 .ilist li:last-child{border:none;padding-bottom:0}
 .ilist li::before{content:"·";color:#d97757;font-size:18px;line-height:1.1;flex-shrink:0}
-.dblk{border-bottom:1px solid #f0efec;padding:10px 0}
+.dblk{border-bottom:1px solid #f5f5f0;padding:10px 0}
 .dblk:last-child{border:none;padding-bottom:0}
 .dlbl{font-size:10px;font-weight:700;color:#d97757;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
-.dval{font-size:14px;font-weight:600;color:#1a1a1a;line-height:1.4;margin-bottom:2px}
-.dmax{font-size:11px;color:#fb923c;margin-bottom:1px}
+.dval{font-size:14px;font-weight:600;line-height:1.4;margin-bottom:2px}
+.dmax{font-size:11px;color:#e67e22;margin-bottom:1px}
 .dfrq{font-size:11px;color:#999}
-.dnot{font-size:11px;color:#888;line-height:1.5;background:#f8f7f4;border-radius:6px;padding:6px 9px;margin-top:6px;border-left:2px solid #e0ddd8}
+.dnot{font-size:11px;color:#777;line-height:1.5;background:#f8f7f4;
+  border-radius:6px;padding:6px 9px;margin-top:6px;border-left:2px solid #e0ddd8}
 .ptxt{font-size:13px;color:#444;line-height:1.7;white-space:pre-wrap}
-.cirow{font-size:13px;color:#444;line-height:1.5;padding:6px 0;border-bottom:1px solid #f0efec;display:flex;align-items:flex-start;gap:8px}
+.cirow{font-size:13px;color:#444;line-height:1.5;padding:6px 0;
+  border-bottom:1px solid #f5f5f0;display:flex;align-items:flex-start;gap:8px}
 .cirow:last-child{border:none}
 .cirow::before{content:"⛔";font-size:11px;flex-shrink:0;margin-top:2px}
-.arow{background:rgba(248,113,113,.06);border:1px solid rgba(248,113,113,.15);border-radius:9px;padding:9px 12px;margin-bottom:6px;font-size:12px;color:#fca5a5;line-height:1.5}
+.arow{background:#fff8f6;border:1px solid #fde8e1;border-radius:9px;
+  padding:9px 12px;margin-bottom:6px;font-size:12px;color:#c0392b;line-height:1.5}
 .arow:last-child{margin-bottom:0}
 .srctxt{font-size:11px;color:#999;line-height:1.6;font-style:italic}
 
-/* ─── COMPAT ─── */
-#p-cp{padding:16px;padding-bottom:24px}
-.ptit{font-size:18px;font-weight:700;color:#1a1a1a;margin-bottom:4px}
-.psub{font-size:12px;color:#888;line-height:1.5;margin-bottom:14px}
-.nbox{background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.2);border-radius:10px;padding:10px 13px;font-size:11px;color:#fbbf24;line-height:1.5;margin-bottom:14px}
+/* ── COMPAT ── */
+#s-cp{padding:16px;padding-bottom:24px}
+.ptit{font-size:18px;font-weight:700;margin-bottom:4px}
+.psub{font-size:12px;color:#999;line-height:1.5;margin-bottom:14px}
+.nbox{background:#fffbf0;border:1px solid #fce4a0;border-radius:10px;
+  padding:10px 13px;font-size:11px;color:#92610a;line-height:1.5;margin-bottom:14px}
 .cinpw{position:relative;margin-bottom:8px}
-.cinpw input{display:block;width:100%;background:#ffffff;border:1px solid #e0ddd8;border-radius:12px;padding:12px 14px 12px 38px;color:#f1f5f9;font-size:15px;outline:none;-webkit-appearance:none}
-.cinpw input:focus{border-color:#0ea5e9}
+.cinpw input{display:block;width:100%;background:#fff;border:1px solid #e0ddd8;
+  border-radius:12px;padding:12px 14px 12px 38px;color:#1a1a1a;font-size:15px;
+  outline:none;-webkit-appearance:none}
+.cinpw input:focus{border-color:#d97757}
 .cinpw input::placeholder{color:#aaa}
 .cinpw .cico{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#aaa;font-size:14px;pointer-events:none}
-.csugl{background:#ffffff;border:1px solid #e0ddd8;border-radius:12px;overflow:hidden;margin-bottom:10px;display:none}
-.csug{padding:13px 14px;border-bottom:1px solid #f0efec;cursor:pointer;font-size:14px;color:#1a1a1a}
+.csugl{background:#fff;border:1px solid #e0ddd8;border-radius:12px;
+  overflow:hidden;margin-bottom:10px;display:none}
+.csug{padding:13px 14px;border-bottom:1px solid #f5f5f0;cursor:pointer;font-size:14px}
 .csug:last-child{border:none}
-.csug:active{background:#f0efec}
+.csug:active{background:#f5f0ec}
 .chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px;min-height:28px}
-.chip{background:#fdf3ef;border:1px solid #d97757;border-radius:20px;padding:6px 10px 6px 13px;font-size:13px;font-weight:600;color:#d97757;display:flex;align-items:center;gap:6px}
-.chipx{color:#475569;font-size:15px;cursor:pointer}
-.vbtn{display:block;width:100%;background:#d97757;border:none;border-radius:12px;padding:14px;color:#ffffff;font-size:16px;font-weight:700;cursor:pointer;margin-bottom:16px}
+.chip{background:#fff5f2;border:1px solid #d97757;border-radius:20px;
+  padding:6px 10px 6px 13px;font-size:13px;font-weight:600;color:#d97757;
+  display:flex;align-items:center;gap:6px}
+.chipx{color:#ccc;font-size:15px;cursor:pointer}
+.vbtn{display:block;width:100%;background:#d97757;border:none;border-radius:12px;
+  padding:14px;color:#fff;font-size:16px;font-weight:700;cursor:pointer;margin-bottom:16px}
 .vbtn:disabled{opacity:.3;pointer-events:none}
 .cres{border-radius:11px;padding:13px 14px;margin-bottom:9px;border:1px solid}
-.crok{background:rgba(74,222,128,.07);border-color:rgba(74,222,128,.25)}
-.crno{background:rgba(248,113,113,.08);border-color:rgba(248,113,113,.3)}
-.crwn{background:rgba(251,191,36,.07);border-color:rgba(251,191,36,.25)}
-.cruk{background:rgba(100,116,139,.12);border-color:rgba(100,116,139,.25)}
+.crok{background:#f0fdf4;border-color:#bbf7d0}
+.crno{background:#fff1f0;border-color:#fecaca}
+.crwn{background:#fffbeb;border-color:#fde68a}
+.cruk{background:#f8f8f8;border-color:#e0e0e0}
 .crh{display:flex;align-items:center;gap:9px;margin-bottom:4px}
 .cric{font-size:18px}
-.crpr{font-size:13px;font-weight:700;color:#1a1a1a;line-height:1.3}
+.crpr{font-size:13px;font-weight:700;line-height:1.3}
 .crlb{font-size:11px;font-weight:700;margin-bottom:5px}
 .crnt{font-size:12px;color:#555;line-height:1.5}
 .crsr{font-size:10px;color:#999;margin-top:5px;font-style:italic}
-.allok{text-align:center;padding:18px;color:#4ade80;font-size:16px;font-weight:600}
+.allok{text-align:center;padding:18px;color:#16a34a;font-size:16px;font-weight:600}
 
-/* ─── AI ─── */
-#p-ai.on{display:flex!important}
-.aidc{flex-shrink:0;margin:10px 12px 0;background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.15);border-radius:10px;padding:9px 13px;font-size:11px;color:#fbbf24;line-height:1.5}
+/* ── AI ── */
+.aidc{flex-shrink:0;margin:10px 12px 0;background:#fffbeb;border:1px solid #fde68a;
+  border-radius:10px;padding:9px 13px;font-size:11px;color:#92610a;line-height:1.5}
 .aisg{flex-shrink:0;display:flex;flex-wrap:wrap;gap:7px;padding:10px 12px 4px}
-.aisug{background:#ffffff;border:1px solid #e0ddd8;border-radius:20px;padding:6px 13px;font-size:12px;cursor:pointer;color:#666}
+.aisug{background:#fff;border:1px solid #e0ddd8;border-radius:20px;
+  padding:6px 13px;font-size:12px;cursor:pointer;color:#666}
 .aisug:active{border-color:#d97757;color:#d97757}
-.aimsgs{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px;display:flex;flex-direction:column;gap:9px}
-.aifoot{flex-shrink:0;display:flex;gap:9px;align-items:flex-end;padding:10px 12px calc(env(safe-area-inset-bottom,0px) + 10px);background:#ffffff;border-top:1px solid #e5e5e5}
-.aitxt{flex:1;background:#f8f7f4;border:1px solid #e0ddd8;border-radius:12px;padding:10px 14px;color:#1a1a1a;font-size:15px;outline:none;resize:none;max-height:110px;font-family:inherit;line-height:1.4;-webkit-appearance:none}
+.aimsgs{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;
+  padding:12px;display:flex;flex-direction:column;gap:9px}
+.aifoot{flex-shrink:0;display:flex;gap:9px;align-items:flex-end;
+  padding:10px 12px calc(env(safe-area-inset-bottom,0px)+10px);
+  background:#fff;border-top:1px solid #e8e8e3}
+.aitxt{flex:1;background:#f5f5f0;border:1px solid #e0ddd8;border-radius:12px;
+  padding:10px 14px;color:#1a1a1a;font-size:15px;outline:none;resize:none;
+  max-height:110px;font-family:inherit;line-height:1.4;-webkit-appearance:none}
 .aitxt:focus{border-color:#d97757}
 .aitxt::placeholder{color:#aaa}
-.aisnd{width:42px;height:42px;flex-shrink:0;background:#d97757;border:none;border-radius:12px;color:#ffffff;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.aisnd{width:42px;height:42px;flex-shrink:0;background:#d97757;border:none;
+  border-radius:12px;color:#fff;font-size:20px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;cursor:pointer}
 .aisnd:disabled{opacity:.3;pointer-events:none}
 .msg{max-width:86%;padding:11px 14px;border-radius:14px;font-size:14px;line-height:1.6}
-.mu{background:#d97757;color:#ffffff;align-self:flex-end;border-bottom-right-radius:4px;font-weight:500}
-.ma{background:#ffffff;color:#1a1a1a;align-self:flex-start;border-bottom-left-radius:4px;border:1px solid #e5e5e5}
+.mu{background:#d97757;color:#fff;align-self:flex-end;border-bottom-right-radius:4px;font-weight:500}
+.ma{background:#fff;color:#1a1a1a;align-self:flex-start;border-bottom-left-radius:4px;border:1px solid #e8e8e3}
 .ma.sp{color:#aaa}
 
-/* ─── INDEX ─── */
-#p-idx{padding-bottom:20px}
-.idxl{padding:10px 16px 3px;font-size:11px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:1px;position:sticky;top:0;background:#f8f7f4;z-index:5}
-.idxr{padding:13px 16px;border-bottom:1px solid #ebe9e4;cursor:pointer;display:flex;align-items:center;gap:11px}
-.idxr:active{background:#f0efec}
-.idxn{font-size:14px;color:#1a1a1a;flex:1}
+/* ── INDEX ── */
+#s-idx{padding-bottom:20px}
+.idxl{padding:10px 16px 3px;font-size:10px;font-weight:700;color:#999;
+  text-transform:uppercase;letter-spacing:1px;position:sticky;top:0;background:#f5f5f0;z-index:5}
+.idxr{padding:13px 16px;border-bottom:1px solid rgba(0,0,0,.05);
+  cursor:pointer;display:flex;align-items:center;gap:11px}
+.idxr:active{background:#f0eeea}
+.idxn{font-size:14px;flex:1}
 
-/* ─── SEARCH ─── */
-#p-srch{padding:10px 12px 20px}
+/* ── SEARCH ── */
+#s-srch{padding:10px 12px 20px}
 .srct{font-size:11px;color:#999;padding:4px 2px;margin-bottom:8px}
-.srrow{background:#ffffff;border:1px solid #ebe9e4;border-radius:12px;padding:12px 14px;margin-bottom:6px;cursor:pointer}
-.srrow:active{background:#f0efec;border-color:#d97757}
-.srnm{font-size:14px;font-weight:600;color:#1a1a1a;margin-bottom:4px}
+.srrow{background:#fff;border:1px solid #ebe9e4;border-radius:12px;
+  padding:12px 14px;margin-bottom:6px;cursor:pointer}
+.srrow:active{background:#f5f0ec;border-color:#d97757}
+.srnm{font-size:14px;font-weight:600;margin-bottom:4px}
 .hl{color:#d97757;font-weight:700}
 .nores{text-align:center;padding:50px 20px;color:#999}
 .nores .em{font-size:40px;display:block;margin-bottom:12px}
 
-/* ─── SETTINGS SHEET ─── */
-#settingsOverlay{
-  position:fixed;inset:0;z-index:999;
-  background:rgba(0,0,0,.75);
+/* ── SOURCES ── */
+#s-src{padding:16px;padding-bottom:24px}
+.src-title{font-size:18px;font-weight:700;margin-bottom:4px}
+.src-sub{font-size:12px;color:#999;line-height:1.5;margin-bottom:16px}
+.src-section{font-size:11px;font-weight:700;color:#d97757;text-transform:uppercase;
+  letter-spacing:1px;margin:18px 0 8px}
+.src-card{background:#fff;border:1px solid #ebe9e4;border-radius:12px;
+  padding:13px 14px;margin-bottom:8px}
+.src-card-title{font-size:13px;font-weight:700;margin-bottom:3px}
+.src-card-auth{font-size:11px;color:#666;margin-bottom:3px}
+.src-card-pub{font-size:11px;color:#999;margin-bottom:3px}
+.src-card-note{font-size:11px;color:#555;line-height:1.5;margin-top:5px;
+  padding-top:5px;border-top:1px solid #f5f5f0}
+.src-card-doi{font-size:10px;color:#d97757;margin-top:3px;word-break:break-all}
+.disclaimer-box{background:#fff8f0;border:1px solid #fde0cc;border-radius:12px;
+  padding:14px;margin-top:16px;font-size:12px;color:#7a4020;line-height:1.7}
+.disclaimer-box strong{display:block;font-size:13px;margin-bottom:6px}
+.app-version{text-align:center;font-size:10px;color:#ccc;margin-top:20px;padding-bottom:10px}
+
+/* ── SETTINGS ── */
+#overlay{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.5);
   display:flex;align-items:flex-end;justify-content:center;
-  opacity:0;pointer-events:none;visibility:hidden;transition:opacity .2s
-}
-#settingsOverlay.open{opacity:1;pointer-events:auto;visibility:visible}
-.sheet{
-  background:#ffffff;border-top:1px solid #e5e5e5;
-  border-radius:20px 20px 0 0;
-  padding:8px 20px calc(env(safe-area-inset-bottom,0px) + 24px);
-  width:100%;max-width:480px
-}
+  opacity:0;pointer-events:none;visibility:hidden;transition:opacity .2s}
+#overlay.open{opacity:1;pointer-events:auto;visibility:visible}
+.sheet{background:#fff;border-top:1px solid #e8e8e3;border-radius:20px 20px 0 0;
+  padding:8px 20px calc(env(safe-area-inset-bottom,0px)+24px);width:100%;max-width:480px}
 .shandle{width:36px;height:4px;background:#e0ddd8;border-radius:2px;margin:10px auto 20px}
-.shtit{font-size:18px;font-weight:700;color:#1a1a1a;margin-bottom:6px}
-.shsub{font-size:12px;color:#888;line-height:1.5;margin-bottom:18px}
+.shtit{font-size:18px;font-weight:700;margin-bottom:6px}
+.shsub{font-size:12px;color:#999;line-height:1.5;margin-bottom:18px}
 .shlbl{display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:8px}
-.shinp{
-  display:block;width:100%;background:#f8f7f4;border:1px solid #e0ddd8;
+.shinp{display:block;width:100%;background:#f5f5f0;border:1px solid #e0ddd8;
   border-radius:12px;padding:13px 14px;color:#1a1a1a;font-size:14px;
-  outline:none;font-family:monospace;letter-spacing:.5px;margin-bottom:6px
-}
+  outline:none;font-family:monospace;letter-spacing:.5px;margin-bottom:6px}
 .shinp:focus{border-color:#d97757}
 .shinp::placeholder{color:#aaa}
-.shhint{font-size:11px;color:#999;line-height:1.5;margin-bottom:18px}
+.shhint{font-size:11px;color:#aaa;line-height:1.5;margin-bottom:18px}
 .shst{font-size:12px;min-height:18px;margin-bottom:14px}
 .shbtns{display:flex;gap:10px}
-.shsave{flex:1;background:#d97757;border:none;border-radius:12px;padding:14px;color:#ffffff;font-size:15px;font-weight:700;cursor:pointer}
-.shcanc{background:#f0efec;border:1px solid #e0ddd8;border-radius:12px;padding:14px 18px;color:#666;font-size:15px;cursor:pointer}
+.shsave{flex:1;background:#d97757;border:none;border-radius:12px;
+  padding:14px;color:#fff;font-size:15px;font-weight:700;cursor:pointer}
+.shcanc{background:#f0eeea;border:1px solid #e0ddd8;border-radius:12px;
+  padding:14px 18px;color:#666;font-size:15px;cursor:pointer}
 
-/* ─── CATEGORY COLOURS ─── */
-.ce{color:#f87171;background:rgba(248,113,113,.12)}
-.cs{color:#a78bfa;background:rgba(167,139,250,.12)}
-.cb{color:#60a5fa;background:rgba(96,165,250,.12)}
-.cv{color:#fb923c;background:rgba(251,146,60,.12)}
-.ca{color:#34d399;background:rgba(52,211,153,.12)}
-.cl{color:#fbbf24;background:rgba(251,191,36,.12)}
-.ck{color:#38bdf8;background:rgba(56,189,248,.12)}
-.cc{color:#e879f9;background:rgba(232,121,249,.12)}
-.cr{color:#86efac;background:rgba(134,239,172,.12)}
-.cd{color:#7dd3fc;background:rgba(125,211,252,.12)}
-.cn{color:#fda4af;background:rgba(253,164,175,.12)}
-.ch{color:#fb923c;background:rgba(251,146,60,.12)}
-.cca{color:#f472b6;background:rgba(244,114,182,.12)}
-.cel{color:#a3e635;background:rgba(163,230,53,.12)}
-.cm{color:#4ade80;background:rgba(74,222,128,.12)}
-.cat{color:#facc15;background:rgba(250,204,21,.12)}
-.de{background:#f87171}.ds{background:#a78bfa}.db{background:#60a5fa}
-.dv{background:#fb923c}.da{background:#34d399}.dl{background:#fbbf24}
-.dk{background:#38bdf8}.dc{background:#e879f9}.dr2{background:#86efac}
-.dd{background:#7dd3fc}.dn{background:#fda4af}.dh{background:#fb923c}
-.dca{background:#f472b6}.del{background:#a3e635}.dm{background:#4ade80}
-.dat{background:#facc15}
-.cg{color:#2dd4bf;background:rgba(45,212,191,.12)}
-.cen{color:#e879f9;background:rgba(232,121,249,.12)}
-.co{color:#f43f5e;background:rgba(244,63,94,.12)}
-.dg{background:#2dd4bf}.den{background:#e879f9}.do{background:#f43f5e}
+/* ── CATEGORY COLOURS ── */
+.ce{color:#e53935;background:rgba(229,57,53,.1)}
+.cs{color:#7b1fa2;background:rgba(123,31,162,.1)}
+.cb{color:#1565c0;background:rgba(21,101,192,.1)}
+.cv{color:#e65100;background:rgba(230,81,0,.1)}
+.ca{color:#2e7d32;background:rgba(46,125,50,.1)}
+.cl{color:#f57f17;background:rgba(245,127,23,.1)}
+.ck{color:#00838f;background:rgba(0,131,143,.1)}
+.cc{color:#6a1b9a;background:rgba(106,27,154,.1)}
+.cr{color:#00695c;background:rgba(0,105,92,.1)}
+.cd{color:#01579b;background:rgba(1,87,155,.1)}
+.cn{color:#ad1457;background:rgba(173,20,87,.1)}
+.ch{color:#bf360c;background:rgba(191,54,12,.1)}
+.cca{color:#880e4f;background:rgba(136,14,79,.1)}
+.cel{color:#33691e;background:rgba(51,105,30,.1)}
+.cm{color:#1b5e20;background:rgba(27,94,32,.1)}
+.cat{color:#e65100;background:rgba(230,81,0,.1)}
+.cg{color:#00695c;background:rgba(0,105,92,.1)}
+.cen{color:#4a148c;background:rgba(74,20,140,.1)}
+.co{color:#b71c1c;background:rgba(183,28,28,.1)}
+.cah{color:#006064;background:rgba(0,96,100,.1)}
+.cis{color:#4527a0;background:rgba(69,39,160,.1)}
+.de{background:#e53935}.ds{background:#7b1fa2}.db{background:#1565c0}
+.dv{background:#e65100}.da{background:#2e7d32}.dl{background:#f57f17}
+.dk{background:#00838f}.dc{background:#6a1b9a}.dr2{background:#00695c}
+.dd{background:#01579b}.dn{background:#ad1457}.dh{background:#bf360c}
+.dca{background:#880e4f}.del{background:#33691e}.dm{background:#1b5e20}
+.dat{background:#e65100}.dg{background:#00695c}.den{background:#4a148c}
+.do{background:#b71c1c}.dah{background:#006064}.dis{background:#4527a0}
 </style>
 </head>
 <body>
 <div id="app">
-
   <div id="topbar">
     <div class="tb1">
       <div class="logo">UCI<br>PED</div>
-      <div class="appname">
+      <div class="aname">
         <h1>UCIP Pediatria</h1>
-        <p id="cnt">Formulário Farmacológico</p>
+        <p id="cnt">A carregar...</p>
       </div>
-      <button id="gbtn" onclick="openSettings()">⚙️</button>
+      <button id="gbtn" onclick="openSet()">⚙️</button>
     </div>
-    <div class="searchbar">
-      <span class="si">🔍</span>
+    <div class="sbar">
+      <span class="sico">🔍</span>
       <input id="sinp" type="search" placeholder="Pesquisar fármaco ou indicação..."
         autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-      <button class="clr" id="sclr" onclick="clrS()">✕</button>
+      <button class="sclr" id="sclr" onclick="clrS()">✕</button>
     </div>
   </div>
 
   <div id="content">
-    <div id="p-home" class="pane on"></div>
-    <div id="p-det"  class="pane"></div>
-    <div id="p-srch" class="pane"></div>
-    <div id="p-idx"  class="pane"></div>
+    <div id="s-home"  class="screen on"></div>
+    <div id="s-det"   class="screen"></div>
+    <div id="s-srch"  class="screen"></div>
+    <div id="s-idx"   class="screen"></div>
 
-    <div id="p-cp" class="pane">
+    <!-- COMPAT -->
+    <div id="s-cp" class="screen">
       <div class="ptit">🔬 Compatibilidade IV</div>
-      <div class="psub">Adicione 2 ou mais fármacos para verificar compatibilidade no mesmo acesso.</div>
+      <div class="psub">Seleccione 2 ou mais fármacos para verificar compatibilidade no mesmo acesso venoso.</div>
       <div class="nbox">⚠️ Compatibilidade pode variar com concentração e diluente. Confirme sempre com o farmacêutico.</div>
       <div class="cinpw">
         <span class="cico">💊</span>
@@ -328,10 +344,13 @@ html,body{
       <div class="chips" id="chips"></div>
       <button class="vbtn" id="vbtn" onclick="doCompat()" disabled>Verificar Compatibilidade</button>
       <div id="cres"></div>
-      <p style="font-size:10px;color:#475569;margin-top:6px;line-height:1.5">Fontes: Trissel's ASHP · King Guide 2024 · NHS Medusa 2024 · Leeds PICU Chart 2024</p>
+      <p style="font-size:10px;color:#aaa;margin-top:8px;line-height:1.5">
+        Fontes: Trissel's ASHP · King Guide 2024 · NHS Medusa 2024 · Leeds PICU Chart 2024 · Medicina Intensiva 2020
+      </p>
     </div>
 
-    <div id="p-ai" class="pane">
+    <!-- AI -->
+    <div id="s-ai" class="screen">
       <div class="aidc">⚠️ Apoio à decisão clínica. Não substitui julgamento clínico nem guidelines institucionais.</div>
       <div class="aisg" id="aisg">
         <div class="aisug" onclick="qask(this)">Dose adrenalina anafilaxia</div>
@@ -347,37 +366,44 @@ html,body{
         <button class="aisnd" id="aisnd" onclick="sendAI()">↑</button>
       </div>
     </div>
+
+    <!-- SOURCES -->
+    <div id="s-src" class="screen"></div>
   </div>
 
   <div id="tabbar">
-    <div class="tb on" id="t-home" onclick="goTab('home')"><span class="ic">💊</span><span class="lb">Fármacos</span></div>
-    <div class="tb" id="t-cp"   onclick="goTab('cp')"  ><span class="ic">🔬</span><span class="lb">Compat.</span></div>
-    <div class="tb" id="t-ai"   onclick="goTab('ai')"  ><span class="ic">🤖</span><span class="lb">IA</span></div>
-    <div class="tb" id="t-idx"  onclick="goTab('idx')" ><span class="ic">📋</span><span class="lb">Índice</span></div>
+    <div class="tab on" id="t-home" onclick="goTab('home')"><span class="ti">💊</span><span class="tl">Fármacos</span></div>
+    <div class="tab"    id="t-cp"   onclick="goTab('cp')"  ><span class="ti">🔬</span><span class="tl">Compat.</span></div>
+    <div class="tab"    id="t-ai"   onclick="goTab('ai')"  ><span class="ti">🤖</span><span class="tl">IA</span></div>
+    <div class="tab"    id="t-idx"  onclick="goTab('idx')" ><span class="ti">📋</span><span class="tl">Índice</span></div>
+    <div class="tab"    id="t-src"  onclick="goTab('src')" ><span class="ti">📚</span><span class="tl">Fontes</span></div>
   </div>
 </div>
 
-<div id="settingsOverlay" onclick="osOut(event)">
+<!-- SETTINGS -->
+<div id="overlay" onclick="osOut(event)">
   <div class="sheet">
     <div class="shandle"></div>
     <div class="shtit">⚙️ Definições</div>
-    <div class="shsub">Configure a chave API para o assistente IA. Suporta Anthropic Claude e xAI Grok.</div>
+    <div class="shsub">Chave API para o assistente IA. Suporta Anthropic Claude e xAI Grok.</div>
     <label class="shlbl">Chave API</label>
     <input type="password" class="shinp" id="skey" placeholder="sk-ant-... ou xai-...">
-    <div class="shhint">Guardada localmente neste dispositivo. Nunca enviada para servidores externos.<br>Claude: console.anthropic.com · Grok: console.x.ai</div>
+    <div class="shhint">Guardada localmente. Nunca enviada para servidores externos.<br>
+      Claude: console.anthropic.com · Grok: console.x.ai</div>
     <div class="shst" id="shst"></div>
     <div class="shbtns">
-      <button class="shsave" onclick="saveS()">Guardar</button>
-      <button class="shcanc" onclick="closeSettings()">Cancelar</button>
+      <button class="shsave" onclick="saveSet()">Guardar</button>
+      <button class="shcanc" onclick="closeSet()">Cancelar</button>
     </div>
   </div>
 </div>
 
-<script src="drugs_data.js"></script>
 <script src="compat_data.js"></script>
 <script>
 'use strict';
-var CAT={
+
+// ─── CATEGORIES ───────────────────────────────────────────
+var CAT = {
   emergencia:['Emergência','ce','de'],sedacao:['Sedação','cs','ds'],
   bnmnd:['BNMND','cb','db'],vasoactivo:['Vasoactivo','cv','dv'],
   antiepileptico:['Antiepiléptico','ca','da'],analgesico:['Analgesia','cl','dl'],
@@ -385,60 +411,71 @@ var CAT={
   broncodilatador:['Broncodilatador','cr','dr2'],diuretico:['Diurético','cd','dd'],
   neonatologia:['Neonatologia','cn','dn'],hemostase:['Hemostase','ch','dh'],
   cardiovascular:['Cardiovascular','cca','dca'],electrolitico:['Electrólito','cel','del'],
-  metabolismo:['Metabolismo','cm','dm'],antidoto:['Antídoto','cat','dat']
+  metabolismo:['Metabolismo','cm','dm'],antidoto:['Antídoto','cat','dat'],
+  gastro:['Gastro','cg','dg'],endocrino:['Endocrino','cen','den'],
+  oncologia:['Oncologia','co','do'],antihistaminico:['Anti-H1','cah','dah'],
+  imunossupressor:['Imunosupr.','cis','dis']
 };
 function CL(c){return CAT[c]?CAT[c][0]:c}
 function CP(c){return CAT[c]?CAT[c][1]:'ck'}
 function CD(c){return CAT[c]?CAT[c][2]:'dk'}
 
-var SECS=[
-  {t:'⚡ Emergência & Reanimação',c:['emergencia']},
-  {t:'💉 Sedação, Analgesia & BNMND',c:['sedacao','bnmnd','analgesico']},
-  {t:'❤️ Vasoactivos & Cardiovascular',c:['vasoactivo','cardiovascular','diuretico']},
-  {t:'🧠 Neurologia',c:['antiepileptico']},
-  {t:'🦠 Anti-infecciosos',c:['antibiotico','antidoto']},
-  {t:'🫁 Resp. & Corticoides',c:['broncodilatador','corticoide']},
-  {t:'🍼 Neonatologia',c:['neonatologia']},
-  {t:'🧪 Electrólitos & Metabolismo',c:['electrolitico','metabolismo','hemostase']},
-  {t:'🫁 Gastroenterologia',c:['gastro']},
-  {t:'⚗️ Endocrinologia',c:['endocrino']},
-  {t:'🎗️ Oncologia / Suporte',c:['oncologia']}
+var SECS = [
+  {t:'⚡ Emergência & Reanimação',      c:['emergencia']},
+  {t:'💉 Sedação, Analgesia & BNMND',  c:['sedacao','bnmnd','analgesico']},
+  {t:'❤️ Vasoactivos',                  c:['vasoactivo']},
+  {t:'🫀 Cardiovascular & Diuréticos',  c:['cardiovascular','diuretico','hemostase']},
+  {t:'🧠 Neurologia & Antiepilépticos', c:['antiepileptico']},
+  {t:'🦠 Antibióticos & Anti-infecciosos',c:['antibiotico']},
+  {t:'🫁 Respiratório & Alergologia',   c:['broncodilatador','antihistaminico']},
+  {t:'💊 Corticoides & Imunossupressores',c:['corticoide','imunossupressor']},
+  {t:'🫃 Gastroenterologia',            c:['gastro']},
+  {t:'⚗️ Endocrinologia & Metabolismo', c:['endocrino','metabolismo']},
+  {t:'🧪 Electrólitos & Nutrição',      c:['electrolitico']},
+  {t:'🍼 Neonatologia',                 c:['neonatologia']},
+  {t:'🎗️ Oncologia & Suporte',          c:['oncologia','antidoto']}
 ];
 
-var curTab='home',prevTab='home',selD=[],aiH=[],aKey='';
+// ─── STATE ────────────────────────────────────────────────
+var curTab='home', prevTab='home', selD=[], aiH=[], aKey='';
 
-// INIT
-document.getElementById('cnt').textContent=DRUGS.length+' fármacos · Evidence-Based';
-buildHome(); buildIdx(); loadKey();
-if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(function(){});
+// ─── INIT ─────────────────────────────────────────────────
+window.addEventListener('load', function() {
+  document.getElementById('cnt').textContent = DRUGS.length + ' fármacos · Evidence-Based';
+  buildHome();
+  buildIdx();
+  buildSrc();
+  loadKey();
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(function(){});
+});
 
-function E(s){return s?String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'):''}
-
-function show(id){
-  document.querySelectorAll('.pane').forEach(function(p){p.classList.remove('on')});
-  document.getElementById('p-'+id).classList.add('on');
+function E(s){
+  return s ? String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') : '';
 }
-
+function show(id){
+  document.querySelectorAll('.screen').forEach(function(p){p.classList.remove('on')});
+  document.getElementById('s-'+id).classList.add('on');
+}
 function goTab(t){
   document.getElementById('sinp').value='';
   document.getElementById('sclr').style.display='none';
-  prevTab=curTab;curTab=t;
-  document.querySelectorAll('.tb').forEach(function(el){el.classList.remove('on')});
-  var el=document.getElementById('t-'+t);if(el)el.classList.add('on');
+  prevTab=curTab; curTab=t;
+  document.querySelectorAll('.tab').forEach(function(el){el.classList.remove('on')});
+  var el=document.getElementById('t-'+t); if(el) el.classList.add('on');
   show(t);
 }
 
-// HOME
+// ─── HOME ─────────────────────────────────────────────────
 function buildHome(){
   var h='';
   SECS.forEach(function(s){
     var drugs=DRUGS.filter(function(d){return s.c.indexOf(d.category)>=0});
-    if(!drugs.length)return;
+    if(!drugs.length) return;
     h+='<div class="grp-hd">'+E(s.t)+'</div><div class="grp">';
     drugs.forEach(function(d){h+=drow(d)});
     h+='</div>';
   });
-  document.getElementById('p-home').innerHTML=h;
+  document.getElementById('s-home').innerHTML=h;
 }
 function drow(d){
   var i=DRUGS.indexOf(d);
@@ -450,11 +487,11 @@ function drow(d){
     +'<span class="darr">›</span></div>';
 }
 
-// INDEX
+// ─── INDEX ────────────────────────────────────────────────
 function buildIdx(){
-  var s=DRUGS.slice().sort(function(a,b){return a.name.localeCompare(b.name,'pt')});
+  var sorted=DRUGS.slice().sort(function(a,b){return a.name.localeCompare(b.name,'pt')});
   var ll={};
-  s.forEach(function(d){var l=d.name[0].toUpperCase();if(!ll[l])ll[l]=[];ll[l].push(d)});
+  sorted.forEach(function(d){var l=d.name[0].toUpperCase();if(!ll[l])ll[l]=[];ll[l].push(d)});
   var h='';
   Object.keys(ll).sort().forEach(function(l){
     h+='<div class="idxl">'+l+'</div>';
@@ -467,16 +504,16 @@ function buildIdx(){
         +'<span class="darr">›</span></div>';
     });
   });
-  document.getElementById('p-idx').innerHTML=h;
+  document.getElementById('s-idx').innerHTML=h;
 }
 
-// DETAIL
+// ─── DETAIL ───────────────────────────────────────────────
 function showDet(idx){
   prevTab=curTab;
   var d=DRUGS[idx];
   var st=d.src==='added'
-    ?'<span class="srctag st2">★ Adicionado — fontes bibliográficas</span>'
-    :'<span class="srctag st1">✓ Formulário Pediatria 3ª Ed.</span>';
+    ?'<span class="stag st2">★ Adicionado — fontes bibliográficas independentes</span>'
+    :'<span class="stag st1">✓ Formulário de Pediatria 3ª Ed.</span>';
   var inds='',doses='',prep='',ci='',alerts='',src='';
   if(d.indication&&d.indication.length){
     inds='<div class="card"><div class="ctit">Indicações</div><ul class="ilist">';
@@ -488,48 +525,57 @@ function showDet(idx){
     d.dose.forEach(function(dv){
       doses+='<div class="dblk"><div class="dlbl">'+E(dv.ind)+'</div>'
         +'<div class="dval">'+E(dv.val)+'</div>';
-      if(dv.max)doses+='<div class="dmax">Máx: '+E(dv.max)+'</div>';
-      if(dv.freq)doses+='<div class="dfrq">'+E(dv.freq)+'</div>';
-      if(dv.note)doses+='<div class="dnot">'+E(dv.note)+'</div>';
+      if(dv.max) doses+='<div class="dmax">Máx: '+E(dv.max)+'</div>';
+      if(dv.freq) doses+='<div class="dfrq">'+E(dv.freq)+'</div>';
+      if(dv.note) doses+='<div class="dnot">'+E(dv.note)+'</div>';
       doses+='</div>';
     });
     doses+='</div>';
   }
-  if(d.prep)prep='<div class="card"><div class="ctit">Preparação & Administração</div><div class="ptxt">'+E(d.prep)+'</div></div>';
-  if(d.ci&&d.ci.length){ci='<div class="card"><div class="ctit">Contra-indicações</div>';d.ci.forEach(function(x){ci+='<div class="cirow">'+E(x)+'</div>'});ci+='</div>'}
-  if(d.alert&&d.alert.length){alerts='<div class="card"><div class="ctit">⚠️ Alertas Clínicos</div>';d.alert.forEach(function(x){alerts+='<div class="arow">'+E(x)+'</div>'});alerts+='</div>'}
-  if(d.source)src='<div class="card"><div class="ctit">Fontes</div><div class="srctxt">'+E(d.source)+'</div></div>';
-  document.getElementById('p-det').innerHTML=
+  if(d.prep) prep='<div class="card"><div class="ctit">Preparação & Administração</div><div class="ptxt">'+E(d.prep)+'</div></div>';
+  if(d.ci&&d.ci.length){
+    ci='<div class="card"><div class="ctit">Contra-indicações</div>';
+    d.ci.forEach(function(x){ci+='<div class="cirow">'+E(x)+'</div>'});
+    ci+='</div>';
+  }
+  if(d.alert&&d.alert.length){
+    alerts='<div class="card"><div class="ctit">⚠️ Alertas Clínicos</div>';
+    d.alert.forEach(function(x){alerts+='<div class="arow">'+E(x)+'</div>'});
+    alerts+='</div>';
+  }
+  if(d.source) src='<div class="card"><div class="ctit">Fontes</div><div class="srctxt">'+E(d.source)+'</div></div>';
+  document.getElementById('s-det').innerHTML=
     '<div class="dethd"><button class="backbtn" onclick="goBack()">‹ Voltar</button>'
-    +'<div class="detname">'+E(d.name)+'</div><div class="detcls">'+E(d.class)+'</div>'+st+'</div>'
+    +'<div class="detname">'+E(d.name)+'</div>'
+    +'<div class="detcls">'+E(d.class)+'</div>'+st+'</div>'
     +'<div class="detbody">'+inds+doses+prep+ci+alerts+src+'</div>';
-  document.getElementById('p-det').scrollTo(0,0);
+  document.getElementById('s-det').scrollTo(0,0);
   show('det');
-  document.querySelectorAll('.tb').forEach(function(el){el.classList.remove('on')});
+  document.querySelectorAll('.tab').forEach(function(el){el.classList.remove('on')});
 }
 function goBack(){
   var t=(prevTab==='det'||prevTab==='srch')?'home':prevTab;
   curTab=t;
-  document.querySelectorAll('.tb').forEach(function(el){el.classList.remove('on')});
-  var el=document.getElementById('t-'+t);if(el)el.classList.add('on');
+  document.querySelectorAll('.tab').forEach(function(el){el.classList.remove('on')});
+  var el=document.getElementById('t-'+t); if(el) el.classList.add('on');
   show(t);
 }
 
-// SEARCH
+// ─── SEARCH ───────────────────────────────────────────────
 var SI=document.getElementById('sinp'),stm;
 SI.addEventListener('input',function(){
   clearTimeout(stm);
   var q=this.value.trim();
   document.getElementById('sclr').style.display=q?'block':'none';
-  if(!q){if(curTab==='srch'){show(prevTab);curTab=prevTab}return}
+  if(!q){if(curTab==='srch'){show(prevTab);curTab=prevTab} return}
   stm=setTimeout(function(){doSearch(q)},220);
 });
 function clrS(){
   SI.value='';document.getElementById('sclr').style.display='none';SI.blur();
   var t=prevTab==='srch'?'home':prevTab;
   curTab=t;
-  document.querySelectorAll('.tb').forEach(function(el){el.classList.remove('on')});
-  var el=document.getElementById('t-'+t);if(el)el.classList.add('on');
+  document.querySelectorAll('.tab').forEach(function(el){el.classList.remove('on')});
+  var el=document.getElementById('t-'+t); if(el) el.classList.add('on');
   show(t);
 }
 function doSearch(query){
@@ -539,7 +585,9 @@ function doSearch(query){
     var sc=0,nm=d.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
     if(nm.startsWith(q))sc+=20;else if(nm.includes(q))sc+=10;
     if(d.class.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').includes(q))sc+=5;
-    if(d.indication)d.indication.forEach(function(x){if(x.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').includes(q))sc+=3});
+    if(d.indication)d.indication.forEach(function(x){
+      if(x.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').includes(q))sc+=3
+    });
     if(sc>0)m.push({d:d,i:i,sc:sc});
   });
   m.sort(function(a,b){return b.sc-a.sc});
@@ -552,46 +600,58 @@ function doSearch(query){
       +'<span class="dbadge '+CP(x.d.category)+'" style="display:inline-block;margin-top:4px">'+E(CL(x.d.category))+'</span>'
       +'</div>';
   });
-  document.getElementById('p-srch').innerHTML=h;
-  prevTab=curTab;curTab='srch';
+  document.getElementById('s-srch').innerHTML=h;
+  prevTab=curTab; curTab='srch';
   show('srch');
 }
 
-// COMPAT
+// ─── COMPAT ───────────────────────────────────────────────
 var cdrugs=[];
 DRUGS.forEach(function(d){cdrugs.push({id:d.id,name:d.name})});
-if(typeof COMPAT_DRUGS!=='undefined'){COMPAT_DRUGS.forEach(function(id){if(!cdrugs.find(function(d){return d.id===id}))cdrugs.push({id:id,name:id.replace(/_/g,' ')})})}
+if(typeof COMPAT_DRUGS!=='undefined'){
+  COMPAT_DRUGS.forEach(function(id){
+    if(!cdrugs.find(function(d){return d.id===id}))
+      cdrugs.push({id:id,name:id.replace(/_/g,' ')})
+  })
+}
 var CI2=document.getElementById('cinp');
 CI2.addEventListener('input',function(){
   var q=this.value.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
   var el=document.getElementById('csugl');
   if(!q){el.style.display='none';return}
-  var hits=cdrugs.filter(function(d){return d.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').includes(q)&&!selD.find(function(s){return s.id===d.id})}).slice(0,6);
+  var hits=cdrugs.filter(function(d){
+    return d.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').includes(q)
+      &&!selD.find(function(s){return s.id===d.id})
+  }).slice(0,6);
   if(!hits.length){el.style.display='none';return}
-  el.innerHTML=hits.map(function(d){return'<div class="csug" onclick="addD(\''+d.id+'\',\''+d.name.replace(/'/g,"\\'")+'\')">'+ E(d.name)+'</div>'}).join('');
+  el.innerHTML=hits.map(function(d){
+    return'<div class="csug" onclick="addD(\''+d.id+'\',\''+d.name.replace(/'/g,"\\'")+'\')">'
+      +E(d.name)+'</div>'
+  }).join('');
   el.style.display='block';
 });
 function addD(id,name){
   if(selD.find(function(d){return d.id===id})||selD.length>=8)return;
   selD.push({id:id,name:name});
-  CI2.value='';document.getElementById('csugl').style.display='none';
-  rChips();document.getElementById('vbtn').disabled=selD.length<2;
+  CI2.value=''; document.getElementById('csugl').style.display='none';
+  rChips(); document.getElementById('vbtn').disabled=selD.length<2;
   document.getElementById('cres').innerHTML='';
 }
 function remD(id){
   selD=selD.filter(function(d){return d.id!==id});
-  rChips();document.getElementById('vbtn').disabled=selD.length<2;
+  rChips(); document.getElementById('vbtn').disabled=selD.length<2;
   document.getElementById('cres').innerHTML='';
 }
 function rChips(){
   document.getElementById('chips').innerHTML=selD.map(function(d){
-    return'<div class="chip">'+E(d.name)+'<span class="chipx" onclick="remD(\''+d.id+'\')">✕</span></div>'
+    return'<div class="chip">'+E(d.name)
+      +'<span class="chipx" onclick="remD(\''+d.id+'\')">✕</span></div>'
   }).join('');
 }
 function doCompat(){
   if(selD.length<2)return;
   var pairs=[],allok=true;
-  for(var i=0;i<selD.length;i++)for(var j=i+1;j<selD.length;j++){
+  for(var i=0;i<selD.length;i++) for(var j=i+1;j<selD.length;j++){
     var a=selD[i].id,b=selD[j].id;
     var data=typeof COMPAT!=='undefined'?COMPAT[a+'|'+b]||COMPAT[b+'|'+a]:null;
     pairs.push({a:selD[i].name,b:selD[j].name,data:data});
@@ -605,7 +665,8 @@ function doCompat(){
     else if(d.s==='I'){cls='crno';ic='⛔';lb='INCOMPATÍVEL'}
     else if(d.s==='X'){cls='crwn';ic='⚠️';lb='Dados conflituosos'}
     else{cls='cruk';ic='❓';lb='Sem dados'}
-    h+='<div class="cres '+cls+'"><div class="crh"><span class="cric">'+ic+'</span><span class="crpr">'+E(p.a)+' + '+E(p.b)+'</span></div>'
+    h+='<div class="cres '+cls+'"><div class="crh"><span class="cric">'+ic+'</span>'
+      +'<span class="crpr">'+E(p.a)+' + '+E(p.b)+'</span></div>'
       +'<div class="crlb">'+lb+'</div>';
     if(d)h+='<div class="crnt">'+E(d.n)+'</div><div class="crsr">'+E(d.src)+'</div>';
     else h+='<div class="crnt">Combinação não testada. Consulte o farmacêutico.</div>';
@@ -614,29 +675,66 @@ function doCompat(){
   document.getElementById('cres').innerHTML=h;
 }
 
-// SETTINGS
-function loadKey(){try{var k=localStorage.getItem('ucip_k2');if(k)aKey=k}catch(e){}}
-function openSettings(){
+// ─── SOURCES ──────────────────────────────────────────────
+function buildSrc(){
+  if(typeof SOURCES==='undefined') return;
+  function srcCard(s){
+    var h='<div class="src-card">'
+      +'<div class="src-card-title">'+E(s.title)+'</div>';
+    if(s.authors) h+='<div class="src-card-auth">'+E(s.authors)+'</div>';
+    var pub=[];
+    if(s.publisher) pub.push(s.publisher);
+    if(s.journal)   pub.push(s.journal);
+    if(s.year)      pub.push(String(s.year));
+    if(pub.length)  h+='<div class="src-card-pub">'+E(pub.join(' · '))+'</div>';
+    if(s.doi)       h+='<div class="src-card-doi">DOI: '+E(s.doi)+'</div>';
+    if(s.note)      h+='<div class="src-card-note">'+E(s.note)+'</div>';
+    h+='</div>';
+    return h;
+  }
+  var h='<div class="src-title">📚 Fontes Bibliográficas</div>';
+  h+='<div class="src-sub">Base de dados compilada com rigor a partir das seguintes referências.</div>';
+  h+='<div class="src-section">Referências Primárias de Posologia</div>';
+  SOURCES.primary.forEach(function(s){h+=srcCard(s)});
+  h+='<div class="src-section">Compatibilidade IV</div>';
+  SOURCES.compatibility.forEach(function(s){h+=srcCard(s)});
+  h+='<div class="src-section">Guidelines Clínicas</div>';
+  SOURCES.guidelines.forEach(function(s){h+=srcCard(s)});
+  h+='<div class="src-section">Ensaios Clínicos Relevantes</div>';
+  SOURCES.trials.forEach(function(s){h+=srcCard(s)});
+  h+='<div class="disclaimer-box"><strong>⚠️ Aviso Legal</strong>'+E(SOURCES.disclaimer)+'</div>';
+  h+='<div class="app-version">'+E(SOURCES.version)+' · '+E(SOURCES.app)+'</div>';
+  document.getElementById('s-src').innerHTML=h;
+}
+
+// ─── SETTINGS ─────────────────────────────────────────────
+function loadKey(){
+  try{var k=localStorage.getItem('ucip_k3');if(k)aKey=k}catch(e){}
+}
+function openSet(){
   var inp=document.getElementById('skey');
   inp.value='';
   inp.placeholder=aKey?'Chave guardada — introduza nova para alterar':'sk-ant-... ou xai-...';
   document.getElementById('shst').textContent=aKey?'✅ Chave API configurada':'';
-  document.getElementById('shst').style.color='#4ade80';
-  document.getElementById('settingsOverlay').classList.add('open');
+  document.getElementById('shst').style.color='#16a34a';
+  document.getElementById('overlay').classList.add('open');
 }
-function closeSettings(){document.getElementById('settingsOverlay').classList.remove('open')}
-function osOut(e){if(e.target===document.getElementById('settingsOverlay'))closeSettings()}
-function saveS(){
+function closeSet(){document.getElementById('overlay').classList.remove('open')}
+function osOut(e){if(e.target===document.getElementById('overlay'))closeSet()}
+function saveSet(){
   var k=document.getElementById('skey').value.trim();
-  if(!k){document.getElementById('shst').textContent='⚠️ Chave inválida.';document.getElementById('shst').style.color='#f87171';return}
+  if(!k){
+    document.getElementById('shst').textContent='⚠️ Chave inválida.';
+    document.getElementById('shst').style.color='#e53935';return
+  }
   aKey=k;
-  try{localStorage.setItem('ucip_k2',k)}catch(e){}
-  document.getElementById('shst').textContent='✅ Guardada com sucesso!';
-  document.getElementById('shst').style.color='#4ade80';
-  setTimeout(closeSettings,800);
+  try{localStorage.setItem('ucip_k3',k)}catch(e){}
+  document.getElementById('shst').textContent='✅ Guardada!';
+  document.getElementById('shst').style.color='#16a34a';
+  setTimeout(closeSet,800);
 }
 
-// AI
+// ─── AI ───────────────────────────────────────────────────
 function qask(el){document.getElementById('aitxt').value=el.textContent;document.getElementById('aisg').style.display='none';sendAI()}
 function aikd(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendAI()}}
 function addMsg(r,t){
@@ -650,7 +748,7 @@ function addMsg(r,t){
 async function sendAI(){
   var inp=document.getElementById('aitxt');
   var q=inp.value.trim();if(!q)return;
-  if(!aKey){openSettings();return}
+  if(!aKey){openSet();return}
   inp.value='';inp.style.height='auto';
   document.getElementById('aisg').style.display='none';
   addMsg('user',q);
@@ -659,6 +757,7 @@ async function sendAI(){
   var sys='És um assistente clínico especializado em Medicina Intensiva Pediátrica. '
     +'Respondes sempre em português de Portugal, com precisão clínica e baseado em evidência. '
     +'Alertas para riscos e doses máximas. O utilizador é médico intensivista pediátrico. '
+    +'Fontes preferidas: BNF for Children, Harriet Lane, guidelines ILCOR/ERC/PALS/GINA/ISPAD. '
     +'Base de dados local: '+DRUGS.map(function(d){return d.name}).join(', ')+'.';
   aiH.push({role:'user',content:q});
   try{
@@ -666,15 +765,20 @@ async function sendAI(){
     var url=isX?'https://api.x.ai/v1/chat/completions':'https://api.anthropic.com/v1/messages';
     var res,data,reply;
     if(isX){
-      res=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+aKey},
-        body:JSON.stringify({model:'grok-2-latest',messages:[{role:'system',content:sys}].concat(aiH),max_tokens:1200,temperature:0.3})});
+      res=await fetch(url,{method:'POST',
+        headers:{'Content-Type':'application/json','Authorization':'Bearer '+aKey},
+        body:JSON.stringify({model:'grok-2-latest',
+          messages:[{role:'system',content:sys}].concat(aiH),
+          max_tokens:1500,temperature:0.3})});
       data=await res.json();
       if(!res.ok)throw new Error(data.error&&data.error.message||'Erro API xAI');
       reply=data.choices[0].message.content;
     }else{
       res=await fetch(url,{method:'POST',
-        headers:{'Content-Type':'application/json','x-api-key':aKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-        body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1200,system:sys,messages:aiH})});
+        headers:{'Content-Type':'application/json','x-api-key':aKey,
+          'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+        body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1500,
+          system:sys,messages:aiH})});
       data=await res.json();
       if(!res.ok)throw new Error(data.error&&data.error.message||'Erro API Anthropic');
       reply=data.content[0].text;
@@ -690,7 +794,8 @@ async function sendAI(){
   document.getElementById('aisnd').disabled=false;
 }
 document.getElementById('aitxt').addEventListener('input',function(){
-  this.style.height='auto';this.style.height=Math.min(this.scrollHeight,110)+'px';
+  this.style.height='auto';
+  this.style.height=Math.min(this.scrollHeight,110)+'px';
 });
 </script>
 </body>
