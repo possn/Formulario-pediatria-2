@@ -1,5 +1,5 @@
 // UCIP Pediatria — Neurologia & Antiepilépticos
-// 12 fármacos
+// 17 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_ANTIEPILEPTICOS = [
@@ -100,7 +100,14 @@ var DRUGS_ANTIEPILEPTICOS = [
     "indication": [
       "Status epilepticus — 2ª linha (após BZD)",
       "Epilepsia neonatal — 1ª linha",
-      "Epilepsia crónica (2ª linha em crianças)"
+      "Epilepsia crónica (2ª linha em crianças)",
+      "Convulsões neonatais — 1ª linha (qualquer etiologia)",
+      "Encefalopatia hipóxico-isquémica (EHI) — tratamento convulsões e neuroprotecção",
+      "Síndrome de abstinência neonatal (NAS/NOWS) — 2ª linha após morfina/metadona",
+      "Profilaxia convulsões em EHI grave",
+      "Hiperbilirrubinemia neonatal refractária (adjuvante à fototerapia)",
+      "Colestase neonatal (estimula fluxo biliar)",
+      "Síndrome de Crigler-Najjar tipo II (uso crónico)"
     ],
     "dose": [
       {
@@ -123,21 +130,64 @@ var DRUGS_ANTIEPILEPTICOS = [
         "max": "—",
         "freq": "1–2 doses/dia",
         "note": "Nível sérico terapêutico: 15–40 mcg/ml"
+      },
+      {
+        "ind": "Convulsões neonatais — carga EV",
+        "val": "20 mg/kg EV em 15–30 min",
+        "max": "40 mg/kg total (2ª dose 10–20 mg/kg se sem resposta)",
+        "freq": "dose de carga",
+        "note": "Se sem resposta após 40 mg/kg total → considerar fenitoína/levetiracetam/midazolam"
+      },
+      {
+        "ind": "Neonatal — Manutenção EV/oral",
+        "val": "3–5 mg/kg/dia",
+        "max": "—",
+        "freq": "1–2 doses/dia",
+        "note": "Iniciar 12–24h após carga. Nível terapêutico: 20–40 mcg/ml"
+      },
+      {
+        "ind": "Neonatal — NAS — oral (2ª linha)",
+        "val": "Carga 20 mg/kg oral → manutenção 5 mg/kg/dia",
+        "max": "—",
+        "freq": "manutenção 2×/dia; desmame 10%/dia quando score NAS controlado",
+        "note": ""
+      },
+      {
+        "ind": "Hiperbilirrubinemia — oral",
+        "val": "5 mg/kg/dia oral",
+        "max": "—",
+        "freq": "1–2 doses/dia",
+        "note": "Efeito demora 3–7 dias (indução enzimática) — não é de acção imediata. Papel limitado na era da fototerapia LED de alta intensidade"
+      },
+      {
+        "ind": "Colestase neonatal",
+        "val": "3–5 mg/kg/dia oral",
+        "max": "—",
+        "freq": "1 dose/dia",
+        "note": ""
       }
     ],
     "prep": "EV: diluir em SF ou SG5%. Concentração máx. 16 mg/ml EV. Velocidade máx. 1 mg/kg/min.",
     "ci": [
       "Porfiria",
-      "Depressão respiratória grave"
+      "Depressão respiratória grave",
+      "Depressão respiratória grave não monitorizada"
     ],
     "alert": [
       "⚠️ Depressão respiratória especialmente se associado a BZD — ter suporte ventilatório disponível",
       "⚠️ Hipotensão na infusão rápida",
       "⚠️ Indutor enzimático CYP450 — múltiplas interacções (varfarina, esteroides, antiretrovirais)",
       "Sedação prolongada — avaliar nível de consciência",
-      "Monitorizar nível sérico"
+      "Monitorizar nível sérico",
+      "⚠️ Depressão respiratória — monitorização SpO2 e estar preparado para ventilação",
+      "⚠️ Sedação prolongada — avaliar nível de consciência",
+      "⚠️ Indução enzimática — ↓ bilirrubina (útil) mas ↓ vitamina D e K",
+      "Nível sérico: colher 1h após dose EV ou 2h após oral",
+      "⚠️ Sedação — monitorizar FR e nível de consciência",
+      "⚠️ Efeito não imediato (3–7 dias para indução enzimática)",
+      "Papel clínico limitado na hiperbilirrubinemia — fototerapia é o tratamento principal"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; BNF for Children 2023-24; Volpe JJ. Neurology of the Newborn 6th Ed; ILCOR NNS Guidelines 2021; BNF for Children 2023-24; NICE NG98 Jaundice Guidelines 2016"
   },
   {
     "id": "fenitoina",
@@ -504,5 +554,187 @@ var DRUGS_ANTIEPILEPTICOS = [
       "Medicamento órfão — uso exclusivo em Síndrome de Dravet confirmada"
     ],
     "source": "BNF for Children 2023-24; Wirrell EC. Epilepsia 2017"
+  },
+  {
+    "id": "canabidiol",
+    "name": "Canabidiol (CBD) — Epidyolex",
+    "category": "antiepileptico",
+    "class": "Fitocanabinoide — mecanismo multifactorial (modulação Ca²⁺, serotoninérgico, GPR55)",
+    "brands": "Epidyolex — solução oral 100 mg/ml",
+    "indication": [
+      "Síndrome de Dravet — adjuvante (aprovação EMA/FDA ≥ 2 anos)",
+      "Síndrome de Lennox-Gastaut — adjuvante (aprovação EMA/FDA ≥ 2 anos)",
+      "Esclerose tuberosa complexa — crises associadas (aprovação EMA 2021)",
+      "Síndrome CDKL5 — uso off-label com evidência crescente"
+    ],
+    "dose": [
+      {
+        "ind": "Dravet / Lennox-Gastaut / esclerose tuberosa",
+        "val": "Início: 2,5 mg/kg/dose PO × 2/dia (5 mg/kg/dia)",
+        "max": "10–20 mg/kg/dia (máx 20 mg/kg/dia na ETC)",
+        "freq": "q12h com alimentos gordurosos (aumenta absorção 3–4×)",
+        "note": "Titular: aumentar 2,5 mg/kg/dose (5 mg/kg/dia) a cada semana até resposta ou efeito adverso"
+      }
+    ],
+    "prep": "Oral: solução 100 mg/ml — seringa de dosagem incluída. Tomar SEMPRE com alimentos ricos em gordura para maximizar biodisponibilidade.",
+    "ci": [
+      "Insuficiência hepática moderada a grave (ajuste de dose)",
+      "Hipersensibilidade"
+    ],
+    "alert": [
+      "⚠️ Hepatotoxicidade — TFH antes e a 1, 3, 6 meses; risco aumentado se valproato concomitante (sinergismo hepatotóxico)",
+      "⚠️ Interacção major com valproato: aumenta metabolito tóxico 4-EN-VPA — reduzir valproato se combinados",
+      "⚠️ Interacção com clobazam: aumenta norclobazam 3–4× — sonolência e sedação aumentadas",
+      "Sonolência, diminuição apetite, diarreia — efeitos adversos mais frequentes",
+      "Substância controlada em Portugal — prescrição obrigatoriamente por neurologista pediátrico",
+      "Epidyolex ≠ produtos de canábis medicinal — formulação padronizada e aprovada"
+    ],
+    "source": "BNF for Children 2023-24; Devinsky O et al. NEJM 2017 (Dravet); Thiele EA et al. Lancet 2018 (LGS); EMA Epidyolex EPAR 2019"
+  },
+  {
+    "id": "brivaracetam",
+    "name": "Brivaracetam",
+    "category": "antiepileptico",
+    "class": "Análogo do levetiracetam — ligação a SV2A com 10–30× maior afinidade",
+    "brands": "Briviact — comp 10/25/50/75/100 mg; solução oral 10 mg/ml; EV 50 mg/5 ml",
+    "indication": [
+      "Epilepsia focal com ou sem generalização secundária — adjuvante ≥ 4 anos",
+      "Alternativa ao levetiracetam se efeitos comportamentais intoleráveis",
+      "Status epilepticus refractário — EV (uso off-label pediátrico)"
+    ],
+    "dose": [
+      {
+        "ind": "Adjuvante — epilepsia focal (≥ 4 anos)",
+        "val": "1 mg/kg/dia PO",
+        "max": "4 mg/kg/dia (200 mg/dia)",
+        "freq": "q12h; iniciar com 0,5 mg/kg/dia",
+        "note": "Pode substituir levetiracetam 1:1 (mg por mg) se switch necessário por comportamento"
+      },
+      {
+        "ind": "EV — SE refractário",
+        "val": "1–2 mg/kg EV em 15 min",
+        "max": "100 mg/dose",
+        "freq": "q12h EV; converter para oral quando possível",
+        "note": "EV=oral em biodisponibilidade — conversão directa 1:1"
+      }
+    ],
+    "prep": "EV: diluir em SF, SG5% ou RL. Administrar em 15 min. Oral: solução 10 mg/ml compatível com SNG.",
+    "ci": ["Hipersensibilidade a levetiracetam ou brivaracetam (reactividade cruzada possível)"],
+    "alert": [
+      "Menores efeitos comportamentais que levetiracetam (agitação, irritabilidade) — preferir se LEV mal tolerado",
+      "Sonolência e tonturas — efeitos mais frequentes",
+      "Ajuste em insuficiência hepática (reduzir 50% em moderada, evitar em grave)",
+      "Interacção com fenitoína/carbamazepina (indutores CYP2C19 — reduzem brivaracetam)"
+    ],
+    "source": "BNF for Children 2023-24; Riesgo R et al. Epileptic Disord 2018; EMA Briviact SmPC 2022"
+  },
+  {
+    "id": "perampanel",
+    "name": "Perampanel",
+    "category": "antiepileptico",
+    "class": "Antagonista não-competitivo AMPA — receptor glutamato",
+    "brands": "Fycompa — comp 2/4/6/8/10/12 mg; suspensão oral 0,5 mg/ml",
+    "indication": [
+      "Epilepsia focal — adjuvante ≥ 4 anos",
+      "Crises tónico-clónicas generalizadas — ≥ 7 anos",
+      "Síndrome de Dravet e Lennox-Gastaut — off-label com evidência"
+    ],
+    "dose": [
+      {
+        "ind": "Epilepsia focal / TCG — adjuvante",
+        "val": "Início: 2 mg PO à noite",
+        "max": "12 mg/noite (sem indutores); 16–20 mg/noite (com indutores CYP3A4)",
+        "freq": "1 dose/dia ao deitar (sedação nocturna)",
+        "note": "Titular: aumentar 2 mg/semana. Com indutores (carbamazepina, fenitoína, oxcarbazepina): dobrar a dose"
+      }
+    ],
+    "prep": "Oral: comprimidos ou suspensão 0,5 mg/ml. Tomar ao deitar para minimizar sedação.",
+    "ci": [
+      "Psicose activa ou história de comportamento agressivo grave (relativa — monitorizar)",
+      "Hipersensibilidade"
+    ],
+    "alert": [
+      "⚠️ Comportamento agressivo, irritabilidade, pensamentos hostis — monitorizar humor, especialmente adolescentes",
+      "⚠️ Indutores CYP3A4 (carbamazepina, oxcarbazepina, fenitoína, rifampicina) reduzem perampanel 50–67% — aumentar dose",
+      "Tonturas e sonolência — muito frequentes; administração nocturna minimiza impacto",
+      "Substância controlada (Lista II em Portugal) — risco de abuso baixo mas registado"
+    ],
+    "source": "BNF for Children 2023-24; French JA et al. Epilepsia 2012; Steinhoff BJ et al. Epilepsia 2013"
+  },
+  {
+    "id": "midazolam_in",
+    "name": "Midazolam Intranasal / Bucal (SE agudo)",
+    "category": "antiepileptico",
+    "class": "Benzodiazepina — potenciador GABA-A",
+    "brands": "Buccolam — solução oromucosa 2,5/5/7,5/10 mg; Midazolam 5 mg/ml ampola (off-label IN)",
+    "indication": [
+      "Status epilepticus agudo — 1ª linha pré-hospitalar ou sem acesso EV",
+      "Crise prolongada (> 5 min) em criança com epilepsia conhecida",
+      "Substituição de diazepam rectal em contexto domiciliar/escolar"
+    ],
+    "dose": [
+      {
+        "ind": "SE agudo — bucal (Buccolam aprovado)",
+        "val": "< 3 meses: 0,3 mg/kg; 3m–1a: 2,5 mg; 1–5a: 5 mg; 5–10a: 7,5 mg; ≥ 10a: 10 mg",
+        "max": "10 mg",
+        "freq": "Dose única; repetir 1× após 10 min se sem resposta",
+        "note": "Eficácia equivalente ao diazepam EV (Appleton R et al. Lancet 2008)"
+      },
+      {
+        "ind": "SE agudo — intranasal (off-label)",
+        "val": "0,2–0,3 mg/kg IN",
+        "max": "10 mg",
+        "freq": "Dose única; 0,5 mg/dose por narina usando atomizador MAD",
+        "note": "Solução 5 mg/ml — concentração suficiente para volume IN mínimo. Onset 5–10 min"
+      }
+    ],
+    "prep": "Bucal: Buccolam pronto a usar — aplicar entre gengiva e bochecha. IN: usar atomizador nasal MAD com midazolam 5 mg/ml.",
+    "ci": [
+      "Depressão respiratória grave",
+      "Idade < 3 meses sem monitorização"
+    ],
+    "alert": [
+      "⚠️ Depressão respiratória — ter material de suporte ventilatório disponível",
+      "⚠️ Flumazenil como antídoto se necessário (0,01 mg/kg EV)",
+      "Buccolam: solução aprovada para uso pediátrico pré-hospitalar — preferir ao diazepam rectal",
+      "Via IN absorção rápida e reprodutível — alternativa valiosa quando IV indisponível"
+    ],
+    "source": "BNF for Children 2023-24; Appleton R et al. Lancet 2008; NICE CG137 Epilepsies 2022"
+  },
+  {
+    "id": "clobazam",
+    "name": "Clobazam",
+    "category": "antiepileptico",
+    "class": "Benzodiazepina 1,5 — potenciador GABA-A (menor sedação que 1,4-BZD)",
+    "brands": "Frisium — comp 10 mg; solução oral 1 mg/ml",
+    "indication": [
+      "Epilepsia focal e generalizada — adjuvante",
+      "Síndrome de Lennox-Gastaut — componente drop attacks",
+      "Síndrome de Dravet — adjuvante (sinergia com valproato)",
+      "Crises catameniais — uso intermitente peri-menstrual"
+    ],
+    "dose": [
+      {
+        "ind": "Epilepsia — adjuvante",
+        "val": "Início: 0,1 mg/kg/dia PO",
+        "max": "1 mg/kg/dia (60 mg/dia)",
+        "freq": "2 doses/dia; dose maior à noite",
+        "note": "Titular semanalmente. Dose de manutenção habitual: 0,3–0,5 mg/kg/dia"
+      }
+    ],
+    "prep": "Oral: comprimidos ou solução 1 mg/ml. Tomar com ou sem alimentos.",
+    "ci": [
+      "Miastenia gravis",
+      "Insuf. respiratória grave",
+      "Dependência de álcool/BZD (cruzada)"
+    ],
+    "alert": [
+      "⚠️ Tolerância com uso prolongado — eficácia pode diminuir após semanas/meses",
+      "⚠️ Dependência e síndrome de abstinência — não retirar abruptamente",
+      "⚠️ Interacção com canabidiol: clobazam aumenta norclobazam 3× — reduzir clobazam se combinados",
+      "Sedação inferior às BZD 1,4 (diazepam, lorazepam) — vantagem em uso crónico",
+      "Substância psicotrópica — prescrição especial"
+    ],
+    "source": "BNF for Children 2023-24; Sankar R Epilepsia 2012; Ng YT et al. Neurology 2011 (LGS)"
   }
 ];

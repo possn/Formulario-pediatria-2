@@ -1,5 +1,5 @@
 // UCIP Pediatria — Corticoides & Imunossupressores
-// 10 fármacos
+// 12 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_CORTICOIDES = [
@@ -15,7 +15,11 @@ var DRUGS_CORTICOIDES = [
       "Laringotraqueíte viral (crupe) — EV/IM",
       "Broncodisplasia pulmonar (RN — regimes curtos)",
       "Extubação difícil (pré-extubação)",
-      "Insuf. supra-renal aguda"
+      "Insuf. supra-renal aguda",
+      "Antiemético — adjuvante de 1ª linha na NVIQ moderada a altamente emetizante",
+      "Edema cerebral por tumor ou metástases",
+      "Síndrome de lise tumoral — redução inflamação",
+      "Leucemia linfoblástica aguda — parte de protocolos quimioterápicos (BFM, COG)"
     ],
     "dose": [
       {
@@ -52,21 +56,40 @@ var DRUGS_CORTICOIDES = [
         "max": "100 mg",
         "freq": "seguido de 1 mg/kg/dia",
         "note": ""
+      },
+      {
+        "ind": "Antiemético (QT altamente emetizante)",
+        "val": "0,25 mg/kg EV",
+        "max": "8–12 mg",
+        "freq": "30 min antes QT + q6h",
+        "note": "Associar a ondansetron ± aprepitant"
+      },
+      {
+        "ind": "Edema cerebral por tumor",
+        "val": "0,5–2 mg/kg/dia EV/PO",
+        "max": "16 mg/dia",
+        "freq": "q6h",
+        "note": "Dose de indução 1–2 mg/kg; reduzir para dose de manutenção ao fim de 48–72h"
       }
     ],
     "prep": "EV: pode administrar não diluído ou diluído em SF. Administrar em 5–10 min.",
     "ci": [
       "Infecção sistémica não controlada (relativa)",
-      "Úlcera péptica activa (relativa)"
+      "Úlcera péptica activa (relativa)",
+      "Infecção fúngica sistémica não tratada",
+      "Vacinas vivas"
     ],
     "alert": [
       "⚠️ Hiperglicemia — monitorizar glicemia",
       "⚠️ Imunossupressão — risco infecção oportunista",
       "⚠️ Insuf. supra-renal após uso prolongado — desmame obrigatório",
       "HTA, hipocaliemia, osteoporose (uso prolongado)",
-      "7× mais potente que prednisolona"
+      "7× mais potente que prednisolona",
+      "⚠️ Hiperglicemia — monitorizar glicemia q6h, especialmente em contexto de protocolo QT",
+      "Imunossupressão — risco infecções oportunistas; pneumocistose profilaxia obrigatória em protocolos prolongados",
+      "Insuf. supra-renal com retirada abrupta após uso prolongado"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; Cochrane 2015"
+    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; Cochrane 2015; BNF for Children 2023-24; Dupuis LL et al. Pediatr Blood Cancer 2013; SIOPE CNS Tumor Guidelines"
   },
   {
     "id": "hidrocortisona",
@@ -78,7 +101,11 @@ var DRUGS_CORTICOIDES = [
       "Insuficiência supra-renal aguda (crise addissoniana)",
       "Choque séptico refractário a vasopressores (doses de stress)",
       "Anafilaxia grave (2ª linha após adrenalina)",
-      "Asma grave refractária"
+      "Asma grave refractária",
+      "Insuficiência supra-renal primária (Addison) — terapia de substituição",
+      "Hiperplasia supra-renal congénita (HAC)",
+      "Dose de stress em doente com ISR conhecida",
+      "Pan-hipopituitarismo"
     ],
     "dose": [
       {
@@ -101,19 +128,46 @@ var DRUGS_CORTICOIDES = [
         "max": "200 mg/dose",
         "freq": "cada 6h",
         "note": "Efeito diferido 4–6h — não é fármaco de emergência imediata"
+      },
+      {
+        "ind": "Reposição fisiológica oral",
+        "val": "8–10 mg/m²/dia oral",
+        "max": "—",
+        "freq": "3 doses/dia (manhã 50%, tarde 25%, noite 25%)",
+        "note": "HAC: 10–15 mg/m²/dia (doses mais altas para supressão androgénios)"
+      },
+      {
+        "ind": "Dose de stress (doença minor)",
+        "val": "2–3× dose habitual",
+        "max": "—",
+        "freq": "até resolução da doença",
+        "note": ""
+      },
+      {
+        "ind": "Dose de stress major/cirurgia EV",
+        "val": "50–100 mg/m² EV bólus → 50–100 mg/m²/dia",
+        "max": "200 mg",
+        "freq": "perfusão contínua ou cada 6h",
+        "note": ""
       }
     ],
     "prep": "EV: reconstituir e diluir em SF. Concentração máx. 50 mg/ml. Administrar em 5–15 min.",
     "ci": [
-      "Infecção fúngica sistémica (relativa)"
+      "Infecção fúngica sistémica (relativa)",
+      "Infecção não controlada (relativa)"
     ],
     "alert": [
       "⚠️ Doses de reposição fisiológica (15–20 mg/m²/dia) MUITO diferentes das doses farmacológicas",
       "⚠️ Hiperglicemia intensa",
       "⚠️ Hipocaliemia, HTA, retenção hídrica",
-      "Único corticoide com actividade mineralocorticóide significativa — usar na ISR primária"
+      "Único corticoide com actividade mineralocorticóide significativa — usar na ISR primária",
+      "⚠️ Dose de reposição é MUITO diferente da dose farmacológica",
+      "⚠️ Não suspender abruptamente — desmame gradual",
+      "⚠️ Bracelete de alerta médico obrigatória em ISR crónica",
+      "⚠️ Pais/doente devem ter injecção EV/IM de emergência em casa",
+      "Monitorizar crescimento, PA e glicemia em uso crónico"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; BNF for Children 2023-24; Endocrine Society Guidelines 2016"
   },
   {
     "id": "prednisolona",
@@ -178,14 +232,15 @@ var DRUGS_CORTICOIDES = [
     "id": "ciclosporina",
     "name": "Ciclosporina",
     "category": "imunossupressor",
-    "src": "added",
     "class": "Inibidor calcineurina — supressão linfócitos T (IL-2)",
     "brands": "Sandimmun 25/50/100 mg caps.; sol. oral 100 mg/ml; EV 50 mg/ml. Neoral (microemulsão)",
     "indication": [
       "Prevenção rejeição transplante (rim, fígado, coração, medula)",
       "Síndrome nefrótico cortico-resistente",
       "Artrite idiopática juvenil refractária",
-      "Psoríase grave / dermatite atópica grave"
+      "Psoríase grave / dermatite atópica grave",
+      "Colite ulcerosa grave aguda refractária a corticoides EV — rescue therapy",
+      "Alternativa ao infliximab na CU grave"
     ],
     "dose": [
       {
@@ -208,13 +263,23 @@ var DRUGS_CORTICOIDES = [
         "max": "—",
         "freq": "2 doses/dia",
         "note": "Nível C0 alvo: 80–120 ng/ml"
+      },
+      {
+        "ind": "CU grave refractária a corticoides",
+        "val": "2 mg/kg/dia EV perfusão contínua",
+        "max": "—",
+        "freq": "Perfusão contínua 24h; converter para oral após resposta (5–8 mg/kg/dia em 2 doses)",
+        "note": "Nível sérico alvo: 150–250 ng/mL (monitorizar q2–3 dias). Duração máxima 3–7 dias EV"
       }
     ],
     "prep": "EV: diluir em SF ou SG5% (1:20 a 1:100). Infusão 2–6h. Evitar PVC (adsorção). Oral: Sandimmun e Neoral NÃO são bioequivalentes — não trocar sem ajuste.",
     "ci": [
       "Hipertensão não controlada",
       "Infecção activa grave",
-      "Neoplasia activa (relativa)"
+      "Neoplasia activa (relativa)",
+      "HTA não controlada",
+      "Insuficiência renal grave",
+      "Hipomagnesiemia/hipocolesterolémia (risco aumentado de neurotoxicidade)"
     ],
     "alert": [
       "⚠️ NEFROTÓXICA — monitorizar creatinina. Causa nefropatia crónica em uso prolongado",
@@ -222,9 +287,14 @@ var DRUGS_CORTICOIDES = [
       "⚠️ Inibidor CYP3A4 — múltiplas interacções (estatinas, antibióticos, antifúngicos)",
       "⚠️ Monitorização obrigatória de nível sérico, creatinina, K+, PA, LFTs",
       "⚠️ Hirsutismo, hipertrofia gengival, tremor",
-      "⚠️ Risco linfoma e infecções oportunistas"
+      "⚠️ Risco linfoma e infecções oportunistas",
+      "⚠️ Nefrotoxicidade — monitorizar creatinina diariamente",
+      "⚠️ Neurotoxicidade (convulsões, encefalopatia) — risco com hipomagnesemia, hipocolesterolemia, HTA; nível sérico < 300 ng/mL",
+      "⚠️ HTA — monitorizar TA",
+      "⚠️ Inúmeras interacções — ver ciclosporina em corticoides",
+      "Pontes para colectomia ou biológico — não é terapêutica de manutenção indefinida"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; BNF for Children 2023-24; Turner D et al. Gastroenterology 2011; ECCO CU Guidelines 2019"
   },
   {
     "id": "tacrolimus",
@@ -276,58 +346,6 @@ var DRUGS_CORTICOIDES = [
       "⚠️ Risco linfoma EBV+ (especialmente crianças seronegativas que recebem enxerto EBV+)"
     ],
     "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
-  },
-{
-    "id": "metilprednisolona",
-    "name": "Metilprednisolona EV",
-    "category": "corticoide",
-    "class": "Corticosteroide — glucocorticoide potente",
-    "brands": "Solu-Medrol — frascos 40 mg, 125 mg, 500 mg, 1 g",
-    "indication": [
-      "Asma aguda grave — adjuvante ao broncodilatador",
-      "Croup grave / laringite subglótica",
-      "Choque séptico refractário com insuf. supra-renal (dose fisiológica)",
-      "Doença inflamatória grave (artrite idiopática juvenil, LES flare, dermatomiosite)",
-      "Espasmos infantis — protocolo UKISS/ACTH alternativa",
-      "Edema pós-extubação (profilaxia)"
-    ],
-    "dose": [
-      {
-        "ind": "Asma aguda / exacerbação inflamatória",
-        "val": "1–2 mg/kg/dia EV",
-        "max": "60 mg/dia",
-        "freq": "q6–12h",
-        "note": "Equivalência: 1 mg metilprednisolona = 1,25 mg prednisolona = 0,2 mg dexametasona"
-      },
-      {
-        "ind": "Pulso IV (doenças autoimunes graves)",
-        "val": "10–30 mg/kg EV em 1–3h",
-        "max": "1 g/dia",
-        "freq": "1× /dia × 3 dias",
-        "note": "Monitorizar TA, glicemia e ECG durante infusão — risco HTA, hiperglicemia, arritmias"
-      },
-      {
-        "ind": "Profilaxia edema pós-extubação",
-        "val": "0,5 mg/kg/dose EV",
-        "max": "20 mg/dose",
-        "freq": "q6h × 4 doses (início 12h antes extubação planeada)",
-        "note": "Reduz estridor pós-extubação em crianças de risco (Khemani RG et al. CCM 2009)"
-      }
-    ],
-    "prep": "EV: reconstituir com diluente fornecido; diluir em SF ou SG5%. Concentração ≤ 5 mg/ml. Administrar em 15–30 min (pulso: 1–3h).",
-    "ci": [
-      "Infecção sistémica não tratada (relativa — avaliar risco/benefício)",
-      "Vacinas vivas (≥ 2 mg/kg/dia por ≥ 14 dias — imunossupressão)",
-      "Úlcera péptica activa (relativa)"
-    ],
-    "alert": [
-      "⚠️ Hiperglicemia — monitorizar glicemia q4–6h durante pulso EV",
-      "⚠️ Hipertensão arterial — monitorizar TA durante infusão",
-      "⚠️ Psicose/agitação com pulsos altos (raro em criança)",
-      "⚠️ Insuf. supra-renal iatrogénica após uso prolongado — redução progressiva obrigatória",
-      "Mascarar sinais de infecção — vigilância clínica cuidadosa"
-    ],
-    "source": "BNF for Children 2023-24; GINA 2023; Khemani RG et al. Crit Care Med 2009"
   },
   {
     "id": "micofenolato",
@@ -483,5 +501,111 @@ var DRUGS_CORTICOIDES = [
       "Protege contra flares de LES e reduz mortalidade — tratar como fármaco basal obrigatório"
     ],
     "source": "BNF for Children 2023-24; Melles RB et al. JAMA Ophthalmol 2014; EULAR LES Guidelines 2023"
+  },
+  {
+    "id": "everolimus",
+    "name": "Everolímus",
+    "category": "corticoide",
+    "class": "Inibidor mTOR — imunossupressor / antiproliferativo",
+    "brands": "Certican — comp 0,25/0,5/0,75 mg; Afinitor — comp 2,5/5/7,5/10 mg; Votubia (TSC) — comp 2,5/5/10 mg",
+    "indication": [
+      "Transplante renal/cardíaco — imunossupressão de manutenção (Certican)",
+      "Esclerose tuberosa complexa (TSC) — SEGA, angiomiolipomas, linfangioleiomiomatose (Votubia)",
+      "Neoplasias endócrinas pancreáticas, carcinoma renal de células claras (Afinitor)"
+    ],
+    "dose": [
+      {
+        "ind": "Transplante — manutenção",
+        "val": "0,8 mg/m²/dose PO",
+        "max": "—",
+        "freq": "q12h; ajustar por nível sérico (alvo 3–8 ng/mL com ICN; 6–12 ng/mL sem)",
+        "note": "TDM obrigatório — variabilidade PK significativa"
+      },
+      {
+        "ind": "TSC — SEGA / angiomiolipoma",
+        "val": "4,5 mg/m²/dia PO",
+        "max": "—",
+        "freq": "1 dose/dia; alvo nível 5–15 ng/mL",
+        "note": ""
+      }
+    ],
+    "prep": "Oral: comprimidos — engolir inteiros. Certican: dispersível em água. Tomar SEMPRE com ou sem alimentos — escolher e manter consistente.",
+    "ci": [
+      "Hipersensibilidade a everolímus, sirolímus ou excipientes",
+      "Infecção activa grave"
+    ],
+    "alert": [
+      "⚠️ Pneumonite não infecciosa — tosse seca, dispneia; Rx/TC obrigatório; suspender se grau ≥ 2",
+      "⚠️ Imunossupressão — infecções oportunistas; profilaxia PJP recomendada",
+      "⚠️ Interacções CYP3A4 e P-gp — azóis aumentam drasticamente os níveis",
+      "Estomatite/mucosite — usar colutório de dexametasona tópica (não mentol)",
+      "Hiperlipidémia, hiperglicemia — monitorizar",
+      "Cicatrização deficiente — descontinuar peri-operatório"
+    ],
+    "source": "BNF for Children 2023-24; Franz DN et al. Lancet 2013 (TSC); KDIGO Transplant 2022"
+  },
+  {
+    "id": "basiliximab",
+    "name": "Basiliximab",
+    "category": "corticoide",
+    "class": "Anticorpo monoclonal quimérico anti-IL-2Rα (anti-CD25) — antagonista receptor IL-2",
+    "brands": "Simulect — frascos 10 mg (< 35 kg) e 20 mg (≥ 35 kg)",
+    "indication": [
+      "Profilaxia de rejeição aguda em transplante renal — em combinação com ciclosporina e corticoides",
+      "Transplante hepático pediátrico — indução (off-label frequente)",
+      "Doença enxerto-versus-hospedeiro aguda (aGVHD) refractária — off-label"
+    ],
+    "dose": [
+      {
+        "ind": "Transplante renal/hepático — indução",
+        "val": "< 35 kg: 10 mg EV; ≥ 35 kg: 20 mg EV",
+        "max": "20 mg/dose",
+        "freq": "2 doses: dia 0 (2h antes transplante) e dia 4 pós-transplante",
+        "note": "Não repetir se rejeição grave ou infecção grave no intervalo"
+      }
+    ],
+    "prep": "EV: reconstituir em 5 ml SWFI; diluir em SF ou SG5% para 50 ml. Administrar em 20–30 min.",
+    "ci": ["Hipersensibilidade ao basiliximab"],
+    "alert": [
+      "⚠️ Anafilaxia grave (rara < 0,1%) — ter adrenalina disponível; não re-administrar se anafilaxia prévia",
+      "Síndrome de libertação de citocinas — rara com basiliximab (vs OKT3/timoglobulina)",
+      "Não aumenta significativamente o risco de infecções oportunistas vs placebo",
+      "Sem necessidade de TDM — dosagem fixa por peso",
+      "Vigilância de infecções virais pós-transplante (CMV, EBV) conforme protocolo"
+    ],
+    "source": "BNF for Children 2023-24; Offner G et al. Pediatr Nephrol 2002; KDIGO Transplant 2022"
+  },
+  {
+    "id": "belimumab",
+    "name": "Belimumab",
+    "category": "corticoide",
+    "class": "Anticorpo monoclonal anti-BLyS (anti-BAFF) — inibidor sobrevivência células B",
+    "brands": "Benlysta EV — frascos 120/400 mg; SC — 200 mg/ml seringas",
+    "indication": [
+      "LES pediátrico activo (≥ 5 anos) com autoanticorpos positivos — adjuvante à terapêutica standard",
+      "Nefrite lúpica activa (≥ 5 anos) — em combinação com pulso de ciclofosfamida ou micofenolato"
+    ],
+    "dose": [
+      {
+        "ind": "LES pediátrico — EV",
+        "val": "10 mg/kg EV em 1h",
+        "max": "—",
+        "freq": "Semanas 0, 2, 4; depois q4 semanas",
+        "note": "Resposta avaliada a 6 meses — se sem melhoria documentada ponderar descontinuação"
+      }
+    ],
+    "prep": "EV: reconstituir e diluir em SF 250 ml. Administrar em 1h. Não agitar — pó liofilizado.",
+    "ci": [
+      "Infecção activa grave",
+      "Hipersensibilidade"
+    ],
+    "alert": [
+      "⚠️ Reacção infusional — pré-medicar com anti-histamínico e paracetamol",
+      "⚠️ Infecções graves — risco aumentado; evitar se infecção activa",
+      "⚠️ Depressão e ideação suicida — monitorizar humor (ensaios clínicos reportaram aumento)",
+      "Rastrear TB e VHB antes de iniciar",
+      "Eficácia modesta na nefrite lúpica como monoterapia — usar adjuvante ao imunossupressor standard"
+    ],
+    "source": "BNF for Children 2023-24; Brunner HI et al. Arthritis Rheumatol 2020 (PLUTO pediátrico); EULAR LES 2023"
   }
 ];

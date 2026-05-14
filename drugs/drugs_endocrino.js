@@ -1,5 +1,5 @@
 // UCIP Pediatria — Endocrinologia & Metabolismo
-// 9 fármacos
+// 14 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_ENDOCRINO = [
@@ -50,55 +50,6 @@ var DRUGS_ENDOCRINO = [
       "Alvo NICE-SUGAR pediátrico: 140–180 mg/dL (não 80–110)"
     ],
     "source": "Formulário de Pediatria 3ª Ed.; ISPAD Guidelines CAD 2022; BNF for Children 2023-24"
-  },
-  {
-    "id": "hidrocortisona_replacement",
-    "name": "Hidrocortisona (dose fisiológica)",
-    "category": "endocrino",
-    "src": "added",
-    "class": "Corticoide — reposição fisiológica cortisol",
-    "brands": "Solu-Cortef 100 mg; comp. 10/20 mg; Hydrocortisone 10 mg",
-    "indication": [
-      "Insuficiência supra-renal primária (Addison) — terapia de substituição",
-      "Hiperplasia supra-renal congénita (HAC)",
-      "Dose de stress em doente com ISR conhecida",
-      "Pan-hipopituitarismo"
-    ],
-    "dose": [
-      {
-        "ind": "Reposição fisiológica oral",
-        "val": "8–10 mg/m²/dia oral",
-        "max": "—",
-        "freq": "3 doses/dia (manhã 50%, tarde 25%, noite 25%)",
-        "note": "HAC: 10–15 mg/m²/dia (doses mais altas para supressão androgénios)"
-      },
-      {
-        "ind": "Dose de stress (doença minor)",
-        "val": "2–3× dose habitual",
-        "max": "—",
-        "freq": "até resolução da doença",
-        "note": ""
-      },
-      {
-        "ind": "Dose de stress major/cirurgia EV",
-        "val": "50–100 mg/m² EV bólus → 50–100 mg/m²/dia",
-        "max": "200 mg",
-        "freq": "perfusão contínua ou cada 6h",
-        "note": ""
-      }
-    ],
-    "prep": "Oral: comprimidos ou solução extemporânea. EV: ver entrada hidrocortisona farmacológica.",
-    "ci": [
-      "Infecção não controlada (relativa)"
-    ],
-    "alert": [
-      "⚠️ Dose de reposição é MUITO diferente da dose farmacológica",
-      "⚠️ Não suspender abruptamente — desmame gradual",
-      "⚠️ Bracelete de alerta médico obrigatória em ISR crónica",
-      "⚠️ Pais/doente devem ter injecção EV/IM de emergência em casa",
-      "Monitorizar crescimento, PA e glicemia em uso crónico"
-    ],
-    "source": "BNF for Children 2023-24; Endocrine Society Guidelines 2016"
   },
   {
     "id": "levotiroxina",
@@ -281,14 +232,17 @@ var DRUGS_ENDOCRINO = [
     "id": "octreotido",
     "name": "Octreótido",
     "category": "endocrino",
-    "src": "added",
     "class": "Análogo da somatostatina — inibição multissistémica",
     "brands": "Sandostatin 0,05/0,1/0,5 mg/ml amp.; LAR (depot mensal)",
     "indication": [
       "Hiperinsulinismo neonatal / hipoglicemia hiperinsulinémica refractária",
       "Hemorragia digestiva por varizes esofágicas",
       "Quilotórax refractário",
-      "Nesidioblastose"
+      "Nesidioblastose",
+      "Hemorragia varicosa esofágica — adjuvante à escleroterapia/ligadura",
+      "Hemorragia GI alta não varicosa refractária",
+      "Fístulas pancreáticas e enterocutâneas",
+      "Hipoglicemia refractária por hiperinsulinismo (nesidioblastose)"
     ],
     "dose": [
       {
@@ -311,20 +265,41 @@ var DRUGS_ENDOCRINO = [
         "max": "—",
         "freq": "3×/dia",
         "note": ""
+      },
+      {
+        "ind": "Hemorragia varicosa esofágica",
+        "val": "1–2 μg/kg EV bólus, depois 1–5 μg/kg/h",
+        "max": "50 μg bólus; 50 μg/h perfusão",
+        "freq": "Perfusão contínua 2–5 dias",
+        "note": "Iniciar imediatamente na suspeita — antes da endoscopia"
+      },
+      {
+        "ind": "Hiperinsulinismo congénito",
+        "val": "1–10 μg/kg/dia SC/EV",
+        "max": "40 μg/kg/dia",
+        "freq": "q6–8h SC ou perfusão contínua",
+        "note": "Titular por glicemia; pode necessitar associar diazóxido"
       }
     ],
     "prep": "EV: diluir em SF ou SG5%. Estável 24h à temperatura ambiente.",
     "ci": [
-      "Hipersensibilidade"
+      "Hipersensibilidade",
+      "Hipersensibilidade à somatostatina",
+      "Diabetes mellitus (hiperglicemia; monitorizar)"
     ],
     "alert": [
       "⚠️ Hipoglicemia (inibe glucagon e GH além de insulina)",
       "⚠️ Bradicardia",
       "⚠️ Litíase biliar em uso prolongado",
       "⚠️ Hipotiroidismo em uso prolongado (inibe TSH)",
-      "Monitorizar glicemia frequentemente no início"
+      "Monitorizar glicemia frequentemente no início",
+      "⚠️ Bradicardia e hipotensão com bólus rápido",
+      "⚠️ Hiperglicemia — monitorizar glicemia q2–4h durante perfusão",
+      "Hipoglicemia paradoxal em doses baixas (inibe glucagon)",
+      "Litíase biliar em uso prolongado (> 4 semanas)",
+      "Diarreia e cólica abdominal frequentes"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; BNF for Children 2023-24; Eroglu Y et al. J Pediatr Gastroenterol Nutr 2004; ESPGHAN Variceal Guidelines 2018"
   },
   {
     "id": "vitamina_k",
@@ -470,5 +445,263 @@ var DRUGS_ENDOCRINO = [
       "Verificar ferritina e saturação transferrina antes de cada dose"
     ],
     "source": "BNF for Children 2023-24; Ferinject SmPC 2023"
+  },
+  {
+    "id": "metimazol",
+    "name": "Metimazol / Tiamazol",
+    "category": "endocrino",
+    "class": "Antitiroideo — inibidor peroxidase tiroideia",
+    "brands": "Metibasol; Thyrozol — comp 5/10/20 mg",
+    "indication": [
+      "Hipertiroidismo — doença de Graves em criança e adolescente (1ª linha na maioria)",
+      "Tireotoxicose neonatal (por anticorpos maternos anti-TRAb)",
+      "Preparação pré-operatória tiroidectomia",
+      "Tempestade tiroideia (thyroid storm) — em combinação"
+    ],
+    "dose": [
+      {
+        "ind": "Hipertiroidismo pediátrico",
+        "val": "0,2–0,5 mg/kg/dia PO",
+        "max": "30 mg/dia (inicial); 10–15 mg/dia (manutenção)",
+        "freq": "1–3 doses/dia",
+        "note": "Dose única diária possível (semivida adequada). Objetivo T4 livre normal em 4–8 semanas. Tratamento mínimo 2 anos para tentativa de remissão"
+      },
+      {
+        "ind": "Tireotoxicose neonatal",
+        "val": "0,5–1 mg/kg/dia PO",
+        "max": "—",
+        "freq": "q8h",
+        "note": "Durar 2–6 semanas (até desaparecimento anticorpos maternos). Associar propranolol 1–2 mg/kg/dia"
+      }
+    ],
+    "prep": "Oral: comprimidos inteiros ou esmagados em água. Soluções magistrais disponíveis em centros pediátricos especializados.",
+    "ci": [
+      "Agranulocitose prévia por tionamida",
+      "Hipersensibilidade"
+    ],
+    "alert": [
+      "⚠️ AGRANULOCITOSE — complicação grave (0,3–0,5%); informar família de URGÊNCIA se febre/odinofagia — hemograma imediato; suspender se neutrófilos < 1000/μL",
+      "⚠️ Hepatotoxicidade — monitorizar TFH; mais grave com PTU (preferir metimazol em < 18 anos)",
+      "⚠️ Vasculite por ANCA com metimazol (rara) — monitorizar se febre + artralgias + hematúria",
+      "Propiltiouracil (PTU) EVITAR em < 18 anos por risco maior de hepatotoxicidade grave (FDA Black Box Warning 2010)",
+      "Monitorizar TSH, T4L, T3L a cada 4–8 semanas no início"
+    ],
+    "source": "BNF for Children 2023-24; ETA/ESPE Guidelines Paediatric Hyperthyroidism 2022; FDA PTU Black Box 2010"
+  },
+  {
+    "id": "fludrocortisona",
+    "name": "Fludrocortisona",
+    "category": "endocrino",
+    "class": "Corticosteroide mineralocorticoide sintético",
+    "brands": "Florinef — comp 0,1 mg (100 μg)",
+    "indication": [
+      "Insuficiência supra-renal primária (doença de Addison) — substituição mineralocorticoide",
+      "Hiperplasia supra-renal congénita (HSC) — componente mineralocorticoide",
+      "Hipotensão ortostática grave — adjuvante",
+      "Pseudohipoaldosteronismo tipo 1"
+    ],
+    "dose": [
+      {
+        "ind": "Insuf. supra-renal / HSC — substituição",
+        "val": "< 1 ano: 100–200 μg/dia PO; 1–18 anos: 50–100 μg/dia PO",
+        "max": "200 μg/dia",
+        "freq": "1 dose/dia (manhã)",
+        "note": "Lactentes com HSC perdem sal e podem necessitar NaCl adicional (2–4 g/dia) nas primeiras semanas"
+      }
+    ],
+    "prep": "Oral: comprimidos 0,1 mg — podem ser partidos para doses pediátricas. Soluções magistrais disponíveis.",
+    "ci": [
+      "Hipercaliemia",
+      "Insuficiência cardíaca congestiva",
+      "Infecção sistémica não tratada"
+    ],
+    "alert": [
+      "Retenção hídrica e hipertensão — monitorizar TA e peso; reduzir dose se hipertensão",
+      "Hipocaliemia — monitorizar electrólitos",
+      "Adequação da dose: alvo renina plasmática no limite superior do normal; aldosterona suprimida",
+      "Em stress/doença: apenas aumentar hidrocortisona (glucocorticoide) — fludrocortisona manter igual"
+    ],
+    "source": "BNF for Children 2023-24; Bornstein SR et al. J Clin Endocrinol Metab 2016; ESPE CAH Guidelines 2018"
+  },
+  {
+    "id": "sirolimus",
+    "name": "Sirolímus (Rapamicina)",
+    "category": "endocrino",
+    "class": "Inibidor mTOR — imunossupressor / antiproliferativo",
+    "brands": "Rapamune — comp 0,5/1/2 mg; solução oral 1 mg/ml",
+    "indication": [
+      "Transplante renal — manutenção (alternativa a tacrolímus em nefropatia crónica do enxerto)",
+      "Linfangioleiomiomatose (LAM) — TSC-associada",
+      "Esclerose tuberosa complexa (TSC) — angiomiolipoma renal, SEGA (astrocitoma subependimário)",
+      "Síndrome PROS/overgrowth (activação PI3K/mTOR) — uso off-label",
+      "Proliferações vasculares (linfangiomas complexos, haemangiomas graves)"
+    ],
+    "dose": [
+      {
+        "ind": "Transplante renal — manutenção",
+        "val": "3 mg/m²/dia PO",
+        "max": "—",
+        "freq": "1 dose/dia (consistente com refeição)",
+        "note": "Alvo nível sérico: 4–12 ng/mL (com ciclosporina) ou 12–20 ng/mL (sem inibidor calcineurina)"
+      },
+      {
+        "ind": "TSC — SEGA / angiomiolipoma",
+        "val": "4,5 mg/m²/dia PO",
+        "max": "—",
+        "freq": "1 dose/dia; ajustar por nível sérico",
+        "note": "Nível alvo: 5–15 ng/mL"
+      }
+    ],
+    "prep": "Oral: solução 1 mg/ml — conservar a 4°C; estável 1 mês após abertura. Comprimidos: não esmagar. Tomar com ou sem alimentos mas SEMPRE da mesma forma.",
+    "ci": [
+      "Hipersensibilidade à rapamicina ou derivados",
+      "Infecção activa grave"
+    ],
+    "alert": [
+      "⚠️ Pneumonite intersticial — dispneia, tosse seca, infiltrados; suspender imediatamente",
+      "⚠️ Imunossupressão profunda — infecções oportunistas (PJP, CMV); profilaxia obrigatória",
+      "⚠️ Inibidor CYP3A4 e P-gp — interacções múltiplas; ajustar com azóis, macrolídeos, anticonvulsivantes",
+      "Hiperlipidémia — monitorizar perfil lipídico",
+      "Cicatrização deficiente — evitar sirolímus peri-operatório (descontinuar 1 semana antes)",
+      "TDM obrigatório — variabilidade farmacocinética grande; nível sérico 24h pós-dose"
+    ],
+    "source": "BNF for Children 2023-24; Franz DN et al. Lancet 2013 (TSC-SEGA); KDIGO Transplant Guidelines 2022"
+  },
+  {
+    "id": "desmopressina_ddavp",
+    "name": "Desmopressina (DDAVP) — Diabetes Insípida / Hemostase",
+    "category": "endocrino",
+    "class": "Análogo sintético da vasopressina (ADH) — agonista receptor V2",
+    "brands": "Minirin EV 4 μg/ml; Octim intranasal 150 μg/dose; comp 0,1/0,2 mg",
+    "indication": [
+      "Diabetes insípida central — substituição hormonal",
+      "Doença de von Willebrand tipo 1 — pré-procedimento",
+      "Hemofilia A leve-moderada — pré-procedimento (liberta FVIII endógeno)",
+      "Enurese nocturna — tratamento de 2ª linha",
+      "Poliúria pós-traumatismo craniano / pós-cirurgia hipofisária"
+    ],
+    "dose": [
+      {
+        "ind": "Diabetes insípida — EV/SC",
+        "val": "0,1–0,4 μg/kg/dose EV/SC",
+        "max": "4 μg/dose",
+        "freq": "q8–24h (titular por diurese e osmolalidade urinária)",
+        "note": "Oral: 0,05–0,3 mg/dose q8–12h. Intranasal: 2,5–10 μg/dose q12–24h"
+      },
+      {
+        "ind": "vWD tipo 1 / hemofilia A leve",
+        "val": "0,3 μg/kg EV em 20 min",
+        "max": "20 μg",
+        "freq": "Dose única pré-procedimento; repetir 12–24h se necessário",
+        "note": "Efeito máximo 30–60 min após EV. Taquifilaxia após 2–3 doses (redução de estoques)"
+      }
+    ],
+    "prep": "EV: diluir em SF 50–100 ml. Administrar em 20 min. Nasal: spray calibrado 150 μg/dose.",
+    "ci": [
+      "Polidipsia primária / potomania (hiponatremia grave)",
+      "Doença de von Willebrand tipo 2B (pode agravar trombocitopenia)",
+      "Hiponatremia"
+    ],
+    "alert": [
+      "⚠️ HIPONATREMIA — risco principal; monitorizar Na⁺ 4–8h após dose; limitar ingestão de água",
+      "⚠️ Crianças pequenas: risco de convulsões hiponatrémicas por retenção hídrica",
+      "⚠️ Taquifilaxia para hemostase após 2–3 doses — não usar em sangramento crónico",
+      "Rubor facial, cefaleia, náuseas — efeitos adversos comuns",
+      "Poliúria de rebote se suspensão abrupta em DI crónica — reduzir progressivamente"
+    ],
+    "source": "BNF for Children 2023-24; Sznajder M et al. Pediatrics 2007; ISTH von Willebrand Guidelines 2021"
+  },
+{
+    "id": "glucagon",
+    "name": "Glucagão",
+    "category": "endocrino",
+    "class": "Hormona polipeptídica pancreática — agonista receptor glucagão",
+    "brands": "GlucaGen HypoKit — frascos 1 mg pó + seringa com diluente; Baqsimi nasal 3 mg",
+    "indication": [
+      "Hipoglicemia grave sem acesso EV — tratamento de emergência",
+      "Intoxicação por beta-bloqueante grave — efeito inotrópico e cronotrópico positivo",
+      "Intoxicação por bloqueadores canais de cálcio — adjuvante terapêutico",
+      "Hipoglicemia neonatal transitória sem acesso venoso"
+    ],
+    "dose": [
+      {
+        "ind": "Hipoglicemia grave sem acesso EV",
+        "val": "< 25 kg: 0,5 mg IM/SC; ≥ 25 kg: 1 mg IM/SC",
+        "max": "1 mg",
+        "freq": "Dose única; pode repetir 1× após 15 min se sem resposta",
+        "note": "Nasal (Baqsimi): 3 mg intranasal numa narina — sem necessidade de reconstituição"
+      },
+      {
+        "ind": "Intoxicação beta-bloqueante grave",
+        "val": "0,05–0,15 mg/kg EV em 3–5 min (carga)",
+        "max": "10 mg carga",
+        "freq": "Carga; depois perfusão 0,05–0,1 mg/kg/h titulada por FC e TA",
+        "note": "Doses muito altas podem ser necessárias (até 10 mg) — efeito frequentemente transitório"
+      }
+    ],
+    "prep": "IM/SC: reconstituir pó com diluente fornecido — agitar até dissolver. Usar imediatamente. EV (intoxicação): diluir em SG5% (não SF — precipita). Refrigerar antes de reconstituição.",
+    "ci": [
+      "Feocromocitoma (libertação de catecolaminas — HTA grave)",
+      "Insulinoma (hipoglicemia de rebote após efeito)",
+      "Hipersensibilidade ao glucagão ou lactose (excipiente)"
+    ],
+    "alert": [
+      "⚠️ Vómitos frequentes (30–50%) — posicionar em decúbito lateral; risco aspiração",
+      "⚠️ Efeito transitório (30–60 min) — dar hidratos de carbono orais logo que possível após recuperação",
+      "⚠️ Feocromocitoma não diagnosticado — HTA paradoxal grave",
+      "Em intoxicação por BCC e BB: glucagão é adjuvante; associar insulina-euglicemia de alta dose, lipid emulsion, ECMO se refractário",
+      "Hiperglicemia transitória após administração — monitorizar glicemia"
+    ],
+    "source": "BNF for Children 2023-24; Krentz AJ et al. Diabet Med 2011; Graudins A et al. Emerg Med Australas 2016 (BB/CCB toxicity)"
+  },
+  {
+    "id": "levotiroxina",
+    "name": "Levotiroxina (T4)",
+    "category": "endocrino",
+    "class": "Hormona tiroideia sintética — T4 (pró-hormona de T3)",
+    "brands": "Synthroid; Eutirox — comp 25/50/75/100/125/150/175/200 μg; EV 100/200/500 μg",
+    "indication": [
+      "Hipotiroidismo congénito — substituição desde diagnóstico neonatal (screening)",
+      "Hipotiroidismo adquirido (autoimune, pós-tiroidectomia, pós-irradiação)",
+      "Hipotiroidismo em UCIP pós-cirurgia cardíaca (comum na tetralogia, transposição)",
+      "Coma mixedematoso — emergência endocrinológica (EV)",
+      "Supressão de TSH em carcinoma diferenciado da tiróide"
+    ],
+    "dose": [
+      {
+        "ind": "Hipotiroidismo congénito — RN",
+        "val": "10–15 μg/kg/dia PO",
+        "max": "50 μg/dia inicial",
+        "freq": "1 dose/dia em jejum",
+        "note": "Iniciar nas primeiras 2 semanas de vida para prevenir sequelas neurodesenvolvimentais. Alvo T4 livre: metade superior do normal para a idade"
+      },
+      {
+        "ind": "Hipotiroidismo pediátrico (criança > 1 ano)",
+        "val": "< 3 anos: 4–6 μg/kg/dia; 3–10 anos: 3–5 μg/kg/dia; > 10 anos: 2–3 μg/kg/dia",
+        "max": "150–200 μg/dia (adolescente)",
+        "freq": "1 dose/dia em jejum (30 min antes refeição)",
+        "note": "Ajustar por TSH e T4 livre a cada 4–8 semanas inicialmente"
+      },
+      {
+        "ind": "Coma mixedematoso — EV",
+        "val": "4 μg/kg EV (ou 200–400 μg EV dose única)",
+        "max": "500 μg carga",
+        "freq": "Carga; depois 100 μg/dia EV",
+        "note": "Associar hidrocortisona 100 mg EV q8h até excluir insuf. supra-renal concomitante"
+      }
+    ],
+    "prep": "Oral: esmagar comprimidos em 5 ml de água para RN. Tomar 30 min antes da refeição. Não tomar com leite, antiácidos, ferro, cálcio (reduzem absorção 25–40%). EV: administrar lentamente.",
+    "ci": [
+      "Tirotoxicose não tratada",
+      "Insuf. supra-renal não tratada (pode precipitar crise adrenal)"
+    ],
+    "alert": [
+      "⚠️ Hipotiroidismo congénito: início precoce crítico — atraso > 2 semanas causa défice cognitivo permanente",
+      "⚠️ Nunca iniciar em insuf. supra-renal sem corticoide concomitante (crise adrenal)",
+      "⚠️ Interacções absorção: ferro, cálcio, antiácidos, colestiramina — separar 4h",
+      "Pós-cirurgia cardíaca: hipotiroidismo sub-clínico frequente — rastrear TSH/T4L",
+      "Monitorização: TSH e T4L q4–8 sem no início, trimestralmente depois"
+    ],
+    "source": "BNF for Children 2023-24; ATA Hypothyroidism Guidelines 2014; ESPE Congenital Hypothyroidism Guidelines 2014"
   }
 ];

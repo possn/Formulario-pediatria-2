@@ -1,5 +1,5 @@
 // UCIP Pediatria — Cardiovascular & Diuréticos
-// 25 fármacos
+// 29 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_CARDIOVASCULAR = [
@@ -63,7 +63,10 @@ var DRUGS_CARDIOVASCULAR = [
       "Hemorragia major / trauma (Golden Hour — evidência classe I)",
       "Cirurgia cardíaca e ortopédica (profilaxia)",
       "Hemofilia (adjuvante)",
-      "Epistaxis recorrente"
+      "Epistaxis recorrente",
+      "Hemorragia neonatal grave — peri-operatório de cirurgia cardíaca neonatal",
+      "Coagulopatia hemorrágica neonatal refractária",
+      "Hemorragia peri-operatória significativa em cirurgia neonatal major"
     ],
     "dose": [
       {
@@ -86,21 +89,34 @@ var DRUGS_CARDIOVASCULAR = [
         "max": "1500 mg/dose",
         "freq": "3 doses/dia × 5–7 dias",
         "note": "Ou tópico: gaze embebida em solução 5%"
+      },
+      {
+        "ind": "Cirurgia cardíaca neonatal / hemorragia grave",
+        "val": "10–15 mg/kg EV carga; depois 1–3 mg/kg/h perfusão",
+        "max": "—",
+        "freq": "Carga pré-incisão; perfusão durante cirurgia e 4–6h pós-op",
+        "note": "Dados pediátricos extrapolados de estudos CRASH-2 e ensaios de cirurgia cardíaca pediátrica"
       }
     ],
     "prep": "EV: diluir em SF ou SG5%. Velocidade máxima: 100 mg/min.",
     "ci": [
       "Hemorragia subaracnoídea (dados contraditórios — evitar)",
       "Trombose activa (TEP, TVP, AVC isquémico)",
-      "Hematúria de origem renal superior (risco obstrução)"
+      "Hematúria de origem renal superior (risco obstrução)",
+      "Trombose activa (TVP, TEP)",
+      "Hematúria de origem renal alta (risco retenção coágulos)",
+      "Convulsões activas (doses altas — efeito GABA antagonista)"
     ],
     "alert": [
       "⚠️ Convulsões em doses altas (especialmente cirurgia cardíaca com CEC)",
       "⚠️ Tromboembolismo — risco baixo com doses recomendadas, mas monitorizar",
       "Náuseas e vómitos — reduzir velocidade de infusão",
-      "Ajustar na insuf. renal"
+      "Ajustar na insuf. renal",
+      "⚠️ Dose alta (> 100 mg/kg) associada a convulsões — doses neonatais conservadoras (10–15 mg/kg)",
+      "⚠️ Risco trombótico em RN de alto risco (policitemia, catéteres, síndrome antifosfolípido materno)",
+      "Evidência neonatal limitada — usar apenas em contexto de hemorragia grave com benefício esperado claro"
     ],
-    "source": "CRASH-2 Collaborators. Lancet 2010;376:23–32; Roberts I et al. Lancet 2011; Eckert MJ et al. J Trauma 2014"
+    "source": "CRASH-2 Collaborators. Lancet 2010;376:23–32; Roberts I et al. Lancet 2011; Eckert MJ et al. J Trauma 2014; BNF for Children 2023-24; Faraoni D et al. JTCVS 2014; CRASH-2 Collaborators Lancet 2010"
   },
   {
     "id": "heparina",
@@ -610,58 +626,6 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "source": "Monagle P. CHEST 2018; BNF for Children 2023-24"
   },
-{
-    "id": "adenosina",
-    "name": "Adenosina",
-    "category": "cardiovascular",
-    "class": "Antiarrítmico — agonista receptor A1 purinérgico",
-    "brands": "Adenocor — ampolas 6 mg/2 ml (3 mg/ml)",
-    "indication": [
-      "Taquicardia supraventricular paroxística (TSVP) — fármaco de 1ª linha",
-      "Taquicardia por reentrada nodal AV (TRNAV)",
-      "Taquicardia por via acessória (Wolff-Parkinson-White) — com cautela",
-      "Diagnóstico diferencial de taquicardias de complexo largo (taquicardia sinusal vs. TSV)",
-      "TSVP neonatal — primeira escolha farmacológica"
-    ],
-    "dose": [
-      {
-        "ind": "TSVP — 1ª dose",
-        "val": "0,1 mg/kg EV rápido (< 2 seg)",
-        "max": "6 mg",
-        "freq": "Dose única; repetir se sem resposta em 1–2 min",
-        "note": "Administrar em veia central ou antecubital com flush SF 5–10 ml imediato"
-      },
-      {
-        "ind": "TSVP — 2ª dose",
-        "val": "0,2 mg/kg EV rápido",
-        "max": "12 mg",
-        "freq": "Se sem resposta 1–2 min após 1ª dose",
-        "note": ""
-      },
-      {
-        "ind": "TSVP neonatal",
-        "val": "0,1 mg/kg EV rápido",
-        "max": "0,3 mg/kg (máx 6 mg total)",
-        "freq": "Repetir com 0,05–0,1 mg/kg incrementos a cada 1–2 min",
-        "note": "Veia umbilical ou central — evitar periférica por inactivação rápida"
-      }
-    ],
-    "prep": "Administrar não diluída (3 mg/ml). Seringa pré-preparada e flush SF imediato na mesma linha. Via central ou veia antecubital — periférica distal reduz eficácia.",
-    "ci": [
-      "Bloqueio AV 2º ou 3º grau (sem pacemaker)",
-      "Síndrome do nódulo sinusal (sem pacemaker)",
-      "Asma brônquica grave ou DPOC grave (broncoespasmo)",
-      "Síndrome de Wolf-Parkinson-White com flutter/fibrilhação auricular (risco precipitar condução rápida pela via acessória)"
-    ],
-    "alert": [
-      "⚠️ Semi-vida 10 segundos — administrar em bólus muito rápido + flush imediato",
-      "⚠️ Assistolia transitória esperada — avisar família, ter material de reanimação disponível",
-      "⚠️ Pode precipitar broncoespasmo grave em asmáticos",
-      "Monitorização ECG contínua e registo de ritmo durante administração obrigatórios",
-      "Inactivada pela teofilina e cafeína (antagonistas A1) — pode necessitar dose mais alta em prematuros com cafeína"
-    ],
-    "source": "BNF for Children 2023-24; Sanatani S et al. CJC 2017; PALS Guidelines AHA 2020"
-  },
   {
     "id": "amiodarona_iv",
     "name": "Amiodarona EV",
@@ -1107,7 +1071,10 @@ var DRUGS_CARDIOVASCULAR = [
       "Hipertensão arterial pulmonar (HAP) — tratamento específico",
       "HAP persistente do recém-nascido (PPHN) — alternativa/complemento ao iNO",
       "Desmame do óxido nítrico inalado (prevenir efeito rebote)",
-      "HAP pós-cirurgia cardíaca congenita"
+      "HAP pós-cirurgia cardíaca congenita",
+      "Hipertensão arterial pulmonar (HAP) — pediátrica",
+      "Desmame do iNO",
+      "HPPRN (off-label — quando iNO não disponível)"
     ],
     "dose": [
       {
@@ -1123,13 +1090,44 @@ var DRUGS_CARDIOVASCULAR = [
         "max": "—",
         "freq": "q6–8h",
         "note": "Oral: 0,5–1 mg/kg/dose q6h. Evidência limitada em PPHN — uso off-label"
+      },
+      {
+        "ind": "HAP oral (< 20 kg)",
+        "val": "10 mg × 3/dia",
+        "max": "10 mg × 3/dia",
+        "freq": "3×/dia",
+        "note": "⚠️ EMA 2014: NÃO usar doses altas em crianças (↑ mortalidade). Doses ≤ 10 mg 3×/dia"
+      },
+      {
+        "ind": "HAP oral (20–45 kg)",
+        "val": "20 mg × 3/dia",
+        "max": "20 mg × 3/dia",
+        "freq": "3×/dia",
+        "note": ""
+      },
+      {
+        "ind": "HAP oral (> 45 kg)",
+        "val": "20 mg × 3/dia",
+        "max": "40 mg × 3/dia",
+        "freq": "3×/dia",
+        "note": ""
+      },
+      {
+        "ind": "HPPRN oral (off-label)",
+        "val": "0,5–1 mg/kg/dose oral",
+        "max": "2 mg/kg/dose",
+        "freq": "3–4×/dia",
+        "note": "Dados limitados em RN"
       }
     ],
     "prep": "EV: Revatio 0,8 mg/ml — usar sem diluição adicional. Oral: suspensão 10 mg/ml ou comprimidos 20 mg.",
     "ci": [
       "Uso concomitante com nitratos (hipotensão grave irreversível)",
       "Uso concomitante com guanilato ciclase estimuladores (riociguate)",
-      "Hipotensão sistémica significativa (< 90 mmHg)"
+      "Hipotensão sistémica significativa (< 90 mmHg)",
+      "Nitratos (hipotensão grave e potencialmente fatal)",
+      "Inibidores potentes CYP3A4 (ritonavir)",
+      "HAP associada a cardiopatia com shunt D→E significativo"
     ],
     "alert": [
       "⚠️ STARTS-2: doses altas (≥ 2,5 mg/kg/dose) associadas a MAIOR mortalidade — NÃO exceder dose aprovada",
@@ -1137,8 +1135,201 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Interacção grave com nitratos e guanilato ciclase — hipotensão fatal",
       "Inibidor CYP3A4 e CYP2C9 — interacções com bosentano (reduz sildenafil 50%), eritromicina, azóis",
       "Retirada abrupta pode causar crise de HAP — desmame gradual obrigatório",
-      "Priapismo (raro em criança do sexo masculino)"
+      "Priapismo (raro em criança do sexo masculino)",
+      "⛔ EMA alerta 2014: doses altas (80 mg × 3/dia) associadas a ↑ mortalidade em crianças 1–17 anos — NÃO EXCEDER doses recomendadas",
+      "⚠️ Visão turva (inibição PDE6 retiniana) — transitória",
+      "⚠️ Priapismo (raro)"
     ],
-    "source": "BNF for Children 2023-24; Barst RJ et al. Circulation 2012 (STARTS-1/2); ESC/ERS PAH Guidelines 2022"
+    "source": "BNF for Children 2023-24; Barst RJ et al. Circulation 2012 (STARTS-1/2); ESC/ERS PAH Guidelines 2022; EMA SmPC Revatio 2023; TOPP trial 2012; Barst RJ et al. NEJM 2005 (SUPER-1)"
+  },
+  {
+    "id": "warfarina",
+    "name": "Varfarina Pediátrica",
+    "category": "cardiovascular",
+    "class": "Anticoagulante oral — antagonista vitamina K (inibidor VKORC1)",
+    "brands": "Varfine; Coumadin — comp 1/3/5 mg",
+    "indication": [
+      "Anticoagulação crónica oral — trombose venosa profunda, tromboembolismo pulmonar",
+      "Próteses valvulares cardíacas mecânicas",
+      "Fibrilhação auricular com risco tromboembólico",
+      "Doença de Kawasaki com aneurismas coronários gigantes"
+    ],
+    "dose": [
+      {
+        "ind": "Indução anticoagulação",
+        "val": "0,2 mg/kg PO (dose de indução — dia 1)",
+        "max": "10 mg/dose",
+        "freq": "1 dose/dia; ajustar INR",
+        "note": "Manutenção habitual: 0,05–0,1 mg/kg/dia. Alvo INR: 2–3 (trombose venosa); 2,5–3,5 (válvulas mecânicas). Nomograma de ajuste por INR disponível (Michelson et al.)"
+      }
+    ],
+    "prep": "Oral: comprimidos — partir para doses pediátricas. Soluções magistrais 1 mg/ml disponíveis.",
+    "ci": [
+      "Hemorragia activa",
+      "Gravidez (teratogénico no 1º trimestre)",
+      "HTA não controlada grave",
+      "Cirurgia/procedimento iminente"
+    ],
+    "alert": [
+      "⚠️ Janela terapêutica estreita — variabilidade enorme; monitorizar INR frequentemente",
+      "⚠️ Interacções farmacológicas e alimentares vastíssimas — qualquer novo fármaco ou mudança de dieta pode alterar INR",
+      "⚠️ Genética: polimorfismos VKORC1 e CYP2C9 afectam dose (testar em centres especializados)",
+      "⚠️ Antídoto: vitamina K (lenta) ou CCP (rápida) se hemorragia grave",
+      "Resistência em lactentes amamentados ao seio (vitamina K no leite materno baixa) vs fórmula",
+      "Monitorizar INR em 3–5 dias após qualquer alteração de dose ou medicação"
+    ],
+    "source": "BNF for Children 2023-24; Michelson AD et al. Chest 2012; ACCP Antithrombotic Guidelines 2012"
+  },
+  {
+    "id": "tolvaptan",
+    "name": "Tolvaptã",
+    "category": "cardiovascular",
+    "class": "Antagonista receptor V2 da vasopressina (vaptã) — aquarético",
+    "brands": "Samsca — comp 15/30/45/60/90 mg",
+    "indication": [
+      "Hiponatremia euvolémica ou hipervolémica sintomática refractária (SIADH, ICC, cirrose)",
+      "Rins poliquísticos autossómicos dominantes (ADPKD) — retardar progressão (adultos/adolescentes)",
+      "Hiponatremia grave persistente após restrição hídrica insuficiente"
+    ],
+    "dose": [
+      {
+        "ind": "SIADH / hiponatremia — pediátrico (off-label)",
+        "val": "0,1–0,2 mg/kg/dose PO",
+        "max": "30 mg/dose",
+        "freq": "1 dose/dia; ajustar por Na⁺ sérico",
+        "note": "Iniciar SEMPRE em internamento com monitorização de Na⁺ q4–6h nas primeiras 24h — risco de correcção excessiva e mielinólise"
+      }
+    ],
+    "prep": "Oral: comprimidos — não partir ou esmagar (formulação específica). Tomar com ou sem alimentos.",
+    "ci": [
+      "Hipovolemia (não é diurético de eliminação de sódio — eleva Na⁺ por eliminação de água livre)",
+      "Anúria",
+      "Incapacidade de sentir ou responder à sede",
+      "Uso com inibidores CYP3A4 potentes (cetoconazol, itraconazol)"
+    ],
+    "alert": [
+      "⚠️ INICIAR APENAS EM HOSPITAL — risco de correcção excessiva e rápida de Na⁺ → mielinólise osmótica",
+      "⚠️ Monitorizar Na⁺ q4–6h nas primeiras 24h; suspender se Na⁺ subir > 10–12 mEq/L/24h",
+      "⚠️ Hepatotoxicidade — monitorizar TFH mensalmente",
+      "⚠️ Inibidor CYP3A4 — aumenta exposição de outros substratos",
+      "Poliúria marcada — garantir acesso a água livre; risco de desidratação hipernatrémica"
+    ],
+    "source": "BNF for Children 2023-24; Verbalis JG et al. Am J Med 2013; Gheorghiade M et al. JAMA 2004"
+  },
+{
+    "id": "lidocaina_cv",
+    "name": "Lidocaína EV (Antiarrítmico crónico)",
+    "category": "cardiovascular",
+    "class": "Antiarrítmico classe IB — bloqueador canal sódio rápido",
+    "brands": "Lidocaína 1% (10 mg/ml); 2% (20 mg/ml)",
+    "indication": [
+      "Taquicardia ventricular hemodinamicamente estável — manutenção após conversão",
+      "Extrassistolia ventricular frequente sintomática pós-EAM",
+      "Prevenção recorrência FV após ressuscitação bem sucedida"
+    ],
+    "dose": [
+      {
+        "ind": "Carga EV + manutenção",
+        "val": "1 mg/kg EV bólus; depois 20–50 μg/kg/min perfusão",
+        "max": "100 mg bólus; 3 mg/min perfusão",
+        "freq": "Bólus em 2 min; perfusão contínua",
+        "note": "Reduzir dose de manutenção em IH e IC (metabolismo hepático reduzido)"
+      }
+    ],
+    "prep": "Perfusão: 600 mg em 250 ml SF (2,4 mg/ml). Bólus: usar 1% (10 mg/ml) directamente.",
+    "ci": [
+      "Bloqueio AV 2º/3º grau",
+      "WPW com FA/flutter",
+      "Hipersensibilidade a anestésicos locais tipo amida"
+    ],
+    "alert": [
+      "⚠️ Toxicidade SNC: convulsões, disartria, obnubilação — reduzir dose ou parar",
+      "⚠️ Acumulação em IH e IC — monitorizar nível sérico (alvo 1,5–5 mg/L)",
+      "Janela terapêutica estreita — TDM em perfusões > 24h"
+    ],
+    "source": "BNF for Children 2023-24; PALS AHA 2020; Dorian P et al. NEJM 2002"
+  },
+  {
+    "id": "sotalol",
+    "name": "Sotalol",
+    "category": "cardiovascular",
+    "class": "Antiarrítmico classe III + beta-bloqueante (classe II) — bloqueador K⁺ e β",
+    "brands": "Sotacor — comp 80/160 mg; EV 10 mg/ml (composto hospitalar raro)",
+    "indication": [
+      "Prevenção de TSV recorrente — flutter/FA, TSVP por reentrada",
+      "Taquicardia ventricular sustentada — coração estruturalmente normal",
+      "WPW com arritmias — alternativa à flecainida",
+      "Síndrome QT longo tipo 2 e 3 — efeito anti-arrítmico"
+    ],
+    "dose": [
+      {
+        "ind": "Antiarrítmico oral pediátrico",
+        "val": "2–8 mg/kg/dia PO",
+        "max": "160 mg/dose (320 mg/dia em adolescentes)",
+        "freq": "q12h",
+        "note": "Iniciar com dose baixa (2 mg/kg/dia) e titular semanalmente. Hospitalização para início com ECG contínuo recomendada"
+      }
+    ],
+    "prep": "Oral: comprimidos — podem ser esmagados. Tomar com estômago vazio (antácidos reduzem absorção).",
+    "ci": [
+      "QTc > 450 ms basal",
+      "Insuf. renal (TFG < 30 ml/min — acumulação)",
+      "Asma / broncoespasmo",
+      "Bradicardia sinusal",
+      "Hipocaliemia / hipomagnesemia não corrigidas"
+    ],
+    "alert": [
+      "⚠️ Pró-arrítmico — prolonga QT → torsades de pointes (2–5%); monitorizar ECG ao início e após cada aumento de dose",
+      "⚠️ QTc basal > 450 ms: contra-indicado; > 500 ms durante tratamento: suspender",
+      "⚠️ Hipocaliemia e hipomagnesemia ampliam o risco — corrigir antes de iniciar",
+      "⚠️ Excreção renal — ajuste obrigatório se TFG < 60 ml/min",
+      "Início hospitalar com monitorização ECG 72h recomendado (PACES/HRS 2014)"
+    ],
+    "source": "BNF for Children 2023-24; PACES/HRS Expert Consensus 2014; Pfammatter JP et al. Eur Heart J 2001"
+  },
+  {
+    "id": "amiodarona_oral",
+    "name": "Amiodarona Oral",
+    "category": "cardiovascular",
+    "class": "Antiarrítmico classe III — inibidor canais K⁺, Na⁺, Ca²⁺ + beta-bloqueio",
+    "brands": "Cordarone — comp 100/200 mg",
+    "indication": [
+      "Manutenção do ritmo sinusal após cardioversão de FA/flutter",
+      "Prevenção de TSV/TV recorrentes refractárias a outros antiarrítmicos",
+      "Taquicardia juncional pós-operatória — manutenção após controlo EV",
+      "Step-down oral após amiodarona EV eficaz"
+    ],
+    "dose": [
+      {
+        "ind": "Carga oral (saturação)",
+        "val": "10–20 mg/kg/dia PO",
+        "max": "400 mg/dia",
+        "freq": "3 doses/dia × 7–10 dias (carga); depois reduzir",
+        "note": "Carga necessária pela semi-vida extremamente longa (40–55 dias)"
+      },
+      {
+        "ind": "Manutenção",
+        "val": "5–10 mg/kg/dia PO",
+        "max": "200 mg/dia",
+        "freq": "1–2 doses/dia",
+        "note": "Dose mínima eficaz — nível sérico alvo 0,5–2,5 mg/L"
+      }
+    ],
+    "prep": "Oral: comprimidos — tomar com refeições (reduz intolerância GI). Podem ser triturados.",
+    "ci": [
+      "Disfunção tiroideia grave não tratada",
+      "Iodo: hipersensibilidade",
+      "Bloqueio AV 2º/3º grau",
+      "Gravidez (toxicidade fetal — iodo atravessa placenta)"
+    ],
+    "alert": [
+      "⚠️ Fototoxicidade — protecção solar obrigatória; microdepositos corneanos (assintomáticos)",
+      "⚠️ Hipotiroidismo e hipertiroidismo — monitorizar TSH, T4L cada 6 meses",
+      "⚠️ Pneumonite intersticial (raro mas grave) — Rx/TC tórax se dispneia nova",
+      "⚠️ Hepatotoxicidade — TFH bimestrais",
+      "⚠️ Interacções major: varfarina, digoxina, ciclosporina, estatinas, fenitoína — reduzir doses",
+      "Semi-vida 40–55 dias — efeito e toxicidade persistem meses após suspensão"
+    ],
+    "source": "BNF for Children 2023-24; Thorne SA et al. Heart 1999; Saul JP et al. JACC 2005"
   }
 ];

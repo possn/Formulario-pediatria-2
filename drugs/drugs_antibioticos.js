@@ -1,5 +1,5 @@
 // UCIP Pediatria — Antibióticos
-// 28 fármacos
+// 35 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_ANTIBIOTICOS = [
@@ -97,7 +97,11 @@ var DRUGS_ANTIBIOTICOS = [
       "Infecções por MRSA",
       "Endocardite por Staphylococcus / Enterococcus",
       "Meningite por MRSA / S. pneumoniae resistente",
-      "Infecções graves por gram-positivos resistentes a β-lactâmicos"
+      "Infecções graves por gram-positivos resistentes a β-lactâmicos",
+      "Sépsis neonatal tardia por Staphylococcus coagulase-negativo (MRSE) — muito frequente em prematuros com cateter",
+      "MRSA neonatal",
+      "Meningite por gram-positivos resistentes",
+      "Enterocócica resistente"
     ],
     "dose": [
       {
@@ -113,6 +117,20 @@ var DRUGS_ANTIBIOTICOS = [
         "max": "500 mg/dia",
         "freq": "4 doses/dia",
         "note": "Via oral não tem absorção sistémica"
+      },
+      {
+        "ind": "Sépsis / Meningite neonatal EV",
+        "val": "< 29 sem (< 14 dias): 15 mg/kg cada 24h; < 29 sem (≥ 14 dias): 15 mg/kg cada 18h; 29–35 sem: 15 mg/kg cada 12h; ≥ 36 sem: 15 mg/kg cada 8h",
+        "max": "—",
+        "freq": "conforme esquema por IG e idade pós-natal",
+        "note": "Monitorização AUC/MIC preferida a monitorização de nível vale isolado (ASHP 2020)"
+      },
+      {
+        "ind": "Neonatal — Ajuste por nível vale (se AUC não disponível)",
+        "val": "Alvo vale: 10–15 mg/L (sépsis); 15–20 mg/L (meningite)",
+        "max": "—",
+        "freq": "colher antes da 4ª dose",
+        "note": ""
       }
     ],
     "prep": "EV: diluir para ≤ 5 mg/ml. Infusão 60 min (para dose ≤ 15 mg/kg) ou 120 min (dose de carga). Linha dedicada.",
@@ -124,9 +142,13 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ SÍNDROME DO HOMEM VERMELHO — rush/hipotensão por infusão rápida. NÃO é alergia. Tratar com anti-histamínico e reduzir velocidade",
       "⚠️ Monitorização farmacocinética (AUC24/MIC) substituiu monitorização simples de nível vale",
       "⚠️ Ototoxicidade (rara com uso actual guidelines)",
-      "Ajuste rigoroso na insuf. renal"
+      "Ajuste rigoroso na insuf. renal",
+      "⚠️ NEFROTOXICIDADE — amplificada com aminoglicosídeos. Monitorizar creatinina",
+      "⚠️ SÍNDROME HOMEM VERMELHO (rubor, prurido, hipotensão) — infusão demasiado rápida. NÃO é alergia. Reduzir velocidade e pré-medicar com anti-H1",
+      "⚠️ Ototoxicidade (rara com guidelines actuais)",
+      "⚠️ Monitorização farmacocinética obrigatória em RN — farmacocinética muito variável"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; Rybak MJ et al. Am J Health-Syst Pharm 2020; BNF for Children 2023-24"
+    "source": "Formulário de Pediatria 3ª Ed.; Rybak MJ et al. Am J Health-Syst Pharm 2020; BNF for Children 2023-24; BNF for Children 2023-24; Rybak MJ. AJHP 2020; BNFC Neonatal Formulary 9th Ed"
   },
   {
     "id": "meropenem",
@@ -181,7 +203,10 @@ var DRUGS_ANTIBIOTICOS = [
       "Sépsis neonatal — 1ª linha (associada a ampicilina)",
       "Infecções urinárias graves por gram-negativos",
       "Endocardite (sinergia com β-lactâmicos)",
-      "Sépsis grave gram-negativo (associada)"
+      "Sépsis grave gram-negativo (associada)",
+      "Sépsis neonatal — 1ª linha em associação com ampicilina",
+      "Infecção urinária por gram-negativos",
+      "Meningite neonatal gram-negativo (associada a cefotaxima)"
     ],
     "dose": [
       {
@@ -197,21 +222,39 @@ var DRUGS_ANTIBIOTICOS = [
         "max": "—",
         "freq": "1 vez/dia",
         "note": "Nível vale < 1 mg/L antes da 2ª dose. Ajustar intervalo pela função renal"
+      },
+      {
+        "ind": "Sépsis neonatal — EV (dose única diária)",
+        "val": "< 29 sem: 5 mg/kg cada 48h; 29–35 sem: 4,5 mg/kg cada 36h; ≥ 36 sem: 4 mg/kg cada 24h; > 7 dias (≥ 36 sem): 4,5 mg/kg cada 24h",
+        "max": "—",
+        "freq": "ver esquema por IG",
+        "note": "Dose única diária preferida — melhor eficácia (AUC/MIC) e menor toxicidade que doses divididas"
+      },
+      {
+        "ind": "Neonatal — Meningite gram-negativo",
+        "val": "2,5 mg/kg cada 8h (dose dividida)",
+        "max": "—",
+        "freq": "cada 8h × 21 dias (bacilo gram-negativo)",
+        "note": "Dose dividida na meningite para melhor penetração LCR"
       }
     ],
     "prep": "EV: diluir em SF. Administrar em 30 min.",
     "ci": [
       "Miastenia gravis",
-      "Insuf. renal grave (ajustar dose/intervalo)"
+      "Insuf. renal grave (ajustar dose/intervalo)",
+      "Insuf. renal grave (ajustar intervalo)"
     ],
     "alert": [
       "⚠️ NEFROTOXICIDADE — monitorizar creatinina e débito urinário",
       "⚠️ OTOTOXICIDADE (auditiva e vestibular) — irreversível. Evitar uso prolongado",
       "⚠️ Risco ↑ com vancomicina, furosemida, AINEs",
       "Monitorizar nível sérico vale (< 1 mg/L)",
-      "Ajuste rigoroso na insuf. renal e RN prematuro"
+      "Ajuste rigoroso na insuf. renal e RN prematuro",
+      "⚠️ OTOTOXICIDADE — irreversível. Evitar > 5–7 dias. Rastreio audiológico",
+      "⚠️ Monitorizar nível vale (< 1 mg/L antes da 2ª dose). Ajustar intervalo",
+      "⚠️ Risco ↑ com furosemida e vancomicina (evitar associação se possível)"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; BNFC Neonatal Formulary"
+    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; BNFC Neonatal Formulary; BNF for Children 2023-24; BNFC Neonatal Formulary 9th Ed"
   },
   {
     "id": "metronidazol",
@@ -751,48 +794,6 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "source": "BNF for Children 2023-24; Kimberlin DW. NEJM 2015"
   },
-{
-    "id": "cefazolina",
-    "name": "Cefazolina",
-    "category": "antibiotico",
-    "class": "Cefalosporina 1ª geração",
-    "brands": "Kefzol; Cefazolina Hikma — frascos 500 mg, 1 g, 2 g pó EV/IM",
-    "indication": [
-      "Profilaxia cirúrgica — 1ª linha para cirurgia cardíaca, ortopédica, abdominal",
-      "Infecções pele/partes moles por MSSA",
-      "Bacteriemia por S. aureus sensível à meticilina",
-      "Infecções osteoarticulares por MSSA",
-      "Infecções urinárias por Gram+ sensíveis"
-    ],
-    "dose": [
-      {
-        "ind": "Infecção sistémica / bacteriemia MSSA",
-        "val": "25–50 mg/kg/dose EV",
-        "max": "6 g/dia",
-        "freq": "q8h (neonatos: q12h se < 7 dias; q8h se > 7 dias)",
-        "note": "Bacteriemia MSSA: dose alta 33 mg/kg/dose q8h. Preferir a vancomicina para MSSA confirmado (outcomes superiores)"
-      },
-      {
-        "ind": "Profilaxia cirúrgica",
-        "val": "30 mg/kg EV",
-        "max": "2 g",
-        "freq": "Dose única 30–60 min antes incisão; repetir se cirurgia > 4h ou perda sanguínea > 1500 ml",
-        "note": "Alternativa: vancomicina se alergia grave a beta-lactâmicos ou risco MRSA"
-      }
-    ],
-    "prep": "EV: reconstituir e diluir em SF ou SG5%. Concentração até 20 mg/ml. Administrar em 15–30 min. Estável 24h a 4°C após reconstituição.",
-    "ci": [
-      "Alergia a cefalosporinas",
-      "Reacção anafilática prévia a penicilinas (reactividade cruzada < 1% com cefalosporinas; avaliar individualmente)"
-    ],
-    "alert": [
-      "⚠️ Para MSSA: cefazolina é superior à vancomicina em mortalidade e eficácia clínica (NEJM 2023)",
-      "⚠️ Ajuste renal: reduzir dose se TFG < 35 ml/min/1,73m²",
-      "Excelente penetração em tecidos; fraca penetração no LCR — não usar em meningite",
-      "Efeito inóculo: pode falhar em bacteriemias com inoculo muito elevado por S. aureus (cefazolina inoculum effect)"
-    ],
-    "source": "BNF for Children 2023-24; Rybak MJ et al. ASHP/IDSA Guidelines 2020; Liu C et al. CID 2011"
-  },
   {
     "id": "cefepime",
     "name": "Cefepime",
@@ -880,7 +881,11 @@ var DRUGS_ANTIBIOTICOS = [
       "Sépsis neonatal precoce — 1ª linha",
       "Listeria monocytogenes — única beta-lactamina activa",
       "Enterococcus faecalis sensível à ampicilina",
-      "Endocardite por Enterococcus (+ gentamicina ou ceftriaxona)"
+      "Endocardite por Enterococcus (+ gentamicina ou ceftriaxona)",
+      "Sépsis neonatal precoce — 1ª linha (associada à gentamicina)",
+      "Meningite neonatal por GBS, Listeria monocytogenes",
+      "Infecção por Listeria (única penicilina eficaz)",
+      "Infecção urinária neonatal"
     ],
     "dose": [
       {
@@ -903,6 +908,20 @@ var DRUGS_ANTIBIOTICOS = [
         "max": "—",
         "freq": "q8h (< 34 sem); q6h (≥ 34 sem)",
         "note": ""
+      },
+      {
+        "ind": "Sépsis neonatal — EV",
+        "val": "< 7 dias (< 30 sem): 50 mg/kg cada 12h; < 7 dias (≥ 30 sem): 50 mg/kg cada 8h; ≥ 7 dias: 50 mg/kg cada 6–8h",
+        "max": "200 mg/kg/dia",
+        "freq": "conforme idade gestacional e pós-natal",
+        "note": "Associar gentamicina na sépsis. Meningite: 100 mg/kg/dose cada 6–8h"
+      },
+      {
+        "ind": "Neonatal — Meningite por Listeria EV",
+        "val": "100 mg/kg/dose EV",
+        "max": "—",
+        "freq": "cada 6–8h × 14–21 dias",
+        "note": "A única β-lactâmico eficaz em Listeria"
       }
     ],
     "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 30 mg/ml. Administrar em 15–30 min. Estável apenas 1h à temperatura ambiente após reconstituição — preparar fresco.",
@@ -914,9 +933,12 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ Instabilidade química elevada após reconstituição — administrar imediatamente",
       "⚠️ Resistência elevada em Enterobacteriaceae (produção de beta-lactamases) — não usar empiricamente para sépsis nosocomial",
       "Cobertura de Listeria e Enterococcus é vantagem clínica única vs. cefalosporinas",
-      "Ajuste em insuficiência renal moderada-grave"
+      "Ajuste em insuficiência renal moderada-grave",
+      "⚠️ Monitorizar função renal — ajuste rigoroso na insuf. renal neonatal",
+      "Rash maculopapular frequente — não é necessariamente alergia verdadeira",
+      "Listeria: ÚNICA indicação em que ampicilina é irresubstituível (cefalosporinas ineficazes)"
     ],
-    "source": "BNF for Children 2023-24; Red Book AAP 2021; Polin RA et al. Pediatrics 2012 (neonatal sepsis)"
+    "source": "BNF for Children 2023-24; Red Book AAP 2021; Polin RA et al. Pediatrics 2012 (neonatal sepsis); BNF for Children 2023-24; BNFC Neonatal Formulary 9th Ed"
   },
   {
     "id": "amicacina",
@@ -1312,5 +1334,336 @@ var DRUGS_ANTIBIOTICOS = [
       "Monitorizar hemograma em tratamentos prolongados (megaloblastose, neutropenia)"
     ],
     "source": "BNF for Children 2023-24; NICE NG224 UTI in Children 2022; Garin EH et al. N Engl J Med 2006"
+  },
+  {
+    "id": "cefotaxima_iv",
+    "name": "Cefotaxima EV",
+    "category": "antibiotico",
+    "class": "Cefalosporina 3ª geração",
+    "brands": "Claforan — frascos 500 mg, 1 g, 2 g",
+    "indication": [
+      "Meningite bacteriana — 1ª linha (alternativa a ceftriaxona; preferida em < 1 mês e em RN com hiperbilirrubinemia)",
+      "Sépsis neonatal tardia",
+      "Infecções graves por Gram negativos",
+      "Sépsis em criança imunocomprometida",
+      "Meningite neonatal (gram-negativos, GBS) — 1ª linha com ampicilina",
+      "Sépsis neonatal tardia (> 72h de vida) — alternativa/adjuvante",
+      "Infecção por E. coli, Klebsiella e outros gram-negativos",
+      "NÃO usar como substituto da ampicilina para Listeria (resistente)"
+    ],
+    "dose": [
+      {
+        "ind": "Meningite bacteriana / infecção grave",
+        "val": "50–75 mg/kg/dose EV",
+        "max": "2 g/dose (12 g/dia)",
+        "freq": "q6–8h (q6h na meningite)",
+        "note": "Neonatos: 50 mg/kg q12h (< 7 dias de vida); q8h (7–28 dias). Preferir a ceftriaxona em RN por não deslocar bilirrubina"
+      },
+      {
+        "ind": "Neonatal — Meningite / Sépsis grave EV",
+        "val": "< 7 dias: 50 mg/kg cada 12h; 7–28 dias: 50 mg/kg cada 8h; > 28 dias: 50 mg/kg cada 6–8h",
+        "max": "200 mg/kg/dia",
+        "freq": "conforme idade pós-natal",
+        "note": "Meningite gram-negativo: 50 mg/kg cada 6h × ≥ 21 dias"
+      },
+      {
+        "ind": "Neonatal — Sépsis tardia moderada EV",
+        "val": "50 mg/kg/dose EV",
+        "max": "—",
+        "freq": "cada 8–12h (conforme idade)",
+        "note": ""
+      }
+    ],
+    "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 40 mg/ml. Administrar em 30 min.",
+    "ci": [
+      "Alergia a cefalosporinas",
+      "Não usar com cálcio EV em neonatos (mesma linha — risco precipitação)",
+      "Hipersensibilidade a cefalosporinas",
+      "⛔ NÃO usar com soluções de cálcio em RN — precipitação fatal (FDA Safety Alert 2007)"
+    ],
+    "alert": [
+      "⚠️ Preferir a ceftriaxona em neonatos (hiperbilirrubinemia — ceftriaxona desloca bilirrubina, cefotaxima não)",
+      "⚠️ Selecção de Enterobacter/Citrobacter com AmpC se tratamento prolongado",
+      "Ajuste em insuficiência renal moderada-grave",
+      "⛔ NÃO administrar simultaneamente com cálcio em RN (mesmo via diferente se < 28 dias) — precipitação pulmonar e renal FATAL",
+      "⚠️ Ineficaz contra Listeria — manter ampicilina quando Listeria suspeita/confirmada",
+      "Preferida à ceftriaxona em RN pela ausência de problemas com cálcio"
+    ],
+    "source": "BNF for Children 2023-24; Tunkel AR et al. CID 2004; Neofax 2023; BNF for Children 2023-24; FDA Safety Alert 2007; BNFC Neonatal Formulary 9th Ed"
+  },
+  {
+    "id": "colistina",
+    "name": "Colistina / Polimixina E",
+    "category": "antibiotico",
+    "class": "Polimixina — disruptor membrana celular bacteriana",
+    "brands": "Colistin TEVA; Colobreathe — frascos 1 MUI (Colistimetato de Sódio CMS); inalado 1,66 MUI/caps",
+    "indication": [
+      "Infecções por Gram negativos multirresistentes (XDR) sem alternativa — último recurso",
+      "Acinetobacter baumannii XDR",
+      "Pseudomonas aeruginosa pan-resistente",
+      "Klebsiella pneumoniae produtora de carbapenemase (KPC) — em combinação",
+      "Fibrose quística — Pseudomonas inalada (Colobreathe)"
+    ],
+    "dose": [
+      {
+        "ind": "Infecção sistémica grave — EV",
+        "val": "Dose de carga: 75.000 UI/kg EV (= 5 mg CBA/kg); Manutenção: 50.000–75.000 UI/kg/dia",
+        "max": "Carga: 9 MUI; Manutenção: 9 MUI/dia",
+        "freq": "Manutenção em 2–3 doses/dia; iniciar 12–24h após carga",
+        "note": "SEMPRE usar em combinação (meropenem, rifampicina, fosfomicina) — monoterapia não recomendada. TDM (CSS alvo 2–4 mg/L) em centros com acesso"
+      },
+      {
+        "ind": "Fibrose quística — inalada",
+        "val": "1,66–2 MUI inalado",
+        "max": "—",
+        "freq": "q12h; via DPI (Colobreathe) ou nebulização",
+        "note": ""
+      }
+    ],
+    "prep": "EV: reconstituir CMS 1 MUI em 10 ml SWFI; diluir em SF 100 ml. Administrar em 30–60 min. Dose de carga: perfusão 1h.",
+    "ci": [
+      "Miastenia gravis",
+      "Hipersensibilidade à colistina"
+    ],
+    "alert": [
+      "⚠️ NEFROTOXICIDADE — risco muito elevado; monitorizar creatinina e diurese DIARIAMENTE; hidratação adequada",
+      "⚠️ NEUROTOXICIDADE — parestesias, ataxia, visão turva; dose-dependente",
+      "⚠️ Bloqueia neuromuscular — potenciado por aminoglicosídeos, relaxantes musculares",
+      "⚠️ ÚLTIMO RECURSO — resistência emerge rapidamente; consulta obrigatória com Infecciologia/Microbiologia",
+      "Monitorizar função renal q12–24h; suspender ou ajustar se creatinina duplicar"
+    ],
+    "source": "BNF for Children 2023-24; Nation RL et al. Lancet Infect Dis 2015; EUCAST/ESCMID Colistin Guidelines 2016"
+  },
+  {
+    "id": "fosfomicina_iv",
+    "name": "Fosfomicina EV",
+    "category": "antibiotico",
+    "class": "Antibiótico bactericida — inibidor MurA (síntese parede celular)",
+    "brands": "Fosfocina EV — frascos 1 g, 2 g, 4 g",
+    "indication": [
+      "Infecções por MRSA em combinação (sinergia com vancomicina/daptomicina)",
+      "Infecções por Enterococcus vancomicina-resistente (VRE) — em combinação",
+      "Infecções por BGN multirresistentes (incluindo KPC) — combinação",
+      "Osteomielite crónica",
+      "Meningite por MRSA (boa penetração LCR)"
+    ],
+    "dose": [
+      {
+        "ind": "Infecção grave — combinação",
+        "val": "100–200 mg/kg/dia EV",
+        "max": "16–24 g/dia",
+        "freq": "q6–8h",
+        "note": "SEMPRE em combinação — monoterapia selecciona resistência rapidamente. Carga sódica elevada (1 g fosfomicina ≈ 0,32 mEq Na⁺) — monitorizar"
+      }
+    ],
+    "prep": "EV: diluir em SF ou SG5% (100–500 ml). Administrar em 30–60 min. Atenção à carga sódica total.",
+    "ci": [
+      "Insuficiência renal grave sem diálise (acumulação e carga sódica)",
+      "Hipersensibilidade"
+    ],
+    "alert": [
+      "⚠️ Carga sódica elevada — risco hipernatremia e sobrecarga em IC/SIAD; monitorizar Na⁺ e balanço",
+      "⚠️ Resistência emerge rapidamente em monoterapia — usar SEMPRE em combinação",
+      "Hipocaliemia (mecanismo incerto) — monitorizar K⁺",
+      "Excelente penetração no SNC, osso e tecidos — vantagem clínica importante"
+    ],
+    "source": "BNF for Children 2023-24; Pontikis K et al. Int J Antimicrob Agents 2014; ESCMID Guidelines MDR 2022"
+  },
+  {
+    "id": "posaconazol",
+    "name": "Posaconazol",
+    "category": "antibiotico",
+    "class": "Antifúngico triazol de 2ª geração — inibidor CYP51 (ergosterol)",
+    "brands": "Noxafil — susp oral 40 mg/ml; comp LP 100 mg; EV 18 mg/ml (16,7 ml)",
+    "indication": [
+      "Profilaxia de infecções fúngicas invasivas (IFI) em imunocomprometidos de alto risco",
+      "Aspergilose invasiva refractária ou intolerante ao voriconazol",
+      "Mucormicose — terapêutica de manutenção oral após anfotericina",
+      "Candidiase oral/esofágica refractária ao fluconazol"
+    ],
+    "dose": [
+      {
+        "ind": "Profilaxia IFI — ≥ 2 anos",
+        "val": "Comprimidos LP: 300 mg/dia (100–< 40kg) ou baseado em BSA; Suspensão: 200 mg q8h",
+        "max": "300 mg/dia (comp LP)",
+        "freq": "Comp LP: 1× /dia (após dia 1 de 2 doses); Suspensão: q8h com refeição",
+        "note": "Comprimidos LP preferidos (exposição mais consistente). Suspensão: absorção errática — tomar SEMPRE com refeição gordurosa"
+      }
+    ],
+    "prep": "EV: diluir em SF ou SG5%. Linha dedicada com filtro 0,22 μm. Oral: comp LP engolir inteiros; susp agitar bem.",
+    "ci": [
+      "Uso com sirolímus, ergotamina, pimozida (interacções letais — CYP3A4)",
+      "Hipersensibilidade a azóis"
+    ],
+    "alert": [
+      "⚠️ Inibidor potente CYP3A4 — interacções graves: triplica níveis de tacrolímus/ciclosporina/sirolímus; ajuste de 50–75% da dose",
+      "⚠️ Prolongamento QT — monitorizar ECG",
+      "⚠️ TDM recomendado: nível sérico alvo > 0,7 mg/L (profilaxia) e > 1 mg/L (terapêutica)",
+      "Absorção oral muito variável com suspensão (pH gástrico, alimentos, motilidade) — preferir comprimidos LP ou EV em UCI"
+    ],
+    "source": "BNF for Children 2023-24; Walsh TJ et al. J Clin Oncol 2007; ECMM/ISHAM Mucormycosis Guidelines 2019"
+  },
+  {
+    "id": "doxiciclina",
+    "name": "Doxiciclina",
+    "category": "antibiotico",
+    "class": "Tetraciclina de 2ª geração — inibidor síntese proteica ribossomal (30S)",
+    "brands": "Vibramycin; Doxiciclina Generis — comp 100 mg; EV 100 mg",
+    "indication": [
+      "Febre Q (Coxiella) — 1ª linha ≥ 8 anos",
+      "Riquetsioses (rickettsia, RMSF) — 1ª linha em TODAS as idades (benefício > risco de manchas dentárias)",
+      "Doença de Lyme — alternativa em alergia a amoxicilina ≥ 8 anos",
+      "Brucelose — em combinação",
+      "Pneumonia atípica (Mycoplasma, Chlamydia) — ≥ 8 anos",
+      "Profilaxia malária"
+    ],
+    "dose": [
+      {
+        "ind": "Infecção sistémica — ≥ 8 anos",
+        "val": "2,2 mg/kg/dose PO/EV",
+        "max": "100 mg/dose",
+        "freq": "q12h",
+        "note": "RIQUETSIOSE GRAVE: iniciar imediatamente mesmo em < 8 anos (AAP 2021 — benefício supera manchas dentárias num curso curto)"
+      }
+    ],
+    "prep": "PO: engolir com copo cheio de água; não deitar após toma (esofagite). EV: diluir em SF ou SG5%; concentração ≤ 1 mg/ml; administrar em 1–4h.",
+    "ci": [
+      "< 8 anos — relativa (aceite em riquetsiose grave e curso ≤ 21 dias segundo AAP)",
+      "Gravidez (afecta ossos fetais)",
+      "Insuf. hepática grave"
+    ],
+    "alert": [
+      "⚠️ Fotossensibilidade — protecção solar obrigatória",
+      "⚠️ Quelação com cálcio/alumínio/ferro — separar 2h de antiácidos e suplementos",
+      "Manchas dentárias e inibição de crescimento ósseo com cursos prolongados — limitado a cursos curtos em < 8 anos",
+      "Esofagite — tomar com abundante água e não deitar 30 min",
+      "AAP 2021: doxiciclina é o tratamento de escolha para riquetsiose em QUALQUER idade"
+    ],
+    "source": "BNF for Children 2023-24; AAP Red Book 2021; Bou Antoun D et al. Pediatrics 2019 (rickettsial)"
+  },
+{
+    "id": "penicilina_g",
+    "name": "Penicilina G (Benzilpenicilina) EV",
+    "category": "antibiotico",
+    "class": "Penicilina natural — inibidor síntese parede celular (PBP1/2/3)",
+    "brands": "Penicilina G Sódica — frascos 1 MUI (600 mg); 5 MUI; 10 MUI",
+    "indication": [
+      "Meningite bacteriana por N. meningitidis confirmada — 1ª linha",
+      "Meningite por S. pneumoniae sensível à penicilina (MIC ≤ 0,06 mg/L)",
+      "Sépsis meningocócica",
+      "Endocardite estreptocócica — Streptococcus viridans, S. bovis",
+      "Sífilis congénita e adquirida — 1ª linha absoluta",
+      "Difteria, tétano, actinomicose, leptospirose",
+      "Erisipela / fasceíte estreptocócica — S. pyogenes"
+    ],
+    "dose": [
+      {
+        "ind": "Meningite bacteriana / sépsis grave",
+        "val": "200.000–300.000 UI/kg/dia EV",
+        "max": "24 MUI/dia",
+        "freq": "q4–6h (EV contínuo ou intermitente)",
+        "note": "= 120–180 mg/kg/dia. Em meningite: fraccionado q4h (6 doses) para manter nível acima MIC"
+      },
+      {
+        "ind": "Neonato — sépsis/meningite",
+        "val": "100.000–200.000 UI/kg/dia EV",
+        "max": "—",
+        "freq": "q12h (< 7 dias, prematuro); q8h (7–28 dias); q6h (> 28 dias)",
+        "note": ""
+      },
+      {
+        "ind": "Sífilis congénita",
+        "val": "50.000 UI/kg/dose EV",
+        "max": "—",
+        "freq": "q8–12h × 10–14 dias",
+        "note": ""
+      }
+    ],
+    "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 50.000 UI/ml periférico (100.000 UI/ml central). Administrar em 15–30 min. Estável apenas 1h à T ambiente após reconstituição — preparar fresco.",
+    "ci": [
+      "Alergia grave à penicilina (anafilaxia — reactividade cruzada com cefalosporinas < 1%)",
+      "Elevada concentração IV de Na⁺ na formulação sódica — cautela em ICC e IR"
+    ],
+    "alert": [
+      "⚠️ Carga sódica: Penicilina G sódica 1 MUI = 1,7 mEq Na⁺ — monitorizar em ICC e IR",
+      "⚠️ Resistência de S. pneumoniae crescente — confirmar MIC; se MIC > 0,06 mg/L usar ceftriaxona",
+      "⚠️ Instabilidade após reconstituição — preparar fresco e usar imediatamente",
+      "Eliminação renal — ajuste obrigatório se TFG < 30 ml/min"
+    ],
+    "source": "BNF for Children 2023-24; Tunkel AR et al. CID 2004; ECDC Meningococcal Guidelines 2019"
+  },
+  {
+    "id": "cefuroxima",
+    "name": "Cefuroxima EV",
+    "category": "antibiotico",
+    "class": "Cefalosporina 2ª geração",
+    "brands": "Zinacef — frascos 250 mg, 750 mg, 1,5 g",
+    "indication": [
+      "Pneumonia adquirida na comunidade moderada — alternativa amoxicilina/ampicilina",
+      "Infecções respiratórias (bronquite, sinusite, otite) — step-down para oral",
+      "Infecções urinárias por E. coli e Klebsiella sensíveis",
+      "Profilaxia cirúrgica — cirurgia abdominal e ginecológica",
+      "Infecções osteoarticulares por Gram+ e Gram- sensíveis"
+    ],
+    "dose": [
+      {
+        "ind": "Infecção moderada EV",
+        "val": "25–50 mg/kg/dose EV",
+        "max": "1,5 g/dose (4,5 g/dia)",
+        "freq": "q8h",
+        "note": "Pneumonia grave: 50 mg/kg q8h. Step-down oral: cefuroxima axetil 20 mg/kg/dose q12h (máx 500 mg)"
+      },
+      {
+        "ind": "Profilaxia cirúrgica",
+        "val": "30 mg/kg EV",
+        "max": "1,5 g",
+        "freq": "Dose única 30–60 min antes incisão; repetir q4h em cirurgias longas",
+        "note": ""
+      }
+    ],
+    "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 30 mg/ml. Administrar em 15–30 min.",
+    "ci": [
+      "Alergia a cefalosporinas",
+      "Reacção anafilática prévia a penicilinas (avaliar individualmente)"
+    ],
+    "alert": [
+      "Sem actividade contra MRSA, Enterococcus, Listeria, Pseudomonas",
+      "Actividade limitada contra Enterobacteriaceae produtoras de ESBL",
+      "Ajuste em IR (TFG < 30 ml/min): reduzir frequência para q12h"
+    ],
+    "source": "BNF for Children 2023-24; IDSA CAP Guidelines 2019; Solomkin JS et al. CID 2010"
+  },
+  {
+    "id": "anidulafungina",
+    "name": "Anidulafungina",
+    "category": "antibiotico",
+    "class": "Equinocandina — inibidor síntese β-(1,3)-D-glucano (parede fúngica)",
+    "brands": "Ecalta — frascos 100 mg pó",
+    "indication": [
+      "Candidíase invasiva / candidemia — 1ª linha (junto com caspofungina e micafungina)",
+      "Candidíase esofágica refractária ao fluconazol",
+      "Alternativa a caspofungina e micafungina — sem ajuste em IR ou IH"
+    ],
+    "dose": [
+      {
+        "ind": "Candidíase invasiva — pediátrico",
+        "val": "Carga: 3 mg/kg EV dia 1; Manutenção: 1,5 mg/kg/dia",
+        "max": "Carga: 200 mg; Manutenção: 100 mg/dia",
+        "freq": "1 dose/dia",
+        "note": "Dados pediátricos limitados; extrapolação de adultos e PK pediátrica (Benjamin DK 2006). Duração ≥ 14 dias após última hemocultura negativa"
+      }
+    ],
+    "prep": "EV: reconstituir 100 mg em 30 ml SWFI; diluir em SF ou SG5%. Taxa de infusão ≤ 1,1 mg/min (100 mg em ≥ 90 min). NÃO administrar em bólus.",
+    "ci": [
+      "Hipersensibilidade a equinocandinas",
+      "Hipersensibilidade à frutose (excipiente)"
+    ],
+    "alert": [
+      "⚠️ Reacção infusional (rubor, hipotensão, broncoespasmo) se infusão rápida — respeitar taxa ≤ 1,1 mg/min",
+      "Vantagem única: sem ajuste em IR, IH ou diálise — ideal em falência orgânica",
+      "Sem actividade contra Cryptococcus, Fusarium, mucormicetes",
+      "Candida parapsilosis tem MIC naturalmente mais elevada para equinocandinas — monitorizar resposta"
+    ],
+    "source": "BNF for Children 2023-24; Pappas PG et al. CID 2016 (IDSA Candida); Benjamin DK et al. Pediatr Infect Dis J 2006"
   }
 ];

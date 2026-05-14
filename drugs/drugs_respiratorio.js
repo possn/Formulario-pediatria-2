@@ -1,5 +1,5 @@
 // UCIP Pediatria — Respiratório & Alergologia
-// 16 fármacos
+// 14 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_RESPIRATORIO = [
@@ -301,46 +301,6 @@ var DRUGS_RESPIRATORIO = [
     "source": "BNF for Children 2023-24"
   },
   {
-    "id": "ipratropio",
-    "name": "Brometo de Ipratrópio",
-    "category": "broncodilatador",
-    "src": "original",
-    "class": "Broncodilatador anticolinérgico — antagonista muscarínico M3",
-    "brands": "Atrovent 0,25 mg/ml nebulização; 20 mcg/inalação MDI",
-    "indication": [
-      "Asma aguda grave (adjuvante ao salbutamol nas primeiras horas)",
-      "DPOC (exacerbação)",
-      "Broncoespasmo refractário ao salbutamol"
-    ],
-    "dose": [
-      {
-        "ind": "Asma aguda — nebulização (< 12 anos)",
-        "val": "0,25 mg (1 ml) por nebulização",
-        "max": "0,5 mg/dose",
-        "freq": "cada 20–30 min × 3 doses (1ª hora); depois cada 4–6h",
-        "note": "Misturar com salbutamol na mesma nebulização — efeito sinérgico"
-      },
-      {
-        "ind": "Asma aguda — nebulização (≥ 12 anos / adulto)",
-        "val": "0,5 mg por nebulização",
-        "max": "2 mg/dia",
-        "freq": "cada 20–30 min × 3; depois cada 4–6h",
-        "note": ""
-      }
-    ],
-    "prep": "Pode misturar com salbutamol na mesma câmara de nebulização. Diluir em SF se necessário.",
-    "ci": [
-      "Glaucoma de ângulo fechado (nebulização — proteger olhos)",
-      "Hipersensibilidade à atropina"
-    ],
-    "alert": [
-      "⚠️ Proteger os olhos durante nebulização (broncoconstrição paradoxal + midríase se contacto ocular)",
-      "Efeito aditivo com salbutamol — sempre associar na asma grave",
-      "Efeito principalmente nas vias aéreas centrais (complementa salbutamol nas periféricas)"
-    ],
-    "source": "Formulário de Pediatria 3ª Ed.; GINA 2023; BNF for Children 2023-24"
-  },
-  {
     "id": "aminofilina",
     "name": "Aminofilina",
     "category": "broncodilatador",
@@ -484,54 +444,6 @@ var DRUGS_RESPIRATORIO = [
     ],
     "source": "Formulário de Pediatria 3ª Ed.; GINA 2023; BNF for Children 2023-24"
   },
-{
-    "id": "salbutamol_neb",
-    "name": "Salbutamol Nebulizado / MDI",
-    "category": "respiratorio",
-    "class": "Agonista β2-adrenérgico de acção curta (SABA)",
-    "brands": "Ventolin neb 2,5 mg/2,5 ml; 5 mg/2,5 ml; MDI 100 μg/dose",
-    "indication": [
-      "Broncoespasmo agudo — asma, bronquiolite, anafilaxia",
-      "Hipercaliemia — adjuvante (redistribuição K⁺ para intracelular)",
-      "Asma aguda grave — nebulização contínua"
-    ],
-    "dose": [
-      {
-        "ind": "Crise asmática leve-moderada",
-        "val": "2,5 mg (< 20 kg) ou 5 mg (≥ 20 kg) neb",
-        "max": "5 mg/dose",
-        "freq": "q20 min × 3 na 1ª hora; depois q1–4h",
-        "note": "MDI com câmara expansora equivalente à nebulização (Cochrane): 4–8 puffs q20 min"
-      },
-      {
-        "ind": "Asma grave — nebulização contínua",
-        "val": "0,3–0,5 mg/kg/h neb contínua",
-        "max": "15 mg/h",
-        "freq": "Contínua até melhoria; monitorizar FC, tremor, K⁺",
-        "note": "Evidência de segurança e eficácia na asma grave pediátrica (Camargo et al.)"
-      },
-      {
-        "ind": "Hipercaliemia grave",
-        "val": "2,5–5 mg neb",
-        "max": "—",
-        "freq": "Dose única; efeito em 30 min, duração 2h",
-        "note": "Adjuvante — não substitui medidas de protecção miocárdica (cálcio)"
-      }
-    ],
-    "prep": "Nebulização: diluir em SF 2–3 ml total. Débito O2 6–8 L/min. MDI: agitar, 1 puff de cada vez com câmara expansora, 5 respirações entre puffs.",
-    "ci": [
-      "Taquicardia > 180 bpm (relativa — avaliar benefício/risco)",
-      "Hipocaliemia grave (agrava)"
-    ],
-    "alert": [
-      "⚠️ Taquicardia e tremor — dose-dependentes; monitorizar FC durante nebulização contínua",
-      "⚠️ Hipocaliemia com doses altas/frequentes — monitorizar K⁺ e repor",
-      "⚠️ Hiperglicemia transitória",
-      "MDI + câmara expansora tão eficaz quanto nebulização em asma leve-moderada — preferir por menor aerossolização",
-      "Tolerância ao efeito broncodilatador com uso excessivo (down-regulation β2)"
-    ],
-    "source": "BNF for Children 2023-24; GINA 2023; Camargo CA et al. Chest 2003"
-  },
   {
     "id": "adrenalina_neb",
     "name": "Adrenalina Nebulizada (Laringite/Croup)",
@@ -606,41 +518,6 @@ var DRUGS_RESPIRATORIO = [
     "source": "BNF for Children 2023-24; Goggin N et al. Cochrane 2000; GINA 2023"
   },
   {
-    "id": "aminofilina_iv",
-    "name": "Aminofilina EV",
-    "category": "respiratorio",
-    "class": "Metilxantina — inibidor fosfodiesterase, antagonista adenosina",
-    "brands": "Aminofilina 250 mg/10 ml (25 mg/ml)",
-    "indication": [
-      "Asma grave refractária a β2 + anticolinérgico + corticoide EV",
-      "Apneia do prematuro (como segunda linha após cafeína)",
-      "Broncoespasmo em doente intubado refractário"
-    ],
-    "dose": [
-      {
-        "ind": "Asma grave — dose de carga",
-        "val": "5–6 mg/kg EV em 20–30 min",
-        "max": "500 mg",
-        "freq": "Dose única de carga (omitir se já em teofilina oral)",
-        "note": "Perfusão manutenção: 0,5–1 mg/kg/h. Nível sérico alvo: 10–20 mg/L"
-      }
-    ],
-    "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 25 mg/ml periférico. Administrar carga em 20–30 min (nunca em bólus — arritmias).",
-    "ci": [
-      "Arritmias cardíacas activas",
-      "Hipertiroidismo não controlado",
-      "Epilepsia activa (baixa limiar convulsivante)"
-    ],
-    "alert": [
-      "⚠️ Janela terapêutica estreita — TDM obrigatório: nível alvo 10–20 mg/L; tóxico > 20 mg/L",
-      "⚠️ Toxicidade: taquicardia, arritmias, convulsões, vómitos — monitorizar ECG",
-      "⚠️ Numerosas interacções: eritromicina, ciprofloxacina, fluconazol, fenitoína, rifampicina alteram metabolismo",
-      "Evidência limitada na asma pediátrica versus β2 — usar apenas como 3ª linha",
-      "Metabolismo CYP1A2 — fumadores (pais) e tabagismo passivo aceleram clearance"
-    ],
-    "source": "BNF for Children 2023-24; Parameswaran K et al. Cochrane 2000; British Thoracic Society Guidelines 2022"
-  },
-  {
     "id": "heliox",
     "name": "Heliox (Hélio/Oxigénio 70:30 ou 80:20)",
     "category": "respiratorio",
@@ -707,5 +584,48 @@ var DRUGS_RESPIRATORIO = [
       "Dados mais favoráveis em ARDS viral e por aspiração (défice de surfactante mais marcado)"
     ],
     "source": "BNF for Children 2023-24; PALICC-2 Pediatric ARDS Consensus 2023; Thomas NJ et al. Pediatr Crit Care Med 2018"
+  },
+{
+    "id": "terbutalina_sc",
+    "name": "Terbutalina SC/EV",
+    "category": "respiratorio",
+    "class": "Agonista β2-adrenérgico selectivo — broncodilatador sistémico",
+    "brands": "Bricanyl — ampolas 0,5 mg/ml (1 ml); comp 2,5/5 mg; inalador",
+    "indication": [
+      "Broncoespasmo grave refractário à nebulização — quando via inalatória impossível ou insuficiente",
+      "Status asmático grave — quando salbutamol nebulizado contínuo insuficiente",
+      "Asma quase-fatal com falência iminente respiratória",
+      "Pré-eclâmpsia / trabalho de parto prematuro (tocólise — off-label)"
+    ],
+    "dose": [
+      {
+        "ind": "Status asmático grave — SC",
+        "val": "0,01 mg/kg SC",
+        "max": "0,3 mg/dose",
+        "freq": "q20 min × 3; monitorizar FC e glicemia",
+        "note": "Alternativa: EV 2–10 μg/kg em 10 min (carga); perfusão 0,1–10 μg/kg/min"
+      },
+      {
+        "ind": "Broncoespasmo grave — EV perfusão",
+        "val": "Carga 2–10 μg/kg EV em 10 min; manutenção 0,1–4 μg/kg/min",
+        "max": "10 μg/kg/min",
+        "freq": "Perfusão contínua; titular por resposta e FC",
+        "note": "Monitorizar K⁺, glicemia e ECG. Diminuir se FC > 200 bpm ou arritmias"
+      }
+    ],
+    "prep": "SC: injecção directa não diluída (0,5 mg/ml). EV: diluir em SF ou SG5%. Carga: 0,01 mg/kg em 10 ml SF em 10 min. Perfusão: 5 mg em 250 ml SF (20 μg/ml).",
+    "ci": [
+      "Taquiarritmias graves",
+      "Tirotoxicose não tratada",
+      "Hipocaliemia grave (agrava)"
+    ],
+    "alert": [
+      "⚠️ Hipocaliemia significativa — monitorizar K⁺ q1–2h durante perfusão; repor",
+      "⚠️ Hiperglicemia — monitorizar glicemia",
+      "⚠️ Taquicardia marcada — reduzir dose se FC > 180 bpm ou se arritmias",
+      "⚠️ Tremor e agitação frequentes — efeito β2 sistémico",
+      "Reservar para falência da via inalatória — risco CV superior ao salbutamol nebulizado"
+    ],
+    "source": "BNF for Children 2023-24; GINA 2023; BTS/SIGN Asthma Guidelines 2022"
   }
 ];

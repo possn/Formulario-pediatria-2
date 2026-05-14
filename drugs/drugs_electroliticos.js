@@ -1,5 +1,5 @@
-// UCIP Pediatria — Electrólitos & Nutrição
-// 10 fármacos
+// UCIP Pediatria — Electrólitos & Fluidos
+// 12 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_ELECTROLITICOS = [
@@ -11,7 +11,10 @@ var DRUGS_ELECTROLITICOS = [
     "brands": "KCl 7,5% (1 mmol/ml); 15% (2 mmol/ml)",
     "indication": [
       "Hipocaliemia sintomática ou grave (K+ < 2,5 mEq/L)",
-      "Manutenção de potássio em soluções EV"
+      "Manutenção de potássio em soluções EV",
+      "Hipocaliemia ligeira-moderada com via oral disponível",
+      "Prevenção de hipocaliemia em diuréticos tiazídicos/ansa",
+      "Alcalose hipoclorémica hipocaliémica"
     ],
     "dose": [
       {
@@ -27,20 +30,33 @@ var DRUGS_ELECTROLITICOS = [
         "max": "—",
         "freq": "dividido nas soluções EV do dia",
         "note": "Concentração máxima EV periférico: 40 mEq/L"
+      },
+      {
+        "ind": "Reposição hipocaliemia",
+        "val": "1–3 mEq/kg/dia PO",
+        "max": "4 mEq/kg/dia; 40 mEq/dose",
+        "freq": "2–4 doses/dia com refeições",
+        "note": "Dose baseada em défice: cada 0,1 mEq/L de queda de K⁺ ≈ défice de 0,3 mEq/kg"
       }
     ],
     "prep": "⛔ NUNCA administrar EV rápido não diluído — FATAL. Diluir sempre. Concentração máxima EV central: 150–200 mEq/L.",
     "ci": [
       "Hipercaliemia",
-      "Anúria"
+      "Anúria",
+      "Insuficiência renal grave (oligúria)",
+      "Obstrução intestinal"
     ],
     "alert": [
       "⛔ BÓLUS EV RÁPIDO = MORTE — paragem cardíaca em assistolia",
       "⚠️ EV CENTRAL para concentrações > 40 mEq/L",
       "⚠️ Monitorização ECG durante infusão rápida",
-      "⚠️ Monitorizar K+ sérico 1–2h após reposição"
+      "⚠️ Monitorizar K+ sérico 1–2h após reposição",
+      "⚠️ Hipercaliemia iatrogénica — monitorizar K⁺ q24–48h durante reposição",
+      "Irritação gástrica frequente — tomar sempre com alimentos",
+      "Comprimidos LP (Slow-K): não triturar — risco úlcera esofágica",
+      "Reposição IV preferida se K⁺ < 2,5 mEq/L ou sintomático"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; BNF for Children 2023-24; Gennari FJ NEJM 1998"
   },
   {
     "id": "glicose",
@@ -49,6 +65,7 @@ var DRUGS_ELECTROLITICOS = [
     "class": "Substrato energético — carboidrato",
     "brands": "Glucose 5%; 10%; 20%; 30%; 50%",
     "indication": [
+      "Hipoglicemia neonatal — manutenção GIR 4–8 mg/kg/min por perfusão contínua (ajustar por glicemia capilar)",
       "Hipoglicemia",
       "Manutenção energética EV",
       "Veículo para fármacos EV"
@@ -129,7 +146,6 @@ var DRUGS_ELECTROLITICOS = [
     "id": "magnesio",
     "name": "Sulfato de Magnésio",
     "category": "electrolitico",
-    "src": "added",
     "class": "Electrólito — cofactor enzimático, estabilizador membranas",
     "brands": "MgSO4 10% (1g/10ml); 20% (2g/10ml); 50% (1g/2ml)",
     "indication": [
@@ -137,7 +153,12 @@ var DRUGS_ELECTROLITICOS = [
       "Asma grave / status asmático refractário",
       "Arritmia por torsades de pointes",
       "Eclampsia / pré-eclampsia grave",
-      "Broncoespasmo grave refractário"
+      "Broncoespasmo grave refractário",
+      "Broncoespasmo grave refractário a β2 — adjuvante na asma grave",
+      "Torsades de pointes — 1ª linha",
+      "Convulsões por eclâmpsia / hipomagnesemia",
+      "Hipomagnesiemia sintomática grave",
+      "Arritmias refractárias associadas a hipomagnesemia"
     ],
     "dose": [
       {
@@ -167,20 +188,41 @@ var DRUGS_ELECTROLITICOS = [
         "max": "—",
         "freq": "manutenção até 24–48h pós-parto",
         "note": ""
+      },
+      {
+        "ind": "Broncoespasmo grave (asma aguda)",
+        "val": "25–75 mg/kg EV em 20 min",
+        "max": "2 g",
+        "freq": "Dose única; pode repetir 1× se necessário",
+        "note": "Reduz internamento em UCI em asma grave (Cochrane 2014, NNT=4 para hospitalização)"
+      },
+      {
+        "ind": "Torsades de pointes / hipomagnesemia grave",
+        "val": "25–50 mg/kg EV em 10–20 min",
+        "max": "2 g",
+        "freq": "Dose única; perfusão manutenção 10–20 mg/kg/h se recorrência",
+        "note": ""
       }
     ],
     "prep": "Diluir sempre antes de administrar EV. Sol. 10% para infusão. Sol. 50% apenas IM.",
     "ci": [
       "Bloqueio AV",
-      "Insuf. renal grave (acumulação)"
+      "Insuf. renal grave (acumulação)",
+      "Bloqueio AV (aprofunda bloqueio)",
+      "Insuficiência renal grave (acumulação — toxicidade)",
+      "Miastenia gravis (bloqueio neuromuscular)"
     ],
     "alert": [
       "⚠️ Toxicidade: perda de reflexos patelares (nível 4–5 mmol/L) → paralisia respiratória (> 6 mmol/L) → paragem cardíaca (> 12 mmol/L)",
       "⚠️ Antídoto: gluconato de cálcio 10% 10 ml EV",
       "⚠️ Monitorizar reflexo patelar, FR e diurese em infusão contínua",
-      "⚠️ Hipotensão na infusão rápida"
+      "⚠️ Hipotensão na infusão rápida",
+      "⚠️ Toxicidade por magnésio: hiporreflexia → paralisia respiratória → PCR. Monitorizar reflexo rotuliano",
+      "⚠️ Antídoto da toxicidade: gluconato de cálcio 10% 0,2 ml/kg EV",
+      "⚠️ Infusão rápida causa hipotensão e rubor facial",
+      "Monitorizar magnesiemia se perfusão prolongada (alvo 2–3,5 mmol/L terapêutico)"
     ],
-    "source": "BNF for Children 2023-24; MAGNUM trial; Harriet Lane 23rd Ed"
+    "source": "BNF for Children 2023-24; MAGNUM trial; Harriet Lane 23rd Ed; BNF for Children 2023-24; Griffiths B et al. Cochrane 2016 (asma); PALS AHA 2020"
   },
   {
     "id": "fosforo",
@@ -224,7 +266,7 @@ var DRUGS_ELECTROLITICOS = [
     ],
     "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
   },
-{
+  {
     "id": "nacl_hipertonico",
     "name": "NaCl 3% (Soro Hipertónico)",
     "category": "electrolitico",
@@ -303,40 +345,6 @@ var DRUGS_ELECTROLITICOS = [
       "Monitorizar: osmolalidade sérica, Na⁺, balanço hídrico q4–6h"
     ],
     "source": "BNF for Children 2023-24; BTF Pediatric TBI Guidelines 2019; James HE et al. Childs Nerv Syst 1980"
-  },
-  {
-    "id": "potassio_oral",
-    "name": "Cloreto de Potássio Oral",
-    "category": "electrolitico",
-    "class": "Suplemento electrolítico — reposição de potássio",
-    "brands": "Kay-Cee-L susp 7,5% (1 mmol K⁺/ml); Slow-K comp 600 mg (8 mEq); Sando-K eferv",
-    "indication": [
-      "Hipocaliemia ligeira-moderada com via oral disponível",
-      "Prevenção de hipocaliemia em diuréticos tiazídicos/ansa",
-      "Alcalose hipoclorémica hipocaliémica"
-    ],
-    "dose": [
-      {
-        "ind": "Reposição hipocaliemia",
-        "val": "1–3 mEq/kg/dia PO",
-        "max": "4 mEq/kg/dia; 40 mEq/dose",
-        "freq": "2–4 doses/dia com refeições",
-        "note": "Dose baseada em défice: cada 0,1 mEq/L de queda de K⁺ ≈ défice de 0,3 mEq/kg"
-      }
-    ],
-    "prep": "Oral: solução 7,5% — medir com seringa. Diluir em sumo de fruta para melhorar palatabilidade e reduzir irritação gástrica.",
-    "ci": [
-      "Hipercaliemia",
-      "Insuficiência renal grave (oligúria)",
-      "Obstrução intestinal"
-    ],
-    "alert": [
-      "⚠️ Hipercaliemia iatrogénica — monitorizar K⁺ q24–48h durante reposição",
-      "Irritação gástrica frequente — tomar sempre com alimentos",
-      "Comprimidos LP (Slow-K): não triturar — risco úlcera esofágica",
-      "Reposição IV preferida se K⁺ < 2,5 mEq/L ou sintomático"
-    ],
-    "source": "BNF for Children 2023-24; Gennari FJ NEJM 1998"
   },
   {
     "id": "calcio_cloreto",
@@ -419,5 +427,119 @@ var DRUGS_ELECTROLITICOS = [
       "Separar administração de ferro e zinco por 2h (absorção competitiva)"
     ],
     "source": "BNF for Children 2023-24; WHO/UNICEF Zinc Supplementation 2004; Bhutta ZA et al. BMJ 1999"
+  },
+  {
+    "id": "tiamina_ev",
+    "name": "Tiamina EV (Vitamina B1)",
+    "category": "electrolitico",
+    "class": "Vitamina B1 — cofactor piruvatodesidroginase e alfa-cetoglutaratodesidroginase",
+    "brands": "Thiamine; Benerva EV — ampolas 100 mg/2 ml; 200 mg/2 ml",
+    "indication": [
+      "Encefalopatia de Wernicke — tratamento e profilaxia em desnutrição",
+      "Deficiência de tiamina em UCI/cuidados intensivos — especialmente com glucose EV",
+      "Alcoolismo (raro em criança) — reposição",
+      "Doente crítico com desnutrição ou má absorção",
+      "Acidose láctica de causa desconhecida — teste terapêutico",
+      "Doenças metabólicas tiamina-responsivas (MSUD, PDHc)"
+    ],
+    "dose": [
+      {
+        "ind": "Encefalopatia de Wernicke / deficiência grave",
+        "val": "50–100 mg EV em 30 min (ou IM)",
+        "max": "200 mg/dose",
+        "freq": "q8h × 2–3 dias; depois 10–20 mg/dia VO",
+        "note": "Administrar ANTES de qualquer glucose (glucose agrava Wernicke em deficientes)"
+      },
+      {
+        "ind": "Profilaxia em doente crítico desnutrido",
+        "val": "1–2 mg/kg/dia EV/IM",
+        "max": "100 mg/dia",
+        "freq": "1× /dia",
+        "note": ""
+      }
+    ],
+    "prep": "EV: diluir em SF 100 ml. Administrar em 30 min (reacções anafilactóides com infusão rápida). IM: injecção profunda.",
+    "ci": ["Hipersensibilidade à tiamina"],
+    "alert": [
+      "⚠️ NUNCA dar glucose antes de tiamina em doente com suspeita de deficiência — pode precipitar encefalopatia de Wernicke aguda",
+      "Anafilaxia rara com administração rápida — infundir lentamente",
+      "Acidose láctica refractária inexplicada: sempre considerar deficiência de tiamina e tiamina-teste 100 mg EV"
+    ],
+    "source": "BNF for Children 2023-24; Galvin R et al. J Neurol Neurosurg Psychiatry 2010; Donnino MW et al. Crit Care Med 2010"
+  },
+  {
+    "id": "vitamina_c_ev",
+    "name": "Vitamina C EV (Ácido Ascórbico)",
+    "category": "electrolitico",
+    "class": "Vitamina antioxidante — cofactor síntese de colagénio e carnitina",
+    "brands": "Vitamina C Labesfal EV — ampolas 500 mg/5 ml; 1000 mg/10 ml",
+    "indication": [
+      "Escorbuto — deficiência grave de vitamina C",
+      "Choque séptico — protocolo HAT (Marik protocol) — controverso",
+      "Queimaduras extensas — redução de necessidades de fluidos (protocolo Parkland modificado)",
+      "Nutrição parentérica — componente vitamínico"
+    ],
+    "dose": [
+      {
+        "ind": "Escorbuto",
+        "val": "100–300 mg/dia EV/PO",
+        "max": "—",
+        "freq": "Dividido em 3 doses × 1–3 semanas",
+        "note": "Depois manter 30–50 mg/dia por via oral"
+      },
+      {
+        "ind": "Queimaduras extensas (protocolo)",
+        "val": "66 mg/kg/h EV nas primeiras 24h",
+        "max": "—",
+        "freq": "Perfusão contínua 24h",
+        "note": "Reduz necessidades de fluidos ~30% e edema de reperfusão (Tanaka et al. 2000) — protocolo não universal"
+      }
+    ],
+    "prep": "EV: diluir em SF ou SG5%. Proteger da luz. Administrar em 1h.",
+    "ci": ["Cálculos renais de oxalato (doses altas crónicas)", "Hemocromatose (aumenta absorção de ferro)"],
+    "alert": [
+      "⚠️ Protocolo Marik (vitamina C + tiamina + hidrocortisona em sépsis) — ensaio CITRIS-ALI não confirmou benefício; não é standard of care",
+      "Doses altas (> 1 g/dia) podem causar cálculos de oxalato em susceptíveis",
+      "Interferência com glicómetros de glucose (falsos positivos/negativos)",
+      "Uso em NP: incluir nas vitaminas multi-dose diárias"
+    ],
+    "source": "BNF for Children 2023-24; Fowler AA et al. JAMA 2019 (CITRIS-ALI); Tanaka H et al. Arch Surg 2000"
+  },
+  {
+    "id": "selenio_ev",
+    "name": "Selénio EV",
+    "category": "electrolitico",
+    "class": "Oligoelemento essencial — cofactor glutatião peroxidase",
+    "brands": "Selenase — ampolas 500 μg/10 ml (50 μg/ml); solução oral 100 μg/ml",
+    "indication": [
+      "Deficiência de selénio — doente crítico com NP prolongada",
+      "Suplementação em sépsis grave (evidência controversa)",
+      "Síndromes de malabsorção com NP longa",
+      "Cardiomiopatia de Keshan (deficiência endémica)"
+    ],
+    "dose": [
+      {
+        "ind": "NP / suplementação — lactente",
+        "val": "2–3 μg/kg/dia EV",
+        "max": "—",
+        "freq": "Incorporado na NP",
+        "note": "Criança > 1 ano: 1–2 μg/kg/dia. Adulto: 25–70 μg/dia"
+      },
+      {
+        "ind": "Sépsis grave — protocolo (off-label)",
+        "val": "1–2 μg/kg/dia EV",
+        "max": "—",
+        "freq": "Durante a fase aguda",
+        "note": "Evidência insuficiente para recomendação universal — REDOXS trial negativo"
+      }
+    ],
+    "prep": "EV: incorporar na NP ou perfusão separada diluída em SF.",
+    "ci": ["Hipersensibilidade"],
+    "alert": [
+      "Toxicidade por selénio (selenose) com doses excessivas: queda de cabelo, neuropatia, alho hálito",
+      "Monitorizar nível sérico em NP prolongada (> 2 semanas)",
+      "Interacção com vitamina C em doses altas — oxidação do selénio (separar na NP)"
+    ],
+    "source": "BNF for Children 2023-24; Heyland D et al. JAMA 2013 (REDOXS); ESPEN Micronutrient Guidelines 2022"
   }
 ];

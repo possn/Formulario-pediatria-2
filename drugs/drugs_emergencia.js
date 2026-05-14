@@ -1,9 +1,9 @@
 // UCIP Pediatria — Emergência & Reanimação
-// 8 fármacos
+// 10 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_EMERGENCIA = [
-{
+  {
     "id": "adrenalina",
     "name": "Adrenalina (Epinefrina)",
     "category": "emergencia",
@@ -13,7 +13,14 @@ var DRUGS_EMERGENCIA = [
       "Paragem cardiorrespiratória",
       "Anafilaxia grave",
       "Bradicardia sintomática refractária à atropina",
-      "Suporte inotrópico/vasopressor (perfusão)"
+      "Suporte inotrópico/vasopressor (perfusão)",
+      "PCR neonatal — reanimação em sala de partos",
+      "Choque séptico neonatal — vasopressor de 1ª linha (SSC Neonatal 2020)",
+      "Hipotensão refractária à dopamina",
+      "Anafilaxia neonatal",
+      "Choque séptico refractário à noradrenalina e dobutamina",
+      "Choque anafilático após bólus IM — perfusão de manutenção",
+      "Choque cardiogénico com baixo débito e hipotensão grave"
     ],
     "dose": [
       {
@@ -43,21 +50,54 @@ var DRUGS_EMERGENCIA = [
         "max": "1–2 mcg/kg/min (casos extremos)",
         "freq": "contínua",
         "note": "Titular pela TA e clínica. Doses > 0,5 mcg/kg/min: considerar vasopressina adjuvante"
+      },
+      {
+        "ind": "Neonatal — PCR — reanimação sala de partos EV/IO",
+        "val": "0,01–0,03 mg/kg EV/IO (= 0,1–0,3 ml/kg da sol. 1:10000)",
+        "max": "0,03 mg/kg/dose",
+        "freq": "cada 3–5 min",
+        "note": "Via EV/IO preferida. Via endotraqueal: 0,05–0,1 mg/kg (menos eficaz)"
+      },
+      {
+        "ind": "Choque neonatal — perfusão EV",
+        "val": "0,05–0,3 mcg/kg/min",
+        "max": "1 mcg/kg/min",
+        "freq": "contínua; titular pela TAM",
+        "note": "TAM alvo: ≥ 40 mmHg (RN termo); ≥ semanas de gestação em mmHg (prematuro)"
+      },
+      {
+        "ind": "Choque — perfusão contínua",
+        "val": "0,05–2 μg/kg/min EV",
+        "max": "—",
+        "freq": "Perfusão contínua; titular por resposta",
+        "note": "Doses baixas (< 0,1 μg/kg/min): efeito β predominante (inotrópico). Doses altas (> 0,3 μg/kg/min): efeito α predominante (vasopressor)"
       }
     ],
     "prep": "Perfusão: (0,3 × Peso kg) mg em 50 ml SG5% → 1 ml/h = 0,1 mcg/kg/min. Concentrações até 0,5 mg/ml EV central.",
     "ci": [
-      "Não há contra-indicações absolutas na emergência"
+      "Não há contra-indicações absolutas na emergência",
+      "Não há CI absolutas na emergência neonatal",
+      "Taquicardia > 180 bpm (relativa — avaliar)",
+      "Hipocaliemia não corrigida (arritmias)",
+      "Anestesia com halotano (sensibilização miocárdica)"
     ],
     "alert": [
       "⚠️ Incompatível com bicarbonato de sódio (inactivada)",
       "⚠️ Extravasamento causa necrose — usar acesso central em perfusão",
       "Monitorização ECG contínua obrigatória",
-      "Efeitos: taquicardia, HTA, hiperglicemia, hipocaliemia"
+      "Efeitos: taquicardia, HTA, hiperglicemia, hipocaliemia",
+      "⚠️ Taquicardia, HTA, vasoconstrição periférica",
+      "⚠️ Hiperglicemia e hiperlactacidemia (efeito metabólico)",
+      "⚠️ EV central para perfusão contínua",
+      "⚠️ VIA CENTRAL EXCLUSIVA — extravasamento causa necrose grave; se extravasamento: fentolamina SC local",
+      "⚠️ Taquicardia e arritmias — monitorizar ECG contínuo",
+      "⚠️ Hipocaliemia — adrenalina redistribui K⁺ para intracelular; monitorizar e repor",
+      "⚠️ Hiperglicemia — inibe libertação de insulina; monitorizar glicemia",
+      "Isquemia mesentérica e periférica com doses altas — monitorizar lactato e perfusão"
     ],
-    "source": "ILCOR 2021; ERC Guidelines 2021; WAO Anaphylaxis Guidelines 2020"
+    "source": "ILCOR 2021; ERC Guidelines 2021; WAO Anaphylaxis Guidelines 2020; BNF for Children 2023-24; ILCOR NLS 2021; SSC Neonatal Guidelines 2020; BNF for Children 2023-24; Surviving Sepsis Campaign Pediatric Guidelines 2020; PALS AHA 2020"
   },
-{
+  {
     "id": "atropina",
     "name": "Atropina",
     "category": "emergencia",
@@ -104,7 +144,7 @@ var DRUGS_EMERGENCIA = [
     ],
     "source": "ILCOR 2021; BNF for Children 2023-24; Harriet Lane 23rd Ed"
   },
-{
+  {
     "id": "bicarbonato",
     "name": "Bicarbonato de Sódio",
     "category": "emergencia",
@@ -114,7 +154,9 @@ var DRUGS_EMERGENCIA = [
       "Acidose metabólica grave (pH < 7,1) com compromisso hemodinâmico",
       "Hipercaliemia grave com alterações ECG",
       "Intoxicação por antidepressivos tricíclicos / salicilatos",
-      "PCR prolongada (após ≥ 10 min de suporte)"
+      "PCR prolongada (após ≥ 10 min de suporte)",
+      "Acidose metabólica grave no RN (pH < 7,15, BE < -10)",
+      "PCR neonatal prolongada (após 10 min de suporte e sem ROSC)"
     ],
     "dose": [
       {
@@ -137,23 +179,43 @@ var DRUGS_EMERGENCIA = [
         "max": "100 mmol",
         "freq": "seguido de perfusão para manter pH urinário 7,5–8",
         "note": ""
+      },
+      {
+        "ind": "Neonatal — Acidose metabólica — EV",
+        "val": "1–2 mmol/kg EV (= 2–4 ml/kg da sol. 4,2%)",
+        "max": "—",
+        "freq": "em 30–60 min; repetir guiado por gasometria",
+        "note": "SEMPRE usar solução 4,2% em RN e prematuros (solução 8,4% é hiperosmolar → risco HIV)"
+      },
+      {
+        "ind": "Neonatal — Hipercaliemia grave",
+        "val": "1–2 mmol/kg EV",
+        "max": "—",
+        "freq": "em 5–10 min (efeito transitório — não corrige K+)",
+        "note": ""
       }
     ],
     "prep": "Usar solução 4,2% em RN/lactentes (solução 8,4% é hiperosmolar — risco HIV). Não misturar com cálcio (precipita) nem adrenalina (inactiva).",
     "ci": [
       "Alcalose metabólica",
-      "Hipocaliemia não corrigida"
+      "Hipocaliemia não corrigida",
+      "Acidose respiratória sem ventilação assegurada",
+      "Hipocalcemia não corrigida (relativa)"
     ],
     "alert": [
       "⚠️ Incompatível com cálcio, adrenalina, dopamina",
       "⚠️ Solução 8,4% em RN — risco de hemorragia intraventricular",
       "⚠️ Não usar na acidose respiratória sem ventilação assegurada (↑CO2)",
       "Causa hipernatremia e hiperosmolaridade — monitorizar",
-      "Hipocaliemia após correcção da acidose"
+      "Hipocaliemia após correcção da acidose",
+      "⛔ SOLUÇÃO 8,4% em RN/PREMATURO: risco de HIV por hiperosmolaridade — usar SEMPRE 4,2%",
+      "⚠️ Incompatível com cálcio (precipita CaCO3) e adrenalina (inactiva)",
+      "⚠️ Paradoxalmente agrava acidose intracelular e cerebral se ventilação inadequada",
+      "⚠️ Hipocalcemia após correcção da acidose"
     ],
-    "source": "ILCOR 2021; Harriet Lane 23rd Ed; BNF for Children 2023-24"
+    "source": "ILCOR 2021; Harriet Lane 23rd Ed; BNF for Children 2023-24; BNF for Children 2023-24; ILCOR NLS 2021; BNFC Neonatal Formulary 9th Ed"
   },
-{
+  {
     "id": "calcio_gluconato",
     "name": "Gluconato de Cálcio 10%",
     "category": "emergencia",
@@ -163,7 +225,11 @@ var DRUGS_EMERGENCIA = [
       "Hipocalcemia sintomática (tetania, convulsões, PCR)",
       "Hipercaliemia grave com alterações ECG (cardioprotecção)",
       "Hipermagnesemia sintomática",
-      "Bloqueio de canais de cálcio (intoxicação por BCC)"
+      "Bloqueio de canais de cálcio (intoxicação por BCC)",
+      "Hipocalcemia neonatal precoce (< 72h) — prematuros, filhos de diabéticas, asfixia",
+      "Hipocalcemia neonatal tardia (> 72h) — hipoparatiroidismo, défice vitamina D",
+      "Hipercaliemia com alterações ECG",
+      "Hipermagnesemia sintomática (por sulfato de magnésio materno)"
     ],
     "dose": [
       {
@@ -186,24 +252,49 @@ var DRUGS_EMERGENCIA = [
         "max": "—",
         "freq": "perfusão contínua EV central",
         "note": ""
+      },
+      {
+        "ind": "Neonatal — Hipocalcemia sintomática EV (convulsões, tetania)",
+        "val": "1–2 ml/kg da sol. 10% EV lento",
+        "max": "10 ml/dose",
+        "freq": "em 5–10 min; monitorização ECG contínua",
+        "note": "= 0,22–0,45 mmol/kg. Repetir se necessário"
+      },
+      {
+        "ind": "Neonatal — Manutenção / Hipocalcemia assintomática EV",
+        "val": "0,5–1 mmol/kg/dia",
+        "max": "—",
+        "freq": "perfusão contínua EV central; ou dividido em doses cada 6–8h",
+        "note": ""
+      },
+      {
+        "ind": "Neonatal — Hipercaliemia — cardioprotecção EV",
+        "val": "0,5 ml/kg da sol. 10%",
+        "max": "10 ml",
+        "freq": "em 5–10 min; efeito transitório",
+        "note": ""
       }
     ],
     "prep": "EV periférico: concentração máxima 10%. EV central: até 20%. NUNCA IM (necrose). Não misturar com bicarbonato (precipita CaCO3).",
     "ci": [
       "Hipercalcemia",
       "Doente digitálico (arritmias)",
-      "Nefrolitíase cálcica (relativa)"
+      "Nefrolitíase cálcica (relativa)",
+      "Digitálico (bradicardia/arritmias)"
     ],
     "alert": [
       "⚠️ Bradicardia e assistolia se infusão rápida — monitorizar ECG",
       "⚠️ Extravasamento causa necrose tecidular grave",
       "⚠️ Incompatível com bicarbonato e fosfatos",
       "⚠️ Potencia toxicidade da digoxina",
-      "Preferir cloreto de cálcio na PCR (3× mais Ca²⁺ biodisponível)"
+      "Preferir cloreto de cálcio na PCR (3× mais Ca²⁺ biodisponível)",
+      "⚠️ Extravasamento causa necrose cutânea grave — confirmar acesso EV antes de administrar",
+      "⛔ Incompatível com bicarbonato de sódio e fosfato (precipitação)",
+      "⚠️ Potencia toxicidade digitálica"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; PALS AHA 2020"
+    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; PALS AHA 2020; BNF for Children 2023-24; Jain A. Paediatr Child Health 2010; BNFC Neonatal Formulary 9th Ed"
   },
-{
+  {
     "id": "flumazenil",
     "name": "Flumazenil",
     "category": "emergencia",
@@ -236,98 +327,6 @@ var DRUGS_EMERGENCIA = [
       "Não usar como diagnóstico de rotina em coma — usar apenas quando BZD documentada ou fortemente suspeita"
     ],
     "source": "BNF for Children 2023-24; Bhatt M et al. Lancet 2017; TOXBASE UK"
-  },
-  {
-    "id": "naloxona_emerg",
-    "name": "Naloxona (Emergência)",
-    "category": "emergencia",
-    "class": "Antagonista opioide — bloqueador competitivo receptores μ, κ, δ",
-    "brands": "Narcan — ampolas 0,4 mg/ml (1 ml); 1 mg/ml (2 ml); intranasal 4 mg/0,1 ml",
-    "indication": [
-      "Depressão respiratória por opioides — emergência",
-      "Coma/inconsciência por intoxicação opioide",
-      "Apneia neonatal por opioides maternos intraparto",
-      "Prurido refractário e retenção urinária por opioides (doses baixas)"
-    ],
-    "dose": [
-      {
-        "ind": "Depressão respiratória grave — criança",
-        "val": "0,01 mg/kg EV/IO/IM/SC",
-        "max": "0,4 mg/dose",
-        "freq": "q2–3 min até resposta respiratória adequada (não esperar reversão completa)",
-        "note": "Titular para manter FR adequada sem reverter analgesia completa. Infusão: 0,005–0,01 mg/kg/h se recorrência"
-      },
-      {
-        "ind": "Apneia neonatal por opioides maternos",
-        "val": "0,01 mg/kg EV/IM/SC",
-        "max": "—",
-        "freq": "Dose única; repetir se sem resposta em 2–3 min",
-        "note": "NÃO administrar a RN de mãe dependente de opioides (precipita abstinência neonatal grave)"
-      },
-      {
-        "ind": "Intranasal (pré-hospitalar/IM indisponível)",
-        "val": "0,1 mg/kg IN",
-        "max": "4 mg total",
-        "freq": "q2–3 min",
-        "note": "Absorção IN mais lenta — usar EV/IO se acesso disponível"
-      }
-    ],
-    "prep": "EV: diluir para 0,04 mg/ml (0,4 mg em 10 ml SF) para titulação precisa em criança. Perfusão: 0,4–1 mg em 100 ml SF, titular por resposta.",
-    "ci": [
-      "Hipersensibilidade à naloxona",
-      "Cautela em dependentes de opioides (precipita abstinência aguda grave)"
-    ],
-    "alert": [
-      "⚠️ Semi-vida 60–90 min — mais curta que maioria dos opioides; ressedação frequente, especialmente com metadona ou fentanil LP",
-      "⚠️ Reversão demasiado rápida/dose excessiva: dor aguda, hipertensão, edema pulmonar, arritmias, PCR (descrito em adultos)",
-      "⚠️ NÃO administrar a RN de mãe em programa de metadona — abstinência neonatal grave",
-      "Titular para manter FR > 8/min e SpO2 > 94% — não para acordar completamente",
-      "Alternativa à naloxona em prurido opioide: doses muito baixas 0,5–2 μg/kg/h"
-    ],
-    "source": "BNF for Children 2023-24; PALS AHA 2020; Boyer EW NEJM 2012"
-  },
-  {
-    "id": "sulfato_mg_emerg",
-    "name": "Sulfato de Magnésio (Emergência)",
-    "category": "emergencia",
-    "class": "Electrólito — bloqueador canal Ca²⁺, broncodilatador, anticonvulsivante",
-    "brands": "Sulfato de Magnésio 50% (500 mg/ml) — ampolas 10 ml (5 g)",
-    "indication": [
-      "Broncoespasmo grave refractário a β2 — adjuvante na asma grave",
-      "Torsades de pointes — 1ª linha",
-      "Convulsões por eclâmpsia / hipomagnesemia",
-      "Hipomagnesiemia sintomática grave",
-      "Arritmias refractárias associadas a hipomagnesemia"
-    ],
-    "dose": [
-      {
-        "ind": "Broncoespasmo grave (asma aguda)",
-        "val": "25–75 mg/kg EV em 20 min",
-        "max": "2 g",
-        "freq": "Dose única; pode repetir 1× se necessário",
-        "note": "Reduz internamento em UCI em asma grave (Cochrane 2014, NNT=4 para hospitalização)"
-      },
-      {
-        "ind": "Torsades de pointes / hipomagnesemia grave",
-        "val": "25–50 mg/kg EV em 10–20 min",
-        "max": "2 g",
-        "freq": "Dose única; perfusão manutenção 10–20 mg/kg/h se recorrência",
-        "note": ""
-      }
-    ],
-    "prep": "EV: diluir solução 50% em SF ou SG5% até concentração ≤ 20% (200 mg/ml) periférico; ≤ 50% central. NUNCA em bólus rápido (assistolia).",
-    "ci": [
-      "Bloqueio AV (aprofunda bloqueio)",
-      "Insuficiência renal grave (acumulação — toxicidade)",
-      "Miastenia gravis (bloqueio neuromuscular)"
-    ],
-    "alert": [
-      "⚠️ Toxicidade por magnésio: hiporreflexia → paralisia respiratória → PCR. Monitorizar reflexo rotuliano",
-      "⚠️ Antídoto da toxicidade: gluconato de cálcio 10% 0,2 ml/kg EV",
-      "⚠️ Infusão rápida causa hipotensão e rubor facial",
-      "Monitorizar magnesiemia se perfusão prolongada (alvo 2–3,5 mmol/L terapêutico)"
-    ],
-    "source": "BNF for Children 2023-24; Griffiths B et al. Cochrane 2016 (asma); PALS AHA 2020"
   },
   {
     "id": "dextrose_emerg",
@@ -370,5 +369,194 @@ var DRUGS_EMERGENCIA = [
       "Em RN: GIR 4–6 mg/kg/min habitual; hiperinsulinismo pode necessitar GIR > 15 mg/kg/min"
     ],
     "source": "BNF for Children 2023-24; Thornton PS et al. Pediatrics 2015 (neonatal hypoglycemia)"
+  },
+{
+    "id": "adenosina",
+    "name": "Adenosina",
+    "category": "emergencia",
+    "class": "Antiarrítmico — agonista receptor A1 purinérgico",
+    "brands": "Adenocor — ampolas 6 mg/2 ml (3 mg/ml)",
+    "indication": [
+      "Taquicardia supraventricular paroxística (TSVP) — 1ª linha farmacológica",
+      "Taquicardia por reentrada nodal AV (TRNAV)",
+      "Taquicardia por via acessória — com cautela em WPW",
+      "Diagnóstico diferencial taquicardias complexo largo",
+      "TSVP neonatal"
+    ],
+    "dose": [
+      {
+        "ind": "TSVP — 1ª dose",
+        "val": "0,1 mg/kg EV rápido (< 2 seg)",
+        "max": "6 mg",
+        "freq": "Dose única; repetir se sem resposta em 1–2 min",
+        "note": "Administrar na veia antecubital ou central + flush SF 5–10 ml imediato. Monitorização ECG obrigatória"
+      },
+      {
+        "ind": "TSVP — 2ª dose",
+        "val": "0,2 mg/kg EV rápido",
+        "max": "12 mg",
+        "freq": "Se sem resposta 1–2 min após 1ª dose",
+        "note": ""
+      },
+      {
+        "ind": "TSVP neonatal",
+        "val": "0,1–0,3 mg/kg EV rápido",
+        "max": "6 mg",
+        "freq": "Incrementos 0,05 mg/kg q1–2 min",
+        "note": "Via umbilical ou central preferida — periférica distal reduz eficácia por inactivação rápida"
+      }
+    ],
+    "prep": "Não diluir — administrar não diluída (3 mg/ml). Seringa pré-preparada com flush SF na mesma linha imediato.",
+    "ci": [
+      "Bloqueio AV 2º/3º grau (sem pacemaker)",
+      "Síndrome do nódulo sinusal (sem pacemaker)",
+      "Asma brônquica grave (broncoespasmo)",
+      "WPW com FA/flutter (risco condução rápida via acessória)"
+    ],
+    "alert": [
+      "⚠️ Semi-vida 10 segundos — bólus muito rápido + flush imediato obrigatórios",
+      "⚠️ Assistolia transitória esperada — avisar família e ter material de reanimação disponível",
+      "⚠️ Broncoespasmo grave em asmáticos — evitar ou usar com extrema cautela",
+      "Monitorização ECG contínua e registo de ritmo durante administração",
+      "Inactivada pela teofilina e cafeína — pode necessitar dose mais alta em prematuros com cafeína"
+    ],
+    "source": "BNF for Children 2023-24; Sanatani S et al. CJC 2017; PALS Guidelines AHA 2020; ERC 2021"
+  },
+  {
+    "id": "amiodarona",
+    "name": "Amiodarona EV",
+    "category": "emergencia",
+    "class": "Antiarrítmico classe III — inibidor canais K⁺, Na⁺, Ca²⁺ + beta-bloqueio",
+    "brands": "Cordarone EV — ampolas 150 mg/3 ml (50 mg/ml)",
+    "indication": [
+      "Fibrilhação ventricular / TV sem pulso — após 3º choque (PCR)",
+      "Taquicardia ventricular com pulso hemodinamicamente instável",
+      "Taquicardia juncional pós-operatória (JET) — pós-cirurgia cardíaca",
+      "Flutter/FA com instabilidade hemodinâmica",
+      "TSVP refractária a adenosina"
+    ],
+    "dose": [
+      {
+        "ind": "PCR — FV/TV sem pulso",
+        "val": "5 mg/kg EV/IO em bólus",
+        "max": "300 mg/dose",
+        "freq": "Após 3º choque; pode repetir após 5º choque. Máx acumulado 15 mg/kg/dia",
+        "note": "Em PCR: administrar em bólus rápido"
+      },
+      {
+        "ind": "TV/TSV com pulso",
+        "val": "5 mg/kg EV em 20–60 min",
+        "max": "300 mg/dose",
+        "freq": "1 dose; repetir se necessário até 15 mg/kg/dia",
+        "note": "Diluir EXCLUSIVAMENTE em SG5% — precipita em SF"
+      },
+      {
+        "ind": "JET pós-operatória — perfusão contínua",
+        "val": "5–15 μg/kg/min",
+        "max": "—",
+        "freq": "Perfusão contínua EV em SG5%",
+        "note": "Associar hipotermia moderada (35–36°C) e sedação"
+      }
+    ],
+    "prep": "EV: diluir EXCLUSIVAMENTE em SG5% (precipita em SF). Concentração: 1–6 mg/ml periférico; até 18 mg/ml central. Linha dedicada; adsorve em PVC — usar polietileno ou vidro.",
+    "ci": [
+      "Bloqueio AV 2º/3º grau sem pacemaker",
+      "Bradicardia sinusal grave",
+      "Disfunção tiroideia grave"
+    ],
+    "alert": [
+      "⚠️ Hipotensão com administração rápida — excepção PCR onde bólus é obrigatório",
+      "⚠️ Prolonga QT — monitorizar QTc; risco torsades de pointes",
+      "⚠️ Interacções múltiplas: aumenta digoxina, varfarina, ciclosporina, fenitoína",
+      "⚠️ Tirotoxicidade e hipotiroidismo em uso crónico — monitorizar função tiroideia",
+      "Diluir SEMPRE em SG5%, nunca em SF"
+    ],
+    "source": "BNF for Children 2023-24; PALS AHA 2020; ERC Guidelines 2021; Saul JP et al. JACC 2005"
+  },
+  {
+    "id": "lidocaina_pcr",
+    "name": "Lidocaína EV (Antiarrítmico)",
+    "category": "emergencia",
+    "class": "Antiarrítmico classe IB — bloqueador canal de sódio",
+    "brands": "Lidocaína 1% (10 mg/ml); 2% (20 mg/ml) — ampolas; Xylocard 200 mg/10 ml",
+    "indication": [
+      "FV/TV sem pulso — alternativa à amiodarona (se não disponível) após 3º choque",
+      "Taquicardia ventricular hemodinamicamente estável",
+      "Extrassistolia ventricular sintomática frequente",
+      "Profilaxia arritmias peri-intubação (dose baixa — uso controverso)"
+    ],
+    "dose": [
+      {
+        "ind": "PCR — FV/TV (alternativa à amiodarona)",
+        "val": "1 mg/kg EV/IO bólus",
+        "max": "100 mg/dose",
+        "freq": "Dose única após 3º choque; pode repetir 0,5 mg/kg q5–10 min (máx 3 mg/kg total)",
+        "note": "PALS 2020: amiodarona preferida; lidocaína alternativa aceitável se amiodarona indisponível"
+      },
+      {
+        "ind": "TV com pulso — perfusão manutenção",
+        "val": "20–50 μg/kg/min EV",
+        "max": "—",
+        "freq": "Perfusão contínua após conversão",
+        "note": "Iniciar após bólus eficaz"
+      }
+    ],
+    "prep": "EV: bólus — usar solução 1% (10 mg/ml) directamente ou diluir 2% em 1:1 com SF. Perfusão: 600 mg em 250 ml SF (2,4 mg/ml = 40 μg/ml se a 0,5 ml/min).",
+    "ci": [
+      "Bloqueio AV 2º/3º grau",
+      "Hipersensibilidade a anestésicos locais tipo amida",
+      "Síndrome de Adam-Stokes",
+      "WPW com FA (pode acelerar condução via acessória)"
+    ],
+    "alert": [
+      "⚠️ Toxicidade SNC com doses altas: convulsões, obnubilação, paragem respiratória",
+      "⚠️ Toxicidade cardíaca: bradicardia, bloqueio, hipotensão — monitorizar ECG",
+      "⚠️ Reduzir dose em insuf. hepática e IC (metabolismo hepático reduzido)",
+      "Amiodarona preferida em PCR — lidocaína reservada para indisponibilidade ou protocolo específico"
+    ],
+    "source": "BNF for Children 2023-24; PALS AHA 2020; ERC Guidelines 2021; Dorian P et al. NEJM 2002"
+  },
+  {
+    "id": "calcio_cloreto_emerg",
+    "name": "Cloreto de Cálcio 10% (Emergência)",
+    "category": "emergencia",
+    "class": "Electrólito — cálcio iónico de libertação imediata",
+    "brands": "Cloreto de Cálcio 10% — ampolas 10 ml (1,36 mEq Ca²⁺/ml)",
+    "indication": [
+      "PCR com hipercalemia, hipocalcemia documentada ou hipermagnesemia",
+      "Hipocalcemia sintomática grave (tetania, convulsões, instabilidade hemodinâmica)",
+      "Antídoto de bloqueadores canais de cálcio (intoxicação grave)",
+      "Antídoto de hipermagnesemia grave com paragem respiratória",
+      "Hipotensão refractária em anafilaxia (coadjuvante)"
+    ],
+    "dose": [
+      {
+        "ind": "PCR / emergência hipocalcemia grave",
+        "val": "0,2 ml/kg de CaCl2 10% EV em 2–5 min",
+        "max": "10 ml (1 g)",
+        "freq": "Dose única; repetir conforme ECG e resposta clínica",
+        "note": "CaCl2 fornece 3× mais Ca²⁺ iónico que gluconato Ca — preferir em PCR e emergência"
+      },
+      {
+        "ind": "Intoxicação BCC / hipermagnesemia",
+        "val": "0,2–0,3 ml/kg EV lento",
+        "max": "10 ml",
+        "freq": "Repetir q5 min × 3; depois perfusão 0,2–0,4 ml/kg/h",
+        "note": ""
+      }
+    ],
+    "prep": "EV CENTRAL OBRIGATÓRIO — extremamente irritante; necrose tecidular grave se extravasamento periférico. Nunca misturar com bicarbonato (precipita CaCO3).",
+    "ci": [
+      "Hipercalcemia",
+      "Digitálicos — potencia toxicidade da digoxina (usar gluconato Ca em digitalizado)",
+      "Via periférica (necrose tecidular grave)"
+    ],
+    "alert": [
+      "⚠️ VIA CENTRAL OBRIGATÓRIA — extravasamento periférico causa necrose grave",
+      "⚠️ Bradicardia e PCR com injecção rápida — administrar em 2–5 min (excepto PCR)",
+      "⚠️ Potencia toxicidade digoxina — usar gluconato de cálcio se doente digitalizado",
+      "⚠️ Nunca misturar com bicarbonato na mesma linha — precipitação imediata"
+    ],
+    "source": "BNF for Children 2023-24; PALS AHA 2020; DeWitt CR et al. Crit Care Clin 2005"
   }
 ];

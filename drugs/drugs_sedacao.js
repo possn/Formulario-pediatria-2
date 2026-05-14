@@ -1,5 +1,5 @@
 // UCIP Pediatria — Sedação, Analgesia & BNMND
-// 17 fármacos
+// 26 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_SEDACAO = [
@@ -13,7 +13,11 @@ var DRUGS_SEDACAO = [
       "Sedação em UCIP (perfusão contínua)",
       "Status epilepticus (2ª linha após BZD rectais/nasais)",
       "Pré-medicação / procedimentos",
-      "Sedação para intubação"
+      "Sedação para intubação",
+      "Sedação em RN ventilado (adjuvante ao fentanil)",
+      "Convulsões neonatais refractárias ao fenobarbital (2ª/3ª linha)",
+      "Pré-medicação para procedimentos dolorosos",
+      "Status epilepticus neonatal refractário (perfusão)"
     ],
     "dose": [
       {
@@ -43,22 +47,50 @@ var DRUGS_SEDACAO = [
         "max": "5 mg EV; 15 mg oral",
         "freq": "dose única 15–30 min antes",
         "note": ""
+      },
+      {
+        "ind": "Neonatal — Sedação — EV bólus",
+        "val": "0,05–0,1 mg/kg EV em 5 min",
+        "max": "0,1 mg/kg/dose",
+        "freq": "pode repetir cada 2–4h",
+        "note": "Prematuros: 0,02–0,05 mg/kg (metabolismo muito lento)"
+      },
+      {
+        "ind": "Neonatal — Sedação — perfusão EV",
+        "val": "0,01–0,06 mg/kg/hora",
+        "max": "0,1 mg/kg/hora",
+        "freq": "contínua",
+        "note": ""
+      },
+      {
+        "ind": "Neonatal — Convulsões refractárias — perfusão",
+        "val": "0,05–0,2 mg/kg/hora",
+        "max": "0,5 mg/kg/hora (SE refractário)",
+        "freq": "contínua",
+        "note": "Monitorização EEG se disponível"
       }
     ],
     "prep": "Perfusão UCIP: (0,3 × Peso kg) mg em 50 ml SG5% → 1 ml/h = 0,1 mg/kg/h. Concentração máx. EV periférico: 1 mg/ml.",
     "ci": [
       "Glaucoma de ângulo fechado",
       "Miastenia gravis (relativa)",
-      "Choque não controlado"
+      "Choque não controlado",
+      "Hipotensão grave não controlada",
+      "Prematuridade extrema (risco apneia e hipotensão severas)"
     ],
     "alert": [
       "⚠️ Depressão respiratória — ter equipamento de VNI/entubação disponível",
       "⚠️ Síndrome de abstinência se > 7 dias ou > 0,1 mg/kg/h — desmame gradual",
       "⚠️ Potenciado por eritromicina, fluconazol, cimetidina (inibidores CYP3A4)",
       "Efeito atenuado pela teofilina",
-      "RN: metabolismo hepático imaturo — usar doses baixas"
+      "RN: metabolismo hepático imaturo — usar doses baixas",
+      "⚠️ HIPOTENSÃO — especialmente em prematuros < 28 semanas. Monitorização TA contínua",
+      "⚠️ Apneia e depressão respiratória",
+      "⚠️ Metabolismo muito lento em prematuros (CYP3A4 imaturo) — acumulação",
+      "⚠️ Movimentos mioclónicos paradoxais (não são convulsões — efeito paradoxal)",
+      "⚠️ Leucomalácia periventricular (dados controversos — cautela em prematuros)"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; ESICM Guidelines 2022"
+    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; ESICM Guidelines 2022; BNF for Children 2023-24; Jacqz-Aigrain E. Arch Dis Child 1990"
   },
   {
     "id": "morfina",
@@ -70,7 +102,11 @@ var DRUGS_SEDACAO = [
       "Analgesia moderada a intensa",
       "Sedoanalgesia em UCIP (perfusão)",
       "Dispneia grave (cuidados paliativos)",
-      "Edema agudo do pulmão"
+      "Edema agudo do pulmão",
+      "Analgesia em RN ventilado (procedimentos, pós-operatório)",
+      "Síndrome de abstinência neonatal (NAS/NOWS) por opioides maternos — 1ª linha",
+      "Sedação em RN com EHI em hipotermia",
+      "Analgesia paliativa neonatal"
     ],
     "dose": [
       {
@@ -93,22 +129,48 @@ var DRUGS_SEDACAO = [
         "max": "—",
         "freq": "—",
         "note": ""
+      },
+      {
+        "ind": "Analgesia — EV bólus (RN termo)",
+        "val": "50–100 mcg/kg EV em 5 min",
+        "max": "100 mcg/kg/dose",
+        "freq": "cada 4–6h",
+        "note": "RN prematuro: 25–50 mcg/kg/dose (maior sensibilidade respiratória)"
+      },
+      {
+        "ind": "Neonatal — Analgesia — perfusão EV",
+        "val": "5–20 mcg/kg/hora",
+        "max": "30 mcg/kg/hora",
+        "freq": "contínua; titular pelo score dor (NFCS, N-PASS)",
+        "note": ""
+      },
+      {
+        "ind": "Neonatal — NAS — oral (tratamento)",
+        "val": "Iniciar morfina oral 0,04–0,08 mg/kg cada 3–4h",
+        "max": "—",
+        "freq": "cada 3–4h; guiado pelo score Finnegan/NOWS",
+        "note": "Desmame 10% da dose/dia quando score < 8 por 48h. Protocolo institucional obrigatório"
       }
     ],
     "prep": "Perfusão: (Peso kg) mg em 50 ml SG5% → 1 ml/h = 0,02 mg/kg/h (concentração ~standard). Usar linha dedicada.",
     "ci": [
       "Depressão respiratória grave não monitorizada",
       "Íleo paralítico (relativa)",
-      "Hipotensão grave não controlada"
+      "Hipotensão grave não controlada",
+      "Depressão respiratória não monitorizada"
     ],
     "alert": [
       "⚠️ Depressão respiratória — antídoto: naloxona 0,01 mg/kg EV",
       "⚠️ Síndrome abstinência após uso prolongado — desmame 10–20%/dia",
       "⚠️ Libertação histamina — hipotensão, broncoespasmo (menos fentanil)",
       "Obstipação — administrar laxante profilático em uso > 3 dias",
-      "Monitorização SpO2 contínua"
+      "Monitorização SpO2 contínua",
+      "⚠️ Hipotensão (especialmente em RN hemodinamicamente instável)",
+      "⚠️ Rigidez torácica com bólus rápidos",
+      "⚠️ Síndrome abstinência se uso prolongado > 5–7 dias — desmame obrigatório",
+      "⚠️ NAS: não usar naloxona em RN de mãe dependente de opioides (convulsões)"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; Harriet Lane 23rd Ed; BNF for Children 2023-24; Kocherlakota P. Pediatrics 2014 (NAS); BNFC Neonatal Formulary 9th Ed"
   },
   {
     "id": "fentanil",
@@ -120,7 +182,10 @@ var DRUGS_SEDACAO = [
       "Analgesia para procedimentos (maior potência, onset rápido)",
       "Sedoanalgesia em UCIP (perfusão contínua)",
       "ISR — analgesia pré-intubação",
-      "Dor crónica intensa"
+      "Dor crónica intensa",
+      "Analgesia em procedimentos dolorosos no RN (intubação, colocação cateter, cirurgia)",
+      "Sedoanalgesia em RN ventilado",
+      "Analgesia em hipertensão pulmonar (melhor hemodinâmica que morfina)"
     ],
     "dose": [
       {
@@ -143,20 +208,39 @@ var DRUGS_SEDACAO = [
         "max": "2 mcg/kg/hora",
         "freq": "contínua",
         "note": "Monitorização rigorosa — rigidez torácica com bólus rápidos > 5 mcg/kg"
+      },
+      {
+        "ind": "Neonatal — Procedimentos — EV bólus",
+        "val": "1–4 mcg/kg EV lento",
+        "max": "4 mcg/kg/dose",
+        "freq": "dose única; onset 2–3 min, duração 30 min",
+        "note": "Para intubação electiva: 2–4 mcg/kg"
+      },
+      {
+        "ind": "Neonatal — Perfusão contínua EV",
+        "val": "0,5–2 mcg/kg/hora",
+        "max": "4 mcg/kg/hora",
+        "freq": "contínua",
+        "note": "Prematuros: iniciar 0,5 mcg/kg/hora (metabolismo mais lento)"
       }
     ],
     "prep": "Perfusão: (Peso kg × 0,05) mg em 50 ml SG5% → 1 ml/h = 1 mcg/kg/h. Ou concentração padrão 10 mcg/ml.",
     "ci": [
-      "Depressão respiratória grave não monitorizada"
+      "Depressão respiratória grave não monitorizada",
+      "Depressão respiratória não monitorizada"
     ],
     "alert": [
       "⚠️ Rigidez torácica ('wooden chest') com bólus rápidos e doses altas — tratar com naloxona ou BNMND",
       "⚠️ Síndrome abstinência após uso prolongado",
       "Vantagens vs morfina: sem histamina, maior estabilidade hemodinâmica",
       "100× mais potente que morfina",
-      "Antídoto: naloxona"
+      "Antídoto: naloxona",
+      "⚠️ Apneia — monitorização contínua SpO2",
+      "⚠️ Bradicardia",
+      "⚠️ Síndrome abstinência com uso > 5–7 dias",
+      "Preferido em HPPRN (menos histamina → melhor hemodinâmica)"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; GOSH Drug Formulary 2023"
+    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; GOSH Drug Formulary 2023; BNF for Children 2023-24; BNFC Neonatal Formulary 9th Ed"
   },
   {
     "id": "ketamina",
@@ -169,7 +253,12 @@ var DRUGS_SEDACAO = [
       "Indução anestésica em emergência",
       "ISR em doente asmático ou hipovolémico",
       "Sedação UCIP (adjuvante — poupadora de opioides)",
-      "Status epilepticus refractário"
+      "Status epilepticus refractário",
+      "Analgesia procedural — sub-dissociativa (redução fracturas, suturas, pensos queimados)",
+      "Indução anestésica em criança instável hemodinamicamente",
+      "Status asmático grave — broncodilatação",
+      "Adjuvante opioide (poupança de morfina) em dor aguda intensa",
+      "Sedação dissociativa para procedimentos de emergência"
     ],
     "dose": [
       {
@@ -199,6 +288,27 @@ var DRUGS_SEDACAO = [
         "max": "—",
         "freq": "contínua",
         "note": "Evidência crescente como opção no SE refractário"
+      },
+      {
+        "ind": "Analgesia sub-dissociativa (procedimentos)",
+        "val": "0,3–0,5 mg/kg EV em 2–3 min",
+        "max": "30 mg/dose",
+        "freq": "Dose única; repetir 0,25 mg/kg se necessário após 5 min",
+        "note": "Dose sub-dissociativa: mantém consciência, elimina dor. Onset 1–2 min, duração 15–30 min"
+      },
+      {
+        "ind": "Sedação dissociativa (procedimentos)",
+        "val": "1–2 mg/kg EV em 1–2 min (ou 4 mg/kg IM)",
+        "max": "—",
+        "freq": "Dose única; repetir 0,5–1 mg/kg se < 5 min de duração necessária",
+        "note": "Estado dissociativo em 1–2 min (EV) ou 3–5 min (IM); duração 15–30 min (EV) ou 20–45 min (IM)"
+      },
+      {
+        "ind": "Status asmático refractário",
+        "val": "1–2 mg/kg EV carga; 0,5–2 mg/kg/h perfusão",
+        "max": "—",
+        "freq": "Perfusão contínua até melhoria",
+        "note": "Broncodilatação por mecanismo simpatomimético e antagonismo NMDA"
       }
     ],
     "prep": "Para procedimentos: diluir a 10 mg/ml (EV) ou usar solução 50 mg/ml IM. Para perfusão: diluir em SG5% ou SF.",
@@ -206,16 +316,26 @@ var DRUGS_SEDACAO = [
       "HTA grave não controlada",
       "Hipertensão intracraniana (relativa — evidência recente questiona esta CI)",
       "Psicose activa",
-      "Doença coronária grave"
+      "Doença coronária grave",
+      "Psicose activa ou história de esquizofrenia",
+      "Hipertensão intracraniana grave (relativa — ketamina pode aumentar PIC)",
+      "Glaucoma / lesão ocular penetrante",
+      "Tireoide hiperfuncionante não tratada"
     ],
     "alert": [
       "⚠️ Alucinações/pesadelos (emergence reactions) — reduzidos com midazolam 0,05 mg/kg em pré-medicação",
       "⚠️ Hipersalivação — atropina pré-medicação 0,02 mg/kg (controverso, prática variável)",
       "⚠️ Não deprime reflexos das vias aéreas — mas NÃO garante protecção: aspiração possível",
       "Broncodilatador — opção ideal no asmático",
-      "Efeito simpaticomimético: útil no choque hipovolémico"
+      "Efeito simpaticomimético: útil no choque hipovolémico",
+      "⚠️ Laringoespasmo — raro mas grave; ter material de via aérea e succinilcolina disponíveis",
+      "⚠️ Hipertensão e taquicardia — efeito simpatomimético; monitorizar em cardiopatia",
+      "⚠️ Emergência dissociativa pós-procedimento (adultos > crianças) — associar midazolam 0,05 mg/kg se risco",
+      "Preserva reflexos de via aérea — vantagem única vs outros agentes",
+      "Hipersialorreia — associar atropina ou glicopirrolato profilático",
+      "Hipertensão intracraniana: evidência actual sugere que com boa ventilação não aumenta PIC — rever"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; Green SM. Ann Emerg Med 2011"
+    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; Green SM. Ann Emerg Med 2011; BNF for Children 2023-24; Green SM et al. Ann Emerg Med 2011; Bhatt M et al. Lancet 2017"
   },
   {
     "id": "propofol",
@@ -259,7 +379,7 @@ var DRUGS_SEDACAO = [
       "Depressão respiratória e hipotensão significativas",
       "Hipertrigliceridemia em perfusões prolongadas — monitorizar"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; FDA Safety Alert 2001; Bray RJ. Anaesthesia 1998"
+    "source": "BNF for Children 2023-24; FDA Safety Alert 2001; Bray RJ. Anaesthesia 1998"
   },
   {
     "id": "dexmedetomidina",
@@ -515,7 +635,11 @@ var DRUGS_SEDACAO = [
       "Analgesia ligeira-moderada",
       "Febre (alternativa ao paracetamol)",
       "Dor inflamatória / pós-operatória",
-      "Encerramento do canal arterial (ibuprofeno EV — RN)"
+      "Encerramento do canal arterial (ibuprofeno EV — RN)",
+      "Encerramento farmacológico do canal arterial persistente hemodinamicamente significativo no prematuro",
+      "Alternativa preferida à indometacina pelo menor efeito na perfusão renal e mesentérica",
+      "Encerramento do canal arterial persistente hemodinamicamente significativo em prematuro",
+      "Alternativa à indometacina quando indometacina não disponível"
     ],
     "dose": [
       {
@@ -531,6 +655,27 @@ var DRUGS_SEDACAO = [
         "max": "—",
         "freq": "3 doses em 24h intervalos",
         "note": "Usar formulação EV específica para RN"
+      },
+      {
+        "ind": "Neonatal — PCA — EV (1º ciclo)",
+        "val": "10 mg/kg → 5 mg/kg → 5 mg/kg",
+        "max": "—",
+        "freq": "3 doses com intervalos de 24h",
+        "note": "Infusão em 15 min. 2º ciclo possível se sem encerramento"
+      },
+      {
+        "ind": "Neonatal — Oral (off-label, alternativa)",
+        "val": "10 mg/kg → 5 mg/kg → 5 mg/kg",
+        "max": "—",
+        "freq": "cada 24h × 3 doses",
+        "note": "Evidência crescente de eficácia similar ao EV"
+      },
+      {
+        "ind": "Neonatal — Encerramento PCA",
+        "val": "Dia 1: 10 mg/kg EV; Dias 2–3: 5 mg/kg EV",
+        "max": "—",
+        "freq": "1 dose/dia × 3 dias (intervalo 24h entre doses)",
+        "note": "Eficácia semelhante à indometacina com menor efeito na perfusão cerebral e renal (Ohlsson A et al. Cochrane 2020). Segundo ciclo possível se ecocardiograma confirmar PCA persistente"
       }
     ],
     "prep": "Oral: suspensão 20 mg/ml; comp. 200/400/600 mg.",
@@ -539,15 +684,33 @@ var DRUGS_SEDACAO = [
       "Asma induzida por AINEs",
       "Insuf. renal",
       "Úlcera péptica activa",
-      "Desidratação (risco IRA)"
+      "Desidratação (risco IRA)",
+      "Creatinina > 1,8 mg/dL",
+      "Débito urinário < 1 ml/kg/hora nas 6h precedentes",
+      "Trombocitopenia grave (< 60 000/mcL)",
+      "NEC confirmada/suspeita",
+      "Hiperbilirrubinemia significativa (desloca bilirrubina da albumina)",
+      "Hemorragia activa (especialmente IVH grau III-IV)",
+      "Trombocitopenia < 60.000/μL",
+      "Insuficiência renal (creatinina > 140 μmol/L)",
+      "Malformações congenitas dependentes de PCA (coarctação grave, TGA com septo intacto)"
     ],
     "alert": [
       "⚠️ NÃO usar em doentes desidratados ou hipovolémicos — IRA",
       "⚠️ NÃO usar em varicela (síndrome de fasciíte necrotizante descrita)",
       "⚠️ Sangramento GI — usar protecção gástrica se uso prolongado",
-      "⚠️ Altera função plaquetar — evitar perioperatório"
+      "⚠️ Altera função plaquetar — evitar perioperatório",
+      "⚠️ Nefrotoxicidade — menos que indometacina mas monitorizar diurese e creatinina",
+      "⚠️ Hipertensão pulmonar (risco teórico — vigiar SpO2)",
+      "⚠️ Hiperbilirrubinemia — evitar se bilirrubina próxima do limiar de exsanguinotransfusão",
+      "Meta-análise Cochrane 2015: eficácia similar à indometacina, melhor perfil renal",
+      "⚠️ Verificar eco cardíaco antes e após tratamento",
+      "⚠️ Oligúria durante tratamento — monitorizar débito urinário e creatinina",
+      "⚠️ Não usar com indometacina (sem evidência de benefício adicional, toxicidade aumentada)",
+      "Hiperbilirrubinemia — ibuprofeno compete com bilirrubina na albumina (monitorizar bili)",
+      "NEC: monitorizar achados abdominais durante tratamento"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; BNF for Children 2023-24; Ohlsson A. Cochrane 2015; Pedea SmPC; BNF for Children 2023-24; Ohlsson A et al. Cochrane 2020; Neofax 2023"
   },
   {
     "id": "naloxona",
@@ -558,7 +721,11 @@ var DRUGS_SEDACAO = [
     "indication": [
       "Reversão de depressão respiratória por opioides",
       "Intoxicação por opioides",
-      "Apneia neonatal por opioides maternos"
+      "Apneia neonatal por opioides maternos",
+      "Depressão respiratória por opioides — emergência",
+      "Coma/inconsciência por intoxicação opioide",
+      "Apneia neonatal por opioides maternos intraparto",
+      "Prurido refractário e retenção urinária por opioides (doses baixas)"
     ],
     "dose": [
       {
@@ -581,20 +748,48 @@ var DRUGS_SEDACAO = [
         "max": "—",
         "freq": "contínua",
         "note": "Semi-vida naloxona (30–80 min) < maioria opioides — observar >4h"
+      },
+      {
+        "ind": "Depressão respiratória grave — criança",
+        "val": "0,01 mg/kg EV/IO/IM/SC",
+        "max": "0,4 mg/dose",
+        "freq": "q2–3 min até resposta respiratória adequada (não esperar reversão completa)",
+        "note": "Titular para manter FR adequada sem reverter analgesia completa. Infusão: 0,005–0,01 mg/kg/h se recorrência"
+      },
+      {
+        "ind": "Apneia neonatal por opioides maternos",
+        "val": "0,01 mg/kg EV/IM/SC",
+        "max": "—",
+        "freq": "Dose única; repetir se sem resposta em 2–3 min",
+        "note": "NÃO administrar a RN de mãe dependente de opioides (precipita abstinência neonatal grave)"
+      },
+      {
+        "ind": "Intranasal (pré-hospitalar/IM indisponível)",
+        "val": "0,1 mg/kg IN",
+        "max": "4 mg total",
+        "freq": "q2–3 min",
+        "note": "Absorção IN mais lenta — usar EV/IO se acesso disponível"
       }
     ],
     "prep": "Pode diluir em SF. IM/IN: usar solução concentrada.",
     "ci": [
-      "NÃO há contra-indicações absolutas em emergência"
+      "NÃO há contra-indicações absolutas em emergência",
+      "Hipersensibilidade à naloxona",
+      "Cautela em dependentes de opioides (precipita abstinência aguda grave)"
     ],
     "alert": [
       "⚠️ Semi-vida 30–80 min — MAIS CURTA que a maioria dos opioides. Risco de re-sedação",
       "⚠️ Em dependentes crónicos: síndrome abstinência aguda grave (convulsões, EAP, morte)",
       "⚠️ Edema pulmonar agudo após reversão brusca",
       "Objectivo: ventilação adequada, NÃO analgesia zero",
-      "Observação mínima 4h após última dose de naloxona"
+      "Observação mínima 4h após última dose de naloxona",
+      "⚠️ Semi-vida 60–90 min — mais curta que maioria dos opioides; ressedação frequente, especialmente com metadona ou fentanil LP",
+      "⚠️ Reversão demasiado rápida/dose excessiva: dor aguda, hipertensão, edema pulmonar, arritmias, PCR (descrito em adultos)",
+      "⚠️ NÃO administrar a RN de mãe em programa de metadona — abstinência neonatal grave",
+      "Titular para manter FR > 8/min e SpO2 > 94% — não para acordar completamente",
+      "Alternativa à naloxona em prurido opioide: doses muito baixas 0,5–2 μg/kg/h"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; WHO 2014"
+    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; WHO 2014; BNF for Children 2023-24; PALS AHA 2020; Boyer EW NEJM 2012"
   },
   {
     "id": "tramadol",
@@ -834,5 +1029,401 @@ var DRUGS_SEDACAO = [
       "Antídoto: atropina para bradicardia"
     ],
     "source": "BNF for Children 2023-24; ESICM Sedation Guidelines 2018"
+  },
+  {
+    "id": "remifentanil",
+    "name": "Remifentanil",
+    "category": "sedacao",
+    "class": "Opioide ultra-curta duração — agonista μ; hidrólise por esterases plasmáticas",
+    "brands": "Ultiva — frascos 1 mg, 2 mg, 5 mg pó liofilizado",
+    "indication": [
+      "Analgesia/sedação em doente ventilado UCIP — quando titulação rápida necessária",
+      "Procedimentos dolorosos de curta duração (PICC, drenagem, penso)",
+      "Analgesia intraoperatória com desmame rápido planeado",
+      "Ventilação com necessidade de acordar rápido (desmame diário)"
+    ],
+    "dose": [
+      {
+        "ind": "Analgesia/sedação ventilado UCIP",
+        "val": "0,05–0,4 μg/kg/min EV perfusão",
+        "max": "1,3 μg/kg/min",
+        "freq": "Perfusão contínua; titular por resposta a cada 2–5 min",
+        "note": "Offset em 3–5 min após paragem — ideal para avaliações neurológicas frequentes"
+      },
+      {
+        "ind": "Procedimento curto",
+        "val": "0,1–0,5 μg/kg/min",
+        "max": "—",
+        "freq": "Duração do procedimento + 5 min; paragem imediata no fim",
+        "note": "Associar midazolam se sedação também necessária (remifentanil é apenas analgésico)"
+      }
+    ],
+    "prep": "EV: reconstituir em SWFI; diluir em SF ou SG5%. Concentração 25–250 μg/ml. VIA CENTRAL ou periférica de grande calibre (degradação rápida em tecidos — sem risco acumulação).",
+    "ci": [
+      "Administração peridural ou intratecal (contém glicina — neurotóxico)",
+      "Sem suporte ventilatório disponível"
+    ],
+    "alert": [
+      "⚠️ Hiperalgesia induzida por opioides (OIH) com uso prolongado ou doses altas — associar adjuvantes (ketamina, AINEs)",
+      "⚠️ Paragem abrupta: retorno imediato de dor — planear analgesia de transição antes de parar",
+      "⚠️ Rigidez torácica com bólus — evitar administração em bólus rápido",
+      "⚠️ Náuseas e bradipneia — dose-dependentes",
+      "Sem acumulação em IR, IH ou RN — metabolismo independente de órgãos",
+      "Não substitui sedação — associar midazolam ou propofol"
+    ],
+    "source": "BNF for Children 2023-24; Wilhelm W et al. Paediatric Anaesthesia 2007; Playfor SD et al. Paediatr Anaesth 2006"
+  },
+  {
+    "id": "cisatracurio",
+    "name": "Cisatracúrio",
+    "category": "sedacao",
+    "class": "Bloqueador neuromuscular não despolarizante — eliminação de Hofmann",
+    "brands": "Nimbex — ampolas 5 mg/2,5 ml (2 mg/ml); 10 mg/5 ml",
+    "indication": [
+      "Relaxamento neuromuscular em doente ventilado — quando rocu/vecurônio inadequados",
+      "ARDS grave — protocolo de bloqueio neuromuscular precoce (ACURASYS, ROSE trial)",
+      "Hipertensão intracraniana — redução de pressão abdominal/torácica",
+      "Termogenesis controlada — shivering pós-PCR"
+    ],
+    "dose": [
+      {
+        "ind": "Intubação",
+        "val": "0,15–0,2 mg/kg EV",
+        "max": "—",
+        "freq": "Dose única",
+        "note": "Onset mais lento que rocurônio (3–5 min vs 60–90 seg)"
+      },
+      {
+        "ind": "Perfusão contínua UCIP",
+        "val": "0,06–0,12 mg/kg/h EV",
+        "max": "—",
+        "freq": "Perfusão contínua; titular por TOF (Train-of-Four)",
+        "note": "Alvo: 1–2 twitch em TOF (2/4 respostas). ARDS grave: 48h conforme ACURASYS"
+      }
+    ],
+    "prep": "EV: diluir em SF ou SG5%. Concentração 0,1–2 mg/ml. Refrigerar (estável 21 dias a 4°C; 24h à T ambiente após abertura).",
+    "ci": [
+      "Miastenia gravis ou síndrome miasténico (hipersensibilidade extrema)"
+    ],
+    "alert": [
+      "⚠️ NUNCA usar sem sedação e analgesia adequadas — paralisia consciente é tortura",
+      "⚠️ Monitorização TOF obrigatória em perfusão contínua",
+      "⚠️ ROSE trial (2019): bloqueio neuromuscular precoce em ARDS moderado-grave não reduziu mortalidade vs sedação profunda — usar criteriosamente",
+      "Vantagem: eliminação de Hofmann — independente de fígado e rins (ideal em falência orgânica)",
+      "Sugammadex NÃO reverte cisatracúrio (apenas rocurônio/vecurônio) — reversão espontânea ou neostigmina"
+    ],
+    "source": "BNF for Children 2023-24; Papazian L et al. NEJM 2010 (ACURASYS); Moss M et al. NEJM 2019 (ROSE)"
+  },
+  {
+    "id": "metadona_desmame",
+    "name": "Metadona (Desmame de Opioides)",
+    "category": "sedacao",
+    "class": "Opioide — agonista μ de longa duração; antagonista NMDA",
+    "brands": "Metadona Generis — comp 5/10/40 mg; solução 1 mg/ml",
+    "indication": [
+      "Desmame de opioides em UCIP (fentanil, morfina, remifentanil) — prevenção síndrome abstinência",
+      "Dor crónica intractável — rotação de opioides",
+      "Síndrome de abstinência neonatal — protocolo específico"
+    ],
+    "dose": [
+      {
+        "ind": "Conversão EV→oral para desmame UCIP",
+        "val": "Dose total diária de morfina EV × 0,1–0,15 mg/kg/dose PO",
+        "max": "—",
+        "freq": "q12–24h PO (semivida longa: 12–50h)",
+        "note": "Equivalência: morfina EV 10 mg = metadona PO 2,5 mg (rácio 4:1). Titular por Withdrawal Assessment Tool (WAT-1 ≥ 3)"
+      },
+      {
+        "ind": "Abstinência neonatal (NAS) — protocolo",
+        "val": "0,05–0,1 mg/kg/dose PO",
+        "max": "—",
+        "freq": "q12–24h; reduzir 10–20% por semana",
+        "note": "Escala de Finnegan modificada para monitorização"
+      }
+    ],
+    "prep": "Oral: solução 1 mg/ml ou comprimidos esmagados em água. EV (uso off-label): diluir em SF.",
+    "ci": [
+      "Prolongamento QT (QTc > 500 ms)",
+      "IMAOs",
+      "Hipersensibilidade"
+    ],
+    "alert": [
+      "⚠️ QT prolongado — ECG antes e 48h após início; dose-dependente; monitorizar electrólitos",
+      "⚠️ Semivida muito variável (12–50h) — risco de acumulação insidiosa; sedação tardia",
+      "⚠️ Interacções múltiplas: fluconazol, eritromicina, amiodarona aumentam QT + níveis metadona",
+      "⚠️ Equação de conversão de opioides complexa — verificar sempre com farmácia clínica",
+      "Abstinência após paragem abrupta: aguarda 24–72h (semivida longa) — mais gradual que morfina"
+    ],
+    "source": "BNF for Children 2023-24; Berde CB et al. NEJM 2019; Franck LS et al. Ped Crit Care Med 2012 (WAT-1)"
+  },
+  {
+    "id": "hidrato_cloral",
+    "name": "Hidrato de Cloral",
+    "category": "sedacao",
+    "class": "Hipnótico-sedativo — depressor SNC (mecanismo GABA)",
+    "brands": "Hidrato de Cloral — solução oral/rectal 500 mg/5 ml (100 mg/ml) — preparação magistral",
+    "indication": [
+      "Sedação para procedimentos diagnósticos não dolorosos (TC, RMN, EEG, ecocardiograma)",
+      "Alternativa ao midazolam em procedimentos de curta duração sem acesso IV",
+      "Sobretudo em lactentes 1–24 meses"
+    ],
+    "dose": [
+      {
+        "ind": "Procedimento diagnóstico",
+        "val": "50–100 mg/kg PO/PR",
+        "max": "2 g (ou 1 g em < 1 ano)",
+        "freq": "Dose única 30–45 min antes do procedimento",
+        "note": "Onset 30–60 min; duração 1–2h. Taxa de sucesso ~85–90% em lactentes. Jejum 4h antes recomendado"
+      }
+    ],
+    "prep": "Oral: solução 500 mg/5 ml (100 mg/ml) — misturar com sumo para mascarar sabor. Rectal: mesma solução administrada por seringa.",
+    "ci": [
+      "Cardiopatia grave (sensibilização miocárdica)",
+      "Insuf. hepática grave (metabolização deficiente)",
+      "Apneia do sono / via aérea comprometida",
+      "Porfíria"
+    ],
+    "alert": [
+      "⚠️ Depressão respiratória — monitorização contínua SpO2 e FC obrigatória; suporte disponível",
+      "⚠️ Arritmias cardíacas — sensibiliza miocárdio a catecolaminas (evitar em cardiopatia)",
+      "⚠️ Metabolito activo (tricloroetanol) acumula em neonatos e IH — evitar < 1 mês",
+      "Disponibilidade limitada — formulação magistral; verificar estabilidade (prazo curto)",
+      "EMA/FDA: uso restrito pelas preocupações genotóxicas — preferir alternativas quando possível"
+    ],
+    "source": "BNF for Children 2023-24; Sulton C et al. Pediatr Emerg Care 2016; Krauss B et al. Lancet 2000"
+  },
+{
+    "id": "paracetamol_ev",
+    "name": "Paracetamol EV",
+    "category": "sedacao",
+    "class": "Analgésico e antipirético — inibidor COX-3 central / modulação endocanabinoide",
+    "brands": "Perfalgan — frascos 1 g/100 ml (10 mg/ml); 500 mg/50 ml",
+    "indication": [
+      "Analgesia pós-operatória — 1ª linha não-opioide",
+      "Febre em doente que não tolera via oral",
+      "Analgesia multimodal UCIP — redução de consumo de opioides",
+      "Dor leve a moderada quando via oral impossível",
+      "Pré-medicação analgésica para procedimentos"
+    ],
+    "dose": [
+      {
+        "ind": "Analgesia / antipirexia — criança ≥ 1 ano",
+        "val": "15 mg/kg/dose EV em 15 min",
+        "max": "1 g/dose; 4 g/dia (60 mg/kg/dia)",
+        "freq": "q4–6h (mínimo intervalo 4h)",
+        "note": "Dose máxima diária: 75 mg/kg/dia (máx 4 g) em crianças > 10 kg e ≥ 1 ano"
+      },
+      {
+        "ind": "Neonato e lactente < 1 ano",
+        "val": "7,5–10 mg/kg/dose EV",
+        "max": "—",
+        "freq": "q6–8h; dose diária máx 30 mg/kg",
+        "note": "< 32 semanas GA: 7,5 mg/kg q8–12h. Metabolismo hepático imaturo — acumulação de metabolitos"
+      }
+    ],
+    "prep": "EV: frascos prontos para infusão (10 mg/ml). Administrar em 15 min. Não diluir adicionalmente. Proteger da luz.",
+    "ci": [
+      "Insuficiência hepática grave (necrose hepática dose-dependente)",
+      "Hipersensibilidade ao paracetamol",
+      "Deficiência de glicose-6-fosfato desidrogenase severa (relativa)"
+    ],
+    "alert": [
+      "⚠️ Hepatotoxicidade por sobredose — dose tóxica > 150 mg/kg aguda; antídoto: N-acetilcisteína EV",
+      "⚠️ Verificar TODOS os fármacos concomitantes com paracetamol — sobredose inadvertida frequente em UCIP",
+      "⚠️ Reduzir dose e intervalo em insuf. hepática ou desnutrição grave (depleção glutatião)",
+      "Efeito opioide-poupador documentado — reduz consumo de morfina 20–30% em pós-operatório",
+      "Sem efeito anti-inflamatório clinicamente relevante — para inflamação usar AINE"
+    ],
+    "source": "BNF for Children 2023-24; Allegaert K et al. Expert Opin Drug Metab Toxicol 2011; ESPA Pain Guidelines 2020"
+  },
+  {
+    "id": "rocuronio",
+    "name": "Rocurônio",
+    "category": "sedacao",
+    "class": "Bloqueador neuromuscular não despolarizante — aminoesteroide",
+    "brands": "Esmeron — ampolas 50 mg/5 ml (10 mg/ml); 100 mg/10 ml",
+    "indication": [
+      "Indução de sequência rápida (ISR/RSI) — 1ª linha substituindo succinilcolina na maioria dos protocolos",
+      "Facilitação de intubação traqueal electiva",
+      "Relaxamento muscular durante cirurgia",
+      "Bloqueio neuromuscular em UCIP (ARDS, HIC, ventilação difícil)"
+    ],
+    "dose": [
+      {
+        "ind": "ISR (sequência rápida de intubação)",
+        "val": "1,2 mg/kg EV em bólus",
+        "max": "—",
+        "freq": "Dose única. Condições de intubação em 60 seg",
+        "note": "Alta dose (1,2 mg/kg) equipara onset ao da succinilcolina. Duração de bloqueio: 45–70 min"
+      },
+      {
+        "ind": "Intubação electiva",
+        "val": "0,6 mg/kg EV",
+        "max": "—",
+        "freq": "Dose única. Condições em 90–120 seg",
+        "note": "Duração: 30–45 min"
+      },
+      {
+        "ind": "Manutenção / UCIP",
+        "val": "0,1–0,2 mg/kg EV bólus PRN ou 0,3–0,6 mg/kg/h perfusão",
+        "max": "—",
+        "freq": "Titular por TOF (Train-of-Four); alvo 1–2 twitch em 4",
+        "note": ""
+      }
+    ],
+    "prep": "EV: bólus — administrar não diluído (10 mg/ml). Perfusão: diluir em SF ou SG5%. Refrigerar 2–8°C; estável 12h à T ambiente após abertura.",
+    "ci": [
+      "Miastenia gravis (hipersensibilidade extrema — evitar ou reduzir 90% da dose)",
+      "Hipersensibilidade ao rocurônio (reacção anafilática documentada — 1:6000)"
+    ],
+    "alert": [
+      "⚠️ NUNCA usar sem sedação e analgesia adequadas — paralisia consciente é inaceitável",
+      "⚠️ SUGAMMADEX (16 mg/kg EV) reverte rocurônio em < 3 min — deve estar SEMPRE disponível quando rocurônio em uso",
+      "⚠️ Bloqueio prolongado em insuf. renal/hepática e hipotermia — monitorizar TOF",
+      "Vantagem sobre succinilcolina: sem hipercaliemia, sem miotonias, sem hipertermia maligna",
+      "Reversão: sugammadex 2–4 mg/kg (bloqueio moderado) ou 16 mg/kg (bloqueio profundo imediato)"
+    ],
+    "source": "BNF for Children 2023-24; El-Orbany M et al. Anesth Analg 2010; ESICM Guidelines 2018; Bhatt M et al. NEJM 2019"
+  },
+  {
+    "id": "sugammadex",
+    "name": "Sugammadex",
+    "category": "sedacao",
+    "class": "Agente quelante seletivo — ciclodextrina modificada; reverte rocurônio e vecurônio",
+    "brands": "Bridion — ampolas 200 mg/2 ml (100 mg/ml); 500 mg/5 ml",
+    "indication": [
+      "Reversão de bloqueio neuromuscular por rocurônio ou vecurônio",
+      "Reversão urgente de ISR com rocurônio (via aérea difícil — cannot intubate/cannot oxygenate)",
+      "Reversão de bloqueio profundo ao fim de cirurgia",
+      "Reversão de bloqueio moderado antes de extubação"
+    ],
+    "dose": [
+      {
+        "ind": "Reversão urgente (via aérea difícil) — bloqueio imediato",
+        "val": "16 mg/kg EV em bólus",
+        "max": "—",
+        "freq": "Dose única — reverter rocurônio em < 3 min",
+        "note": "Usar se incapaz de intubar e oxigenar após rocurônio ISR. É a única situação onde 16 mg/kg está indicado"
+      },
+      {
+        "ind": "Bloqueio profundo (TOF 0, PTC ≥ 1)",
+        "val": "4 mg/kg EV",
+        "max": "—",
+        "freq": "Dose única",
+        "note": ""
+      },
+      {
+        "ind": "Bloqueio moderado (TOF ≥ 2)",
+        "val": "2 mg/kg EV",
+        "max": "—",
+        "freq": "Dose única",
+        "note": "Confirmar com neuroestimulador antes de extubar"
+      }
+    ],
+    "prep": "EV: administrar não diluído em bólus em 10 seg. Refrigerar 2–8°C.",
+    "ci": [
+      "Hipersensibilidade ao sugammadex",
+      "Insuficiência renal grave TFG < 30 ml/min (eliminação renal — acumulação do complexo)"
+    ],
+    "alert": [
+      "⚠️ Recurarização possível se dose insuficiente — usar neuroestimulador para confirmar reversão",
+      "⚠️ Anafilaxia descrita (0,3%) — ter adrenalina disponível",
+      "⚠️ Reduz eficácia de contraceptivos orais (dias 1–7 pós-sugammadex — método alternativo)",
+      "⚠️ Insuf. renal grave: não usar — complexo acumula; usar neostigmina (menos eficaz)",
+      "Não reverte succinilcolina, pancurónio, atracúrio ou cisatracúrio",
+      "Custo elevado — reservar para bloqueio profundo e emergências de via aérea"
+    ],
+    "source": "BNF for Children 2023-24; Chambers D et al. Health Technol Assess 2010; Kheterpal S et al. Anesthesiology 2020"
+  },
+  {
+    "id": "succinilcolina",
+    "name": "Succinilcolina (Suxametônio)",
+    "category": "sedacao",
+    "class": "Bloqueador neuromuscular despolarizante — agonista receptor nicotínico",
+    "brands": "Anectine — ampolas 200 mg/10 ml (20 mg/ml); 500 mg/10 ml",
+    "indication": [
+      "ISR — quando necessidade de bloqueio ultrarrápido (< 60 seg) com recuperação rápida (< 10 min)",
+      "Laringoespasmo grave refractário a aprofundamento anestésico",
+      "Intubação de emergência em estômago cheio",
+      "Quando rocurônio + sugammadex não disponíveis"
+    ],
+    "dose": [
+      {
+        "ind": "ISR / Intubação de emergência",
+        "val": "2 mg/kg EV (< 10 kg); 1–1,5 mg/kg EV (> 10 kg)",
+        "max": "150 mg",
+        "freq": "Dose única. Onset 30–60 seg; duração 8–12 min",
+        "note": "Crianças pequenas necessitam dose mais alta (2 mg/kg) por maior volume de distribuição relativo"
+      },
+      {
+        "ind": "Laringoespasmo grave",
+        "val": "0,1–1 mg/kg EV; ou 4 mg/kg IM/IT se sem acesso EV",
+        "max": "—",
+        "freq": "Dose única de emergência",
+        "note": "IM: onset 3–4 min; IT (intratraqueal) via cricotirotomia se necessário"
+      }
+    ],
+    "prep": "EV: administrar não diluído (20 mg/ml). Refrigerar 2–8°C. Estável 2 semanas à T ambiente.",
+    "ci": [
+      "Hipercaliemia documentada ou risco elevado (rabdomiólise, queimaduras extensas > 24h, lesão medular, imobilização prolongada, doença neuromuscular)",
+      "Miopatias / distrofinopatias (rabdomiólise grave — evitar)",
+      "Hipertermia maligna (história pessoal ou familiar)",
+      "Pseudocolinesterase plasmática deficiente (bloqueio prolongado horas)",
+      "Hipersensibilidade"
+    ],
+    "alert": [
+      "⚠️ HIPERCALIEMIA GRAVE — K⁺ sobe 0,5–1 mEq/L; fatal em doentes de risco (queimados > 48h, paraplégia, rabdomiólise, imobilização > 7 dias)",
+      "⚠️ HIPERTERMIA MALIGNA — raridade mas fatal; dantroleno 2,5 mg/kg EV é o antídoto",
+      "⚠️ Bradicardia / assistolia — especialmente em 2ª dose ou em criança < 5 anos; pré-medicar com atropina 0,02 mg/kg",
+      "⚠️ Aumento pressão ocular, intragástrica e intracraniana",
+      "Rocurônio 1,2 mg/kg + sugammadex disponível é alternativa segura sem as contra-indicações da succinilcolina",
+      "Miotonia paradoxal em distrofias musculares — pode tornar intubação impossível"
+    ],
+    "source": "BNF for Children 2023-24; Martyn JAJ et al. NEJM 2006; ESAIC Guidelines RSI 2023"
+  },
+  {
+    "id": "diazepam",
+    "name": "Diazepam",
+    "category": "sedacao",
+    "class": "Benzodiazepina 1,4 — potenciador GABA-A",
+    "brands": "Valium rectal 5/10 mg; Stesolid — tubo rectal 5 mg/2,5 ml; 10 mg/2,5 ml; EV 10 mg/2 ml (5 mg/ml)",
+    "indication": [
+      "Status epilepticus agudo — administração rectal pré-hospitalar ou escolar (1ª linha sem acesso EV)",
+      "Convulsões febris prolongadas — rectal ou bucal (midazolam bucal preferido)",
+      "Sedação para procedimentos — oral/rectal (alternativa a midazolam)",
+      "Abstinência alcoólica / benzodiazepínica",
+      "Espasmo muscular agudo"
+    ],
+    "dose": [
+      {
+        "ind": "SE agudo — rectal (pré-hospitalar)",
+        "val": "< 1 ano: 2,5 mg; 1–3 anos: 5 mg; 4–12 anos: 5–10 mg; > 12 anos: 10 mg",
+        "max": "10 mg/dose",
+        "freq": "Dose única rectal; repetir 1× após 10 min se persistência",
+        "note": "Midazolam bucal tem evidência de eficácia igual ou superior (Appleton R, Lancet 2008)"
+      },
+      {
+        "ind": "SE agudo — EV",
+        "val": "0,25–0,4 mg/kg EV lento",
+        "max": "10 mg/dose",
+        "freq": "1–2 mg/min; pode repetir 1× após 10 min",
+        "note": "EV raramente usado em agudo — midazolam EV preferido. Risco depressão respiratória"
+      }
+    ],
+    "prep": "Rectal: Stesolid tubo — inserir 3–4 cm no recto, comprimir e manter 5 min. EV: diluir em SF; administrar LENTAMENTE (< 2 mg/min) — precipita se diluição excessiva.",
+    "ci": [
+      "Depressão respiratória grave",
+      "Insuf. hepática grave",
+      "Miastenia gravis",
+      "Sono apneico"
+    ],
+    "alert": [
+      "⚠️ Depressão respiratória — monitorizar SpO2; ter material de suporte ventilatório disponível",
+      "⚠️ Flumazenil como antídoto (0,01 mg/kg EV) — semi-vida curta, ressedação possível",
+      "⚠️ Absorção rectal variável — pode ser incompleta em diarreia ou recto vazio",
+      "Midazolam bucal/nasal preferido sobre diazepam rectal em contexto pré-hospitalar (melhor aceitação, eficácia equivalente)",
+      "Semi-vida muito longa (20–70h) + metabolito activo (desmetildiazepam) — sedação prolongada"
+    ],
+    "source": "BNF for Children 2023-24; Appleton R et al. Lancet 2008; NICE CG137 Epilepsies 2022"
   }
 ];

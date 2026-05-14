@@ -1,5 +1,5 @@
 // UCIP Pediatria — Oncologia & Suporte
-// 14 fármacos
+// 11 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_ONCOLOGIA = [
@@ -111,123 +111,7 @@ var DRUGS_ONCOLOGIA = [
       "⚠️ Insuficiente para SLT alto risco (usar rasburicase)",
       "Monitorizar ácido úrico, creatinina e electrólitos"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; Howard SC. NEJM 2011"
-  },
-  {
-    "id": "rasburicase",
-    "name": "Rasburicase",
-    "category": "oncologia",
-    "src": "added",
-    "class": "Urato oxidase recombinante — degrada ácido úrico em alantoína (mais solúvel)",
-    "brands": "Fasturtec 1,5 mg; 7,5 mg pó EV",
-    "indication": [
-      "Síndrome lise tumoral (SLT) alto risco — tratamento e profilaxia",
-      "Hiperuricemia refractária associada a neoplasia",
-      "Leucemia/linfoma de alto volume tumoral"
-    ],
-    "dose": [
-      {
-        "ind": "SLT — EV",
-        "val": "0,1–0,2 mg/kg/dia EV",
-        "max": "—",
-        "freq": "1×/dia × 5–7 dias",
-        "note": "Dose única 0,15 mg/kg frequentemente suficiente"
-      }
-    ],
-    "prep": "Reconstituir com tampão fornecido → diluir em SF 50 ml. Infusão 30 min. NÃO agitar. Usar imediatamente.",
-    "ci": [
-      "Défice G6PD (hemólise grave por H2O2 produzido)",
-      "Metahemoglobinemia",
-      "Gravidez"
-    ],
-    "alert": [
-      "⛔ DÉFICE G6PD — hemólise grave e fatal. Rastrear antes de administrar em populações de risco (mediterrâneos, africanos, asiáticos)",
-      "⚠️ Anafilaxia (2%) — ter adrenalina disponível",
-      "⚠️ Amostras de ácido úrico devem ser analisadas imediatamente em gelo (rasburicase degrada urato in vitro à temperatura ambiente)",
-      "Superior ao alopurinol no SLT alto risco"
-    ],
-    "source": "Coiffier B. JCO 2008; Howard SC. NEJM 2011; BNF for Children 2023-24"
-  },
-  {
-    "id": "mesna",
-    "name": "Mesna",
-    "category": "oncologia",
-    "src": "added",
-    "class": "Uroprotector — neutraliza metabolitos uroterais da ifosfamida/ciclofosfamida",
-    "brands": "Uromitexan amp. 400 mg/4 ml; comp. 400/600 mg",
-    "indication": [
-      "Profilaxia cistite hemorrágica por ifosfamida — obrigatório",
-      "Profilaxia cistite hemorrágica por ciclofosfamida em altas doses"
-    ],
-    "dose": [
-      {
-        "ind": "Ifosfamida — EV",
-        "val": "20% da dose ifosfamida nos tempos 0, 4h e 8h",
-        "max": "—",
-        "freq": "3 doses (0h, 4h, 8h após cada dose ifosfamida)",
-        "note": "Dose total mesna = 60% da dose ifosfamida"
-      },
-      {
-        "ind": "Ciclofosfamida altas doses",
-        "val": "60–160% da dose ciclofosfamida (dividida)",
-        "max": "—",
-        "freq": "0h, 3h, 6h, 9h após ciclofosfamida",
-        "note": ""
-      }
-    ],
-    "prep": "EV: diluir em SF ou SG5%. Compatível com a maioria dos quimioterápicos.",
-    "ci": [
-      "Hipersensibilidade"
-    ],
-    "alert": [
-      "NÃO é quimioterápico — sem toxicidade sistémica relevante",
-      "Náuseas, vómitos (especialmente oral)",
-      "Falsos positivos no teste urina para cetonas",
-      "Hidratação adequada concomitante essencial"
-    ],
-    "source": "BNF for Children 2023-24; SIOPE Guidelines"
-  },
-  {
-    "id": "filgrastim",
-    "name": "Filgrastim (G-CSF)",
-    "category": "oncologia",
-    "src": "added",
-    "class": "Factor estimulador de colónias granulocíticas recombinante",
-    "brands": "Neupogen 300 mcg/ml seringa; Zarzio (biossimilar)",
-    "indication": [
-      "Neutropenia febril grave pós-quimioterapia",
-      "Neutropenia congénita grave (Kostmann)",
-      "Mobilização células estaminais para transplante",
-      "Profilaxia neutropenia em regimes de alto risco"
-    ],
-    "dose": [
-      {
-        "ind": "Neutropenia pós-QT — SC/EV",
-        "val": "5–10 mcg/kg/dia SC ou EV",
-        "max": "—",
-        "freq": "1×/dia; iniciar 24h após QT; manter até RAN > 1000/mcL × 2 dias",
-        "note": "Não iniciar < 24h após QT (nem < 24h antes)"
-      },
-      {
-        "ind": "Neutropenia congénita",
-        "val": "5 mcg/kg/dia SC",
-        "max": "—",
-        "freq": "1×/dia; ajustar para RAN 1500–10000/mcL",
-        "note": ""
-      }
-    ],
-    "prep": "SC preferido. EV: diluir em SG5% (NÃO SF — precipita). Concentração ≥ 0,2 mcg/ml.",
-    "ci": [
-      "Leucemia mieloide (relativa — pode estimular clone)"
-    ],
-    "alert": [
-      "⚠️ Dores ósseas (muito frequentes) — tratar com paracetamol/ibuprofeno",
-      "⚠️ Esplenomegalia e rutura esplénica (raro — dor abdominal aguda)",
-      "⚠️ Síndrome de fuga capilar (raro)",
-      "⚠️ NÃO usar em leucemia mielóide aguda sem guideline oncológica",
-      "Monitorizar hemograma 2×/semana"
-    ],
-    "source": "BNF for Children 2023-24; ASCO Guidelines 2015"
+    "source": "BNF for Children 2023-24; Howard SC. NEJM 2011; SIOP/COG TLS Guidelines 2017"
   },
   {
     "id": "naltrexona",
@@ -269,72 +153,6 @@ var DRUGS_ONCOLOGIA = [
       "Não usar para analgesia (antagonista — bloqueia efeito analgésico)"
     ],
     "source": "BNF for Children 2023-24; Revia SmPC"
-  },
-{
-    "id": "ondansetron_onco",
-    "name": "Ondansetron (Suporte Oncológico)",
-    "category": "oncologia",
-    "class": "Antagonista 5-HT3 — antiemético",
-    "brands": "Zofran — comp 4/8 mg; ODT 4/8 mg; EV 2 mg/ml",
-    "indication": [
-      "Náusea e vómito induzidos por quimioterapia (NVIQ) — 1ª linha",
-      "Náusea e vómito por radioterapia",
-      "NVPO em doentes oncológicos"
-    ],
-    "dose": [
-      {
-        "ind": "NVIQ — QT moderadamente emetizante",
-        "val": "0,15 mg/kg EV em 15 min",
-        "max": "8 mg/dose",
-        "freq": "30 min antes QT; repetir q4h × 2 doses",
-        "note": "QT altamente emetizante: associar dexametasona + aprepitant/fosaprepitant (NK1 antagonista)"
-      }
-    ],
-    "prep": "EV: diluir em SF ou SG5% até 0,32 mg/ml. Administrar em 15 min antes da QT.",
-    "ci": ["QT prolongado", "Hipocaliemia/hipomagnesemia não corrigidas"],
-    "alert": [
-      "⚠️ QT prolongado — monitorizar ECG se associado a outros agentes QT-prolongadores (muitos QT na oncologia)",
-      "⚠️ Síndrome serotoninérgica com tramadol, ISRS",
-      "Obstipação — monitorizar; laxante profilático se opioides concomitantes"
-    ],
-    "source": "BNF for Children 2023-24; MASCC/ESMO Antiemetic Guidelines 2023; Dupuis LL et al. Pediatr Blood Cancer 2013"
-  },
-  {
-    "id": "dexametasona_onco",
-    "name": "Dexametasona (Suporte Oncológico)",
-    "category": "oncologia",
-    "class": "Corticosteroide — antiemético e anti-inflamatório",
-    "brands": "Decadron; Dexametasona — comp 0,5/4 mg; EV 4 mg/ml",
-    "indication": [
-      "Antiemético — adjuvante de 1ª linha na NVIQ moderada a altamente emetizante",
-      "Edema cerebral por tumor ou metástases",
-      "Síndrome de lise tumoral — redução inflamação",
-      "Leucemia linfoblástica aguda — parte de protocolos quimioterápicos (BFM, COG)"
-    ],
-    "dose": [
-      {
-        "ind": "Antiemético (QT altamente emetizante)",
-        "val": "0,25 mg/kg EV",
-        "max": "8–12 mg",
-        "freq": "30 min antes QT + q6h",
-        "note": "Associar a ondansetron ± aprepitant"
-      },
-      {
-        "ind": "Edema cerebral por tumor",
-        "val": "0,5–2 mg/kg/dia EV/PO",
-        "max": "16 mg/dia",
-        "freq": "q6h",
-        "note": "Dose de indução 1–2 mg/kg; reduzir para dose de manutenção ao fim de 48–72h"
-      }
-    ],
-    "prep": "EV: diluir em SF ou SG5%. Administrar em 15 min.",
-    "ci": ["Infecção fúngica sistémica não tratada", "Vacinas vivas"],
-    "alert": [
-      "⚠️ Hiperglicemia — monitorizar glicemia q6h, especialmente em contexto de protocolo QT",
-      "Imunossupressão — risco infecções oportunistas; pneumocistose profilaxia obrigatória em protocolos prolongados",
-      "Insuf. supra-renal com retirada abrupta após uso prolongado"
-    ],
-    "source": "BNF for Children 2023-24; Dupuis LL et al. Pediatr Blood Cancer 2013; SIOPE CNS Tumor Guidelines"
   },
   {
     "id": "aprepitant",
@@ -522,5 +340,82 @@ var DRUGS_ONCOLOGIA = [
       "Resgate insuficiente ou atrasado: mucosites, mielossupressão, nefrotoxicidade graves"
     ],
     "source": "BNF for Children 2023-24; Widemann BC et al. Oncologist 2006; COG/SIOP MTX protocols"
+  },
+  {
+    "id": "dexrazoxano",
+    "name": "Dexrazoxano",
+    "category": "oncologia",
+    "class": "Cardioprotetor — quelante intracelular de ferro, inibidor topoisomerase II",
+    "brands": "Cardioxane — frascos 500 mg",
+    "indication": [
+      "Cardioproteção em quimioterapia com antraciclinas (doxorrubicina, daunorrubicina) — dose cumulativa elevada",
+      "Extravasamento de antraciclinas — tratamento local",
+      "Prevenção de cardiotoxicidade em criança com neoplasia hematológica"
+    ],
+    "dose": [
+      {
+        "ind": "Cardioproteção (antraciclinas)",
+        "val": "10:1 rácio com doxorrubicina (ex: dexrazoxano 300 mg/m² se doxorrubicina 30 mg/m²) EV",
+        "max": "—",
+        "freq": "Administrar 30 min antes de cada dose de antraciclina",
+        "note": "Indicado quando dose cumulativa de doxorrubicina ≥ 300 mg/m² está planeada"
+      },
+      {
+        "ind": "Extravasamento de antraciclina",
+        "val": "1000 mg/m² EV dia 1 e 2; 500 mg/m² EV dia 3",
+        "max": "2000 mg/dia (dias 1–2); 1000 mg (dia 3)",
+        "freq": "3 dias consecutivos; iniciar ≤ 6h após extravasamento",
+        "note": ""
+      }
+    ],
+    "prep": "EV: diluir em RL ou SF. Concentração 1,3–5 mg/ml. Administrar em 15 min (cardioproteção) ou 1–2h (extravasamento).",
+    "ci": [
+      "Gravidez",
+      "Lactação"
+    ],
+    "alert": [
+      "⚠️ Mielossupressão aditiva com quimioterapia — monitorizar hemograma",
+      "Pode reduzir eficácia antitumoral de antraciclinas em alguns tumores (dados contraditórios) — decisão oncológica individualizada",
+      "Para extravasamento: NÃO aplicar gelo antes ou durante dexrazoxano (vasoconstrição reduz distribuição)",
+      "Evidência pediátrica crescente — oncologia pediátrica de alto risco com doses altas de antraciclinas"
+    ],
+    "source": "BNF for Children 2023-24; van Dalen EC et al. Cochrane 2011; Mouridsen HT et al. Ann Oncol 2007"
+  },
+  {
+    "id": "imatinib",
+    "name": "Imatinib",
+    "category": "oncologia",
+    "class": "Inibidor de tirosina-cinase — BCR-ABL, c-KIT, PDGFR",
+    "brands": "Glivec — comp 100/400 mg",
+    "indication": [
+      "Leucemia mieloide crónica Ph+ (LMC) — 1ª linha em todas as fases",
+      "LLA Ph+ (cromossoma Philadelphia) — em combinação com quimioterapia",
+      "GIST (tumor estromal gastrointestinal) — c-KIT positivo",
+      "Síndrome hipereosinofílico com FIP1L1-PDGFRA"
+    ],
+    "dose": [
+      {
+        "ind": "LMC fase crónica — criança",
+        "val": "340 mg/m²/dia PO",
+        "max": "600 mg/dia",
+        "freq": "1 dose/dia com refeição",
+        "note": "LLA Ph+: 340 mg/m²/dia em combinação com quimioterapia de indução"
+      }
+    ],
+    "prep": "Oral: comprimidos — tomar com refeição e copo de água. Para crianças que não engolam comp: dissolver em água ou sumo de maçã (50 ml para 100 mg comp).",
+    "ci": [
+      "Hipersensibilidade",
+      "Gravidez (teratogénico)"
+    ],
+    "alert": [
+      "⚠️ Retenção de fluidos e edema — periorbital, periférico, derrame pleural/pericárdico; monitorizar peso",
+      "⚠️ Mielossupressão — hemograma semanal no 1º mês",
+      "⚠️ Hepatotoxicidade — TFH mensalmente nos primeiros 3 meses",
+      "⚠️ Inibidor CYP3A4 — aumenta midazolam, ciclosporina, varfarina; indutores (rifampicina, fenitoína) reduzem imatinib",
+      "Náuseas — tomar COM refeição; reduz significativamente",
+      "Dor muscular e cãibras — suplementação de magnésio oral pode ajudar",
+      "TDM crescentemente utilizado — nível mínimo alvo > 1000 ng/mL"
+    ],
+    "source": "BNF for Children 2023-24; Champagne MA et al. Blood 2004 (pediátrico); ELN CML Guidelines 2022"
   }
 ];
