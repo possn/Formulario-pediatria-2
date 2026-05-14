@@ -1,5 +1,5 @@
 // UCIP Pediatria — Cardiovascular & Diuréticos
-// 13 fármacos
+// 25 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_CARDIOVASCULAR = [
@@ -609,5 +609,536 @@ var DRUGS_CARDIOVASCULAR = [
       "Dose pediátrica MG superior à adulto — crianças têm volume distribuição maior"
     ],
     "source": "Monagle P. CHEST 2018; BNF for Children 2023-24"
+  },
+{
+    "id": "adenosina",
+    "name": "Adenosina",
+    "category": "cardiovascular",
+    "class": "Antiarrítmico — agonista receptor A1 purinérgico",
+    "brands": "Adenocor — ampolas 6 mg/2 ml (3 mg/ml)",
+    "indication": [
+      "Taquicardia supraventricular paroxística (TSVP) — fármaco de 1ª linha",
+      "Taquicardia por reentrada nodal AV (TRNAV)",
+      "Taquicardia por via acessória (Wolff-Parkinson-White) — com cautela",
+      "Diagnóstico diferencial de taquicardias de complexo largo (taquicardia sinusal vs. TSV)",
+      "TSVP neonatal — primeira escolha farmacológica"
+    ],
+    "dose": [
+      {
+        "ind": "TSVP — 1ª dose",
+        "val": "0,1 mg/kg EV rápido (< 2 seg)",
+        "max": "6 mg",
+        "freq": "Dose única; repetir se sem resposta em 1–2 min",
+        "note": "Administrar em veia central ou antecubital com flush SF 5–10 ml imediato"
+      },
+      {
+        "ind": "TSVP — 2ª dose",
+        "val": "0,2 mg/kg EV rápido",
+        "max": "12 mg",
+        "freq": "Se sem resposta 1–2 min após 1ª dose",
+        "note": ""
+      },
+      {
+        "ind": "TSVP neonatal",
+        "val": "0,1 mg/kg EV rápido",
+        "max": "0,3 mg/kg (máx 6 mg total)",
+        "freq": "Repetir com 0,05–0,1 mg/kg incrementos a cada 1–2 min",
+        "note": "Veia umbilical ou central — evitar periférica por inactivação rápida"
+      }
+    ],
+    "prep": "Administrar não diluída (3 mg/ml). Seringa pré-preparada e flush SF imediato na mesma linha. Via central ou veia antecubital — periférica distal reduz eficácia.",
+    "ci": [
+      "Bloqueio AV 2º ou 3º grau (sem pacemaker)",
+      "Síndrome do nódulo sinusal (sem pacemaker)",
+      "Asma brônquica grave ou DPOC grave (broncoespasmo)",
+      "Síndrome de Wolf-Parkinson-White com flutter/fibrilhação auricular (risco precipitar condução rápida pela via acessória)"
+    ],
+    "alert": [
+      "⚠️ Semi-vida 10 segundos — administrar em bólus muito rápido + flush imediato",
+      "⚠️ Assistolia transitória esperada — avisar família, ter material de reanimação disponível",
+      "⚠️ Pode precipitar broncoespasmo grave em asmáticos",
+      "Monitorização ECG contínua e registo de ritmo durante administração obrigatórios",
+      "Inactivada pela teofilina e cafeína (antagonistas A1) — pode necessitar dose mais alta em prematuros com cafeína"
+    ],
+    "source": "BNF for Children 2023-24; Sanatani S et al. CJC 2017; PALS Guidelines AHA 2020"
+  },
+  {
+    "id": "amiodarona_iv",
+    "name": "Amiodarona EV",
+    "category": "cardiovascular",
+    "class": "Antiarrítmico classe III (inibidor canais K⁺, Na⁺, Ca²⁺ + beta-bloqueio)",
+    "brands": "Cordarone EV — ampolas 150 mg/3 ml (50 mg/ml)",
+    "indication": [
+      "Fibrilhação ventricular / taquicardia ventricular sem pulso — após 3º choque (PCR)",
+      "Taquicardia ventricular com pulso hemodinamicamente instável",
+      "Taquicardia juncional pós-operatória (JET) — após cirurgia cardíaca",
+      "Flutter/fibrilhação auricular com instabilidade hemodinâmica",
+      "TSVP refractária a adenosina"
+    ],
+    "dose": [
+      {
+        "ind": "PCR — FV/TV sem pulso",
+        "val": "5 mg/kg EV/IO rápido",
+        "max": "300 mg/dose",
+        "freq": "Após 3º choque; pode repetir após 5º choque",
+        "note": "Em PCR: administrar em bólus. Dose máxima acumulada 15 mg/kg/dia"
+      },
+      {
+        "ind": "TV / TSV com pulso",
+        "val": "5 mg/kg EV em 20–60 min",
+        "max": "300 mg/dose",
+        "freq": "1 dose; repetir se necessário até 15 mg/kg/dia",
+        "note": "Diluir em SG5% — nunca SF (precipita)"
+      },
+      {
+        "ind": "JET pós-operatória (perfusão contínua)",
+        "val": "5–15 μg/kg/min",
+        "max": "—",
+        "freq": "Perfusão contínua EV em SG5%",
+        "note": "Associar hipotermia moderada (35–36°C) e sedação para controlo JET"
+      }
+    ],
+    "prep": "EV: diluir EXCLUSIVAMENTE em SG5% (precipita em SF). Concentração: 1–6 mg/ml periférico; até 18 mg/ml central. Linha dedicada (adsorve em PVC — usar polietileno ou vidro). Filtrar com filtro 0,22 μm.",
+    "ci": [
+      "Bloqueio AV 2º/3º grau sem pacemaker",
+      "Bradicardia sinusal grave",
+      "Disfunção tiroideia grave conhecida",
+      "Hipotiroidismo/hipertiroidismo não tratado"
+    ],
+    "alert": [
+      "⚠️ Hipotensão com administração rápida — infundir lentamente (excepção PCR)",
+      "⚠️ Prolonga QT — monitorizar QTc; risco de torsades de pointes (raro mas grave)",
+      "⚠️ Inúmeras interacções: aumenta níveis de digoxina, varfarina, fenitoína, ciclosporina",
+      "⚠️ Tirotoxicidade e hipotiroidismo em uso crónico (iodo orgânico na molécula)",
+      "Fototoxicidade, pneumonite, hepatotoxicidade — riscos em uso prolongado",
+      "Monitorizar TFH, função tiroideia e Rx tórax em uso > 1 semana"
+    ],
+    "source": "BNF for Children 2023-24; PALS Guidelines AHA 2020; Saul JP et al. JACC 2005"
+  },
+  {
+    "id": "carvedilol",
+    "name": "Carvedilol",
+    "category": "cardiovascular",
+    "class": "Beta-bloqueante não selectivo + alfa-1 bloqueante",
+    "brands": "Eucardic; Carvedilol Generis — comp 3,125/6,25/12,5/25 mg",
+    "indication": [
+      "Insuficiência cardíaca sistólica pediátrica — adjuvante ao IECA",
+      "Miocardiopatia dilatada (incluindo formas familiares e pós-miocardite)",
+      "Insuficiência cardíaca pós-cirurgia cardíaca congenita",
+      "Hipertensão (2ª linha em criança)"
+    ],
+    "dose": [
+      {
+        "ind": "Insuficiência cardíaca — início",
+        "val": "0,05 mg/kg/dose PO",
+        "max": "3,125 mg/dose",
+        "freq": "q12h × 2 semanas",
+        "note": "Titular lentamente: duplicar dose a cada 2 semanas se tolerado"
+      },
+      {
+        "ind": "Insuficiência cardíaca — alvo",
+        "val": "0,4–0,8 mg/kg/dose PO",
+        "max": "25 mg/dose (> 85 kg: 50 mg/dose)",
+        "freq": "q12h",
+        "note": "Ensaio PRCCTFHF mostrou tendência de benefício mas sem diferença estatística significativa vs. placebo — evidência mais fraca que em adultos"
+      }
+    ],
+    "prep": "Oral: comprimidos — esmagar se necessário e dissolver em 5 ml de água para crianças pequenas. Tomar com alimentos (reduz hipotensão ortostática).",
+    "ci": [
+      "Asma brônquica / broncoespasmo significativo",
+      "Bradicardia < 60 bpm",
+      "Bloqueio AV 2º/3º grau",
+      "Choque cardiogénico descompensado"
+    ],
+    "alert": [
+      "⚠️ Iniciar apenas com doente estável, euvolémico — não iniciar em descompensação aguda",
+      "⚠️ Retirada abrupta pode precipitar crise hiperadrenérgica — reduzir progressivamente",
+      "⚠️ Hipoglicemia mascarada em diabéticos (bloqueia taquicardia reflexa)",
+      "Bradicardia e hipotensão são sinais de dose excessiva — monitorizar FC e TA",
+      "Evidência pediátrica limitada — baseada principalmente em extrapolação de adultos (COPERNICUS, MERIT-HF)"
+    ],
+    "source": "BNF for Children 2023-24; Shaddy RE et al. JAMA 2007 (PRCCTFHF); Rossano JW Heart Failure 2021"
+  },
+  {
+    "id": "diltiazem",
+    "name": "Diltiazem",
+    "category": "cardiovascular",
+    "class": "Bloqueador dos canais de cálcio — benzotiazepina",
+    "brands": "Tildiem; Dilzem — comp 60/90/120 mg; EV 25 mg/5 ml",
+    "indication": [
+      "Controlo de frequência em flutter/fibrilhação auricular",
+      "Taquicardia supraventricular paroxística — 2ª linha após adenosina",
+      "Angina vasospástica (Prinzmetal)",
+      "Hipertensão (2ª linha em criança)"
+    ],
+    "dose": [
+      {
+        "ind": "Controlo frequência FA/flutter — EV",
+        "val": "0,25 mg/kg EV em 2 min",
+        "max": "25 mg",
+        "freq": "Bólus; pode repetir 0,35 mg/kg (máx 25 mg) após 15 min se insuficiente",
+        "note": "Monitorização ECG e TA contínua durante administração"
+      },
+      {
+        "ind": "Perfusão contínua pós-bólus",
+        "val": "5–15 mg/h",
+        "max": "—",
+        "freq": "Perfusão contínua",
+        "note": ""
+      },
+      {
+        "ind": "Oral — controlo frequência crónica",
+        "val": "1,5–2 mg/kg/dia PO",
+        "max": "360 mg/dia",
+        "freq": "3–4 doses/dia (formulação regular) ou 1–2 doses/dia (libertação prolongada)",
+        "note": ""
+      }
+    ],
+    "prep": "EV: diluir em SF ou SG5%. Concentração 1 mg/ml. Administrar bólus em 2 min. Perfusão: 125 mg em 100 ml SG5% (1,25 mg/ml).",
+    "ci": [
+      "Disfunção sistólica grave / insuficiência cardíaca descompensada",
+      "Bloqueio AV 2º/3º grau sem pacemaker",
+      "Síndrome WPW com FA (risco de condução rápida pela via acessória)",
+      "Hipotensão grave (< 90 mmHg sistólica)"
+    ],
+    "alert": [
+      "⚠️ Inotrópico negativo — evitar em disfunção sistólica significativa (FE < 35%)",
+      "⚠️ Inibidor CYP3A4 — aumenta níveis de ciclosporina, tacrolímus, estatinas, midazolam",
+      "⚠️ Associação com beta-bloqueante aumenta risco de bloqueio AV e bradicardia grave",
+      "Hipotensão com administração EV rápida — monitorizar TA durante bólus"
+    ],
+    "source": "BNF for Children 2023-24; PALS AHA 2020; Moak JP Pediatric Cardiology 2000"
+  },
+  {
+    "id": "flecainida",
+    "name": "Flecainida",
+    "category": "cardiovascular",
+    "class": "Antiarrítmico classe IC (bloqueador canais de sódio)",
+    "brands": "Tambocor — comp 50/100/150 mg; EV 10 mg/ml (15 ml)",
+    "indication": [
+      "Taquicardia supraventricular paroxística refractária — crianças",
+      "Taquicardia ventricular idiopática em coração estruturalmente normal",
+      "Síndrome WPW — prevenir recorrências (evitar em disfunção sistólica)",
+      "Taquicardia auricular ectópica"
+    ],
+    "dose": [
+      {
+        "ind": "Oral — manutenção TSV",
+        "val": "2–3 mg/kg/dia PO",
+        "max": "200 mg/dia",
+        "freq": "2 doses/dia (q12h)",
+        "note": "Iniciar com dose baixa e titular por resposta e nível sérico (alvo: 0,2–1 mg/L)"
+      },
+      {
+        "ind": "EV — TSV aguda",
+        "val": "1–2 mg/kg EV em 10 min",
+        "max": "150 mg",
+        "freq": "Dose única; repetir apenas se necessário com intervalo ≥ 1h",
+        "note": "Monitorização ECG contínua obrigatória"
+      }
+    ],
+    "prep": "EV: diluir em SG5%. Concentração 1–2 mg/ml. Administrar em 10–30 min com ECG contínuo.",
+    "ci": [
+      "Disfunção sistólica / insuficiência cardíaca (efeito inotrópico negativo significativo)",
+      "Bloqueio de ramo (alarga QRS — efeito proarrítmico)",
+      "Doença coronária / cardiopatia isquémica (CAST trial — aumento de mortalidade)",
+      "Hipocaliemia não corrigida"
+    ],
+    "alert": [
+      "⚠️ Pró-arrítmico — pode precipitar TV/FV em doentes com cardiopatia estrutural",
+      "⚠️ Alarga intervalo PR e QRS — monitorizar ECG; suspender se QRS aumentar > 25%",
+      "⚠️ Metabolismo CYP2D6 — polimorfismo genético causa variabilidade PK; metabolizadores lentos têm níveis muito mais altos",
+      "Monitorização de níveis séricos recomendada (alvo 0,2–1 mg/L)",
+      "Inibidores CYP2D6 (fluoxetina, paroxetina) aumentam os níveis de flecainida"
+    ],
+    "source": "BNF for Children 2023-24; Perry JC et al. J Cardiovasc Electrophysiol 1996; PACES/HRS Expert Consensus 2014"
+  },
+  {
+    "id": "milrinona",
+    "name": "Milrinona",
+    "category": "cardiovascular",
+    "class": "Inodilatador — inibidor fosfodiesterase III",
+    "brands": "Primacor; Milrinona Orion — ampolas 10 mg/10 ml (1 mg/ml)",
+    "indication": [
+      "Síndrome de baixo débito cardíaco pós-cirurgia cardíaca congenita — 1ª linha",
+      "Insuficiência cardíaca aguda descompensada com resistências vasculares elevadas",
+      "Hipertensão pulmonar com disfunção do VD",
+      "Choque cardiogénico — quando inotrópicos adrenérgicos insuficientes ou contraindicados"
+    ],
+    "dose": [
+      {
+        "ind": "Síndrome baixo débito pós-cirurgia cardíaca",
+        "val": "Perfusão 0,25–0,75 μg/kg/min EV",
+        "max": "1 μg/kg/min",
+        "freq": "Perfusão contínua; titrar por resposta hemodinâmica",
+        "note": "Dose de carga 50–75 μg/kg EV em 10–60 min (OPCIONAL — omitir se hipotensão). Estudo PRIMACORP: milrinona profiláctica reduziu LCOS pós-cirurgia congenita (NNT=6)"
+      }
+    ],
+    "prep": "Perfusão: diluir em SF, SG5% ou SRL. Concentração habitual: 200 μg/ml (20 mg em 100 ml). Cálculo: dose (μg/kg/min) × peso (kg) × 60 / concentração (μg/ml) = ml/h. Linha dedicada; proteger da luz.",
+    "ci": [
+      "Estenose aórtica ou pulmonar grave (obstrução fixa — vasodilatação perigosa)",
+      "Hipovolemia não corrigida (vasodilatação agrava hipotensão)",
+      "Cardiomiopatia hipertrófica obstrutiva"
+    ],
+    "alert": [
+      "⚠️ Hipotensão — principal efeito adverso; necessita frequentemente de associar noradrenalina ou vasopressina",
+      "⚠️ Acumulação em insuficiência renal — milrinona excreção renal 80%; ajustar dose",
+      "⚠️ Dose de carga aumenta risco de hipotensão — omitir em doentes hipotensos",
+      "Taquicardia reflexa frequente — monitorizar FC",
+      "Sem taquifilaxia ao contrário das catecolaminas — vantagem em uso prolongado",
+      "Monitorizar K⁺ (hipocaliemia agrava arritmias)"
+    ],
+    "source": "BNF for Children 2023-24; Hoffman TM et al. Circulation 2003 (PRIMACORP); Brissaud O et al. CCM 2016"
+  },
+  {
+    "id": "nifedipina",
+    "name": "Nifedipina",
+    "category": "cardiovascular",
+    "class": "Bloqueador dos canais de cálcio — diidropiridina",
+    "brands": "Adalat — caps 5/10 mg; comp LP 20/30/60 mg",
+    "indication": [
+      "Crise hipertensiva — urgência (não emergência)",
+      "Hipertensão crónica pediátrica",
+      "Fenómeno de Raynaud grave",
+      "Hipertensão pulmonar (feito de cálcio responsivos — teste vasodilatador)",
+      "Espasmo esofágico"
+    ],
+    "dose": [
+      {
+        "ind": "Crise hipertensiva (urgência — não emergência)",
+        "val": "0,25–0,5 mg/kg/dose PO/SL",
+        "max": "10 mg/dose",
+        "freq": "Dose única; repetir q4–6h se necessário",
+        "note": "Uso SL controverso e não recomendado por algumas guidelines (queda de TA imprevisível). Via oral preferida"
+      },
+      {
+        "ind": "Hipertensão crónica",
+        "val": "0,5–3 mg/kg/dia PO",
+        "max": "120 mg/dia",
+        "freq": "2–3 doses/dia (formulação regular) ou 1–2 doses/dia (LP)",
+        "note": "Preferir formulações LP para melhor controlo tensional"
+      }
+    ],
+    "prep": "Oral: cápsulas líquidas — podem ser perfuradas e conteúdo extraído para administração oral em criança (não SL). Comprimidos LP — não triturar.",
+    "ci": [
+      "Choque cardiogénico",
+      "Insuficiência cardíaca descompensada",
+      "Estenose aórtica grave",
+      "Angina instável (formulação de libertação rápida)"
+    ],
+    "alert": [
+      "⚠️ Queda de TA rápida e imprevisível com formulação rápida (cápsulas) — risco de hipoperfusão orgânica; preferir formulações LP ou outros agentes EV em emergência hipertensiva",
+      "⚠️ Taquicardia reflexa — pode precipitar angina em doentes com coronariopatia",
+      "Edema periférico frequente (vasodilatação capilar)",
+      "Inibidor CYP3A4 — aumenta níveis de ciclosporina, tacrolímus"
+    ],
+    "source": "BNF for Children 2023-24; NHBPEP Working Group 2004; Flynn JT et al. Pediatrics 2017"
+  },
+  {
+    "id": "bosentano",
+    "name": "Bosentano",
+    "category": "cardiovascular",
+    "class": "Antagonista duplo dos receptores da endotelina (ERA) — ETA e ETB",
+    "brands": "Tracleer — comp 62,5/125 mg; comp dispersíveis 32 mg (pediátrico)",
+    "indication": [
+      "Hipertensão arterial pulmonar (HAP) — classe funcional II-III OMS",
+      "HAP idiopática / hereditária",
+      "HAP associada a cardiopatia congenita (pós-reparação)",
+      "HAP associada a doenças do tecido conjuntivo"
+    ],
+    "dose": [
+      {
+        "ind": "HAP — crianças > 1 ano",
+        "val": "Peso 10–20 kg: 31,25 mg/dose PO; Peso > 20–40 kg: 62,5 mg/dose PO; > 40 kg: 62,5–125 mg/dose PO",
+        "max": "125 mg/dose (250 mg/dia em adulto)",
+        "freq": "q12h",
+        "note": "Iniciar com dose baixa × 4 semanas, depois duplicar se tolerado"
+      }
+    ],
+    "prep": "Oral: comprimidos dispersíveis 32 mg (Volibris infantil) ou partir comprimidos 62,5 mg. Tomar com ou sem alimentos.",
+    "ci": [
+      "Gravidez (teratogénico — categoria X)",
+      "Insuficiência hepática moderada a grave (AST/ALT > 3× LSN)",
+      "Uso concomitante com ciclosporina A (interacção major — aumento 50× dos níveis de bosentano)",
+      "Uso com gliburida (hepatotoxicidade aumentada)"
+    ],
+    "alert": [
+      "⚠️ Hepatotoxicidade — monitorizar TGO/TGP mensalmente (primeiros 12 meses) e bimestralmente depois; suspender se > 3–5× LSN",
+      "⚠️ Teratogénico — anticoncepção obrigatória em adolescentes do sexo feminino",
+      "⚠️ Indutor CYP3A4 e CYP2C9 — reduz níveis de varfarina, estatinas, ciclosporina, contraceptivos orais",
+      "Retenção de fluidos / edema — monitorizar peso",
+      "Anemia — monitorizar hemograma (reduz hematócrito ~1 g/dl)",
+      "Programa de monitorização especial obrigatório (REMS)"
+    ],
+    "source": "BNF for Children 2023-24; Beghetti M et al. Eur Heart J 2009; ESC/ERS PAH Guidelines 2022"
+  },
+  {
+    "id": "fentolamina",
+    "name": "Fentolamina",
+    "category": "cardiovascular",
+    "class": "Alfa-bloqueante não selectivo competitivo (α1 e α2)",
+    "brands": "Rogitine — ampolas 10 mg/ml",
+    "indication": [
+      "Crise hipertensiva por excesso catecolaminas (feocromocitoma, tyramine cheese effect com IMAOs, abstinência clonidina)",
+      "Extravasamento de catecolaminas vasopressoras (noradrenalina, dopamina, adrenalina) — injecção local subcutânea",
+      "Hipertensão grave peri-operatória no feocromocitoma",
+      "Descarga autonómica em lesão medular alta (disreflexia autonómica)"
+    ],
+    "dose": [
+      {
+        "ind": "Crise hipertensiva EV",
+        "val": "0,05–0,1 mg/kg/dose EV",
+        "max": "5 mg/dose",
+        "freq": "Bólus EV; repetir q5 min se necessário; ou perfusão 5–50 μg/kg/min",
+        "note": "Início de acção: 1–2 min. Duração: 15–30 min"
+      },
+      {
+        "ind": "Extravasamento de vasopressores (antídoto local)",
+        "val": "0,1–0,2 mg/kg SC local (max 5–10 mg diluídos em 10 ml SF)",
+        "max": "10 mg total",
+        "freq": "Dose única; injectar em leque na área de extravasamento",
+        "note": "Administrar idealmente < 12h após extravasamento. Eficácia comprovada para noradrenalina, dopamina, adrenalina"
+      }
+    ],
+    "prep": "EV: diluir em SF. Para bólus: 1–5 mg em 5–10 ml SF. Para perfusão: 50 mg em 250 ml SF (200 μg/ml).",
+    "ci": [
+      "Hipotensão",
+      "Infarto agudo do miocárdio recente",
+      "Angina instável"
+    ],
+    "alert": [
+      "⚠️ Hipotensão grave — ter vasopressor disponível; noradrenalina é antídoto da hipotensão (NÃO adrenalina — componente beta provoca hipotensão paradoxal)",
+      "⚠️ Taquicardia reflexa marcada — monitorizar FC",
+      "Para extravasamento: injectar perilesionalmente com agulha fina (25G), múltiplos pontos de injecção",
+      "Efeito hipoglicemiante (estimula libertação de insulina) — monitorizar glicemia"
+    ],
+    "source": "BNF for Children 2023-24; Reynolds PM et al. Ann Pharmacother 2014 (extravasation); Pacak K NEJM 2007"
+  },
+  {
+    "id": "nitroprussiato",
+    "name": "Nitroprussiato de Sódio",
+    "category": "cardiovascular",
+    "class": "Vasodilatador directo — dador de NO (arteriolar e venoso)",
+    "brands": "Nipride; Nitroprussiat Braun — ampolas 50 mg pó liofilizado",
+    "indication": [
+      "Emergência hipertensiva — crise hipertensiva com lesão de órgão alvo",
+      "Insuficiência cardíaca aguda grave com resistências vasculares muito elevadas",
+      "Dissecção aórtica — controlo urgente de TA (em combinação com esmolol/labetalol)",
+      "Hipertensão grave intra-operatória e pós-operatória",
+      "Redução de pós-carga em choque cardiogénico refractário"
+    ],
+    "dose": [
+      {
+        "ind": "Perfusão EV contínua",
+        "val": "0,5–8 μg/kg/min",
+        "max": "10 μg/kg/min",
+        "freq": "Perfusão contínua; iniciar com dose mínima e titular",
+        "note": "Duração máxima recomendada: 72h (risco toxicidade por cianeto). Dose > 4 μg/kg/min > 2h: monitorizar cianeto ou lactato"
+      }
+    ],
+    "prep": "Perfusão: reconstituir 50 mg em 2–3 ml SWFI; diluir em SG5% (nunca SF ou RL). Concentração 200–400 μg/ml. PROTEGER DA LUZ (papel de alumínio) — degrada rapidamente. Preparar fresco a cada 24h.",
+    "ci": [
+      "Hipertensão intracraniana (vasodilatação cerebral agrava PIC)",
+      "Insuficiência hepática grave (metabolismo do cianeto)",
+      "Deficiência de vitamina B12 (potencia toxicidade por cianeto)",
+      "Atrofia óptica de Leber"
+    ],
+    "alert": [
+      "⚠️ TOXICIDADE POR CIANETO — principal risco: doses altas (> 4 μg/kg/min), IR, uso prolongado > 72h. Sinais: acidose láctica, taquicardia, confusão, taquifilaxia ao efeito hipotensor",
+      "⚠️ Antídoto da toxicidade por cianeto: hidroxicobalamina 70 mg/kg EV (preferido em criança)",
+      "⚠️ Fotodegradação rápida — proteger SEMPRE da luz",
+      "⚠️ Hipotensão grave com titulação agressiva — monitorização invasiva de TA recomendada",
+      "Tiocinato acumula em IR (metabolito do cianeto) — nefrotóxico; monitorizar nível tiocinato se tratamento prolongado",
+      "Alternativas com melhor perfil de segurança disponíveis: nicardipina, labetalol, clevidipina"
+    ],
+    "source": "BNF for Children 2023-24; Flynn JT et al. Pediatrics 2017; Brimioulle S et al. Crit Care Med 2000"
+  },
+  {
+    "id": "atenolol",
+    "name": "Atenolol",
+    "category": "cardiovascular",
+    "class": "Beta-1 bloqueante selectivo (cardioselectivo)",
+    "brands": "Tenormin; Atenolol Generis — comp 25/50/100 mg; susp magistral 2 mg/ml",
+    "indication": [
+      "Hipertensão pediátrica — 1ª linha quando beta-bloqueante indicado",
+      "Taquiarritmias supraventriculares — controlo crónico de frequência",
+      "Síndrome de Marfan — retardar dilatação aórtica",
+      "Tireotoxicose — controlo sintomático de taquicardia",
+      "Enxaqueca — profilaxia"
+    ],
+    "dose": [
+      {
+        "ind": "Hipertensão / antiarrítmico",
+        "val": "0,5–1 mg/kg/dia PO",
+        "max": "100 mg/dia",
+        "freq": "1–2 doses/dia (semivida longa: 6–9h em criança)",
+        "note": "Iniciar com dose baixa (0,5 mg/kg) e titular por resposta e tolerância"
+      },
+      {
+        "ind": "Síndrome de Marfan",
+        "val": "0,5–2 mg/kg/dia PO",
+        "max": "100 mg/dia",
+        "freq": "1–2 doses/dia",
+        "note": "Reduz taxa de dilatação da raíz aórtica (Shores et al. NEJM 1994). Evidência crescente para losartan como alternativa/combinação"
+      }
+    ],
+    "prep": "Oral: comprimidos — podem ser esmagados. Suspensão magistral 2 mg/ml preparada em farmácia hospitalar.",
+    "ci": [
+      "Asma brônquica / broncoespasmo (menos selectividade em doses altas)",
+      "Bradicardia sinusal grave (FC < 60 bpm)",
+      "Bloqueio AV 2º/3º grau",
+      "Choque cardiogénico"
+    ],
+    "alert": [
+      "⚠️ Retirada abrupta pode precipitar síndrome de abstinência (hipertensão de rebote, angina) — reduzir progressivamente ao longo de 1–2 semanas",
+      "⚠️ Mascara sintomas de hipoglicemia em diabéticos insulinodependentes",
+      "Excreção renal predominante — ajustar dose se TFG < 35 ml/min",
+      "Cardioselectividade diminui com doses altas — cautela em asmáticos mesmo com doses habituais"
+    ],
+    "source": "BNF for Children 2023-24; Shores J et al. N Engl J Med 1994; NHBPEP Working Group 2004"
+  },
+  {
+    "id": "sildenafil_cardio",
+    "name": "Sildenafil (Hipertensão Pulmonar)",
+    "category": "cardiovascular",
+    "class": "Inibidor fosfodiesterase tipo 5 (PDE5i)",
+    "brands": "Revatio — comp 20 mg; pó susp 10 mg/ml; EV 0,8 mg/ml",
+    "indication": [
+      "Hipertensão arterial pulmonar (HAP) — tratamento específico",
+      "HAP persistente do recém-nascido (PPHN) — alternativa/complemento ao iNO",
+      "Desmame do óxido nítrico inalado (prevenir efeito rebote)",
+      "HAP pós-cirurgia cardíaca congenita"
+    ],
+    "dose": [
+      {
+        "ind": "HAP — crianças 1–17 anos",
+        "val": "< 20 kg: 10 mg/dose PO; ≥ 20 kg: 20 mg/dose PO",
+        "max": "20 mg/dose (3× dose não mostrou benefício adicional — STARTS-2)",
+        "freq": "q8h",
+        "note": "ATENÇÃO: doses altas (≥ 2,5 mg/kg/dose ou 60–80 mg/dose) associadas a MAIOR mortalidade no ensaio STARTS-2 — usar dose baixa"
+      },
+      {
+        "ind": "PPHN / desmame iNO — EV",
+        "val": "0,25–1 mg/kg/dose EV em 3h",
+        "max": "—",
+        "freq": "q6–8h",
+        "note": "Oral: 0,5–1 mg/kg/dose q6h. Evidência limitada em PPHN — uso off-label"
+      }
+    ],
+    "prep": "EV: Revatio 0,8 mg/ml — usar sem diluição adicional. Oral: suspensão 10 mg/ml ou comprimidos 20 mg.",
+    "ci": [
+      "Uso concomitante com nitratos (hipotensão grave irreversível)",
+      "Uso concomitante com guanilato ciclase estimuladores (riociguate)",
+      "Hipotensão sistémica significativa (< 90 mmHg)"
+    ],
+    "alert": [
+      "⚠️ STARTS-2: doses altas (≥ 2,5 mg/kg/dose) associadas a MAIOR mortalidade — NÃO exceder dose aprovada",
+      "⚠️ Hipotensão sistémica — risco aumentado se vasodilatação periférica concomitante",
+      "⚠️ Interacção grave com nitratos e guanilato ciclase — hipotensão fatal",
+      "Inibidor CYP3A4 e CYP2C9 — interacções com bosentano (reduz sildenafil 50%), eritromicina, azóis",
+      "Retirada abrupta pode causar crise de HAP — desmame gradual obrigatório",
+      "Priapismo (raro em criança do sexo masculino)"
+    ],
+    "source": "BNF for Children 2023-24; Barst RJ et al. Circulation 2012 (STARTS-1/2); ESC/ERS PAH Guidelines 2022"
   }
 ];
