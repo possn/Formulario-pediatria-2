@@ -76,8 +76,64 @@ html,body{
   visibility:hidden;pointer-events:none
 }
 .screen.on{visibility:visible;pointer-events:auto}
-#s-ai{display:flex;flex-direction:column}
+/* ── AI CLINICAL SEARCH ── */
+#s-ai{display:flex;flex-direction:column;background:#f5f5f0}
 #s-ai.on{display:flex!important}
+/* Hero search area */
+.ai-hero{flex-shrink:0;padding:16px 16px 0;text-align:center}
+.ai-hero-title{font-size:13px;font-weight:700;color:#d97757;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px}
+.ai-hero-sub{font-size:11px;color:#999;margin-bottom:14px}
+.ai-search-wrap{display:flex;align-items:center;gap:8px;background:#fff;
+  border:1.5px solid #e0ddd8;border-radius:16px;padding:0 14px;
+  height:52px;transition:border-color .15s}
+.ai-search-wrap:focus-within{border-color:#d97757;box-shadow:0 0 0 3px rgba(217,119,87,.1)}
+.ai-search-ico{font-size:18px;flex-shrink:0}
+.ai-search-wrap input{flex:1;background:none;border:none;outline:none;
+  font-size:16px;color:#1a1a1a;font-family:inherit}
+.ai-search-wrap input::placeholder{color:#bbb;font-size:15px}
+.ai-clr{background:none;border:none;color:#bbb;font-size:18px;
+  cursor:pointer;display:none;flex-shrink:0;padding:0 2px}
+.ai-send{width:38px;height:38px;flex-shrink:0;background:#d97757;border:none;
+  border-radius:12px;color:#fff;font-size:20px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:opacity .15s}
+.ai-send:disabled{opacity:.3;pointer-events:none}
+/* Suggestions grid */
+.ai-cats{flex-shrink:0;padding:12px 16px 0}
+.ai-cats-lbl{font-size:10px;font-weight:700;color:#bbb;text-transform:uppercase;
+  letter-spacing:.8px;margin-bottom:8px}
+.ai-sug-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ai-sug{background:#fff;border:1px solid #e8e6e1;border-radius:12px;
+  padding:10px 12px;cursor:pointer;transition:border-color .12s,background .12s}
+.ai-sug:active{border-color:#d97757;background:#fff8f5}
+.ai-sug-ico{font-size:16px;margin-bottom:4px}
+.ai-sug-txt{font-size:12px;font-weight:600;color:#333;line-height:1.3}
+.ai-sug-cat{font-size:10px;color:#aaa;margin-top:2px}
+/* Results area */
+.ai-results{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;
+  padding:0 16px 100px}
+/* Each result card */
+.ai-qcard{margin-top:16px;background:#d97757;border-radius:14px 14px 4px 14px;
+  padding:10px 14px;font-size:14px;color:#fff;font-weight:500;align-self:flex-end;
+  max-width:90%;margin-left:auto}
+.ai-acard{margin-top:10px;background:#fff;border:1px solid #e8e6e1;
+  border-radius:4px 14px 14px 14px;padding:14px 16px;font-size:13.5px;
+  color:#1a1a1a;line-height:1.65}
+.ai-acard.sp{color:#aaa;font-style:italic;font-size:13px}
+/* Rich text inside answer */
+.ai-acard h3{font-size:13px;font-weight:700;color:#d97757;margin:12px 0 5px;
+  text-transform:uppercase;letter-spacing:.4px}
+.ai-acard h3:first-child{margin-top:0}
+.ai-acard strong{font-weight:700;color:#111}
+.ai-acard ul{margin:4px 0 8px 0;padding-left:18px}
+.ai-acard li{margin-bottom:3px}
+.ai-acard .ai-src{font-size:10.5px;color:#aaa;margin-top:10px;padding-top:8px;
+  border-top:1px solid #f0eeea;font-style:italic}
+.ai-acard .ai-warn{font-size:11px;color:#92610a;background:#fffbeb;
+  border:1px solid #fde68a;border-radius:8px;padding:7px 10px;margin-top:10px}
+/* Disclaimer bar */
+.ai-disc{flex-shrink:0;margin:10px 16px 0;background:#fffbeb;
+  border:1px solid #fde68a;border-radius:10px;padding:7px 10px;
+  font-size:10.5px;color:#92610a;line-height:1.4}
 
 /* ── TABBAR ── */
 #tabbar{background:#fff;border-top:2px solid #e8e8e3;
@@ -186,30 +242,21 @@ html,body{
 .allok{text-align:center;padding:18px;color:#16a34a;font-size:16px;font-weight:600}
 
 /* ── AI ── */
-.aidc{flex-shrink:0;margin:10px 12px 0;background:#fffbeb;border:1px solid #fde68a;
-  border-radius:10px;padding:9px 13px;font-size:11px;color:#92610a;line-height:1.5}
-.aisg{flex-shrink:0;display:flex;flex-wrap:wrap;gap:7px;padding:10px 12px 4px}
-.aisug{background:#fff;border:1px solid #e0ddd8;border-radius:20px;
-  padding:6px 13px;font-size:12px;cursor:pointer;color:#666}
-.aisug:active{border-color:#d97757;color:#d97757}
-.aimsgs{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;
-  padding:12px;display:flex;flex-direction:column;gap:9px}
-.aifoot{flex-shrink:0;display:flex;gap:9px;align-items:flex-end;
-  padding:10px 12px calc(env(safe-area-inset-bottom,0px)+10px);
-  background:#fff;border-top:1px solid #e8e8e3}
-.aitxt{flex:1;background:#f5f5f0;border:1px solid #e0ddd8;border-radius:12px;
-  padding:10px 14px;color:#1a1a1a;font-size:15px;outline:none;resize:none;
-  max-height:110px;font-family:inherit;line-height:1.4;-webkit-appearance:none}
-.aitxt:focus{border-color:#d97757}
-.aitxt::placeholder{color:#aaa}
-.aisnd{width:42px;height:42px;flex-shrink:0;background:#d97757;border:none;
-  border-radius:12px;color:#fff;font-size:20px;font-weight:700;
-  display:flex;align-items:center;justify-content:center;cursor:pointer}
-.aisnd:disabled{opacity:.3;pointer-events:none}
+
+
+
+
+
+
+
+
+
+
+
 .msg{max-width:86%;padding:11px 14px;border-radius:14px;font-size:14px;line-height:1.6}
-.mu{background:#d97757;color:#fff;align-self:flex-end;border-bottom-right-radius:4px;font-weight:500}
-.ma{background:#fff;color:#1a1a1a;align-self:flex-start;border-bottom-left-radius:4px;border:1px solid #e8e8e3}
-.ma.sp{color:#aaa}
+
+
+
 
 /* ── INDEX ── */
 #s-idx{padding-bottom:100px}
@@ -349,22 +396,70 @@ html,body{
       </p>
     </div>
 
-    <!-- AI -->
+    <!-- AI CLINICAL SEARCH -->
     <div id="s-ai" class="screen">
-      <div class="aidc">⚠️ Apoio à decisão clínica. Não substitui julgamento clínico nem guidelines institucionais.</div>
-      <div class="aisg" id="aisg">
-        <div class="aisug" onclick="qask(this)">Dose adrenalina anafilaxia</div>
-        <div class="aisug" onclick="qask(this)">Protocolo CAD pediátrico</div>
-        <div class="aisug" onclick="qask(this)">Desmame midazolam UCIP</div>
-        <div class="aisug" onclick="qask(this)">Status epilepticus refractário</div>
-        <div class="aisug" onclick="qask(this)">Sedação lactente procedimento</div>
+      <div class="ai-disc">⚠️ Apoio à decisão clínica. Não substitui julgamento clínico nem guidelines institucionais.</div>
+
+      <!-- Search bar -->
+      <div class="ai-hero">
+        <div class="ai-search-wrap">
+          <span class="ai-search-ico">🔍</span>
+          <input type="text" id="aitxt" placeholder="Ex: tratamento crises distónicas..."
+            oninput="aiInput()" onkeydown="aikd(event)" autocomplete="off" autocorrect="off">
+          <button class="ai-clr" id="aiclr" onclick="aiClear()">✕</button>
+          <button class="ai-send" id="aisnd" onclick="sendAI()" disabled>↑</button>
+        </div>
       </div>
-      <div class="aimsgs" id="aimsgs"></div>
-      <div class="aifoot">
-        <textarea class="aitxt" id="aitxt" placeholder="Questão clínica..." rows="1"
-          onkeydown="aikd(event)"></textarea>
-        <button class="aisnd" id="aisnd" onclick="sendAI()">↑</button>
+
+      <!-- Suggestions -->
+      <div class="ai-cats" id="aisg">
+        <div class="ai-cats-lbl">Pesquisas frequentes</div>
+        <div class="ai-sug-grid">
+          <div class="ai-sug" onclick="qask(this)" data-q="Tratamento status epilepticus refractário pediátrico">
+            <div class="ai-sug-ico">🧠</div>
+            <div class="ai-sug-txt">Status epilepticus refractário</div>
+            <div class="ai-sug-cat">Neurologia</div>
+          </div>
+          <div class="ai-sug" onclick="qask(this)" data-q="Protocolo cetoacidose diabética pediátrica">
+            <div class="ai-sug-ico">🩺</div>
+            <div class="ai-sug-txt">Cetoacidose diabética</div>
+            <div class="ai-sug-cat">Endocrinologia</div>
+          </div>
+          <div class="ai-sug" onclick="qask(this)" data-q="Tratamento choque séptico pediátrico doses vasopressores">
+            <div class="ai-sug-ico">❤️</div>
+            <div class="ai-sug-txt">Choque séptico — vasopressores</div>
+            <div class="ai-sug-cat">UCI</div>
+          </div>
+          <div class="ai-sug" onclick="qask(this)" data-q="Sedação e analgesia criança ventilada UCIP protocolo">
+            <div class="ai-sug-ico">💉</div>
+            <div class="ai-sug-txt">Sedação no doente ventilado</div>
+            <div class="ai-sug-cat">Sedação</div>
+          </div>
+          <div class="ai-sug" onclick="qask(this)" data-q="Anafilaxia grave pediátrica tratamento doses adrenalina">
+            <div class="ai-sug-ico">⚡</div>
+            <div class="ai-sug-txt">Anafilaxia grave — doses</div>
+            <div class="ai-sug-cat">Emergência</div>
+          </div>
+          <div class="ai-sug" onclick="qask(this)" data-q="Tratamento crises distónicas pediátricas">
+            <div class="ai-sug-ico">🫨</div>
+            <div class="ai-sug-txt">Crises distónicas</div>
+            <div class="ai-sug-cat">Neurologia</div>
+          </div>
+          <div class="ai-sug" onclick="qask(this)" data-q="Hipertensão pulmonar persistente recém-nascido tratamento">
+            <div class="ai-sug-ico">🍼</div>
+            <div class="ai-sug-txt">HPPN — recém-nascido</div>
+            <div class="ai-sug-cat">Neonatologia</div>
+          </div>
+          <div class="ai-sug" onclick="qask(this)" data-q="Desmame da ventilação mecânica pediátrica critérios e protocolo">
+            <div class="ai-sug-ico">🫁</div>
+            <div class="ai-sug-txt">Desmame ventilação mecânica</div>
+            <div class="ai-sug-cat">Respiratório</div>
+          </div>
+        </div>
       </div>
+
+      <!-- Results -->
+      <div class="ai-results" id="aimsgs"></div>
     </div>
 
     <!-- SOURCES -->
@@ -734,69 +829,169 @@ function saveSet(){
   setTimeout(closeSet,800);
 }
 
-// ─── AI ───────────────────────────────────────────────────
-function qask(el){document.getElementById('aitxt').value=el.textContent;document.getElementById('aisg').style.display='none';sendAI()}
-function aikd(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendAI()}}
-function addMsg(r,t){
-  var msgs=document.getElementById('aimsgs');
-  var div=document.createElement('div');
-  div.className='msg '+(r==='user'?'mu':'ma');
-  div.innerHTML=E(t).replace(/\n/g,'<br>');
-  msgs.appendChild(div);msgs.scrollTop=msgs.scrollHeight;
-  return div;
+// ─── AI CLINICAL SEARCH ENGINE ────────────────────────────
+
+// Convert markdown-ish text to HTML for answer cards
+function aiMarkdown(t) {
+  // Escape HTML first
+  t = t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  // ### or ## headings → h3
+  t = t.replace(/^#{1,3}\s+(.+)$/gm, '<h3>$1</h3>');
+  // **bold**
+  t = t.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  // *italic*
+  t = t.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  // Bullet lists: lines starting with - or •
+  t = t.replace(/^[-•]\s+(.+)$/gm, '<li>$1</li>');
+  t = t.replace(/(<li>.*<\/li>\n?)+/g, function(m){ return '<ul>'+m+'</ul>'; });
+  // ⚠️ lines → warning box
+  t = t.replace(/(⚠️[^\n]+)/g, '<div class="ai-warn">$1</div>');
+  // Source lines (Fontes: ...)
+  t = t.replace(/((?:Fonte|Source|Referência)[s]?:[^\n]+)/gi, '<div class="ai-src">📚 $1</div>');
+  // Line breaks
+  t = t.replace(/\n{2,}/g, '</p><p>').replace(/\n/g, '<br>');
+  return '<p>'+t+'</p>';
 }
-async function sendAI(){
-  var inp=document.getElementById('aitxt');
-  var q=inp.value.trim();if(!q)return;
-  if(!aKey){openSet();return}
-  inp.value='';inp.style.height='auto';
-  document.getElementById('aisg').style.display='none';
-  addMsg('user',q);
-  document.getElementById('aisnd').disabled=true;
-  var ld=addMsg('ai','⟳ A pensar...');ld.classList.add('sp');
-  var sys='És um assistente clínico especializado em Medicina Intensiva Pediátrica. '
-    +'Respondes sempre em português de Portugal, com precisão clínica e baseado em evidência. '
-    +'Alertas para riscos e doses máximas. O utilizador é médico intensivista pediátrico. '
-    +'Fontes preferidas: BNF for Children, Harriet Lane, guidelines ILCOR/ERC/PALS/GINA/ISPAD. '
-    +'Base de dados local: '+DRUGS.map(function(d){return d.name}).join(', ')+'.';
-  aiH.push({role:'user',content:q});
-  try{
-    var isX=aKey.startsWith('xai-');
-    var url=isX?'https://api.x.ai/v1/chat/completions':'https://api.anthropic.com/v1/messages';
-    var res,data,reply;
-    if(isX){
-      res=await fetch(url,{method:'POST',
-        headers:{'Content-Type':'application/json','Authorization':'Bearer '+aKey},
-        body:JSON.stringify({model:'grok-2-latest',
-          messages:[{role:'system',content:sys}].concat(aiH),
-          max_tokens:1500,temperature:0.3})});
-      data=await res.json();
-      if(!res.ok)throw new Error(data.error&&data.error.message||'Erro API xAI');
-      reply=data.choices[0].message.content;
-    }else{
-      res=await fetch(url,{method:'POST',
-        headers:{'Content-Type':'application/json','x-api-key':aKey,
-          'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-        body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1500,
-          system:sys,messages:aiH})});
-      data=await res.json();
-      if(!res.ok)throw new Error(data.error&&data.error.message||'Erro API Anthropic');
-      reply=data.content[0].text;
+
+function qask(el) {
+  var q = el.getAttribute('data-q') || el.textContent.trim();
+  document.getElementById('aitxt').value = q;
+  document.getElementById('aiclr').style.display = 'inline';
+  document.getElementById('aisnd').disabled = false;
+  sendAI();
+}
+
+function aiInput() {
+  var v = document.getElementById('aitxt').value;
+  document.getElementById('aiclr').style.display = v ? 'inline' : 'none';
+  document.getElementById('aisnd').disabled = !v.trim();
+}
+
+function aiClear() {
+  document.getElementById('aitxt').value = '';
+  document.getElementById('aiclr').style.display = 'none';
+  document.getElementById('aisnd').disabled = true;
+  document.getElementById('aitxt').focus();
+}
+
+function aikd(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendAI(); }
+}
+
+function addAiResult(q, placeholder) {
+  var msgs = document.getElementById('aimsgs');
+  // Hide suggestions once first search is done
+  document.getElementById('aisg').style.display = 'none';
+
+  // Question card
+  var qc = document.createElement('div');
+  qc.className = 'ai-qcard';
+  qc.textContent = q;
+  msgs.appendChild(qc);
+
+  // Answer card (loading state)
+  var ac = document.createElement('div');
+  ac.className = 'ai-acard sp';
+  ac.innerHTML = '⟳ A pesquisar em fontes clínicas...';
+  msgs.appendChild(ac);
+  msgs.scrollTop = msgs.scrollHeight;
+  return ac;
+}
+
+// System prompt: clinical search engine persona
+function buildSysPrompt() {
+  return 'És um motor de pesquisa clínica especializado em Medicina Intensiva Pediátrica (UCIP). '
+    + 'O utilizador é SEMPRE um médico intensivista pediátrico — nunca uses disclaimers desnecessários. '
+    + 'REGRAS ABSOLUTAS:\n'
+    + '1. Responde APENAS a questões de medicina pediátrica, farmacologia ou cuidados intensivos pediátricos.\n'
+    + '2. Se a questão não for clínica/médica, responde apenas: "Esta ferramenta destina-se exclusivamente a questões clínicas pediátricas."\n'
+    + '3. Responde SEMPRE em português de Portugal (não brasileiro).\n'
+    + '4. Usa SEMPRE fontes primárias credíveis: BNF for Children 2023-24, Harriet Lane 23ª Ed, '
+    + 'PALS/EPLS/ERC guidelines, GINA, ISPAD, ESPGHAN, PALICC-2, Surviving Sepsis Campaign 2020, '
+    + 'Cochrane Reviews, NEJM, Lancet, JAMA Pediatrics, Pediatrics (AAP), Pediatric Critical Care Medicine.\n'
+    + '5. ESTRUTURA OBRIGATÓRIA da resposta:\n'
+    + '   ### Contexto Clínico\n'
+    + '   (definição breve e mecanismo se relevante)\n'
+    + '   ### Tratamento / Abordagem\n'
+    + '   (com doses exactas em mg/kg, vias, frequências)\n'
+    + '   ### Notas Clínicas\n'
+    + '   (monitorização, ajustes, populações especiais)\n'
+    + '   ### Fontes\n'
+    + '   (listar referências usadas)\n'
+    + '6. Doses sempre em mg/kg ou μg/kg com dose máxima absoluta.\n'
+    + '7. Assinala ⚠️ riscos importantes e contra-indicações críticas.\n'
+    + '8. Sé conciso mas completo — nível de detalhe adequado para UCI.\n'
+    + 'Base de dados local disponível: ' + DRUGS.map(function(d){return d.name}).join(', ') + '.';
+}
+
+async function sendAI() {
+  var inp = document.getElementById('aitxt');
+  var q = inp.value.trim();
+  if (!q) return;
+  if (!aKey) { openSet(); return; }
+
+  inp.value = '';
+  aiClear();
+
+  var acard = addAiResult(q, '');
+  document.getElementById('aisnd').disabled = true;
+
+  var sys = buildSysPrompt();
+  aiH.push({role:'user', content: q});
+
+  try {
+    var isX = aKey.startsWith('xai-');
+    var url = isX ? 'https://api.x.ai/v1/chat/completions' : 'https://api.anthropic.com/v1/messages';
+    var res, data, reply;
+
+    if (isX) {
+      res = await fetch(url, {
+        method: 'POST',
+        headers: {'Content-Type':'application/json', 'Authorization':'Bearer '+aKey},
+        body: JSON.stringify({
+          model: 'grok-3-latest',
+          messages: [{role:'system', content:sys}].concat(aiH),
+          max_tokens: 2000,
+          temperature: 0.1
+        })
+      });
+      data = await res.json();
+      if (!res.ok) throw new Error(data.error&&data.error.message || 'Erro API xAI');
+      reply = data.choices[0].message.content;
+    } else {
+      res = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': aKey,
+          'anthropic-version': '2023-06-01',
+          'anthropic-dangerous-direct-browser-access': 'true'
+        },
+        body: JSON.stringify({
+          model: 'claude-sonnet-4-20250514',
+          max_tokens: 2000,
+          system: sys,
+          messages: aiH
+        })
+      });
+      data = await res.json();
+      if (!res.ok) throw new Error(data.error&&data.error.message || 'Erro API Anthropic');
+      reply = data.content[0].text;
     }
-    aiH.push({role:'assistant',content:reply});
-    ld.classList.remove('sp');
-    ld.innerHTML=E(reply).replace(/\n/g,'<br>');
-  }catch(err){
-    ld.classList.remove('sp');
-    ld.innerHTML='❌ '+E(err.message)+'<br><small>Verifique a chave em ⚙️ Definições.</small>';
+
+    aiH.push({role:'assistant', content: reply});
+    acard.classList.remove('sp');
+    acard.innerHTML = aiMarkdown(reply);
+    document.getElementById('aimsgs').scrollTop = document.getElementById('aimsgs').scrollHeight;
+
+  } catch(err) {
+    acard.classList.remove('sp');
+    acard.innerHTML = '<strong>❌ Erro:</strong> ' + E(err.message)
+      + '<br><small style="color:#aaa">Verifique a chave API em ⚙️ Definições.</small>';
     aiH.pop();
   }
-  document.getElementById('aisnd').disabled=false;
+  document.getElementById('aisnd').disabled = false;
 }
-document.getElementById('aitxt').addEventListener('input',function(){
-  this.style.height='auto';
-  this.style.height=Math.min(this.scrollHeight,110)+'px';
-});
 </script>
 </body>
 </html>
