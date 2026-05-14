@@ -1,5 +1,5 @@
 // UCIP Pediatria — Neonatologia
-// 24 fármacos
+// 29 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_NEONATOLOGIA = [
@@ -1042,5 +1042,182 @@ var DRUGS_NEONATOLOGIA = [
       "Conservar Curosurf a 2–8°C. Não recongelar."
     ],
     "source": "Sweet DG et al. European Consensus Guidelines Neonatology 2023; Göpel W. Lancet 2011 (NINSAPP); Kanmaz HG. Pediatrics 2013"
+  },
+{
+    "id": "palivizumab",
+    "name": "Palivizumab (Profilaxia VRS)",
+    "category": "neonatologia",
+    "class": "Anticorpo monoclonal humanizado anti-VRS (proteína F)",
+    "brands": "Synagis — frascos 50 mg/0,5 ml; 100 mg/1 ml",
+    "indication": [
+      "Profilaxia de bronquiolite grave por VRS em prematuros < 29 semanas GA (≤ 12 meses na época VRS)",
+      "Prematuros 29–35 semanas com factores de risco na época VRS",
+      "Doença pulmonar crónica da prematuridade (DBP) com terapêutica nas últimas 6 meses",
+      "Cardiopatia congenita hemodinamicamente significativa"
+    ],
+    "dose": [
+      {
+        "ind": "Profilaxia VRS",
+        "val": "15 mg/kg IM",
+        "max": "—",
+        "freq": "q28–30 dias durante a época VRS (5 doses — Outubro a Fevereiro em Portugal)",
+        "note": "IM no vasto lateral da coxa. Volume > 1 ml: dividir por 2 locais. Não existe antídoto — não usar em VRS activo estabelecido (sem evidência terapêutica)"
+      }
+    ],
+    "prep": "IM: não diluir. Refrigerar 2–8°C; não congelar. Usar imediatamente após abertura.",
+    "ci": [
+      "Trombocitopenia grave (risco hemorragia IM)",
+      "Coagulopatia grave"
+    ],
+    "alert": [
+      "⚠️ Profilaxia, não tratamento — não usar após diagnóstico de VRS activo",
+      "Reacções no local da injecção (eritema, induração) — frequentes",
+      "Anafilaxia rara (0,2%) — observar 30 min após administração",
+      "Nirsevimab (Beyfortus) — nova alternativa de dose única para todos os lactentes < 1 ano; eficácia superior (74% vs 55% redução hospitalizações)"
+    ],
+    "source": "BNF for Children 2023-24; IMpact-RSV Trial. Pediatrics 1998; DGS Circular VRS 2023; Hammitt LL et al. NEJM 2022 (nirsevimab)"
+  },
+  {
+    "id": "ibuprofen_pca_neo",
+    "name": "Ibuprofeno EV (PCA Neonatal)",
+    "category": "neonatologia",
+    "class": "AINE — inibidor COX não selectivo",
+    "brands": "Pedea — ampolas 5 mg/ml (2 ml = 10 mg)",
+    "indication": [
+      "Encerramento do canal arterial persistente hemodinamicamente significativo em prematuro",
+      "Alternativa à indometacina quando indometacina não disponível"
+    ],
+    "dose": [
+      {
+        "ind": "Encerramento PCA",
+        "val": "Dia 1: 10 mg/kg EV; Dias 2–3: 5 mg/kg EV",
+        "max": "—",
+        "freq": "1 dose/dia × 3 dias (intervalo 24h entre doses)",
+        "note": "Eficácia semelhante à indometacina com menor efeito na perfusão cerebral e renal (Ohlsson A et al. Cochrane 2020). Segundo ciclo possível se ecocardiograma confirmar PCA persistente"
+      }
+    ],
+    "prep": "EV: diluir em SF ou SG5% até volume adequado ao peso. Administrar em 15 min. Preparar fresco.",
+    "ci": [
+      "Hemorragia activa (especialmente IVH grau III-IV)",
+      "Trombocitopenia < 60.000/μL",
+      "Insuficiência renal (creatinina > 140 μmol/L)",
+      "Malformações congenitas dependentes de PCA (coarctação grave, TGA com septo intacto)"
+    ],
+    "alert": [
+      "⚠️ Verificar eco cardíaco antes e após tratamento",
+      "⚠️ Oligúria durante tratamento — monitorizar débito urinário e creatinina",
+      "⚠️ Não usar com indometacina (sem evidência de benefício adicional, toxicidade aumentada)",
+      "Hiperbilirrubinemia — ibuprofeno compete com bilirrubina na albumina (monitorizar bili)",
+      "NEC: monitorizar achados abdominais durante tratamento"
+    ],
+    "source": "BNF for Children 2023-24; Ohlsson A et al. Cochrane 2020; Neofax 2023"
+  },
+  {
+    "id": "fototerapia_neo",
+    "name": "Fototerapia (Hiperbilirrubinemia Neonatal)",
+    "category": "neonatologia",
+    "class": "Tratamento físico — fotoisomerização da bilirrubina",
+    "brands": "Equipamento: Bilibed, Biliblanket, lâmpadas LED (comprimento onda 430–490 nm)",
+    "indication": [
+      "Hiperbilirrubinemia neonatal não-conjugada — limiar por nomograma (AAP 2022/NICE 2023)",
+      "Prevenção de kernícterus",
+      "Pós-exsanguinotransfusão — manutenção"
+    ],
+    "dose": [
+      {
+        "ind": "Fototerapia standard",
+        "val": "Irradiância ≥ 8–10 μW/cm²/nm",
+        "max": "—",
+        "freq": "Contínua (ou com pausas para amamentação). Repetir bilirrubina q6–12h",
+        "note": "Fototerapia intensiva (≥ 30 μW/cm²/nm): bilateral (cobertor + lâmpada superior) — usar se bili próxima do limiar de exsanguinotransfusão. Nomograma AAP 2022 revisado substituiu Bhutani 2004"
+      }
+    ],
+    "prep": "Olhos protegidos (penso opaco). Máxima exposição de pele. Hidratação oral aumentada (fototerapia aumenta perdas insensíveis). Temperatura axilar q2–4h.",
+    "ci": [
+      "Hiperbilirrubinemia conjugada (síndrome Bronze Baby)",
+      "Porfiria"
+    ],
+    "alert": [
+      "⚠️ Síndrome Bronze Baby: hiperbilirrubinemia conjugada + fototerapia → pigmentação escura irreversível (temporária)",
+      "⚠️ Hipocalcemia — fototerapia aumenta clearance de cálcio; monitorizar Ca²⁺",
+      "Hipertermia — monitorizar temperatura; ajustar ambiente",
+      "Lesão retiniana teórica se protecção ocular inadequada",
+      "Nomograma AAP 2022 diferenciado por risco neurotoxicidade (GA, factores risco) — usar tabelas actualizadas"
+    ],
+    "source": "AAP Hyperbilirubinemia Guidelines 2022; NICE CG98 2023; Newman TB et al. NEJM 2023"
+  },
+  {
+    "id": "eritropoietina_neo",
+    "name": "Eritropoietina (EPO Neonatal)",
+    "category": "neonatologia",
+    "class": "Factor de crescimento hematopoiético — glicoproteína recombinante",
+    "brands": "Eprex (epoetin alfa); NeoRecormon (epoetin beta) — seringas pré-cheias",
+    "indication": [
+      "Anemia da prematuridade — redução de transfusões (benefício modesto)",
+      "Neuroproteção pós-EHI moderada-grave — em investigação (adjuvante ao arrefecimento)",
+      "Anemia crónica em prematuridade extrema com múltiplas transfusões"
+    ],
+    "dose": [
+      {
+        "ind": "Anemia da prematuridade",
+        "val": "200–400 UI/kg/dose SC",
+        "max": "—",
+        "freq": "3× /semana × 4–6 semanas",
+        "note": "Associar ferro EV ou oral (2–6 mg/kg/dia de ferro elemento). Benefício clínico modesto — não elimina necessidade de transfusão (Cochrane 2020)"
+      },
+      {
+        "ind": "Neuroproteção pós-EHI (protocolo)",
+        "val": "1000 UI/kg/dose EV",
+        "max": "—",
+        "freq": "Dias 1, 2, 3 (com início nas primeiras 6h de vida)",
+        "note": "Evidência preliminar favorável — ensaios em curso (HEAL trial). Não standard of care ainda"
+      }
+    ],
+    "prep": "SC: administrar não diluído. Refrigerar 2–8°C; não congelar. EV: diluir em soro albumina 0,05% para prevenir adsorção.",
+    "ci": [
+      "Hipertensão não controlada",
+      "Trombose activa",
+      "Epilepsia não controlada"
+    ],
+    "alert": [
+      "⚠️ Trombocitose transitória — monitorizar plaquetas",
+      "Hipertensão — monitorizar TA",
+      "Requer suplementação de ferro para eficácia — ferritina alvo > 100 μg/L",
+      "Impacto clínico em anemia da prematuridade limitado — estratégias de minimização de flebotomias e clampagem tardia do cordão mais eficazes (WHO 2014)"
+    ],
+    "source": "BNF for Children 2023-24; Ohlsson A et al. Cochrane 2020; Wu YW et al. JAMA 2022 (HEAL trial)"
+  },
+  {
+    "id": "acido_tranexamico_neo",
+    "name": "Ácido Tranexâmico (Hemorragia Neonatal)",
+    "category": "neonatologia",
+    "class": "Antifibrinolítico — análogo da lisina",
+    "brands": "Transamin; Ácido Tranexâmico Generis — ampolas 500 mg/5 ml",
+    "indication": [
+      "Hemorragia neonatal grave — peri-operatório de cirurgia cardíaca neonatal",
+      "Coagulopatia hemorrágica neonatal refractária",
+      "Hemorragia peri-operatória significativa em cirurgia neonatal major"
+    ],
+    "dose": [
+      {
+        "ind": "Cirurgia cardíaca neonatal / hemorragia grave",
+        "val": "10–15 mg/kg EV carga; depois 1–3 mg/kg/h perfusão",
+        "max": "—",
+        "freq": "Carga pré-incisão; perfusão durante cirurgia e 4–6h pós-op",
+        "note": "Dados pediátricos extrapolados de estudos CRASH-2 e ensaios de cirurgia cardíaca pediátrica"
+      }
+    ],
+    "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 100 mg/ml. Administrar carga em 10–15 min.",
+    "ci": [
+      "Trombose activa (TVP, TEP)",
+      "Hematúria de origem renal alta (risco retenção coágulos)",
+      "Convulsões activas (doses altas — efeito GABA antagonista)"
+    ],
+    "alert": [
+      "⚠️ Dose alta (> 100 mg/kg) associada a convulsões — doses neonatais conservadoras (10–15 mg/kg)",
+      "⚠️ Risco trombótico em RN de alto risco (policitemia, catéteres, síndrome antifosfolípido materno)",
+      "Evidência neonatal limitada — usar apenas em contexto de hemorragia grave com benefício esperado claro"
+    ],
+    "source": "BNF for Children 2023-24; Faraoni D et al. JTCVS 2014; CRASH-2 Collaborators Lancet 2010"
   }
 ];

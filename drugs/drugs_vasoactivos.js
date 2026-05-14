@@ -1,9 +1,9 @@
 // UCIP Pediatria — Vasoactivos & Inotrópicos
-// 7 fármacos
+// 4 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_VASOACTIVOS = [
-  {
+{
     "id": "dopamina",
     "name": "Dopamina",
     "category": "vasoactivo",
@@ -38,7 +38,7 @@ var DRUGS_VASOACTIVOS = [
     ],
     "source": "Formulário de Pediatria 3ª Ed.; Surviving Sepsis Campaign 2020; BNF for Children 2023-24"
   },
-  {
+{
     "id": "dobutamina",
     "name": "Dobutamina",
     "category": "vasoactivo",
@@ -72,7 +72,7 @@ var DRUGS_VASOACTIVOS = [
     ],
     "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
   },
-  {
+{
     "id": "noradrenalina",
     "name": "Noradrenalina (Norepinefrina)",
     "category": "vasoactivo",
@@ -106,49 +106,7 @@ var DRUGS_VASOACTIVOS = [
     ],
     "source": "Surviving Sepsis Campaign 2020; BNF for Children 2023-24"
   },
-  {
-    "id": "milrinona",
-    "name": "Milrinona",
-    "category": "vasoactivo",
-    "class": "Inibidor da fosfodiesterase-3 — inodilatador",
-    "brands": "Corotrop / Primacor 10 mg/10 ml",
-    "indication": [
-      "Disfunção miocárdica pós-cirurgia cardíaca",
-      "Choque cardiogénico com RVS elevada",
-      "Hipertensão pulmonar com disfunção VD"
-    ],
-    "dose": [
-      {
-        "ind": "Carga (opcional)",
-        "val": "50–75 mcg/kg EV em 15–60 min",
-        "max": "—",
-        "freq": "dose única",
-        "note": "⚠️ Monitorização TA rigorosa — hipotensão frequente na carga"
-      },
-      {
-        "ind": "Manutenção",
-        "val": "0,25–0,75 mcg/kg/min",
-        "max": "1 mcg/kg/min",
-        "freq": "perfusão contínua",
-        "note": ""
-      }
-    ],
-    "prep": "Diluir em SF ou SG5%. Não misturar com furosemida (precipita). EV central.",
-    "ci": [
-      "Cardiomiopatia hipertrófica obstrutiva",
-      "Estenose aórtica/pulmonar grave",
-      "Hipotensão grave não corrigida"
-    ],
-    "alert": [
-      "⚠️ Hipotensão — especialmente com dose de carga em doente hipovolémico",
-      "⚠️ Não misturar com furosemida (precipitação imediata)",
-      "⚠️ Arritmias ventriculares e supraventriculares",
-      "⚠️ Ajuste na insuf. renal (excreção renal 85%)",
-      "Efeito inotrópico + vasodilatador — ideal no ventrículo hipertensivo"
-    ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
-  },
-  {
+{
     "id": "vasopressina",
     "name": "Vasopressina (ADH)",
     "category": "vasoactivo",
@@ -187,85 +145,5 @@ var DRUGS_VASOACTIVOS = [
       "Não tem efeito inotrópico — não usar como inotrópico isolado"
     ],
     "source": "Surviving Sepsis Campaign 2020; BNF for Children 2023-24"
-  },
-  {
-    "id": "amrinona_milrinona_alt",
-    "name": "Levosimendan",
-    "category": "vasoactivo",
-    "src": "added",
-    "class": "Sensibilizador ao cálcio + inibidor PDE3 — inodilatador",
-    "brands": "Simdax 2,5 mg/ml conc. para infusão (5 ml amp.)",
-    "indication": [
-      "Insuficiência cardíaca aguda descompensada refractária a inotrópicos convencionais",
-      "Disfunção VD grave pós-cirurgia cardíaca",
-      "Choque cardiogénico refractário (off-label pediátrico)"
-    ],
-    "dose": [
-      {
-        "ind": "Perfusão EV (pediátrico — off-label)",
-        "val": "Carga: 6–12 mcg/kg em 10 min (opcional) → Manutenção: 0,1–0,2 mcg/kg/min",
-        "max": "0,2 mcg/kg/min",
-        "freq": "perfusão 24h (efeito dura 7–9 dias por metabolito activo)",
-        "note": "⚠️ Carga omitida frequentemente — risco de hipotensão. Iniciar directamente a manutenção"
-      },
-      {
-        "ind": "Adulto",
-        "val": "0,1 mcg/kg/min × 24h",
-        "max": "0,2 mcg/kg/min",
-        "freq": "infusão única 24h",
-        "note": ""
-      }
-    ],
-    "prep": "Diluir em SG5%. Concentração 0,025 mg/ml (250 ml). EV central preferido.",
-    "ci": [
-      "Obstrução mecânica saída VE/VD",
-      "Insuf. renal grave (TFG < 30)",
-      "Hipotensão grave não corrigida",
-      "Taquicardia ventricular"
-    ],
-    "alert": [
-      "⚠️ Hipotensão (mais frequente com dose de carga)",
-      "⚠️ Taquicardia",
-      "⚠️ Hipocaliemia — monitorizar K+",
-      "⚠️ Uso off-label em pediatria — evidência limitada",
-      "Efeito prolongado por metabolito activo (OR-1896): 7–9 dias"
-    ],
-    "source": "Egan JR. Pediatr Crit Care Med 2006; Namachivayam P. PCCM 2006; Simdax SmPC"
-  },
-  {
-    "id": "nitroprussiato",
-    "name": "Nitroprussiato de Sódio",
-    "category": "vasoactivo",
-    "src": "original",
-    "class": "Vasodilatador directo — dador de NO (arterial + venoso)",
-    "brands": "Nipride 50 mg pó EV",
-    "indication": [
-      "Emergência hipertensiva grave",
-      "Redução pós-carga em ICC grave / insuf. valvular aguda",
-      "Dissecção aórtica (com betabloqueante)"
-    ],
-    "dose": [
-      {
-        "ind": "Perfusão EV",
-        "val": "0,3–0,5 mcg/kg/min (início) → 3–4 mcg/kg/min",
-        "max": "8–10 mcg/kg/min (máx. 10 min)",
-        "freq": "perfusão contínua",
-        "note": "Duração máxima: 72h. Dose < 2 mcg/kg/min raramente tóxica"
-      }
-    ],
-    "prep": "Proteger da luz (papel alumínio). Diluir em SG5% APENAS. Concentração 200–1000 mcg/ml. EV central.",
-    "ci": [
-      "Insuf. hepática grave",
-      "Hipotiroidismo (tiocianato agrava)",
-      "Deficiência de vitamina B12"
-    ],
-    "alert": [
-      "⛔ TOXICIDADE POR CIANETO — risco em doses > 2 mcg/kg/min > 48–72h. Sintomas: acidose metabólica, elevação SvO2, confusão",
-      "⚠️ Monitorizar tiocianato em uso > 48h (nível < 100 mcg/ml)",
-      "⚠️ Antídoto: hidroxocobalamina 70 mg/kg EV",
-      "⚠️ Proteger solução da luz",
-      "⚠️ Hipotensão intensa — linha arterial obrigatória"
-    ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
   }
 ];

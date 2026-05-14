@@ -1,9 +1,9 @@
 // UCIP Pediatria — Emergência & Reanimação
-// 6 fármacos
+// 8 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_EMERGENCIA = [
-  {
+{
     "id": "adrenalina",
     "name": "Adrenalina (Epinefrina)",
     "category": "emergencia",
@@ -57,7 +57,7 @@ var DRUGS_EMERGENCIA = [
     ],
     "source": "ILCOR 2021; ERC Guidelines 2021; WAO Anaphylaxis Guidelines 2020"
   },
-  {
+{
     "id": "atropina",
     "name": "Atropina",
     "category": "emergencia",
@@ -104,92 +104,7 @@ var DRUGS_EMERGENCIA = [
     ],
     "source": "ILCOR 2021; BNF for Children 2023-24; Harriet Lane 23rd Ed"
   },
-  {
-    "id": "adenosina",
-    "name": "Adenosina",
-    "category": "emergencia",
-    "class": "Antiarrítmico — agonista dos receptores de adenosina A1",
-    "brands": "Adenocor 6 mg/2 ml",
-    "indication": [
-      "Taquicardia supraventricular paroxística (TSV) — 1ª linha",
-      "Diagnóstico diferencial taquicardias de QRS estreito"
-    ],
-    "dose": [
-      {
-        "ind": "TSV",
-        "val": "0,1 mg/kg EV bólus rápido",
-        "max": "6 mg 1ª dose; 12 mg doses seguintes",
-        "freq": "Aumentar 0,05–0,1 mg/kg cada 1–2 min se sem resposta",
-        "note": "Administrar em acesso EV o mais central possível, seguido imediatamente de flush 5–10 ml SF. Bólus em < 2 seg."
-      }
-    ],
-    "prep": "Não diluir. Bólus rápido seguido de flush SF imediato.",
-    "ci": [
-      "Bloqueio AV 2º/3º grau (sem pacemaker)",
-      "Doença do nódulo sinusal",
-      "Asma grave (broncoespasmo)"
-    ],
-    "alert": [
-      "⚠️ Semi-vida ~10 seg — tem de ser administrada MUITO rapidamente e pelo acesso mais central disponível",
-      "⚠️ Potenciada por dipiridamol (reduzir dose 75%) e carbamazepina",
-      "⚠️ Antagonizada por teofilina/cafeína (pode necessitar doses maiores)",
-      "Efeitos transitórios: rubor, dispneia, dor torácica, assistolia momentânea — normal e esperado",
-      "Monitorização ECG contínua obrigatória"
-    ],
-    "source": "PALS Guidelines AHA 2020; BNF for Children 2023-24"
-  },
-  {
-    "id": "amiodarona",
-    "name": "Amiodarona",
-    "category": "emergencia",
-    "class": "Antiarrítmico classe III — bloqueador múltiplos canais",
-    "brands": "Cordarone 150 mg/3 ml",
-    "indication": [
-      "FV/TV sem pulso refractária à desfibrilhação (PCR)",
-      "TV com pulso hemodinamicamente instável",
-      "TSV refractária à adenosina",
-      "Flutter/fibrilhação auricular"
-    ],
-    "dose": [
-      {
-        "ind": "PCR (FV/TV sem pulso)",
-        "val": "5 mg/kg EV/IO bólus",
-        "max": "300 mg",
-        "freq": "Pode repetir até 2x (máx. 15 mg/kg total no dia)",
-        "note": "Administrar após 3ª desfibrilhação"
-      },
-      {
-        "ind": "TV com pulso / TSV",
-        "val": "5 mg/kg EV em 20–60 min",
-        "max": "300 mg/dose",
-        "freq": "pode repetir até dose total 15 mg/kg/dia",
-        "note": "Diluir em SG5%. Monitorização TA contínua — hipotensão frequente"
-      },
-      {
-        "ind": "Manutenção",
-        "val": "10–20 mg/kg/dia EV",
-        "max": "1200 mg/dia",
-        "freq": "perfusão contínua",
-        "note": ""
-      }
-    ],
-    "prep": "Diluir sempre em SG5% (precipita com SF). Concentração máxima EV periférico: 2 mg/ml. EV central: até 6 mg/ml.",
-    "ci": [
-      "Bloqueio AV 2º/3º grau sem pacemaker",
-      "Doença do nódulo sinusal",
-      "Disfunção tiroideia grave",
-      "Hipersensibilidade ao iodo"
-    ],
-    "alert": [
-      "⚠️ Incompatível com SF — usar EXCLUSIVAMENTE SG5%",
-      "⚠️ Múltiplas interacções: digoxina (↑ nível 2×), varfarina, fenitoína",
-      "⚠️ Toxicidade pulmonar, hepática, tiroideia em uso prolongado",
-      "Hipotensão durante infusão — titular velocidade",
-      "QTc prolongado — risco torsades de pointes (menor que outros antiarrítmicos Cl III)"
-    ],
-    "source": "ILCOR 2021; ERC 2021; PALS AHA 2020"
-  },
-  {
+{
     "id": "bicarbonato",
     "name": "Bicarbonato de Sódio",
     "category": "emergencia",
@@ -238,7 +153,7 @@ var DRUGS_EMERGENCIA = [
     ],
     "source": "ILCOR 2021; Harriet Lane 23rd Ed; BNF for Children 2023-24"
   },
-  {
+{
     "id": "calcio_gluconato",
     "name": "Gluconato de Cálcio 10%",
     "category": "emergencia",
@@ -287,5 +202,173 @@ var DRUGS_EMERGENCIA = [
       "Preferir cloreto de cálcio na PCR (3× mais Ca²⁺ biodisponível)"
     ],
     "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; PALS AHA 2020"
+  },
+{
+    "id": "flumazenil",
+    "name": "Flumazenil",
+    "category": "emergencia",
+    "class": "Antagonista benzodiazepínico — bloqueador competitivo receptor GABA-A",
+    "brands": "Anexate — ampolas 0,5 mg/5 ml (0,1 mg/ml)",
+    "indication": [
+      "Reversão de sedação/depressão respiratória por benzodiazepinas",
+      "Intoxicação por benzodiazepinas com depressão do SNC",
+      "Diagnóstico diferencial coma de causa desconhecida"
+    ],
+    "dose": [
+      {
+        "ind": "Reversão sedação/intoxicação BZD",
+        "val": "0,01 mg/kg EV em 15 seg",
+        "max": "0,2 mg/dose; máx acumulado 1 mg",
+        "freq": "Repetir q1 min até resposta; máx 4 doses",
+        "note": "Semi-vida 40–80 min — muito mais curta que benzodiazepinas; ressedação frequente. Monitorizar ≥ 2h após última dose"
+      }
+    ],
+    "prep": "EV: administrar não diluído (0,1 mg/ml) ou diluir em SF. Bólus lento 15 seg. Ter material reanimação disponível.",
+    "ci": [
+      "Intoxicação mista com antidepressivos tricíclicos (pode precipitar convulsões)",
+      "Epilepsia em tratamento crónico com BZD (pode precipitar estado de mal epiléptico)",
+      "Pressão intracraniana elevada (vasodilatação cerebral)"
+    ],
+    "alert": [
+      "⚠️ Ressedação provável — semi-vida 40 min vs horas para BZD; manter monitorização",
+      "⚠️ Pode precipitar síndrome abstinência BZD aguda (convulsões, agitação) em dependentes",
+      "⚠️ NÃO reverte depressão por opioides, barbitúricos ou outros hipnóticos",
+      "Não usar como diagnóstico de rotina em coma — usar apenas quando BZD documentada ou fortemente suspeita"
+    ],
+    "source": "BNF for Children 2023-24; Bhatt M et al. Lancet 2017; TOXBASE UK"
+  },
+  {
+    "id": "naloxona_emerg",
+    "name": "Naloxona (Emergência)",
+    "category": "emergencia",
+    "class": "Antagonista opioide — bloqueador competitivo receptores μ, κ, δ",
+    "brands": "Narcan — ampolas 0,4 mg/ml (1 ml); 1 mg/ml (2 ml); intranasal 4 mg/0,1 ml",
+    "indication": [
+      "Depressão respiratória por opioides — emergência",
+      "Coma/inconsciência por intoxicação opioide",
+      "Apneia neonatal por opioides maternos intraparto",
+      "Prurido refractário e retenção urinária por opioides (doses baixas)"
+    ],
+    "dose": [
+      {
+        "ind": "Depressão respiratória grave — criança",
+        "val": "0,01 mg/kg EV/IO/IM/SC",
+        "max": "0,4 mg/dose",
+        "freq": "q2–3 min até resposta respiratória adequada (não esperar reversão completa)",
+        "note": "Titular para manter FR adequada sem reverter analgesia completa. Infusão: 0,005–0,01 mg/kg/h se recorrência"
+      },
+      {
+        "ind": "Apneia neonatal por opioides maternos",
+        "val": "0,01 mg/kg EV/IM/SC",
+        "max": "—",
+        "freq": "Dose única; repetir se sem resposta em 2–3 min",
+        "note": "NÃO administrar a RN de mãe dependente de opioides (precipita abstinência neonatal grave)"
+      },
+      {
+        "ind": "Intranasal (pré-hospitalar/IM indisponível)",
+        "val": "0,1 mg/kg IN",
+        "max": "4 mg total",
+        "freq": "q2–3 min",
+        "note": "Absorção IN mais lenta — usar EV/IO se acesso disponível"
+      }
+    ],
+    "prep": "EV: diluir para 0,04 mg/ml (0,4 mg em 10 ml SF) para titulação precisa em criança. Perfusão: 0,4–1 mg em 100 ml SF, titular por resposta.",
+    "ci": [
+      "Hipersensibilidade à naloxona",
+      "Cautela em dependentes de opioides (precipita abstinência aguda grave)"
+    ],
+    "alert": [
+      "⚠️ Semi-vida 60–90 min — mais curta que maioria dos opioides; ressedação frequente, especialmente com metadona ou fentanil LP",
+      "⚠️ Reversão demasiado rápida/dose excessiva: dor aguda, hipertensão, edema pulmonar, arritmias, PCR (descrito em adultos)",
+      "⚠️ NÃO administrar a RN de mãe em programa de metadona — abstinência neonatal grave",
+      "Titular para manter FR > 8/min e SpO2 > 94% — não para acordar completamente",
+      "Alternativa à naloxona em prurido opioide: doses muito baixas 0,5–2 μg/kg/h"
+    ],
+    "source": "BNF for Children 2023-24; PALS AHA 2020; Boyer EW NEJM 2012"
+  },
+  {
+    "id": "sulfato_mg_emerg",
+    "name": "Sulfato de Magnésio (Emergência)",
+    "category": "emergencia",
+    "class": "Electrólito — bloqueador canal Ca²⁺, broncodilatador, anticonvulsivante",
+    "brands": "Sulfato de Magnésio 50% (500 mg/ml) — ampolas 10 ml (5 g)",
+    "indication": [
+      "Broncoespasmo grave refractário a β2 — adjuvante na asma grave",
+      "Torsades de pointes — 1ª linha",
+      "Convulsões por eclâmpsia / hipomagnesemia",
+      "Hipomagnesiemia sintomática grave",
+      "Arritmias refractárias associadas a hipomagnesemia"
+    ],
+    "dose": [
+      {
+        "ind": "Broncoespasmo grave (asma aguda)",
+        "val": "25–75 mg/kg EV em 20 min",
+        "max": "2 g",
+        "freq": "Dose única; pode repetir 1× se necessário",
+        "note": "Reduz internamento em UCI em asma grave (Cochrane 2014, NNT=4 para hospitalização)"
+      },
+      {
+        "ind": "Torsades de pointes / hipomagnesemia grave",
+        "val": "25–50 mg/kg EV em 10–20 min",
+        "max": "2 g",
+        "freq": "Dose única; perfusão manutenção 10–20 mg/kg/h se recorrência",
+        "note": ""
+      }
+    ],
+    "prep": "EV: diluir solução 50% em SF ou SG5% até concentração ≤ 20% (200 mg/ml) periférico; ≤ 50% central. NUNCA em bólus rápido (assistolia).",
+    "ci": [
+      "Bloqueio AV (aprofunda bloqueio)",
+      "Insuficiência renal grave (acumulação — toxicidade)",
+      "Miastenia gravis (bloqueio neuromuscular)"
+    ],
+    "alert": [
+      "⚠️ Toxicidade por magnésio: hiporreflexia → paralisia respiratória → PCR. Monitorizar reflexo rotuliano",
+      "⚠️ Antídoto da toxicidade: gluconato de cálcio 10% 0,2 ml/kg EV",
+      "⚠️ Infusão rápida causa hipotensão e rubor facial",
+      "Monitorizar magnesiemia se perfusão prolongada (alvo 2–3,5 mmol/L terapêutico)"
+    ],
+    "source": "BNF for Children 2023-24; Griffiths B et al. Cochrane 2016 (asma); PALS AHA 2020"
+  },
+  {
+    "id": "dextrose_emerg",
+    "name": "Glucose 10% / 20% (Hipoglicemia)",
+    "category": "emergencia",
+    "class": "Substrato energético — carbohidrato",
+    "brands": "Glucose 10% 250 ml; Glucose 20% 100 ml; Glucose 50% 20 ml ampola",
+    "indication": [
+      "Hipoglicemia sintomática grave — emergência",
+      "Hipoglicemia neonatal (< 2,6 mmol/L sintomática)",
+      "Hipoglicemia em contexto de intoxicação por insulina/sulfonilureias",
+      "Manutenção normoglicemia em doente crítico pediátrico"
+    ],
+    "dose": [
+      {
+        "ind": "Hipoglicemia sintomática grave — bólus",
+        "val": "2 ml/kg de Glucose 10% EV",
+        "max": "—",
+        "freq": "Bólus; repetir controlo glicemia 15 min",
+        "note": "Equivalente a 0,2 g/kg glucose. Em RN/lactente: usar G10%; em criança maior: G10% ou G20% (0,5–1 ml/kg)"
+      },
+      {
+        "ind": "Hipoglicemia — manutenção após bólus",
+        "val": "Taxa de infusão de glucose (GIR) 4–8 mg/kg/min",
+        "max": "—",
+        "freq": "Perfusão contínua; ajustar por glicemia capilar q1–2h",
+        "note": "Fórmula GIR: ml/h = GIR(mg/kg/min) × peso(kg) × 60 / [concentração glucose(mg/ml)]"
+      }
+    ],
+    "prep": "Bólus: G10% — administrar EV em 1–3 min. G20% ou G50% APENAS por acesso central (risco esclerose venosa). Proteger da luz se prolongado.",
+    "ci": [
+      "Hiperosmolaridade grave",
+      "Hiperglicemia (obviar causa antes de infundir)",
+      "G50% por via periférica"
+    ],
+    "alert": [
+      "⚠️ G50% nunca periférica — extravasamento causa necrose tecidular grave",
+      "⚠️ Controlar glicemia 15 min após bólus e q1h durante infusão — risco hiperglicemia rebote",
+      "Hipoglicemia recorrente após bólus sugere causa subjacente (hiperinsulinismo, insuf. supra-renal, erros metabólicos)",
+      "Em RN: GIR 4–6 mg/kg/min habitual; hiperinsulinismo pode necessitar GIR > 15 mg/kg/min"
+    ],
+    "source": "BNF for Children 2023-24; Thornton PS et al. Pediatrics 2015 (neonatal hypoglycemia)"
   }
 ];

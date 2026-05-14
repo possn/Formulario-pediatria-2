@@ -1,5 +1,5 @@
 // UCIP Pediatria — Corticoides & Imunossupressores
-// 5 fármacos
+// 10 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_CORTICOIDES = [
@@ -276,5 +276,212 @@ var DRUGS_CORTICOIDES = [
       "⚠️ Risco linfoma EBV+ (especialmente crianças seronegativas que recebem enxerto EBV+)"
     ],
     "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+  },
+{
+    "id": "metilprednisolona",
+    "name": "Metilprednisolona EV",
+    "category": "corticoide",
+    "class": "Corticosteroide — glucocorticoide potente",
+    "brands": "Solu-Medrol — frascos 40 mg, 125 mg, 500 mg, 1 g",
+    "indication": [
+      "Asma aguda grave — adjuvante ao broncodilatador",
+      "Croup grave / laringite subglótica",
+      "Choque séptico refractário com insuf. supra-renal (dose fisiológica)",
+      "Doença inflamatória grave (artrite idiopática juvenil, LES flare, dermatomiosite)",
+      "Espasmos infantis — protocolo UKISS/ACTH alternativa",
+      "Edema pós-extubação (profilaxia)"
+    ],
+    "dose": [
+      {
+        "ind": "Asma aguda / exacerbação inflamatória",
+        "val": "1–2 mg/kg/dia EV",
+        "max": "60 mg/dia",
+        "freq": "q6–12h",
+        "note": "Equivalência: 1 mg metilprednisolona = 1,25 mg prednisolona = 0,2 mg dexametasona"
+      },
+      {
+        "ind": "Pulso IV (doenças autoimunes graves)",
+        "val": "10–30 mg/kg EV em 1–3h",
+        "max": "1 g/dia",
+        "freq": "1× /dia × 3 dias",
+        "note": "Monitorizar TA, glicemia e ECG durante infusão — risco HTA, hiperglicemia, arritmias"
+      },
+      {
+        "ind": "Profilaxia edema pós-extubação",
+        "val": "0,5 mg/kg/dose EV",
+        "max": "20 mg/dose",
+        "freq": "q6h × 4 doses (início 12h antes extubação planeada)",
+        "note": "Reduz estridor pós-extubação em crianças de risco (Khemani RG et al. CCM 2009)"
+      }
+    ],
+    "prep": "EV: reconstituir com diluente fornecido; diluir em SF ou SG5%. Concentração ≤ 5 mg/ml. Administrar em 15–30 min (pulso: 1–3h).",
+    "ci": [
+      "Infecção sistémica não tratada (relativa — avaliar risco/benefício)",
+      "Vacinas vivas (≥ 2 mg/kg/dia por ≥ 14 dias — imunossupressão)",
+      "Úlcera péptica activa (relativa)"
+    ],
+    "alert": [
+      "⚠️ Hiperglicemia — monitorizar glicemia q4–6h durante pulso EV",
+      "⚠️ Hipertensão arterial — monitorizar TA durante infusão",
+      "⚠️ Psicose/agitação com pulsos altos (raro em criança)",
+      "⚠️ Insuf. supra-renal iatrogénica após uso prolongado — redução progressiva obrigatória",
+      "Mascarar sinais de infecção — vigilância clínica cuidadosa"
+    ],
+    "source": "BNF for Children 2023-24; GINA 2023; Khemani RG et al. Crit Care Med 2009"
+  },
+  {
+    "id": "micofenolato",
+    "name": "Micofenolato de Mofetil (MMF)",
+    "category": "corticoide",
+    "class": "Imunossupressor — inibidor IMPDH (síntese purinas)",
+    "brands": "CellCept — cáps 250 mg; comp 500 mg; susp 200 mg/ml; EV 500 mg",
+    "indication": [
+      "Profilaxia rejeição aguda em transplante renal, hepático, cardíaco — 2ª linha (com tacrolímus e corticoide)",
+      "Nefrite lúpica — 1ª linha classes III-IV (em alternativa a ciclofosfamida)",
+      "Síndrome nefrótico córtico-resistente",
+      "Dermatomiosite / polimiosite refractária"
+    ],
+    "dose": [
+      {
+        "ind": "Transplante (renal/hepático)",
+        "val": "600 mg/m²/dose PO",
+        "max": "1 g/dose (transplante renal); 1,5 g/dose (transplante hepático)",
+        "freq": "q12h",
+        "note": "Dose em m² preferida à dose em kg para uniformizar exposição (PK variável)"
+      },
+      {
+        "ind": "Nefrite lúpica / nefrótico córtico-resistente",
+        "val": "600 mg/m²/dose PO",
+        "max": "1,5 g/dose",
+        "freq": "q12h",
+        "note": "Monitorizar leucócitos — reduzir dose se leucopenia"
+      }
+    ],
+    "prep": "Oral: suspensão 200 mg/ml — agitar bem. Cápsulas: não abrir (pó teratogénico — usar luvas se manipulação). EV: diluir em SG5%, nunca SF.",
+    "ci": [
+      "Gravidez (teratogénico — categoria D; contracepção obrigatória)",
+      "Hipersensibilidade ao MMF ou ácido micofenólico"
+    ],
+    "alert": [
+      "⚠️ Teratogénico — contracepção obrigatória em adolescentes do sexo feminino; teste de gravidez antes de iniciar",
+      "⚠️ Mielossupressão (leucopenia, anemia, trombocitopenia) — hemograma semanal no 1º mês, mensal depois",
+      "⚠️ Infecções oportunistas — pneumocistose, CMV — considerar profilaxia",
+      "⚠️ Linfoma e outras neoplasias com imunossupressão prolongada",
+      "Diarreia e náuseas frequentes — tomar com alimentos; formulação entérica (Myfortic) melhor tolerada GI",
+      "Ajuste em insuf. renal grave (TFG < 25 ml/min)"
+    ],
+    "source": "BNF for Children 2023-24; Appel GB et al. JASN 2009 (nefrite lúpica); KDIGO Transplant Guidelines 2022"
+  },
+  {
+    "id": "azatioprina",
+    "name": "Azatioprina",
+    "category": "corticoide",
+    "class": "Imunossupressor — análogo das purinas (pró-fármaco de 6-mercaptopurina)",
+    "brands": "Imuran — comp 25/50 mg; EV 50 mg pó",
+    "indication": [
+      "Transplante de órgão sólido — manutenção (cada vez mais substituída por MMF)",
+      "Doença inflamatória intestinal (Crohn, CU) — manutenção de remissão",
+      "Hepatite autoimune — manutenção (com prednisolona)",
+      "Nefrite lúpica — manutenção após indução",
+      "Dermatomiosite, polimiosite, vasculites"
+    ],
+    "dose": [
+      {
+        "ind": "Imunossupressão / DII manutenção",
+        "val": "1–3 mg/kg/dia PO",
+        "max": "3 mg/kg/dia (150 mg/dia em prática)",
+        "freq": "1–2 doses/dia",
+        "note": "Iniciar com dose baixa (1 mg/kg) e titular por resposta e tolerância hematológica. Verificar TPMT antes de iniciar"
+      }
+    ],
+    "prep": "Oral: comprimidos — engolir inteiros com água. EV: diluir em SF ou SG5%.",
+    "ci": [
+      "Deficiência grave de TPMT (risco mielossupressão grave)",
+      "Uso concomitante com alopurinol (sem redução de dose — toxicidade grave por acumulação de 6-MP)",
+      "Gravidez (relativa — usar apenas se benefício claro)"
+    ],
+    "alert": [
+      "⚠️ Verificar TPMT (tiopurina metiltransferase) antes de iniciar — défice grave: toxicidade hematológica grave",
+      "⚠️ Alopurinol inibe xantina-oxidase → acumulação 6-MP → toxicidade grave; se combinação necessária: reduzir azatioprina para 25% da dose",
+      "⚠️ Hepatotoxicidade, pancreatite (rara mas grave)",
+      "Hemograma semanal no 1º mês, mensal depois",
+      "Risco aumentado de linfoma (especialmente linfoma hepatoesplénico de células T em DII)"
+    ],
+    "source": "BNF for Children 2023-24; ECCO-ESPGHAN IBD Guidelines 2018; Colombel JF et al. NEJM 2010"
+  },
+  {
+    "id": "metotrexato_imuno",
+    "name": "Metotrexato (Imunossupressor)",
+    "category": "corticoide",
+    "class": "Antagonista do folato — imunossupressor em doses baixas",
+    "brands": "Metotrexato — comp 2,5 mg; 10 mg; seringas pré-cheias SC 7,5/10/15/20/25 mg",
+    "indication": [
+      "Artrite idiopática juvenil (AIJ) — 1ª linha sistémica",
+      "Psoríase grave pediátrica",
+      "Dermatomiosite juvenil refractária",
+      "Doença de Crohn refractária",
+      "Manutenção de remissão em asma grave córtico-dependente"
+    ],
+    "dose": [
+      {
+        "ind": "AIJ / doenças reumatológicas",
+        "val": "10–15 mg/m²/semana PO/SC",
+        "max": "20–25 mg/semana",
+        "freq": "1× /semana (sempre no mesmo dia)",
+        "note": "SC preferível a PO: melhor biodisponibilidade e menos náuseas GI. Associar ácido fólico 5 mg 24–48h após cada dose"
+      }
+    ],
+    "prep": "SC: seringas pré-cheias — administrar em abdómen ou coxa. PO: comprimidos 2,5 mg — ingestão semanal.",
+    "ci": [
+      "Insuficiência renal (TFG < 60 ml/min — acumulação grave)",
+      "Insuficiência hepática significativa",
+      "Gravidez (teratogénico — categoria X)",
+      "Infecção activa grave"
+    ],
+    "alert": [
+      "⚠️ SEMPRE associar ácido fólico (5 mg/semana, no dia seguinte) — reduz toxicidade GI e hematológica sem reduzir eficácia",
+      "⚠️ Hepatotoxicidade — TFH trimestralmente; evitar álcool",
+      "⚠️ Pneumonite de hipersensibilidade — dispneia, febre, infiltrados — rara mas grave; suspender imediatamente",
+      "⚠️ Teratogénico — contracepção obrigatória; suspender ≥ 3 meses antes de gravidez",
+      "⚠️ Toxicidade aumentada com AINEs e cotrimoxazol (reduzem clearance renal)",
+      "Mucosite oral — reduz com ácido fólico"
+    ],
+    "source": "BNF for Children 2023-24; Ravelli A et al. Ann Rheum Dis 1995; ACR JIA Guidelines 2021"
+  },
+  {
+    "id": "hidroxicloroquina",
+    "name": "Hidroxicloroquina",
+    "category": "corticoide",
+    "class": "Antimalárico — imunossupressor / anti-inflamatório",
+    "brands": "Plaquenil — comp 200 mg",
+    "indication": [
+      "Lúpus eritematoso sistémico (LES) — tratamento base (todas as formas)",
+      "Artrite reumatóide / AIJ — adjuvante",
+      "Síndromes de sobreposição (overlap syndromes)",
+      "Fotossensibilidade e manifestações cutâneas do LES"
+    ],
+    "dose": [
+      {
+        "ind": "LES / doenças autoimunes",
+        "val": "5 mg/kg/dia PO (dose real de peso — não ideal)",
+        "max": "400 mg/dia",
+        "freq": "1–2 doses/dia com refeições",
+        "note": "Dose MÁXIMA: 5 mg/kg/dia de peso real (não ideal) — acima deste limiar risco retinal aumenta progressivamente"
+      }
+    ],
+    "prep": "Oral: comprimidos 200 mg — podem ser triturados e misturados com alimentos.",
+    "ci": [
+      "Retinopatia ou maculopatia pré-existente",
+      "Hipersensibilidade a cloroquina/antimaláricos",
+      "Deficiência de G6PD (hemólise — relativa)"
+    ],
+    "alert": [
+      "⚠️ Retinopatia — irreversível; monitorizar com OCT e campo visual anualmente após 5 anos de uso (ACR 2016)",
+      "Prolongamento QT — monitorizar ECG se factores de risco",
+      "Miopatia e cardiomiopatia (raro, uso muito prolongado)",
+      "Efeito terapêutico demora 3–6 meses — não descontinuar precocemente por falta de resposta imediata",
+      "Protege contra flares de LES e reduz mortalidade — tratar como fármaco basal obrigatório"
+    ],
+    "source": "BNF for Children 2023-24; Melles RB et al. JAMA Ophthalmol 2014; EULAR LES Guidelines 2023"
   }
 ];

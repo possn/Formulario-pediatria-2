@@ -1,5 +1,5 @@
 // UCIP Pediatria — Gastroenterologia
-// 6 fármacos
+// 13 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_GASTROENTEROLOGIA = [
@@ -276,5 +276,277 @@ var DRUGS_GASTROENTEROLOGIA = [
       "Bem tolerado — perfil segurança favorável"
     ],
     "source": "BNF for Children 2023-24; ECCO/ESPGHAN Guidelines 2023"
+  },
+{
+    "id": "pantoprazol",
+    "name": "Pantoprazol EV",
+    "category": "gastroenterologia",
+    "class": "Inibidor da bomba de protões (IBP)",
+    "brands": "Pantoloc EV — frascos 40 mg pó",
+    "indication": [
+      "Profilaxia úlcera de stress em UCI pediátrica",
+      "Hemorragia digestiva alta — estabilização pré-endoscopia",
+      "Esofagite erosiva grave quando via oral impossível",
+      "Síndrome de Zollinger-Ellison"
+    ],
+    "dose": [
+      {
+        "ind": "Profilaxia úlcera de stress / esofagite",
+        "val": "0,5–1 mg/kg/dia EV",
+        "max": "40 mg/dia",
+        "freq": "1 dose/dia",
+        "note": "< 2 anos: dados limitados. ≥ 2 anos: dose estabelecida"
+      },
+      {
+        "ind": "Hemorragia digestiva alta — aguda",
+        "val": "1 mg/kg EV em bólus, depois 0,1–0,2 mg/kg/h",
+        "max": "80 mg carga; 8 mg/h manutenção",
+        "freq": "Perfusão contínua 72h pós-hemostase endoscópica",
+        "note": "Esquema high-dose IBP reduz ressangramento pós-endoscopia (Lin HJ et al.)"
+      }
+    ],
+    "prep": "EV: reconstituir 40 mg em 10 ml SF; diluir em 100 ml SF. Administrar em 15 min (bólus) ou perfusão contínua. Estável 12h após reconstituição.",
+    "ci": [
+      "Hipersensibilidade a IBP",
+      "Uso com nelfinavir (reduz absorção)"
+    ],
+    "alert": [
+      "⚠️ Uso prolongado > 8 semanas: risco pneumonia, C. difficile, hipomagnesemia, deficiência vitamina B12",
+      "⚠️ Profilaxia de úlcera de stress só indicada em doentes de alto risco (ventilação mecânica > 48h, coagulopatia, choque) — evitar uso indiscriminado",
+      "IBP reduz absorção oral de cetoconazol, itraconazol, erlotinib, atazanavir"
+    ],
+    "source": "BNF for Children 2023-24; Faraoni D et al. Pediatr Crit Care Med 2016; ASHP Guidelines Stress Ulcer 1999"
+  },
+  {
+    "id": "ranitidina_alt",
+    "name": "Famotidina",
+    "category": "gastroenterologia",
+    "class": "Anti-histamínico H2 (antagonista receptor H2)",
+    "brands": "Famotidina Generis — comp 20/40 mg; EV 10 mg/2 ml",
+    "indication": [
+      "Profilaxia úlcera de stress (alternativa a IBP em < 1 ano)",
+      "Refluxo gastroesofágico sintomático",
+      "Esofagite péptica leve-moderada",
+      "Dispepsia / gastrite"
+    ],
+    "dose": [
+      {
+        "ind": "DRGE / esofagite — oral",
+        "val": "0,5 mg/kg/dose PO",
+        "max": "20 mg/dose",
+        "freq": "q12h",
+        "note": "Alternativa a IBP em lactentes < 1 ano quando IBP não disponível ou contra-indicado"
+      },
+      {
+        "ind": "EV",
+        "val": "0,25–0,5 mg/kg/dose EV",
+        "max": "20 mg/dose",
+        "freq": "q8–12h",
+        "note": ""
+      }
+    ],
+    "prep": "EV: diluir em SF até 2 mg/ml. Administrar em 15–30 min.",
+    "ci": [
+      "Hipersensibilidade a anti-H2",
+      "Insuficiência renal grave sem ajuste"
+    ],
+    "alert": [
+      "Taquifilaxia com uso prolongado (perda de efeito antisecretor em dias a semanas)",
+      "Ranitidina retirada do mercado (NDMA contaminação) — famotidina é alternativa de classe",
+      "Ajuste em IR: TFG < 50 ml/min reduzir dose 50% ou aumentar intervalo"
+    ],
+    "source": "BNF for Children 2023-24; van der Pol R et al. Arch Dis Child 2011"
+  },
+  {
+    "id": "ondansetron_iv",
+    "name": "Ondansetron EV/IM",
+    "category": "gastroenterologia",
+    "class": "Antagonista receptor 5-HT3 — antiemético",
+    "brands": "Zofran EV — ampolas 4 mg/2 ml; 8 mg/4 ml",
+    "indication": [
+      "Náusea e vómito pós-operatório (NVPO)",
+      "Náusea e vómito por quimioterapia — 1ª linha",
+      "Gastroenterite aguda com vómitos incoercíveis — facilitador da reidratação oral",
+      "Náusea/vómito em cuidados paliativos"
+    ],
+    "dose": [
+      {
+        "ind": "NVPO / vómito agudo",
+        "val": "0,1–0,15 mg/kg EV",
+        "max": "4 mg/dose (< 40 kg); 8 mg/dose (≥ 40 kg)",
+        "freq": "q6–8h",
+        "note": "Dose oral equivalente: 0,15 mg/kg. ODT (comprimido orodispersível) disponível para criança"
+      },
+      {
+        "ind": "Quimioterapia altamente emetizante",
+        "val": "0,15 mg/kg EV em 15 min",
+        "max": "8 mg/dose",
+        "freq": "q4h × 3 doses antes e durante QT; depois q8h",
+        "note": "Associar dexametasona e aprepitant em QT altamente emetizante"
+      }
+    ],
+    "prep": "EV: diluir em SF ou SG5% até 0,32 mg/ml. Administrar em 15 min.",
+    "ci": [
+      "QT prolongado congénito",
+      "Hipocaliemia / hipomagnesemia não corrigidas (arritmia)",
+      "Uso com apomorfina (hipotensão grave)"
+    ],
+    "alert": [
+      "⚠️ Prolongamento QT — evitar com outros QT-prolongadores; monitorizar ECG se cardiopatia",
+      "⚠️ Síndrome serotoninérgica — risco aumentado se combinado com tramadol, ISRS, triptanos",
+      "Cefaleias — efeito adverso mais frequente",
+      "Obstipação frequente em uso prolongado"
+    ],
+    "source": "BNF for Children 2023-24; Freedman SB et al. NEJM 2006 (gastroenteritis); MASCC Antiemetic Guidelines 2023"
+  },
+  {
+    "id": "domperidona",
+    "name": "Domperidona",
+    "category": "gastroenterologia",
+    "class": "Antagonista dopaminérgico D2 periférico — procinético",
+    "brands": "Motilium — susp 1 mg/ml; comp 10 mg",
+    "indication": [
+      "Refluxo gastroesofágico sintomático — procinético em lactente",
+      "Esvaziamento gástrico lento / gastroparesia",
+      "Náusea e vómito funcionais"
+    ],
+    "dose": [
+      {
+        "ind": "DRGE / procinético",
+        "val": "0,25 mg/kg/dose PO",
+        "max": "10 mg/dose",
+        "freq": "q6–8h, 15–30 min antes das refeições",
+        "note": "Não exceder 0,5 mg/kg/dia. Não usar > 1 semana sem reavaliação"
+      }
+    ],
+    "prep": "Oral: suspensão 1 mg/ml. Medir com seringa graduada.",
+    "ci": [
+      "QT prolongado / arritmias cardíacas",
+      "Insuf. hepática grave",
+      "Tumores hipofisários prolactina-dependentes",
+      "Uso com azóis (CYP3A4 — aumenta exposição domperidona e risco QT)"
+    ],
+    "alert": [
+      "⚠️ EMA 2014: risco arritmias graves (incluindo morte súbita) com domperidona — usar dose mínima pelo menor tempo possível",
+      "⚠️ Risco aumentado com doses > 0,5 mg/kg/dia e em < 1 ano",
+      "⚠️ Inibidores CYP3A4 (azóis, macrolídeos) aumentam drasticamente os níveis",
+      "Eficácia em DRGE pediátrica modesta — evidência fraca para uso prolongado",
+      "Monitorizar ECG se factores de risco de QT"
+    ],
+    "source": "BNF for Children 2023-24; EMA Safety Review 2014; Hibbs AM et al. Arch Dis Child 2006"
+  },
+  {
+    "id": "octreotido_gi",
+    "name": "Octreótido (Hemorragia GI)",
+    "category": "gastroenterologia",
+    "class": "Análogo sintético da somatostatina",
+    "brands": "Sandostatin — ampolas 0,05/0,1/0,5 mg/ml",
+    "indication": [
+      "Hemorragia varicosa esofágica — adjuvante à escleroterapia/ligadura",
+      "Hemorragia GI alta não varicosa refractária",
+      "Fístulas pancreáticas e enterocutâneas",
+      "Hipoglicemia refractária por hiperinsulinismo (nesidioblastose)"
+    ],
+    "dose": [
+      {
+        "ind": "Hemorragia varicosa esofágica",
+        "val": "1–2 μg/kg EV bólus, depois 1–5 μg/kg/h",
+        "max": "50 μg bólus; 50 μg/h perfusão",
+        "freq": "Perfusão contínua 2–5 dias",
+        "note": "Iniciar imediatamente na suspeita — antes da endoscopia"
+      },
+      {
+        "ind": "Hiperinsulinismo congénito",
+        "val": "1–10 μg/kg/dia SC/EV",
+        "max": "40 μg/kg/dia",
+        "freq": "q6–8h SC ou perfusão contínua",
+        "note": "Titular por glicemia; pode necessitar associar diazóxido"
+      }
+    ],
+    "prep": "EV: diluir em SF ou SG5%. Concentração 0,5–50 μg/ml. Administrar bólus em 3 min; perfusão contínua em bomba de seringa.",
+    "ci": [
+      "Hipersensibilidade à somatostatina",
+      "Diabetes mellitus (hiperglicemia; monitorizar)"
+    ],
+    "alert": [
+      "⚠️ Bradicardia e hipotensão com bólus rápido",
+      "⚠️ Hiperglicemia — monitorizar glicemia q2–4h durante perfusão",
+      "Hipoglicemia paradoxal em doses baixas (inibe glucagon)",
+      "Litíase biliar em uso prolongado (> 4 semanas)",
+      "Diarreia e cólica abdominal frequentes"
+    ],
+    "source": "BNF for Children 2023-24; Eroglu Y et al. J Pediatr Gastroenterol Nutr 2004; ESPGHAN Variceal Guidelines 2018"
+  },
+  {
+    "id": "acido_urso",
+    "name": "Ácido Ursodesoxicólico",
+    "category": "gastroenterologia",
+    "class": "Ácido biliar hidrofílico — hepatoprotector",
+    "brands": "Ursofalk — cáps 250 mg; susp 250 mg/5 ml; comp 150 mg",
+    "indication": [
+      "Colestase neonatal (atresia biliar, défice α1-antitripsina, colestase associada a NP)",
+      "Fibrose quística — componente hepático/colestático",
+      "Colangite esclerosante primária pediátrica",
+      "Litíase biliar de colesterol — dissolução (indicação rara em criança)"
+    ],
+    "dose": [
+      {
+        "ind": "Colestase / hepatopatia",
+        "val": "10–20 mg/kg/dia PO",
+        "max": "—",
+        "freq": "2–3 doses/dia com refeições",
+        "note": "Fibrose quística: 15–30 mg/kg/dia pode ser necessário"
+      }
+    ],
+    "prep": "Oral: suspensão 250 mg/5 ml — agitar bem. Tomar com refeições para maximizar circulação entero-hepática.",
+    "ci": [
+      "Inflamação aguda da vesícula biliar ou vias biliares",
+      "Obstrução biliar completa"
+    ],
+    "alert": [
+      "Diarreia com doses elevadas — iniciar com dose baixa e subir progressivamente",
+      "Monitorizar TFH trimestralmente",
+      "Benefício em colestase neonatal baseado em evidência observacional — sem ensaios controlados robustos"
+    ],
+    "source": "BNF for Children 2023-24; Colombo C et al. J Hepatol 2016 (fibrose quística); ESPGHAN Liver Guidelines"
+  },
+  {
+    "id": "mesalazina_crohn",
+    "name": "Mesalazina (5-ASA)",
+    "category": "gastroenterologia",
+    "class": "Aminossalicilato — anti-inflamatório intestinal",
+    "brands": "Pentasa — comp LP 500 mg/1 g; granulado 1 g/2 g; supositórios 500 mg/1 g; enema 1 g/100 ml",
+    "indication": [
+      "Doença de Crohn leve-moderada ileocólica — indução e manutenção",
+      "Colite ulcerosa — indução e manutenção (1ª linha em leve-moderada)",
+      "Proctite ulcerosa — formulações rectais"
+    ],
+    "dose": [
+      {
+        "ind": "Colite ulcerosa — indução",
+        "val": "30–50 mg/kg/dia PO",
+        "max": "4 g/dia",
+        "freq": "2–3 doses/dia (LP) ou 1 dose/dia (Pentasa granulado)",
+        "note": "Dose de manutenção: 15–30 mg/kg/dia"
+      },
+      {
+        "ind": "Proctite — rectal",
+        "val": "Supositório 500 mg–1 g rectal",
+        "max": "1 g/dia",
+        "freq": "1 dose/noite",
+        "note": "Combinação oral + rectal superior a cada um isolado"
+      }
+    ],
+    "prep": "Oral: comprimidos e granulado — não mastigar; engolir inteiros (libertação pH-dependente).",
+    "ci": [
+      "Insuficiência renal grave (TFG < 30 ml/min — nefrotoxicidade)",
+      "Alergia a salicilatos"
+    ],
+    "alert": [
+      "⚠️ Nefrotoxicidade — monitorizar função renal anualmente; rara mas irreversível",
+      "Hepatotoxicidade rara — monitorizar TFH",
+      "Síndrome de hipersensibilidade aguda (piora paradoxal dos sintomas — raro)"
+    ],
+    "source": "BNF for Children 2023-24; ECCO-ESPGHAN Paediatric IBD Guidelines 2018; Turner D et al. J Pediatr Gastroenterol Nutr 2012"
   }
 ];

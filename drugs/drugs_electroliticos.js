@@ -1,5 +1,5 @@
 // UCIP Pediatria — Electrólitos & Nutrição
-// 5 fármacos
+// 10 fármacos
 // Fontes: ver drugs_sources.js
 
 var DRUGS_ELECTROLITICOS = [
@@ -223,5 +223,201 @@ var DRUGS_ELECTROLITICOS = [
       "⚠️ Monitorizar Ca2+, K+, Mg2+ e fósforo durante reposição"
     ],
     "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+  },
+{
+    "id": "nacl_hipertonico",
+    "name": "NaCl 3% (Soro Hipertónico)",
+    "category": "electrolitico",
+    "class": "Solução salina hipertónica — osmoterapia",
+    "brands": "NaCl 3% — preparação hospitalar 100/250 ml; NaCl 20% ampolas 20 ml (para diluição)",
+    "indication": [
+      "Hipertensão intracraniana aguda — osmoterapia de 1ª linha (alternativa/complemento ao manitol)",
+      "Hiponatremia sintomática grave (convulsões, coma)",
+      "Hiponatremia crónica profunda com sintomas",
+      "Edema cerebral por hiponatremia"
+    ],
+    "dose": [
+      {
+        "ind": "HIC aguda / herniation",
+        "val": "3–5 ml/kg NaCl 3% EV em 10–20 min",
+        "max": "250 ml/dose",
+        "freq": "Repetir q4–6h conforme PIC; alvo Na⁺ sérico 145–155 mEq/L",
+        "note": "Evidência favorável vs manitol em HIC pediátrica traumática (Hypertonic Saline vs Mannitol meta-analysis)"
+      },
+      {
+        "ind": "Hiponatremia sintomática grave (convulsões)",
+        "val": "2–3 ml/kg NaCl 3% EV em 10–15 min",
+        "max": "100 ml",
+        "freq": "Repetir 1× se sem melhoria; subir Na⁺ 4–6 mEq/L nas primeiras 2h",
+        "note": "Após controlo dos sintomas: corrigir lentamente (não > 10–12 mEq/L/24h) — risco mielinólise osmótica"
+      }
+    ],
+    "prep": "EV central obrigatório para concentrações > 3%. NaCl 3% pode ser periférico se urgência e acesso central indisponível — vigiar extravasamento. Preparação: 15 ml NaCl 20% + 85 ml SF = 100 ml NaCl 3%.",
+    "ci": [
+      "Hipernatremia",
+      "Hipervolemia grave (ICC descompensada)",
+      "Insuficiência renal oligúrica grave sem diálise"
+    ],
+    "alert": [
+      "⚠️ Correcção rápida de hiponatremia crónica → mielinólise osmótica (síndrome de desmielinização osmótica)",
+      "⚠️ Monitorizar Na⁺ q2–4h durante correcção",
+      "⚠️ Limite de correcção: < 10–12 mEq/L/24h em hiponatremia crónica; < 18 mEq/L/48h",
+      "Para HIC: osmolalidade alvo 310–320 mOsm/kg; Na⁺ alvo 145–155 mEq/L",
+      "NaCl 3% recomendado sobre manitol como 1ª linha em HIC pediátrica (BTF Guidelines 2019)"
+    ],
+    "source": "BNF for Children 2023-24; BTF Pediatric TBI Guidelines 2019; Spasovski G et al. NDT 2014 (hyponatremia)"
+  },
+  {
+    "id": "manitol",
+    "name": "Manitol 20%",
+    "category": "electrolitico",
+    "class": "Diurético osmótico",
+    "brands": "Manitol 20% — frascos 250 ml/500 ml",
+    "indication": [
+      "Hipertensão intracraniana — osmoterapia (HIC traumática e não-traumática)",
+      "Edema cerebral agudo",
+      "Redução aguda da PIO no glaucoma agudo",
+      "Forçar diurése em intoxicações (barbitúricos, salicilatos)"
+    ],
+    "dose": [
+      {
+        "ind": "HIC aguda",
+        "val": "0,25–1 g/kg EV em 15–30 min",
+        "max": "—",
+        "freq": "q4–6h; alvo osmolalidade sérica < 320 mOsm/kg",
+        "note": "Dose 0,25 g/kg tão eficaz quanto 1 g/kg com menor rebote (James et al.). Monitorizar osmolalidade e Na⁺ antes de cada dose"
+      }
+    ],
+    "prep": "EV: administrar não diluído (20%). Filtro de 5 μm obrigatório (pode cristalizar). Aquecer se cristais visíveis. Via central preferida; periférica aceitável se urgência.",
+    "ci": [
+      "Anúria por insuficiência renal (acumulação)",
+      "Hipernatremia / hiperosmolalidade > 320 mOsm/kg",
+      "Insuf. cardíaca descompensada (sobrecarga)",
+      "Hemorragia intracraniana activa (relativa)"
+    ],
+    "alert": [
+      "⚠️ Rebote de PIC possível com doses altas e repetidas (fuga para interstício cerebral lesado)",
+      "⚠️ Hipotensão por hipovolemia — manter normovolemia",
+      "⚠️ Osmolalidade gap > 10 mOsm/kg sugere acumulação — suspender",
+      "NaCl 3% é alternativa com evidência crescentemente favorável em PICU",
+      "Monitorizar: osmolalidade sérica, Na⁺, balanço hídrico q4–6h"
+    ],
+    "source": "BNF for Children 2023-24; BTF Pediatric TBI Guidelines 2019; James HE et al. Childs Nerv Syst 1980"
+  },
+  {
+    "id": "potassio_oral",
+    "name": "Cloreto de Potássio Oral",
+    "category": "electrolitico",
+    "class": "Suplemento electrolítico — reposição de potássio",
+    "brands": "Kay-Cee-L susp 7,5% (1 mmol K⁺/ml); Slow-K comp 600 mg (8 mEq); Sando-K eferv",
+    "indication": [
+      "Hipocaliemia ligeira-moderada com via oral disponível",
+      "Prevenção de hipocaliemia em diuréticos tiazídicos/ansa",
+      "Alcalose hipoclorémica hipocaliémica"
+    ],
+    "dose": [
+      {
+        "ind": "Reposição hipocaliemia",
+        "val": "1–3 mEq/kg/dia PO",
+        "max": "4 mEq/kg/dia; 40 mEq/dose",
+        "freq": "2–4 doses/dia com refeições",
+        "note": "Dose baseada em défice: cada 0,1 mEq/L de queda de K⁺ ≈ défice de 0,3 mEq/kg"
+      }
+    ],
+    "prep": "Oral: solução 7,5% — medir com seringa. Diluir em sumo de fruta para melhorar palatabilidade e reduzir irritação gástrica.",
+    "ci": [
+      "Hipercaliemia",
+      "Insuficiência renal grave (oligúria)",
+      "Obstrução intestinal"
+    ],
+    "alert": [
+      "⚠️ Hipercaliemia iatrogénica — monitorizar K⁺ q24–48h durante reposição",
+      "Irritação gástrica frequente — tomar sempre com alimentos",
+      "Comprimidos LP (Slow-K): não triturar — risco úlcera esofágica",
+      "Reposição IV preferida se K⁺ < 2,5 mEq/L ou sintomático"
+    ],
+    "source": "BNF for Children 2023-24; Gennari FJ NEJM 1998"
+  },
+  {
+    "id": "calcio_cloreto",
+    "name": "Cloreto de Cálcio 10%",
+    "category": "electrolitico",
+    "class": "Electrólito — cálcio iónico de libertação imediata",
+    "brands": "Cloreto de Cálcio 10% — ampolas 10 ml (1,36 mEq Ca²⁺/ml = 136 mg/10 ml)",
+    "indication": [
+      "PCR com hipercaliemia, hipocalcemia ou hipermagnesemia",
+      "Hipocalcemia sintomática grave (tetania, convulsões, PCR)",
+      "Antídoto de bloqueadores canais de cálcio (intoxicação)",
+      "Antídoto de hipermagnesemia grave",
+      "Hipotensão por anafilaxia refractária"
+    ],
+    "dose": [
+      {
+        "ind": "PCR / hipocalcemia grave sintomática",
+        "val": "0,2 ml/kg CaCl2 10% EV em 2–5 min",
+        "max": "10 ml (1 g)",
+        "freq": "Dose única; repetir conforme resposta",
+        "note": "CaCl2 fornece 3× mais Ca²⁺ iónico que gluconato de cálcio na mesma dose volume — preferir em PCR"
+      },
+      {
+        "ind": "Intoxicação por BCC / hipermagnesemia",
+        "val": "0,2–0,3 ml/kg CaCl2 10% EV",
+        "max": "10 ml",
+        "freq": "Repetir q5 min × 3 se necessário; depois perfusão 0,2–0,4 ml/kg/h",
+        "note": ""
+      }
+    ],
+    "prep": "EV central obrigatório (extremamente irritante — necrose tecidular grave se extravasamento periférico). Nunca misturar com bicarbonato (precipita CaCO3).",
+    "ci": [
+      "Hipercalcemia",
+      "Digitálicos (potencia toxicidade da digoxina — usar com extrema cautela)",
+      "Via periférica (necrose)"
+    ],
+    "alert": [
+      "⚠️ APENAS via central — extravasamento periférico causa necrose grave",
+      "⚠️ Bradicardia e PCR com injecção rápida — administrar lentamente (2–5 min)",
+      "⚠️ Potencia toxicidade da digoxina — usar gluconato de cálcio em doente digitalizado",
+      "⚠️ Nunca misturar com bicarbonato na mesma via — precipitação imediata"
+    ],
+    "source": "BNF for Children 2023-24; PALS AHA 2020; DeWitt CR et al. Crit Care Clin 2005 (CCB toxicity)"
+  },
+  {
+    "id": "zinc_oral",
+    "name": "Zinco Oral",
+    "category": "electrolitico",
+    "class": "Oligoelemento essencial",
+    "brands": "Granupas Zinco; Zinco Generis — comp 45 mg (zinco elemento); susp magistral 10 mg/ml",
+    "indication": [
+      "Deficiência de zinco — acrodermatite enteropática, nutrição parentérica prolongada",
+      "Diarreia aguda em criança < 5 anos — tratamento adjuvante (OMS)",
+      "Síndrome do intestino curto com perdas aumentadas",
+      "Doença de Wilson — manutenção (inibe absorção de cobre)"
+    ],
+    "dose": [
+      {
+        "ind": "Diarreia aguda (OMS) — < 6 meses",
+        "val": "10 mg/dia PO",
+        "max": "—",
+        "freq": "1 dose/dia × 10–14 dias",
+        "note": "≥ 6 meses: 20 mg/dia × 10–14 dias. Reduz duração e severidade de diarreia (Bhutta ZA et al. BMJ 1999)"
+      },
+      {
+        "ind": "Deficiência / suplementação",
+        "val": "0,5–1 mg/kg/dia (zinco elemento)",
+        "max": "40 mg/dia",
+        "freq": "1–2 doses/dia com refeições",
+        "note": ""
+      }
+    ],
+    "prep": "Oral: tomar com alimentos para reduzir náusea. Evitar tomar com ferro (inibição competitiva de absorção).",
+    "ci": [
+      "Hipersensibilidade"
+    ],
+    "alert": [
+      "Náusea e sabor metálico — comuns com doses altas",
+      "Doses altas crónicas inibem absorção de cobre (pode usar-se terapeuticamente na doença de Wilson)",
+      "Separar administração de ferro e zinco por 2h (absorção competitiva)"
+    ],
+    "source": "BNF for Children 2023-24; WHO/UNICEF Zinc Supplementation 2004; Bhutta ZA et al. BMJ 1999"
   }
 ];
