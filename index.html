@@ -231,34 +231,37 @@ html,body{
   border:1.5px solid #a8cff0;border-radius:12px;padding:12px 14px;margin-bottom:14px}
 .perf-lbl{font-size:10px;font-weight:700;color:#2980b9;text-transform:uppercase;
   letter-spacing:.8px;margin-bottom:10px}
-.perf-inputs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.perf-presets{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
+.perf-preset{font-size:11px;background:#e8f4ff;border:1px solid #a8cff0;border-radius:7px;
+  padding:5px 9px;cursor:pointer;color:#2980b9;font-weight:600;white-space:nowrap;
+  -webkit-user-select:none}
+.perf-preset:active{background:#2980b9;color:#fff}
+.perf-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:7px;margin-bottom:10px}
 .perf-field{display:flex;flex-direction:column;gap:4px}
-.perf-field label{font-size:10px;font-weight:600;color:#555;text-transform:uppercase;letter-spacing:.4px}
+.perf-field label{font-size:9px;font-weight:700;color:#666;text-transform:uppercase;
+  letter-spacing:.5px}
 .perf-inp{height:44px;border:1.5px solid #b8d8f0;border-radius:10px;background:#fff;
-  padding:0 10px;font-size:16px;font-weight:600;color:#1a1a1a;outline:none;
+  padding:0 8px;font-size:15px;font-weight:600;color:#1a1a1a;outline:none;
   -webkit-appearance:none;text-align:center;width:100%;box-sizing:border-box}
 .perf-inp:focus{border-color:#2980b9}
-.perf-conc{grid-column:1/-1}
+.perf-inp.wide{grid-column:span 2}
 .perf-sel{height:44px;border:1.5px solid #b8d8f0;border-radius:10px;background:#fff;
-  padding:0 10px;font-size:13px;color:#1a1a1a;outline:none;width:100%;
-  -webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M0 0l6 8 6-8z' fill='%23999'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 12px center}
-.perf-custom{grid-column:1/-1;display:none;gap:6px}
-.perf-custom.show{display:grid;grid-template-columns:1fr auto 1fr}
-.perf-custom-sep{display:flex;align-items:center;justify-content:center;
-  font-size:13px;color:#999;padding-top:20px}
-.perf-out{background:#fff;border:1.5px solid #a8cff0;border-radius:10px;padding:12px 14px}
+  padding:0 8px;font-size:12px;color:#1a1a1a;outline:none;width:100%;
+  -webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M0 0l5 7 5-7z' fill='%23999'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 8px center;padding-right:24px}
+.perf-sep{display:flex;align-items:flex-end;justify-content:center;
+  padding-bottom:10px;font-size:13px;color:#aaa;font-weight:600}
+.perf-out{background:#fff;border:1.5px solid #a8cff0;border-radius:10px;padding:11px 13px}
 .perf-out-lbl{font-size:10px;font-weight:700;color:#2980b9;text-transform:uppercase;
   letter-spacing:.6px;margin-bottom:8px}
-.perf-rows{}
 .perf-row{display:flex;justify-content:space-between;align-items:center;
-  padding:7px 0;border-bottom:1px solid #f0f5ff}
+  padding:6px 0;border-bottom:1px solid #f0f5ff}
 .perf-row:last-child{border:none}
-.perf-row-lbl{font-size:12px;color:#555;flex:1}
-.perf-row-val{font-size:17px;font-weight:700;color:#2980b9;text-align:right}
-.perf-row-unit{font-size:11px;color:#888;margin-left:4px}
-.perf-rule3{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;
-  padding:8px 11px;margin-top:8px;font-size:11px;color:#92610a;line-height:1.5}
+.perf-row-lbl{font-size:11.5px;color:#555;flex:1;line-height:1.3;padding-right:8px}
+.perf-row-val{font-size:18px;font-weight:700;color:#2980b9;white-space:nowrap}
+.perf-row-unit{font-size:11px;color:#888;margin-left:3px}
+.perf-prep{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;
+  padding:7px 10px;margin-top:8px;font-size:11px;color:#92610a;line-height:1.5}
 .perf-empty{font-size:12px;color:#bbb;text-align:center;padding:6px 0;font-style:italic}
 /* ── COMPAT ── */
 #s-cp{padding:16px;padding-bottom:100px}
@@ -1122,212 +1125,266 @@ async function sendAI() {
 // rule3x10: peso(kg)×3×10 mg em 50 ml → 1 ml/h = 1 mg/kg/h (midazolam/ketamina)
 // rulekg: 1 mg/kg em 50 ml → 1 ml/h = X mg/kg/h (morfina)
 // fixed: drug_mg in vol_ml → concentration = drug_mg/vol_ml mg/ml
-var PERF_CONC = {
-  'dopamina':         [{l:'Regra dos 3 (standard)',rule3:true,unit:'μg/kg/min'},
-                       {l:'200 mg/50 ml',drug:200,vol:50,unit:'μg/kg/min'}],
-  'dobutamina':       [{l:'Regra dos 3',rule3:true,unit:'μg/kg/min'},
-                       {l:'250 mg/50 ml',drug:250,vol:50,unit:'μg/kg/min'}],
-  'adrenalina':       [{l:'Regra dos 3',rule3:true,unit:'μg/kg/min'},
-                       {l:'1 mg/50 ml',drug:1,vol:50,unit:'μg/kg/min'},
-                       {l:'Personalizada',custom:true,unit:'μg/kg/min'}],
-  'noradrenalina':    [{l:'Regra dos 3',rule3:true,unit:'μg/kg/min'},
-                       {l:'4 mg/50 ml',drug:4,vol:50,unit:'μg/kg/min'},
-                       {l:'Personalizada',custom:true,unit:'μg/kg/min'}],
-  'milrinona':        [{l:'20 mg/100 ml (200 μg/ml)',drug:20,vol:100,unit:'μg/kg/min'},
-                       {l:'10 mg/50 ml (200 μg/ml)',drug:10,vol:50,unit:'μg/kg/min'}],
-  'nitroprussiato':   [{l:'50 mg/250 ml (200 μg/ml)',drug:50,vol:250,unit:'μg/kg/min'},
-                       {l:'25 mg/250 ml (100 μg/ml)',drug:25,vol:250,unit:'μg/kg/min'}],
-  'nicardipina':      [{l:'25 mg/250 ml',drug:25,vol:250,unit:'μg/kg/min'},
-                       {l:'Personalizada',custom:true,unit:'μg/kg/min'}],
-  'levosimendan':     [{l:'12,5 mg/250 ml (50 μg/ml)',drug_ug:12500,vol:250,unit:'μg/kg/min'}],
-  'midazolam':        [{l:'Regra dos 3×10 (mg)',rule3x10:true,unit:'mg/kg/h'},
-                       {l:'50 mg/50 ml (1 mg/ml)',drug:50,vol:50,unit:'mg/kg/h'}],
-  'morfina':          [{l:'1 mg/kg em 50 ml',rulekg:true,unit:'mg/kg/h'},
-                       {l:'50 mg/50 ml (1 mg/ml)',drug:50,vol:50,unit:'mg/kg/h'}],
-  'fentanil':         [{l:'Regra dos 3 (μg)',rule3ug:true,unit:'μg/kg/h'},
-                       {l:'500 μg/50 ml (10 μg/ml)',drug_ug:500,vol:50,unit:'μg/kg/h'}],
-  'dexmedetomidina':  [{l:'200 μg/50 ml (4 μg/ml)',drug_ug:200,vol:50,unit:'μg/kg/h'},
-                       {l:'400 μg/50 ml (8 μg/ml)',drug_ug:400,vol:50,unit:'μg/kg/h'}],
-  'ketamina':         [{l:'Regra dos 3×10 (mg)',rule3x10:true,unit:'mg/kg/h'},
-                       {l:'500 mg/50 ml (10 mg/ml)',drug:500,vol:50,unit:'mg/kg/h'}],
-  'propofol':         [{l:'10 mg/ml (emulsão pronto)',drug:200,vol:20,unit:'mg/kg/h'}],
-  'remifentanil':     [{l:'5 mg/250 ml (20 μg/ml)',drug_ug:5000,vol:250,unit:'μg/kg/min'},
-                       {l:'1 mg/50 ml (20 μg/ml)',drug_ug:1000,vol:50,unit:'μg/kg/min'}],
-  'cisatracurio':     [{l:'150 mg/150 ml (1 mg/ml)',drug:150,vol:150,unit:'mg/kg/h'}],
-  'furosemida':       [{l:'20 mg/50 ml (0,4 mg/ml)',drug:20,vol:50,unit:'mg/kg/h'},
-                       {l:'50 mg/50 ml (1 mg/ml)',drug:50,vol:50,unit:'mg/kg/h'}],
-  'amiodarona_iv':    [{l:'900 mg/500 ml',drug:900,vol:500,unit:'μg/kg/min'},
-                       {l:'Personalizada',custom:true,unit:'μg/kg/min'}],
-  'sildenafil_cardio':[{l:'0,8 mg/ml (pronto)',drug_ug:800,vol:1,unit:'μg/kg/min'}],
-  'prostaglandina_e1':[{l:'Regra dos 3 (neonatal)',rule3:true,unit:'μg/kg/min'},
-                       {l:'500 μg/50 ml (10 μg/ml)',drug_ug:500,vol:50,unit:'μg/kg/min'}],
-  'vasopressina':     [{l:'20 UI/100 ml (0,2 UI/ml)',drug:20,vol:100,unit:'mUI/kg/min'}],
-  'naloxona':         [{l:'1 mg/100 ml',drug:1,vol:100,unit:'μg/kg/h'}],
-  'octreotido':       [{l:'0,5 mg/50 ml (10 μg/ml)',drug_ug:500,vol:50,unit:'μg/kg/h'}],
+// ── INFUSION CALCULATOR v2 — universal, full custom ──────────────────────────
+var _perfIdx = -1;
+
+// Default unit per drug (used to pre-select the unit dropdown)
+var PERF_UNIT = {
+  'dopamina':'mcg/kg/min','dobutamina':'mcg/kg/min',
+  'adrenalina':'mcg/kg/min','noradrenalina':'mcg/kg/min',
+  'levosimendan':'mcg/kg/min','milrinona':'mcg/kg/min',
+  'nitroprussiato':'mcg/kg/min','nicardipina':'mcg/kg/min',
+  'remifentanil':'mcg/kg/min','prostaglandina_e1':'mcg/kg/min',
+  'amiodarona_iv':'mcg/kg/min',
+  'fentanil':'mcg/kg/h','dexmedetomidina':'mcg/kg/h',
+  'sufentanil':'mcg/kg/h','octreotido':'mcg/kg/h','naloxona':'mcg/kg/h',
+  'midazolam':'mg/kg/h','morfina':'mg/kg/h','ketamina':'mg/kg/h',
+  'propofol':'mg/kg/h','cisatracurio':'mg/kg/h','furosemida':'mg/kg/h',
+  'metadona_desmame':'mg/kg/h',
 };
 
-var _perfIdx = -1; // drug index currently shown
+// Preset concentrations per drug: [{l, drug_mg, vol_ml}]
+// drug_mg: amount of drug (in mg, unless noted)
+// rule3: true → compute drug_mg = wt*3
+// rule3x10: drug_mg = wt*30 (midazolam/ketamina)
+// rule3ug: drug_mg_ug = wt*3 (fentanil in μg)
+var PERF_PRESETS = {
+  'dopamina':         [{l:'R3 — peso×3 mg/50ml',rule3:true},
+                       {l:'200mg/50ml',drug_mg:200,vol_ml:50},
+                       {l:'400mg/50ml',drug_mg:400,vol_ml:50}],
+  'dobutamina':       [{l:'R3 — peso×3 mg/50ml',rule3:true},
+                       {l:'250mg/50ml',drug_mg:250,vol_ml:50}],
+  'adrenalina':       [{l:'R3 — peso×3 mg/50ml',rule3:true},
+                       {l:'1mg/50ml',drug_mg:1,vol_ml:50},
+                       {l:'3mg/50ml',drug_mg:3,vol_ml:50}],
+  'noradrenalina':    [{l:'R3 — peso×3 mg/50ml',rule3:true},
+                       {l:'4mg/50ml',drug_mg:4,vol_ml:50},
+                       {l:'8mg/50ml',drug_mg:8,vol_ml:50}],
+  'milrinona':        [{l:'20mg/100ml',drug_mg:20,vol_ml:100},
+                       {l:'10mg/50ml',drug_mg:10,vol_ml:50}],
+  'nitroprussiato':   [{l:'50mg/250ml',drug_mg:50,vol_ml:250},
+                       {l:'25mg/250ml',drug_mg:25,vol_ml:250}],
+  'nicardipina':      [{l:'25mg/250ml',drug_mg:25,vol_ml:250},
+                       {l:'10mg/100ml',drug_mg:10,vol_ml:100}],
+  'levosimendan':     [{l:'12.5mg/250ml',drug_mg:12.5,vol_ml:250}],
+  'midazolam':        [{l:'R3×10 — peso×30mg/50ml',rule3x10:true},
+                       {l:'50mg/50ml',drug_mg:50,vol_ml:50},
+                       {l:'100mg/50ml',drug_mg:100,vol_ml:50}],
+  'morfina':          [{l:'peso×1mg/50ml',rulekg:true},
+                       {l:'50mg/50ml',drug_mg:50,vol_ml:50},
+                       {l:'20mg/50ml',drug_mg:20,vol_ml:50}],
+  'fentanil':         [{l:'R3 — peso×3μg/50ml',rule3ug:true},
+                       {l:'500mcg/50ml',drug_mg:0.5,vol_ml:50},
+                       {l:'250mcg/50ml',drug_mg:0.25,vol_ml:50}],
+  'dexmedetomidina':  [{l:'200mcg/50ml',drug_mg:0.2,vol_ml:50},
+                       {l:'400mcg/50ml',drug_mg:0.4,vol_ml:50}],
+  'ketamina':         [{l:'R3×10 — peso×30mg/50ml',rule3x10:true},
+                       {l:'500mg/50ml',drug_mg:500,vol_ml:50},
+                       {l:'200mg/50ml',drug_mg:200,vol_ml:50}],
+  'propofol':         [{l:'10mg/ml pronto',drug_mg:200,vol_ml:20}],
+  'remifentanil':     [{l:'5mg/250ml (20mcg/ml)',drug_mg:5,vol_ml:250},
+                       {l:'1mg/50ml (20mcg/ml)',drug_mg:1,vol_ml:50}],
+  'cisatracurio':     [{l:'150mg/150ml',drug_mg:150,vol_ml:150}],
+  'sufentanil':       [{l:'50mcg/50ml',drug_mg:0.05,vol_ml:50},
+                       {l:'250mcg/50ml',drug_mg:0.25,vol_ml:50}],
+  'furosemida':       [{l:'20mg/50ml',drug_mg:20,vol_ml:50},
+                       {l:'50mg/50ml',drug_mg:50,vol_ml:50}],
+  'amiodarona_iv':    [{l:'900mg/500ml',drug_mg:900,vol_ml:500},
+                       {l:'300mg/250ml',drug_mg:300,vol_ml:250}],
+  'prostaglandina_e1':[{l:'R3 — peso×3mcg/50ml',rule3ug:true},
+                       {l:'500mcg/50ml',drug_mg:0.5,vol_ml:50}],
+  'vasopressina':     [{l:'20UI/100ml',drug_mg:20,vol_ml:100}],
+  'naloxona':         [{l:'1mg/100ml',drug_mg:1,vol_ml:100}],
+  'octreotido':       [{l:'500mcg/50ml',drug_mg:0.5,vol_ml:50}],
+  'sildenafil_cardio':[{l:'0.8mg/ml pronto',drug_mg:0.8,vol_ml:1}],
+};
 
-/**
- * Get concentration in μg/ml from a concentration object for a given weight
- */
-function concUgMl(c, wt) {
-  if (c.rule3)    return (wt * 3 * 1000) / 50;   // mg→μg /50ml: 1ml/h=1μg/kg/min
-  if (c.rule3x10) return (wt * 3 * 10 * 1000) / 50; // 1ml/h=1mg/kg/h
-  if (c.rule3ug)  return (wt * 3) / 50;           // μg: 1ml/h=1μg/kg/h
-  if (c.rulekg)   return (wt * 1 * 1000) / 50;    // 1mg/kg in 50ml→1ml/h=X mg/kg/h
-  if (c.drug_ug !== undefined) return c.drug_ug / c.vol;  // already in μg
-  if (c.drug !== undefined)    return (c.drug * 1000) / c.vol;  // mg→μg
-  return null;
+// Unit definitions: label, factor to convert dose to μg/kg/min equivalent
+var PERF_UNITS = [
+  {l:'mcg/kg/min', f: 1},
+  {l:'mcg/kg/h',   f: 1/60},
+  {l:'mg/kg/h',    f: 1000/60},
+  {l:'UI/kg/h',    f: 1000/60},
+];
+
+function perfDefaultUnit(drugId) {
+  var u = PERF_UNIT[drugId] || 'mcg/kg/min';
+  for(var i=0;i<PERF_UNITS.length;i++){if(PERF_UNITS[i].l===u)return i;}
+  return 0;
 }
 
-/**
- * Convert dose rate to ml/h
- * unit: μg/kg/min, μg/kg/h, mg/kg/h
- * concUgMl: concentration in μg/ml
- */
-function rateToMlh(dose, unit, wt, concUgMl) {
-  var doseUgKgMin;
-  if (unit === 'μg/kg/min') doseUgKgMin = dose;
-  else if (unit === 'μg/kg/h') doseUgKgMin = dose / 60;
-  else if (unit === 'mg/kg/h') doseUgKgMin = dose * 1000 / 60;
-  else if (unit === 'mUI/kg/min') doseUgKgMin = dose; // treat UI as μg for calc
-  else return null;
-  // ml/h = (dose μg/kg/min × wt × 60) / conc_μg/ml
-  return (doseUgKgMin * wt * 60) / concUgMl;
+function perfConc_ugml(drug_mg, vol_ml, unit_idx) {
+  // Always store drug as mg input; convert to μg/ml
+  // For mcg-labelled presets (rule3ug, drug_mg<1), drug_mg is already in mg
+  return (drug_mg * 1000) / vol_ml; // μg/ml
+}
+
+function perfRateToMlh(dose, unit_idx, wt, conc_ugml) {
+  var f = PERF_UNITS[unit_idx] ? PERF_UNITS[unit_idx].f : 1;
+  // dose in selected unit → μg/kg/min equivalent
+  var doseUgKgMin = dose * f;
+  // ml/h = (doseUgKgMin * wt * 60) / conc_ugml
+  return (doseUgKgMin * wt * 60) / conc_ugml;
 }
 
 function fmtMlh(v) {
-  if (v < 1)  return (Math.round(v * 100) / 100).toString();
-  if (v < 10) return (Math.round(v * 10) / 10).toString();
+  if(!v || v<=0) return '—';
+  if(v < 0.1)  return (Math.round(v*1000)/1000).toString();
+  if(v < 1)    return (Math.round(v*100)/100).toString();
+  if(v < 10)   return (Math.round(v*10)/10).toString();
   return Math.round(v).toString();
+}
+
+function perfApplyPreset(drugMg, volMl) {
+  var dm = document.getElementById('perf-drug-mg');
+  var vm = document.getElementById('perf-vol-ml');
+  if(dm) dm.value = drugMg;
+  if(vm) vm.value = volMl;
+  perfUpdate();
 }
 
 function perfUpdate() {
   var drug = DRUGS[_perfIdx];
-  if (!drug) return;
-  var concs = PERF_CONC[drug.id];
-  if (!concs) return;
+  var out  = document.getElementById('perfout');
+  if(!drug || !out) return;
 
-  var wt = parseFloat((document.getElementById('perfwt') || {}).value || '0');
-  var ci = parseInt((document.getElementById('perfconc') || {}).value || '0');
-  var out = document.getElementById('perfout');
-  if (!out) return;
+  var wt      = parseFloat((document.getElementById('perf-wt')||{}).value||'0');
+  var drugMg  = parseFloat((document.getElementById('perf-drug-mg')||{}).value||'0');
+  var volMl   = parseFloat((document.getElementById('perf-vol-ml')||{}).value||'0');
+  var unitIdx = parseInt((document.getElementById('perf-unit')||{}).value||'0');
 
-  // Custom concentration inputs
-  var custDrug = parseFloat((document.getElementById('perfcustdrug') || {}).value || '0');
-  var custVol  = parseFloat((document.getElementById('perfcustvol') || {}).value || '0');
-
-  if (!wt || wt <= 0 || wt > 150) {
-    out.innerHTML = '<div class="perf-empty">Insira o peso para calcular</div>';
-    return;
+  if(!wt || wt<=0 || wt>150) {
+    out.innerHTML='<div class="perf-empty">Insira o peso</div>'; return;
+  }
+  if(!drugMg || drugMg<=0 || !volMl || volMl<=0) {
+    out.innerHTML='<div class="perf-empty">Insira a concentração (fármaco e volume)</div>'; return;
   }
 
-  var c = concs[ci] || concs[0];
-  var ugml;
+  var conc = perfConc_ugml(drugMg, volMl, unitIdx);
 
-  if (c.custom) {
-    if (!custDrug || !custVol || custDrug <= 0 || custVol <= 0) {
-      out.innerHTML = '<div class="perf-empty">Insira concentração personalizada</div>';
-      return;
-    }
-    ugml = (custDrug * 1000) / custVol; // assume mg→μg
-  } else {
-    ugml = concUgMl(c, wt);
-  }
-
-  if (!ugml || ugml <= 0) {
-    out.innerHTML = '<div class="perf-empty">Concentração inválida</div>';
-    return;
-  }
-
-  // Parse dose range from drug data
+  // Collect perfusion dose entries
   var perfDoses = [];
-  drug.dose && drug.dose.forEach(function(dv) {
+  drug.dose && drug.dose.forEach(function(dv){
     var p = parseDose(dv.val);
-    if (!p) return;
-    var isPerf = dv.val.indexOf('/min')>-1 || dv.val.indexOf('/h')>-1 || /perfus|cont/i.test(dv.ind+' '+(dv.freq||''));
-    if (!isPerf) return;
-    perfDoses.push({ind: dv.ind, p: p, freq: dv.freq});
+    if(!p) return;
+    var isPerf = dv.val.indexOf('/min')>-1 || dv.val.indexOf('/h')>-1
+      || /perfus|contín|manuten/i.test(dv.ind+' '+(dv.freq||''));
+    if(!isPerf) return;
+    perfDoses.push({ind:dv.ind, p:p});
   });
 
-  if (!perfDoses.length) {
-    out.innerHTML = '<div class="perf-empty">Nenhuma dose de perfusão encontrada</div>';
-    return;
+  if(!perfDoses.length) {
+    out.innerHTML='<div class="perf-empty">Sem doses de perfusão neste fármaco</div>'; return;
   }
 
-  // Rule of 3 explanation
-  var rule3note = '';
-  if (c.rule3 || c.rule3x10 || c.rule3ug || c.rulekg) {
-    var drugAmt, prep;
-    if (c.rule3)    { drugAmt = Math.round(wt*3*10)/10; prep = drugAmt+' mg em 50 ml SF/SG5%'; }
-    if (c.rule3x10) { drugAmt = Math.round(wt*30*10)/10; prep = drugAmt+' mg em 50 ml SF/SG5%'; }
-    if (c.rule3ug)  { drugAmt = Math.round(wt*3*10)/10; prep = drugAmt+' μg em 50 ml SF/SG5%'; }
-    if (c.rulekg)   { drugAmt = Math.round(wt*10)/10; prep = drugAmt+' mg em 50 ml SF/SG5%'; }
-    rule3note = '<div class="perf-rule3">📋 Preparação: <strong>'+prep+'</strong><br>→ 1 ml/h = '+((c.rule3||c.rule3x10)?'1':(c.rule3ug?'1':(c.rulekg?'0,02':'1')))+' '+(c.unit||c.u||'μg/kg/min')+'</div>';
-  }
+  var selectedUnit = PERF_UNITS[unitIdx] ? PERF_UNITS[unitIdx].l : 'mcg/kg/min';
+  var concLabel = drugMg + ' mg em ' + volMl + ' ml = ' + (Math.round(drugMg/volMl*1000)/1000).toFixed ? (Math.round(drugMg*1000/volMl)/1000) + ' mg/ml' : '';
 
   var rows = '';
-  perfDoses.forEach(function(pd) {
+  perfDoses.forEach(function(pd){
     var p = pd.p;
-    var mnMlh = rateToMlh(p.min, p.unit, wt, ugml);
-    var mxMlh = rateToMlh(p.max, p.unit, wt, ugml);
-    if (!mnMlh) return;
-    var rng = Math.abs(mxMlh - mnMlh) < 0.05
-      ? fmtMlh(mnMlh)
-      : fmtMlh(mnMlh) + ' – ' + fmtMlh(mxMlh);
+    // Convert parsed dose (in its own unit) to ml/h via selected unit
+    // parseDose gives us p.unit (the unit from the drug text)
+    // We need to convert p.min/max from p.unit to the user's selected unit, then to ml/h
+    // Simplest: convert both to μg/kg/min equivalent first
+    function toUgKgMin(val, punit) {
+      if(punit==='μg/kg/min'||punit==='mcg/kg/min') return val;
+      if(punit==='μg/kg/h'||punit==='mcg/kg/h') return val/60;
+      if(punit==='mg/kg/h') return val*1000/60;
+      return val;
+    }
+    var mnUg = toUgKgMin(p.min, p.unit);
+    var mxUg = toUgKgMin(p.max, p.unit);
+    // Now convert from μg/kg/min to ml/h using our concentration
+    var mnMlh = (mnUg * wt * 60) / conc;
+    var mxMlh = (mxUg * wt * 60) / conc;
+
+    var rng = Math.abs(mxMlh-mnMlh)<0.05 ? fmtMlh(mnMlh)
+      : fmtMlh(mnMlh)+' – '+fmtMlh(mxMlh);
+
     rows += '<div class="perf-row">'
-      + '<div class="perf-row-lbl">' + E(pd.ind) + '</div>'
-      + '<div><span class="perf-row-val">' + rng + '</span>'
-      + '<span class="perf-row-unit">ml/h</span></div>'
-      + '</div>';
+      +'<div class="perf-row-lbl">'+E(pd.ind)+'</div>'
+      +'<div><span class="perf-row-val">'+rng+'</span>'
+      +'<span class="perf-row-unit">ml/h</span></div>'
+      +'</div>';
   });
 
-  out.innerHTML = '<div class="perf-out">'
-    + '<div class="perf-out-lbl">💧 Velocidade de Infusão</div>'
-    + '<div class="perf-rows">' + rows + '</div>'
-    + rule3note
-    + '</div>';
-}
+  // Restriction helper: 24ml volume
+  var mlh1 = ((PERF_UNITS[unitIdx]||PERF_UNITS[0]).f * wt * 60) / conc;
+  var prep24 = '1 ml/h = '+(Math.round(drugMg*1000/volMl*1000)/1000)+' mg/ml × 1 ml/h';
 
-function perfConcChange() {
-  var ci = parseInt((document.getElementById('perfconc')||{}).value||'0');
-  var drug = DRUGS[_perfIdx];
-  if (!drug) return;
-  var concs = PERF_CONC[drug.id];
-  if (!concs) return;
-  var c = concs[ci] || concs[0];
-  var cust = document.getElementById('perfcustrow');
-  if (cust) cust.className = c.custom ? 'perf-custom show' : 'perf-custom';
-  perfUpdate();
+  out.innerHTML = '<div class="perf-out">'
+    +'<div class="perf-out-lbl">💧 ml/h por regime de dose</div>'
+    +'<div>'+rows+'</div>'
+    +'<div class="perf-prep">📋 Concentração: <strong>'+(Math.round(drugMg*1000/volMl)/1000).toString()+' mg/ml</strong>'
+    +' &nbsp;|&nbsp; 1 ml/h = <strong>'+fmtMlh((PERF_UNITS[unitIdx]||PERF_UNITS[0]).f*1000/conc)+' '+selectedUnit+'</strong> por kg'
+    +'</div>'
+    +'</div>';
 }
 
 function buildPerfWidget(drug) {
-  var concs = PERF_CONC[drug.id];
-  if (!concs) return '';
+  var hasPerf = drug.dose && drug.dose.some(function(dv){
+    var p = parseDose(dv.val);
+    if(!p) return false;
+    return dv.val.indexOf('/min')>-1 || dv.val.indexOf('/h')>-1
+      || /perfus|contín|manuten/i.test(dv.ind+' '+(dv.freq||''));
+  });
+  if(!hasPerf) return '';
 
-  var concOpts = concs.map(function(c,i){
-    return '<option value="'+i+'">'+E(c.l)+'</option>';
+  var presets = PERF_PRESETS[drug.id] || [];
+  var unitIdx = perfDefaultUnit(drug.id);
+
+  // Preset buttons
+  var presetBtns = presets.map(function(p){
+    var dm, vm;
+    if(p.rule3)    { dm='(peso×3)'; vm=50; }
+    else if(p.rule3x10) { dm='(peso×30)'; vm=50; }
+    else if(p.rule3ug)  { dm='(peso×0.003)'; vm=50; }
+    else if(p.rulekg)   { dm='(peso×1)'; vm=50; }
+    else { dm=p.drug_mg; vm=p.vol_ml; }
+    var onclick = (p.rule3||p.rule3x10||p.rule3ug||p.rulekg)
+      ? 'perfApplyRule("'+drug.id+'","'+(p.rule3?'r3':p.rule3x10?'r3x10':p.rule3ug?'r3ug':'rkg')+'")'
+      : 'perfApplyPreset('+p.drug_mg+','+p.vol_ml+')';
+    return '<span class="perf-preset" onclick="'+onclick+'">'+E(p.l)+'</span>';
+  }).join('');
+
+  // Build unit options with default pre-selected
+  var unitOpts = PERF_UNITS.map(function(u,i){
+    return '<option value="'+i+'"'+(i===unitIdx?' selected':'')+'>'+u.l+'</option>';
   }).join('');
 
   return '<div class="perf-wrap">'
-    + '<div class="perf-lbl">💉 Calculadora de Perfusão</div>'
-    + '<div class="perf-inputs">'
-    + '<div class="perf-field"><label>Peso</label>'
-    + '<input class="perf-inp" id="perfwt" type="number" inputmode="decimal" placeholder="kg" min="0.3" max="150" step="0.1" oninput="perfUpdate()" onchange="perfUpdate()"></div>'
-    + '<div class="perf-field"><label>Concentração</label>'
-    + '<select class="perf-sel" id="perfconc" onchange="perfConcChange()">'
-    + concOpts + '</select></div>'
-    + '<div class="perf-custom" id="perfcustrow">'
-    + '<div class="perf-field"><label>Fármaco (mg)</label>'
-    + '<input class="perf-inp" id="perfcustdrug" type="number" inputmode="decimal" placeholder="mg" min="0" step="0.1" oninput="perfUpdate()"></div>'
-    + '<div class="perf-custom-sep">em</div>'
-    + '<div class="perf-field"><label>Volume (ml)</label>'
-    + '<input class="perf-inp" id="perfcustvol" type="number" inputmode="decimal" placeholder="ml" min="1" step="1" oninput="perfUpdate()"></div>'
-    + '</div>'
-    + '</div>'
-    + '<div id="perfout"><div class="perf-empty">Insira o peso para calcular</div></div>'
-    + '</div>';
+    +'<div class="perf-lbl">💉 Calculadora de Perfusão</div>'
+    +(presets.length ? '<div class="perf-presets"><span style="font-size:10px;color:#888;align-self:center;margin-right:2px">Presets:</span>'+presetBtns+'</div>' : '')
+    +'<div class="perf-grid">'
+    // Row 1: Peso | drug amount | separator | volume
+    +'<div class="perf-field"><label>Peso (kg)</label>'
+    +'<input class="perf-inp" id="perf-wt" type="number" inputmode="decimal" placeholder="kg" min="0.3" max="150" step="0.1" oninput="perfUpdate()"></div>'
+    +'<div class="perf-field"><label>Fármaco (mg)</label>'
+    +'<input class="perf-inp" id="perf-drug-mg" type="number" inputmode="decimal" placeholder="mg" min="0" step="any" oninput="perfUpdate()"></div>'
+    +'<div class="perf-sep">em</div>'
+    +'<div class="perf-field"><label>Volume (ml)</label>'
+    +'<input class="perf-inp" id="perf-vol-ml" type="number" inputmode="decimal" placeholder="ml" min="1" step="1" oninput="perfUpdate()"></div>'
+    // Row 2: Unidade (full width)
+    +'<div class="perf-field" style="grid-column:1/-1"><label>Unidade de dose</label>'
+    +'<select class="perf-sel" id="perf-unit" onchange="perfUpdate()">'+unitOpts+'</select></div>'
+    +'</div>'
+    +'<div id="perfout"><div class="perf-empty">Insira peso e concentração</div></div>'
+    +'</div>';
+}
+
+function perfApplyRule(drugId, ruleType) {
+  var wt = parseFloat((document.getElementById('perf-wt')||{}).value||'0');
+  var dm = document.getElementById('perf-drug-mg');
+  var vm = document.getElementById('perf-vol-ml');
+  if(!dm||!vm) return;
+  vm.value = 50;
+  if(!wt||wt<=0){ perfUpdate(); return; }
+  if(ruleType==='r3')    dm.value = Math.round(wt*3*10)/10;
+  else if(ruleType==='r3x10') dm.value = Math.round(wt*30*10)/10;
+  else if(ruleType==='r3ug')  dm.value = Math.round(wt*0.003*1000)/1000;
+  else if(ruleType==='rkg')   dm.value = Math.round(wt*10)/10;
+  perfUpdate();
 }
 
 </script>
