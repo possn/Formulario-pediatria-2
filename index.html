@@ -202,6 +202,29 @@ html,body{
 .arow:last-child{margin-bottom:0}
 .srctxt{font-size:11px;color:#999;line-height:1.6;font-style:italic}
 
+
+/* ── DOSE CALCULATOR ── */
+.calc-wrap{background:linear-gradient(135deg,#fff8f5 0%,#fff3ef 100%);
+  border:1.5px solid #f4c4b0;border-radius:12px;padding:12px 14px;margin-bottom:14px}
+.calc-lbl{font-size:10px;font-weight:700;color:#d97757;text-transform:uppercase;
+  letter-spacing:.8px;margin-bottom:8px}
+.calc-row{display:flex;align-items:center;gap:8px}
+.calc-inp{flex:1;height:44px;border:1.5px solid #e8c4b4;border-radius:10px;
+  background:#fff;padding:0 12px;font-size:17px;font-weight:600;color:#1a1a1a;
+  outline:none;-webkit-appearance:none;text-align:center}
+.calc-inp:focus{border-color:#d97757}
+.calc-unit{font-size:13px;color:#888;white-space:nowrap}
+.calc-results{margin-top:10px}
+.calc-dblk{background:#fff;border:1px solid #f0ddd8;border-radius:9px;
+  padding:9px 12px;margin-bottom:6px}
+.calc-dblk:last-child{margin-bottom:0}
+.calc-ind{font-size:10px;font-weight:700;color:#d97757;text-transform:uppercase;
+  letter-spacing:.4px;margin-bottom:4px}
+.calc-dose{font-size:16px;font-weight:700;color:#1a1a1a;line-height:1.3}
+.calc-dose span{color:#d97757}
+.calc-max{font-size:11px;color:#e67e22;margin-top:2px}
+.calc-note{font-size:11px;color:#777;margin-top:3px;line-height:1.4}
+.calc-empty{font-size:12px;color:#bbb;text-align:center;padding:8px 0;font-style:italic}
 /* ── COMPAT ── */
 #s-cp{padding:16px;padding-bottom:100px}
 .ptit{font-size:18px;font-weight:700;margin-bottom:4px}
@@ -603,42 +626,104 @@ function buildIdx(){
 }
 
 // ─── DETAIL ───────────────────────────────────────────────
+// ── DOSE CALCULATOR ENGINE ─────────────────────────────────────────
+var _calcDrug=null;
+function parseDose(v){
+  if(!v)return null;
+  var s=v.replace(/,/g,'.').replace(/\u00b5/g,'μ');
+  var um=s.match(/(μg|mcg|mg|g|UI|mEq|mmol|ml)\s*\/\s*kg/i);
+  if(!um)return null;
+  var unit=um[1].replace('mcg','μg');
+  var permin=/\/\s*(min|h)/.test(s);
+  var rng=s.match(/(\d+\.?\d*)\s*[–\-]\s*(\d+\.?\d*)/);
+  var mn,mx;
+  if(rng){mn=parseFloat(rng[1]);mx=parseFloat(rng[2]);}
+  else{var sg=s.match(/[^0-9]*(\d+\.?\d*)/);if(!sg)return null;mn=mx=parseFloat(sg[1]);}
+  return isNaN(mn)?null:{min:mn,max:mx,unit:unit,permin:permin};
+}
+function parseMax(s){
+  if(!s||s==='—'||s==='-')return null;
+  s=s.replace(/,/g,'.').replace(/\u00b5/g,'μ');
+  var m=s.match(/(\d+\.?\d*)\s*(μg|mcg|mg|g|UI|mEq|ml)/i);
+  return m?{val:parseFloat(m[1]),unit:m[2].replace('mcg','μg')}:null;
+}
+function fmtN(v,unit){
+  var s=v>=100?Math.round(v):v>=10?(Math.round(v*10)/10):v>=1?(Math.round(v*100)/100):(Math.round(v*1000)/1000);
+  return s+' '+unit;
+}
+function calcUpdate(){
+  var inp=document.getElementById('calcwt');
+  var out=document.getElementById('calcout');
+  if(!inp||!out||!_calcDrug)return;
+  var wt=parseFloat(inp.value.replace(',','.'));
+  if(!wt||wt<=0||wt>150){out.innerHTML='<p style="font-size:12px;color:#bbb;text-align:center;padding:6px 0;font-style:italic">Insira um peso entre 0,3 e 150 kg</p>';return;}
+  var h='';
+  _calcDrug.dose&&_calcDrug.dose.forEach(function(dv){
+    var p=parseDose(dv.val);if(!p)return;
+    var mn=p.min*wt,mx=p.max*wt;
+    var maxo=parseMax(dv.max);
+    var cap=false;
+    if(maxo&&maxo.unit.toLowerCase()===p.unit.toLowerCase()){
+      if(mn>maxo.val){mn=maxo.val;cap=true;}
+      if(mx>maxo.val){mx=maxo.val;cap=true;}
+    }
+    var ds=Math.abs(mx-mn)<0.001?('<span style="color:#d97757;font-size:17px;font-weight:700">'+fmtN(mn,p.unit)+(p.permin?'/min':'')+'</span>')
+      :('<span style="color:#d97757;font-size:17px;font-weight:700">'+fmtN(mn,p.unit)+' – '+fmtN(mx,p.unit)+(p.permin?'/min':'')+'</span>');
+    h+='<div style="background:#fff;border:1px solid #f0ddd8;border-radius:9px;padding:9px 12px;margin-bottom:6px">'
+      +'<div style="font-size:10px;font-weight:700;color:#d97757;text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px">'+E(dv.ind)+'</div>'
+      +'<div>'+ds+'</div>'
+      +(cap?'<div style="font-size:11px;color:#e67e22;margin-top:2px">⚠️ Máx: '+fmtN(maxo.val,maxo.unit)+'</div>':'')
+      +(dv.freq?'<div style="font-size:11px;color:#999;margin-top:2px">'+E(dv.freq)+'</div>':'')
+      +'</div>';
+  });
+  out.innerHTML=h||'<p style="font-size:12px;color:#bbb;text-align:center;padding:6px 0;font-style:italic">Nenhuma dose em mg/kg encontrada</p>';
+}
 function showDet(idx){
   prevTab=curTab;
   var d=DRUGS[idx];
+  _calcDrug=d;
   var st=d.src==='added'
     ?'<span class="stag st2">★ Adicionado — fontes bibliográficas independentes</span>'
     :'<span class="stag st1">✓ Formulário de Pediatria 3ª Ed.</span>';
+  var hasPkg=d.dose&&d.dose.some(function(dv){return parseDose(dv.val);});
+  var calcW='';
+  if(hasPkg){
+    calcW='<div class="calc-wrap">'
+      +'<div class="calc-lbl">⚖️ Calculadora de Dose</div>'
+      +'<div class="calc-row"><input class="calc-inp" id="calcwt" type="number" inputmode="decimal" placeholder="Peso (kg)" min="0.3" max="150" step="0.1" oninput="calcUpdate()" onchange="calcUpdate()"><span class="calc-unit">kg</span></div>'
+      +'<div id="calcout"><p style="font-size:12px;color:#bbb;text-align:center;padding:6px 0;font-style:italic">Insira o peso para calcular</p></div>'
+      +'</div>';
+  }
   var inds='',doses='',prep='',ci='',alerts='',src='';
   if(d.indication&&d.indication.length){
     inds='<div class="card"><div class="ctit">Indicações</div><ul class="ilist">';
-    d.indication.forEach(function(x){inds+='<li>'+E(x)+'</li>'});
+    d.indication.forEach(function(x){inds+='<li>'+E(x)+'</li>';});
     inds+='</ul></div>';
   }
   if(d.dose&&d.dose.length){
-    doses='<div class="card"><div class="ctit">Posologia Pediátrica</div>';
+    doses='<div class="card"><div class="ctit">Posologia Pediátrica</div>'+calcW;
     d.dose.forEach(function(dv){
       doses+='<div class="dblk"><div class="dlbl">'+E(dv.ind)+'</div>'
         +'<div class="dval">'+E(dv.val)+'</div>';
-      if(dv.max) doses+='<div class="dmax">Máx: '+E(dv.max)+'</div>';
-      if(dv.freq) doses+='<div class="dfrq">'+E(dv.freq)+'</div>';
-      if(dv.note) doses+='<div class="dnot">'+E(dv.note)+'</div>';
+      if(dv.max)doses+='<div class="dmax">Máx: '+E(dv.max)+'</div>';
+      if(dv.freq)doses+='<div class="dfrq">'+E(dv.freq)+'</div>';
+      if(dv.note)doses+='<div class="dnot">'+E(dv.note)+'</div>';
       doses+='</div>';
     });
     doses+='</div>';
   }
-  if(d.prep) prep='<div class="card"><div class="ctit">Preparação & Administração</div><div class="ptxt">'+E(d.prep)+'</div></div>';
+  if(d.prep)prep='<div class="card"><div class="ctit">Preparação & Administração</div><div class="ptxt">'+E(d.prep)+'</div></div>';
   if(d.ci&&d.ci.length){
     ci='<div class="card"><div class="ctit">Contra-indicações</div>';
-    d.ci.forEach(function(x){ci+='<div class="cirow">'+E(x)+'</div>'});
+    d.ci.forEach(function(x){ci+='<div class="cirow">'+E(x)+'</div>';});
     ci+='</div>';
   }
   if(d.alert&&d.alert.length){
     alerts='<div class="card"><div class="ctit">⚠️ Alertas Clínicos</div>';
-    d.alert.forEach(function(x){alerts+='<div class="arow">'+E(x)+'</div>'});
+    d.alert.forEach(function(x){alerts+='<div class="arow">'+E(x)+'</div>';});
     alerts+='</div>';
   }
-  if(d.source) src='<div class="card"><div class="ctit">Fontes</div><div class="srctxt">'+E(d.source)+'</div></div>';
+  if(d.source)src='<div class="card"><div class="ctit">Fontes</div><div class="srctxt">'+E(d.source)+'</div></div>';
   document.getElementById('s-det').innerHTML=
     '<div class="dethd"><button class="backbtn" onclick="goBack()">‹ Voltar</button>'
     +'<div class="detname">'+E(d.name)+'</div>'
@@ -646,7 +731,7 @@ function showDet(idx){
     +'<div class="detbody">'+inds+doses+prep+ci+alerts+src+'</div>';
   document.getElementById('s-det').scrollTo(0,0);
   show('det');
-  document.querySelectorAll('.tab').forEach(function(el){el.classList.remove('on')});
+  document.querySelectorAll('.tab').forEach(function(el){el.classList.remove('on');});
 }
 function goBack(){
   var t=(prevTab==='det'||prevTab==='srch')?'home':prevTab;
