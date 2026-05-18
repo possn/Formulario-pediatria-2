@@ -40,7 +40,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": "Protocolo adulto; pediátrico: 1 mg/kg/dose 2×/dia"
       }
     ],
-    "prep": "EV: reconstituir em 5 ml água → diluir em SF 100 ml. Infusão 20–30 min.",
+    "prep": "EV: reconstituir 40 mg em 10 ml SF ou SWFI (4 mg/ml); diluir em SF 100 ml (0,4 mg/ml). Infusão 20–30 min. ⚠️ Incompatível com quase todos os fármacos na mesma linha (pH muito alcalino — linha dedicada obrigatória). Estabilidade CRÍTICA: apenas 6h após reconstituição (degradação rápida em solução).",
     "ci": [
       "Hipersensibilidade a IBPs"
     ],
@@ -104,7 +104,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": "Associar dexametasona e aprepitant em QT altamente emetizante"
       }
     ],
-    "prep": "EV: diluir em SF ou SG5%. Administrar em 15 min.",
+    "prep": "EV: diluir em SF ou SG5% para 0,04–0,16 mg/ml. Administrar em 15 min. ⚠️ Incompatível com heparina (precipitação grave), furosemida, pip/tazo. Oral: comprimidos, ODT (orodispersível — colocar na língua sem água), solução 4 mg/5 ml.",
     "ci": [
       "Síndrome QT congénito",
       "Uso concomitante apomorfina",
@@ -146,7 +146,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": "Duração máxima: 5 dias"
       }
     ],
-    "prep": "EV: diluir em SF. Administrar em 15–30 min (reduz reacções extrapiramidais).",
+    "prep": "EV: diluir em SF. Concentração ≤ 5 mg/ml. Administrar em 15–30 min (bólus lento — reacções extrapiramidais com infusão rápida). ⚠️ Incompatível com heparina, furosemida, bicarbonato. Oral: solução 5 mg/5 ml.",
     "ci": [
       "< 1 ano (risco reacções extrapiramidais)",
       "Obstrução/perfuração GI",
@@ -209,7 +209,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": ""
       }
     ],
-    "prep": "Solução oral. Pode diluir em água ou sumo.",
+    "prep": "Oral: solução 3,3 g/5 ml ou 10 g/15 ml — pode diluir em água, sumo ou leite para melhorar palatabilidade. Via SNG: administrar directamente, sem diluição. Enema (encefalopatia hepática grave): 200 ml lactulose + 700 ml água morna — manter 30–60 min. Medir com seringa oral graduada para doses pediátricas. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Galactosemia",
       "Obstrução intestinal"
@@ -242,7 +242,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": "Tomar com estômago vazio"
       }
     ],
-    "prep": "Suspensão oral. Não usar com antiácidos (reduz eficácia).",
+    "prep": "Oral: suspensão 1 g/5 ml (ou comprimidos 1 g dissolvidos em 10 ml água). Tomar 30 min ANTES das refeições e ao deitar — forma barreira física na mucosa gástrica. ⚠️ Separar 2h de outros fármacos (adsorção); antiácidos reduzem eficácia. Fonte: BNF for Children 2023-24.",
     "ci": [
       "Insuf. renal grave (acumulação alumínio)"
     ],
@@ -303,7 +303,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": "Combinação oral + rectal superior a cada um isolado"
       }
     ],
-    "prep": "Comprimidos de libertação prolongada — engolir inteiros. Não partir.",
+    "prep": "Oral: comprimidos de libertação prolongada (Pentasa, Asacol) — engolir INTEIROS, nunca triturar (revestimento gastroresistente é crítico). Granulados: misturar em água ou sumo, ingerir imediatamente. Rectal: supositórios — inserir com ponta lubrificada após dejecção; enema 1 g/100 ml — reter 30 min. Fonte: BNF for Children 2023-24; SmPC Pentasa.",
     "ci": [
       "Hipersensibilidade a salicilatos",
       "Insuf. renal grave",
@@ -349,7 +349,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": ""
       }
     ],
-    "prep": "EV: diluir em SF até 2 mg/ml. Administrar em 15–30 min.",
+    "prep": "EV (famotidina — ranitidina retirada do mercado): diluir em SF até 2 mg/ml (concentração máxima 4 mg/ml). Administrar em 15–30 min. Bólus lento aceitável: 2 mg/ml em 2 min se necessário. Oral: comprimidos 20/40 mg; solução extemporânea 8 mg/ml. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Hipersensibilidade a anti-H2",
       "Insuficiência renal grave sem ajuste"
@@ -381,7 +381,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": "Não exceder 0,5 mg/kg/dia. Não usar > 1 semana sem reavaliação"
       }
     ],
-    "prep": "Oral: suspensão 1 mg/ml. Medir com seringa graduada.",
+    "prep": "Oral: suspensão 1 mg/ml — medir com seringa oral graduada (não colher de chá). Tomar 15–30 min ANTES das refeições (procinético — acção sobre motilidade gástrica). Comprimidos 10 mg para crianças maiores. ⚠️ Dose máxima 0,5 mg/kg/dia — doses superiores aumentam risco QT. Fonte: BNF for Children 2023-24; SmPC Motilium.",
     "ci": [
       "QT prolongado / arritmias cardíacas",
       "Insuf. hepática grave",
@@ -418,7 +418,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": "Fibrose quística: 15–30 mg/kg/dia pode ser necessário"
       }
     ],
-    "prep": "Oral: suspensão 250 mg/5 ml — agitar bem. Tomar com refeições para maximizar circulação entero-hepática.",
+    "prep": "Oral: suspensão 250 mg/5 ml — agitar bem antes de usar (30 segundos); conservar a 4°C após abertura, usar em 3 meses. Cápsulas 250 mg — podem ser abertas e misturadas em alimentos moles. Tomar COM refeições para maximizar circulação entero-hepática e minimizar intolerância GI. Fonte: BNF for Children 2023-24; SmPC Ursofalk.",
     "ci": [
       "Inflamação aguda da vesícula biliar ou vias biliares",
       "Obstrução biliar completa"
@@ -458,7 +458,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": ""
       }
     ],
-    "prep": "Oral: comprimidos inteiros.",
+    "prep": "Oral: comprimidos 200 mg e 550 mg — engolir inteiros com água. Tomar com ou sem alimentos. Não triturar (revestimento entérico garante acção intestinal localizada; triturar reduz eficácia e aumenta absorção sistémica). Fonte: BNF for Children 2023-24; SmPC Normix.",
     "ci": [
       "Hipersensibilidade a rifamicinas",
       "Obstrução intestinal",
