@@ -38,7 +38,7 @@ var DRUGS_ENDOCRINO = [
         "note": "Alvo glicemia: 140–180 mg/dL (NICE-SUGAR pediátrico)"
       }
     ],
-    "prep": "Perfusão: diluir em SF (1 UI/ml ou 0,1 UI/ml). Adsorção ao PVC — flush 20 ml antes de conectar ao doente.",
+    "prep": "Perfusão EV: diluir em SF para 0,1–1 UI/ml. Adsorção ao PVC/polietileno — flush 20 ml antes de conectar ao doente (satura sítios de adsorção). Usar seringa de polipropileno. Concentração standard UCIP: 0,5–1 UI/ml em SF. SC/IM: não diluir; usar seringas de insulina graduadas em UI. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Hipoglicemia"
     ],
@@ -101,7 +101,7 @@ var DRUGS_ENDOCRINO = [
         "note": ""
       }
     ],
-    "prep": "Comprimidos podem ser dissolvidos em água ou leite (não soja). Tomar 30–60 min antes do pequeno-almoço.",
+    "prep": "EV: reconstituir 100–500 μg em 2–5 ml SF (sem agitar excessivamente). Usar imediatamente. Administrar em 5–10 min. Oral: esmagar comprimido e dissolver em 5 ml água para RN/lactentes. Tomar 30 min antes da refeição — biodisponibilidade reduz 25–40% com alimentos, cálcio, ferro, antiácidos.",
     "ci": [
       "Tirotoxicose não tratada",
       "IAM recente (relativa)"
@@ -150,7 +150,7 @@ var DRUGS_ENDOCRINO = [
         "note": ""
       }
     ],
-    "prep": "Reconstituir com o solvente fornecido. Usar imediatamente após reconstituição.",
+    "prep": "IM/SC: reconstituir pó com solvente aquoso fornecido (1 ml de SWFI). Agitar até dissolver completamente. Usar IMEDIATAMENTE — instável após reconstituição. EV (intoxicação betabloqueante): diluir em SG5% (não SF — coagula). Carga: 0,05–0,15 mg/kg em 3–5 min; perfusão: 0,05–0,1 mg/kg/h em SG5%.",
     "ci": [
       "Feocromocitoma (libertação catecolaminas)",
       "Insulinoma (hipoglicemia rebote)"
@@ -213,7 +213,7 @@ var DRUGS_ENDOCRINO = [
         "note": ""
       }
     ],
-    "prep": "EV: diluir em SF 50 ml. Infusão 30 min.",
+    "prep": "EV: diluir em SF 50 ml. Administrar em 30 min. Oral: comprimido 0,1/0,2 mg — biodisponibilidade apenas 0,08–0,16% vs nasal/EV; doses orais muito mais altas que EV. Nasal: spray 10 μg/dose (cada compressão). ⚠️ Após administração: restringir ingestão de líquidos por 8h (risco hiponatremia).",
     "ci": [
       "Polidipsia psicogénica",
       "Hiponatremia",
@@ -281,7 +281,7 @@ var DRUGS_ENDOCRINO = [
         "note": "Titular por glicemia; pode necessitar associar diazóxido"
       }
     ],
-    "prep": "EV: diluir em SF ou SG5%. Estável 24h à temperatura ambiente.",
+    "prep": "EV bólus: administrar não diluído (50–500 μg/ml) lentamente 3 min. Perfusão: diluir em SF ou SG5% para 1–50 μg/ml em seringa-bomba. SC: não diluir; rodar locais (braços, coxas, abdómen). ⚠️ Incompatível com NP (adsorção) — linha separada. Refrigerar; estável 14 dias a 4°C após abertura. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Hipersensibilidade",
       "Hipersensibilidade à somatostatina",
@@ -344,7 +344,7 @@ var DRUGS_ENDOCRINO = [
         "note": ""
       }
     ],
-    "prep": "EV: diluir em SF ou SG5%. Administrar muito lentamente (risco reacção anafilactóide).",
+    "prep": "EV: diluir em SF ou SG5% para concentração ≤ 1 mg/ml. Administrar MUITO LENTAMENTE — máximo 1 mg/min (reacções anafilactóides graves, incluindo morte, com infusão rápida). IM/SC preferidos para doses não urgentes (sem risco anafilactóide, absorção adequada). Oral: solução 10 mg/ml. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Hipersensibilidade"
     ],
@@ -391,7 +391,7 @@ var DRUGS_ENDOCRINO = [
         "note": ""
       }
     ],
-    "prep": "Comprimidos podem ser triturados. Soluções extemporâneas disponíveis.",
+    "prep": "Oral: comprimidos 0,4/5 mg — podem ser triturados e dissolvidos em água. EV (ocasional): 5–15 mg em SF ou SG5%, infusão 30 min. ⚠️ Não confundir com ácido folínico (leucovorin) — moléculas diferentes.",
     "ci": [
       "Nunca usar em deficiência de vitamina B12 não diagnosticada (pode precipitar neuropatia)"
     ],
@@ -431,7 +431,7 @@ var DRUGS_ENDOCRINO = [
         "note": "Dados limitados em < 1 ano"
       }
     ],
-    "prep": "Ferinject: diluir em SF (não SG5%). Concentração mínima 2 mg Fe/ml. Infusão 15 min (até 200 mg) ou 30 min (até 1000 mg).",
+    "prep": "EV (Ferinject — carboximaltose): diluir em SF (NÃO em SG5%). Concentração mínima: 2 mg Fe/ml. Infusão 15 min (até 200 mg) ou 30 min (> 200 mg). ⚠️ Não administrar IM ou SC. Reacção de hipersensibilidade: observar 30 min após infusão. NÃO administrar em 1ª semana de vida (ferro livre → sepsis). Fonte: BNF for Children 2023-24; SmPC Ferinject.",
     "ci": [
       "Anemia não ferropénica",
       "1º trimestre gravidez",
@@ -474,7 +474,7 @@ var DRUGS_ENDOCRINO = [
         "note": "Durar 2–6 semanas (até desaparecimento anticorpos maternos). Associar propranolol 1–2 mg/kg/dia"
       }
     ],
-    "prep": "Oral: comprimidos inteiros ou esmagados em água. Soluções magistrais disponíveis em centros pediátricos especializados.",
+    "prep": "Oral: comprimidos 5/10/20 mg — podem ser triturados e dissolvidos em água. Solução extemporânea 5 mg/5 ml. Tomar com ou sem alimentos (com alimentos reduz efeito GI). Distribuir doses ao longo do dia (q8h) para manter níveis consistentes. Fonte: BNF for Children 2023-24.",
     "ci": [
       "Agranulocitose prévia por tionamida",
       "Hipersensibilidade"
@@ -509,7 +509,7 @@ var DRUGS_ENDOCRINO = [
         "note": "Lactentes com HSC perdem sal e podem necessitar NaCl adicional (2–4 g/dia) nas primeiras semanas"
       }
     ],
-    "prep": "Oral: comprimidos 0,1 mg — podem ser partidos para doses pediátricas. Soluções magistrais disponíveis.",
+    "prep": "Oral exclusivamente: comprimidos 0,1 mg — podem ser partidos (dose habitual pediátrica 50–150 μg). Solução extemporânea 0,1 mg/ml estável 14 dias refrigerada. Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
     "ci": [
       "Hipercaliemia",
       "Insuficiência cardíaca congestiva",
@@ -552,7 +552,7 @@ var DRUGS_ENDOCRINO = [
         "note": "Nível alvo: 5–15 ng/mL"
       }
     ],
-    "prep": "Oral: solução 1 mg/ml — conservar a 4°C; estável 1 mês após abertura. Comprimidos: não esmagar. Tomar com ou sem alimentos mas SEMPRE da mesma forma.",
+    "prep": "Oral: solução 1 mg/ml — conservar a 4°C; estável 1 mês após abertura. Medir com seringa de polipropileno (não polietileno — adsorção). Diluir em ≥ 60 ml água ou sumo de laranja; ingerir imediatamente; encher o copo com mais 120 ml de líquido e ingerir. Comprimidos — engolir inteiros; NÃO esmagar. Tomar SEMPRE da mesma forma (com ou sem alimentos — manter consistente). Fonte: BNF for Children 2023-24; SmPC Rapamune.",
     "ci": [
       "Hipersensibilidade à rapamicina ou derivados",
       "Infecção activa grave"
@@ -596,7 +596,7 @@ var DRUGS_ENDOCRINO = [
         "note": "Efeito máximo 30–60 min após EV. Taquifilaxia após 2–3 doses (redução de estoques)"
       }
     ],
-    "prep": "EV: diluir em SF 50–100 ml. Administrar em 20 min. Nasal: spray calibrado 150 μg/dose.",
+    "prep": "EV: diluir em SF 50–100 ml. Administrar em 20 min (hemostase/DI). Nasal: spray Octim 150 μg/dose — 1 compressão por narina; Minirin 10 μg/dose. IM/SC: solução 4 μg/ml. ⚠️ Após qualquer via: restringir líquidos 8h (hiponatremia). Oral: comprimidos 0,1/0,2 mg — dose 10–20× superior à intranasal. Fonte: BNF for Children 2023-24; SmPC Desmopressina.",
     "ci": [
       "Polidipsia primária / potomania (hiponatremia grave)",
       "Doença de von Willebrand tipo 2B (pode agravar trombocitopenia)",
