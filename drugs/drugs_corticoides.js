@@ -72,7 +72,7 @@ var DRUGS_CORTICOIDES = [
         "note": "Dose de indução 1–2 mg/kg; reduzir para dose de manutenção ao fim de 48–72h"
       }
     ],
-    "prep": "EV: pode administrar não diluído ou diluído em SF. Administrar em 5–10 min.",
+    "prep": "EV: pode administrar não diluído (4 mg/ml) em bólus 5–10 min, ou diluir em SF/SG5%. Oral: solução 2 mg/5 ml; comprimidos 0,5/2 mg. Concentração máxima EV: 10 mg/ml (formulação concentrada hospitalar). Compatível com a maioria dos fármacos em Y-site. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Infecção sistémica não controlada (relativa)",
       "Úlcera péptica activa (relativa)",
@@ -151,7 +151,7 @@ var DRUGS_CORTICOIDES = [
         "note": ""
       }
     ],
-    "prep": "EV: reconstituir e diluir em SF. Concentração máx. 50 mg/ml. Administrar em 5–15 min.",
+    "prep": "EV: reconstituir 100 mg em 2 ml SWFI (50 mg/ml); diluir em SF ou SG5%. Dose de carga (choque): administrar em 5–15 min. Doses de manutenção: 30 min. Concentração máxima EV: 50 mg/ml. IM: solução reconstituída sem diluição. Oral: comprimidos 10/20 mg; solução 10 mg/5 ml. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Infecção fúngica sistémica (relativa)",
       "Infecção não controlada (relativa)"
@@ -214,7 +214,7 @@ var DRUGS_CORTICOIDES = [
         "note": ""
       }
     ],
-    "prep": "Solução oral pode misturar em sumo ou leite para mascarar sabor amargo.",
+    "prep": "Oral: solução 1 mg/ml ou 5 mg/ml — pode misturar em sumo ou leite para mascarar sabor amargo. Comprimidos 5/25 mg — podem ser triturados. EV (metilprednisolona succinato = forma EV; prednisolona = oral/IM): solução IM/EV 25 mg/ml. Tomar com alimentos (reduz irritação gástrica). Fonte: BNF for Children 2023-24.",
     "ci": [
       "Infecção sistémica não controlada (relativa)",
       "Varicela activa sem tratamento antiviral"
@@ -272,7 +272,7 @@ var DRUGS_CORTICOIDES = [
         "note": "Nível sérico alvo: 150–250 ng/mL (monitorizar q2–3 dias). Duração máxima 3–7 dias EV"
       }
     ],
-    "prep": "EV: diluir em SF ou SG5% (1:20 a 1:100). Infusão 2–6h. Evitar PVC (adsorção). Oral: Sandimmun e Neoral NÃO são bioequivalentes — não trocar sem ajuste.",
+    "prep": "EV: diluir em SF ou SG5% para 0,5–2,5 mg/ml. ⚠️ Evitar PVC — adsorção (usar vidro ou polietileno). Perfusão contínua 24h. Oral: solução 100 mg/ml — misturar em sumo de laranja ou maçã (NÃO toranja/grapefruit — inibe CYP3A4). Comprimidos não são bioequivalentes às diferentes formulações — não substituir sem TDM.",
     "ci": [
       "Hipertensão não controlada",
       "Infecção activa grave",
@@ -332,7 +332,7 @@ var DRUGS_CORTICOIDES = [
         "note": "Converter para oral 1:4 (dose EV × 4 = dose oral)"
       }
     ],
-    "prep": "EV: diluir em SF ou SG5% (0,004–0,1 mg/ml). Perfusão contínua. Evitar PVC.",
+    "prep": "Oral: cápsulas 0,5/1/5 mg (Prograf) — em JEJUM, 1h antes ou 2–3h após refeição (alimentos reduzem Cmax 50%). Comprimidos LP (Advagraf) — 1× /dia, SEMPRE em jejum. Solução oral 0,5 mg/ml. EV: diluir em SF ou SG5% para 0,004–0,1 mg/ml; tubagem PE ou PVC não-plastificado (adsorção PVC). Via central. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Hipersensibilidade ao tacrolimus ou ao óleo de rícino (EV)",
       "Uso concomitante com ciclosporina"
@@ -375,7 +375,7 @@ var DRUGS_CORTICOIDES = [
         "note": "Monitorizar leucócitos — reduzir dose se leucopenia"
       }
     ],
-    "prep": "Oral: suspensão 200 mg/ml — agitar bem. Cápsulas: não abrir (pó teratogénico — usar luvas se manipulação). EV: diluir em SG5%, nunca SF.",
+    "prep": "Oral: suspensão 200 mg/ml — agitar bem 1 min antes de usar; refrigerar. Cápsulas 250 mg — NÃO abrir (pó teratogénico — luvas obrigatórias se manipulação). Comprimidos 500 mg — NÃO triturar. EV: diluir em SG5% APENAS (não em SF). Tomar com ou sem alimentos (com alimentos reduz Cmax mas não AUC). Fonte: BNF for Children 2023-24; SmPC CellCept.",
     "ci": [
       "Gravidez (teratogénico — categoria D; contracepção obrigatória)",
       "Hipersensibilidade ao MMF ou ácido micofenólico"
@@ -412,7 +412,7 @@ var DRUGS_CORTICOIDES = [
         "note": "Iniciar com dose baixa (1 mg/kg) e titular por resposta e tolerância hematológica. Verificar TPMT antes de iniciar"
       }
     ],
-    "prep": "Oral: comprimidos — engolir inteiros com água. EV: diluir em SF ou SG5%.",
+    "prep": "Oral: comprimidos 25/50 mg — engolir inteiros com água (sabor muito amargo). EV: reconstituir 50 mg em 5–15 ml SWFI; diluir em SF ou SG5% para 0,5–5 mg/ml; administrar em 30–60 min. ⚠️ Pó teratogénico e mutagénico — usar luvas se manipulação de comprimidos partidos. Fonte: BNF for Children 2023-24.",
     "ci": [
       "Deficiência grave de TPMT (risco mielossupressão grave)",
       "Uso concomitante com alopurinol (sem redução de dose — toxicidade grave por acumulação de 6-MP)",
@@ -449,7 +449,7 @@ var DRUGS_CORTICOIDES = [
         "note": "SC preferível a PO: melhor biodisponibilidade e menos náuseas GI. Associar ácido fólico 5 mg 24–48h após cada dose"
       }
     ],
-    "prep": "SC: seringas pré-cheias — administrar em abdómen ou coxa. PO: comprimidos 2,5 mg — ingestão semanal.",
+    "prep": "SC: seringas pré-cheias (5–25 mg/0,4–1 ml) — injectar em abdómen ou coxa anterior. PO: comprimidos 2,5/10 mg — tomar em DIA FIXO semanal; não confundir com dose diária (erros letais documentados). ⚠️ Teratogénico — luvas ao manipular; nunca esmagar sem protecção. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Insuficiência renal (TFG < 60 ml/min — acumulação grave)",
       "Insuficiência hepática significativa",
@@ -487,7 +487,7 @@ var DRUGS_CORTICOIDES = [
         "note": "Dose MÁXIMA: 5 mg/kg/dia de peso real (não ideal) — acima deste limiar risco retinal aumenta progressivamente"
       }
     ],
-    "prep": "Oral: comprimidos 200 mg — podem ser triturados e misturados com alimentos.",
+    "prep": "Oral: comprimidos 200 mg — podem ser triturados e misturados com alimentos. Solução extemporânea 25 mg/5 ml (estável 60 dias refrigerada). Tomar COM refeições (reduz irritação GI). ⚠️ Efeito terapêutico demora 3–6 meses — não descontinuar precocemente. Fonte: BNF for Children 2023-24.",
     "ci": [
       "Retinopatia ou maculopatia pré-existente",
       "Hipersensibilidade a cloroquina/antimaláricos",
@@ -529,7 +529,7 @@ var DRUGS_CORTICOIDES = [
         "note": ""
       }
     ],
-    "prep": "Oral: comprimidos — engolir inteiros. Certican: dispersível em água. Tomar SEMPRE com ou sem alimentos — escolher e manter consistente.",
+    "prep": "Oral: comprimidos Certican (0,25/0,5/0,75 mg) — dispersíveis em 30 ml água (agitar 3 min); Afinitor/Votubia — engolir inteiros ou esmagar. Tomar SEMPRE com ou SEMPRE sem alimentos (escolher e manter consistente — alimentos aumentam Cmax 35%). Solução oral: Votubia 2 mg/ml. Fonte: BNF for Children 2023-24; SmPC Certican.",
     "ci": [
       "Hipersensibilidade a everolímus, sirolímus ou excipientes",
       "Infecção activa grave"
@@ -564,7 +564,7 @@ var DRUGS_CORTICOIDES = [
         "note": "Não repetir se rejeição grave ou infecção grave no intervalo"
       }
     ],
-    "prep": "EV: reconstituir em 5 ml SWFI; diluir em SF ou SG5% para 50 ml. Administrar em 20–30 min.",
+    "prep": "EV: reconstituir 20 mg em 5 ml SWFI (4 mg/ml); girar suavemente até dissolver. Diluir em SF ou SG5% para volume final de 50 ml. Administrar em 20–30 min. ⚠️ NÃO agitar após reconstituição. Estabilidade: 24h a 4°C; 4h a 25°C. Fonte: BNF for Children 2023-24; SmPC Simulect.",
     "ci": ["Hipersensibilidade ao basiliximab"],
     "alert": [
       "⚠️ Anafilaxia grave (rara < 0,1%) — ter adrenalina disponível; não re-administrar se anafilaxia prévia",
@@ -594,7 +594,7 @@ var DRUGS_CORTICOIDES = [
         "note": "Resposta avaliada a 6 meses — se sem melhoria documentada ponderar descontinuação"
       }
     ],
-    "prep": "EV: reconstituir e diluir em SF 250 ml. Administrar em 1h. Não agitar — pó liofilizado.",
+    "prep": "EV: reconstituir 120 mg em 1,5 ml ou 400 mg em 4,8 ml SWFI (girar suavemente 60 seg — não agitar). Diluir em SF 250 ml. ⚠️ Não agitar o frasco reconstituído — espuma inactiva o anticorpo. Administrar em 1h. Estabilidade: 8h a 25°C após diluição.",
     "ci": [
       "Infecção activa grave",
       "Hipersensibilidade"
