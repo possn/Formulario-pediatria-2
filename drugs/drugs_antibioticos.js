@@ -31,7 +31,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": ""
       }
     ],
-    "prep": "EV: reconstituir e diluir em SF. Administrar em 30 min.",
+    "prep": "EV: reconstituir 600 mg em 10 ml SWFI; 1,2 g em 20 ml SWFI. Diluir em SF ou SG5% até concentração ≤ 40 mg/ml (amoxicilina). Administrar em 30 min. Periférico: ≤ 40 mg/ml. Estabilidade: preparar fresco — estável apenas 20 min à T ambiente após diluição. Oral: suspensão 125/5 ml ou 250/5 ml — reconstituir com água, refrigerar, usar em 7 dias.",
     "ci": [
       "Alergia a penicilinas",
       "Mononucleose infecciosa (rash)"
@@ -73,7 +73,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": ""
       }
     ],
-    "prep": "EV: diluir em SG5% ou SF. Concentração máx. 40 mg/ml (periférico). Administrar em 30 min.",
+    "prep": "EV: reconstituir 1 g em 10 ml SWFI (100 mg/ml); diluir em SF, SG5% ou Lactato Ringer. Concentração para infusão: ≤ 40 mg/ml periférico; ≤ 100 mg/ml central. Administrar em 30 min (≥ 60 min se dose > 50 mg/kg ou para reduzir flebite). ⚠️ NUNCA misturar com solução contendo cálcio EV na mesma linha (precipitação letal em neonatos). Estabilidade: 24h a 25°C; 48h a 4°C após reconstituição.",
     "ci": [
       "Alergia a cefalosporinas",
       "RN < 41 sem corrigidas com icterícia ou hiperbilirrubinemia (desloca bilirrubina da albumina)",
@@ -179,7 +179,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": ""
       }
     ],
-    "prep": "Diluir em SF ou SG5%. Concentração máx. 50 mg/ml. Estabilidade: 4h à temperatura ambiente.",
+    "prep": "EV: reconstituir 500 mg em 10 ml SWFI (50 mg/ml); 1 g em 20 ml. Diluir em SF ou SG5%. Concentração: 1–20 mg/ml (infusão padrão 30 min); ≤ 50 mg/ml para bólus EV (administrar em 5 min). Infusão prolongada (3h): diluir a ≤ 10 mg/ml em SF — melhor PK/PD para MIC > 2 mg/L. Estabilidade CRÍTICA: SF 4h a 25°C; 24h a 4°C. SG5%: usar imediatamente (degradação rápida).",
     "ci": [
       "Hipersensibilidade a carbapenemos",
       "Alergia a β-lactâmicos (reacção cruzada < 1%)"
@@ -238,7 +238,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": "Dose dividida na meningite para melhor penetração LCR"
       }
     ],
-    "prep": "EV: diluir em SF. Administrar em 30 min.",
+    "prep": "EV: diluir em SF ou SG5%. Concentração: 1–10 mg/ml periférico; até 25 mg/ml central. Administrar em 30–60 min (NUNCA bólus — bloqueia neuromuscular). Incompatível na mesma linha com penicilinas e cefalosporinas — separar por pelo menos 30 min e lavar linha. Estabilidade: 24h a 25°C após diluição.",
     "ci": [
       "Miastenia gravis",
       "Insuf. renal grave (ajustar dose/intervalo)",
@@ -291,7 +291,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": ""
       }
     ],
-    "prep": "EV: não necessita diluição adicional (já diluído). Administrar em 30–60 min.",
+    "prep": "EV: pronto a usar em frasco (5 mg/ml = 500 mg/100 ml). Não diluir adicionalmente. Administrar em 20–60 min. Proteger da luz durante infusão. Compatível com SF, SG5%; incompatível com bicarbonato na mesma linha. Estabilidade: 24h após abertura do frasco.",
     "ci": [
       "1º trimestre gravidez (relativa)"
     ],
@@ -347,7 +347,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": ""
       }
     ],
-    "prep": "EV: reconstituir e diluir em SF ou SG5% → concentração ≤ 7 mg/ml. Infusão 60 min. Manter diurese adequada.",
+    "prep": "EV: reconstituir 250 mg em 10 ml SWFI (25 mg/ml); 500 mg em 20 ml. Diluir em SF (concentração ≤ 7 mg/ml — OBRIGATÓRIO para evitar cristalização renal). Concentração máxima ABSOLUTA: 7 mg/ml periférico e central. Administrar em 60 min mínimo (1–2h preferível). ⚠️ Concentrações > 7 mg/ml causam flebite grave e cristalização intratubular renal. Estabilidade: 12h a 25°C após reconstituição.",
     "ci": [
       "Insuf. renal grave (ajustar dose)"
     ],
@@ -394,7 +394,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": ""
       }
     ],
-    "prep": "EV: dissolver e diluir em SF. Administrar em 15–30 min.",
+    "prep": "EV: reconstituir 250 mg em 5 ml SWFI; 500 mg em 10 ml; 1 g em 15–20 ml. Diluir em SF. Concentração ≤ 40 mg/ml. Administrar em 15–30 min. ⚠️ Extremamente instável — preparar imediatamente antes e administrar em < 1h após reconstituição (hidrólise rápida do anel beta-lactâmico). Oral: tomar em jejum (30 min antes refeição — absorção reduz 50% com alimentos).",
     "ci": [
       "Alergia a penicilinas",
       "Icterícia/hepatotoxicidade prévia por flucloxacilina"
@@ -436,7 +436,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": ""
       }
     ],
-    "prep": "Diluir em SF ou SG5%. Concentração ≤ 45 mg/ml piperacilina. Infusão 30 min (ou 4h extendida).",
+    "prep": "EV: reconstituir 2,25 g em 10 ml; 4,5 g em 20 ml SWFI ou SF. Diluir em SF ou SG5%. Concentração piperacilina ≤ 45 mg/ml. Infusão padrão: 30 min. Infusão prolongada (4h): mantém > 40% T>MIC vs Pseudomonas resistente — diluir a ≤ 22 mg/ml, manter a 4°C durante infusão. ⚠️ Incompatível com vancomicina (precipitação), aminoglicosídeos, furosemida, midazolam. Estabilidade: SF — 12h a 25°C; 4h em infusão prolongada a 25°C (24h a 4°C).",
     "ci": [
       "Alergia a penicilinas"
     ],
@@ -485,7 +485,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": ""
       }
     ],
-    "prep": "EV: diluir 5 ml em 125 ml SF ou SG5%. Infusão 60–90 min.",
+    "prep": "EV: diluir 5 ml de ampolação em ≥ 125 ml SF ou SG5% (concentração ≤ 1,6 mg TMP/ml). Administrar em 60–90 min. ⚠️ Concentrações > 1,6 mg/ml TMP causam precipitação do sulfametoxazol. Incompatível com soluções alcalinas. Estabilidade: 6h a 25°C após diluição.",
     "ci": [
       "< 6 semanas (kernicterus)",
       "Insuf. renal grave",
@@ -529,7 +529,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": "Biodisponibilidade oral ~100% — transição EV→oral imediata possível"
       }
     ],
-    "prep": "EV: pronto a usar (2 mg/ml). Infusão 30–120 min. Compatível com SF e SG5%.",
+    "prep": "EV: pronto a usar (2 mg/ml em 300 ml). Não diluir adicionalmente. Administrar em 30–120 min. Compatível com SF e SG5%; incompatível com vancomicina (precipitação), ceftriaxona, furosemida. Proteger da luz. Estabilidade: usar dentro do prazo do frasco.",
     "ci": [
       "Uso concomitante com IMAOs",
       "Hipertensão não controlada (efeito serotoninérgico)"
@@ -585,7 +585,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": "Bacteriemia/endocardite: 6 mg/kg; Infecções complicadas: 8–10 mg/kg"
       }
     ],
-    "prep": "Diluir em SF. Concentração ≤ 50 mg/ml. Infusão 30 min ou bólus 2 min.",
+    "prep": "EV: reconstituir 350 mg em 7 ml SF ou 500 mg em 10 ml SF (50 mg/ml); girar suavemente sem agitar. Diluir em SF ≤ 20 mg/ml para infusão 30 min; ou bólus 50 mg/ml em 2 min. ⚠️ APENAS em SF (incompatível com SG5% — degrada). Estabilidade: 12h a 25°C; 48h a 4°C.",
     "ci": [
       "Pneumonia (inactivada pelo surfactante pulmonar)"
     ],
@@ -626,7 +626,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": "Dados limitados em neonatos"
       }
     ],
-    "prep": "Reconstituir com 10,8 ml água estéril → diluir em SF 250 ml. Infusão 60 min. NÃO usar SG5% (precipitação).",
+    "prep": "EV: aquecer frasco a T ambiente. Reconstituir com 10,5 ml SWFI (5 mg/ml). Diluir em SF ≤ 0,5 mg/ml (70 mg → SF 250 ml). ⚠️ NÃO diluir em SG5% (turvação). ⚠️ NÃO usar solução de albumina. Administrar em 60 min. Incompatível com heparina na mesma linha. Estabilidade: 24h a 25°C.",
     "ci": [
       "Hipersensibilidade a equinocandinas"
     ],
@@ -731,7 +731,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": ""
       }
     ],
-    "prep": "Reconstituir com 5 ml SF → diluir em SF 100 ml. Infusão 60 min. Proteger da luz.",
+    "prep": "EV: reconstituir cada frasco (50 mg ou 100 mg) em 5 ml SF (10 ou 20 mg/ml), girar suavemente sem agitar (evitar espuma). Diluir em SF 100 ml (concentração ≤ 1,5 mg/ml). Administrar em 60 min. ⚠️ Proteger da luz — envolver em papel de alumínio. ⚠️ APENAS em SF — incompatível com SG5%. Estabilidade: 24h a 25°C após reconstituição.",
     "ci": [
       "Hipersensibilidade a equinocandinas"
     ],
@@ -857,7 +857,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": "Infecção por Pseudomonas: q6h. Infusão prolongada (3–4h) para PK/PD optimizado"
       }
     ],
-    "prep": "EV: reconstituir e diluir em SF ou SG5%. Administrar em 20–60 min. Estável 48h a 4°C.",
+    "prep": "EV: reconstituir 500 mg em 3 ml SWFI; 1 g em 6 ml; 2 g em 10 ml. Diluir em SF ou SG5%. Concentração ≤ 20 mg/ml para infusão (20–60 min); infusão prolongada (3–4h): concentração ≤ 10 mg/ml. ⚠️ Reactividade cruzada com ceftazidima (mesma cadeia lateral) — usar com cautela em alergia documentada. Estabilidade: 48h a 4°C.",
     "ci": [
       "Alergia a aztreonam — pode haver reactividade cruzada com ceftazidima (mesma cadeia lateral R1)",
       "Não usar em infecções por Gram positivos ou anaeróbios (sem actividade)"
@@ -924,7 +924,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": "A única β-lactâmico eficaz em Listeria"
       }
     ],
-    "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 30 mg/ml. Administrar em 15–30 min. Estável apenas 1h à temperatura ambiente após reconstituição — preparar fresco.",
+    "prep": "EV: reconstituir 500 mg em 5 ml SWFI; 1 g em 10 ml. Diluir em SF (NÃO em SG5% — hidrólise). Concentração ≤ 30 mg/ml. Administrar em 15–30 min. ⚠️ INSTABILIDADE CRÍTICA — estável apenas 1h a 25°C após reconstituição (hidrólise rápida). Preparar imediatamente antes de administrar. Incompatível com aminoglicosídeos na mesma linha.",
     "ci": [
       "Alergia a penicilinas",
       "Mononucleose infecciosa (rash maculopapular em 80–100%)"
@@ -968,7 +968,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": "Neonatos 29–34 sem: 15 mg/kg q36h. ≥ 35 sem: 15 mg/kg q24h"
       }
     ],
-    "prep": "EV: diluir em SF ou SG5% até 10 mg/ml. Administrar em 30–60 min (nunca em bólus — bloqueio neuromuscular). Incompatível com penicilinas na mesma linha.",
+    "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 10 mg/ml periférico; ≤ 25 mg/ml central. Administrar em 30–60 min. ⚠️ NUNCA em bólus — bloqueio neuromuscular. ⚠️ Incompatível na mesma linha com beta-lactâmicos — separar com flush SF. Estabilidade: 24h a 25°C.",
     "ci": [
       "Miastenia gravis",
       "Evitar se disfunção renal severa sem possibilidade de monitorização TDM"
@@ -1019,7 +1019,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": "Doses mais elevadas justificadas por PK alterada na FC"
       }
     ],
-    "prep": "EV: não diluir adicionalmente (vem em solução 2 mg/ml). Administrar em 60 min (30 min se urgente). Compatível com SF, SG5%.",
+    "prep": "EV: pronto a usar (2 mg/ml em 100/200 ml). Não diluir adicionalmente. Administrar em 60 min (reduz flebite e reacções); 30 min aceitável em urgência. ⚠️ Incompatível com heparina, furosemida, aminofilina — linha separada. Oral: tomar 1h antes ou 2h após antiácidos, ferro, cálcio (quelação). Estabilidade: usar dentro do prazo.",
     "ci": [
       "Idade < 1 ano (risco teórico artropatia — evitar salvo indicação crítica sem alternativa)",
       "Uso rotineiro em < 18 anos sem indicação específica (guideline AAP/EMA)",
@@ -1223,7 +1223,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": "Semivida neonatal prolongada (55–90h) — intervalos alargados"
       }
     ],
-    "prep": "EV: administrar sem diluição adicional (2 mg/ml pronto). Taxa máx. 10 ml/min. Compatível com SF, SG5%. Oral: tomar com ou sem comida; biodisponibilidade > 90%.",
+    "prep": "EV: pronto a usar (2 mg/ml). Não diluir adicionalmente. Administrar em 60 min (máximo 10 ml/min). Compatível com SF e SG5%. Estabilidade: usar dentro do prazo do frasco. Oral: biodisponibilidade > 90% — considerar step-down precoce. Suspensão oral 10 mg/ml estável 14 dias a 25°C.",
     "ci": [
       "Hipersensibilidade a azóis",
       "Uso concomitante com terfenadina, astemizol, cisaprida, pimozida (prolongamento QT grave)",
@@ -1321,7 +1321,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": "Quando cotrimoxazol não tolerado por intolerância à sulfa; eficácia ligeiramente inferior"
       }
     ],
-    "prep": "Oral: suspensão 50 mg/5 ml. Tomar com ou sem comida.",
+    "prep": "Oral: suspensão 50 mg/5 ml (10 mg/ml) — agitar bem; estável 14 dias após abertura. Comprimidos 100/200 mg — podem ser triturados e dissolvidos em água. Tomar com ou sem alimentos. Assegurar hidratação adequada (pode cristalizar nos túbulos renais em doses altas). Fonte: BNF for Children 2023-24.",
     "ci": [
       "Deficiência de folato documentada (anemia megaloblástica)",
       "Insuficiência renal grave (TFG < 15 ml/min) sem ajuste",
@@ -1374,7 +1374,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": ""
       }
     ],
-    "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 40 mg/ml. Administrar em 30 min.",
+    "prep": "EV: reconstituir 500 mg em 10 ml SWFI; 1 g em 14 ml; 2 g em 20 ml. Diluir em SF ou SG5%. Concentração ≤ 40 mg/ml. Administrar em 30 min (infusão) ou 3–5 min (bólus lento ≤ 20 mg/ml). ⚠️ Em neonatos: NÃO administrar em linha com solução de cálcio EV. Estabilidade: 6h a 25°C; 24h a 4°C.",
     "ci": [
       "Alergia a cefalosporinas",
       "Não usar com cálcio EV em neonatos (mesma linha — risco precipitação)",
@@ -1456,7 +1456,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": "SEMPRE em combinação — monoterapia selecciona resistência rapidamente. Carga sódica elevada (1 g fosfomicina ≈ 0,32 mEq Na⁺) — monitorizar"
       }
     ],
-    "prep": "EV: diluir em SF ou SG5% (100–500 ml). Administrar em 30–60 min. Atenção à carga sódica total.",
+    "prep": "EV: dissolver 1 g em 5 ml SWFI; reconstituir 2–4 g proporcionalmente. Diluir em SF ou SG5% (100–500 ml). Concentração ≤ 20 mg/ml. Administrar em 30–60 min. ⚠️ Carga sódica elevada: 1 g fosfomicina sódica = 0,32 g Na⁺ (≈14 mEq) — monitorizar natremia. Estabilidade: 12h a 25°C.",
     "ci": [
       "Insuficiência renal grave sem diálise (acumulação e carga sódica)",
       "Hipersensibilidade"
@@ -1621,7 +1621,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": ""
       }
     ],
-    "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 30 mg/ml. Administrar em 15–30 min.",
+    "prep": "EV: reconstituir 750 mg em 8 ml SWFI; 1,5 g em 15 ml. Diluir em SF ou SG5%. Concentração ≤ 30 mg/ml. Administrar em 15–30 min. IM: reconstituir em água para injectáveis (doloroso — lidocaína 1% como solvente reduz dor). Estabilidade: 24h a 4°C.",
     "ci": [
       "Alergia a cefalosporinas",
       "Reacção anafilática prévia a penicilinas (avaliar individualmente)"
