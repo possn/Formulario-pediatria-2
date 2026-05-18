@@ -39,7 +39,7 @@ var DRUGS_ELECTROLITICOS = [
         "note": "Dose baseada em défice: cada 0,1 mEq/L de queda de K⁺ ≈ défice de 0,3 mEq/kg"
       }
     ],
-    "prep": "⛔ NUNCA administrar EV rápido não diluído — FATAL. Diluir sempre. Concentração máxima EV central: 150–200 mEq/L.",
+    "prep": "EV: NUNCA administrar não diluído (FATAL — fibrilhação ventricular). Concentração máxima periférico: 40 mEq/L (0,04 mmol/ml). Concentração máxima central: 80–200 mEq/L (0,08–0,2 mmol/ml). Velocidade máxima: 0,5 mEq/kg/h (periférico); 1 mEq/kg/h (central com monitorização). ⚠️ Monitorizar ECG e K⁺ durante reposição. Oral: solução 7,5% (1 mEq/ml) — tomar com alimentos em sumo. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Hipercaliemia",
       "Anúria",
@@ -129,7 +129,7 @@ var DRUGS_ELECTROLITICOS = [
         "note": ""
       }
     ],
-    "prep": "Pronto a usar. Filtro de 0,22 mcm recomendado. Administrar em 1–4h.",
+    "prep": "EV: pronto a usar — não diluir. Albumina 4%/5%: via periférica ou central; velocidade 1–2 ml/min (urgência 5–10 ml/min). Albumina 20%/25%: central preferida; velocidade 1 ml/min. Filtro em linha 0,22 μm recomendado. ⚠️ Compatível com solução glicosada e salina mas NÃO misturar com heparina, furosemida, verapamil, propofol. Usar dentro de 4h após abertura. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Insuf. cardíaca congestiva grave (risco edema)",
       "Anemia grave sem hipovolemia"
@@ -204,7 +204,7 @@ var DRUGS_ELECTROLITICOS = [
         "note": ""
       }
     ],
-    "prep": "Diluir sempre antes de administrar EV. Sol. 10% para infusão. Sol. 50% apenas IM.",
+    "prep": "EV: SEMPRE diluir. Concentração periférico: ≤ 20% (200 mg/ml = 0,8 mmol/ml). Concentração central: ≤ 50% (500 mg/ml). Velocidade máxima: 150 mg/min (urgência); habitual < 60 mg/min. ⚠️ NUNCA em bólus rápido (assistolia). IM (emergência sem EV): solução 50% — dolorosa. Solução 10%: preferida para EV em criança (menos irritante). Antídoto toxicidade: gluconato Ca 0,2 ml/kg EV. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Bloqueio AV",
       "Insuf. renal grave (acumulação)",
@@ -252,7 +252,7 @@ var DRUGS_ELECTROLITICOS = [
         "note": ""
       }
     ],
-    "prep": "Diluir sempre em SF ou SG5%. NÃO administrar não diluído. Concentração máxima 0,3 mmol/ml (EV periférico).",
+    "prep": "EV: SEMPRE diluir — NUNCA administrar não diluído (risco cristalização intravascular). Diluir em SF ou SG5%. Concentração máxima: 0,3 mmol/ml (periférico); 0,6 mmol/ml (central). Velocidade máxima: 0,5 mmol/kg/h. ⚠️ NUNCA misturar na mesma linha com cálcio (precipitação CaHPO4 FATAL). Verificar compatibilidade em NP (precipitação depende de pH, temperatura, concentração). Fonte: BNF for Children 2023-24; Trissel's 2023.",
     "ci": [
       "Hiperfosfatemia",
       "Hipocalcemia não corrigida",
@@ -495,7 +495,7 @@ var DRUGS_ELECTROLITICOS = [
         "note": "Reduz necessidades de fluidos ~30% e edema de reperfusão (Tanaka et al. 2000) — protocolo não universal"
       }
     ],
-    "prep": "EV: diluir em SF ou SG5%. Proteger da luz. Administrar em 1h.",
+    "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 100 mg/ml. Administrar em 30–60 min. ⚠️ Proteger da luz (degradação fotolítica rápida — envolver em alumínio se infusão prolongada). Incompatível com bicarbonato, riboflavina, cobre na mesma linha. Estabilidade: 6h após diluição.",
     "ci": ["Cálculos renais de oxalato (doses altas crónicas)", "Hemocromatose (aumenta absorção de ferro)"],
     "alert": [
       "⚠️ Protocolo Marik (vitamina C + tiamina + hidrocortisona em sépsis) — ensaio CITRIS-ALI não confirmou benefício; não é standard of care",
@@ -533,7 +533,7 @@ var DRUGS_ELECTROLITICOS = [
         "note": "Evidência insuficiente para recomendação universal — REDOXS trial negativo"
       }
     ],
-    "prep": "EV: incorporar na NP ou perfusão separada diluída em SF.",
+    "prep": "EV: incorporar na bolsa de NP ou diluir em SF para perfusão separada. Concentração: traço mineral — volumes muito pequenos (50–100 μg em 50–100 ml). Incompatível com soluções de pH extremo. Estabilidade: verificar com a marca.",
     "ci": ["Hipersensibilidade"],
     "alert": [
       "Toxicidade por selénio (selenose) com doses excessivas: queda de cabelo, neuropatia, alho hálito",
