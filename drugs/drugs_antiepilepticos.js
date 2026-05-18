@@ -38,7 +38,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Absorção IM irregular — preferir lorazepam IM ou midazolam IN"
       }
     ],
-    "prep": "EV: não diluir. Pode administrar directamente. Absorção IM errática.",
+    "prep": "EV: NÃO diluir — precipita em qualquer diluente (forma emulsão instável). Administrar NÃO DILUÍDO (5 mg/ml) < 2 mg/min em veia de grande calibre (veia antecubital ou veia central). Via periférica distal → tromboflebite severa. Concentração máxima: 5 mg/ml (não reduzir). Rectal (Stesolid): inserir tubo 3–4 cm, comprimir e manter 5 min em decúbito. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Depressão respiratória grave",
       "Miastenia gravis",
@@ -79,7 +79,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Absorção IM boa (ao contrário do diazepam)"
       }
     ],
-    "prep": "Conservar no frio. Administrar EV lento (não em bólus rápido). Pode diluir 1:1 em SF.",
+    "prep": "EV: conservar no frio 2–8°C. Diluir 1:1 com SF ou SG5% imediatamente antes de administrar (2 mg/ml → 1 mg/ml). Administrar em bólus lento 2 min. Concentração máxima: 2 mg/ml não diluído; 1 mg/ml diluído (reduz precipitação). Incompatível com solução alcalinas e propofol concentrado. Estabilidade após diluição: 24h a 4°C.",
     "ci": [
       "Depressão respiratória grave",
       "Miastenia gravis"
@@ -167,7 +167,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": ""
       }
     ],
-    "prep": "EV: diluir em SF ou SG5%. Concentração máx. 16 mg/ml EV. Velocidade máx. 1 mg/kg/min.",
+    "prep": "EV: pode administrar não diluído (200 mg/ml) ou diluir em SF/SG5%. Concentração máxima EV: 16 mg/ml. Velocidade máxima: 1 mg/kg/min (máximo 30 mg/min) — velocidade excessiva causa depressão respiratória e hipotensão. Via central preferida para doses altas. Estabilidade: 24h após abertura.",
     "ci": [
       "Porfiria",
       "Depressão respiratória grave",
@@ -216,7 +216,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Nível terapêutico: 10–20 mcg/ml (total); 1–2 mcg/ml (livre)"
       }
     ],
-    "prep": "⚠️ APENAS em SF — precipita em SG5%. Linha dedicada. Não misturar com outros fármacos.",
+    "prep": "EV: ⚠️ APENAS em SF (pH alcalino necessário para solubilidade) — precipita imediatamente em SG5%. Concentração máx.: 10 mg/ml (SF). Taxa de infusão máxima: 1 mg/kg/min (máx 50 mg/min) — monitorização ECG e TA contínua durante infusão (hipotensão e arritmias com velocidade excessiva). Linha DEDICADA — incompatível com qualquer outro fármaco. Filtro em linha 0,22 μm. Estabilidade: usar imediatamente.",
     "ci": [
       "Bloqueio sinoatrial / AV 2º-3º grau",
       "Síndrome de Adams-Stokes",
@@ -266,7 +266,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Adulto: 500 mg × 2/dia → até 1500 mg × 2/dia"
       }
     ],
-    "prep": "EV: diluir em 100 ml SF/SG5%. Administrar em 5–15 min. Biodisponibilidade oral ~100%.",
+    "prep": "EV: diluir em 100 ml SF, SG5% ou LR. Concentração ≤ 15 mg/ml. Administrar em 5–15 min (SE agudo) ou 30 min (dose de manutenção). Compatível com SF, SG5%, LR. Biodisponibilidade oral 100% — equivalência 1:1 EV=oral. Estabilidade: 24h a 25°C.",
     "ci": [
       "Hipersensibilidade"
     ],
@@ -306,7 +306,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": ""
       }
     ],
-    "prep": "EV: diluir em SF ou SG5%. Velocidade infusão: até 3 mg/kg/min.",
+    "prep": "EV: reconstituir vial (400 mg em 4 ml) em água SWFI; diluir em SF, SG5% ou LR. Concentração ≤ 10 mg/ml. Velocidade de infusão: até 3 mg/kg/min (dose de carga). Carga rápida (6 mg/kg/min × 5 min) em SE documentada como eficaz em estudos. Estabilidade: 24h a 25°C.",
     "ci": [
       "⛔ < 2 ANOS: contraindicado se doença hepática, doença metabólica, epilepsia grave com retardo — risco FATAL de hepatotoxicidade",
       "Disfunção hepática",
@@ -348,7 +348,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Nível fenitoína: colher 2h após dose EV"
       }
     ],
-    "prep": "Pode diluir em SF OU SG5% (ao contrário da fenitoína — vantagem). Concentração: 1,5–25 mg PE/ml.",
+    "prep": "EV: diluir em SF OU SG5% (vantagem sobre fenitoína — compatível com ambos). Concentração: 1,5–25 mg EPE/ml (EPE = equivalentes de fenitoína). Taxa máx.: 3 mg EPE/kg/min (máx 150 mg EPE/min) — monitorização ECG contínua. Conversão: 1,5 mg fosfenitoína = 1 mg EPE = 1 mg fenitoína. Estabilidade: 48h a 25°C após diluição.",
     "ci": [
       "Bloqueio sinoatrial/AV 2º-3º grau",
       "Bradicardia sinusal grave"
@@ -389,7 +389,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Evidência crescente como alternativa ao valproato/fenitoína no SE refractário"
       }
     ],
-    "prep": "EV: diluir em SF, SG5% ou LR. Concentração 10 mg/ml. Infusão 15–60 min.",
+    "prep": "EV: pronto a usar (10 mg/ml em 20 ml). Pode diluir em SF, SG5% ou LR se necessário. Concentração ≤ 10 mg/ml. Administrar em 15–60 min. Periférico aceitável. Oral: biodisponibilidade ~ 100% — step-down 1:1 EV=oral. Estabilidade: usar dentro do prazo.",
     "ci": [
       "Bloqueio AV 2º/3º grau (relativa)"
     ],
@@ -430,7 +430,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Titular lentamente para minimizar efeitos cognitivos"
       }
     ],
-    "prep": "Cápsulas sprinkle podem ser abertas e misturadas em alimentos moles (não mastigar).",
+    "prep": "Oral: cápsulas sprinkle 15/25 mg — podem ser abertas e conteúdo misturado em 1 colher de alimento mole (não mastigar grânulos). Comprimidos 25/50/100/200 mg — NÃO triturar (amargor intenso). Suspensão oral 6 mg/ml (magistral). Tomar com ou sem alimentos. Hidratação adequada (risco nefrolitíase). Fonte: BNF for Children 2023-24.",
     "ci": [
       "Nefrolitíase recorrente (relativa)",
       "Glaucoma (relativa)"
@@ -471,7 +471,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": ""
       }
     ],
-    "prep": "Dissolver o pó em água ou sumo antes de administrar.",
+    "prep": "Oral: sachets 500 mg — dissolver em 10 ml água fria imediatamente antes de administrar. Comprimidos 500 mg — podem ser triturados. Tomar com ou sem alimentos. Solução magistral disponível para lactentes. Fonte: BNF for Children 2023-24.",
     "ci": [
       "Neuropatia óptica prévia",
       "Campos visuais alterados"
@@ -511,7 +511,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Nível terapêutico (10-OH-CBZ): 3–35 mcg/ml"
       }
     ],
-    "prep": "Suspensão: agitar antes de usar. Pode misturar com água.",
+    "prep": "Oral: suspensão 300 mg/5 ml (60 mg/ml) — agitar bem antes de usar (30 seg); medir com seringa oral graduada. Comprimidos 150/300/600 mg. Pode misturar suspensão em água. Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
     "ci": [
       "Hipersensibilidade à carbamazepina (reacção cruzada 25–30%)"
     ],
@@ -543,7 +543,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Iniciar 50 mg/kg/dia. Inibidor potente CYP3A4/CYP2C19 — reduzir clobazam 25% e valproato"
       }
     ],
-    "prep": "Cápsulas ou pó dissolvido em água/sumo. Tomar com refeições.",
+    "prep": "Oral: cápsulas 250/500 mg ou sachets de pó 250/500 mg — dissolver pó em água ou sumo; cápsulas podem ser abertas. Tomar COM refeições (absorção aumenta com alimentos). ⚠️ SEMPRE em combinação com valproato e/ou clobazam — inibe CYP2C19 e CYP3A4 (ajustar doses dos outros AE). Fonte: BNF for Children 2023-24; SmPC Diacomit.",
     "ci": [
       "Uso sem valproato + clobazam no Dravet"
     ],
@@ -576,7 +576,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Titular: aumentar 2,5 mg/kg/dose (5 mg/kg/dia) a cada semana até resposta ou efeito adverso"
       }
     ],
-    "prep": "Oral: solução 100 mg/ml — seringa de dosagem incluída. Tomar SEMPRE com alimentos ricos em gordura para maximizar biodisponibilidade.",
+    "prep": "Oral: solução 100 mg/ml (Epidyolex) — seringa de dosagem calibrada incluída na embalagem. Tomar SEMPRE com alimentos ricos em gordura (aumenta biodisponibilidade 3–4×). Refrigerar após abertura; estável 12 semanas. ⚠️ Não substituir por outros produtos de canábis — Epidyolex é formulação padronizada e aprovada. Fonte: BNF for Children 2023-24; SmPC Epidyolex.",
     "ci": [
       "Insuficiência hepática moderada a grave (ajuste de dose)",
       "Hipersensibilidade"
@@ -618,7 +618,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "EV=oral em biodisponibilidade — conversão directa 1:1"
       }
     ],
-    "prep": "EV: diluir em SF, SG5% ou RL. Administrar em 15 min. Oral: solução 10 mg/ml compatível com SNG.",
+    "prep": "EV: pode administrar não diluído (10 mg/ml) em bólus 15 min, OU diluir em SF, SG5% ou RL. Concentração após diluição 1–10 mg/ml. Oral: solução 10 mg/ml — compatível com SNG. Equivalência oral/EV 1:1 — conversão directa sem ajuste. Fonte: BNF for Children 2023-24; SmPC Briviact.",
     "ci": ["Hipersensibilidade a levetiracetam ou brivaracetam (reactividade cruzada possível)"],
     "alert": [
       "Menores efeitos comportamentais que levetiracetam (agitação, irritabilidade) — preferir se LEV mal tolerado",
@@ -648,7 +648,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Titular: aumentar 2 mg/semana. Com indutores (carbamazepina, fenitoína, oxcarbazepina): dobrar a dose"
       }
     ],
-    "prep": "Oral: comprimidos ou suspensão 0,5 mg/ml. Tomar ao deitar para minimizar sedação.",
+    "prep": "Oral: comprimidos 2/4/6/8/10/12 mg — engolir inteiros com água. Suspensão oral 0,5 mg/ml. Tomar AO DEITAR (sedação; não na manhã). ⚠️ Não partir comprimidos (perda de dose). Fonte: BNF for Children 2023-24.",
     "ci": [
       "Psicose activa ou história de comportamento agressivo grave (relativa — monitorizar)",
       "Hipersensibilidade"
@@ -688,7 +688,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Solução 5 mg/ml — concentração suficiente para volume IN mínimo. Onset 5–10 min"
       }
     ],
-    "prep": "Bucal: Buccolam pronto a usar — aplicar entre gengiva e bochecha. IN: usar atomizador nasal MAD com midazolam 5 mg/ml.",
+    "prep": "Bucal (Buccolam): pronto a usar — seringa oral calibrada. Aplicar metade do volume em cada bochecha, entre gengiva e mucosa; não engolir durante 1 min. Intranasal (off-label): atomizador MAD — usar solução 5 mg/ml para mínimo volume (0,5 ml/narina máx). Buccolam 2,5 ml: aplicar 1,25 ml por bochecha. Fonte: BNF for Children 2023-24; SmPC Buccolam.",
     "ci": [
       "Depressão respiratória grave",
       "Idade < 3 meses sem monitorização"
@@ -722,7 +722,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Titular semanalmente. Dose de manutenção habitual: 0,3–0,5 mg/kg/dia"
       }
     ],
-    "prep": "Oral: comprimidos ou solução 1 mg/ml. Tomar com ou sem alimentos.",
+    "prep": "Oral: comprimidos 10 mg — podem ser triturados e dissolvidos em água. Solução oral 1 mg/ml. Tomar com ou sem alimentos. Substância psicotrópica — receita especial. Fonte: BNF for Children 2023-24.",
     "ci": [
       "Miastenia gravis",
       "Insuf. respiratória grave",
