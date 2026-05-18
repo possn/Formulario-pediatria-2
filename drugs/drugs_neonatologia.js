@@ -71,7 +71,7 @@ var DRUGS_NEONATOLOGIA = [
         "note": "Iniciar 24h após carga. Manter até 34–35 sem corrigidas sem apneias"
       }
     ],
-    "prep": "EV: pode administrar não diluído (20 mg/ml) ou diluído em SG5%. Oral: mesma dose.",
+    "prep": "EV: pronto a usar (20 mg/ml = 10 mg cafeína base/ml) ou diluir em SG5%/SF. Carga: 30 min. Manutenção: 10 min. Oral: mesma concentração — absorção oral 100%, pode usar ampolação via oral. Fonte: BNF for Children 2023-24; Neofax 2023.",
     "ci": [
       "Taquiarritmia neonatal sintomática"
     ],
@@ -111,7 +111,7 @@ var DRUGS_NEONATOLOGIA = [
         "note": "Melhora oxigenação mas sem benefício na mortalidade (Cochrane)"
       }
     ],
-    "prep": "Sistema de administração dedicado integrado no ventilador. Monitorização contínua de NO, NO2 e MetHb.",
+    "prep": "Sistema de administração dedicado integrado no ventilador (INOmax DSIR ou equivalente). Concentração stock: 800 ppm → dose final 1–20 ppm. Não interromper abruptamente (efeito rebote de hipertensão pulmonar). Monitorização contínua de NO, NO2 e MetaHb. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Lesões cardíacas dependentes do foramen ovale para manutenção do débito sistémico (ex: HVE, coarctação grave)"
     ],
@@ -196,7 +196,7 @@ var DRUGS_NEONATOLOGIA = [
         "note": "Reduz incidência HIV e necessidade de ligadura ductal"
       }
     ],
-    "prep": "Reconstituir com 1–2 ml SF ou água estéril (sem aditivos). Usar imediatamente. NÃO agitar. Concentração 0,5–1 mg/ml.",
+    "prep": "EV: reconstituir com 1–2 ml SF ou água estéril (SEM conservantes). Usar imediatamente após reconstituição — estável apenas 4h. NÃO agitar. Administrar em 30 min (infusão lenta reduz risco de redução do fluxo renal e cerebral). Fonte: BNF for Children 2023-24; Neofax 2023.",
     "ci": [
       "Trombocitopenia < 60 000/mcL",
       "Creatinina > 1,8 mg/dL ou débito urinário < 0,6 ml/kg/hora",
@@ -250,7 +250,7 @@ var DRUGS_NEONATOLOGIA = [
         "note": "Confirmar com doseamento 25-OH-D após tratamento"
       }
     ],
-    "prep": "Gotas orais. Misturar no leite ou na tetina.",
+    "prep": "Oral: gotas de vitamina D3 (colecalciferol) — 1 gota = dose variável consoante concentração do produto (verificar sempre o rótulo). Misturar na tetina ou em 1 ml de leite. Evitar temperatura acima de 25°C (degradação). Fonte: BNF for Children 2023-24; DGS Vitamina D 2019.",
     "ci": [
       "Hipercalcemia",
       "Hipervitaminose D",
@@ -291,7 +291,7 @@ var DRUGS_NEONATOLOGIA = [
         "note": "Intubação breve → surfactante → extubação imediata para CPAP"
       }
     ],
-    "prep": "Pré-aquecer a 37°C. NÃO agitar. LISA: usar cateter/sonda específica Ch4–5.",
+    "prep": "IT (surfactante + LISA): pré-aquecer frasco a 37°C (banho de água 5 min). NÃO agitar. LISA: usar cateter específico (sonda Ch4–5 ou cateter LISA dedicado) — inserir até 1–2 cm abaixo das cordas vocais; infundir em 1–2 min enquanto mantém respiração espontânea. INSURE: intubação rápida → surfactante → extubação precoce < 1h. Fonte: BNF for Children 2023-24; ERS Neonatal Guidelines 2019.",
     "ci": [
       "SDR grave com apneia (LISA não adequada — intubação convencional)",
       "Instabilidade hemodinâmica grave"
@@ -366,7 +366,7 @@ var DRUGS_NEONATOLOGIA = [
         "note": "Evidência preliminar favorável — ensaios em curso (HEAL trial). Não standard of care ainda"
       }
     ],
-    "prep": "SC: administrar não diluído. Refrigerar 2–8°C; não congelar. EV: diluir em soro albumina 0,05% para prevenir adsorção.",
+    "prep": "SC: administrar não diluído com agulha de 27G. Refrigerar 2–8°C; não congelar. EV: diluir em solução de albumina 0,05% (prevenir adsorção ao PVC). Rodar locais de injecção SC (coxas, abdómen). Fonte: BNF for Children 2023-24; Neofax 2023.",
     "ci": [
       "Hipertensão não controlada",
       "Trombose activa",
