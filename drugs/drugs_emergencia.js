@@ -132,7 +132,7 @@ var DRUGS_EMERGENCIA = [
         "note": "Previne bradicardia vagal na laringoscopia, especialmente < 1 ano"
       }
     ],
-    "prep": "Administrar não diluída em emergência. Para perfusão: diluir em SF.",
+    "prep": "EV emergência: administrar não diluída (0,5 mg/ml ou 1 mg/ml) em bólus rápido 10–30 seg. Para perfusão: diluir em SF ou SG5% a 0,1–0,5 mg/ml. IO: mesma dose que EV. ET (endotraqueal — última opção): 2–3× dose EV diluída em 5 ml SF. Oral: solução extemporânea 0,1 mg/ml.",
     "ci": [
       "Glaucoma de ângulo fechado (relativa)",
       "Taquicardia não controlada"
@@ -195,7 +195,7 @@ var DRUGS_EMERGENCIA = [
         "note": ""
       }
     ],
-    "prep": "Usar solução 4,2% em RN/lactentes (solução 8,4% é hiperosmolar — risco HIV). Não misturar com cálcio (precipita) nem adrenalina (inactiva).",
+    "prep": "EV: usar solução 4,2% (0,5 mEq/ml) em RN e lactentes (solução 8,4% é hiperosmolar e associada a HIV e necrose cerebral). Em crianças maiores: 8,4% (1 mEq/ml) pode ser usado diluído. Administrar lentamente (não em bólus rápido em RN). ⚠️ NÃO misturar com cálcio (CaCO3), adrenalina, dopamina, noradrenalina, aminoglicosídeos (inactivação) — linha dedicada. Fonte: BNF for Children 2023-24; PALS AHA 2020.",
     "ci": [
       "Alcalose metabólica",
       "Hipocaliemia não corrigida",
@@ -275,7 +275,7 @@ var DRUGS_EMERGENCIA = [
         "note": ""
       }
     ],
-    "prep": "EV periférico: concentração máxima 10%. EV central: até 20%. NUNCA IM (necrose). Não misturar com bicarbonato (precipita CaCO3).",
+    "prep": "EV: pode administrar não diluído (10 mg/ml = 1 mmol Ca²⁺/10 ml) OU diluir em SF/SG5%. Periférico: ≤ 10 mg/ml (1%); Central: até 100 mg/ml. Velocidade máx.: 0,5 mmol/min (5 ml/min de solução 10%). Neonatos: periférico ≤ 10 mg/ml apenas. ⚠️ NUNCA misturar com bicarbonato (CaCO3) ou fosfato (CaHPO4). ⚠️ NUNCA na mesma linha que ceftriaxona em neonatos (precipitação letal).",
     "ci": [
       "Hipercalcemia",
       "Doente digitálico (arritmias)",
@@ -314,7 +314,7 @@ var DRUGS_EMERGENCIA = [
         "note": "Semi-vida 40–80 min — muito mais curta que benzodiazepinas; ressedação frequente. Monitorizar ≥ 2h após última dose"
       }
     ],
-    "prep": "EV: administrar não diluído (0,1 mg/ml) ou diluir em SF. Bólus lento 15 seg. Ter material reanimação disponível.",
+    "prep": "EV: administrar não diluído (0,1 mg/ml) em bólus lento 15 seg. Para titulação precisa em criança: diluir 0,5 mg em 50 ml SF (0,01 mg/ml). Ter material de reanimação disponível (ressedação provável). Estabilidade após diluição: 24h. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Intoxicação mista com antidepressivos tricíclicos (pode precipitar convulsões)",
       "Epilepsia em tratamento crónico com BZD (pode precipitar estado de mal epiléptico)",
@@ -356,7 +356,7 @@ var DRUGS_EMERGENCIA = [
         "note": "Fórmula GIR: ml/h = GIR(mg/kg/min) × peso(kg) × 60 / [concentração glucose(mg/ml)]"
       }
     ],
-    "prep": "Bólus: G10% — administrar EV em 1–3 min. G20% ou G50% APENAS por acesso central (risco esclerose venosa). Proteger da luz se prolongado.",
+    "prep": "EV: G10% — periférico ou central; administrar em 1–3 min (bólus de emergência). G20% — central preferida (periférico aceitável em emergência absoluta com vigilância rigorosa). G50% — CENTRAL OBRIGATÓRIO (risco de necrose tecidular grave se extravasamento). ⚠️ Verificar glicemia 15 min após bólus. Concentração máxima periférico: G10% (100 mg/ml). Fonte: BNF for Children 2023-24; PALS AHA 2020.",
     "ci": [
       "Hiperosmolaridade grave",
       "Hiperglicemia (obviar causa antes de infundir)",
@@ -406,7 +406,7 @@ var DRUGS_EMERGENCIA = [
         "note": "Via umbilical ou central preferida — periférica distal reduz eficácia por inactivação rápida"
       }
     ],
-    "prep": "Não diluir — administrar não diluída (3 mg/ml). Seringa pré-preparada com flush SF na mesma linha imediato.",
+    "prep": "Não diluir — administrar não diluída (3 mg/ml) em bólus IV muito rápido (< 2 segundos), imediatamente seguido de flush SF 5–10 ml rápido pela mesma linha. Usar a veia antecubital ou central — vias periféricas distais inactivam a adenosina por hidrólise antes de atingir o nó AV. Ter monitorizaçõ ECG e suporte de ressuscitação disponíveis.",
     "ci": [
       "Bloqueio AV 2º/3º grau (sem pacemaker)",
       "Síndrome do nódulo sinusal (sem pacemaker)",
@@ -501,7 +501,7 @@ var DRUGS_EMERGENCIA = [
         "note": "Iniciar após bólus eficaz"
       }
     ],
-    "prep": "EV: bólus — usar solução 1% (10 mg/ml) directamente ou diluir 2% em 1:1 com SF. Perfusão: 600 mg em 250 ml SF (2,4 mg/ml = 40 μg/ml se a 0,5 ml/min).",
+    "prep": "EV/IO PCR: usar lidocaína 1% (10 mg/ml) directamente em bólus. Perfusão pós-conversão: 600 mg em 250 ml SF (2,4 mg/ml) — taxa 0,5–4 ml/min. Pré-intubação (dose baixa): 1 mg/kg não diluído.",
     "ci": [
       "Bloqueio AV 2º/3º grau",
       "Hipersensibilidade a anestésicos locais tipo amida",
@@ -545,7 +545,7 @@ var DRUGS_EMERGENCIA = [
         "note": ""
       }
     ],
-    "prep": "EV CENTRAL OBRIGATÓRIO — extremamente irritante; necrose tecidular grave se extravasamento periférico. Nunca misturar com bicarbonato (precipita CaCO3).",
+    "prep": "EV CENTRAL OBRIGATÓRIO — solução 10% (100 mg/ml = 1,36 mEq Ca²⁺/ml) extremamente irritante para veias periféricas (necrose). PCR: administrar não diluído em bólus 2–5 min. Perfusão pós-bólus: diluir em SF para ≤ 20 mg/ml. ⚠️ NUNCA misturar com bicarbonato, fosfato ou ceftriaxona. ⚠️ NUNCA por via periférica excepto emergência absoluta sem alternativa (risco necrose tecidular grave).",
     "ci": [
       "Hipercalcemia",
       "Digitálicos — potencia toxicidade da digoxina (usar gluconato Ca em digitalizado)",
