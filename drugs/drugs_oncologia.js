@@ -30,7 +30,7 @@ var DRUGS_ONCOLOGIA = [
         "note": "Dar em bebida gasosa. Evitar carvão activado simultâneo"
       }
     ],
-    "prep": "EV: diluir em SG5% (não SF). Estável 24h.",
+    "prep": "EV: diluir em SG5% (NÃO em SF — incompatível). Concentração: fase 1 (carga 150 mg/kg): 200 ml SG5%/kg — 60 min; fase 2 (50 mg/kg): 500 ml SG5% — 4h; fase 3 (100 mg/kg): 1000 ml SG5% — 16h. Em crianças: volumes adaptados ao peso. Oral: solução 200 mg/ml — diluir em água ou sumo; odor sulforoso.",
     "ci": [
       "Hipersensibilidade (relativa — benefício supera risco na intoxicação grave)"
     ],
@@ -62,7 +62,7 @@ var DRUGS_ONCOLOGIA = [
         "note": "Oral: 1 mg × 2/dia (adulto)"
       }
     ],
-    "prep": "EV: diluir em SF ou SG5% 50 ml. Infusão 5 min.",
+    "prep": "EV (Granisetrona, quando disponível): diluir em SF ou SG5% para concentração ≤ 1 mg/ml. Infusão 5 min. Oral: comprimidos. Nota: granisetrona = antiemético 5-HT3 de longa duração (t½ 9h vs ondansetron 4h) — 1 dose/dia suficiente. Fonte: BNF for Children 2023-24; MASCC 2023.",
     "ci": [
       "Prolongamento QT congénito"
     ],
@@ -101,7 +101,7 @@ var DRUGS_ONCOLOGIA = [
         "note": ""
       }
     ],
-    "prep": "Comprimidos podem ser dissolvidos em água.",
+    "prep": "Oral: comprimidos 100/300 mg — podem ser dissolvidos em água (1 comprimido/10 ml). Solução magistral 20 mg/ml estável 14 dias. Tomar COM refeições e assegurar hidratação adequada (≥ 2 L/m²/dia) para prevenir nefropatia úrica. EV (quando disponível): diluir em SF/SG5%, pH ≥ 11. Fonte: BNF for Children 2023-24.",
     "ci": [
       "Hipersensibilidade (rash frequente)"
     ],
@@ -141,7 +141,7 @@ var DRUGS_ONCOLOGIA = [
         "note": ""
       }
     ],
-    "prep": "Oral. Comprimidos podem ser triturados.",
+    "prep": "Oral: comprimidos 50 mg — podem ser triturados e dissolvidos em água ou sumo. Solução extemporânea 1 mg/ml disponível em farmácia hospitalar. Tomar com alimentos (reduz náusea). ⚠️ Confirmar abstinência de opioides ≥ 7–10 dias antes de iniciar (precipita abstinência aguda). Fonte: BNF for Children 2023-24; SmPC Naltrexone.",
     "ci": [
       "Uso activo de opioides (precipita abstinência aguda grave)",
       "Hepatite aguda / insuf. hepática",
@@ -181,7 +181,7 @@ var DRUGS_ONCOLOGIA = [
         "note": ""
       }
     ],
-    "prep": "EV (fosaprepitant): diluir 150 mg em 145 ml SF (1 mg/ml). Administrar em 20–30 min.",
+    "prep": "EV (fosaprepitant): reconstituir 150 mg em 5 ml SF; diluir em 145 ml SF total (1 mg/ml). Administrar em 20–30 min. Oral: cápsulas 80/125 mg — tomar 1h antes da QT. Suspensão extemporânea 25 mg/5 ml para crianças.",
     "ci": [
       "Uso com pimozida, terfenadina, astemizol, cisaprida (substrato CYP3A4 — toxicidade grave)",
       "Hipersensibilidade"
@@ -221,7 +221,7 @@ var DRUGS_ONCOLOGIA = [
         "note": ""
       }
     ],
-    "prep": "SC: administrar não diluído ou diluído em SG5% (mínimo 5 μg/ml — não diluir excessivamente). Refrigerar 2–8°C; estável 24h à temperatura ambiente.",
+    "prep": "SC: administrar não diluído ou diluído em SG5% mínimo 5 μg/ml (não diluir excessivamente — perda de actividade a < 5 μg/ml). Aplicar em abdómen, coxa ou braço superior. Refrigerar 2–8°C; estável 24h à T ambiente. ⚠️ Não iniciar < 24h antes ou durante quimioterapia activa. Fonte: BNF for Children 2023-24; SmPC Neupogen.",
     "ci": [
       "Leucemia mieloide aguda (LMA) não tratada — pode estimular blastos (relativa)",
       "Síndrome de activação macrofágica activa"
@@ -255,7 +255,7 @@ var DRUGS_ONCOLOGIA = [
         "note": "Dose única 0,15 mg/kg suficiente em muitos casos pediátricos. Monitorizar ácido úrico 4h após 1ª dose"
       }
     ],
-    "prep": "EV: reconstituir com diluente fornecido; diluir em SF 50 ml. Administrar em 30 min por via dedicada (não misturar). Não agitar. Sensível à luz.",
+    "prep": "EV: reconstituir com diluente específico fornecido (não SWFI isolado). Diluir em SF 50 ml. Administrar em 30 min por via DEDICADA (sem filtro). ⚠️ NÃO agitar após reconstituição (espuma inactiva). ⚠️ Amostra de ácido úrico: colocar IMEDIATAMENTE em gelo (rasburicase activa na amostra à T ambiente — falsos baixos). Fonte: BNF for Children 2023-24; SmPC Fasturtec.",
     "ci": [
       "Deficiência de G6PD (hemólise grave — rasburicase produz H2O2 como sub-produto)",
       "Metahemoglobinemia",
@@ -297,7 +297,7 @@ var DRUGS_ONCOLOGIA = [
         "note": ""
       }
     ],
-    "prep": "EV: diluir em SF ou SG5%. Compatível em Y com ciclofosfamida/ifosfamida. PO: após dose EV final, oral é alternativa (biodisponibilidade 45–79%).",
+    "prep": "EV: diluir em SF, SG5% ou RL para concentração 20 mg/ml. Compatível em Y com ciclofosfamida e ifosfamida. PO: após dose EV final, biodisponibilidade oral 45–79%. ⚠️ Pode causar falso positivo de corpos cetónicos na urinálise. Fonte: BNF for Children 2023-24; COG protocols.",
     "ci": ["Hipersensibilidade ao mesna"],
     "alert": [
       "⚠️ Mesna NÃO protege contra outros efeitos da ciclofosfamida/ifosfamida (nefrotoxicidade, mielosupr., alopecia)",
@@ -328,7 +328,7 @@ var DRUGS_ONCOLOGIA = [
         "note": "Escalar dose se nível MTX > 1 μmol/L às 42h: dose leucovorin = [MTX μmol/L] × 100 mg/m²/q3h"
       }
     ],
-    "prep": "EV: diluir em SF ou SG5%. PO: oral tão eficaz como EV para resgate standard.",
+    "prep": "EV (leucovorin/ácido folínico): diluir em SF ou SG5%. Concentração ≤ 10 mg/ml. Administrar em 15–30 min. Oral: comprimidos 5/15 mg — podem ser triturados. ⚠️ NÃO confundir ácido fólico (folato oxidado, profilaxia) com ácido folínico (leucovorin, resgate metotrexato) — são moléculas e indicações completamente diferentes. Fonte: BNF for Children 2023-24; SmPC Leucovorin.",
     "ci": [
       "Anemia perniciosa (não tratar — mascarar défice B12)",
       "Não usar ácido fólico comum (não reduzido) como substituto — não é a mesma molécula"
@@ -368,7 +368,7 @@ var DRUGS_ONCOLOGIA = [
         "note": ""
       }
     ],
-    "prep": "EV: diluir em RL ou SF. Concentração 1,3–5 mg/ml. Administrar em 15 min (cardioproteção) ou 1–2h (extravasamento).",
+    "prep": "EV: diluir em RL ou SF para concentração 1,3–5 mg/ml. Administrar em 15 min (cardioproteção, antes da antraciclina) ou 1–2h (extravasamento). ⚠️ Para extravasamento: NÃO aplicar gelo antes ou durante (vasoconstrição reduz distribuição do dexrazoxano). Citotóxico — manipulação com precauções. Fonte: BNF for Children 2023-24; SmPC Cardioxane.",
     "ci": [
       "Gravidez",
       "Lactação"
@@ -402,7 +402,7 @@ var DRUGS_ONCOLOGIA = [
         "note": "LLA Ph+: 340 mg/m²/dia em combinação com quimioterapia de indução"
       }
     ],
-    "prep": "Oral: comprimidos — tomar com refeição e copo de água. Para crianças que não engolam comp: dissolver em água ou sumo de maçã (50 ml para 100 mg comp).",
+    "prep": "Oral: comprimidos 100/400 mg — tomar COM refeição e copo cheio de água (reduz náuseas e irritação GI). Para crianças que não engolam comprimidos: dissolver 100 mg em 50 ml água ou sumo de maçã — beber imediatamente após dissolução. Fonte: BNF for Children 2023-24; SmPC Glivec.",
     "ci": [
       "Hipersensibilidade",
       "Gravidez (teratogénico)"
