@@ -44,7 +44,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "Associar a outros tratamentos (não usar como tratamento único)"
       }
     ],
-    "prep": "Nebulização: diluir em 3–5 ml SF. EV: diluir em SF ou SG5%.",
+    "prep": "Nebulização: diluir em SF para volume total 3–5 ml. Débito O2: 6–8 L/min. MDI: 1 puff de cada vez com câmara expansora (5 respirações entre puffs). Nebulização contínua (status asmático): diluir dose horária em 10–16 ml SF, débito O2 constante. EV bólus: 15 μg/kg em 10 ml SF em 10 min. EV perfusão: 5 mg em 50 ml SF (100 μg/ml). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Taquicardia não explicada (relativa)"
     ],
@@ -93,7 +93,7 @@ var DRUGS_RESPIRATORIO = [
         "note": ""
       }
     ],
-    "prep": "Oral. Xarope pode ser misturado com água ou sumo.",
+    "prep": "Oral: xarope 2 mg/ml ou 10 mg/5 ml — pode misturar em água ou sumo. Comprimidos 10/25 mg. EV/IM (uso hospitalar): IM profunda — não EV (risco hemólise e trombose). Concentração IM: solução 50 mg/ml. Fonte: BNF for Children 2023-24.",
     "ci": [
       "Prolongamento QT congénito",
       "Porfiria",
@@ -157,7 +157,7 @@ var DRUGS_RESPIRATORIO = [
         "note": ""
       }
     ],
-    "prep": "Gotas: 10 mg/ml (1 mg = 1 gota → 0,1 ml). Pode misturar em água ou sumo.",
+    "prep": "Oral: gotas 10 mg/ml (1 gota = 0,5 mg; 20 gotas = 10 mg = 1 ml). Xarope 5 mg/5 ml. Comprimidos 10 mg. Pode misturar em água, sumo ou leite. Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
     "ci": [
       "Insuf. renal grave (ajustar dose)"
     ],
@@ -196,7 +196,7 @@ var DRUGS_RESPIRATORIO = [
         "note": ""
       }
     ],
-    "prep": "Xarope 1 mg/ml. Comprimido pode ser dissolvido em água.",
+    "prep": "Oral: xarope 5 mg/5 ml (1 mg/ml). Comprimidos 10 mg (podem ser dissolvidos em água para crianças pequenas). Comprimidos orodispersíveis disponíveis. Tomar de preferência em jejum (absorção pode reduzir ligeiramente com alimentos gordurosos). Fonte: BNF for Children 2023-24.",
     "ci": [
       "Hipersensibilidade"
     ],
@@ -243,7 +243,7 @@ var DRUGS_RESPIRATORIO = [
         "note": ""
       }
     ],
-    "prep": "EV: pode administrar não diluído ou diluído em SF. Administrar em 2–5 min.",
+    "prep": "EV: pode administrar não diluído (50 mg/ml) ou diluir em SF/SG5%. Administrar em 2–5 min. IM: não diluir. Concentração máxima EV: 50 mg/ml (1 mg/ml recomendado para periférico). Oral: solução 12,5 mg/5 ml.",
     "ci": [
       "< 2 anos (risco convulsões e depressão SNC)",
       "Glaucoma ângulo fechado",
@@ -287,7 +287,7 @@ var DRUGS_RESPIRATORIO = [
         "note": ""
       }
     ],
-    "prep": "EV: diluir em 5–10 ml SF. Administrar lentamente em 2–3 min.",
+    "prep": "EV: diluir 2 mg (2 ml) em 5–10 ml SF. Administrar lentamente em 2–3 min. IM: administrar não diluído na mesma concentração.",
     "ci": [
       "< 1 ano",
       "Glaucoma",
@@ -335,7 +335,7 @@ var DRUGS_RESPIRATORIO = [
         "note": ""
       }
     ],
-    "prep": "Diluir em SF ou SG5%. Infusão lenta — bólus rápido causa arritmias graves.",
+    "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 25 mg/ml periférico. Carga: administrar em 20–30 min (NUNCA bólus rápido — arritmias fatais). Perfusão contínua: 250 mg em 100 ml SF (2,5 mg/ml). ⚠️ Incompatível com cefepime, fenitoína, bicarbonato na mesma linha. Estabilidade: 24h a 25°C.",
     "ci": [
       "Arritmias cardíacas",
       "Epilepsia activa (relativa)",
@@ -385,7 +385,7 @@ var DRUGS_RESPIRATORIO = [
         "note": ""
       }
     ],
-    "prep": "Granulados: misturar em colher de comida mole (puré, etc.). Não dissolver em água.",
+    "prep": "Oral granulados (4 mg): misturar em colher de alimento mole (iogurte, puré, gelado) — NÃO dissolver em água. Ingerir imediatamente. Comprimidos mastigáveis (5 mg) e normais (10 mg). Tomar ao deitar (metabolismo circadiano do leucotrieno). Fonte: BNF for Children 2023-24; SmPC Singulair.",
     "ci": [
       "Hipersensibilidade"
     ],
@@ -432,7 +432,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "Efeito em 30–60 min — similar à dexametasona oral"
       }
     ],
-    "prep": "Nebulização: pode misturar em SF. Agitar suavemente antes de usar.",
+    "prep": "Nebulização: solução 0,125/0,25/0,5 mg/ml. Pode misturar com SF ou com salbutamol/ipratrópio no mesmo nebulizador. Agitar suavemente antes de usar. Débito O2: 6–8 L/min. Inalador (DPI/MDI): expirar completamente antes; inspiração lenta e profunda; suspender respiração 10 seg. Lavar boca após cada inalação (candidíase oral). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Infecção respiratória fúngica activa"
     ],
@@ -472,7 +472,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "Associar dexametasona EV 0,15–0,6 mg/kg"
       }
     ],
-    "prep": "Nebulização: diluir adrenalina 1:1000 em SF até 5 ml total. Administrar com máscara facial, O2 6–8 L/min.",
+    "prep": "Nebulização: diluir adrenalina 1:1000 (1 mg/ml) em SF para volume total 5 ml. Administrar com máscara facial, débito O2 6–8 L/min. Usar solução para injecção (não solução tópica). Monitorização SpO2 e FC durante e após. ⚠️ Observar 2–4h após administração (efeito rebote). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Taquicardia grave",
       "Cardiopatia com obstrução de saída do VE (efeito α pode ser prejudicial)"
@@ -505,7 +505,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "Benefício claro apenas nas primeiras 2h — não manter além deste período de forma sistemática. Reduz internamentos (Goggin N et al. Cochrane)"
       }
     ],
-    "prep": "Nebulização: pode misturar com salbutamol no mesmo nebulizador. Diluir em SF para volume total 3–4 ml.",
+    "prep": "Nebulização: pode misturar directamente com salbutamol no mesmo nebulizador (compatíveis). Diluir em SF para volume total 3–4 ml. Débito O2: 6–8 L/min. MDI: 1 puff de cada vez com câmara expansora. ⚠️ Evitar exposição ocular com máscara (risco glaucoma agudo). Fonte: BNF for Children 2023-24.",
     "ci": [
       "Hipersensibilidade à atropina ou derivados",
       "Glaucoma de ângulo fechado (evitar exposição ocular)"
@@ -538,7 +538,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "Se SpO2 < 92% com Heliox 70:30, usar 60:40 (hélio 60% / O2 40%) — menos eficaz mas maior FiO2"
       }
     ],
-    "prep": "Cilindros específicos de heliox. Usar máscara não-reinalação (não funciona com ventiladores convencionais sem adaptação). Verificar débito — fluxômetros para ar/O2 subestimam débito de heliox.",
+    "prep": "Inalar directamente de cilindro de Heliox 70:30 via máscara não-reinalação com reservatório. Fluxómetros de O2 subestimam débito de heliox por 1,8× — ajustar. NÃO funciona em ventiladores convencionais sem adaptador específico. Verificar SpO2 — FiO2 máxima 30% (Heliox 70:30). Fonte: BNF for Children 2023-24; Ho AM et al. Chest 2003.",
     "ci": [
       "Necessidade de FiO2 > 40% (formulações standard limitam O2 a 30%)",
       "Pneumotórax",
@@ -572,7 +572,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "Evidência heterogénea em PARDS — sem recomendação forte. Ensaios em curso. Associar a estratégia VNI/HFNC quando possível"
       }
     ],
-    "prep": "IT: aquecer a 37°C. Administrar em bólus via TOT com desconexão breve do ventilador. FiO2 100% antes e durante. Reduzir FiO2 nos 30 min seguintes.",
+    "prep": "IT: aquecer frasco a 37°C (banho de água ou mão). NÃO agitar — girar suavemente. Administrar em bólus via TOT com desconexão breve do ventilador (5–10 seg), seguido de reconexão e ventilação manual/mecânica para distribuição. FiO2 100% durante ± 30 min. Não aspirar TOT nas 2h seguintes. Fonte: BNF for Children 2023-24; PALICC-2 2023.",
     "ci": [
       "ARDS de causa não pulmonar primária (benefício improvável)",
       "Doença pulmonar crónica sem componente surfactante"
@@ -613,7 +613,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "Monitorizar K⁺, glicemia e ECG. Diminuir se FC > 200 bpm ou arritmias"
       }
     ],
-    "prep": "SC: injecção directa não diluída (0,5 mg/ml). EV: diluir em SF ou SG5%. Carga: 0,01 mg/kg em 10 ml SF em 10 min. Perfusão: 5 mg em 250 ml SF (20 μg/ml).",
+    "prep": "SC: injecção não diluída (0,5 mg/ml) em coxa anterior ou abdómen. EV carga: diluir 0,1–0,2 mg/kg em 10 ml SF, infusão 10 min. Perfusão: 5 mg em 250 ml SF (20 μg/ml). ⚠️ Monitorizar K⁺ q1h — hipocaliemia significativa. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
     "ci": [
       "Taquiarritmias graves",
       "Tirotoxicose não tratada",
