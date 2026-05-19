@@ -1119,7 +1119,9 @@ async function sendAI() {
 }
 
 // ── PERFUSION CALCULATOR ─────────────────────────────────────────────────────
-// Inputs: peso, dose, volume, taxa → Output: mg a diluir
+// Inputs: peso, dose alvo, volume total, taxa → Output: mg a diluir
+// Includes concentration safety check against NHS Medusa 2024 / Leeds PICU 2024
+
 var _perfIdx = -1;
 
 var PERF_UNITS = [
@@ -1128,6 +1130,48 @@ var PERF_UNITS = [
   {l:'mg/kg/h'},
   {l:'UI/kg/h'},
 ];
+
+// Maximum safe concentrations (mg/ml) per drug and access type
+// Source: NHS Medusa 2024, Leeds PICU Chart 2024, Trissel's 2023, SmPCs
+var PERF_CONC_LIMITS = {
+  'dopamina':       {p:3.2,   c:6.4,   src:'NHS Medusa 2024'},
+  'dobutamina':     {p:5.0,   c:10.0,  src:'NHS Medusa 2024'},
+  'noradrenalina':  {p:0.016, c:0.2,   src:'NHS Medusa 2024; Leeds PICU 2024'},
+  'adrenalina':     {p:0.1,   c:0.5,   src:'Leeds PICU 2024'},
+  'vasopressina':   {p:0.1,   c:1.0,   src:'NHS Medusa 2024'},
+  'levosimendan':   {p:0.025, c:0.1,   src:'SmPC Simdax'},
+  'milrinona':      {p:0.2,   c:0.2,   src:'NHS Medusa 2024'},
+  'fenilefrina':    {p:0.2,   c:1.0,   src:'NHS Medusa 2024'},
+  'terlipressina':  {p:0.04,  c:0.1,   src:'NHS Medusa 2024'},
+  'midazolam':      {p:1.0,   c:5.0,   src:'NHS Medusa 2024; Leeds PICU 2024'},
+  'morfina':        {p:2.0,   c:10.0,  src:'NHS Medusa 2024'},
+  'fentanil':       {p:0.05,  c:0.25,  src:'NHS Medusa 2024'},
+  'sufentanil':     {p:0.005, c:0.05,  src:'NHS Medusa 2024'},
+  'remifentanil':   {p:0.025, c:0.25,  src:'NHS Medusa 2024'},
+  'ketamina':       {p:10.0,  c:50.0,  src:'NHS Medusa 2024'},
+  'propofol':       {p:10.0,  c:10.0,  src:'Pronto a usar'},
+  'dexmedetomidina':{p:0.004, c:0.008, src:'NHS Medusa 2024'},
+  'clonidina':      {p:0.045, c:0.09,  src:'NHS Medusa 2024'},
+  'lorazepam':      {p:1.0,   c:2.0,   src:"Trissel's 2023"},
+  'cisatracurio':   {p:2.0,   c:2.0,   src:'NHS Medusa 2024'},
+  'metadona_desmame':{p:1.0,  c:5.0,   src:'NHS Medusa 2024'},
+  'amiodarona_iv':  {p:2.0,   c:18.0,  src:'NHS Medusa 2024'},
+  'nicardipina':    {p:0.1,   c:0.5,   src:'NHS Medusa 2024'},
+  'nitroprussiato': {p:0.2,   c:0.4,   src:'NHS Medusa 2024'},
+  'labetalol_iv':   {p:1.0,   c:5.0,   src:'NHS Medusa 2024'},
+  'lidocaina_cv':   {p:2.4,   c:10.0,  src:'NHS Medusa 2024'},
+  'furosemida':     {p:0.4,   c:1.0,   src:'NHS Medusa 2024'},
+  'digoxina':       {p:0.05,  c:0.1,   src:'NHS Medusa 2024'},
+  'vancomicina':    {p:5.0,   c:10.0,  src:'NHS Medusa 2024'},
+  'aciclovir':      {p:7.0,   c:7.0,   src:'NHS Medusa 2024 — CRÍTICO'},
+  'gentamicina':    {p:10.0,  c:25.0,  src:'NHS Medusa 2024'},
+  'amicacina':      {p:10.0,  c:25.0,  src:'NHS Medusa 2024'},
+  'insulina':       {p:1.0,   c:1.0,   src:'NHS Medusa 2024'},
+  'magnesio':       {p:200.0, c:500.0, src:'NHS Medusa 2024'},
+  'potassio':       {p:0.04,  c:0.2,   src:'NHS Medusa 2024'},
+  'octreotido':     {p:0.05,  c:0.5,   src:'NHS Medusa 2024'},
+  'prostaglandina_e1':{p:0.02,c:0.02,  src:'BNF for Children 2023-24'},
+};
 
 var PERF_UNIT_DEFAULT = {
   'dopamina':'mcg/kg/min','dobutamina':'mcg/kg/min',
@@ -1150,36 +1194,63 @@ function perfUnitIdx(drugId) {
 }
 
 function calcMgToDilute(dose, peso, vol, taxa, unitIdx) {
-  if(unitIdx===0) return dose * peso * vol * 60 / (taxa * 1000);  // mcg/kg/min
-  if(unitIdx===1) return dose * peso * vol / (taxa * 1000);        // mcg/kg/h
-  if(unitIdx===2) return dose * peso * vol / taxa;                  // mg/kg/h
-  if(unitIdx===3) return dose * peso * vol / taxa;                  // UI/kg/h
+  if(unitIdx===0) return dose*peso*vol*60/(taxa*1000);  // mcg/kg/min
+  if(unitIdx===1) return dose*peso*vol/(taxa*1000);      // mcg/kg/h
+  if(unitIdx===2) return dose*peso*vol/taxa;              // mg/kg/h
+  if(unitIdx===3) return dose*peso*vol/taxa;              // UI/kg/h
   return 0;
 }
 
 function fmtMg(mg) {
-  if(mg >= 1000) return (Math.round(mg/10)/100).toString().replace('.',',') + '<span>g</span>';
-  if(mg >= 100)  return Math.round(mg) + '<span>mg</span>';
-  if(mg >= 10)   return (Math.round(mg*10)/10).toString().replace('.',',') + '<span>mg</span>';
-  if(mg >= 1)    return (Math.round(mg*100)/100).toString().replace('.',',') + '<span>mg</span>';
-  // show as mcg
-  var mcg = mg * 1000;
-  if(mcg >= 100) return Math.round(mcg) + '<span>mcg</span>';
-  return (Math.round(mcg*10)/10).toString().replace('.',',') + '<span>mcg</span>';
+  if(mg >= 1000) return (Math.round(mg/10)/100).toString().replace('.',',')+'<span>g</span>';
+  if(mg >= 100)  return Math.round(mg)+'<span>mg</span>';
+  if(mg >= 10)   return (Math.round(mg*10)/10).toString().replace('.',',')+'<span>mg</span>';
+  if(mg >= 1)    return (Math.round(mg*100)/100).toString().replace('.',',')+'<span>mg</span>';
+  var mcg = mg*1000;
+  if(mcg >= 100) return Math.round(mcg)+'<span>mcg</span>';
+  return (Math.round(mcg*10)/10).toString().replace('.',',')+'<span>mcg</span>';
 }
 
 function fmtConcMgml(mg, vol) {
   var c = mg/vol;
-  if(c >= 10)  return Math.round(c) + ' mg/ml';
-  if(c >= 1)   return (Math.round(c*100)/100).toString().replace('.',',') + ' mg/ml';
-  var mcg = c * 1000;
-  if(mcg >= 10) return Math.round(mcg) + ' mcg/ml';
-  return (Math.round(mcg*10)/10).toString().replace('.',',') + ' mcg/ml';
+  if(c >= 10)   return Math.round(c)+' mg/ml';
+  if(c >= 1)    return (Math.round(c*100)/100).toString().replace('.',',')+' mg/ml';
+  var mcg = c*1000;
+  if(mcg >= 10) return Math.round(mcg)+' mcg/ml';
+  return (Math.round(mcg*10)/10).toString().replace('.',',')+' mcg/ml';
+}
+
+/**
+ * Check if concentration is within limits.
+ * Returns: {ok: bool, periph_ok: bool, central_ok: bool, msg: str, color: str}
+ */
+function checkConc(drugId, conc_mgml) {
+  var lim = PERF_CONC_LIMITS[drugId];
+  if(!lim) return {ok:true, periph_ok:true, central_ok:true, msg:'', color:''};
+  var p_ok = conc_mgml <= lim.p;
+  var c_ok = conc_mgml <= lim.c;
+  if(p_ok) {
+    return {ok:true, periph_ok:true, central_ok:true,
+      msg:'✓ Concentração segura — via periférica ou central<br><small>'+lim.src+'</small>',
+      color:'#f0fff4', border:'#a8e6c0', text:'#27ae60'};
+  } else if(c_ok) {
+    return {ok:true, periph_ok:false, central_ok:true,
+      msg:'⚠️ CENTRAL OBRIGATÓRIO — concentração excede limite periférico<br>'
+        +'<small>Máx periférico: '+fmtConcMgml(lim.p,1)+' &nbsp;|&nbsp; Máx central: '+fmtConcMgml(lim.c,1)+'<br>'+lim.src+'</small>',
+      color:'#fffbeb', border:'#fde68a', text:'#92610a'};
+  } else {
+    return {ok:false, periph_ok:false, central_ok:false,
+      msg:'⛔ CONCENTRAÇÃO EXCEDE LIMITE MÁXIMO CENTRAL<br>'
+        +'<small>Máx central: '+fmtConcMgml(lim.c,1)+' &nbsp;|&nbsp; Esta: '+fmtConcMgml(conc_mgml,1)
+        +'<br>Reduzir dose ou aumentar volume de diluição<br>'+lim.src+'</small>',
+      color:'#fff1f0', border:'#ffa39e', text:'#cf1322'};
+  }
 }
 
 function perfUpdate() {
-  var out = document.getElementById('perfout');
-  if(!out) return;
+  var drug = DRUGS[_perfIdx];
+  var out  = document.getElementById('perfout');
+  if(!drug || !out) return;
 
   var peso  = parseFloat((document.getElementById('perf-peso')||{}).value||'');
   var dose  = parseFloat((document.getElementById('perf-dose')||{}).value||'');
@@ -1196,43 +1267,46 @@ function perfUpdate() {
   var mg = calcMgToDilute(dose, peso, vol, taxa, ui);
   if(!mg||mg<=0||!isFinite(mg)) { out.innerHTML='<div class="perf-empty">Valores inválidos</div>'; return; }
 
-  // Verify round-trip
-  var conc = mg / vol; // mg/ml
-  var verify;
-  if(ui===0) verify = conc * taxa * 1000 / (60 * peso);
-  if(ui===1) verify = conc * taxa * 1000 / peso;
-  if(ui===2) verify = conc * taxa / peso;
-  if(ui===3) verify = conc * taxa / peso;
-  var verifyStr = (Math.round(verify*1000)/1000).toString().replace('.',',') + ' ' + uLabel;
+  var conc_mgml = mg/vol;
 
-  // Dose range from drug data (for context)
-  var drug = DRUGS[_perfIdx];
+  // Verify round-trip
+  var verify;
+  if(ui===0) verify = conc_mgml*taxa*1000/(60*peso);
+  if(ui===1) verify = conc_mgml*taxa*1000/peso;
+  if(ui===2) verify = conc_mgml*taxa/peso;
+  if(ui===3) verify = conc_mgml*taxa/peso;
+  var verifyStr = (Math.round(verify*1000)/1000).toString().replace('.',',')+' '+uLabel;
+
+  // Concentration safety check
+  var safety = checkConc(drug.id, conc_mgml);
+
+  // Dose range rows from drug data
+  var drug2 = DRUGS[_perfIdx];
   var rangeRows = '';
-  if(drug && drug.dose) {
-    drug.dose.forEach(function(dv){
+  if(drug2 && drug2.dose) {
+    drug2.dose.forEach(function(dv){
       var p = parseDose(dv.val);
       if(!p) return;
-      var isPerf = dv.val.indexOf('/min')>-1 || dv.val.indexOf('/h')>-1
-        || /perfus|contín|manuten/i.test(dv.ind+' '+(dv.freq||''));
+      var isPerf = dv.val.indexOf('/min')>-1||dv.val.indexOf('/h')>-1
+        ||/perfus|contín|manuten/i.test(dv.ind+' '+(dv.freq||''));
       if(!isPerf) return;
-      // Convert dose range to mg for this vol/taxa
-      function toUi(val, punit, targetUi) {
+      function toUi(val, punit, tui) {
         var uMin;
         if(punit==='μg/kg/min'||punit==='mcg/kg/min') uMin=val;
         else if(punit==='μg/kg/h'||punit==='mcg/kg/h') uMin=val/60;
         else if(punit==='mg/kg/h') uMin=val*1000/60;
         else uMin=val;
-        if(targetUi===0) return uMin;
-        if(targetUi===1) return uMin*60;
-        if(targetUi===2) return uMin*60/1000;
+        if(tui===0) return uMin;
+        if(tui===1) return uMin*60;
+        if(tui===2) return uMin*60/1000;
         return uMin;
       }
-      var dMin = toUi(p.min, p.unit, ui);
-      var dMax = toUi(p.max, p.unit, ui);
-      var mgMin = calcMgToDilute(dMin, peso, vol, taxa, ui);
-      var mgMax = calcMgToDilute(dMax, peso, vol, taxa, ui);
+      var dMin = toUi(p.min,p.unit,ui);
+      var dMax = toUi(p.max,p.unit,ui);
+      var mgMin = calcMgToDilute(dMin,peso,vol,taxa,ui);
+      var mgMax = calcMgToDilute(dMax,peso,vol,taxa,ui);
       var same = Math.abs(mgMax-mgMin)<0.001;
-      var rng = same ? fmtMg(mgMin) : fmtMg(mgMin).replace(/<span>.*<\/span>/,'')+'–'+fmtMg(mgMax);
+      var rng = same ? fmtMg(mgMin) : fmtMg(mgMin).replace(/<span>.*?<\/span>/,'')+'–'+fmtMg(mgMax);
       rangeRows += '<div style="display:flex;justify-content:space-between;padding:5px 0;'
         +'border-bottom:1px solid #f0f5ff;align-items:center">'
         +'<div style="font-size:11px;color:#666">'+E(dv.ind)+'</div>'
@@ -1240,6 +1314,11 @@ function perfUpdate() {
         +'</div>';
     });
   }
+
+  // Safety badge colour
+  var safetyBg = safety.color || '#f0f7ff';
+  var safetyBorder = safety.border || '#a8cff0';
+  var safetyText = safety.text || '#2980b9';
 
   out.innerHTML =
     '<div class="perf-result">'
@@ -1250,21 +1329,36 @@ function perfUpdate() {
     +'<div class="perf-pill"><small>Concentração</small>'+fmtConcMgml(mg,vol)+'</div>'
     +'<div class="perf-pill"><small>Taxa</small>'+taxa+' ml/h</div>'
     +'</div>'
-    +'<div class="perf-verify">✓ '+taxa+' ml/h = '+verifyStr+' por kg</div>'
-    +(rangeRows?'<div style="margin-top:10px;text-align:left"><div style="font-size:9px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px">Gama terapêutica (mesmo vol/taxa)</div>'+rangeRows+'</div>':'')
+    +'<div style="background:'+safetyBg+';border:1.5px solid '+safetyBorder+';border-radius:9px;'
+    +'padding:9px 12px;margin-top:10px;font-size:12px;font-weight:600;color:'+safetyText+';line-height:1.5">'
+    +safety.msg+'</div>'
+    +'<div style="background:#f8f9fa;border-radius:8px;padding:7px 11px;margin-top:8px;'
+    +'font-size:11.5px;color:#555;font-weight:600">'
+    +'✓ A '+taxa+' ml/h → <strong>'+verifyStr+'</strong></div>'
+    +(rangeRows ? '<div style="margin-top:10px"><div style="font-size:9px;font-weight:700;color:#888;'
+      +'text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px">Gama terapêutica (mesmo vol/taxa)</div>'
+      +rangeRows+'</div>' : '')
     +'</div>';
 }
 
 function buildPerfWidget(drug) {
   var hasPerf = drug.dose && drug.dose.some(function(dv){
     var p = parseDose(dv.val); if(!p) return false;
-    return dv.val.indexOf('/min')>-1 || dv.val.indexOf('/h')>-1
-      || /perfus|contín|manuten/i.test(dv.ind+' '+(dv.freq||''));
+    return dv.val.indexOf('/min')>-1||dv.val.indexOf('/h')>-1
+      ||/perfus|contín|manuten/i.test(dv.ind+' '+(dv.freq||''));
   });
   if(!hasPerf) return '';
 
   var ui = perfUnitIdx(drug.id);
   var uLabel = PERF_UNITS[ui].l;
+
+  // Show concentration limits if available
+  var lim = PERF_CONC_LIMITS[drug.id];
+  var limInfo = lim
+    ? '<div style="font-size:10px;color:#888;margin-bottom:8px;line-height:1.4">'
+      +'📋 Limites: periférico ≤ <strong>'+fmtConcMgml(lim.p,1)+'</strong> | central ≤ <strong>'+fmtConcMgml(lim.c,1)+'</strong>'
+      +' <span style="color:#bbb">('+lim.src+')</span></div>'
+    : '';
 
   var unitOpts = PERF_UNITS.map(function(u,i){
     return '<option value="'+i+'"'+(i===ui?' selected':'')+'>'+u.l+'</option>';
@@ -1272,24 +1366,20 @@ function buildPerfWidget(drug) {
 
   return '<div class="perf-wrap">'
     +'<div class="perf-lbl">💉 Preparação de Perfusão</div>'
-    +'<div class="perf-row4">'
-    // Peso
+    +limInfo
+    +'<div class="perf-grid">'
     +'<div class="perf-field"><label>Peso (kg)</label>'
     +'<input class="perf-inp" id="perf-peso" type="number" inputmode="decimal"'
     +' placeholder="kg" min="0.3" max="150" step="0.1" oninput="perfUpdate()"></div>'
-    // Dose alvo
     +'<div class="perf-field"><label>Dose alvo ('+uLabel+')</label>'
     +'<input class="perf-inp" id="perf-dose" type="number" inputmode="decimal"'
     +' placeholder="dose" min="0" step="any" oninput="perfUpdate()"></div>'
-    // Volume total
     +'<div class="perf-field"><label>Volume total (ml)</label>'
     +'<input class="perf-inp" id="perf-vol" type="number" inputmode="decimal"'
     +' placeholder="24" min="1" step="1" oninput="perfUpdate()"></div>'
-    // Taxa
     +'<div class="perf-field"><label>Taxa (ml/h)</label>'
     +'<input class="perf-inp" id="perf-taxa" type="number" inputmode="decimal"'
     +' placeholder="1" min="0.1" step="0.1" oninput="perfUpdate()"></div>'
-    // Unidade (full width)
     +'<div class="perf-field perf-full"><label>Unidade</label>'
     +'<select class="perf-sel" id="perf-unit" onchange="perfUpdate()">'+unitOpts+'</select></div>'
     +'</div>'
