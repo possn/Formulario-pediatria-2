@@ -144,7 +144,9 @@ var DRUGS_ELECTROLITICOS = [
       "⚠️ Reacções alérgicas (febre, urticária — raras)",
       "Produto de origem humana — verificar validade"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; SAFE Study NEJM 2004"
+    "source": "Formulário de Pediatria 3ª Ed.; SAFE Study NEJM 2004",
+    "review": ["O BNFC 2020-21 não indica dose pediátrica fixa de albumina («consultar a informação do produto»). As doses da ficha (10–20 mL/kg de albumina 4–5%) provêm do Formulário/SAFE e não estão verificadas contra o BNFC."]
+
   },
   {
     "id": "magnesio",
@@ -166,46 +168,46 @@ var DRUGS_ELECTROLITICOS = [
     ],
     "dose": [
       {
-        "ind": "Hipomagnesemia sintomática EV",
-        "val": "0,2 mmol/kg (50 mg/kg da sol. 10%)",
-        "max": "2 g",
-        "freq": "EV em 20–30 min; repetir se necessário",
-        "note": ""
-      },
-      {
-        "ind": "Asma grave / Status asmático EV",
-        "val": "40–50 mg/kg EV em 20 min",
-        "max": "2 g",
-        "freq": "dose única (evidência: MAGNUM trial)",
-        "note": "Melhora broncodilatação em asma grave não respondedora"
-      },
-      {
-        "ind": "Torsades de pointes EV",
-        "val": "25–50 mg/kg EV rápido",
-        "max": "2 g",
-        "freq": "bólus; pode repetir",
-        "note": ""
-      },
-      {
-        "ind": "Eclampsia (adulto)",
-        "val": "4–6 g EV em 15–20 min → 1–2 g/hora",
+        "ind": "Hipomagnesemia — EV lento (≥ 10 min)",
+        "val": "RN: 100 mg/kg cada 6–12 h; 1 mês–11 anos: 50 mg/kg cada 12 h; 12–17 anos: 1 g cada 12 h",
         "max": "—",
-        "freq": "manutenção até 24–48h pós-parto",
-        "note": ""
+        "freq": "Conforme necessário",
+        "note": "BNFC 2020-21 (p. 646). 1 g de sulfato de magnésio ≈ 4 mmol de Mg²⁺."
       },
       {
-        "ind": "Broncoespasmo grave (asma aguda)",
-        "val": "25–75 mg/kg EV em 20 min",
-        "max": "2 g",
-        "freq": "Dose única; pode repetir 1× se necessário",
-        "note": "Reduz internamento em UCI em asma grave (Cochrane 2014, NNT=4 para hospitalização)"
+        "ind": "Hipomagnesemia — manutenção (ex.: nutrição parentérica) — EV ou IM",
+        "val": "50–100 mg/kg/dia",
+        "max": "5 g/dia",
+        "freq": "Diária",
+        "note": "BNFC 2020-21 (p. 646)."
       },
       {
-        "ind": "Torsades de pointes / hipomagnesemia grave",
-        "val": "25–50 mg/kg EV em 10–20 min",
-        "max": "2 g",
-        "freq": "Dose única; perfusão manutenção 10–20 mg/kg/h se recorrência",
-        "note": ""
+        "ind": "Asma aguda grave / deterioração respiratória na anafilaxia — EV, 2–17 anos (não licenciado)",
+        "val": "40 mg/kg em 20 min",
+        "max": "2 g/dose",
+        "freq": "Dose única",
+        "note": "BNFC 2020-21 (p. 646)."
+      },
+      {
+        "ind": "Torsades de pointes — EV, criança",
+        "val": "25–50 mg/kg em 10–15 min; pode repetir uma vez",
+        "max": "2 g/dose",
+        "freq": "Consultar protocolo local",
+        "note": "BNFC 2020-21 (p. 646)."
+      },
+      {
+        "ind": "Hipertensão pulmonar persistente do RN — EV",
+        "val": "200 mg/kg em 20–30 min; depois perfusão 20–75 mg/kg/h até 5 dias, mantendo Mg²⁺ plasmático 3,5–5,5 mmol/L",
+        "max": "—",
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21 (p. 646)."
+      },
+      {
+        "ind": "Hipocalcemia neonatal — IM profunda ou EV, RN",
+        "val": "100 mg/kg cada 12 h × 2–3 doses",
+        "max": "—",
+        "freq": "Cada 12 h",
+        "note": "BNFC 2020-21 (p. 646)."
       }
     ],
     "prep": "EV: SEMPRE diluir. Concentração periférico: ≤ 20% (200 mg/ml = 0,8 mmol/ml). Concentração central: ≤ 50% (500 mg/ml). Velocidade máxima: 150 mg/min (urgência); habitual < 60 mg/min. ⚠️ NUNCA em bólus rápido (assistolia). IM (emergência sem EV): solução 50% — dolorosa. Solução 10%: preferida para EV em criança (menos irritante). Antídoto toxicidade: gluconato Ca 0,2 ml/kg EV. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -226,7 +228,9 @@ var DRUGS_ELECTROLITICOS = [
       "⚠️ Infusão rápida causa hipotensão e rubor facial",
       "Monitorizar magnesiemia se perfusão prolongada (alvo 2–3,5 mmol/L terapêutico)"
     ],
-    "source": "BNF for Children 2023-24; MAGNUM trial; Harriet Lane 23rd Ed; BNF for Children 2023-24; Griffiths B et al. Cochrane 2016 (asma); PALS AHA 2020"
+    "source": "BNFC 2020-21, Magnesium sulfate (p. 646); Harriet Lane 23rd Ed",
+    "review": ["A ficha anterior tinha a dose da asma em 40–50 mg/kg e o intervalo de 25–75 mg/kg; o BNFC 2020-21 indica 40 mg/kg (máx. 2 g). Linha de eclampsia (adulto) removida."]
+  
   },
   {
     "id": "fosforo",
@@ -268,7 +272,9 @@ var DRUGS_ELECTROLITICOS = [
       "⚠️ NÃO misturar com cálcio (precipitação de fosfato de cálcio)",
       "⚠️ Monitorizar Ca2+, K+, Mg2+ e fósforo durante reposição"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "Harriet Lane 23rd Ed",
+    "review": ["O fosfato EV não consta do BNFC 2020-21 (a entrada de fosfato do BNFC refere-se a clisteres). As doses (0,15–0,25 mmol/kg em 6 h; realimentação 0,5–0,8 mmol/kg/dia) provêm do Harriet Lane e não foram verificadas contra as fontes do utilizador."]
+
   },
   {
     "id": "nacl_hipertonico",
@@ -311,7 +317,9 @@ var DRUGS_ELECTROLITICOS = [
       "Para HIC: osmolalidade alvo 310–320 mOsm/kg; Na⁺ alvo 145–155 mEq/L",
       "NaCl 3% recomendado sobre manitol como 1ª linha em HIC pediátrica (BTF Guidelines 2019)"
     ],
-    "source": "BNF for Children 2023-24; BTF Pediatric TBI Guidelines 2019; Spasovski G et al. NDT 2014 (hyponatremia)"
+    "source": "BTF Pediatric TBI Guidelines 2019; Spasovski G et al. NDT 2014 (hyponatremia)",
+    "review": ["O NaCl 3% EV em bólus não consta do BNFC 2020-21. As doses (HIC 3–5 mL/kg; hiponatremia sintomática 2–3 mL/kg) provêm das normas BTF 2019 e não foram verificadas contra as fontes do utilizador; confirmar com o protocolo de HTIC do UCIEP."]
+
   },
   {
     "id": "manitol",
@@ -327,11 +335,25 @@ var DRUGS_ELECTROLITICOS = [
     ],
     "dose": [
       {
-        "ind": "HIC aguda",
-        "val": "0,25–1 g/kg EV em 15–30 min",
+        "ind": "Edema cerebral — perfusão EV, 1 mês–11 anos",
+        "val": "0,25–1,5 g/kg em 30–60 min; pode repetir 1–2 vezes após 4–8 h",
         "max": "—",
-        "freq": "q4–6h; alvo osmolalidade sérica < 320 mOsm/kg",
-        "note": "Dose 0,25 g/kg tão eficaz quanto 1 g/kg com menor rebote (James et al.). Monitorizar osmolalidade e Na⁺ antes de cada dose"
+        "freq": "Repetir 1–2 vezes cada 4–8 h",
+        "note": "BNFC 2020-21 (p. 149). Alvo de osmolalidade sérica < 320 mOsm/L."
+      },
+      {
+        "ind": "Edema cerebral — perfusão EV, 12–17 anos",
+        "val": "0,25–2 g/kg em 30–60 min; pode repetir 1–2 vezes após 4–8 h",
+        "max": "—",
+        "freq": "Repetir 1–2 vezes cada 4–8 h",
+        "note": "BNFC 2020-21 (p. 149)."
+      },
+      {
+        "ind": "Edema periférico e ascite — perfusão EV, criança",
+        "val": "1–2 g/kg em 2–6 h",
+        "max": "—",
+        "freq": "—",
+        "note": "BNFC 2020-21 (p. 149)."
       }
     ],
     "prep": "EV: administrar não diluído (20%). Filtro de 5 μm obrigatório (pode cristalizar). Aquecer se cristais visíveis. Via central preferida; periférica aceitável se urgência.",
@@ -348,7 +370,9 @@ var DRUGS_ELECTROLITICOS = [
       "NaCl 3% é alternativa com evidência crescentemente favorável em PICU",
       "Monitorizar: osmolalidade sérica, Na⁺, balanço hídrico q4–6h"
     ],
-    "source": "BNF for Children 2023-24; BTF Pediatric TBI Guidelines 2019; James HE et al. Childs Nerv Syst 1980"
+    "source": "BNFC 2020-21, Mannitol (p. 149); Brain Trauma Foundation Pediatric TBI Guidelines 2019",
+    "review": ["A ficha anterior tinha 0,25–1 g/kg em 15–30 min a cada 4–6 h; o BNFC 2020-21 indica 30–60 min com repetição 1–2 vezes."]
+  
   },
   {
     "id": "calcio_cloreto",
@@ -452,18 +476,32 @@ var DRUGS_ELECTROLITICOS = [
     ],
     "dose": [
       {
-        "ind": "Encefalopatia de Wernicke / deficiência grave",
-        "val": "50–100 mg EV em 30 min (ou IM)",
-        "max": "200 mg/dose",
-        "freq": "q8h × 2–3 dias; depois 10–20 mg/dia VO",
-        "note": "Administrar ANTES de qualquer glucose (glucose agrava Wernicke em deficientes)"
+        "ind": "Doença da urina em xarope de ácer — oral, RN e criança",
+        "val": "5 mg/kg/dia, ajustar à resposta",
+        "max": "—",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 678)."
       },
       {
-        "ind": "Profilaxia em doente crítico desnutrido",
-        "val": "1–2 mg/kg/dia EV/IM",
-        "max": "100 mg/dia",
-        "freq": "1× /dia",
-        "note": ""
+        "ind": "Doenças metabólicas / acidose láctica congénita — oral ou perfusão EV (30 min), RN",
+        "val": "50–200 mg 1×/dia (ou dividido em 2–3 doses)",
+        "max": "—",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 678)."
+      },
+      {
+        "ind": "Doenças metabólicas / acidose láctica congénita — oral ou perfusão EV (30 min), criança",
+        "val": "100–300 mg 1×/dia (ou dividido em 2–3 doses); oral até 2 g/dia se necessário",
+        "max": "2 g/dia (oral)",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 678)."
+      },
+      {
+        "ind": "Encefalopatia de Wernicke / défice grave (não consta do BNFC)",
+        "val": "50–100 mg EV em 30 min (ou IM)",
+        "max": "200 mg/dose",
+        "freq": "Cada 8 h × 2–3 dias; depois dose de manutenção",
+        "note": "Galvin R et al. Eur J Neurol 2010 (adultos); extrapolado."
       }
     ],
     "prep": "EV: diluir em SF 100 ml. Administrar em 30 min (reacções anafilactóides com infusão rápida). IM: injecção profunda.",
@@ -473,7 +511,9 @@ var DRUGS_ELECTROLITICOS = [
       "Anafilaxia rara com administração rápida — infundir lentamente",
       "Acidose láctica refractária inexplicada: sempre considerar deficiência de tiamina e tiamina-teste 100 mg EV"
     ],
-    "source": "BNF for Children 2023-24; Galvin R et al. J Neurol Neurosurg Psychiatry 2010; Donnino MW et al. Crit Care Med 2010"
+    "source": "BNFC 2020-21, Thiamine (p. 678); Galvin R et al. Eur J Neurol 2010",
+    "review": ["Profilaxia em doente crítico desnutrido (1–2 mg/kg/dia) removida: não consta do BNFC 2020-21."]
+  
   },
   {
     "id": "vitamina_c_ev",
@@ -557,6 +597,8 @@ var DRUGS_ELECTROLITICOS = [
       "Monitorizar nível sérico em NP prolongada (> 2 semanas)",
       "Interacção com vitamina C em doses altas — oxidação do selénio (separar na NP)"
     ],
-    "source": "BNF for Children 2023-24; Heyland D et al. JAMA 2013 (REDOXS); ESPEN Micronutrient Guidelines 2022"
+    "source": "Heyland D et al. JAMA 2013 (REDOXS); ESPEN Micronutrient Guidelines 2022",
+    "review": ["O selénio EV não consta do BNFC 2020-21 e a dose na sépsia (1–2 mcg/kg/dia) é fora de indicação; não foi verificada contra as fontes do utilizador."]
+
   }
 ];
