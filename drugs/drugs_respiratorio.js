@@ -16,32 +16,53 @@ var DRUGS_RESPIRATORIO = [
     ],
     "dose": [
       {
-        "ind": "Asma aguda — nebulização",
-        "val": "< 20 kg: 2,5 mg; > 20 kg: 5 mg",
-        "max": "5 mg/dose",
-        "freq": "cada 20 min nas primeiras 3 doses; depois cada 1–4h",
-        "note": "Nebulização contínua em asma grave: 0,5 mg/kg/hora (máx. 20 mg/hora)"
-      },
-      {
-        "ind": "MDI + espaçador (preferida)",
-        "val": "< 6 anos: 2–6 inalações (200–600 mcg); > 6 anos: 4–8 inalações",
+        "ind": "Asma aguda moderada/grave/com risco de vida — nebulização",
+        "val": "1 mês–4 anos: 2,5 mg; 5–11 anos: 2,5–5 mg; 12–17 anos: 5 mg. Repetir cada 20–30 min ou conforme necessário, com nebulizador a oxigénio",
         "max": "—",
-        "freq": "cada 20 min (agudo); cada 4–6h (manutenção)",
-        "note": "Evidência: MDI + espaçador tão eficaz como nebulização em asma moderada"
+        "freq": "Cada 20–30 min",
+        "note": "BNFC 2020-21 (p. 164). Mínimo 0,3 mL da solução na nebulização (volume mínimo do nebulizador)."
       },
       {
-        "ind": "EV (asma grave / falência inalatória)",
-        "val": "CARGA: 15 mcg/kg EV em 10 min; MANUTENÇÃO: 1–5 mcg/kg/min",
-        "max": "250 mcg bólus",
-        "freq": "perfusão contínua",
-        "note": "Monitorização ECG (taquicardia, hipocaliemia)"
-      },
-      {
-        "ind": "Hipercaliemia",
-        "val": "2,5–5 mg nebulização",
+        "ind": "Asma aguda moderada/grave — inalador pressurizado com espaçador de grande volume",
+        "val": "2–10 puffs de 100 mcg, inalados um a um; repetir cada 10–20 min ou conforme necessário",
         "max": "—",
-        "freq": "dose única (efeito 30–60 min)",
-        "note": "Associar a outros tratamentos (não usar como tratamento único)"
+        "freq": "Cada 10–20 min",
+        "note": "BNFC 2020-21 (p. 164). Máscara bem ajustada < 3 anos."
+      },
+      {
+        "ind": "Asma aguda — EV em injeção (reservar para quem não pode inalar ou sem resposta)",
+        "val": "1–23 meses: 5 mcg/kg; 2–17 anos: 15 mcg/kg em 5 min",
+        "max": "250 mcg",
+        "freq": "Dose única",
+        "note": "BNFC 2020-21 (p. 164)."
+      },
+      {
+        "ind": "Asma aguda — perfusão EV contínua",
+        "val": "1–2 mcg/kg/min, ajustar à resposta e FC; se necessário até 5 mcg/kg/min",
+        "max": "5 mcg/kg/min",
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21 (p. 164). Doses > 2 mcg/kg/min em cuidados intensivos."
+      },
+      {
+        "ind": "Hipercaliemia grave — EV lento",
+        "val": "RN e criança: 4 mcg/kg em 5 min; repetir se necessário",
+        "max": "—",
+        "freq": "Repetir conforme necessário",
+        "note": "BNFC 2020-21 (p. 164)."
+      },
+      {
+        "ind": "Hipercaliemia grave — nebulização",
+        "val": "RN: 2,5–5 mg, repetir se necessário; criança: 2,5–5 mg (valor mantido da ficha anterior)",
+        "max": "—",
+        "freq": "Repetir se necessário",
+        "note": "BNFC 2020-21 (p. 164)."
+      },
+      {
+        "ind": "Exacerbação de obstrução reversível das vias aéreas — inalador, criança",
+        "val": "100–200 mcg até 4×/dia",
+        "max": "—",
+        "freq": "Até 4×/dia",
+        "note": "BNFC 2020-21 (p. 164)."
       }
     ],
     "prep": "Nebulização: diluir em SF para volume total 3–5 ml. Débito O2: 6–8 L/min. MDI: 1 puff de cada vez com câmara expansora (5 respirações entre puffs). Nebulização contínua (status asmático): diluir dose horária em 10–16 ml SF, débito O2 constante. EV bólus: 15 μg/kg em 10 ml SF em 10 min. EV perfusão: 5 mg em 50 ml SF (100 μg/ml). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -55,7 +76,9 @@ var DRUGS_RESPIRATORIO = [
       "⚠️ Acidose láctica com altas doses EV",
       "Tolerância a broncodilatação com uso muito frequente"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; GINA 2023; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Salbutamol (p. 164); Formulário de Pediatria 3ª Ed.; GINA 2023",
+    "review": ["A ficha anterior tinha a dose EV de carga a 15 mcg/kg em 10 min para todas as idades; o BNFC 2020-21 indica 5 mcg/kg em 1–23 meses e 15 mcg/kg (máx. 250 mcg) em 5 min dos 2 aos 17 anos.", "A nebulização na hipercaliemia em criança não foi confirmada no BNFC 2020-21 (texto cortado): mantida da ficha anterior."]
+  
   },
   {
     "id": "hidroxizina",
@@ -140,18 +163,18 @@ var DRUGS_RESPIRATORIO = [
     ],
     "dose": [
       {
-        "ind": "2–12 anos (< 30 kg) oral",
-        "val": "5 mg/dia",
-        "max": "5 mg/dia",
-        "freq": "1×/dia",
-        "note": ""
-      },
-      {
-        "ind": "≥ 12 anos ou > 30 kg",
-        "val": "10 mg/dia",
+        "ind": "Alívio sintomático de alergia (rinite, urticária) — oral, 12–17 anos",
+        "val": "10 mg 1×/dia",
         "max": "10 mg/dia",
         "freq": "1×/dia",
-        "note": ""
+        "note": "BNFC 2020-21 (p. 185)."
+      },
+      {
+        "ind": "Alergia — oral, 2–11 anos (RCM; não consta do BNFC)",
+        "val": "< 30 kg: 5 mg 1×/dia; ≥ 30 kg: 10 mg 1×/dia",
+        "max": "10 mg/dia",
+        "freq": "1×/dia",
+        "note": "Doses do RCM da loratadina."
       }
     ],
     "prep": "Oral: xarope 5 mg/5 ml (1 mg/ml). Comprimidos 10 mg (podem ser dissolvidos em água para crianças pequenas). Comprimidos orodispersíveis disponíveis. Tomar de preferência em jejum (absorção pode reduzir ligeiramente com alimentos gordurosos). Fonte: BNF for Children 2023-24.",
@@ -163,7 +186,9 @@ var DRUGS_RESPIRATORIO = [
       "Metabolizado pelo CYP3A4 — interacção com eritromicina, cetoconazol (↑ loratadina)",
       "Ajuste em insuf. hepática grave"
     ],
-    "source": "BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Loratadine (p. 185); RCM da loratadina",
+    "review": ["O BNFC 2020-21 só indica loratadina a partir dos 12 anos; as doses dos 2 aos 11 anos são do RCM."]
+  
   },
   {
     "id": "difenidramina",
@@ -316,25 +341,25 @@ var DRUGS_RESPIRATORIO = [
     ],
     "dose": [
       {
-        "ind": "6 meses – 5 anos oral",
-        "val": "4 mg/dia (granulados)",
+        "ind": "Profilaxia da asma — oral, 6 meses–5 anos",
+        "val": "4 mg 1×/dia à noite (granulado)",
         "max": "4 mg/dia",
-        "freq": "1×/dia ao deitar",
-        "note": ""
+        "freq": "1×/dia à noite",
+        "note": "BNFC 2020-21 (p. 174)."
       },
       {
-        "ind": "6–14 anos oral",
-        "val": "5 mg/dia (comp. mastigável)",
+        "ind": "Profilaxia da asma — oral, 6–14 anos",
+        "val": "5 mg 1×/dia à noite (comprimido mastigável)",
         "max": "5 mg/dia",
-        "freq": "1×/dia ao deitar",
-        "note": ""
+        "freq": "1×/dia à noite",
+        "note": "BNFC 2020-21 (p. 174)."
       },
       {
-        "ind": "≥ 15 anos / adulto",
-        "val": "10 mg/dia",
+        "ind": "Profilaxia da asma — oral, 15–17 anos",
+        "val": "10 mg 1×/dia à noite",
         "max": "10 mg/dia",
-        "freq": "1×/dia ao deitar",
-        "note": ""
+        "freq": "1×/dia à noite",
+        "note": "BNFC 2020-21 (p. 174). Vigiar alterações neuropsiquiátricas (alerta FDA 2020)."
       }
     ],
     "prep": "Oral granulados (4 mg): misturar em colher de alimento mole (iogurte, puré, gelado) — NÃO dissolver em água. Ingerir imediatamente. Comprimidos mastigáveis (5 mg) e normais (10 mg). Tomar ao deitar (metabolismo circadiano do leucotrieno). Fonte: BNF for Children 2023-24; SmPC Singulair.",
@@ -347,7 +372,7 @@ var DRUGS_RESPIRATORIO = [
       "⚠️ Síndrome de Churg-Strauss (vasculite eosinofílica) — raro, geralmente em desmame de esteroides",
       "Não é broncodilatador de resgate — apenas manutenção"
     ],
-    "source": "BNF for Children 2023-24; FDA Safety Communication 2020"
+    "source": "BNFC 2020-21, Montelukast (p. 174); FDA Safety Communication 2020"
   },
   {
     "id": "budesonida",
@@ -394,7 +419,9 @@ var DRUGS_RESPIRATORIO = [
       "⚠️ Atraso do crescimento em doses altas (monitorizar estatura anualmente)",
       "Não é broncodilatador de resgate — apenas manutenção e crupe"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; GINA 2023; BNF for Children 2023-24"
+    "source": "Formulário de Pediatria 3ª Ed.; GINA 2023",
+    "review": ["As doses respiratórias (nebulização 0,25–0,5 mg 2×/dia, inalador 100–200 mcg 2×/dia, crupe 2 mg) não foram verificadas contra o BNFC 2020-21: a entrada localizada refere apenas indicações gastrointestinais (Crohn 9 mg/dia; colite ulcerosa em enema). Confirmar na secção respiratória do BNFC."]
+
   },
   {
     "id": "adrenalina_neb",
@@ -435,7 +462,9 @@ var DRUGS_RESPIRATORIO = [
       "Associar sempre dexametasona (0,15–0,6 mg/kg PO/EV) — efeito anti-inflamatório durável",
       "Eficácia equivalente entre adrenalina racémica e L-adrenalina (Cochrane 2018)"
     ],
-    "source": "BNF for Children 2023-24; Bjornson C et al. Cochrane 2013; Russell KF et al. Cochrane 2018"
+    "source": "Bjornson C et al. Cochrane 2013; Russell KF et al. Cochrane 2018",
+    "review": ["A dose de 0,5 mL/kg de adrenalina 1:1000 (máx. 5 mL) na nebulização não foi verificada contra o BNFC 2020-21. Fontes: Cochrane (Bjornson 2013; Russell 2018). Monitorizar rebote."]
+
   },
   {
     "id": "ipratropio",
@@ -450,11 +479,25 @@ var DRUGS_RESPIRATORIO = [
     ],
     "dose": [
       {
-        "ind": "Asma aguda grave — adjuvante",
-        "val": "< 12 anos: 0,25 mg neb; ≥ 12 anos: 0,5 mg neb",
-        "max": "0,5 mg/dose",
-        "freq": "q20 min × 3 doses nas primeiras 2h (em simultâneo com salbutamol)",
-        "note": "Benefício claro apenas nas primeiras 2h — não manter além deste período de forma sistemática. Reduz internamentos (Goggin N et al. Cochrane)"
+        "ind": "Broncospasmo agudo — nebulização",
+        "val": "1 mês–5 anos: 125–250 mcg; 6–11 anos: 250 mcg; 12–17 anos: 500 mcg, conforme necessário",
+        "max": "1 mg/dia (1 mês–11 anos); 2 mg/dia (12–17 anos)",
+        "freq": "Conforme necessário",
+        "note": "BNFC 2020-21 (p. 161)."
+      },
+      {
+        "ind": "Asma grave ou com risco de vida — nebulização",
+        "val": "1 mês–11 anos: 250 mcg cada 20–30 min nas primeiras 2 h; depois 250 mcg cada 4–6 h. 12–17 anos: 500 mcg cada 4–6 h",
+        "max": "—",
+        "freq": "Cada 20–30 min × 2 h; depois cada 4–6 h",
+        "note": "BNFC 2020-21 (p. 161). Efeito máximo 30–60 min; duração 3–6 h."
+      },
+      {
+        "ind": "Obstrução reversível das vias aéreas — inalador pressurizado",
+        "val": "1 mês–5 anos: 20 mcg 3×/dia; 6–11 anos: 20–40 mcg 3×/dia; 12–17 anos: 20–40 mcg 3–4×/dia",
+        "max": "—",
+        "freq": "3–4×/dia",
+        "note": "BNFC 2020-21 (p. 161)."
       }
     ],
     "prep": "Nebulização: pode misturar directamente com salbutamol no mesmo nebulizador (compatíveis). Diluir em SF para volume total 3–4 ml. Débito O2: 6–8 L/min. MDI: 1 puff de cada vez com câmara expansora. ⚠️ Evitar exposição ocular com máscara (risco glaucoma agudo). Fonte: BNF for Children 2023-24.",
@@ -467,7 +510,9 @@ var DRUGS_RESPIRATORIO = [
       "Boca seca, taquicardia ligeira — efeitos anticolinérgicos normais",
       "Evitar nebulização com máscara que cubra olhos (risco glaucoma agudo se projecção ocular)"
     ],
-    "source": "BNF for Children 2023-24; Goggin N et al. Cochrane 2000; GINA 2023"
+    "source": "BNFC 2020-21, Ipratropium bromide (p. 161); GINA 2023",
+    "review": ["A ficha anterior indicava 0,25 mg (< 12 anos) e 0,5 mg (≥ 12 anos) a cada 20 min × 3; o BNFC 2020-21 indica 250 mcg a cada 20–30 min durante 2 h em crianças de 1 mês a 11 anos."]
+  
   },
   {
     "id": "heliox",
@@ -502,7 +547,9 @@ var DRUGS_RESPIRATORIO = [
       "Efeito físico puro (baixa densidade) — melhoria imediata se responder; ausência de resposta em 30 min sugere obstrução infra-glótica",
       "Voz alterada (aguda) durante administração — avisar família"
     ],
-    "source": "BNF for Children 2023-24; Saitz B et al. Cochrane 2010; Ho AM et al. Chest 2003"
+    "source": "Saitz B et al. Cochrane 2010; Ho AM et al. Chest 2003",
+    "review": ["O heliox não consta do BNFC 2020-21; mistura e FiO2 mínima dependem da experiência local. Não verificado contra as fontes do utilizador."]
+
   },
   {
     "id": "surfactante_ards",
@@ -535,7 +582,9 @@ var DRUGS_RESPIRATORIO = [
       "Resposta imediata (30–60 min) é preditora de benefício — se sem melhoria após 2 doses, provavelmente não beneficia",
       "Dados mais favoráveis em ARDS viral e por aspiração (défice de surfactante mais marcado)"
     ],
-    "source": "BNF for Children 2023-24; PALICC-2 Pediatric ARDS Consensus 2023; Thomas NJ et al. Pediatr Crit Care Med 2018"
+    "source": "PALICC-2 Pediatric ARDS Consensus 2023; Thomas NJ et al. Pediatr Crit Care Med 2018",
+    "review": ["O surfactante em SDRA pediátrica não consta do BNFC 2020-21 e a evidência é limitada. Não verificado contra as fontes do utilizador."]
+
   },
 {
     "id": "terbutalina_sc",
