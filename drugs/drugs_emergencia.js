@@ -25,52 +25,45 @@ var DRUGS_EMERGENCIA = [
     "dose": [
       {
         "ind": "PCR — EV/IO",
-        "val": "0,01 mg/kg (= 0,1 ml/kg da solução 1:10000)",
-        "max": "1 mg/dose",
-        "freq": "cada 3–5 min",
-        "note": "Repetir até ROSC. Para obter 1:10000: diluir 1 ml de 1:1000 em 9 ml SF"
-      },
-      {
-        "ind": "PCR — endotraqueal",
-        "val": "0,1 mg/kg (= 0,1 ml/kg da 1:1000)",
-        "max": "2,5 mg/dose",
-        "freq": "única (via ET apenas se sem AV/IO)",
-        "note": ""
-      },
-      {
-        "ind": "Anafilaxia — IM",
-        "val": "0,01 mg/kg da 1:1000",
-        "max": "0,5 mg/dose",
-        "freq": "cada 5–15 min se necessário",
-        "note": "Via IM face antero-lateral da coxa. EpiPen Jr 0,15 mg (< 25 kg); EpiPen 0,3 mg (≥ 25 kg)"
-      },
-      {
-        "ind": "Suporte vasopressor — perfusão EV",
-        "val": "0,05–0,3 mcg/kg/min",
-        "max": "1–2 mcg/kg/min (casos extremos)",
-        "freq": "contínua",
-        "note": "Titular pela TA e clínica. Doses > 0,5 mcg/kg/min: considerar vasopressina adjuvante"
-      },
-      {
-        "ind": "Neonatal — PCR — reanimação sala de partos EV/IO",
-        "val": "0,01–0,03 mg/kg EV/IO (= 0,1–0,3 ml/kg da sol. 1:10000)",
-        "max": "0,03 mg/kg/dose",
-        "freq": "cada 3–5 min",
-        "note": "Via EV/IO preferida. Via endotraqueal: 0,05–0,1 mg/kg (menos eficaz)"
-      },
-      {
-        "ind": "Choque neonatal — perfusão EV",
-        "val": "0,05–0,3 mcg/kg/min",
-        "max": "1 mcg/kg/min",
-        "freq": "contínua; titular pela TAM",
-        "note": "TAM alvo: ≥ 40 mmHg (RN termo); ≥ semanas de gestação em mmHg (prematuro)"
-      },
-      {
-        "ind": "Choque — perfusão contínua",
-        "val": "0,05–2 μg/kg/min EV",
+        "val": "0,01 mg/kg (= 0,1 ml/kg da solução 1:10 000)",
         "max": "—",
-        "freq": "Perfusão contínua; titular por resposta",
-        "note": "Doses baixas (< 0,1 μg/kg/min): efeito β predominante (inotrópico). Doses altas (> 0,3 μg/kg/min): efeito α predominante (vasopressor)"
+        "freq": "Repetir se necessário",
+        "note": "Shann (Cardiac arrest). Para 1:10 000: diluir 1 ml de 1:1000 em 9 ml SF. Intervalo entre doses: seguir algoritmo ERC/AHA vigente (não consta do BNFC 2020-21 nem do Shann)."
+      },
+      {
+        "ind": "PCR — endotraqueal (só se sem EV/IO)",
+        "val": "0,1 mg/kg (= 0,1 ml/kg da 1:1000)",
+        "max": "—",
+        "freq": "Repetir se necessário",
+        "note": "Shann. Via menos fiável; preferir EV/IO."
+      },
+      {
+        "ind": "Anafilaxia — IM (1.ª linha)",
+        "val": "1 mês–5 anos: 150 mcg; 6–11 anos: 300 mcg; 12–17 anos: 500 mcg (300 mcg se pequeno/pré-púbere)",
+        "max": "500 mcg/dose",
+        "freq": "Repetir cada 5 min conforme TA, pulso e função respiratória",
+        "note": "BNFC 2020-21 (p. 143). Face antero-lateral do terço médio da coxa; usar seringa adequada para pequenos volumes. Shann: 0,01 mg/kg (0,01 ml/kg da 1:1000)."
+      },
+      {
+        "ind": "Anafilaxia com dúvida sobre adequação da circulação — EV lenta (uso especializado)",
+        "val": "1 mcg/kg (adrenalina 1:10 000 diluída)",
+        "max": "50 mcg/dose",
+        "freq": "Repetir conforme resposta; se necessárias várias doses, passar a perfusão e parar quando houver resposta",
+        "note": "BNFC 2020-21 (p. 143). Shann: 0,05–0,1 ml/kg da 1:10 000 (5–10 mcg/kg) — dose superior à do BNFC; usar a do BNFC salvo decisão especializada."
+      },
+      {
+        "ind": "Hipotensão aguda / choque — perfusão EV",
+        "val": "0,05–0,5 mcg/kg/min",
+        "max": "1,5 mcg/kg/min",
+        "freq": "Contínua; titular à resposta",
+        "note": "BNFC 2020-21 (p. 143): início 100 ng/kg/min (RN e criança), ajustar; até 1,5 mcg/kg/min em hipotensão aguda. Shann: 0,05–0,5 mcg/kg/min. Acesso central."
+      },
+      {
+        "ind": "Crupe não controlado com corticoide — nebulizada",
+        "val": "400 mcg/kg",
+        "max": "5 mg/dose",
+        "freq": "Repetir após 30 min se necessário",
+        "note": "BNFC 2020-21 (p. 143), 1 mês–11 anos. Efeito dura 2–3 h."
       }
     ],
     "prep": "Perfusão: (0,3 × Peso kg) mg em 50 ml SG5% → 1 ml/h = 0,1 mcg/kg/min. Concentrações até 0,5 mg/ml EV central.",
@@ -95,7 +88,9 @@ var DRUGS_EMERGENCIA = [
       "⚠️ Hiperglicemia — inibe libertação de insulina; monitorizar glicemia",
       "Isquemia mesentérica e periférica com doses altas — monitorizar lactato e perfusão"
     ],
-    "source": "ILCOR 2021; ERC Guidelines 2021; WAO Anaphylaxis Guidelines 2020; BNF for Children 2023-24; ILCOR NLS 2021; SSC Neonatal Guidelines 2020; BNF for Children 2023-24; Surviving Sepsis Campaign Pediatric Guidelines 2020; PALS AHA 2020"
+    "source": "BNFC 2020-21, Adrenaline/epinephrine (p. 143); Shann Drug Doses (Adrenaline)",
+    "review": ["Doses neonatais em sala de partos (EV/IO) removidas por não estarem verificadas no BNFC 2020-21/Shann: consultar algoritmo ERC/ILCOR neonatal vigente. Intervalo e dose máxima em PCR pediátrica: confirmar em ERC/AHA 2025."]
+  
   },
   {
     "id": "atropina",
@@ -248,46 +243,18 @@ var DRUGS_EMERGENCIA = [
     ],
     "dose": [
       {
-        "ind": "Hipocalcemia sintomática / PCR",
-        "val": "0,5 ml/kg da solução 10% (= 0,11 mmol/kg)",
-        "max": "20 ml (2 g)",
-        "freq": "EV lento em 5–10 min; repetir se necessário",
-        "note": "Na PCR: bólus EV rápido"
+        "ind": "Hipocalcemia aguda / prevenção de arritmias na hipercaliemia — EV lento",
+        "val": "0,11 mmol/kg (= 0,5 ml/kg de gluconato de cálcio 10%)",
+        "max": "4,5 mmol (20 ml de gluconato de cálcio 10%)",
+        "freq": "Dose única em 5–10 min",
+        "note": "BNFC 2020-21 (p. 642), RN e criança. No RN algumas unidades usam 0,46 mmol/kg (2 ml/kg de 10%) segundo prática dos EUA. ECG contínuo."
       },
       {
-        "ind": "Hipercaliemia — cardioprotecção",
-        "val": "0,5–1 ml/kg da solução 10%",
-        "max": "20 ml",
-        "freq": "EV em 5–10 min; efeito dura 30–60 min",
-        "note": "Não reduz o K+ sérico — estabiliza membrana cardíaca"
-      },
-      {
-        "ind": "Manutenção hipocalcemia",
-        "val": "0,5–1 mmol/kg/dia",
-        "max": "—",
-        "freq": "perfusão contínua EV central",
-        "note": ""
-      },
-      {
-        "ind": "Neonatal — Hipocalcemia sintomática EV (convulsões, tetania)",
-        "val": "1–2 ml/kg da sol. 10% EV lento",
-        "max": "10 ml/dose",
-        "freq": "em 5–10 min; monitorização ECG contínua",
-        "note": "= 0,22–0,45 mmol/kg. Repetir se necessário"
-      },
-      {
-        "ind": "Neonatal — Manutenção / Hipocalcemia assintomática EV",
-        "val": "0,5–1 mmol/kg/dia",
-        "max": "—",
-        "freq": "perfusão contínua EV central; ou dividido em doses cada 6–8h",
-        "note": ""
-      },
-      {
-        "ind": "Neonatal — Hipercaliemia — cardioprotecção EV",
-        "val": "0,5 ml/kg da sol. 10%",
-        "max": "10 ml",
-        "freq": "em 5–10 min; efeito transitório",
-        "note": ""
+        "ind": "Hipocalcemia aguda — manutenção (perfusão EV)",
+        "val": "RN: 0,5 mmol/kg/dia; 1 mês–1 ano: 1 mmol/kg/dia; 2–17 anos: 8,8 mmol/dia",
+        "max": "8,8 mmol/dia",
+        "freq": "Perfusão em 24 h, ajustar à resposta",
+        "note": "BNFC 2020-21 (p. 642). Passar a via oral assim que possível (risco de extravasamento)."
       }
     ],
     "prep": "EV: pode administrar não diluído (10 mg/ml = 1 mmol Ca²⁺/10 ml) OU diluir em SF/SG5%. Periférico: ≤ 10 mg/ml (1%); Central: até 100 mg/ml. Velocidade máx.: 0,5 mmol/min (5 ml/min de solução 10%). Neonatos: periférico ≤ 10 mg/ml apenas. ⚠️ NUNCA misturar com bicarbonato (CaCO3) ou fosfato (CaHPO4). ⚠️ NUNCA na mesma linha que ceftriaxona em neonatos (precipitação letal).",
@@ -307,8 +274,7 @@ var DRUGS_EMERGENCIA = [
       "⛔ Incompatível com bicarbonato de sódio e fosfato (precipitação)",
       "⚠️ Potencia toxicidade digitálica"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; PALS AHA 2020; BNF for Children 2023-24; Jain A. Paediatr Child Health 2010; BNFC Neonatal Formulary 9th Ed",
-    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
+    "source": "BNFC 2020-21, Calcium gluconate (p. 642)"
   },
   {
     "id": "flumazenil",
@@ -403,25 +369,32 @@ var DRUGS_EMERGENCIA = [
     ],
     "dose": [
       {
-        "ind": "TSVP — 1ª dose",
-        "val": "0,1 mg/kg EV rápido (< 2 seg)",
-        "max": "6 mg",
-        "freq": "Dose única; repetir se sem resposta em 1–2 min",
-        "note": "Administrar na veia antecubital ou central + flush SF 5–10 ml imediato. Monitorização ECG obrigatória"
+        "ind": "TSV — RN",
+        "val": "Inicial 150 mcg/kg EV rápido; aumentar em passos de 50–100 mcg/kg",
+        "max": "300 mcg/kg/dose única",
+        "freq": "Passos cada 1–2 min até terminar a taquicardia",
+        "note": "BNFC 2020-21 (p. 84). Bólus rápido seguido de flush de SF."
       },
       {
-        "ind": "TSVP — 2ª dose",
-        "val": "0,2 mg/kg EV rápido",
-        "max": "12 mg",
-        "freq": "Se sem resposta 1–2 min após 1ª dose",
-        "note": ""
+        "ind": "TSV — 1–11 meses",
+        "val": "Inicial 150 mcg/kg EV rápido; aumentar em passos de 50–100 mcg/kg",
+        "max": "500 mcg/kg/dose única",
+        "freq": "Passos cada 1–2 min até terminar a taquicardia",
+        "note": "BNFC 2020-21 (p. 84)."
       },
       {
-        "ind": "TSVP neonatal",
-        "val": "0,1–0,3 mg/kg EV rápido",
-        "max": "6 mg",
-        "freq": "Incrementos 0,05 mg/kg q1–2 min",
-        "note": "Via umbilical ou central preferida — periférica distal reduz eficácia por inactivação rápida"
+        "ind": "TSV — 1–11 anos",
+        "val": "Inicial 100 mcg/kg EV rápido; aumentar em passos de 50–100 mcg/kg",
+        "max": "500 mcg/kg/dose única (máx. 12 mg)",
+        "freq": "Passos cada 1–2 min até terminar a taquicardia",
+        "note": "BNFC 2020-21 (p. 84)."
+      },
+      {
+        "ind": "TSV — 12–17 anos",
+        "val": "3 mg; depois 6 mg; depois 12 mg EV rápido",
+        "max": "12 mg/dose",
+        "freq": "Intervalo de 1–2 min entre doses",
+        "note": "BNFC 2020-21 (p. 84). Transplantados cardíacos são muito sensíveis: não usar doses iniciais mais altas."
       }
     ],
     "prep": "Não diluir — administrar não diluída (3 mg/ml) em bólus IV muito rápido (< 2 segundos), imediatamente seguido de flush SF 5–10 ml rápido pela mesma linha. Usar a veia antecubital ou central — vias periféricas distais inactivam a adenosina por hidrólise antes de atingir o nó AV. Ter monitorizaçõ ECG e suporte de ressuscitação disponíveis.",
@@ -438,7 +411,9 @@ var DRUGS_EMERGENCIA = [
       "Monitorização ECG contínua e registo de ritmo durante administração",
       "Inactivada pela teofilina e cafeína — pode necessitar dose mais alta em prematuros com cafeína"
     ],
-    "source": "BNF for Children 2023-24; Sanatani S et al. CJC 2017; PALS Guidelines AHA 2020; ERC 2021"
+    "source": "BNFC 2020-21, Adenosine (p. 84)",
+    "review": ["Esquema 0,1 → 0,2 mg/kg (PALS/ERC) removido por não constar do BNFC 2020-21. Uso fora de licença no diagnóstico de arritmias na criança (BNFC)."]
+  
   },
   {
     "id": "amiodarona",
@@ -500,18 +475,18 @@ var DRUGS_EMERGENCIA = [
     ],
     "dose": [
       {
-        "ind": "PCR — FV/TV (alternativa à amiodarona)",
-        "val": "1 mg/kg EV/IO bólus",
-        "max": "100 mg/dose",
-        "freq": "Dose única após 3º choque; pode repetir 0,5 mg/kg q5–10 min (máx 3 mg/kg total)",
-        "note": "PALS 2020: amiodarona preferida; lidocaína alternativa aceitável se amiodarona indisponível"
+        "ind": "Arritmias ventriculares / TV sem pulso / FV — bólus EV/IO",
+        "val": "0,5–1 mg/kg",
+        "max": "3 mg/kg por ciclo",
+        "freq": "Se perfusão não disponível, repetir com intervalo ≥ 5 min",
+        "note": "BNFC 2020-21 (p. 81), RN e 1 mês–11 anos. Shann: 1 mg/kg em 2 min."
       },
       {
-        "ind": "TV com pulso — perfusão manutenção",
-        "val": "20–50 μg/kg/min EV",
-        "max": "—",
-        "freq": "Perfusão contínua após conversão",
-        "note": "Iniciar após bólus eficaz"
+        "ind": "Arritmias ventriculares — perfusão EV após o bólus",
+        "val": "0,6–3 mg/kg/h",
+        "max": "3 mg/kg/h",
+        "freq": "Contínua",
+        "note": "BNFC 2020-21 (p. 81). Shann: 15–50 mcg/kg/min (0,9–3 mg/kg/h)."
       }
     ],
     "prep": "EV/IO PCR: usar lidocaína 1% (10 mg/ml) directamente em bólus. Perfusão pós-conversão: 600 mg em 250 ml SF (2,4 mg/ml) — taxa 0,5–4 ml/min. Pré-intubação (dose baixa): 1 mg/kg não diluído.",
@@ -527,7 +502,7 @@ var DRUGS_EMERGENCIA = [
       "⚠️ Reduzir dose em insuf. hepática e IC (metabolismo hepático reduzido)",
       "Amiodarona preferida em PCR — lidocaína reservada para indisponibilidade ou protocolo específico"
     ],
-    "source": "BNF for Children 2023-24; PALS AHA 2020; ERC Guidelines 2021; Dorian P et al. NEJM 2002"
+    "source": "BNFC 2020-21, Lidocaine (p. 81); Shann Drug Doses (Lignocaine)"
   },
   {
     "id": "calcio_cloreto_emerg",

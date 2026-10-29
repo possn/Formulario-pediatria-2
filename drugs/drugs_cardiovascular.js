@@ -1180,11 +1180,25 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Carga EV + manutenção",
-        "val": "1 mg/kg EV bólus; depois 20–50 μg/kg/min perfusão",
-        "max": "100 mg bólus; 3 mg/min perfusão",
-        "freq": "Bólus em 2 min; perfusão contínua",
-        "note": "Reduzir dose de manutenção em IH e IC (metabolismo hepático reduzido)"
+        "ind": "Arritmias ventriculares — bólus EV/IO",
+        "val": "0,5–1 mg/kg",
+        "max": "3 mg/kg por ciclo",
+        "freq": "Repetir com intervalo ≥ 5 min se perfusão não disponível",
+        "note": "BNFC 2020-21 (p. 81), RN e 1 mês–11 anos."
+      },
+      {
+        "ind": "Arritmias ventriculares — perfusão EV",
+        "val": "0,6–3 mg/kg/h",
+        "max": "3 mg/kg/h",
+        "freq": "Contínua, logo após o bólus",
+        "note": "BNFC 2020-21 (p. 81). Shann: 15–50 mcg/kg/min. Reduzir dose na insuficiência cardíaca e pós-cirurgia cardíaca."
+      },
+      {
+        "ind": "12–17 anos",
+        "val": "Inicial 50–100 mg EV; depois 120 mg em 30 min; 240 mg em 2 h; 60 mg/h",
+        "max": "300 mg/h (bólus repetidos)",
+        "freq": "Reduzir se perfusão > 24 h",
+        "note": "BNFC 2020-21 (p. 81)."
       }
     ],
     "prep": "Bólus: usar lidocaína 1% (10 mg/ml) directamente, ou diluir 2% para 1:1 com SF. Perfusão: 600 mg em 250 ml SF (2,4 mg/ml) — taxa 0,5–4 ml/kg/h conforme dose. Periférico aceitável para bólus; central preferida para perfusão. Estabilidade: 24h a 25°C.",
@@ -1198,8 +1212,7 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Acumulação em IH e IC — monitorizar nível sérico (alvo 1,5–5 mg/L)",
       "Janela terapêutica estreita — TDM em perfusões > 24h"
     ],
-    "source": "BNF for Children 2023-24; PALS AHA 2020; Dorian P et al. NEJM 2002",
-    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
+    "source": "BNFC 2020-21, Lidocaine (p. 81); Shann Drug Doses (Lignocaine)"
   },
   {
     "id": "sotalol",
