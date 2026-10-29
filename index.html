@@ -373,6 +373,8 @@ svg{display:block}
 .dca{background:#7d1f4a}.del{background:#41691f}.dm{background:#1d5a2a}
 .dat{background:#a8420a}.dg{background:#0b6558}.den{background:#4b2488}
 .do{background:#8e1d1d}.dah{background:#0b5a60}.dis{background:#40308f}
+.nbox.warnbox{background:#fdecea;border-left-color:#b3261e}.nbox.warnbox strong{color:#b3261e}
+.allok.unv{background:#fff6e0;border-color:#e6c36a;color:#8a6100}
 </style>
 </head>
 <body>
@@ -405,7 +407,7 @@ svg{display:block}
     <div id="s-cp" class="screen">
       <div class="ptit">Compatibilidade IV</div>
       <div class="psub">Seleccione dois ou mais fármacos para verificar a compatibilidade em Y-site no mesmo acesso venoso.</div>
-      <div class="nbox">A compatibilidade pode variar com a concentração e o diluente. Confirme sempre com o farmacêutico.</div>
+      <div class="nbox warnbox"><strong>Dados não verificados.</strong> Os pares desta base foram compilados a partir de referências que não foram confirmadas documento a documento. Não use este ecrã como única fonte para administrar: confirme sempre no Medusa/Trissel/King Guide ou com o farmacêutico. A compatibilidade varia com concentração, diluente e tempo de contacto.</div>
       <div class="cinpw">
         <span class="cico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span>
         <input id="cinp" type="search" placeholder="Adicionar fármaco"
@@ -845,18 +847,19 @@ function doCompat(){
     pairs.push({a:selD[i].name,b:selD[j].name,data:data});
     if(!data||data.s!=='C')allok=false;
   }
-  var h=allok?'<div class="allok">Todos os pares são compatíveis em Y-site</div>':'';
+  var h='<div class="nbox warnbox"><strong>Dados não verificados.</strong> Resultado indicativo — confirmar antes de administrar.</div>';
+  if(allok)h+='<div class="allok unv">Sem incompatibilidade registada na base (não verificada)</div>';
   pairs.forEach(function(p){
     var d=p.data,cls,ic,lb;
     if(!d){cls='cruk';ic='?';lb='Sem dados na literatura'}
-    else if(d.s==='C'){cls='crok';ic='✓';lb='Compatível em Y-site'}
+    else if(d.s==='C'){cls='crok';ic='✓';lb='Compatível em Y-site (não verificado)'}
     else if(d.s==='I'){cls='crno';ic='✕';lb='Incompatível'}
     else if(d.s==='X'){cls='crwn';ic='!';lb='Dados conflituosos'}
     else{cls='cruk';ic='?';lb='Sem dados'}
     h+='<div class="cres '+cls+'"><div class="crh"><span class="cric">'+ic+'</span>'
       +'<span class="crpr">'+E(p.a)+' + '+E(p.b)+'</span></div>'
       +'<div class="crlb">'+lb+'</div>';
-    if(d)h+='<div class="crnt">'+E(d.n)+'</div><div class="crsr">'+E(d.src)+'</div>';
+    if(d)h+='<div class="crnt">'+E(d.n)+'</div><div class="crsr">Fonte citada, não verificada: '+E(d.src)+'</div>';
     else h+='<div class="crnt">Combinação não testada. Consulte o farmacêutico.</div>';
     h+='</div>';
   });
