@@ -641,6 +641,16 @@ a.algdrug{color:#0f5f6c;font-weight:600;border-bottom:1px dotted #0f5f6c;cursor:
 .home-alg b{font-size:15px;display:block}
 .home-alg span{font-size:12.5px;color:#cfdadd}
 .home-alg .darr{margin-left:auto;color:#e8d6ac}
+
+.alg-tw{margin-top:14px}
+.alg-tw h4{font-family:'Newsreader',Georgia,serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:6px}
+.alg-ts{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+.alg-ts table{border-collapse:collapse;width:100%;font-size:12.5px;line-height:1.4}
+.alg-ts th{background:#0f2f3a;color:#fff;text-align:left;font-weight:600;padding:7px 9px;white-space:nowrap}
+.alg-ts td{padding:7px 9px;border-top:1px solid var(--line2);vertical-align:top}
+.alg-ts tr:nth-child(even) td{background:#f7f8f4}
+.alg-tn{font-size:11.5px;color:var(--muted);margin-top:5px;line-height:1.45}
+.alg-lab{overflow-wrap:anywhere;hyphens:auto}
 </style>
 </head>
 <body>
@@ -1222,6 +1232,14 @@ function showAlg(id){
       h+='<div class="alg-side">';
       a.side.forEach(function(s2){h+='<div class="alg-sec"><h4>'+aFmt(s2.t)+'</h4>'+aList(s2.items)+'</div>'});
       h+='</div>';
+    }
+    if(a.tables){
+      a.tables.forEach(function(tb){
+        h+='<div class="alg-tw"><h4>'+E(tb.t)+'</h4><div class="alg-ts"><table><thead><tr>'
+          +tb.head.map(function(x){return '<th>'+E(x)+'</th>'}).join('')+'</tr></thead><tbody>'
+          +tb.rows.map(function(r){return '<tr>'+r.map(function(c){return '<td>'+E(c)+'</td>'}).join('')+'</tr>'}).join('')
+          +'</tbody></table></div>'+(tb.note?'<div class="alg-tn">'+E(tb.note)+'</div>':'')+'</div>';
+      });
     }
     if(a.notes) h+='<div class="alg-notes">'+a.notes.map(E).join('<br>')+'</div>';
   }

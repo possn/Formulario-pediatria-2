@@ -147,7 +147,7 @@ var SOURCES = {
     },
     {
       id: "uciep_hff_algoritmos",
-      title: "Algoritmos UCIEP: Hipertensão Intracraniana, Mal Convulsivo, Sepsis Grave, Fármacos de emergência e desfibrilhação",
+      title: "Protocolos UCIEP/HFF: Hipertensão Intracraniana, Mal Convulsivo, Sepsis Grave, Fármacos de emergência e desfibrilhação; PT.0208 Anafilaxia; PT.0210 Mal Asmático; PT.0216 e DA.0448 Pacemaker transcutâneo; PT.0534 Óxido nítrico; PT.0461 HDFVVC; DA.0618 Anticoagulação com citrato; PT.0583 BIS; DA.0619 e DA.0620 (Patologia Clínica)",
       publisher: "Departamento da Criança e do Jovem, Hospital Prof. Doutor Fernando Fonseca (ULS Amadora-Sintra)",
       note: "Protocolos internos do serviço, reproduzidos no separador Algoritmos."
     },
