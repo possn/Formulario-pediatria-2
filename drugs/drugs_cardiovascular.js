@@ -636,60 +636,6 @@ var DRUGS_CARDIOVASCULAR = [
     "source": "Monagle P. CHEST 2018; BNF for Children 2023-24"
   },
   {
-    "id": "amiodarona_iv",
-    "name": "Amiodarona EV",
-    "category": "cardiovascular",
-    "class": "Antiarrítmico classe III (inibidor canais K⁺, Na⁺, Ca²⁺ + beta-bloqueio)",
-    "brands": "Cordarone EV — ampolas 150 mg/3 ml (50 mg/ml)",
-    "indication": [
-      "Fibrilhação ventricular / taquicardia ventricular sem pulso — após 3º choque (PCR)",
-      "Taquicardia ventricular com pulso hemodinamicamente instável",
-      "Taquicardia juncional pós-operatória (JET) — após cirurgia cardíaca",
-      "Flutter/fibrilhação auricular com instabilidade hemodinâmica",
-      "TSVP refractária a adenosina"
-    ],
-    "dose": [
-      {
-        "ind": "PCR — FV/TV sem pulso",
-        "val": "5 mg/kg EV/IO rápido",
-        "max": "300 mg/dose",
-        "freq": "Após 3º choque; pode repetir após 5º choque",
-        "note": "Em PCR: administrar em bólus. Dose máxima acumulada 15 mg/kg/dia"
-      },
-      {
-        "ind": "TV / TSV com pulso",
-        "val": "5 mg/kg EV em 20–60 min",
-        "max": "300 mg/dose",
-        "freq": "1 dose; repetir se necessário até 15 mg/kg/dia",
-        "note": "Diluir em SG5% — nunca SF (precipita)"
-      },
-      {
-        "ind": "JET pós-operatória (perfusão contínua)",
-        "val": "5–15 μg/kg/min",
-        "max": "—",
-        "freq": "Perfusão contínua EV em SG5%",
-        "note": "Associar hipotermia moderada (35–36°C) e sedação para controlo JET"
-      }
-    ],
-    "prep": "EV: diluir EXCLUSIVAMENTE em SG5% — precipita em SF, LR e qualquer solução salina. Concentração periférico: ≤ 2 mg/ml; central: 6–18 mg/ml. ⚠️ Adsorve em PVC — usar tubagem de polietileno (PE) ou de polipropileno; evitar sets de PVC. Filtro em linha 0,22 μm recomendado. PCR: usar sem diluição para bólus rápido. Estabilidade: 24h protegido da luz.",
-    "ci": [
-      "Bloqueio AV 2º/3º grau sem pacemaker",
-      "Bradicardia sinusal grave",
-      "Disfunção tiroideia grave conhecida",
-      "Hipotiroidismo/hipertiroidismo não tratado"
-    ],
-    "alert": [
-      "⚠️ Hipotensão com administração rápida — infundir lentamente (excepção PCR)",
-      "⚠️ Prolonga QT — monitorizar QTc; risco de torsades de pointes (raro mas grave)",
-      "⚠️ Inúmeras interacções: aumenta níveis de digoxina, varfarina, fenitoína, ciclosporina",
-      "⚠️ Tirotoxicidade e hipotiroidismo em uso crónico (iodo orgânico na molécula)",
-      "Fototoxicidade, pneumonite, hepatotoxicidade — riscos em uso prolongado",
-      "Monitorizar TFH, função tiroideia e Rx tórax em uso > 1 semana"
-    ],
-    "source": "BNF for Children 2023-24; PALS Guidelines AHA 2020; Saul JP et al. JACC 2005",
-    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
-  },
-  {
     "id": "carvedilol",
     "name": "Carvedilol",
     "category": "cardiovascular",

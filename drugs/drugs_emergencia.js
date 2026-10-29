@@ -358,18 +358,18 @@ var DRUGS_EMERGENCIA = [
     ],
     "dose": [
       {
-        "ind": "Hipoglicemia sintomática grave — bólus",
-        "val": "2 ml/kg de Glucose 10% EV",
+        "ind": "Hipoglicemia grave em RN (EV)",
+        "val": "Bólus inicial 250 mg/kg (2,5 mL/kg de glucose 10%) em 5 min se sintomática grave (perda de consciência/convulsão); depois perfusão 500 mg/kg/h (glucose 10%)",
         "max": "—",
-        "freq": "Bólus; repetir controlo glicemia 15 min",
-        "note": "Equivalente a 0,2 g/kg glucose. Em RN/lactente: usar G10%; em criança maior: G10% ou G20% (0,5–1 ml/kg)"
+        "freq": "Bólus lento; depois perfusão contínua",
+        "note": "BNFC 2020-21, Glucose (p. 638); Shann: 2,5 mL/kg de glucose 10% EV lento, depois aumentar a manutenção em mg/kg/min."
       },
       {
-        "ind": "Hipoglicemia — manutenção após bólus",
-        "val": "Taxa de infusão de glucose (GIR) 4–8 mg/kg/min",
+        "ind": "Hipoglicemia na criança (EV)",
+        "val": "500 mg/kg (5 mL/kg de glucose 10%) em veia calibrosa; Shann: 2,5 mL/kg de glucose 10% EV lento (ou 0,5 mL/kg de glucose 50%)",
         "max": "—",
-        "freq": "Perfusão contínua; ajustar por glicemia capilar q1–2h",
-        "note": "Fórmula GIR: ml/h = GIR(mg/kg/min) × peso(kg) × 60 / [concentração glucose(mg/ml)]"
+        "freq": "Repetir controlo de glicemia após o bólus",
+        "note": "BNFC 2020-21 (p. 638): a glucose 10% é irritante — administrar em veia de grande calibre. As duas fontes divergem (250 vs 500 mg/kg): seguir o protocolo da unidade."
       }
     ],
     "prep": "EV: G10% — periférico ou central; administrar em 1–3 min (bólus de emergência). G20% — central preferida (periférico aceitável em emergência absoluta com vigilância rigorosa). G50% — CENTRAL OBRIGATÓRIO (risco de necrose tecidular grave se extravasamento). ⚠️ Verificar glicemia 15 min após bólus. Concentração máxima periférico: G10% (100 mg/ml). Fonte: BNF for Children 2023-24; PALS AHA 2020.",
@@ -384,7 +384,9 @@ var DRUGS_EMERGENCIA = [
       "Hipoglicemia recorrente após bólus sugere causa subjacente (hiperinsulinismo, insuf. supra-renal, erros metabólicos)",
       "Em RN: GIR 4–6 mg/kg/min habitual; hiperinsulinismo pode necessitar GIR > 15 mg/kg/min"
     ],
-    "source": "BNF for Children 2023-24; Thornton PS et al. Pediatrics 2015 (neonatal hypoglycemia)"
+    "source": "BNF for Children 2020-21, Glucose (p. 638); Shann F. Drug Doses",
+    "review": ["Removido o GIR 4–8 mg/kg/min e outras alegações sem fonte verificada. Shann (RN): ~4 mg/kg/min (6 g/kg/dia) como manutenção."]
+  
   },
 {
     "id": "adenosina",
@@ -453,25 +455,18 @@ var DRUGS_EMERGENCIA = [
     ],
     "dose": [
       {
-        "ind": "PCR — FV/TV sem pulso",
-        "val": "5 mg/kg EV/IO em bólus",
+        "ind": "FV / TV sem pulso refractária à desfibrilhação (RCP)",
+        "val": "5 mg/kg EV/IO em bólus, em ≥ 3 min (RN e criança)",
         "max": "300 mg/dose",
-        "freq": "Após 3º choque; pode repetir após 5º choque. Máx acumulado 15 mg/kg/dia",
-        "note": "Em PCR: administrar em bólus rápido"
+        "freq": "Dose única; repetições conforme algoritmo de SAV vigente",
+        "note": "BNFC 2020-21, Amiodarone hydrochloride (p. 83)."
       },
       {
-        "ind": "TV/TSV com pulso",
-        "val": "5 mg/kg EV em 20–60 min",
-        "max": "300 mg/dose",
-        "freq": "1 dose; repetir se necessário até 15 mg/kg/dia",
-        "note": "Diluir EXCLUSIVAMENTE em SG5% — precipita em SF"
-      },
-      {
-        "ind": "JET pós-operatória — perfusão contínua",
-        "val": "5–15 μg/kg/min",
-        "max": "—",
-        "freq": "Perfusão contínua EV em SG5%",
-        "note": "Associar hipotermia moderada (35–36°C) e sedação"
+        "ind": "Arritmias supraventriculares e ventriculares com pulso (hospital/especialista)",
+        "val": "Criança: inicial 5–10 mg/kg em 20 min–2 h; depois perfusão 300 mcg/kg/h (5 mcg/kg/min), podendo subir até 1,5 mg/kg/h; RN: 5 mg/kg em 30 min, depois 5 mg/kg cada 12–24 h",
+        "max": "1,2 g/dia",
+        "freq": "Perfusão contínua ajustada à resposta",
+        "note": "BNFC 2020-21 (p. 83). 1,5 mg/kg/h = 25 mcg/kg/min."
       }
     ],
     "prep": "EV: diluir EXCLUSIVAMENTE em SG5% (precipita em SF). Concentração: ≤ 2 mg/ml periférico (acima disto, EV central); até 6 mg/ml em carga central e 18 mg/ml em perfusão contínua central. Linha dedicada; adsorve em PVC — usar polietileno ou vidro.",
@@ -487,8 +482,9 @@ var DRUGS_EMERGENCIA = [
       "⚠️ Tirotoxicidade e hipotiroidismo em uso crónico — monitorizar função tiroideia",
       "Diluir SEMPRE em SG5%, nunca em SF"
     ],
-    "source": "BNF for Children 2023-24; PALS AHA 2020; ERC Guidelines 2021; Saul JP et al. JACC 2005",
-    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
+    "source": "BNF for Children 2020-21, Amiodarone hydrochloride (p. 83)",
+    "review": ["Removidas da ficha as alegações sem fonte verificável (JET pós-operatória 5–15 mcg/kg/min; máximo cumulativo de 15 mg/kg/dia). Dose em PCR: confirmar no algoritmo ERC/AHA vigente. Via oral: ver ficha \"Amiodarona Oral\"."]
+  
   },
   {
     "id": "lidocaina_pcr",

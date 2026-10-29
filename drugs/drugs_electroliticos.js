@@ -74,18 +74,18 @@ var DRUGS_ELECTROLITICOS = [
     ],
     "dose": [
       {
-        "ind": "Hipoglicemia sintomática — EV bólus",
-        "val": "200 mg/kg (= 2 ml/kg de SG10%)",
-        "max": "5 g/dose",
-        "freq": "bólus EV; repetir se necessário",
-        "note": "Glicemia alvo ≥ 45 mg/dL (RN) / ≥ 60 mg/dL (criança). Seguir de perfusão GIR 6–8 mg/kg/min"
+        "ind": "Hipoglicemia grave em RN (EV)",
+        "val": "Bólus inicial 250 mg/kg (2,5 mL/kg de glucose 10%) em 5 min se sintomática grave (perda de consciência/convulsão); depois perfusão 500 mg/kg/h (glucose 10%)",
+        "max": "—",
+        "freq": "Bólus lento; depois perfusão contínua",
+        "note": "BNFC 2020-21, Glucose (p. 638); Shann: 2,5 mL/kg de glucose 10% EV lento, depois aumentar a manutenção em mg/kg/min."
       },
       {
-        "ind": "Manutenção (GIR)",
-        "val": "RN: 4–8 mg/kg/min; Lactente: 3–5 mg/kg/min; Criança: 2–3 mg/kg/min",
+        "ind": "Hipoglicemia na criança (EV)",
+        "val": "500 mg/kg (5 mL/kg de glucose 10%) em veia calibrosa; Shann: 2,5 mL/kg de glucose 10% EV lento (ou 0,5 mL/kg de glucose 50%)",
         "max": "—",
-        "freq": "perfusão contínua",
-        "note": "GIR (mg/kg/min) = [% glicose × 10 × velocidade (ml/hora)] / (60 × Peso kg)"
+        "freq": "Repetir controlo de glicemia após o bólus",
+        "note": "BNFC 2020-21 (p. 638): a glucose 10% é irritante — administrar em veia de grande calibre. As duas fontes divergem (250 vs 500 mg/kg): seguir o protocolo da unidade."
       }
     ],
     "prep": "SG10%: padrão para RN. SG50%: diluir sempre — NUNCA EV periférico. Concentração máx. EV periférico: 12,5%.",
@@ -99,7 +99,9 @@ var DRUGS_ELECTROLITICOS = [
       "⚠️ Hipocaliemia por insulina endógena (grandes volumes)",
       "⚠️ No TCE: evitar hipoglicemia E hiperglicemia (ambas pioram outcome)"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "BNF for Children 2020-21, Glucose (p. 638); Shann F. Drug Doses",
+    "review": ["Mantidos apenas os esquemas de hipoglicemia suportados pelo BNFC e pelo Shann. As taxas de infusão de manutenção por idade (RN 4–8, lactente 3–5, criança 2–3 mg/kg/min) não têm fonte verificada neste conjunto de documentos; Shann refere ~4 mg/kg/min (6 g/kg/dia) no RN."]
+  
   },
   {
     "id": "albumina",
@@ -487,18 +489,25 @@ var DRUGS_ELECTROLITICOS = [
     ],
     "dose": [
       {
-        "ind": "Escorbuto",
-        "val": "100–300 mg/dia EV/PO",
+        "ind": "Escorbuto (PO)",
+        "val": "1 mês–3 anos: 125–250 mg/dia em 1–2 doses; 4–11 anos: 250–500 mg/dia em 1–2 doses; 12–17 anos: 0,5–1 g/dia em 1–2 doses",
         "max": "—",
-        "freq": "Dividido em 3 doses × 1–3 semanas",
-        "note": "Depois manter 30–50 mg/dia por via oral"
+        "freq": "1–2×/dia",
+        "note": "BNFC 2020-21, Ascorbic acid (p. 680). Shann: 100 mg 8/8 h PO durante 10 dias."
       },
       {
-        "ind": "Queimaduras extensas (protocolo)",
-        "val": "66 mg/kg/h EV nas primeiras 24h",
+        "ind": "Doenças metabólicas (tirosinemia tipo III, tirosinemia transitória do RN, etc.)",
+        "val": "RN: 50–200 mg/dia; criança: 200–400 mg/dia em 1–2 doses (até 1 g/dia)",
+        "max": "1 g/dia",
+        "freq": "1–2×/dia",
+        "note": "BNFC 2020-21 (p. 680)."
+      },
+      {
+        "ind": "Queimaduras",
+        "val": "200–500 mg/dia EV, IM, SC ou PO",
         "max": "—",
-        "freq": "Perfusão contínua 24h",
-        "note": "Reduz necessidades de fluidos ~30% e edema de reperfusão (Tanaka et al. 2000) — protocolo não universal"
+        "freq": "1×/dia",
+        "note": "Shann, Drug Doses (entrada Ascorbic acid)."
       }
     ],
     "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 100 mg/ml. Administrar em 30–60 min. ⚠️ Proteger da luz (degradação fotolítica rápida — envolver em alumínio se infusão prolongada). Incompatível com bicarbonato, riboflavina, cobre na mesma linha. Estabilidade: 6h após diluição.",
@@ -509,7 +518,9 @@ var DRUGS_ELECTROLITICOS = [
       "Interferência com glicómetros de glucose (falsos positivos/negativos)",
       "Uso em NP: incluir nas vitaminas multi-dose diárias"
     ],
-    "source": "BNF for Children 2023-24; Fowler AA et al. JAMA 2019 (CITRIS-ALI); Tanaka H et al. Arch Surg 2000"
+    "source": "BNF for Children 2020-21, Ascorbic acid (p. 680); Shann F. Drug Doses",
+    "review": ["Removida a dose de 66 mg/kg/h nas primeiras 24 h em grandes queimados (protocolo de adultos) e a dose EV para sépsis: não constam das fontes disponíveis."]
+  
   },
   {
     "id": "selenio_ev",

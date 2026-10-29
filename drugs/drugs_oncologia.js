@@ -267,7 +267,9 @@ var DRUGS_ONCOLOGIA = [
       "Não usar em simultâneo com alopurinol (sem benefício adicional)",
       "Custo elevado — reservar para SLT estabelecido ou risco muito alto; alopurinol para risco intermédio"
     ],
-    "source": "BNF for Children 2023-24; Cairo MS et al. Br J Haematol 2010; SIOP/COG TLS Guidelines 2017"
+    "source": "BNF for Children 2020-21, Rasburicase (p. 601)",
+    "review": ["BNFC 2020-21: criança — \"consultar protocolo local\". A dose de 0,2 mg/kg/dia durante 5–7 dias não tem fonte verificada neste conjunto de documentos; confirmar no RCM / protocolo de Hemato-Oncologia."]
+
   },
   {
     "id": "mesna_protetor",
@@ -305,7 +307,9 @@ var DRUGS_ONCOLOGIA = [
       "Reacções anafilactoides raras mas descritas",
       "Falso positivo de corpos cetónicos na urina com alguns testes (interferência química)"
     ],
-    "source": "BNF for Children 2023-24; Hensley ML et al. JCO 2008; COG/SIOP ifosfamide protocols"
+    "source": "BNF for Children 2020-21, Mesna (p. 599); Shann F. Drug Doses",
+    "review": ["Shann: mesna IV 20% da dose de ciclofosfamida ou ifosfamida às 0, 4 e 6 h (total 60%); oral 40% da dose do citotóxico às -2, 2 e 6 h. BNFC 2020-21: \"consultar protocolo local\". O esquema de 80–160% para ciclofosfamida em doses altas não tem fonte verificada neste conjunto de documentos."]
+
   },
   {
     "id": "acido_folico_onco",
