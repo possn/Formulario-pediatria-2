@@ -353,18 +353,18 @@ var DRUGS_EMERGENCIA = [
     ],
     "dose": [
       {
-        "ind": "TSV — 1.ª dose (referência PALS)",
-        "val": "0,1 mg/kg EV/IO rápido, seguido de flush de SF",
+        "ind": "TSV — 1.ª dose",
+        "val": "0,1 mg/kg EV/IO rápido, seguido de flush EV",
         "max": "6 mg",
-        "freq": "Dose única; se sem resposta, passar à 2.ª dose",
-        "note": "AHA PALS. Bólus muito rápido (< 2 s) em acesso proximal, com torneira de 3 vias e flush imediato."
+        "freq": "Dose única; se sem resposta, passar à dose repetida",
+        "note": "AHA/AAP 2025, Pediatric Tachyarrhythmia With a Pulse Algorithm. Bólus rápido em acesso proximal com flush imediato."
       },
       {
-        "ind": "TSV — 2.ª dose e seguintes (referência PALS)",
-        "val": "0,2 mg/kg EV/IO rápido, seguido de flush de SF",
+        "ind": "TSV — dose repetida",
+        "val": "0,2 mg/kg EV/IO rápido, seguido de flush EV",
         "max": "12 mg",
-        "freq": "Se sem resposta à dose anterior",
-        "note": "AHA PALS."
+        "freq": "Se sem resposta à 1.ª dose",
+        "note": "AHA/AAP 2025 (mesmo algoritmo). Dose máxima: 12 mg."
       },
       {
         "ind": "TSV — esquema alternativo BNFC, RN",
@@ -409,9 +409,7 @@ var DRUGS_EMERGENCIA = [
       "Monitorização ECG contínua e registo de ritmo durante administração",
       "Inactivada pela teofilina e cafeína — pode necessitar dose mais alta em prematuros com cafeína"
     ],
-    "source": "AHA PALS (0,1 → 0,2 mg/kg; máx. 6 → 12 mg); BNFC 2020-21, Adenosine (p. 84)",
-    "review": ["Esquema PALS (0,1 → 0,2 mg/kg) reposto por indicação do utilizador; o BNFC 2020-21 usa escalada por passos de 50–100 mcg/kg (ver linhas alternativas). Confirmar no algoritmo AHA PALS vigente."]
-  
+    "source": "AHA/AAP 2025, Pediatric Tachyarrhythmia With a Pulse Algorithm (adenosina 0,1 mg/kg, máx. 6 mg; repetir 0,2 mg/kg, máx. 12 mg); BNFC 2020-21, Adenosine (p. 84)"
   },
   {
     "id": "amiodarona",
