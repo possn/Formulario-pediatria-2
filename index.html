@@ -10,6 +10,7 @@
 <meta name="color-scheme" content="light only">
 <title>UCIP Pediatria — Formulário</title>
 <link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <!-- Drug databases — modular files -->
@@ -651,13 +652,15 @@ a.algdrug{color:#0f5f6c;font-weight:600;border-bottom:1px dotted #0f5f6c;cursor:
 .alg-ts tr:nth-child(even) td{background:#f7f8f4}
 .alg-tn{font-size:11.5px;color:var(--muted);margin-top:5px;line-height:1.45}
 .alg-lab{overflow-wrap:anywhere;hyphens:auto}
+.logo{padding:0;overflow:hidden;border:1px solid rgba(232,214,172,.55);box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.logo img{display:block;width:100%;height:100%;transform:scale(1.32)}
 </style>
 </head>
 <body>
 <div id="app">
   <header id="topbar">
     <div class="tb1">
-      <div class="logo">UCIP</div>
+      <div class="logo"><img src="logo.svg" alt="UCIP Pediatria" width="42" height="42"></div>
       <div class="aname">
         <h1>UCIP Pediatria</h1>
         <p id="cnt">Formulário farmacológico</p>
@@ -857,7 +860,7 @@ function qd(id){var i=DRUGS.findIndex(function(d){return d.id===id});if(i>=0){pr
 function nMono(n){return '<b>'+n+'</b>'+(n===1?'monografia':'monografias')}
 function buildHome(){
   var h='<div class="home-intro"><h2>Áreas terapêuticas</h2><p>Escolha uma área, ou pesquise acima em todas as monografias.</p></div><div class="cards">';
-  h+='<div class="home-alg" onclick="goTab(\'alg\')"><div class="ag">'+glyph(0,22)+'</div><div><b>Algoritmos</b><span>PCR, bradicardia, taquiarritmia, mal convulsivo, sépsis, HTIC</span></div><span class="darr">'+IC_RIGHT+'</span></div>';
+  h+='<div class="home-alg" onclick="goTab(\'alg\')"><div class="ag">'+glyph(0,22)+'</div><div><b>Algoritmos</b><span>Reanimação, protocolos e técnicas da UCIEP</span></div><span class="darr">'+IC_RIGHT+'</span></div>';
 
   SECS.forEach(function(s,i){
     var drugs=secDrugs(s);

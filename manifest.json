@@ -4,8 +4,8 @@
   "description": "Formulário farmacológico pediátrico para UCI",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#0f2b46",
-  "theme_color": "#0f2b46",
+  "background_color": "#0f2f3a",
+  "theme_color": "#0f2f3a",
   "lang": "pt",
   "icons": [
     {"src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png"},

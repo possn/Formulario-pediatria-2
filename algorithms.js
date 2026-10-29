@@ -399,7 +399,7 @@ ALGS.push(
     'Corrigir a desidratação; aporte hídrico 80–100% das necessidades basais',
     'Vigiar hipocaliemia associada ao salbutamol']},
   {lab:'3',tone:'act',title:'Intervenção farmacológica — Tabela 1',items:[
-    '{{salbutamol|Salbutamol}} nebulizado (5 mg/mL): **0,03 mL/kg** (mín. 0,5 mL; máx. 1 mL). Inalado (DPI/MDI em câmara expansora, 100 mcg/dose): **0,5 puff/kg/dose** (máx. < 25 kg: 5 puff; > 25 kg: 10 puff). Pode repetir cada 20 min e depois espaçar 1–2 h',
+    '{{salbutamol|Salbutamol}} nebulizado (5 mg/mL): **0,03 mL/kg** (mín. 0,3 mL; máx. 1 mL). Inalado (DPI/MDI em câmara expansora, 100 mcg/dose): **0,5 puff/kg/dose** (máx. < 25 kg: 5 puff; > 25 kg: 10 puff). Pode repetir cada 20 min e depois espaçar 1–2 h',
     '{{ipratropio|Brometo de ipratrópio}} nebulizado (250 mcg/2 mL) ou inalado (20 mcg/dose): < 1 ano 125 mcg; 1–5 anos ou < 20 kg 250 mcg; > 5 anos ou > 20 kg 500 mcg. Cada 6 h, preferir junto com salbutamol; retirar se não houver resposta após 2–3 doses',
     '**Corticoide sistémico:** {{prednisolona|prednisolona}} PO, inicial 1–2 mg/kg (máx. 60 mg), manutenção 1–2 mg/kg/dia em 2–3 tomas (máx. 60 mg/dia). Metilprednisolona EV, inicial 2 mg/kg (máx. 60 mg), manutenção 2–4 mg/kg/dia em 4 tomas (máx. 60–80 mg/dia). Ciclos ≤ 5–7 dias; se > 7 dias, retirada lenta']},
   {lab:'4',tone:'crit',title:'Escalada — Tabela 2',items:[
@@ -496,13 +496,13 @@ ALGS.push(
   {lab:'Vigiar',tone:'crit',title:'Monitorização e toxicidade',items:[
     'Dose administrada: alarme a ± 2 ppm da prescrita',
     '**NO₂ < 0,5 ppm** (alarme > 0,5 ppm: inspeccionar o sistema, recalibrar, reduzir iNO/FiO₂ se possível). **NO₂ > 1 ppm: reduzir o iNO**',
-    '**Metahemoglobina < 5%**, de 24 em 24 h. Se > 5%, reduzir o iNO. Tratamento: reduzir iNO, FiO₂ 100%, azul de metileno 0,1–0,2 mL/kg da solução a 1% (equivale a 1–2 mg/kg)',
+    '**Metahemoglobina < 5%**, de 24 em 24 h. Se > 5%, reduzir o iNO. Tratamento: reduzir iNO, FiO₂ 100%, azul de metileno 1–2 mg/kg/dose (0,1–0,2 mL/kg da solução a 1%)',
     'Outros: inibição da agregação plaquetária; lesão pulmonar por NO₂; disfunção das cavidades esquerdas (↑ retorno venoso pode não ser tolerado)',
     'Aspirar secreções com sistema fechado e válvula unidirecional, para evitar despressurização. Calibrar os sensores de gás de 24 em 24 h']}
  ],
  notes:[
   'Montagem do aparelho (SoKINOX), sistema de emergência com ambu e Minikinox: seguir o guia no ecrã e o protocolo PT.0534 (pontos 5.5 a 5.8).',
-  'O protocolo escreve o azul de metileno como «1–2 mEq/kg»; a equivalência 0,1–0,2 mL/kg de solução a 1% corresponde a 1–2 mg/kg.']},
+  'Azul de metileno: 1–2 mg/kg/dose (o PDF original escreve mEq/kg por lapso).']},
 
 {id:'hdfvvc',grp:'proc',ico:2,tone:'act',
  title:'Hemodiafiltração contínua (HDFVVC)',
