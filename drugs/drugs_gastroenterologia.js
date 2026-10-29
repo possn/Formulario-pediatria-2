@@ -219,39 +219,32 @@ var DRUGS_GASTROENTEROLOGIA = [
     ],
     "dose": [
       {
-        "ind": "Colite ulcerosa activa oral",
-        "val": "30–50 mg/kg/dia",
-        "max": "4 g/dia",
-        "freq": "2–3 doses/dia",
-        "note": ""
-      },
-      {
-        "ind": "Manutenção oral",
-        "val": "15–30 mg/kg/dia",
-        "max": "2 g/dia",
-        "freq": "1–2 doses/dia",
-        "note": ""
-      },
-      {
-        "ind": "Doença distal — retal",
-        "val": "1 g supositório ou 1–4 g enema",
+        "ind": "Colite ulcerosa — surto ligeiro a moderado, oral (Pentasa), 5–17 anos",
+        "val": "< 40 kg: 10–20 mg/kg 3×/dia; ≥ 40 kg: 1–2 g 2×/dia (ou dose diária em 3–4 tomas)",
         "max": "—",
-        "freq": "1×/dia ao deitar",
-        "note": ""
+        "freq": "2–3×/dia",
+        "note": "BNFC 2020-21 (p. 34). A dose varia com a preparação (Asacol, Octasa, Pentasa): consultar o RCM."
       },
       {
-        "ind": "Colite ulcerosa — indução",
-        "val": "30–50 mg/kg/dia PO",
+        "ind": "Colite ulcerosa — surto, oral (Octasa), 6–17 anos ≥ 40 kg",
+        "val": "2,4–4 g/dia em doses divididas",
         "max": "4 g/dia",
-        "freq": "2–3 doses/dia (LP) ou 1 dose/dia (Pentasa granulado)",
-        "note": "Dose de manutenção: 15–30 mg/kg/dia"
+        "freq": "Doses divididas",
+        "note": "BNFC 2020-21 (p. 34)."
       },
       {
-        "ind": "Proctite — rectal",
-        "val": "Supositório 500 mg–1 g rectal",
-        "max": "1 g/dia",
-        "freq": "1 dose/noite",
-        "note": "Combinação oral + rectal superior a cada um isolado"
+        "ind": "Colite ulcerosa — manutenção, oral (Pentasa), 5–17 anos",
+        "val": "< 40 kg: 7,5–15 mg/kg 2×/dia (ou 3 tomas); ≥ 40 kg: 2 g 1×/dia",
+        "max": "2 g/dia",
+        "freq": "1–2×/dia",
+        "note": "BNFC 2020-21 (p. 34). Octasa ≥ 40 kg: 1,2–2 g/dia."
+      },
+      {
+        "ind": "Colite ulcerosa — retal, 12–17 anos",
+        "val": "Pentasa enema de retenção 1 g ao deitar; supositório 1 g/dia durante 2–4 semanas (manutenção 1 g/dia); espuma Asacol 1–2 g/dia durante 4–6 semanas; supositório Asacol 250–500 mg 3×/dia",
+        "max": "—",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 34)."
       }
     ],
     "prep": "Oral: comprimidos de libertação prolongada (Pentasa, Asacol) — engolir INTEIROS, nunca triturar (revestimento gastroresistente é crítico). Granulados: misturar em água ou sumo, ingerir imediatamente. Rectal: supositórios — inserir com ponta lubrificada após dejecção; enema 1 g/100 ml — reter 30 min. Fonte: BNF for Children 2023-24; SmPC Pentasa.",
@@ -270,7 +263,9 @@ var DRUGS_GASTROENTEROLOGIA = [
       "Hepatotoxicidade rara — monitorizar TFH",
       "Síndrome de hipersensibilidade aguda (piora paradoxal dos sintomas — raro)"
     ],
-    "source": "BNF for Children 2023-24; ECCO/ESPGHAN Guidelines 2023; BNF for Children 2023-24; ECCO-ESPGHAN Paediatric IBD Guidelines 2018; Turner D et al. J Pediatr Gastroenterol Nutr 2012"
+    "source": "BNFC 2020-21, Mesalazine (p. 34); ECCO-ESPGHAN Paediatric UC Guidelines 2018",
+    "review": ["A ficha anterior usava 30–50 mg/kg/dia (máx. 4 g/dia) como dose única; o BNFC 2020-21 indica doses por preparação (Pentasa < 40 kg: 10–20 mg/kg 3×/dia = 30–60 mg/kg/dia)."]
+  
   },
   {
     "id": "ranitidina_alt",
@@ -286,18 +281,32 @@ var DRUGS_GASTROENTEROLOGIA = [
     ],
     "dose": [
       {
-        "ind": "DRGE / esofagite — oral",
-        "val": "0,5 mg/kg/dose PO",
-        "max": "20 mg/dose",
-        "freq": "q12h",
-        "note": "Alternativa a IBP em lactentes < 1 ano quando IBP não disponível ou contra-indicado"
+        "ind": "Úlcera gástrica/duodenal, esofagite de refluxo — oral, RN",
+        "val": "2 mg/kg 3×/dia (absorção oral não fiável)",
+        "max": "3 mg/kg/dose",
+        "freq": "3×/dia",
+        "note": "BNFC 2020-21 (p. 59)."
       },
       {
-        "ind": "EV",
-        "val": "0,25–0,5 mg/kg/dose EV",
-        "max": "20 mg/dose",
-        "freq": "q8–12h",
-        "note": ""
+        "ind": "Úlcera, esofagite de refluxo — oral, 1–5 meses",
+        "val": "1 mg/kg 3×/dia",
+        "max": "3 mg/kg/dose",
+        "freq": "3×/dia",
+        "note": "BNFC 2020-21 (p. 59)."
+      },
+      {
+        "ind": "Úlcera, esofagite de refluxo — oral, 6 meses–11 anos",
+        "val": "2–4 mg/kg 2×/dia; esofagite grave até 5 mg/kg 2×/dia (3–11 anos)",
+        "max": "150 mg/dose (300 mg na esofagite grave)",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 59). 12–17 anos: 150 mg 2×/dia ou 300 mg ao deitar."
+      },
+      {
+        "ind": "Profilaxia de úlcera de stress — EV lento",
+        "val": "RN: 0,5–1 mg/kg cada 6–8 h; 1 mês–11 anos: 1 mg/kg cada 6–8 h; 12–17 anos: 50 mg cada 8 h",
+        "max": "50 mg/dose (1 mês–11 anos)",
+        "freq": "Cada 6–8 h",
+        "note": "BNFC 2020-21 (p. 59). Pode ser dada em perfusão intermitente a 25 mg/h; 12–17 anos: passar a 150 mg 2×/dia oral."
       }
     ],
     "prep": "EV (famotidina — ranitidina retirada do mercado): diluir em SF até 2 mg/ml (concentração máxima 4 mg/ml). Administrar em 15–30 min. Bólus lento aceitável: 2 mg/ml em 2 min se necessário. Oral: comprimidos 20/40 mg; solução extemporânea 8 mg/ml. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -310,7 +319,9 @@ var DRUGS_GASTROENTEROLOGIA = [
       "Ranitidina retirada do mercado (NDMA contaminação) — famotidina é alternativa de classe",
       "Ajuste em IR: TFG < 50 ml/min reduzir dose 50% ou aumentar intervalo"
     ],
-    "source": "BNF for Children 2023-24; van der Pol R et al. Arch Dis Child 2011"
+    "source": "BNFC 2020-21, Ranitidine (p. 59); van der Pol R et al. Arch Dis Child 2011",
+    "review": ["A ranitidina foi retirada do mercado em muitos países em 2019–2020 (contaminação por NDMA); confirmar disponibilidade em Portugal.", "A ficha anterior usava 0,5 mg/kg q12h oral e 0,25–0,5 mg/kg EV, abaixo das doses do BNFC 2020-21."]
+  
   },
   {
     "id": "domperidona",
@@ -460,7 +471,9 @@ var DRUGS_GASTROENTEROLOGIA = [
       "Interacções sistémicas mínimas pela baixa absorção",
       "Resistência documentada com uso prolongado — não usar cronicamente sem indicação"
     ],
-    "source": "Shann Drug Doses (Rifaximin: 7,5–10 mg/kg 8H, acção GI); Bass NM et al. NEJM 2010 (encefalopatia hepática); Pimentel M et al. Ann Intern Med 2011"
+    "source": "Shann F. Drug Doses (rifaximina 7,5–10 mg/kg 8/8 h); Bass NM et al. NEJM 2010; Pimentel M et al.",
+    "review": ["A rifaximina não consta do BNFC 2020-21. As doses em mg fixos (200 mg 8/8 h; 550 mg 12/12 h) são de adultos; o Shann refere 7,5–10 mg/kg 8/8 h com ação intestinal. Confirmar com a Gastroenterologia."]
+
   },
 {
     "id": "lactulose",
