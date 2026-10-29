@@ -55,11 +55,25 @@ var DRUGS_ONCOLOGIA = [
     ],
     "dose": [
       {
-        "ind": "Quimioterapia EV/oral",
-        "val": "20–40 mcg/kg/dose EV",
-        "max": "3 mg/dose",
-        "freq": "30 min antes QT; pode repetir cada 12h",
-        "note": "Oral: 1 mg × 2/dia (adulto)"
+        "ind": "Náuseas/vómitos por QT/RT — dose inicial EV (6 meses–17 anos)",
+        "val": "150 mcg/kg EV imediatamente antes da QT (alternativa: 5 mg/m² se SC < 1,3 m²; 8 mg se SC ≥ 1,3 m²)",
+        "max": "8 mg/dose",
+        "freq": "Repetir 150 mcg/kg cada 4 h × 2 doses; depois passar a oral. Máx. 32 mg/dia",
+        "note": "BNFC 2020-21 (p. 281). Perfusão em ≥ 15 min. Shann: 0,15 mg/kg (máx. 16 mg) cada 4 h × 3 EV."
+      },
+      {
+        "ind": "Seguimento oral — por SC",
+        "val": "SC < 0,6 m²: 2 mg; 0,6–1,2 m²: 4 mg; ≥ 1,3 m²: 8 mg",
+        "max": "32 mg/dia",
+        "freq": "Cada 12 h até 5 dias (pode iniciar 12 h após a dose EV)",
+        "note": "BNFC 2020-21 (p. 281)."
+      },
+      {
+        "ind": "Seguimento oral — por peso",
+        "val": "≤ 10 kg: 2 mg; 10,1–40 kg: 4 mg; ≥ 41 kg: 8 mg",
+        "max": "32 mg/dia",
+        "freq": "Cada 12 h até 5 dias",
+        "note": "BNFC 2020-21 (p. 281)."
       }
     ],
     "prep": "EV (Granisetrona, quando disponível): diluir em SF ou SG5% para concentração ≤ 1 mg/ml. Infusão 5 min. Oral: comprimidos. Nota: granisetrona = antiemético 5-HT3 de longa duração (t½ 9h vs ondansetron 4h) — 1 dose/dia suficiente. Fonte: BNF for Children 2023-24; MASCC 2023.",
@@ -71,7 +85,7 @@ var DRUGS_ONCOLOGIA = [
       "Cefaleias (frequentes — transitórias)",
       "Obstipação"
     ],
-    "source": "BNF for Children 2023-24; MASCC/ESMO Antiemetic Guidelines 2023"
+    "source": "BNFC 2020-21, Ondansetron (p. 281); Shann Drug Doses (Ondansetron)"
   },
   {
     "id": "alopurinol_onco",

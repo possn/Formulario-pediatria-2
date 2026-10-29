@@ -69,39 +69,25 @@ var DRUGS_GASTROENTEROLOGIA = [
     ],
     "dose": [
       {
-        "ind": "Pós-quimio / Pós-op EV",
-        "val": "0,1–0,15 mg/kg/dose EV",
-        "max": "8 mg/dose",
-        "freq": "cada 8h (3 doses/dia)",
-        "note": ""
+        "ind": "Prevenção/tratamento de náuseas e vómitos pós-operatórios — EV lento",
+        "val": "100 mcg/kg",
+        "max": "4 mg/dose",
+        "freq": "Dose única, ≥ 30 s",
+        "note": "BNFC 2020-21 (p. 281). Shann: profilaxia 0,15 mg/kg; tratamento 0,2 mg/kg."
       },
       {
-        "ind": "Gastroenterite oral (off-label)",
-        "val": "0,15 mg/kg/dose oral",
+        "ind": "Náuseas/vómitos por QT/RT — EV",
+        "val": "150 mcg/kg imediatamente antes da QT",
         "max": "8 mg/dose",
-        "freq": "dose única; pode repetir 1× após 8h",
-        "note": "Evidência sólida: reduz internamentos e necessidade EV"
+        "freq": "Repetir cada 4 h × 2 doses; máx. 32 mg/dia",
+        "note": "BNFC 2020-21 (p. 281); seguimento oral por peso/SC na ficha «Ondansetron (quimioterapia)»."
       },
       {
-        "ind": "Adulto",
-        "val": "4–8 mg",
+        "ind": "Oral (geral)",
+        "val": "0,1–0,2 mg/kg",
         "max": "8 mg/dose",
-        "freq": "3×/dia",
-        "note": ""
-      },
-      {
-        "ind": "NVPO / vómito agudo",
-        "val": "0,1–0,15 mg/kg EV",
-        "max": "4 mg/dose (< 40 kg); 8 mg/dose (≥ 40 kg)",
-        "freq": "q6–8h",
-        "note": "Dose oral equivalente: 0,15 mg/kg. ODT (comprimido orodispersível) disponível para criança"
-      },
-      {
-        "ind": "Quimioterapia altamente emetizante",
-        "val": "0,15 mg/kg EV em 15 min",
-        "max": "8 mg/dose",
-        "freq": "q4h × 3 doses antes e durante QT; depois q8h",
-        "note": "Associar dexametasona e aprepitant em QT altamente emetizante"
+        "freq": "Cada 6–12 h",
+        "note": "Shann. Uso em gastroenterite é fora de licença."
       }
     ],
     "prep": "EV: diluir em SF ou SG5% para 0,04–0,16 mg/ml. Administrar em 15 min. ⚠️ Incompatível com heparina (precipitação grave), furosemida, pip/tazo. Oral: comprimidos, ODT (orodispersível — colocar na língua sem água), solução 4 mg/5 ml.",
@@ -122,7 +108,7 @@ var DRUGS_GASTROENTEROLOGIA = [
       "Cefaleias — efeito adverso mais frequente",
       "Obstipação frequente em uso prolongado"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; BNF for Children 2023-24; Freedman SB et al. NEJM 2006 (gastroenteritis); MASCC Antiemetic Guidelines 2023"
+    "source": "BNFC 2020-21, Ondansetron (p. 281); Shann Drug Doses (Ondansetron); Freedman SB et al. NEJM 2006"
   },
   {
     "id": "metoclopramida",

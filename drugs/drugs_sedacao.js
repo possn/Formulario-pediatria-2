@@ -21,53 +21,46 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "Status epilepticus — EV bólus",
-        "val": "0,1–0,2 mg/kg",
-        "max": "10 mg/dose",
-        "freq": "pode repetir 1× após 5 min",
-        "note": ""
+        "ind": "Estado de mal epiléptico — bucal",
+        "val": "RN: 300 mcg/kg; 1–2 meses: 300 mcg/kg; 3–11 meses: 2,5 mg; 1–4 anos: 5 mg; 5–9 anos: 7,5 mg; 10–17 anos: 10 mg",
+        "max": "2,5 mg/dose (1–2 meses)",
+        "freq": "Repetir a mesma dose após 10 min se necessário",
+        "note": "BNFC 2020-21 (p. 239). Solução oromucosa; formulações não licenciadas podem ter doses diferentes."
       },
       {
-        "ind": "Status epilepticus — nasal/bucal",
-        "val": "0,3–0,5 mg/kg",
-        "max": "10 mg",
-        "freq": "dose única",
-        "note": "Nasal: metade da dose em cada narina. Bucal: Epistatus 10 mg/ml solução bucal"
+        "ind": "Estado de mal epiléptico — EV (bólus + perfusão)",
+        "val": "Bólus 150–200 mcg/kg; depois perfusão 0,06 mg/kg/hora, aumentando 0,06 mg/kg/hora cada 15 min",
+        "max": "300 mcg/kg/hora",
+        "freq": "Até controlo das crises",
+        "note": "BNFC 2020-21 (p. 239), RN e criança; uso fora de licença."
       },
       {
-        "ind": "Sedação UCIP — perfusão",
-        "val": "0,05–0,2 mg/kg/hora",
-        "max": "0,5 mg/kg/hora (convulsivo refractário)",
-        "freq": "contínua",
-        "note": "Tolerância rápida — reavaliar diariamente. Evitar > 7 dias (síndrome abstinência)"
+        "ind": "Sedação em UCI — bólus EV lento (6 meses–11 anos)",
+        "val": "50–200 mcg/kg em ≥ 3 min",
+        "max": "—",
+        "freq": "Dose inicial (pode ser dispensada); reduzir/omitir se hipovolémia, vasoconstrição ou hipotermia",
+        "note": "BNFC 2020-21 (p. 239). 12–17 anos: 30–300 mcg/kg em passos de 1–2,5 mg cada 2 min."
       },
       {
-        "ind": "Procedimentos / pré-medicação",
-        "val": "0,05–0,1 mg/kg EV; 0,3–0,5 mg/kg oral",
-        "max": "5 mg EV; 15 mg oral",
-        "freq": "dose única 15–30 min antes",
-        "note": ""
+        "ind": "Sedação em UCI — perfusão EV (6 meses–11 anos)",
+        "val": "0,03–0,12 mg/kg/hora",
+        "max": "0,12 mg/kg/hora",
+        "freq": "Contínua, ajustar à resposta",
+        "note": "BNFC 2020-21 (p. 239); menores se associado a opioide. 1–5 meses: 60 mcg/kg/h. 12–17 anos: 30–200 mcg/kg/h. Shann (ventilado): 1–4 mcg/kg/min (0,06–0,24 mg/kg/h)."
       },
       {
-        "ind": "Neonatal — Sedação — EV bólus",
-        "val": "0,05–0,1 mg/kg EV em 5 min",
-        "max": "0,1 mg/kg/dose",
-        "freq": "pode repetir cada 2–4h",
-        "note": "Prematuros: 0,02–0,05 mg/kg (metabolismo muito lento)"
+        "ind": "Sedação em UCI — RN (perfusão EV)",
+        "val": "0,06 mg/kg/hora (≥ 32 sem IGc); < 32 sem: 0,06 mg/kg/hora durante 24 h, depois 0,03 mg/kg/hora",
+        "max": "Duração máx. 4 dias",
+        "freq": "Contínua, ajustar à resposta",
+        "note": "BNFC 2020-21 (p. 239)."
       },
       {
-        "ind": "Neonatal — Sedação — perfusão EV",
-        "val": "0,01–0,06 mg/kg/hora",
-        "max": "0,1 mg/kg/hora",
-        "freq": "contínua",
-        "note": ""
-      },
-      {
-        "ind": "Neonatal — Convulsões refractárias — perfusão",
-        "val": "0,05–0,2 mg/kg/hora",
-        "max": "0,5 mg/kg/hora (SE refractário)",
-        "freq": "contínua",
-        "note": "Monitorização EEG se disponível"
+        "ind": "Sedação para procedimentos / pré-medicação — oral ou retal",
+        "val": "Oral: 500 mcg/kg; retal (6 meses–11 anos): 300–500 mcg/kg",
+        "max": "20 mg (oral)",
+        "freq": "Oral 30–60 min (sedação) ou 15–30 min (pré-medicação) antes; retal 15–30 min antes",
+        "note": "BNFC 2020-21 (p. 239). Shann: oral 0,5 mg/kg (máx. 20 mg); nasal 0,2 mg/kg."
       }
     ],
     "prep": "EV: diluir em SF ou SG5%. Perfusão UCIP: (0,3 × Peso kg) mg em 50 ml → 1 ml/h = 0,1 mg/kg/h. Concentração máxima periférico: 1 mg/ml. Concentração central: até 5 mg/ml. Bólus procedimento: 0,1 mg/kg em 2 min (diluir a 0,5–1 mg/ml). Bucal (Buccolam): aplicar entre gengiva e mucosa bocal — não engolir. Intranasal: atomizador MAD, 0,5 ml/narina. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -90,7 +83,9 @@ var DRUGS_SEDACAO = [
       "⚠️ Movimentos mioclónicos paradoxais (não são convulsões — efeito paradoxal)",
       "⚠️ Leucomalácia periventricular (dados controversos — cautela em prematuros)"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; ESICM Guidelines 2022; BNF for Children 2023-24; Jacqz-Aigrain E. Arch Dis Child 1990"
+    "source": "BNFC 2020-21, Midazolam (p. 239); Shann Drug Doses (Midazolam)",
+    "review": ["Doses nasais/bucais e perfusões acima de 0,12 mg/kg/h (anteriormente na ficha) removidas por excederem o BNFC 2020-21; confirmar protocolo local para sedação profunda/estado de mal refractário."]
+  
   },
   {
     "id": "morfina",
@@ -121,14 +116,14 @@ var DRUGS_SEDACAO = [
         "val": "0,01–0,04 mg/kg/hora",
         "max": "0,1 mg/kg/hora",
         "freq": "contínua",
-        "note": "Titular por scores de dor (FLACC, NRS, COMFORT-B). Associar analgesia não-opioide"
+        "note": "Titular por scores de dor (FLACC, NRS, COMFORT-B). Associar analgesia não-opioide Shann (ventilado): criança 20–80 mcg/kg/h."
       },
       {
         "ind": "PCA (> 5–6 anos)",
         "val": "Bólus 0,02 mg/kg; lockout 5–10 min; máx. 4 bólus/hora",
         "max": "—",
         "freq": "—",
-        "note": ""
+        "note": " Shann: bólus 20 mcg/kg, bloqueio 5 min, basal 5 mcg/kg/h."
       },
       {
         "ind": "Analgesia — EV bólus (RN termo)",
@@ -142,7 +137,7 @@ var DRUGS_SEDACAO = [
         "val": "5–20 mcg/kg/hora",
         "max": "30 mcg/kg/hora",
         "freq": "contínua; titular pelo score dor (NFCS, N-PASS)",
-        "note": ""
+        "note": " Shann (ventilado): RN 10–30 mcg/kg/h."
       },
       {
         "ind": "Neonatal — NAS — oral (tratamento)",
@@ -170,7 +165,7 @@ var DRUGS_SEDACAO = [
       "⚠️ Síndrome abstinência se uso prolongado > 5–7 dias — desmame obrigatório",
       "⚠️ NAS: não usar naloxona em RN de mãe dependente de opioides (convulsões)"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; Harriet Lane 23rd Ed; BNF for Children 2023-24; Kocherlakota P. Pediatrics 2014 (NAS); BNFC Neonatal Formulary 9th Ed"
+    "source": "Shann Drug Doses (Morphine); BNFC 2020-21 (monografia não localizada no texto extraído — doses por confirmar na versão impressa)"
   },
   {
     "id": "fentanil",
@@ -189,39 +184,32 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "Procedimentos / ISR — EV bólus",
+        "ind": "Analgesia em ventilação assistida — bólus EV",
+        "val": "RN e 1 mês–11 anos: inicial 1–5 mcg/kg; depois 1–3 mcg/kg se necessário",
+        "max": "—",
+        "freq": "EV em ≥ 30 s",
+        "note": "BNFC 2020-21 (p. 297). Respiração espontânea (1 mês–11 anos): 1–3 mcg/kg, depois 1 mcg/kg. Shann: 5–10 mcg/kg em ventilados."
+      },
+      {
+        "ind": "Analgesia/sedação em UCI — perfusão EV (criança)",
+        "val": "1–6 mcg/kg/hora",
+        "max": "6 mcg/kg/hora",
+        "freq": "Contínua, após bólus inicial 1–5 mcg/kg; ajustar à resposta",
+        "note": "BNFC 2020-21 (p. 297); perfusão não licenciada < 12 anos. Shann (ventilado): 5–10 mcg/kg/h — superior ao BNFC; usar com monitorização apertada."
+      },
+      {
+        "ind": "Analgesia em UCI — RN (perfusão EV)",
+        "val": "1,5 mcg/kg/hora",
+        "max": "—",
+        "freq": "Contínua, após bólus inicial 1–5 mcg/kg; ajustar à resposta",
+        "note": "BNFC 2020-21 (p. 297)."
+      },
+      {
+        "ind": "Doentes não ventilados — EV/IM",
         "val": "1–2 mcg/kg",
         "max": "50 mcg/dose (criança)",
-        "freq": "dose única ou a cada 30–60 min",
-        "note": "Onset 1–2 min, duração 30–60 min. Para ISR: 2–3 mcg/kg"
-      },
-      {
-        "ind": "Perfusão UCIP",
-        "val": "0,5–2 mcg/kg/hora",
-        "max": "4 mcg/kg/hora",
-        "freq": "contínua",
-        "note": "Sem libertação de histamina — preferir à morfina em broncoespasmo ou instabilidade HD"
-      },
-      {
-        "ind": "RN — pós-operatório / ventilação",
-        "val": "0,5–1 mcg/kg/hora",
-        "max": "2 mcg/kg/hora",
-        "freq": "contínua",
-        "note": "Monitorização rigorosa — rigidez torácica com bólus rápidos > 5 mcg/kg"
-      },
-      {
-        "ind": "Neonatal — Procedimentos — EV bólus",
-        "val": "1–4 mcg/kg EV lento",
-        "max": "4 mcg/kg/dose",
-        "freq": "dose única; onset 2–3 min, duração 30 min",
-        "note": "Para intubação electiva: 2–4 mcg/kg"
-      },
-      {
-        "ind": "Neonatal — Perfusão contínua EV",
-        "val": "0,5–2 mcg/kg/hora",
-        "max": "4 mcg/kg/hora",
-        "freq": "contínua",
-        "note": "Prematuros: iniciar 0,5 mcg/kg/hora (metabolismo mais lento)"
+        "freq": "Repetir conforme resposta",
+        "note": "Shann: perfusão 2–4 mcg/kg/h."
       }
     ],
     "prep": "EV bólus: administrar não diluído (50 μg/ml) ou diluir em SF para 10–25 μg/ml em 3–5 min. Perfusão UCIP: (Peso kg × 0,05) mg em 50 ml SG5% → 1 ml/h = 1 μg/kg/h. Concentração padrão 10 μg/ml. EV central preferido. Patch transdérmico: não usar em < 2 anos ou opioides-naive. Intranasal: 2 μg/kg de concentração 150 μg/ml (volume ≤ 0,3 ml/narina). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -240,7 +228,7 @@ var DRUGS_SEDACAO = [
       "⚠️ Síndrome abstinência com uso > 5–7 dias",
       "Preferido em HPPRN (menos histamina → melhor hemodinâmica)"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; GOSH Drug Formulary 2023; BNF for Children 2023-24; BNFC Neonatal Formulary 9th Ed"
+    "source": "BNFC 2020-21, Fentanyl (p. 297); Shann Drug Doses (Fentanyl)"
   },
   {
     "id": "ketamina",
