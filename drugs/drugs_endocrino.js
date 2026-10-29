@@ -66,39 +66,32 @@ var DRUGS_ENDOCRINO = [
     ],
     "dose": [
       {
-        "ind": "Diabetes insípida central — oral",
-        "val": "0,05–0,1 mg/dose oral",
-        "max": "1,2 mg/dia",
-        "freq": "2–3×/dia; titular pelo débito urinário e Na+",
-        "note": ""
+        "ind": "Diabetes insípida — via oral",
+        "val": "RN: 1–4 mcg 2–3×/dia; 1–23 meses: 10 mcg 2–3×/dia (usual 30–150 mcg/dia); 2–11 anos: 50 mcg 2–3×/dia (usual 100–800 mcg/dia); 12–17 anos: 100 mcg 2–3×/dia (usual 0,2–1,2 mg/dia)",
+        "max": "—",
+        "freq": "2–3×/dia, ajustar à resposta (volume urinário, natrémia)",
+        "note": "BNFC 2020-21, Desmopressin (p. 468). Sublingual 2–17 anos: inicial 60 mcg 3×/dia (usual 40–240 mcg 3×/dia)."
       },
       {
-        "ind": "Diabetes insípida central — nasal",
-        "val": "2,5–10 mcg/dose",
-        "max": "40 mcg/dia",
+        "ind": "Diabetes insípida — via intranasal",
+        "val": "RN: inicial 0,1–0,5 mcg; 1–23 meses: 2,5–5 mcg 1–2×/dia; 2–11 anos: 5–20 mcg 1–2×/dia; 12–17 anos: 10–20 mcg 1–2×/dia",
+        "max": "—",
         "freq": "1–2×/dia",
-        "note": ""
+        "note": "BNFC 2020-21 (p. 468)."
       },
       {
-        "ind": "Diabetes insípida central — EV",
-        "val": "0,01–0,03 mcg/kg/dose",
-        "max": "2 mcg",
-        "freq": "cada 12–24h",
-        "note": ""
-      },
-      {
-        "ind": "Enurese nocturna (≥ 5 anos)",
-        "val": "0,2 mg oral ao deitar",
-        "max": "0,4 mg",
+        "ind": "Diabetes insípida — IM/SC",
+        "val": "RN: inicial 0,1 mcg 1×/dia; 1 mês–11 anos: inicial 0,4 mcg 1×/dia; 12–17 anos: 1–4 mcg 1×/dia",
+        "max": "—",
         "freq": "1×/dia",
-        "note": "Restringir líquidos 1h antes e 8h depois"
+        "note": "BNFC 2020-21 (p. 468). Risco de hiponatrémia: controlar ingestão hídrica."
       },
       {
-        "ind": "von Willebrand / Hemofilia A — EV",
-        "val": "0,3 mcg/kg EV em 30 min",
-        "max": "20 mcg",
-        "freq": "dose única pré-procedimento",
-        "note": ""
+        "ind": "Enurese nocturna primária (≥5 anos)",
+        "val": "200 mcg PO ao deitar (até 400 mcg se ineficaz); ou 120 mcg sublingual (até 240 mcg)",
+        "max": "400 mcg PO",
+        "freq": "1×/dia ao deitar; limitar líquidos 1 h antes a 8 h depois",
+        "note": "BNFC 2020-21 (p. 468). Reavaliar aos 3 meses suspendendo ≥1 semana."
       }
     ],
     "prep": "EV: diluir em SF 50 ml. Administrar em 30 min. Oral: comprimido 0,1/0,2 mg — biodisponibilidade apenas 0,08–0,16% vs nasal/EV; doses orais muito mais altas que EV. Nasal: spray 10 μg/dose (cada compressão). ⚠️ Após administração: restringir ingestão de líquidos por 8h (risco hiponatremia).",
@@ -114,7 +107,9 @@ var DRUGS_ENDOCRINO = [
       "⚠️ Enurese: restringir líquidos 1h antes e 8h após — obrigatório",
       "Taquifilaxia com uso repetido (von Willebrand/hemofilia)"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "BNF for Children 2020-21, Desmopressin (p. 468)",
+    "review": ["Removidas as doses EV (0,01–0,03 mcg/kg) para diabetes insípida e (0,3 mcg/kg) para hemofilia A/doença de von Willebrand: o BNFC 2020-21 refere esse uso mas não dá dose pediátrica; sem fonte verificada neste conjunto de documentos."]
+  
   },
   {
     "id": "octreotido",
@@ -501,7 +496,9 @@ var DRUGS_ENDOCRINO = [
       "Rubor facial, cefaleia, náuseas — efeitos adversos comuns",
       "Poliúria de rebote se suspensão abrupta em DI crónica — reduzir progressivamente"
     ],
-    "source": "BNF for Children 2023-24; Sznajder M et al. Pediatrics 2007; ISTH von Willebrand Guidelines 2021"
+    "source": "BNF for Children 2020-21, Desmopressin (p. 468)",
+    "review": ["Ficha duplicada de Desmopressina: ver a ficha principal com doses do BNFC 2020-21 (p. 468). As doses EV (0,1–0,4 mcg/kg; 0,3 mcg/kg para hemostase) não têm fonte verificada neste conjunto de documentos."]
+
   },
 {
     "id": "glucagon",

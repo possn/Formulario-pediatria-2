@@ -249,7 +249,9 @@ var DRUGS_NEONATOLOGIA = [
       "⚠️ Hipercalcemia em sobredosagem crónica — monitorizar cálcio urinário e sérico",
       "Nível alvo 25-OH-D: 50–150 nmol/L"
     ],
-    "source": "BNF for Children 2023-24; ESPGHAN 2013; DGS Orientação 2021"
+    "source": "BNF for Children 2020-21, Vitamin D (p. 681); DGS",
+    "review": ["BNFC 2020-21: prevenção da deficiência de vitamina D — 400 unidades/dia. As doses para prematuros (800–1000 UI/dia) e para tratamento da deficiência não constam do BNFC nem dos restantes documentos disponíveis; confirmar no Manual de Neonatologia / orientação DGS."]
+
   },
   {
     "id": "inositol_neo",

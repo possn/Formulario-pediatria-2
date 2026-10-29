@@ -165,7 +165,6 @@ var DRUGS_GASTROENTEROLOGIA = [
     "id": "sucralfato",
     "name": "Sucralfato",
     "category": "gastro",
-    "src": "original",
     "class": "Protector gástrico — forma barreira sobre mucosa ulcerada",
     "brands": "Ulcogant susp. 1 g/5 ml; comp. 1 g",
     "indication": [
@@ -175,11 +174,18 @@ var DRUGS_GASTROENTEROLOGIA = [
     ],
     "dose": [
       {
-        "ind": "Oral",
-        "val": "40–80 mg/kg/dia oral",
-        "max": "4 g/dia",
-        "freq": "4×/dia (1h antes refeições e ao deitar)",
-        "note": "Tomar com estômago vazio"
+        "ind": "Úlcera gástrica ou duodenal benigna (PO)",
+        "val": "1 mês–1 ano: 250 mg 4–6×/dia; 2–11 anos: 500 mg 4–6×/dia; 12–14 anos: 1 g 4–6×/dia; 15–17 anos: 2 g 2×/dia ou 1 g 4×/dia durante 4–6 semanas (até 12 se resistente)",
+        "max": "8 g/dia",
+        "freq": "1 h antes das refeições e ao deitar",
+        "note": "BNFC 2020-21, Sucralfate (p. 58)."
+      },
+      {
+        "ind": "Profilaxia de úlcera de stress na UCI (PO)",
+        "val": "1 mês–1 ano: 250 mg 4–6×/dia; 2–11 anos: 500 mg 4–6×/dia; 12–14 anos: 1 g 4–6×/dia; 15–17 anos: 1 g 6×/dia",
+        "max": "8 g/dia",
+        "freq": "4–6×/dia",
+        "note": "BNFC 2020-21 (p. 58). A ficha anterior indicava 40–80 mg/kg/dia, esquema que o BNFC não usa."
       }
     ],
     "prep": "Oral: suspensão 1 g/5 ml (ou comprimidos 1 g dissolvidos em 10 ml água). Tomar 30 min ANTES das refeições e ao deitar — forma barreira física na mucosa gástrica. ⚠️ Separar 2h de outros fármacos (adsorção); antiácidos reduzem eficácia. Fonte: BNF for Children 2023-24.",
@@ -191,7 +197,7 @@ var DRUGS_GASTROENTEROLOGIA = [
       "⚠️ Reduz absorção de múltiplos fármacos (fenitoína, fluroquinolonas, digoxina) — espaçar 2h",
       "Contém alumínio — evitar em insuf. renal"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNF for Children 2020-21, Sucralfate (p. 58)"
   },
   {
     "id": "mesalazina",

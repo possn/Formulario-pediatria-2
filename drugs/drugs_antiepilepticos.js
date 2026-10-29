@@ -466,18 +466,18 @@ var DRUGS_ANTIEPILEPTICOS = [
     ],
     "dose": [
       {
-        "ind": "Espasmos infantis",
-        "val": "INÍCIO 50 mg/kg/dia → até 150 mg/kg/dia",
-        "max": "150 mg/kg/dia",
-        "freq": "2 doses/dia",
-        "note": "Resposta esperada em 2 semanas; se sem resposta descontinuar"
+        "ind": "Espasmos infantis (síndrome de West) — monoterapia, sob supervisão especializada",
+        "val": "RN e 1 mês–1 ano: inicial 15–25 mg/kg 2×/dia; ajustar em 7 dias para manutenção 40–50 mg/kg 2×/dia",
+        "max": "75 mg/kg por dose",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21, Vigabatrin (p. 230). Risco de defeitos do campo visual; vigilância obrigatória."
       },
       {
-        "ind": "Epilepsia focal (adjuvante)",
-        "val": "40–80 mg/kg/dia",
-        "max": "3 g/dia",
-        "freq": "2 doses/dia",
-        "note": ""
+        "ind": "Epilepsia focal — adjuvante",
+        "val": "RN e 1–23 meses: inicial 15–20 mg/kg 2×/dia, aumentar em 2–3 semanas para 30–40 mg/kg 2×/dia; 2–11 anos: idem (máx. por dose 1,5 g); 12–17 anos: inicial 250 mg 2×/dia, manutenção 1–1,5 g 2×/dia",
+        "max": "75 mg/kg por dose (<2 anos); 1,5 g por dose (2–11 anos)",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 230). Via rectal (granulado): mesmas doses em 1 mês–11 anos."
       }
     ],
     "prep": "Oral: sachets 500 mg — dissolver em 10 ml água fria imediatamente antes de administrar. Comprimidos 500 mg — podem ser triturados. Tomar com ou sem alimentos. Solução magistral disponível para lactentes. Fonte: BNF for Children 2023-24.",
@@ -491,7 +491,7 @@ var DRUGS_ANTIEPILEPTICOS = [
       "⚠️ Anomalias de sinal MRI reversíveis em lactentes (síndrome de mielinização transitória)",
       "Uso limitado por toxicidade ocular — preferir para espasmos infantis onde benefício supera risco"
     ],
-    "source": "BNF for Children 2023-24; NICE Guidelines Epilepsy 2022"
+    "source": "BNF for Children 2020-21, Vigabatrin (p. 230)"
   },
   {
     "id": "oxcarbazepina",
@@ -530,7 +530,7 @@ var DRUGS_ANTIEPILEPTICOS = [
       "Menos interacções que carbamazepina (indutor enzimático mais fraco)",
       "Boa tolerabilidade cognitiva"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "BNF for Children 2020-21, Oxcarbazepine (p. 218)"
   },
   {
     "id": "stiripentol",

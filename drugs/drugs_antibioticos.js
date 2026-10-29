@@ -704,25 +704,25 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Candidemia / invasiva EV (< 30 kg)",
-        "val": "2 mg/kg/dia EV",
+        "ind": "Candidíase invasiva (perfusão EV)",
+        "val": "RN e criança <40 kg: 2 mg/kg 1×/dia (≥14 dias), aumentar se necessário para 4 mg/kg; ≥40 kg: 100 mg 1×/dia (≥14 dias), aumentar se necessário para 200 mg",
+        "max": "4 mg/kg/dia (<40 kg); 200 mg/dia (≥40 kg)",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21, Micafungin (p. 405). Uso em RN sob aconselhamento especializado."
+      },
+      {
+        "ind": "Candidíase esofágica",
+        "val": "16–17 anos: <40 kg 3 mg/kg 1×/dia; ≥40 kg 150 mg 1×/dia",
         "max": "—",
         "freq": "1×/dia",
-        "note": "Neonatos/lactentes: 4–10 mg/kg/dia (clearance aumentada)"
+        "note": "BNFC 2020-21 (p. 405)."
       },
       {
-        "ind": "Candidemia / invasiva EV (≥ 30 kg)",
-        "val": "100 mg/dia EV",
-        "max": "200 mg/dia",
-        "freq": "1×/dia",
-        "note": ""
-      },
-      {
-        "ind": "Profilaxia transplante",
-        "val": "1 mg/kg/dia (< 50 kg); 50 mg/dia (≥ 50 kg)",
+        "ind": "Profilaxia em TMO / neutropenia esperada >10 dias",
+        "val": "RN e <40 kg: 1 mg/kg 1×/dia; ≥40 kg: 50 mg 1×/dia",
         "max": "50 mg/dia",
-        "freq": "1×/dia",
-        "note": ""
+        "freq": "1×/dia, ≥7 dias após recuperação de neutrófilos",
+        "note": "BNFC 2020-21 (p. 405)."
       }
     ],
     "prep": "EV: reconstituir cada frasco (50 mg ou 100 mg) em 5 ml SF (10 ou 20 mg/ml), girar suavemente sem agitar (evitar espuma). Diluir em SF 100 ml (concentração ≤ 1,5 mg/ml). Administrar em 60 min. ⚠️ Proteger da luz — envolver em papel de alumínio. ⚠️ APENAS em SF — incompatível com SG5%. Estabilidade: 24h a 25°C após reconstituição.",
@@ -735,7 +735,7 @@ var DRUGS_ANTIBIOTICOS = [
       "Boa tolerabilidade geral",
       "Sem ajuste renal necessário"
     ],
-    "source": "BNF for Children 2023-24; ESCMID Guidelines 2023"
+    "source": "BNF for Children 2020-21, Micafungin (p. 405)"
   },
   {
     "id": "ganciclovir",

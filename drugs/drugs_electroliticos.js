@@ -389,7 +389,9 @@ var DRUGS_ELECTROLITICOS = [
       "⚠️ Potencia toxicidade da digoxina — usar gluconato de cálcio em doente digitalizado",
       "⚠️ Nunca misturar com bicarbonato na mesma via — precipitação imediata"
     ],
-    "source": "BNF for Children 2023-24; PALS AHA 2020; DeWitt CR et al. Crit Care Clin 2005 (CCB toxicity)"
+    "source": "BNF for Children 2020-21, Calcium chloride (p. 642); PALS AHA 2020",
+    "review": ["BNFC 2020-21 (hipocalcemia aguda): \"consultar o RCM\". As doses desta ficha (0,2 mL/kg de CaCl2 10% em PCR, 0,2–0,3 mL/kg em intoxicação por bloqueadores dos canais de cálcio) provêm de PALS/literatura não incluída nos documentos disponíveis — confirmar no algoritmo vigente."]
+
   },
   {
     "id": "zinc_oral",
@@ -428,7 +430,9 @@ var DRUGS_ELECTROLITICOS = [
       "Doses altas crónicas inibem absorção de cobre (pode usar-se terapeuticamente na doença de Wilson)",
       "Separar administração de ferro e zinco por 2h (absorção competitiva)"
     ],
-    "source": "BNF for Children 2023-24; WHO/UNICEF Zinc Supplementation 2004; Bhutta ZA et al. BMJ 1999"
+    "source": "BNF for Children 2020-21, Zinc sulfate (p. 668); OMS/UNICEF (diarreia)",
+    "review": ["BNFC 2020-21 (carência de zinco, sais efervescentes, em zinco elementar): RN 1 mg/kg/dia; <10 kg 22,5 mg/dia; 10–30 kg 22,5 mg 1–3×/dia; ≥31 kg 45 mg 1–3×/dia. Acrodermatite enteropática: 0,5–1 mg/kg 2×/dia. Doença de Wilson: 1–5 anos 25 mg 2×/dia; 6–15 anos 25–50 mg 3×/dia. A dose da OMS para diarreia (10 mg/dia <6 meses) não consta dos documentos disponíveis."]
+
   },
   {
     "id": "tiamina_ev",
