@@ -79,32 +79,39 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Hemorragia major / trauma — EV",
-        "val": "15 mg/kg EV em 10 min (carga)",
-        "max": "1000 mg/dose",
-        "freq": "seguido de 2 mg/kg/hora × 8h",
-        "note": "⚠️ Administrar nas PRIMEIRAS 3 HORAS após traumatismo. Após 3h pode ser prejudicial (CRASH-2)"
+        "ind": "Inibição da fibrinólise — EV lento (BNFC)",
+        "val": "10 mg/kg 2–3×/dia, em ≥ 10 min",
+        "max": "1 g/dose",
+        "freq": "2–3×/dia",
+        "note": "BNFC 2020-21 (p. 86)."
       },
       {
-        "ind": "Cirurgia cardíaca (profilaxia)",
-        "val": "10 mg/kg EV pré-CEC + 10 mg/kg durante CEC",
+        "ind": "Inibição da fibrinólise — perfusão EV contínua (BNFC)",
+        "val": "45 mg/kg em 24 h",
         "max": "—",
-        "freq": "per protocolo",
-        "note": ""
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21 (p. 86)."
       },
       {
-        "ind": "Epistaxis / mucosas",
-        "val": "15–25 mg/kg/dose oral",
-        "max": "1500 mg/dose",
-        "freq": "3 doses/dia × 5–7 dias",
-        "note": "Ou tópico: gaze embebida em solução 5%"
+        "ind": "Inibição da fibrinólise — oral (BNFC)",
+        "val": "15–25 mg/kg 2–3×/dia",
+        "max": "1,5 g/dose",
+        "freq": "2–3×/dia",
+        "note": "BNFC 2020-21 (p. 86). Epistaxis/mucosas: 5–7 dias."
       },
       {
-        "ind": "Cirurgia cardíaca neonatal / hemorragia grave",
-        "val": "10–15 mg/kg EV carga; depois 1–3 mg/kg/h perfusão",
+        "ind": "Hemorragia major / trauma — EV (extrapolado de CRASH-2)",
+        "val": "15 mg/kg EV em 10 min, depois 2 mg/kg/h durante 8 h",
+        "max": "1 g (carga)",
+        "freq": "Iniciar nas primeiras 3 h após o trauma",
+        "note": "CRASH-2 (Lancet 2010) em adultos; esquema pediátrico não consta do BNFC 2020-21."
+      },
+      {
+        "ind": "Cirurgia cardíaca com CEC — EV",
+        "val": "10 mg/kg pré-CEC + 10 mg/kg durante CEC; alguns protocolos: perfusão 1–3 mg/kg/h",
         "max": "—",
-        "freq": "Carga pré-incisão; perfusão durante cirurgia e 4–6h pós-op",
-        "note": "Dados pediátricos extrapolados de estudos CRASH-2 e ensaios de cirurgia cardíaca pediátrica"
+        "freq": "Segundo protocolo",
+        "note": "Não consta do BNFC 2020-21; esquema de uso institucional."
       }
     ],
     "prep": "EV: diluir em SF, SG5% ou LR. Concentração ≤ 100 mg/ml. Velocidade máxima: 100 mg/min (bólus de carga); perfusão: diluir 1 g em 100 ml SF (10 mg/ml). ⚠️ Não administrar em bólus rápido (hipotensão).",
@@ -125,7 +132,9 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Risco trombótico em RN de alto risco (policitemia, catéteres, síndrome antifosfolípido materno)",
       "Evidência neonatal limitada — usar apenas em contexto de hemorragia grave com benefício esperado claro"
     ],
-    "source": "CRASH-2 Collaborators. Lancet 2010;376:23–32; Roberts I et al. Lancet 2011; Eckert MJ et al. J Trauma 2014; BNF for Children 2023-24; Faraoni D et al. JTCVS 2014; CRASH-2 Collaborators Lancet 2010"
+    "source": "BNFC 2020-21, Tranexamic acid (p. 86); CRASH-2 Collaborators. Lancet 2010;376:23–32",
+    "review": ["O BNFC 2020-21 não inclui esquema específico para trauma nem para cirurgia cardíaca; esses esquemas mantêm-se por extrapolação de CRASH-2 e de protocolos de CEC. A dose oral e a dose EV (10 mg/kg) do BNFC foram acrescentadas."]
+  
   },
   {
     "id": "heparina",
@@ -900,11 +909,25 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "HAP — crianças > 1 ano",
-        "val": "Peso 10–20 kg: 31,25 mg/dose PO; Peso > 20–40 kg: 62,5 mg/dose PO; > 40 kg: 62,5–125 mg/dose PO",
-        "max": "125 mg/dose (250 mg/dia em adulto)",
-        "freq": "q12h",
-        "note": "Iniciar com dose baixa × 4 semanas, depois duplicar se tolerado"
+        "ind": "HAP — oral, 2–17 anos, 10–20 kg",
+        "val": "Inicial 31,25 mg 1×/dia durante 4 semanas; depois 31,25 mg 2×/dia",
+        "max": "—",
+        "freq": "Ver esquema",
+        "note": "BNFC 2020-21 (p. 124). Iniciar sob supervisão especializada. Controlo mensal das transaminases."
+      },
+      {
+        "ind": "HAP — oral, 2–17 anos, 20–40 kg",
+        "val": "Inicial 31,25 mg 2×/dia durante 4 semanas; depois 62,5 mg 2×/dia",
+        "max": "—",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 124)."
+      },
+      {
+        "ind": "HAP — oral, 12–17 anos, ≥ 40 kg",
+        "val": "Inicial 62,5 mg 2×/dia durante 4 semanas; depois 125 mg 2×/dia",
+        "max": "250 mg/dose",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 124)."
       }
     ],
     "prep": "Oral: comprimidos dispersíveis 32 mg — dissolver em 5 ml água; comprimidos 62,5/125 mg — podem ser partidos mas não triturados. Tomar com ou sem alimentos. Manipulação com cuidado — pó potencialmente teratogénico. Fonte: BNF for Children 2023-24; SmPC Tracleer.",
@@ -922,7 +945,9 @@ var DRUGS_CARDIOVASCULAR = [
       "Anemia — monitorizar hemograma (reduz hematócrito ~1 g/dl)",
       "Programa de monitorização especial obrigatório (REMS)"
     ],
-    "source": "BNF for Children 2023-24; Beghetti M et al. Eur Heart J 2009; ESC/ERS PAH Guidelines 2022"
+    "source": "BNFC 2020-21, Bosentan (p. 124); Beghetti M et al. Eur Heart J 2009; ESC/ERS PAH Guidelines 2022",
+    "review": ["A ficha anterior omitia a fase inicial de 4 semanas; o BNFC 2020-21 inicia com metade da dose de manutenção."]
+  
   },
   {
     "id": "fentolamina",
@@ -1317,18 +1342,25 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Carga oral (saturação)",
-        "val": "10–20 mg/kg/dia PO",
-        "max": "400 mg/dia",
-        "freq": "3 doses/dia × 7–10 dias (carga); depois reduzir",
-        "note": "Carga necessária pela semi-vida extremamente longa (40–55 dias)"
+        "ind": "Arritmias supraventriculares e ventriculares — oral, RN",
+        "val": "Inicial 5–10 mg/kg 2×/dia durante 7–10 dias; depois 5–10 mg/kg 1×/dia",
+        "max": "—",
+        "freq": "2×/dia na carga",
+        "note": "BNFC 2020-21 (p. 83). Iniciar em hospital ou sob supervisão especializada."
       },
       {
-        "ind": "Manutenção",
-        "val": "5–10 mg/kg/dia PO",
-        "max": "200 mg/dia",
-        "freq": "1–2 doses/dia",
-        "note": "Dose mínima eficaz — nível sérico alvo 0,5–2,5 mg/L"
+        "ind": "Arritmias supraventriculares e ventriculares — oral, 1 mês–11 anos",
+        "val": "Inicial 5–10 mg/kg 2×/dia durante 7–10 dias; depois 5–10 mg/kg 1×/dia",
+        "max": "200 mg/dose na carga; 200 mg/dia na manutenção",
+        "freq": "2×/dia na carga; 1×/dia na manutenção",
+        "note": "BNFC 2020-21 (p. 83)."
+      },
+      {
+        "ind": "Arritmias — oral, 12–17 anos",
+        "val": "200 mg 3×/dia durante 1 semana; depois 200 mg 2×/dia durante 1 semana; depois habitualmente 200 mg/dia, ajustado à resposta",
+        "max": "—",
+        "freq": "—",
+        "note": "BNFC 2020-21 (p. 83). Monitorizar função tiroideia, hepática e pulmonar."
       }
     ],
     "prep": "Oral: comprimidos 100/200 mg — tomar COM refeições (reduz intolerância GI). Podem ser triturados. Solução extemporânea 5 mg/ml para lactentes. ⚠️ Semi-vida 40–55 dias — carga obrigatória por 7–10 dias (efectivo em 1–3 semanas). Fonte: BNF for Children 2023-24.",
@@ -1346,6 +1378,8 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Interacções major: varfarina, digoxina, ciclosporina, estatinas, fenitoína — reduzir doses",
       "Semi-vida 40–55 dias — efeito e toxicidade persistem meses após suspensão"
     ],
-    "source": "BNF for Children 2023-24; Thorne SA et al. Heart 1999; Saul JP et al. JACC 2005"
+    "source": "BNFC 2020-21, Amiodarone hydrochloride (p. 83); Saul JP et al. JACC 2005",
+    "review": ["A ficha anterior tinha 10–20 mg/kg/dia na carga; o BNFC 2020-21 indica 5–10 mg/kg 2×/dia durante 7–10 dias (10–20 mg/kg/dia), com máximo de 200 mg/dose."]
+  
   }
 ];
