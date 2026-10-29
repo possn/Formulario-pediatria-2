@@ -58,20 +58,20 @@ var DRUGS_NEONATOLOGIA = [
     "dose": [
       {
         "ind": "Carga",
-        "val": "20 mg/kg de citrato de cafeína EV em 30 min",
+        "val": "20 mg/kg de citrato de cafeína EV em 30 min ou oral",
         "max": "—",
-        "freq": "dose única",
-        "note": "= 10 mg/kg de cafeína base"
+        "freq": "Dose única",
+        "note": "BNFC 2020-21 (p. 201). 20 mg/kg de citrato = 10 mg/kg de cafeína base."
       },
       {
         "ind": "Manutenção",
-        "val": "5–10 mg/kg/dia de citrato de cafeína EV/oral",
-        "max": "—",
+        "val": "5 mg/kg/dia de citrato de cafeína EV/oral, 24 h após a carga; aumentar se necessário até 20 mg/kg/dia",
+        "max": "20 mg/kg/dia (acima disto só com nível plasmático de cafeína)",
         "freq": "1 dose/dia",
-        "note": "Iniciar 24h após carga. Manter até 34–35 sem corrigidas sem apneias"
+        "note": "BNFC 2020-21 (p. 201). Manter até 34–35 semanas corrigidas sem apneias. Doses acima do RCM são não licenciadas: monitorizar o nível sérico."
       }
     ],
-    "prep": "EV: pronto a usar (20 mg/ml = 10 mg cafeína base/ml) ou diluir em SG5%/SF. Carga: 30 min. Manutenção: 10 min. Oral: mesma concentração — absorção oral 100%, pode usar ampolação via oral. Fonte: BNF for Children 2023-24; Neofax 2023.",
+    "prep": "EV: pronto a usar (20 mg/ml = 10 mg cafeína base/ml) ou diluir em SG5%/SF. Carga: 30 min. Manutenção: 10 min. Oral: mesma concentração — absorção oral 100%, pode usar ampolação via oral. Fonte: BNFC 2020-21 (p. 201).",
     "ci": [
       "Taquiarritmia neonatal sintomática"
     ],
@@ -82,7 +82,9 @@ var DRUGS_NEONATOLOGIA = [
       "Meia-vida longa no RN: 40–100h (vs 3–5h no adulto — imaturidade CYP1A2)",
       "CAP trial (Schmidt 2006): redução de 36% na BDP com cafeína"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; Schmidt B et al. (CAP trial) NEJM 2006; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Caffeine citrate (p. 201); Schmidt B et al. (CAP trial) NEJM 2006; Formulário de Pediatria 3ª Ed.",
+    "review": ["A ficha anterior indicava manutenção de 5–10 mg/kg/dia; o BNFC 2020-21 inicia com 5 mg/kg/dia e admite até 20 mg/kg/dia se necessário."]
+  
   },
   {
     "id": "ino",
@@ -182,7 +184,7 @@ var DRUGS_NEONATOLOGIA = [
         "note": "BNFC 2020-21, Indometacin (p. 710)."
       }
     ],
-    "prep": "EV: reconstituir com 1–2 ml SF ou água estéril (SEM conservantes). Usar imediatamente após reconstituição — estável apenas 4h. NÃO agitar. Administrar em 30 min (infusão lenta reduz risco de redução do fluxo renal e cerebral). Fonte: BNF for Children 2023-24; Neofax 2023.",
+    "prep": "EV: reconstituir com 1–2 ml SF ou água estéril (SEM conservantes). Usar imediatamente após reconstituição — estável apenas 4h. NÃO agitar. Administrar em 30 min (infusão lenta reduz risco de redução do fluxo renal e cerebral). Fonte: BNFC 2020-21 (p. 201).",
     "ci": [
       "Trombocitopenia < 60 000/mcL",
       "Creatinina > 1,8 mg/dL ou débito urinário < 0,6 ml/kg/hora",
@@ -356,7 +358,7 @@ var DRUGS_NEONATOLOGIA = [
         "note": "Evidência preliminar favorável — ensaios em curso (HEAL trial). Não standard of care ainda"
       }
     ],
-    "prep": "SC: administrar não diluído com agulha de 27G. Refrigerar 2–8°C; não congelar. EV: diluir em solução de albumina 0,05% (prevenir adsorção ao PVC). Rodar locais de injecção SC (coxas, abdómen). Fonte: BNF for Children 2023-24; Neofax 2023.",
+    "prep": "SC: administrar não diluído com agulha de 27G. Refrigerar 2–8°C; não congelar. EV: diluir em solução de albumina 0,05% (prevenir adsorção ao PVC). Rodar locais de injecção SC (coxas, abdómen). Fonte: BNFC 2020-21 (p. 201).",
     "ci": [
       "Hipertensão não controlada",
       "Trombose activa",

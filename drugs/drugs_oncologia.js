@@ -55,25 +55,18 @@ var DRUGS_ONCOLOGIA = [
     ],
     "dose": [
       {
-        "ind": "Náuseas/vómitos por QT/RT — dose inicial EV (6 meses–17 anos)",
-        "val": "150 mcg/kg EV imediatamente antes da QT (alternativa: 5 mg/m² se SC < 1,3 m²; 8 mg se SC ≥ 1,3 m²)",
-        "max": "8 mg/dose",
-        "freq": "Repetir 150 mcg/kg cada 4 h × 2 doses; depois passar a oral. Máx. 32 mg/dia",
-        "note": "BNFC 2020-21 (p. 281). Perfusão em ≥ 15 min. Shann: 0,15 mg/kg (máx. 16 mg) cada 4 h × 3 EV."
-      },
-      {
-        "ind": "Seguimento oral — por SC",
-        "val": "SC < 0,6 m²: 2 mg; 0,6–1,2 m²: 4 mg; ≥ 1,3 m²: 8 mg",
-        "max": "32 mg/dia",
-        "freq": "Cada 12 h até 5 dias (pode iniciar 12 h após a dose EV)",
+        "ind": "Prevenção e tratamento de náuseas e vómitos da quimioterapia/radioterapia — EV (6 meses–17 anos)",
+        "val": "150 mcg/kg imediatamente antes da quimioterapia (máx. 8 mg), depois 150 mcg/kg cada 4 h × 2 doses; passar a oral. Alternativa: BSC < 1,3 m² 5 mg/m²; ≥ 1,3 m² 8 mg",
+        "max": "8 mg/dose; 32 mg/dia",
+        "freq": "Cada 4 h × 3 doses; perfusão em ≥ 15 min",
         "note": "BNFC 2020-21 (p. 281)."
       },
       {
-        "ind": "Seguimento oral — por peso",
-        "val": "≤ 10 kg: 2 mg; 10,1–40 kg: 4 mg; ≥ 41 kg: 8 mg",
+        "ind": "Seguimento oral (até 5 dias)",
+        "val": "< 10,1 kg: 2 mg; 10,1–40 kg: 4 mg; ≥ 41 kg: 8 mg",
         "max": "32 mg/dia",
-        "freq": "Cada 12 h até 5 dias",
-        "note": "BNFC 2020-21 (p. 281)."
+        "freq": "Cada 12 h, podendo iniciar 12 h após a dose EV",
+        "note": "BNFC 2020-21 (p. 281). Alternativa por BSC: < 0,6 m² 2 mg; 0,6–1,2 m² 4 mg; ≥ 1,3 m² 8 mg."
       }
     ],
     "prep": "EV (Granisetrona, quando disponível): diluir em SF ou SG5% para concentração ≤ 1 mg/ml. Infusão 5 min. Oral: comprimidos. Nota: granisetrona = antiemético 5-HT3 de longa duração (t½ 9h vs ondansetron 4h) — 1 dose/dia suficiente. Fonte: BNF for Children 2023-24; MASCC 2023.",
@@ -85,7 +78,9 @@ var DRUGS_ONCOLOGIA = [
       "Cefaleias (frequentes — transitórias)",
       "Obstipação"
     ],
-    "source": "BNFC 2020-21, Ondansetron (p. 281); Shann Drug Doses (Ondansetron)"
+    "source": "BNFC 2020-21, Ondansetron (p. 281); MASCC/ESMO Antiemetic Guidelines 2023",
+    "review": ["A ficha anterior indicava 20–40 mcg/kg/dose EV (máx. 3 mg), muito abaixo do BNFC 2020-21 (150 mcg/kg, máx. 8 mg). Corrigido."]
+  
   },
   {
     "id": "alopurinol_onco",
@@ -100,18 +95,18 @@ var DRUGS_ONCOLOGIA = [
     ],
     "dose": [
       {
-        "ind": "Profilaxia SLT oral",
-        "val": "10 mg/kg/dia oral",
-        "max": "300 mg/dia",
-        "freq": "3 doses/dia; iniciar 1–2 dias antes QT",
-        "note": "Hidratação agressiva concomitante"
+        "ind": "Profilaxia da hiperuricemia associada à quimioterapia — oral, 1 mês–14 anos",
+        "val": "10–20 mg/kg/dia, de preferência após as refeições",
+        "max": "400 mg/dia",
+        "freq": "Diária, dividida em 1–3 tomas; iniciar 1–2 dias antes da QT",
+        "note": "BNFC 2020-21 (p. 601). Hidratação agressiva concomitante."
       },
       {
-        "ind": "Adulto / adolescente",
-        "val": "300 mg/dia",
-        "max": "900 mg/dia",
-        "freq": "1–3 doses/dia",
-        "note": ""
+        "ind": "Profilaxia da hiperuricemia — oral, 15–17 anos",
+        "val": "Inicial 100 mg/dia; aumentar conforme resposta",
+        "max": "900 mg/dia (máx. 300 mg/dose)",
+        "freq": "Doses divididas",
+        "note": "BNFC 2020-21 (p. 601)."
       }
     ],
     "prep": "Oral: comprimidos 100/300 mg — podem ser dissolvidos em água (1 comprimido/10 ml). Solução magistral 20 mg/ml estável 14 dias. Tomar COM refeições e assegurar hidratação adequada (≥ 2 L/m²/dia) para prevenir nefropatia úrica. EV (quando disponível): diluir em SF/SG5%, pH ≥ 11. Fonte: BNF for Children 2023-24.",
@@ -124,7 +119,9 @@ var DRUGS_ONCOLOGIA = [
       "⚠️ Insuficiente para SLT alto risco (usar rasburicase)",
       "Monitorizar ácido úrico, creatinina e electrólitos"
     ],
-    "source": "BNF for Children 2023-24; Howard SC. NEJM 2011; SIOP/COG TLS Guidelines 2017"
+    "source": "BNFC 2020-21, Allopurinol (p. 601); Howard SC. NEJM 2011; SIOP/COG TLS Guidelines 2017",
+    "review": ["A ficha anterior tinha 10 mg/kg/dia (máx. 300 mg); o BNFC 2020-21 indica 10–20 mg/kg/dia (máx. 400 mg/dia) até aos 14 anos."]
+  
   },
   {
     "id": "naltrexona",
@@ -204,7 +201,9 @@ var DRUGS_ONCOLOGIA = [
       "⚠️ Indutor CYP2C9 — reduz INR em doentes com varfarina; monitorizar",
       "Eficácia estabelecida em crianças ≥ 6 meses (Bakhshi S et al. Pediatr Blood Cancer 2015)"
     ],
-    "source": "BNF for Children 2023-24; Bakhshi S et al. Pediatr Blood Cancer 2015; MASCC/ESMO 2023"
+    "source": "BNFC 2020-21, Aprepitant (p. 279); Bakhshi S et al. Pediatr Blood Cancer 2015; MASCC/ESMO 2023",
+    "review": ["BNFC 2020-21: 12–17 anos 125 mg 1 h antes da QT, depois 80 mg/dia × 2 dias; 6 meses–11 anos «consultar RCM». As doses por kg na ficha (3 mg/kg, 2 mg/kg) não constam do BNFC: confirmar no RCM."]
+
   },
   {
     "id": "g_csf_filgrastim",
@@ -220,18 +219,25 @@ var DRUGS_ONCOLOGIA = [
     ],
     "dose": [
       {
-        "ind": "Neutropenia febril — tratamento",
-        "val": "5 μg/kg/dia SC",
+        "ind": "Redução da neutropenia pós-quimioterapia — SC ou EV (30 min)",
+        "val": "5 mcg/kg/dia até neutrófilos normalizarem, geralmente até 14 dias (até 38 na LMA); iniciar ≥ 24 h após a QT",
         "max": "—",
-        "freq": "1 dose/dia; iniciar 24–72h após QT (não durante QT activo)",
-        "note": "Continuar até neutrófilos > 1000/μL por 2 dias consecutivos após nadir"
+        "freq": "1×/dia, preferencialmente SC",
+        "note": "BNFC 2020-21 (p. 625). Uso especializado. Não indicado na LMC nem nos síndromes mielodisplásicos."
       },
       {
-        "ind": "Mobilização células estaminais",
-        "val": "10–16 μg/kg/dia SC",
+        "ind": "Neutropenia após terapêutica mieloablativa e transplante de medula — SC/EV",
+        "val": "10 mcg/kg/dia, iniciar ≥ 24 h após QT e < 24 h após a infusão de medula; ajustar aos neutrófilos",
         "max": "—",
-        "freq": "1–2 doses/dia × 4–5 dias; aférese no dia 5",
-        "note": ""
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 625)."
+      },
+      {
+        "ind": "Mobilização de células progenitoras do sangue periférico — SC, isolado",
+        "val": "10 mcg/kg/dia durante 5–7 dias",
+        "max": "—",
+        "freq": "1×/dia (infusão SC em 24 h, se aplicável)",
+        "note": "BNFC 2020-21 (p. 625). Após quimioterapia mielossupressora: 5 mcg/kg/dia."
       }
     ],
     "prep": "SC: administrar não diluído ou diluído em SG5% mínimo 5 μg/ml (não diluir excessivamente — perda de actividade a < 5 μg/ml). Aplicar em abdómen, coxa ou braço superior. Refrigerar 2–8°C; estável 24h à T ambiente. ⚠️ Não iniciar < 24h antes ou durante quimioterapia activa. Fonte: BNF for Children 2023-24; SmPC Neupogen.",
@@ -246,7 +252,9 @@ var DRUGS_ONCOLOGIA = [
       "Dores ósseas (40–70%) — responde a paracetamol ou ibuprofeno; anti-histamínico se extensas",
       "Esplenomegalia com uso prolongado — monitorizar"
     ],
-    "source": "BNF for Children 2023-24; ASCO G-CSF Guidelines 2015; Lyman GH et al. JCO 2015"
+    "source": "BNFC 2020-21, Filgrastim (p. 625); ASCO G-CSF Guidelines 2015",
+    "review": ["A ficha anterior indicava 10–16 mcg/kg/dia para a mobilização; o BNFC 2020-21 indica 10 mcg/kg/dia (5–7 dias), ou 5 mcg/kg/dia após quimioterapia."]
+  
   },
   {
     "id": "rasburicase_slt",
@@ -356,7 +364,9 @@ var DRUGS_ONCOLOGIA = [
       "⚠️ Hidratação EV e alcalinização urinária (pH > 7) obrigatórias com HD-MTX (solubilidade MTX pH-dependente)",
       "Resgate insuficiente ou atrasado: mucosites, mielossupressão, nefrotoxicidade graves"
     ],
-    "source": "BNF for Children 2023-24; Widemann BC et al. Oncologist 2006; COG/SIOP MTX protocols"
+    "source": "BNFC 2020-21, Calcium folinate (p. 600): «consultar protocolo local»; Widemann BC et al. Oncologist 2006; COG/SIOP MTX protocols",
+    "review": ["O BNFC 2020-21 não define dose de ácido folínico («consultar protocolo local»). Esquema de 15 mg/m² cada 6 h × 10 doses é o do protocolo standard de HD-MTX e deve seguir o protocolo oncológico vigente."]
+
   },
   {
     "id": "dexrazoxano",
