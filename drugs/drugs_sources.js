@@ -8,11 +8,11 @@ var SOURCES = {
   primary: [
     {
       id: "bnfc",
-      title: "BNF for Children 2023–24",
-      publisher: "British Medical Association / Royal Pharmaceutical Society",
-      year: 2023,
+      title: "BNF for Children 2020–2021",
+      publisher: "BMJ Group / Pharmaceutical Press / RCPCH / NPPG",
+      year: 2020,
       url: "https://bnfc.nice.org.uk",
-      note: "Referência principal de posologia pediátrica. Atualização anual. Referência do NHS/NICE."
+      note: "Referência principal de posologia pediátrica. Edição de 2020–21, a única disponível aos autores: todas as doses revistas citam a página impressa desta edição. Edições posteriores podem diferir."
     },
     {
       id: "harriet_lane",
@@ -28,6 +28,75 @@ var SOURCES = {
       publisher: "Edição dos autores",
       year: "s.d.",
       note: "3.ª edição, revista e actualizada (conforme a capa; o ano de edição não consta). Formulário de referência nacional português. Base bibliográfica desta aplicação."
+    },
+    {
+      id: "shann",
+      title: "Drug Doses — 17th Edition",
+      authors: "Frank Shann",
+      publisher: "Collective Pty Ltd (Melbourne)",
+      year: 2017,
+      note: "Manual de doses usado nos cuidados intensivos pediátricos. A edição indica «não usar após dezembro de 2020»."
+    },
+    {
+      id: "nelson_2020",
+      title: "2020 Nelson's Pediatric Antimicrobial Therapy",
+      publisher: "American Academy of Pediatrics",
+      year: 2020,
+      note: "Referência de antimicrobianos em pediatria (doses, espectro, duração)."
+    },
+    {
+      id: "lopez_herce",
+      title: "Manual de Cuidados Intensivos Pediátricos — Nueva tabla de fármacos",
+      authors: "Jesús López-Herce Cid, Cristina Calvo Rey, Corsino Rey Galán, Antonio Rodríguez Núñez, Arístides Baltodano Agüero",
+      publisher: "Publimed",
+      year: 2013,
+      note: "Tabela de fármacos de cuidados intensivos pediátricos (Sociedade Espanhola de Cuidados Intensivos Pediátricos)."
+    },
+    {
+      id: "moreira_notas",
+      title: "Notas de Bolso em Emergência e Cuidados Intensivos Pediátricos",
+      authors: "Amélia Moreira et al.",
+      year: 2015,
+      note: "Manual de bolso em português."
+    },
+    {
+      id: "uum_farmacos",
+      title: "Fármacos e Fórmulas em Cuidados Intensivos — Manual para Internos (5.ª edição)",
+      authors: "Grupo de Formação da UUM (coord. Luís Bento)",
+      year: 2018,
+      note: "Manual de cuidados intensivos de adultos, usado como referência para diluições e perfusões em português."
+    },
+    {
+      id: "ipo_oncologia",
+      title: "A Criança com Doença Oncológica — Guia de Apoio para os Serviços de Pediatria",
+      publisher: "Serviço de Pediatria, Instituto Português de Oncologia de Lisboa Francisco Gentil, EPE",
+      year: "s.d.",
+      note: "Guia nacional de apoio à criança com doença oncológica."
+    },
+    {
+      id: "ppcira_profilaxia",
+      title: "Manual Profilaxia Antibiótica Cirúrgica (DA.0669, versão 01)",
+      authors: "GCL-PPCIRA — Grupo Coordenador Local do Programa de Prevenção e Controlo de Infeções e de Resistência aos Antimicrobianos",
+      year: 2022,
+      note: "Documento local de profilaxia antibiótica cirúrgica (janeiro 2022)."
+    },
+    {
+      id: "sbgg_subcutanea",
+      title: "O uso da via subcutânea em geriatria e cuidados paliativos — Um guia da SBGG e da ANCP (2.ª edição)",
+      authors: "SBGG / ANCP",
+      note: "Guia de administração por via subcutânea (diluições, compatibilidades)."
+    },
+    {
+      id: "atls_10",
+      title: "Advanced Trauma Life Support (ATLS) — Student Course Manual, 10th Edition",
+      publisher: "American College of Surgeons",
+      year: 2018,
+      note: "Manual de reanimação inicial do traumatizado."
+    },
+    {
+      id: "ajuste_renal",
+      title: "Tabela de ajuste posológico de fármacos na insuficiência renal",
+      note: "Tabela de ajuste de dose por TFG (autor e ano não indicados no documento)."
     },
     {
       id: "who_mfc",
