@@ -353,28 +353,42 @@ var DRUGS_EMERGENCIA = [
     ],
     "dose": [
       {
-        "ind": "TSV — RN",
-        "val": "Inicial 150 mcg/kg EV rápido; aumentar em passos de 50–100 mcg/kg",
-        "max": "300 mcg/kg/dose única",
-        "freq": "Passos cada 1–2 min até terminar a taquicardia",
-        "note": "BNFC 2020-21 (p. 84). Bólus rápido seguido de flush de SF."
+        "ind": "TSV — 1.ª dose (referência PALS)",
+        "val": "0,1 mg/kg EV/IO rápido, seguido de flush de SF",
+        "max": "6 mg",
+        "freq": "Dose única; se sem resposta, passar à 2.ª dose",
+        "note": "AHA PALS. Bólus muito rápido (< 2 s) em acesso proximal, com torneira de 3 vias e flush imediato."
       },
       {
-        "ind": "TSV — 1–11 meses",
-        "val": "Inicial 150 mcg/kg EV rápido; aumentar em passos de 50–100 mcg/kg",
+        "ind": "TSV — 2.ª dose e seguintes (referência PALS)",
+        "val": "0,2 mg/kg EV/IO rápido, seguido de flush de SF",
+        "max": "12 mg",
+        "freq": "Se sem resposta à dose anterior",
+        "note": "AHA PALS."
+      },
+      {
+        "ind": "TSV — esquema alternativo BNFC, RN",
+        "val": "Inicial 150 mcg/kg; aumentar em passos de 50–100 mcg/kg",
+        "max": "300 mcg/kg/dose única",
+        "freq": "Passos cada 1–2 min até terminar a taquicardia",
+        "note": "BNFC 2020-21 (p. 84)."
+      },
+      {
+        "ind": "TSV — esquema alternativo BNFC, 1–11 meses",
+        "val": "Inicial 150 mcg/kg; aumentar em passos de 50–100 mcg/kg",
         "max": "500 mcg/kg/dose única",
         "freq": "Passos cada 1–2 min até terminar a taquicardia",
         "note": "BNFC 2020-21 (p. 84)."
       },
       {
-        "ind": "TSV — 1–11 anos",
-        "val": "Inicial 100 mcg/kg EV rápido; aumentar em passos de 50–100 mcg/kg",
+        "ind": "TSV — esquema alternativo BNFC, 1–11 anos",
+        "val": "Inicial 100 mcg/kg; aumentar em passos de 50–100 mcg/kg",
         "max": "500 mcg/kg/dose única (máx. 12 mg)",
         "freq": "Passos cada 1–2 min até terminar a taquicardia",
         "note": "BNFC 2020-21 (p. 84)."
       },
       {
-        "ind": "TSV — 12–17 anos",
+        "ind": "TSV — esquema alternativo BNFC, 12–17 anos",
         "val": "3 mg; depois 6 mg; depois 12 mg EV rápido",
         "max": "12 mg/dose",
         "freq": "Intervalo de 1–2 min entre doses",
@@ -395,8 +409,8 @@ var DRUGS_EMERGENCIA = [
       "Monitorização ECG contínua e registo de ritmo durante administração",
       "Inactivada pela teofilina e cafeína — pode necessitar dose mais alta em prematuros com cafeína"
     ],
-    "source": "BNFC 2020-21, Adenosine (p. 84)",
-    "review": ["Esquema 0,1 → 0,2 mg/kg (PALS/ERC) removido por não constar do BNFC 2020-21. Uso fora de licença no diagnóstico de arritmias na criança (BNFC)."]
+    "source": "AHA PALS (0,1 → 0,2 mg/kg; máx. 6 → 12 mg); BNFC 2020-21, Adenosine (p. 84)",
+    "review": ["Esquema PALS (0,1 → 0,2 mg/kg) reposto por indicação do utilizador; o BNFC 2020-21 usa escalada por passos de 50–100 mcg/kg (ver linhas alternativas). Confirmar no algoritmo AHA PALS vigente."]
   
   },
   {
