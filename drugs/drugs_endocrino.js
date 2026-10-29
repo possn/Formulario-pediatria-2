@@ -371,7 +371,9 @@ var DRUGS_ENDOCRINO = [
       "Propiltiouracil (PTU) EVITAR em < 18 anos por risco maior de hepatotoxicidade grave (FDA Black Box Warning 2010)",
       "Monitorizar TSH, T4L, T3L a cada 4–8 semanas no início"
     ],
-    "source": "BNF for Children 2023-24; ETA/ESPE Guidelines Paediatric Hyperthyroidism 2022; FDA PTU Black Box 2010"
+    "source": "ETA/ESPE Guidelines Paediatric Hyperthyroidism 2022; FDA PTU Black Box 2010",
+    "review": ["Sem monografia no BNFC 2020-21; citação «BNF for Children 2023-24» removida por não ser verificável. Shann: 0,3–1 mg/kg/dia, reduzindo para 0,1–0,5 mg/kg/dia; BNFC (carbimazol, p. 522): 750 mcg/kg/dia inicial, depois 30–60%. Doses iniciais da ficha (0,2–0,5) são inferiores ao Shann — confirmar."]
+
   },
   {
     "id": "fludrocortisona",

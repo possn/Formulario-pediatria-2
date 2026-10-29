@@ -151,7 +151,7 @@ var DRUGS_ONCOLOGIA = [
       "⚠️ Hepatotoxicidade em doses altas",
       "Não usar para analgesia (antagonista — bloqueia efeito analgésico)"
     ],
-    "source": "BNF for Children 2023-24; Revia SmPC"
+    "source": "Shann Drug Doses (Naltrexone: 0,5 mg/kg, depois 1 mg/kg/dia); Revia SmPC"
   },
   {
     "id": "aprepitant",
@@ -382,7 +382,7 @@ var DRUGS_ONCOLOGIA = [
       "Para extravasamento: NÃO aplicar gelo antes ou durante dexrazoxano (vasoconstrição reduz distribuição)",
       "Evidência pediátrica crescente — oncologia pediátrica de alto risco com doses altas de antraciclinas"
     ],
-    "source": "BNF for Children 2023-24; van Dalen EC et al. Cochrane 2011; Mouridsen HT et al. Ann Oncol 2007"
+    "source": "Shann Drug Doses (Dexrazoxane); van Dalen EC et al. Cochrane 2011; Mouridsen HT et al. Ann Oncol 2007"
   },
   {
     "id": "imatinib",

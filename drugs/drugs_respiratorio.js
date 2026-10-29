@@ -214,7 +214,7 @@ var DRUGS_RESPIRATORIO = [
       "⚠️ NÃO usar < 2 anos (risco morte súbita em lactentes)",
       "Útil como antídoto EV nas distonias agudas"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "Shann Drug Doses (Diphenhydramine: 1–2 mg/kg 6–8H); Harriet Lane 23rd Ed"
   },
   {
     "id": "clemastina",
@@ -256,7 +256,7 @@ var DRUGS_RESPIRATORIO = [
       "⚠️ Sedação",
       "Os anti-histamínicos NÃO tratam broncoespasmo nem choque anafiláctico"
     ],
-    "source": "BNF for Children 2023-24"
+    "source": "Shann Drug Doses (Clemastine: 0,02–0,06 mg/kg 12H oral)"
   },
   {
     "id": "aminofilina",

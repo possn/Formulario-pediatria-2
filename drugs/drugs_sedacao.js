@@ -827,7 +827,9 @@ var DRUGS_SEDACAO = [
       "⚠️ Potencial de abuso (substância controlada em alguns países)",
       "Ajuste renal obrigatório"
     ],
-    "source": "BNF for Children 2023-24; Lyrica SmPC 2023"
+    "source": "Lyrica SmPC 2023",
+    "review": ["Sem monografia no BNFC 2020-21; citação «BNF for Children 2023-24» removida por não ser verificável. Shann só refere dose de adulto. Dose pediátrica em epilepsia da ficha por confirmar no RCM (indicação pediátrica não licenciada na UE)."]
+
   },
   {
     "id": "gabapentina",

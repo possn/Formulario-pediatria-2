@@ -927,7 +927,9 @@ var DRUGS_CARDIOVASCULAR = [
       "Para extravasamento: injectar perilesionalmente com agulha fina (25G), múltiplos pontos de injecção",
       "Efeito hipoglicemiante (estimula libertação de insulina) — monitorizar glicemia"
     ],
-    "source": "BNF for Children 2023-24; Reynolds PM et al. Ann Pharmacother 2014 (extravasation); Pacak K NEJM 2007"
+    "source": "Reynolds PM et al. Ann Pharmacother 2014 (extravasation); Pacak K NEJM 2007",
+    "review": ["Sem monografia no BNFC 2020-21; citação «BNF for Children 2023-24» removida por não ser verificável. Shann: perfusão 5–50 mcg/kg/min EV (15 mg/kg em 50 ml a 1–10 ml/h). Bólus 0,05–0,1 mg/kg e dose SC no extravasamento por confirmar."]
+
   },
   {
     "id": "nitroprussiato",
@@ -1165,7 +1167,9 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Inibidor CYP3A4 — aumenta exposição de outros substratos",
       "Poliúria marcada — garantir acesso a água livre; risco de desidratação hipernatrémica"
     ],
-    "source": "BNF for Children 2023-24; Verbalis JG et al. Am J Med 2013; Gheorghiade M et al. JAMA 2004"
+    "source": "Verbalis JG et al. Am J Med 2013; Gheorghiade M et al. JAMA 2004",
+    "review": ["Sem monografia no BNFC 2020-21; citação «BNF for Children 2023-24» removida por não ser verificável. Shann só refere dose de adulto (15 mg/dia, máx. 60 mg). Dose pediátrica da ficha por confirmar."]
+
   },
 {
     "id": "lidocaina_cv",

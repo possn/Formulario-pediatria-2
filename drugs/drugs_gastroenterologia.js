@@ -416,7 +416,7 @@ var DRUGS_GASTROENTEROLOGIA = [
       "Interacções sistémicas mínimas pela baixa absorção",
       "Resistência documentada com uso prolongado — não usar cronicamente sem indicação"
     ],
-    "source": "BNF for Children 2023-24; Bass NM et al. NEJM 2010 (encefalopatia hepática); Pimentel M et al. Ann Intern Med 2011"
+    "source": "Shann Drug Doses (Rifaximin: 7,5–10 mg/kg 8H, acção GI); Bass NM et al. NEJM 2010 (encefalopatia hepática); Pimentel M et al. Ann Intern Med 2011"
   },
 {
     "id": "lactulose",

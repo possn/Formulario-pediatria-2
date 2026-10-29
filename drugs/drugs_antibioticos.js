@@ -1511,7 +1511,9 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ TDM recomendado: nível sérico alvo > 0,7 mg/L (profilaxia) e > 1 mg/L (terapêutica)",
       "Absorção oral muito variável com suspensão (pH gástrico, alimentos, motilidade) — preferir comprimidos LP ou EV em UCI"
     ],
-    "source": "BNF for Children 2023-24; Walsh TJ et al. J Clin Oncol 2007; ECMM/ISHAM Mucormycosis Guidelines 2019"
+    "source": "Walsh TJ et al. J Clin Oncol 2007; ECMM/ISHAM Mucormycosis Guidelines 2019",
+    "review": ["Sem monografia no BNFC 2020-21; citação «BNF for Children 2023-24» removida por não ser verificável. Shann (por m²): profilaxia 200–230 mg/m² (máx. 300 mg) 12H oral com refeição gorda; IV 230 mg/m² 12H no dia 1, depois diário (leitura OCR duvidosa). Doses da ficha por confirmar no RCM."]
+
   },
   {
     "id": "doxiciclina",
@@ -1683,6 +1685,6 @@ var DRUGS_ANTIBIOTICOS = [
       "Sem actividade contra Cryptococcus, Fusarium, mucormicetes",
       "Candida parapsilosis tem MIC naturalmente mais elevada para equinocandinas — monitorizar resposta"
     ],
-    "source": "BNF for Children 2023-24; Pappas PG et al. CID 2016 (IDSA Candida); Benjamin DK et al. Pediatr Infect Dis J 2006"
+    "source": "Shann Drug Doses (Anidulafungin: 2–4 mg/kg dia 1, depois 1–2 mg/kg/dia); Pappas PG et al. CID 2016 (IDSA Candida); Benjamin DK et al. Pediatr Infect Dis J 2006"
   }
 ];
