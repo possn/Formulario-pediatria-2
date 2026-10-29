@@ -507,41 +507,43 @@ var DRUGS_ENDOCRINO = [
     "brands": "GlucaGen HypoKit — frascos 1 mg pó + seringa com diluente; Baqsimi nasal 3 mg",
     "indication": [
       "Hipoglicemia grave sem acesso EV — tratamento de emergência",
-      "Intoxicação por beta-bloqueante grave — efeito inotrópico e cronotrópico positivo",
-      "Intoxicação por bloqueadores canais de cálcio — adjuvante terapêutico",
-      "Hipoglicemia neonatal transitória sem acesso venoso"
+      "Intoxicação por beta-bloqueante com choque cardiogénico refractário à atropina (não licenciado)",
+      "Hiperinsulinismo endógeno (uso especializado, não licenciado)",
     ],
     "dose": [
       {
         "ind": "Hipoglicemia grave sem acesso EV",
-        "val": "< 25 kg: 0,5 mg IM/SC; ≥ 25 kg: 1 mg IM/SC",
+        "val": "RN: 20 mcg/kg SC/IM; 1 mês–8 anos (< 25 kg): 500 mcg SC/IM; 9–17 anos (≥ 25 kg): 1 mg SC/IM",
         "max": "1 mg",
-        "freq": "Dose única; pode repetir 1× após 15 min se sem resposta",
-        "note": "Nasal (Baqsimi): 3 mg intranasal numa narina — sem necessidade de reconstituição"
+        "freq": "Dose única; se sem resposta em 10 min, administrar glicose EV",
+        "note": "BNFC 2020-21 (Glucagon, p. 502). Apresentação nasal (Baqsimi) não consta do BNFC 2020-21 — dose não verificada nas fontes disponíveis."
       },
       {
-        "ind": "Intoxicação beta-bloqueante grave",
-        "val": "0,05–0,15 mg/kg EV em 3–5 min (carga)",
-        "max": "10 mg carga",
-        "freq": "Carga; depois perfusão 0,05–0,1 mg/kg/h titulada por FC e TA",
-        "note": "Doses muito altas podem ser necessárias (até 10 mg) — efeito frequentemente transitório"
+        "ind": "Intoxicação por beta-bloqueante (choque cardiogénico refractário à atropina)",
+        "val": "50–150 mcg/kg EV (em glicose 5%), seguido de perfusão 50 mcg/kg/h",
+        "max": "10 mg por dose (carga)",
+        "freq": "Carga + perfusão contínua",
+        "note": "BNFC 2020-21: administrar com protecção da via aérea (risco de vómito). Uso não licenciado."
+      }
+      ,{
+        "ind": "Hiperinsulinismo endógeno (uso especializado, não licenciado)",
+        "val": "RN: 200 mcg/kg IM/EV (dose única; máx. 1 mg), depois perfusão 1–18 mcg/kg/h; 1 mês–1 ano: 1 mg dose única, perfusão 1–10 mcg/kg/h",
+        "max": "RN: perfusão máx. 50 mcg/kg/h",
+        "freq": "Titular por resposta glicémica",
+        "note": "BNFC 2020-21 (Glucagon, p. 502)."
       }
     ],
-    "prep": "IM/SC: reconstituir pó com diluente fornecido — agitar até dissolver. Usar imediatamente. EV (intoxicação): diluir em SG5% (não SF — precipita). Refrigerar antes de reconstituição.",
+    "prep": "IM/SC: reconstituir o pó com o diluente fornecido e administrar de imediato. EV contínuo: não adicionar a soluções que contenham cálcio (precipitação — BNFC 2020-21). Bólus na intoxicação por beta-bloqueante: em glicose 5%.",
     "ci": [
-      "Feocromocitoma (libertação de catecolaminas — HTA grave)",
-      "Insulinoma (hipoglicemia de rebote após efeito)",
-      "Hipersensibilidade ao glucagão ou lactose (excipiente)"
+      "Feocromocitoma (BNFC 2020-21)"
     ],
     "alert": [
-      "⚠️ Vómitos frequentes (30–50%) — posicionar em decúbito lateral; risco aspiração",
-      "⚠️ Efeito transitório (30–60 min) — dar hidratos de carbono orais logo que possível após recuperação",
-      "⚠️ Feocromocitoma não diagnosticado — HTA paradoxal grave",
-      "Em intoxicação por BCC e BB: glucagão é adjuvante; associar insulina-euglicemia de alta dose, lipid emulsion, ECMO se refractário",
-      "Hiperglicemia transitória após administração — monitorizar glicemia"
+      "⚠️ Ineficaz em hipoglicemia crónica, jejum prolongado e insuficiência supra-renal (BNFC 2020-21)",
+      "Precaução: insulinoma, glucagonoma (BNFC 2020-21)",
+      "Teste de GH: risco de hipoglicemia tardia (óbitos descritos) — garantir refeição antes da alta (BNFC 2020-21)",
+      "Efeitos adversos: náuseas (frequentes), vómitos (pouco frequentes) — proteger a via aérea"
     ],
-    "source": "BNF for Children 2023-24; Krentz AJ et al. Diabet Med 2011; Graudins A et al. Emerg Med Australas 2016 (BB/CCB toxicity)",
-    "review": ["Formulário de Pediatria 3ª Ed. indica hipoglicemia 0,03–0,1 mg/kg/dose (máx. 1 mg) e RN 25–30 mcg/kg; esta ficha usa dose fixa por peso (< 25 kg: 0,5 mg; ≥ 25 kg: 1 mg). Confirmar qual o protocolo local.", "Intoxicação por beta-bloqueante: existiam 2 fichas discordantes (bólus em 1 min vs 3–5 min; perfusão 2–5 mg/h vs 0,05–0,1 mg/kg/h). Dose/velocidade de bólus não verificadas — confirmar com Centro de Informação Antivenenos (CIAV 800 250 250) / ToxBase.", "Dose de glucagon para hipoglicemia neonatal EV (0,02–0,1 mg/kg) removida por duplicação: não verificada."]
+    "source": "BNF for Children 2020-21, Glucagon (p. 502)"
   },
   {
     "id": "levotiroxina",
