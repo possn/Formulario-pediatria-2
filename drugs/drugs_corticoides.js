@@ -23,53 +23,53 @@ var DRUGS_CORTICOIDES = [
     ],
     "dose": [
       {
-        "ind": "Meningite bacteriana",
-        "val": "0,15 mg/kg/dose EV",
+        "ind": "Meningite bacteriana — adjuvante (antes ou com a 1.ª dose de antibiótico), 3 meses–17 anos",
+        "val": "0,15 mg/kg EV lento cada 6 h durante 4 dias",
         "max": "10 mg/dose",
-        "freq": "4 doses/dia × 4 dias",
-        "note": "Iniciar com ou antes da 1ª dose de antibiótico. Evidência mais forte em meningite por H. influenzae e S. pneumoniae"
+        "freq": "Cada 6 h × 4 dias",
+        "note": "BNFC 2020-21 (p. 474)."
       },
       {
-        "ind": "Crupe moderado-grave",
-        "val": "0,15–0,6 mg/kg oral/IM/EV",
-        "max": "10 mg",
-        "freq": "dose única",
-        "note": "0,15 mg/kg oral tão eficaz como 0,6 mg/kg — NRCG meta-analysis 2018"
+        "ind": "Crupe ligeiro — oral",
+        "val": "0,15 mg/kg, dose única",
+        "max": "—",
+        "freq": "Dose única",
+        "note": "BNFC 2020-21 (p. 474)."
       },
       {
-        "ind": "Edema cerebral peritumoral",
-        "val": "0,5 mg/kg/dia EV",
-        "max": "16 mg/dia",
-        "freq": "2–4 doses/dia",
-        "note": ""
+        "ind": "Crupe grave (ou ligeiro com risco de complicações) — oral/EV",
+        "val": "0,15 mg/kg; repetir 0,15 mg/kg e novamente às 12 h, se necessário",
+        "max": "—",
+        "freq": "Até 3 doses",
+        "note": "BNFC 2020-21 (p. 474). Doses até 0,6 mg/kg em dose única são usadas noutras normas, mas não constam do BNFC."
       },
       {
-        "ind": "Pré-extubação",
-        "val": "0,5 mg/kg/dose EV",
-        "max": "10 mg",
-        "freq": "cada 8h × 3 doses (última dose 1h antes extubação)",
-        "note": ""
+        "ind": "Edema cerebral com risco de vida — EV",
+        "val": "< 35 kg: 16,7 mg inicial; depois 3,3 mg cada 3 h × 3 dias; 3,3 mg cada 6 h × 1 dia; 1,7 mg cada 6 h × 4 dias; reduzir 0,8 mg/dia. ≥ 35 kg: 20,8 mg inicial; depois 3,3 mg cada 2 h × 3 dias; cada 4 h × 1 dia; cada 6 h × 4 dias; reduzir 1,7 mg/dia",
+        "max": "—",
+        "freq": "Esquema decrescente",
+        "note": "BNFC 2020-21 (p. 474)."
       },
       {
-        "ind": "Insuf. supra-renal aguda",
-        "val": "1–2 mg/kg EV bólus",
-        "max": "100 mg",
-        "freq": "seguido de 1 mg/kg/dia",
-        "note": ""
+        "ind": "Supressão de doenças inflamatórias/alérgicas — oral",
+        "val": "10–100 mcg/kg/dia em 1–2 doses; até 300 mcg/kg/dia em emergência",
+        "max": "—",
+        "freq": "1–2×/dia",
+        "note": "BNFC 2020-21 (p. 474)."
       },
       {
-        "ind": "Antiemético (QT altamente emetizante)",
-        "val": "0,25 mg/kg EV",
-        "max": "8–12 mg",
-        "freq": "30 min antes QT + q6h",
-        "note": "Associar a ondansetron ± aprepitant"
+        "ind": "Supressão de doenças inflamatórias/alérgicas — EV/IM, 1 mês–11 anos",
+        "val": "83–333 mcg/kg/dia em 1–2 doses",
+        "max": "20 mg/dia",
+        "freq": "1–2×/dia",
+        "note": "BNFC 2020-21 (p. 474). 12–17 anos: inicial 0,4–20 mg/dia."
       },
       {
-        "ind": "Edema cerebral por tumor",
-        "val": "0,5–2 mg/kg/dia EV/PO",
-        "max": "16 mg/dia",
-        "freq": "q6h",
-        "note": "Dose de indução 1–2 mg/kg; reduzir para dose de manutenção ao fim de 48–72h"
+        "ind": "Reposição fisiológica — oral/EV lento",
+        "val": "250–500 mcg/m² cada 12 h",
+        "max": "—",
+        "freq": "Cada 12 h",
+        "note": "BNFC 2020-21 (p. 474)."
       }
     ],
     "prep": "EV: pode administrar não diluído (4 mg/ml) em bólus 5–10 min, ou diluir em SF/SG5%. Oral: solução 2 mg/5 ml; comprimidos 0,5/2 mg. Concentração máxima EV: 10 mg/ml (formulação concentrada hospitalar). Compatível com a maioria dos fármacos em Y-site. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -89,7 +89,9 @@ var DRUGS_CORTICOIDES = [
       "Imunossupressão — risco infecções oportunistas; pneumocistose profilaxia obrigatória em protocolos prolongados",
       "Insuf. supra-renal com retirada abrupta após uso prolongado"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; Cochrane 2015; BNF for Children 2023-24; Dupuis LL et al. Pediatr Blood Cancer 2013; SIOPE CNS Tumor Guidelines"
+    "source": "BNFC 2020-21, Dexamethasone (p. 474); Formulário de Pediatria 3ª Ed.",
+    "review": ["Removidos por não constarem do BNFC 2020-21: pré-extubação 0,5 mg/kg q8h, antiemético em QT 0,25 mg/kg, edema peritumoral 0,5–2 mg/kg/dia e bólus de 1–2 mg/kg em insuficiência suprarrenal (a hidrocortisona é o fármaco de escolha). Confirmar em protocolo local se necessário.", "O BNFC não define a duração da dexametasona pré-extubação nem a dose para edema peritumoral; a ficha anterior excedia a dose máxima pediátrica habitual."]
+  
   },
   {
     "id": "hidrocortisona",
@@ -109,46 +111,88 @@ var DRUGS_CORTICOIDES = [
     ],
     "dose": [
       {
-        "ind": "Insuf. supra-renal aguda / crise addissoniana",
-        "val": "CARGA: 50–100 mg/m² EV bólus (ou 1–2 mg/kg)",
-        "max": "200 mg bólus",
-        "freq": "seguido de 50–100 mg/m²/dia em perfusão contínua ou 4 doses/dia",
-        "note": ""
-      },
-      {
-        "ind": "Choque séptico refractário",
-        "val": "1–2 mg/kg/dia EV",
-        "max": "200 mg/dia",
-        "freq": "perfusão contínua ou cada 6–8h",
-        "note": "ADRENAL trial e metanálises: benefício incerto em pediatria. Considerar em choque catecol-refractário com suspeita ISR"
-      },
-      {
-        "ind": "Anafilaxia / asma grave",
-        "val": "4 mg/kg/dose EV",
-        "max": "200 mg/dose",
-        "freq": "cada 6h",
-        "note": "Efeito diferido 4–6h — não é fármaco de emergência imediata"
-      },
-      {
-        "ind": "Reposição fisiológica oral",
-        "val": "8–10 mg/m²/dia oral",
+        "ind": "Insuficiência suprarrenal aguda (crise addisoniana) — RN",
+        "val": "10 mg EV lento; depois 100 mg/m²/dia em perfusão ou em doses cada 6–8 h; reduzir em 4–5 dias para dose oral",
         "max": "—",
-        "freq": "3 doses/dia (manhã 50%, tarde 25%, noite 25%)",
-        "note": "HAC: 10–15 mg/m²/dia (doses mais altas para supressão androgénios)"
+        "freq": "Perfusão contínua ou cada 6–8 h",
+        "note": "BNFC 2020-21 (p. 476)."
       },
       {
-        "ind": "Dose de stress (doença minor)",
-        "val": "2–3× dose habitual",
+        "ind": "Insuficiência suprarrenal aguda (crise addisoniana) — 1 mês–11 anos",
+        "val": "2–4 mg/kg EV; depois 2–4 mg/kg cada 6 h; reduzir em 4–5 dias para dose oral",
         "max": "—",
-        "freq": "até resolução da doença",
-        "note": ""
+        "freq": "Cada 6 h",
+        "note": "BNFC 2020-21 (p. 476)."
       },
       {
-        "ind": "Dose de stress major/cirurgia EV",
-        "val": "50–100 mg/m² EV bólus → 50–100 mg/m²/dia",
-        "max": "200 mg",
-        "freq": "perfusão contínua ou cada 6h",
-        "note": ""
+        "ind": "Insuficiência suprarrenal aguda (crise addisoniana) — 12–17 anos",
+        "val": "100 mg EV cada 6–8 h",
+        "max": "—",
+        "freq": "Cada 6–8 h",
+        "note": "BNFC 2020-21 (p. 476)."
+      },
+      {
+        "ind": "Hipotensão refractária a inotrópicos e volume — RN (evidência limitada)",
+        "val": "2,5 mg/kg EV; repetir às 4 h se necessário; depois 2,5 mg/kg cada 6 h durante 48 h ou até recuperação da PA; reduzir ao longo de ≥ 48 h",
+        "max": "—",
+        "freq": "Cada 6 h",
+        "note": "BNFC 2020-21 (p. 476)."
+      },
+      {
+        "ind": "Hipotensão refractária a inotrópicos e volume / choque séptico — criança (evidência limitada)",
+        "val": "1 mg/kg EV cada 6 h",
+        "max": "100 mg/dose",
+        "freq": "Cada 6 h",
+        "note": "BNFC 2020-21 (p. 476). Perfusão contínua 50 mg/m²/dia usada em algumas normas (Surviving Sepsis Campaign Children 2020)."
+      },
+      {
+        "ind": "Asma aguda grave / com risco de vida — EV",
+        "val": "4 mg/kg cada 6 h; alternativa 1–11 meses 25 mg; 2–4 anos 50 mg; ≥ 5 anos 100 mg cada 6 h, até passar a prednisolona oral",
+        "max": "100 mg/dose",
+        "freq": "Cada 6 h",
+        "note": "BNFC 2020-21 (p. 476). Preferir succinato de sódio."
+      },
+      {
+        "ind": "Reações de hipersensibilidade agudas / angioedema — IM/EV",
+        "val": "1–5 meses 25 mg; 6 meses–5 anos 50 mg; 6–11 anos 100 mg; 12–17 anos 200 mg; 3×/dia",
+        "max": "—",
+        "freq": "3×/dia",
+        "note": "BNFC 2020-21 (p. 476). Adjuvante: a adrenalina é o tratamento de 1.ª linha na anafilaxia."
+      },
+      {
+        "ind": "Hiperplasia suprarrenal congénita — oral",
+        "val": "9–15 mg/m²/dia em 3 doses (RN e criança)",
+        "max": "—",
+        "freq": "3 doses/dia",
+        "note": "BNFC 2020-21 (p. 476)."
+      },
+      {
+        "ind": "Reposição na insuficiência suprarrenal crónica / doença de Addison — oral",
+        "val": "8–10 mg/m²/dia em 3 doses, a maior de manhã",
+        "max": "—",
+        "freq": "3 doses/dia",
+        "note": "BNFC 2020-21 (p. 476). Não usar comprimidos bucais muco-adesivos (alerta MHRA 2018)."
+      },
+      {
+        "ind": "Doença inflamatória intestinal — indução de remissão, 2–17 anos",
+        "val": "2,5 mg/kg EV cada 6 h; ou perfusão contínua 10 mg/kg/dia",
+        "max": "100 mg/dose; 400 mg/dia na perfusão",
+        "freq": "Cada 6 h",
+        "note": "BNFC 2020-21 (p. 476)."
+      },
+      {
+        "ind": "Dose de stress — doença menor (oral)",
+        "val": "2–3× a dose habitual de reposição até resolução",
+        "max": "—",
+        "freq": "Até resolução",
+        "note": "Não consta do BNFC; ver revisão pendente."
+      },
+      {
+        "ind": "Dose de stress major / cirurgia — EV",
+        "val": "50–100 mg/m² EV em bólus; depois 50–100 mg/m²/dia em perfusão ou cada 6 h",
+        "max": "200 mg (bólus)",
+        "freq": "Perfusão ou cada 6 h",
+        "note": "Não consta do BNFC; ver revisão pendente."
       }
     ],
     "prep": "EV: reconstituir 100 mg em 2 ml SWFI (50 mg/ml); diluir em SF ou SG5%. Dose de carga (choque): administrar em 5–15 min. Doses de manutenção: 30 min. Concentração máxima EV: 50 mg/ml. IM: solução reconstituída sem diluição. Oral: comprimidos 10/20 mg; solução 10 mg/5 ml. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -167,7 +211,9 @@ var DRUGS_CORTICOIDES = [
       "⚠️ Pais/doente devem ter injecção EV/IM de emergência em casa",
       "Monitorizar crescimento, PA e glicemia em uso crónico"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; BNF for Children 2023-24; Endocrine Society Guidelines 2016"
+    "source": "BNFC 2020-21, Hydrocortisone (p. 476); Formulário de Pediatria 3ª Ed.; Surviving Sepsis Campaign Children 2020",
+    "review": ["As doses de stress (doença menor e major/cirurgia) não constam do BNFC 2020-21; mantidas da ficha anterior, a confirmar com a Endocrinologia.", "A ficha anterior tinha asma com máximo de 200 mg/dose e anafilaxia a 4 mg/kg; o BNFC 2020-21 indica máximo de 100 mg/dose na asma e doses fixas por idade na hipersensibilidade.", "Choque séptico: a ficha anterior tinha 1–2 mg/kg/dia (máx. 200 mg/dia); o BNFC indica 1 mg/kg cada 6 h (máx. 100 mg/dose)."]
+  
   },
   {
     "id": "prednisolona",
@@ -243,11 +289,18 @@ var DRUGS_CORTICOIDES = [
     ],
     "dose": [
       {
-        "ind": "Transplante órgão sólido — EV (fase aguda)",
-        "val": "3–5 mg/kg/dia EV",
+        "ind": "Colite ulcerosa refractária — oral, 2–17 anos",
+        "val": "Inicial 2 mg/kg 2×/dia; ajustar à concentração sanguínea e resposta",
+        "max": "5 mg/kg/dose (2×/dia)",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 559)."
+      },
+      {
+        "ind": "Colite ulcerosa refractária — perfusão EV, 3–17 anos",
+        "val": "Inicial 0,5–1 mg/kg 2×/dia; ajustar à concentração sanguínea e resposta",
         "max": "—",
-        "freq": "perfusão contínua 24h ou 2 doses/dia",
-        "note": "Monitorização de nível sérico (C0 ou C2) obrigatória"
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 559). Alternativa em ECCO-ESPGHAN: 2 mg/kg/dia em perfusão contínua."
       },
       {
         "ind": "Transplante — oral (manutenção)",
@@ -262,13 +315,6 @@ var DRUGS_CORTICOIDES = [
         "max": "—",
         "freq": "2 doses/dia",
         "note": "Nível C0 alvo: 80–120 ng/ml"
-      },
-      {
-        "ind": "CU grave refractária a corticoides",
-        "val": "2 mg/kg/dia EV perfusão contínua",
-        "max": "—",
-        "freq": "Perfusão contínua 24h; converter para oral após resposta (5–8 mg/kg/dia em 2 doses)",
-        "note": "Nível sérico alvo: 150–250 ng/mL (monitorizar q2–3 dias). Duração máxima 3–7 dias EV"
       }
     ],
     "prep": "EV: diluir em SF ou SG5% para 0,5–2,5 mg/ml. ⚠️ Evitar PVC — adsorção (usar vidro ou polietileno). Perfusão contínua 24h. Oral: solução 100 mg/ml — misturar em sumo de laranja ou maçã (NÃO toranja/grapefruit — inibe CYP3A4). Comprimidos não são bioequivalentes às diferentes formulações — não substituir sem TDM.",
@@ -293,7 +339,9 @@ var DRUGS_CORTICOIDES = [
       "⚠️ Inúmeras interacções — ver ciclosporina em corticoides",
       "Pontes para colectomia ou biológico — não é terapêutica de manutenção indefinida"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; BNF for Children 2023-24; Turner D et al. Gastroenterology 2011; ECCO CU Guidelines 2019"
+    "source": "BNFC 2020-21, Ciclosporin (p. 559); ECCO-ESPGHAN IBD Guidelines 2018",
+    "review": ["Doses de transplante (EV 3–5 mg/kg/dia) e síndrome nefrótico (3–5 mg/kg/dia) mantidas da ficha anterior; não consegui confirmar no BNFC 2020-21 (a página de transplante não foi lida). Confirmar com o nível sérico e o protocolo local.", "As doses EV de 1–2,5 mg/kg/dia que encontrei no BNFC 2020-21 (p. 558) referem-se à globulina antitimocítica, não à ciclosporina."]
+  
   },
   {
     "id": "tacrolimus",
@@ -310,25 +358,46 @@ var DRUGS_CORTICOIDES = [
     ],
     "dose": [
       {
-        "ind": "Transplante renal — oral",
-        "val": "0,1–0,15 mg/kg/dia oral",
+        "ind": "Transplante hepático — oral, RN e criança",
+        "val": "Inicial 150 mcg/kg 2×/dia, começando 12 h após o transplante",
         "max": "—",
-        "freq": "2 doses/dia (cada 12h em jejum)",
-        "note": "Nível C0 alvo: 5–15 ng/ml (varia por fase e órgão)"
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 561). Ajustar ao nível sérico (vale). Enterocolite e interação com azóis e macrólidos."
       },
       {
-        "ind": "Transplante hepático — oral",
-        "val": "0,1–0,2 mg/kg/dia oral",
+        "ind": "Transplante renal — oral, RN e criança",
+        "val": "Inicial 150 mcg/kg 2×/dia, nas primeiras 24 h; 100 mcg/kg 2×/dia em adolescentes para evitar vales muito altos",
         "max": "—",
-        "freq": "2 doses/dia",
-        "note": ""
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 561)."
       },
       {
-        "ind": "EV (fase aguda pós-transplante)",
-        "val": "0,01–0,05 mg/kg/dia EV",
+        "ind": "Transplante cardíaco — oral, RN e criança",
+        "val": "Com indução de anticorpos: inicial 50–150 mcg/kg 2×/dia, nos primeiros 5 dias; sem indução: 150 mcg/kg 2×/dia, 8–12 h após suspender a perfusão EV",
         "max": "—",
-        "freq": "perfusão contínua 24h",
-        "note": "Converter para oral 1:4 (dose EV × 4 = dose oral)"
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 561)."
+      },
+      {
+        "ind": "Transplante hepático — perfusão EV contínua 24 h (se via oral inadequada)",
+        "val": "Inicial 50 mcg/kg/dia, até 7 dias",
+        "max": "—",
+        "freq": "Perfusão contínua 24 h",
+        "note": "BNFC 2020-21 (p. 562). Doses EV e orais não são intermutáveis."
+      },
+      {
+        "ind": "Transplante renal — perfusão EV contínua 24 h (se via oral inadequada)",
+        "val": "Inicial 75–100 mcg/kg/dia, até 7 dias",
+        "max": "—",
+        "freq": "Perfusão contínua 24 h",
+        "note": "BNFC 2020-21 (p. 562)."
+      },
+      {
+        "ind": "Transplante cardíaco sem indução — perfusão EV contínua 24 h",
+        "val": "Inicial 30–50 mcg/kg/dia, até 7 dias",
+        "max": "—",
+        "freq": "Perfusão contínua 24 h",
+        "note": "BNFC 2020-21 (p. 562). Incompatível com PVC."
       }
     ],
     "prep": "Oral: cápsulas 0,5/1/5 mg (Prograf) — em JEJUM, 1h antes ou 2–3h após refeição (alimentos reduzem Cmax 50%). Comprimidos LP (Advagraf) — 1× /dia, SEMPRE em jejum. Solução oral 0,5 mg/ml. EV: diluir em SF ou SG5% para 0,004–0,1 mg/ml; tubagem PE ou PVC não-plastificado (adsorção PVC). Via central. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -344,7 +413,9 @@ var DRUGS_CORTICOIDES = [
       "⚠️ Monitorização nível sérico obrigatória (método HPLC em sangue total)",
       "⚠️ Risco linfoma EBV+ (especialmente crianças seronegativas que recebem enxerto EBV+)"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "BNFC 2020-21, Tacrolimus (pp. 561–562)",
+    "review": ["A ficha anterior tinha 0,1–0,15 mg/kg/dia no rim e 0,1–0,2 mg/kg/dia no fígado, bem abaixo das doses iniciais do BNFC 2020-21 (150 mcg/kg 2×/dia = 0,3 mg/kg/dia). Corrigido; a dose EV de 10–50 mcg/kg/dia no rim e fígado também era inferior."]
+  
   },
   {
     "id": "micofenolato",
@@ -360,18 +431,32 @@ var DRUGS_CORTICOIDES = [
     ],
     "dose": [
       {
-        "ind": "Transplante (renal/hepático)",
-        "val": "600 mg/m²/dose PO",
-        "max": "1 g/dose (transplante renal); 1,5 g/dose (transplante hepático)",
-        "freq": "q12h",
-        "note": "Dose em m² preferida à dose em kg para uniformizar exposição (PK variável)"
+        "ind": "Transplante renal com ciclosporina — oral",
+        "val": "600 mg/m² 2×/dia",
+        "max": "2 g/dia",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 566). Consultar protocolo local."
       },
       {
-        "ind": "Nefrite lúpica / nefrótico córtico-resistente",
-        "val": "600 mg/m²/dose PO",
+        "ind": "Transplante renal com tacrolimus — oral",
+        "val": "300 mg/m² 2×/dia",
+        "max": "2 g/dia",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 566). Consultar protocolo local."
+      },
+      {
+        "ind": "Transplante hepático (com ciclosporina ou tacrolimus) — oral",
+        "val": "10 mg/kg 2×/dia, aumentando para 20 mg/kg 2×/dia",
+        "max": "2 g/dia",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 566)."
+      },
+      {
+        "ind": "Nefrite lúpica / síndrome nefrótico córtico-resistente (não consta do BNFC)",
+        "val": "600 mg/m² 2×/dia",
         "max": "1,5 g/dose",
-        "freq": "q12h",
-        "note": "Monitorizar leucócitos — reduzir dose se leucopenia"
+        "freq": "2×/dia",
+        "note": "Appel GB et al. JASN 2009; KDIGO. Indicação fora do BNFC 2020-21."
       }
     ],
     "prep": "Oral: suspensão 200 mg/ml — agitar bem 1 min antes de usar; refrigerar. Cápsulas 250 mg — NÃO abrir (pó teratogénico — luvas obrigatórias se manipulação). Comprimidos 500 mg — NÃO triturar. EV: diluir em SG5% APENAS (não em SF). Tomar com ou sem alimentos (com alimentos reduz Cmax mas não AUC). Fonte: BNF for Children 2023-24; SmPC CellCept.",
@@ -387,7 +472,9 @@ var DRUGS_CORTICOIDES = [
       "Diarreia e náuseas frequentes — tomar com alimentos; formulação entérica (Myfortic) melhor tolerada GI",
       "Ajuste em insuf. renal grave (TFG < 25 ml/min)"
     ],
-    "source": "BNF for Children 2023-24; Appel GB et al. JASN 2009 (nefrite lúpica); KDIGO Transplant Guidelines 2022"
+    "source": "BNFC 2020-21, Mycophenolate mofetil (p. 566); Appel GB et al. JASN 2009",
+    "review": ["A ficha anterior usava 600 mg/m² 2×/dia em qualquer transplante; o BNFC 2020-21 reduz para 300 mg/m² 2×/dia quando associado ao tacrolimus (máx. 2 g/dia)."]
+  
   },
   {
     "id": "azatioprina",
@@ -404,11 +491,25 @@ var DRUGS_CORTICOIDES = [
     ],
     "dose": [
       {
-        "ind": "Imunossupressão / DII manutenção",
-        "val": "1–3 mg/kg/dia PO",
-        "max": "3 mg/kg/dia (150 mg/dia em prática)",
-        "freq": "1–2 doses/dia",
-        "note": "Iniciar com dose baixa (1 mg/kg) e titular por resposta e tolerância hematológica. Verificar TPMT antes de iniciar"
+        "ind": "Colite ulcerosa / doença de Crohn grave — oral, 2–17 anos",
+        "val": "Inicial 2 mg/kg 1×/dia; aumentar se necessário até 2,5 mg/kg 1×/dia",
+        "max": "2,5 mg/kg/dia",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 558). Ajustar ao TPMT."
+      },
+      {
+        "ind": "LES, vasculite e doenças autoimunes (quando corticoides insuficientes) — oral",
+        "val": "Inicial 1 mg/kg/dia; ajustar à resposta até 3 mg/kg/dia",
+        "max": "3 mg/kg/dia",
+        "freq": "1–2×/dia",
+        "note": "BNFC 2020-21 (p. 558). Considerar suspender se sem melhoria em 3 meses."
+      },
+      {
+        "ind": "Supressão de rejeição de transplante — oral ou EV",
+        "val": "Manutenção 1–3 mg/kg/dia, ajustado à resposta",
+        "max": "—",
+        "freq": "1–2×/dia (1× por dia ou dividido)",
+        "note": "BNFC 2020-21 (p. 558). Via oral preferida. Reduzir para um quarto da dose se associado a alopurinol."
       }
     ],
     "prep": "Oral: comprimidos 25/50 mg — engolir inteiros com água (sabor muito amargo). EV: reconstituir 50 mg em 5–15 ml SWFI; diluir em SF ou SG5% para 0,5–5 mg/ml; administrar em 30–60 min. ⚠️ Pó teratogénico e mutagénico — usar luvas se manipulação de comprimidos partidos. Fonte: BNF for Children 2023-24.",
@@ -424,7 +525,9 @@ var DRUGS_CORTICOIDES = [
       "Hemograma semanal no 1º mês, mensal depois",
       "Risco aumentado de linfoma (especialmente linfoma hepatoesplénico de células T em DII)"
     ],
-    "source": "BNF for Children 2023-24; ECCO-ESPGHAN IBD Guidelines 2018; Colombel JF et al. NEJM 2010"
+    "source": "BNFC 2020-21, Azathioprine (p. 558); ECCO-ESPGHAN IBD Guidelines 2018",
+    "review": ["Pesquisar atividade da TPMT antes de iniciar (BNFC 2020-21)."]
+  
   },
   {
     "id": "metotrexato_imuno",
@@ -441,11 +544,25 @@ var DRUGS_CORTICOIDES = [
     ],
     "dose": [
       {
-        "ind": "AIJ / doenças reumatológicas",
-        "val": "10–15 mg/m²/semana PO/SC",
-        "max": "20–25 mg/semana",
-        "freq": "1× /semana (sempre no mesmo dia)",
-        "note": "SC preferível a PO: melhor biodisponibilidade e menos náuseas GI. Associar ácido fólico 5 mg 24–48h após cada dose"
+        "ind": "AIJ, dermatomiosite juvenil, vasculite, uveíte, LES, esclerodermia localizada, sarcoidose — oral/SC/IM",
+        "val": "Inicial 10–15 mg/m² 1×/semana; aumentar se necessário até 25 mg/m² 1×/semana",
+        "max": "—",
+        "freq": "1×/semana, sempre no mesmo dia",
+        "note": "BNFC 2020-21 (p. 587). Dose semanal: erro de toma diária é potencialmente fatal. Ácido fólico 1 mg/dia nos outros dias."
+      },
+      {
+        "ind": "Doença de Crohn grave — SC/IM, 7–17 anos",
+        "val": "15 mg/m² 1×/semana",
+        "max": "25 mg/dose",
+        "freq": "1×/semana",
+        "note": "BNFC 2020-21 (p. 587). Manutenção oral/SC/IM na dose mais baixa eficaz."
+      },
+      {
+        "ind": "Psoríase grave (uso especializado) — oral, 2–17 anos",
+        "val": "Inicial 200 mcg/kg 1×/semana (máx. 10 mg); aumentar se necessário até 400 mcg/kg 1×/semana",
+        "max": "25 mg/dose",
+        "freq": "1×/semana",
+        "note": "BNFC 2020-21 (p. 587). Suspender se resposta inadequada após 3 meses."
       }
     ],
     "prep": "SC: seringas pré-cheias (5–25 mg/0,4–1 ml) — injectar em abdómen ou coxa anterior. PO: comprimidos 2,5/10 mg — tomar em DIA FIXO semanal; não confundir com dose diária (erros letais documentados). ⚠️ Teratogénico — luvas ao manipular; nunca esmagar sem protecção. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -463,7 +580,9 @@ var DRUGS_CORTICOIDES = [
       "⚠️ Toxicidade aumentada com AINEs e cotrimoxazol (reduzem clearance renal)",
       "Mucosite oral — reduz com ácido fólico"
     ],
-    "source": "BNF for Children 2023-24; Ravelli A et al. Ann Rheum Dis 1995; ACR JIA Guidelines 2021"
+    "source": "BNFC 2020-21, Methotrexate (p. 587); ACR JIA Guideline 2019",
+    "review": ["A ficha anterior máx. 20–25 mg/semana em dose absoluta; o BNFC 2020-21 refere até 25 mg/m²/semana em doenças reumatológicas."]
+  
   },
   {
     "id": "hidroxicloroquina",
@@ -479,11 +598,11 @@ var DRUGS_CORTICOIDES = [
     ],
     "dose": [
       {
-        "ind": "LES / doenças autoimunes",
-        "val": "5 mg/kg/dia PO (dose real de peso — não ideal)",
-        "max": "400 mg/dia",
-        "freq": "1–2 doses/dia com refeições",
-        "note": "Dose MÁXIMA: 5 mg/kg/dia de peso real (não ideal) — acima deste limiar risco retinal aumenta progressivamente"
+        "ind": "Artrite reumatoide/AIJ, LES e lúpus discoide, dermatoses fotossensíveis — oral",
+        "val": "5–6,5 mg/kg 1×/dia, pelo peso ideal",
+        "max": "400 mg/dose",
+        "freq": "1×/dia, com refeições",
+        "note": "BNFC 2020-21 (p. 690). Rastreio oftalmológico anual (Melles, JAMA Ophthalmol 2014)."
       }
     ],
     "prep": "Oral: comprimidos 200 mg — podem ser triturados e misturados com alimentos. Solução extemporânea 25 mg/5 ml (estável 60 dias refrigerada). Tomar COM refeições (reduz irritação GI). ⚠️ Efeito terapêutico demora 3–6 meses — não descontinuar precocemente. Fonte: BNF for Children 2023-24.",
@@ -499,7 +618,9 @@ var DRUGS_CORTICOIDES = [
       "Efeito terapêutico demora 3–6 meses — não descontinuar precocemente por falta de resposta imediata",
       "Protege contra flares de LES e reduz mortalidade — tratar como fármaco basal obrigatório"
     ],
-    "source": "BNF for Children 2023-24; Melles RB et al. JAMA Ophthalmol 2014; EULAR LES Guidelines 2023"
+    "source": "BNFC 2020-21, Hydroxychloroquine sulfate (p. 690); Melles RB et al. JAMA Ophthalmol 2014",
+    "review": ["A ficha anterior limitava a 5 mg/kg/dia; o BNFC 2020-21 admite 5–6,5 mg/kg/dia (peso ideal)."]
+  
   },
   {
     "id": "everolimus",
@@ -558,11 +679,18 @@ var DRUGS_CORTICOIDES = [
     ],
     "dose": [
       {
-        "ind": "Transplante renal/hepático — indução",
-        "val": "< 35 kg: 10 mg EV; ≥ 35 kg: 20 mg EV",
-        "max": "20 mg/dose",
-        "freq": "2 doses: dia 0 (2h antes transplante) e dia 4 pós-transplante",
-        "note": "Não repetir se rejeição grave ou infecção grave no intervalo"
+        "ind": "Profilaxia da rejeição em transplante renal alogénico — EV, 1–17 anos, < 35 kg",
+        "val": "10 mg nas 2 h antes da cirurgia; 10 mg ao dia 4 após a cirurgia",
+        "max": "—",
+        "freq": "2 doses",
+        "note": "BNFC 2020-21 (p. 566). Omitir 2.ª dose se hipersensibilidade grave ou perda do enxerto."
+      },
+      {
+        "ind": "Profilaxia da rejeição em transplante renal alogénico — EV, 1–17 anos, ≥ 35 kg",
+        "val": "20 mg nas 2 h antes da cirurgia; 20 mg ao dia 4 após a cirurgia",
+        "max": "—",
+        "freq": "2 doses",
+        "note": "BNFC 2020-21 (p. 566). Diluir até ≤ 400 mcg/mL e administrar em 20–30 min."
       }
     ],
     "prep": "EV: reconstituir 20 mg em 5 ml SWFI (4 mg/ml); girar suavemente até dissolver. Diluir em SF ou SG5% para volume final de 50 ml. Administrar em 20–30 min. ⚠️ NÃO agitar após reconstituição. Estabilidade: 24h a 4°C; 4h a 25°C. Fonte: BNF for Children 2023-24; SmPC Simulect.",
@@ -574,7 +702,9 @@ var DRUGS_CORTICOIDES = [
       "Sem necessidade de TDM — dosagem fixa por peso",
       "Vigilância de infecções virais pós-transplante (CMV, EBV) conforme protocolo"
     ],
-    "source": "BNF for Children 2023-24; Offner G et al. Pediatr Nephrol 2002; KDIGO Transplant 2022"
+    "source": "BNFC 2020-21, Basiliximab (p. 566); NICE TA482 (2017)",
+    "review": ["A segunda dose é ao dia 4 após a cirurgia. A indicação em transplante hepático da ficha anterior não consta do BNFC 2020-21 (indicado só em transplante renal; o uso em transplante cardíaco aumenta o risco de efeitos cardíacos graves)."]
+
   },
   {
     "id": "belimumab",
@@ -607,6 +737,8 @@ var DRUGS_CORTICOIDES = [
       "Rastrear TB e VHB antes de iniciar",
       "Eficácia modesta na nefrite lúpica como monoterapia — usar adjuvante ao imunossupressor standard"
     ],
-    "source": "BNF for Children 2023-24; Brunner HI et al. Arthritis Rheumatol 2020 (PLUTO pediátrico); EULAR LES 2023"
+    "source": "Brunner HI et al. Arthritis Rheumatol 2020 (PLUTO); não consta do BNFC 2020-21",
+    "review": ["O belimumab não consta do BNFC 2020-21: a dose (10 mg/kg EV às semanas 0, 2, 4 e depois cada 4 semanas) provém do ensaio PLUTO (Brunner 2020) e não foi verificada contra as fontes do utilizador."]
+
   }
 ];
