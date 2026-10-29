@@ -1,4 +1,4 @@
-const CACHE = 'ucip-v60';
+const CACHE = 'ucip-v61';
 const ASSETS = [
   './', './index.html', './compat_data.js', './logo.svg', './algorithms.js', './manifest.json',
   './apple-touch-icon.png', './icon-192.png', './icon-512.png',

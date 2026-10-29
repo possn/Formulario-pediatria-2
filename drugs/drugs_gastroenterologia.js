@@ -19,25 +19,39 @@ var DRUGS_GASTROENTEROLOGIA = [
     ],
     "dose": [
       {
-        "ind": "DRGE / Úlcera (oral)",
-        "val": "1–2 mg/kg/dia oral",
-        "max": "40 mg/dia",
-        "freq": "1 dose/dia (30 min antes refeição)",
-        "note": "RN/lactente: 0,5–1 mg/kg/dia"
-      },
-      {
-        "ind": "UCIP — profilaxia úlcera stress EV",
-        "val": "1–2 mg/kg/dia EV",
-        "max": "40 mg/dia",
-        "freq": "1–2 doses/dia",
-        "note": ""
-      },
-      {
-        "ind": "Hemorragia digestiva alta EV",
-        "val": "Carga 80 mg → 8 mg/hora perfusão",
+        "ind": "DRGE / úlcera duodenal ou gástrica — oral, RN",
+        "val": "700 mcg/kg 1×/dia durante 7–14 dias; depois, se necessário, 1,4–2,8 mg/kg 1×/dia",
         "max": "—",
-        "freq": "perfusão 72h",
-        "note": "Protocolo adulto; pediátrico: 1 mg/kg/dose 2×/dia"
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 63)."
+      },
+      {
+        "ind": "DRGE / úlcera — oral, 1 mês–1 ano",
+        "val": "700 mcg/kg 1×/dia; aumentar se necessário até 3 mg/kg 1×/dia",
+        "max": "20 mg/dose",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 63)."
+      },
+      {
+        "ind": "DRGE / úlcera — oral, 2–17 anos",
+        "val": "10–19 kg: 10 mg 1×/dia, até 20 mg se necessário; ≥ 20 kg: 20 mg 1×/dia, até 40 mg se necessário",
+        "max": "40 mg/dia",
+        "freq": "1×/dia, 30 min antes da refeição",
+        "note": "BNFC 2020-21 (p. 63). Esofagite ulcerativa grave: dose alta no máximo 12 semanas."
+      },
+      {
+        "ind": "Úlcera, Zollinger-Ellison, profilaxia de úlcera de stress — EV, 1 mês–11 anos",
+        "val": "Inicial 500 mcg/kg 1×/dia (máx. 20 mg); se necessário até 2 mg/kg 1×/dia",
+        "max": "40 mg/dose",
+        "freq": "1×/dia, injeção em 5 min",
+        "note": "BNFC 2020-21 (p. 63). A profilaxia da úlcera de stress em UCIP é extrapolação destas doses."
+      },
+      {
+        "ind": "Úlcera, Zollinger-Ellison — EV, 12–17 anos",
+        "val": "40 mg 1×/dia, injeção em 5 min",
+        "max": "40 mg/dose",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 63)."
       }
     ],
     "prep": "EV: reconstituir 40 mg em 10 ml SF ou SWFI (4 mg/ml); diluir em SF 100 ml (0,4 mg/ml). Infusão 20–30 min. ⚠️ Incompatível com quase todos os fármacos na mesma linha (pH muito alcalino — linha dedicada obrigatória). Estabilidade CRÍTICA: apenas 6h após reconstituição (degradação rápida em solução).",
@@ -51,7 +65,9 @@ var DRUGS_GASTROENTEROLOGIA = [
       "⚠️ Interacção clopidogrel (reduz eficácia antiagregante — usar pantoprazol)",
       "Não usar de rotina em todos os doentes de UCIP — indicação clínica rigorosa"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Omeprazole (p. 63); Formulário de Pediatria 3ª Ed.",
+    "review": ["A dose de hemorragia digestiva alta (80 mg em carga e 8 mg/h durante 72 h) é a de adultos e não consta do BNFC 2020-21: removida. Usar protocolo local."]
+  
   },
   {
     "id": "ondansetron",
@@ -69,25 +85,25 @@ var DRUGS_GASTROENTEROLOGIA = [
     ],
     "dose": [
       {
-        "ind": "Prevenção/tratamento de náuseas e vómitos pós-operatórios — EV lento",
-        "val": "100 mcg/kg",
-        "max": "4 mg/dose",
-        "freq": "Dose única, ≥ 30 s",
-        "note": "BNFC 2020-21 (p. 281). Shann: profilaxia 0,15 mg/kg; tratamento 0,2 mg/kg."
+        "ind": "Prevenção e tratamento de náuseas e vómitos pós-operatórios — EV lento",
+        "val": "100 mcg/kg, dose única, em ≥ 30 s",
+        "max": "4 mg",
+        "freq": "Dose única",
+        "note": "BNFC 2020-21 (p. 281)."
       },
       {
-        "ind": "Náuseas/vómitos por QT/RT — EV",
-        "val": "150 mcg/kg imediatamente antes da QT",
-        "max": "8 mg/dose",
-        "freq": "Repetir cada 4 h × 2 doses; máx. 32 mg/dia",
-        "note": "BNFC 2020-21 (p. 281); seguimento oral por peso/SC na ficha «Ondansetron (quimioterapia)»."
+        "ind": "Náuseas e vómitos induzidos por quimioterapia/radioterapia — EV (6 meses–17 anos)",
+        "val": "150 mcg/kg imediatamente antes da quimioterapia (máx. 8 mg), depois 150 mcg/kg cada 4 h × 2 doses; passar a oral. Alternativa: BSC ≤ 1,3 m² 5 mg/m²; ≥ 1,3 m² 8 mg",
+        "max": "8 mg/dose; 32 mg/dia",
+        "freq": "Cada 4 h × 3 doses",
+        "note": "BNFC 2020-21 (p. 281). Perfusão em ≥ 15 min. Seguimento oral: 2 mg (< 10 kg), 4 mg (10–40 kg), 8 mg (≥ 41 kg) cada 12 h até 5 dias."
       },
       {
-        "ind": "Oral (geral)",
-        "val": "0,1–0,2 mg/kg",
-        "max": "8 mg/dose",
-        "freq": "Cada 6–12 h",
-        "note": "Shann. Uso em gastroenterite é fora de licença."
+        "ind": "Gastroenterite aguda — oral (não consta do BNFC)",
+        "val": "0,15 mg/kg, dose única",
+        "max": "8 mg",
+        "freq": "Dose única",
+        "note": "Freedman SB et al. N Engl J Med 2006; uso fora de indicação."
       }
     ],
     "prep": "EV: diluir em SF ou SG5% para 0,04–0,16 mg/ml. Administrar em 15 min. ⚠️ Incompatível com heparina (precipitação grave), furosemida, pip/tazo. Oral: comprimidos, ODT (orodispersível — colocar na língua sem água), solução 4 mg/5 ml.",
@@ -108,13 +124,14 @@ var DRUGS_GASTROENTEROLOGIA = [
       "Cefaleias — efeito adverso mais frequente",
       "Obstipação frequente em uso prolongado"
     ],
-    "source": "BNFC 2020-21, Ondansetron (p. 281); Shann Drug Doses (Ondansetron); Freedman SB et al. NEJM 2006"
+    "source": "BNFC 2020-21, Ondansetron (p. 281); Freedman SB et al. N Engl J Med 2006",
+    "review": ["A ficha anterior tinha dose EV 0,1–0,15 mg/kg a cada 6–8 h e máximo de 8 mg no pós-operatório; o BNFC 2020-21 indica 100 mcg/kg dose única (máx. 4 mg) no pós-operatório e 150 mcg/kg a cada 4 h × 3 doses na quimioterapia.", "Risco de prolongamento do QT: evitar com fármacos que prolonguem o QT e corrigir K⁺ e Mg²⁺."]
+  
   },
   {
     "id": "metoclopramida",
     "name": "Metoclopramida",
     "category": "gastro",
-    "src": "original",
     "class": "Antagonista dopaminérgico D2 — procinético e antiemético",
     "brands": "Primperan 10 mg comp.; 5 mg/ml EV; 1 mg/ml sol. oral",
     "indication": [
@@ -125,11 +142,11 @@ var DRUGS_GASTROENTEROLOGIA = [
     ],
     "dose": [
       {
-        "ind": "Antiemético / Procinético",
-        "val": "0,1–0,15 mg/kg/dose EV/oral",
-        "max": "10 mg/dose (0,5 mg/kg/dose em < 15 kg)",
-        "freq": "3×/dia",
-        "note": "Duração máxima: 5 dias"
+        "ind": "Náuseas e vómitos pós-operatórios estabelecidos (2.ª linha) / náuseas e vómitos tardios da quimioterapia — oral/IM/EV",
+        "val": "100–150 mcg/kg até 3×/dia; EV lento em ≥ 3 min",
+        "max": "10 mg/dose",
+        "freq": "Até 3×/dia",
+        "note": "BNFC 2020-21 (p. 278). EMA/MHRA: usar só em segunda linha e no máximo 5 dias."
       }
     ],
     "prep": "EV: diluir em SF. Concentração ≤ 5 mg/ml. Administrar em 15–30 min (bólus lento — reacções extrapiramidais com infusão rápida). ⚠️ Incompatível com heparina, furosemida, bicarbonato. Oral: solução 5 mg/5 ml.",
@@ -145,7 +162,9 @@ var DRUGS_GASTROENTEROLOGIA = [
       "⚠️ Uso máximo 5 dias (EMA 2013)",
       "Evitar < 1 ano"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; EMA Safety Review 2013"
+    "source": "BNFC 2020-21, Metoclopramide hydrochloride (p. 278); EMA Safety Review 2013",
+    "review": ["A ficha anterior admitia 0,5 mg/kg/dose em < 15 kg, valor que não consta do BNFC 2020-21 (máx. 10 mg/dose): removido. Risco de sintomas extrapiramidais."]
+  
   },
   {
     "id": "sucralfato",
@@ -306,11 +325,25 @@ var DRUGS_GASTROENTEROLOGIA = [
     ],
     "dose": [
       {
-        "ind": "DRGE / procinético",
-        "val": "0,25 mg/kg/dose PO",
-        "max": "10 mg/dose",
-        "freq": "q6–8h, 15–30 min antes das refeições",
-        "note": "Não exceder 0,5 mg/kg/dia. Não usar > 1 semana sem reavaliação"
+        "ind": "Náuseas e vómitos — oral, 12–17 anos ≥ 35 kg",
+        "val": "10 mg até 3×/dia",
+        "max": "30 mg/dia; habitualmente máx. 1 semana",
+        "freq": "Até 3×/dia",
+        "note": "BNFC 2020-21 (p. 278). EMA 2014: risco cardíaco; contraindicada se QT longo ou com inibidores do CYP3A4."
+      },
+      {
+        "ind": "DRGE (eficácia não comprovada; uso especializado) — oral, RN",
+        "val": "250 mcg/kg 3×/dia; se necessário até 400 mcg/kg 3×/dia",
+        "max": "—",
+        "freq": "3×/dia",
+        "note": "BNFC 2020-21 (p. 278). Interromper ocasionalmente para avaliar recorrência."
+      },
+      {
+        "ind": "DRGE (eficácia não comprovada; uso especializado) — oral, criança",
+        "val": "250 mcg/kg 3×/dia (máx. 10 mg/dose); se necessário até 400 mcg/kg 3×/dia",
+        "max": "20 mg/dose",
+        "freq": "3×/dia",
+        "note": "BNFC 2020-21 (p. 278)."
       }
     ],
     "prep": "Oral: suspensão 1 mg/ml — medir com seringa oral graduada (não colher de chá). Tomar 15–30 min ANTES das refeições (procinético — acção sobre motilidade gástrica). Comprimidos 10 mg para crianças maiores. ⚠️ Dose máxima 0,5 mg/kg/dia — doses superiores aumentam risco QT. Fonte: BNF for Children 2023-24; SmPC Motilium.",
@@ -327,7 +360,9 @@ var DRUGS_GASTROENTEROLOGIA = [
       "Eficácia em DRGE pediátrica modesta — evidência fraca para uso prolongado",
       "Monitorizar ECG se factores de risco de QT"
     ],
-    "source": "BNF for Children 2023-24; EMA Safety Review 2014; Hibbs AM et al. Arch Dis Child 2006"
+    "source": "BNFC 2020-21, Domperidone (p. 278); EMA Safety Review 2014",
+    "review": ["A ficha anterior tinha 0,25 mg/kg a cada 6–8 h; o BNFC 2020-21 refere 3×/dia."]
+  
   },
   {
     "id": "acido_urso",
@@ -343,11 +378,32 @@ var DRUGS_GASTROENTEROLOGIA = [
     ],
     "dose": [
       {
-        "ind": "Colestase / hepatopatia",
-        "val": "10–20 mg/kg/dia PO",
+        "ind": "Colestase — oral, RN e 1–23 meses",
+        "val": "5 mg/kg 3×/dia, ajustar à resposta",
+        "max": "10 mg/kg/dose",
+        "freq": "3×/dia",
+        "note": "BNFC 2020-21 (p. 71)."
+      },
+      {
+        "ind": "Colestase associada à nutrição parentérica — oral",
+        "val": "10 mg/kg 3×/dia",
         "max": "—",
-        "freq": "2–3 doses/dia com refeições",
-        "note": "Fibrose quística: 15–30 mg/kg/dia pode ser necessário"
+        "freq": "3×/dia",
+        "note": "BNFC 2020-21 (p. 71)."
+      },
+      {
+        "ind": "Fibrose quística (metabolismo hepático dos ácidos gordos e fluxo biliar) — oral",
+        "val": "10–15 mg/kg 2×/dia (ou dose diária dividida em 3)",
+        "max": "—",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 71). Colombo C et al. J Hepatol 2016."
+      },
+      {
+        "ind": "Colangite esclerosante — oral",
+        "val": "5–10 mg/kg 2–3×/dia",
+        "max": "15 mg/kg/dose",
+        "freq": "2–3×/dia",
+        "note": "BNFC 2020-21 (p. 71)."
       }
     ],
     "prep": "Oral: suspensão 250 mg/5 ml — agitar bem antes de usar (30 segundos); conservar a 4°C após abertura, usar em 3 meses. Cápsulas 250 mg — podem ser abertas e misturadas em alimentos moles. Tomar COM refeições para maximizar circulação entero-hepática e minimizar intolerância GI. Fonte: BNF for Children 2023-24; SmPC Ursofalk.",
@@ -360,7 +416,9 @@ var DRUGS_GASTROENTEROLOGIA = [
       "Monitorizar TFH trimestralmente",
       "Benefício em colestase neonatal baseado em evidência observacional — sem ensaios controlados robustos"
     ],
-    "source": "BNF for Children 2023-24; Colombo C et al. J Hepatol 2016 (fibrose quística); ESPGHAN Liver Guidelines"
+    "source": "BNFC 2020-21, Ursodeoxycholic acid (p. 71); Colombo C et al. J Hepatol 2016",
+    "review": ["A ficha anterior tinha 10–20 mg/kg/dia em dose geral; passou a seguir as doses por indicação do BNFC 2020-21."]
+  
   },
   {
     "id": "rifaximina",
