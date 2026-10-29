@@ -396,43 +396,26 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "Sedação UCIP — perfusão",
-        "val": "0,2–0,7 mcg/kg/hora",
-        "max": "1,5 mcg/kg/hora (off-label)",
-        "freq": "contínua",
-        "note": "Titular pelo score COMFORT-B ou RASS pediátrico. Onset 15–30 min"
+        "ind": "Sedação em cuidados intensivos / pré-anestesia — perfusão EV (≥ 4 semanas)",
+        "val": "Carga opcional 0,5–1 mcg/kg em ≥ 15 min; manutenção 0,1–1,4 mcg/kg/hora, titulada ao efeito",
+        "max": "1,4 mcg/kg/hora",
+        "freq": "Perfusão contínua; apenas em áreas de cuidados críticos",
+        "note": "PCH Medication Monograph — Dexmedetomidine (Perth Children's Hospital, rev. abr. 2026). A dose de carga associa-se a bradicardia e hipotensão e é decisão do intensivista. Neonatos: seguir protocolo neonatal próprio."
       },
       {
-        "ind": "Dose de carga (opcional)",
-        "val": "0,5–1 mcg/kg EV em 10–20 min",
-        "max": "1 mcg/kg",
-        "freq": "dose única inicial",
-        "note": "⚠️ Frequentemente OMITIDA — associada a bradicardia e hipotensão. Avaliação caso a caso"
-      },
-      {
-        "ind": "RN / < 1 mês",
-        "val": "0,1–0,2 mcg/kg/hora",
-        "max": "0,5 mcg/kg/hora",
-        "freq": "contínua",
-        "note": "Metabolismo hepático imaturo — clearance reduzida, maior variabilidade"
+        "ind": "Pré-medicação / sedação para procedimento pouco doloroso — intranasal (≥ 1 ano e ≥ 10 kg)",
+        "val": "1–4 mcg/kg em dose única, 30–60 min antes",
+        "max": "200 mcg",
+        "freq": "Dose única",
+        "note": "PCH Monograph. Início de efeito em 30–45 min. Procedimentos dolorosos exigem analgésico associado. Em obesos usar peso ideal. Usar dispositivo de atomização mucosa."
       }
     ],
-    "prep": "Diluir em SF ou SG5%. Concentração habitual: 4 mcg/ml (200 mcg em 50 ml). → 1 ml/h/10kg = 0,4 mcg/kg/h. Usar seringa de vidro ou polipropileno (adsorção ao PVC).",
-    "ci": [
-      "Bloqueio AV 2º/3º grau sem pacemaker",
-      "Disfunção hepática grave (reduzir dose 50%)",
-      "Hipotensão não controlada",
-      "Bradicardia sinusal grave"
-    ],
-    "alert": [
-      "⚠️ Uso off-label em pediatria (aprovado ≥ 18 anos) — prática corrente em UCIP",
-      "⚠️ Bradicardia (mais frequente com dose de carga) — monitorização ECG contínua",
-      "⚠️ Hipotensão — não iniciar em doente hipovolémico",
-      "⚠️ Hipertensão transitória paradoxal na carga rápida (estimulação α2 periférica antes central)",
-      "Vantagem major: sedação sem depressão respiratória — doente entubável sem ventilação",
-      "Não tem efeito anticonvulsivante — não usar como antiepiléptico"
-    ],
-    "source": "Tobias JD. Paediatr Drugs 2020;22(1):55–69; ESICM/SCCM PICU Sedation Guidelines 2022; Precedex SmPC"
+    "prep": "EV: diluir 200 mcg (2 mL) em 48 mL de fluido compatível (glicose 5%, Hartmann, manitol 20% ou NaCl 0,9%) = 4 mcg/mL. Usar bomba de perfusão controlada; administração rápida pode causar paragem sinusal; preferir linha própria para evitar bólus. Incompatível: diazepam, pantoprazol, fenitoína (lista não exaustiva).",
+    "ci": ["Hipersensibilidade à dexmedetomidina ou a algum excipiente"],
+    "alert": ["⚠️ Bradicardia e hipotensão (mais frequentes com dose de carga) — monitorizar ECG, TA, SpO₂ e escala de sedação", "Licença pediátrica limitada — uso em cuidados críticos com decisão do intensivista", "Não tem efeito anticonvulsivante"],
+    "source": "Perth Children's Hospital (CAHS), Dexmedetomidine — Medication Management Manual Monograph, rev. 2026",
+    "review": ["Removidas as doses neonatais (0,1–0,2 mcg/kg/h) e outras alegações da ficha anterior que não constam da monografia PCH nem do BNFC 2020-21 (que não inclui dexmedetomidina)."]
+  
   },
   {
     "id": "rocuronio",

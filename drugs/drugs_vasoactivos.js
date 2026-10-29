@@ -186,29 +186,19 @@ var DRUGS_VASOACTIVOS = [
     ],
     "dose": [
       {
-        "ind": "Perfusão contínua EV",
-        "val": "0,05–0,2 μg/kg/min",
-        "max": "0,2 μg/kg/min",
-        "freq": "Perfusão 24–48h (efeito hemodinâmico prolonga-se 1–2 semanas por metabolito activo OR-1896)",
-        "note": "Dose de carga 6–12 μg/kg em 10 min (OMITIR se hipotensão — causa hipotensão significativa). Iniciar com 0,1 μg/kg/min"
+        "ind": "Insuficiência cardíaca grave com risco de vida — perfusão EV (0–18 anos)",
+        "val": "Carga 6–24 mcg/kg em 10 min (reduzir com vasodilatadores/inotrópicos EV; omitir se hipotensão); depois 0,05–0,2 mcg/kg/min, ajustada à resposta",
+        "max": "0,2 mcg/kg/min",
+        "freq": "Habitualmente 24 h; efeito de cada alteração de velocidade em 30–60 min",
+        "note": "PCH Medication Monograph — Levosimendan (Perth Children's Hospital, rev. jun. 2024). Peso real até 120 kg. Uso restrito a cuidados críticos, por intensivista."
       }
     ],
-    "prep": "EV: diluir EXCLUSIVAMENTE em SG5% (incompatível com SF — precipitação). Concentração: 0,025–0,1 mg/ml. Carga (opcional): 100 μg/ml em SG5%. Manutenção: 50 μg/ml. Proteger da luz — cobrir seringa e linha com papel de alumínio. ⚠️ Incompatível com furosemida e propofol na mesma linha. Fonte: BNF for Children 2023-24; SmPC Simdax.",
-    "ci": [
-      "Hipotensão grave (PAS < 85 mmHg) sem suporte vasopressor",
-      "Obstrução mecânica ao enchimento/esvaziamento (estenose aórtica/mitral grave)",
-      "Insuficiência renal grave (TFG < 30 ml/min — acumulação metabolito)",
-      "Taquicardia > 120 bpm (taquicardia reflexa potenciada)"
-    ],
-    "alert": [
-      "⚠️ Hipotensão — efeito vasodilatador marcado; associar noradrenalina se necessário",
-      "⚠️ Taquicardia reflexa — monitorizar FC; reduzir dose se FC > 120 bpm",
-      "⚠️ Hipocaliemia potencia arritmias — repor K⁺ antes de iniciar",
-      "Efeito hemodinâmico persiste 7–14 dias após infusão (metabolito activo OR-1896)",
-      "Sem taquifilaxia — vantagem sobre catecolaminas em uso prolongado",
-      "Evidência pediátrica limitada mas favorável em cirurgia cardíaca congenita"
-    ],
-    "source": "BNF for Children 2023-24; Egan JR et al. Pediatr Crit Care Med 2006; Roeleveld PP et al. Paediatr Anaesth 2008"
+    "prep": "EV: diluir em glicose 5%. ≤ 10 kg: 3 mg em 30 mL (100 mcg/mL); > 10 kg: 12,5 mg em 50 mL (250 mcg/mL). Via central preferida (periférica possível). Rejeitar a solução diluída após 24 h; a cor pode variar de transparente a amarelo/laranja sem perda de potência. Compatível em Y com digoxina, furosemida e nitroglicerina; sem dados para outros fármacos — não misturar.",
+    "ci": ["Hipersensibilidade ao levosimendan ou excipientes", "Hipotensão grave e taquicardia", "Obstrução mecânica significativa ao enchimento ou esvaziamento ventricular", "História de torsades de pointes", "Insuficiência renal ou hepática grave (contra-indicação relativa)"],
+    "alert": ["⚠️ Administrar só em área de cuidados críticos com monitorização contínua de ECG, TA e FC", "Monitorizar diurese e ionograma, sobretudo potássio", "Considerar monitorização hemodinâmica nos dias seguintes à perfusão: os metabolitos activos prolongam o efeito"],
+    "source": "Perth Children's Hospital (CAHS), Levosimendan — Medication Management Manual Monograph, rev. 2024",
+    "review": ["Removidas afirmações da ficha anterior que contradizem a monografia PCH (p. ex. incompatibilidade com furosemida e com soro fisiológico) ou sem fonte (duração 7–14 dias, dose inicial 0,1 mcg/kg/min). O BNFC 2020-21 não inclui levosimendan."]
+  
   },
   {
     "id": "terlipressina",

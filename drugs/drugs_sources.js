@@ -38,6 +38,14 @@ var SOURCES = {
       note: "Acesso livre. Útil como segunda referência independente; doses podem diferir das do BNFC."
     },
     {
+      id: "pch_monographs",
+      title: "Medication Management Manual — Monographs (Dexmedetomidine; Levosimendan)",
+      publisher: "Perth Children's Hospital, Child and Adolescent Health Service (CAHS), Western Australia",
+      year: 2026,
+      url: "https://www.pch.health.wa.gov.au/~/media/Files/Hospitals/PCH/General-documents/Health-professionals/MedicationMonographs/Dexmedetomidine.pdf",
+      note: "Monografias de hospital pediátrico terciário, de acesso livre (dexmedetomidina rev. abr. 2026; levosimendan rev. jun. 2024). Levosimendan: .../MedicationMonographs/Levosimendan.pdf"
+    },
+    {
       id: "anmf",
       title: "Australasian Neonatal Medicines Formulary (ANMF)",
       publisher: "Consórcio ANMF / SESLHD",
