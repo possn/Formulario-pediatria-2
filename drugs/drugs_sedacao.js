@@ -323,7 +323,9 @@ var DRUGS_SEDACAO = [
       "Hipersialorreia — associar atropina ou glicopirrolato profilático",
       "Hipertensão intracraniana: evidência actual sugere que com boa ventilação não aumenta PIC — rever"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; Green SM. Ann Emerg Med 2011; BNF for Children 2023-24; Green SM et al. Ann Emerg Med 2011; Bhatt M et al. Lancet 2017"
+    "source": "BNFC 2020-21, Ketamine (p. 879: IV 1–2 mg/kg, IM 4–13 mg/kg, sedação 1–2 mg/kg)",
+    "review": ["Doses em estado de mal epiléptico/asmático refractário, ISR e analgesia sub-dissociativa não constam do BNFC 2020-21: fontes originais (Green SM 2011) por confirmar."]
+
   },
   {
     "id": "propofol",
@@ -367,7 +369,9 @@ var DRUGS_SEDACAO = [
       "Depressão respiratória e hipotensão significativas",
       "Hipertrigliceridemia em perfusões prolongadas — monitorizar"
     ],
-    "source": "BNF for Children 2023-24; FDA Safety Alert 2001; Bray RJ. Anaesthesia 1998"
+    "source": "BNFC 2020-21, Propofol (p. 864: indução 2,5–4 mg/kg; sedação para procedimentos 1–2 mg/kg)",
+    "review": ["Perfusão de 2–4 mg/kg/h em < 16 anos: o BNFC só refere sedação em UCI a partir dos 16 anos (0,3–4 mg/kg/h); em crianças ventiladas há risco de síndrome de infusão de propofol — confirmar indicação e duração antes de usar."]
+
   },
   {
     "id": "dexmedetomidina",
@@ -552,18 +556,32 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "Oral / rectal",
-        "val": "15 mg/kg/dose",
-        "max": "1000 mg/dose; 75 mg/kg/dia (máx. 4 g/dia)",
-        "freq": "cada 4–6h",
-        "note": "RN term/prematuro: 10–15 mg/kg/dose cada 6–8h"
+        "ind": "Dor / febre — oral (RN ≥ 32 sem IGc)",
+        "val": "20 mg/kg dose única; depois 10–15 mg/kg",
+        "max": "60 mg/kg/dia",
+        "freq": "Cada 6–8 h",
+        "note": "BNFC 2020-21 (p. 288). RN 28–32 sem IGc: 20 mg/kg, depois 10–15 mg/kg cada 8–12 h, máx. 30 mg/kg/dia. Rectal RN ≥ 32 sem: 30 mg/kg, depois 15–20 mg/kg cada 8 h."
       },
       {
-        "ind": "EV (Perfalgan)",
-        "val": "15 mg/kg/dose (> 10 kg); 7,5 mg/kg/dose (< 10 kg)",
-        "max": "1000 mg/dose (> 50 kg); 60 mg/kg/dia",
-        "freq": "cada 4–6h",
-        "note": "Administrar em 15 min EV"
+        "ind": "Dor / febre — oral por idade",
+        "val": "1–2 meses: 30–60 mg; 3–5 meses: 60 mg; 6–23 meses: 120 mg; 2–3 anos: 180 mg; 4–5 anos: 240 mg; 6–7 anos: 240–250 mg; 8–9 anos: 360–375 mg; 10–11 anos: 480–500 mg; 12–15 anos: 480–750 mg; 16–17 anos: 0,5–1 g",
+        "max": "4 doses/dia (1–2 meses: 60 mg/kg/dia, cada 8 h)",
+        "freq": "Cada 4–6 h",
+        "note": "BNFC 2020-21 (p. 288)."
+      },
+      {
+        "ind": "Dor pós-operatória — oral",
+        "val": "1 mês–11 anos: 20–30 mg/kg dose única (máx. 1 g); depois 15–20 mg/kg",
+        "max": "75 mg/kg/dia",
+        "freq": "Cada 4–6 h",
+        "note": "BNFC 2020-21 (p. 288)."
+      },
+      {
+        "ind": "EV (perfusão em 15 min)",
+        "val": "RN ≥ 32 sem: 7,5 mg/kg; RN e criança < 10 kg: 10 mg/kg; 10–50 kg: 15 mg/kg; ≥ 50 kg: 1 g",
+        "max": "< 10 kg: 30 mg/kg/dia; 10–50 kg: 60 mg/kg/dia; ≥ 50 kg: 4 g/dia (3 g/dia se factores de risco de hepatotoxicidade)",
+        "freq": "RN ≥ 32 sem: cada 8 h; restantes cada 4–6 h",
+        "note": "BNFC 2020-21 (p. 288)."
       }
     ],
     "prep": "EV: ver paracetamol_ev (Perfalgan). Oral: suspensão 120 mg/5 ml (lactentes), 250 mg/5 ml (crianças) — agitar bem; medir com seringa oral. Comprimidos 500/1000 mg. Rectal: supositórios 60/125/250/500 mg — absorção mais lenta e variável que oral. Fonte: BNF for Children 2023-24.",
@@ -577,7 +595,7 @@ var DRUGS_SEDACAO = [
       "⚠️ Atenção a formulações combinadas (risco sobredosagem inadvertida)",
       "Seguro em asmáticos (ao contrário dos AINEs)"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Paracetamol (p. 288)"
   },
   {
     "id": "ibuprofeno",
@@ -597,11 +615,11 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "Analgesia / antipirético oral",
-        "val": "5–10 mg/kg/dose",
-        "max": "400 mg/dose; 40 mg/kg/dia (máx. 2,4 g/dia)",
-        "freq": "cada 6–8h",
-        "note": "Usar sempre com/após refeição"
+        "ind": "Analgesia / antipirético — oral",
+        "val": "1–2 meses: 5 mg/kg; 3–5 meses: 50 mg; 6–11 meses: 50 mg; 1–3 anos: 100 mg; 4–6 anos: 150 mg; 7–9 anos: 200 mg; 10–11 anos: 300 mg; 12–17 anos: 300–400 mg",
+        "max": "30 mg/kg/dia (máx. 2,4 g/dia); 12–17 anos até 600 mg 4×/dia",
+        "freq": "3–4×/dia (1–2 meses: 3–4×/dia; 3 meses–11 anos: 3×/dia)",
+        "note": "BNFC 2020-21 (p. 707). Fora de licença < 3 meses ou < 5 kg."
       },
       {
         "ind": "Canal arterial — EV (RN)",
@@ -664,7 +682,7 @@ var DRUGS_SEDACAO = [
       "Hiperbilirrubinemia — ibuprofeno compete com bilirrubina na albumina (monitorizar bili)",
       "NEC: monitorizar achados abdominais durante tratamento"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; BNF for Children 2023-24; Ohlsson A. Cochrane 2015; Pedea SmPC; BNF for Children 2023-24; Ohlsson A et al. Cochrane 2020; Neofax 2023"
+    "source": "BNFC 2020-21, Ibuprofen (p. 707: fecho do canal arterial no RN 10 mg/kg, depois 5 mg/kg cada 24 h × 2; analgesia oral)"
   },
   {
     "id": "naloxona",
@@ -735,7 +753,6 @@ var DRUGS_SEDACAO = [
     "id": "tramadol",
     "name": "Tramadol",
     "category": "analgesico",
-    "src": "original",
     "class": "Opioide fraco + inibidor recaptação serotonina/noradrenalina",
     "brands": "Tramal 50/100 mg caps.; 100 mg/2 ml EV; gotas 100 mg/ml",
     "indication": [
@@ -745,18 +762,18 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "≥ 12 anos EV/oral",
-        "val": "1–2 mg/kg/dose",
-        "max": "100 mg/dose; 400 mg/dia",
-        "freq": "cada 4–6h",
-        "note": "NÃO usar < 12 anos (EMA 2019)"
+        "ind": "Dor moderada a grave — oral/EV/IM/SC (12–17 anos)",
+        "val": "50–100 mg",
+        "max": "400 mg/24 h",
+        "freq": "Cada 4–6 h (EV em 2–3 min); oral dose inicial 100 mg",
+        "note": "BNFC 2020-21 (p. 305). Sem dose pediátrica < 12 anos no BNFC 2020-21."
       },
       {
-        "ind": "Adulto",
-        "val": "50–100 mg/dose",
-        "max": "400 mg/dia",
-        "freq": "cada 4–6h",
-        "note": ""
+        "ind": "Dor pós-operatória — EV (12–17 anos)",
+        "val": "Inicial 100 mg; depois 50 mg cada 10–20 min se necessário (máx. 250 mg na 1.ª hora); depois 50–100 mg",
+        "max": "400 mg/24 h",
+        "freq": "Depois cada 4–6 h",
+        "note": "BNFC 2020-21 (p. 305)."
       }
     ],
     "prep": "EV: diluir em SF ou SG5% (50–100 ml). Administrar LENTAMENTE em 15–20 min (bólus rápido causa náuseas, tonturas, convulsões). Concentração máxima EV: 50 mg/ml não diluído para IM/SC; ≤ 4 mg/ml para infusão EV. Oral: gotas 100 mg/ml (1 gota = 2,5 mg); cápsulas 50 mg. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -773,7 +790,7 @@ var DRUGS_SEDACAO = [
       "⚠️ Síndrome serotoninérgica com SSRIs/IMAOs",
       "Náuseas e vómitos frequentes"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; EMA Safety Review 2019; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Tramadol hydrochloride (p. 305)"
   },
   {
     "id": "pregabalina",
@@ -943,18 +960,18 @@ var DRUGS_SEDACAO = [
         "note": ""
       },
       {
-        "ind": "HTA — EV",
-        "val": "1–2 mcg/kg EV lento",
-        "max": "150 mcg",
-        "freq": "cada 6h",
-        "note": "Administrar em 10–15 min — bólus rápido causa HTA paradoxal"
-      },
-      {
         "ind": "PHDA — oral (off-label)",
         "val": "25–50 mcg ao deitar → até 3–5 mcg/kg/dia",
         "max": "400 mcg/dia",
         "freq": "2–4 doses/dia",
         "note": ""
+      },
+      {
+        "ind": "Hipertensão grave — EV lenta (2–17 anos)",
+        "val": "2–6 mcg/kg",
+        "max": "300 mcg/dose",
+        "freq": "Dose única",
+        "note": "BNFC 2020-21 (p. 108). Oral: 0,5–1 mcg/kg 3×/dia, até 25 mcg/kg/dia (máx. 1,2 mg/dia)."
       }
     ],
     "prep": "EV: diluir em SF para concentração 15–45 μg/ml. Infusão em 10–15 min (bólus rápido → HTA paradoxal transitória por estimulação α1 periférica antes do efeito central). Perfusão: 150 μg em 50 ml SF (3 μg/ml). Oral: comprimidos 25/100/150 μg; solução extemporânea 5 μg/ml. Patch transdérmico (TTS): para desmame lento. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -970,7 +987,9 @@ var DRUGS_SEDACAO = [
       "Útil na transição dexmedetomidina EV → clonidina oral",
       "Antídoto: atropina para bradicardia"
     ],
-    "source": "BNF for Children 2023-24; ESICM Sedation Guidelines 2018"
+    "source": "BNFC 2020-21, Clonidine hydrochloride (p. 108: hipertensão); sedação/desmame: ESICM 2018 (por confirmar)",
+    "review": ["Doses de sedação em UCI e desmame de opioides não constam do BNFC 2020-21: por confirmar em fonte primária."]
+  
   },
   {
     "id": "remifentanil",
@@ -1111,11 +1130,11 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "Procedimento diagnóstico",
-        "val": "50–100 mg/kg PO/PR",
-        "max": "2 g (ou 1 g em < 1 ano)",
-        "freq": "Dose única 30–45 min antes do procedimento",
-        "note": "Onset 30–60 min; duração 1–2h. Taxa de sucesso ~85–90% em lactentes. Jejum 4h antes recomendado"
+        "ind": "Sedação para procedimentos indolores — oral/rectal",
+        "val": "RN e 1 mês–11 anos: 30–50 mg/kg; 12–17 anos: 1–2 g",
+        "max": "1 g/dose (até 100 mg/kg, máx. 2 g, com monitorização respiratória)",
+        "freq": "Dose única 45–60 min antes do procedimento",
+        "note": "BNFC 2020-21 (p. 311). Via rectal só se a oral não for possível."
       }
     ],
     "prep": "Oral: solução 100 mg/ml — misturar em sumo açucarado para mascarar sabor amargo. Rectal: mesma solução administrada com seringa oral. Medir com seringa oral graduada. Refrigerar após abertura (prazo curto — verificar com farmácia). ⚠️ Monitorização contínua SpO2 e FC obrigatória durante sedação. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -1132,7 +1151,7 @@ var DRUGS_SEDACAO = [
       "Disponibilidade limitada — formulação magistral; verificar estabilidade (prazo curto)",
       "EMA/FDA: uso restrito pelas preocupações genotóxicas — preferir alternativas quando possível"
     ],
-    "source": "BNF for Children 2023-24; Sulton C et al. Pediatr Emerg Care 2016; Krauss B et al. Lancet 2000"
+    "source": "BNFC 2020-21, Chloral hydrate (p. 311)"
   },
 {
     "id": "paracetamol_ev",
@@ -1149,18 +1168,18 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "Analgesia / antipirexia — criança ≥ 1 ano",
-        "val": "15 mg/kg/dose EV em 15 min",
-        "max": "1 g/dose; 4 g/dia (60 mg/kg/dia)",
-        "freq": "q4–6h (mínimo intervalo 4h)",
-        "note": "Dose máxima diária: 75 mg/kg/dia (máx 4 g) em crianças > 10 kg e ≥ 1 ano"
+        "ind": "EV — criança 10–50 kg",
+        "val": "15 mg/kg em 15 min",
+        "max": "60 mg/kg/dia",
+        "freq": "Cada 4–6 h",
+        "note": "BNFC 2020-21 (p. 288). ≥ 50 kg: 1 g/dose, máx. 4 g/dia (3 g/dia se risco de hepatotoxicidade)."
       },
       {
-        "ind": "Neonato e lactente < 1 ano",
-        "val": "7,5–10 mg/kg/dose EV",
-        "max": "—",
-        "freq": "q6–8h; dose diária máx 30 mg/kg",
-        "note": "< 32 semanas GA: 7,5 mg/kg q8–12h. Metabolismo hepático imaturo — acumulação de metabolitos"
+        "ind": "EV — RN e criança < 10 kg",
+        "val": "10 mg/kg em 15 min",
+        "max": "30 mg/kg/dia",
+        "freq": "Cada 4–6 h",
+        "note": "BNFC 2020-21 (p. 288). RN ≥ 32 sem IGc: 7,5 mg/kg cada 8 h."
       }
     ],
     "prep": "EV: frascos 10 mg/ml (Perfalgan 100 ml ou 50 ml) prontos a usar — NÃO diluir adicionalmente. Administrar em 15 min. Para < 10 kg: retirar volume calculado do frasco para seringa; administrar da seringa. ⚠️ Verificar peso e dose — dose pediátrica é 15 mg/kg; neonatos 7,5–10 mg/kg. Estabilidade após abertura: 6h. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -1176,7 +1195,7 @@ var DRUGS_SEDACAO = [
       "Efeito opioide-poupador documentado — reduz consumo de morfina 20–30% em pós-operatório",
       "Sem efeito anti-inflamatório clinicamente relevante — para inflamação usar AINE"
     ],
-    "source": "BNF for Children 2023-24; Allegaert K et al. Expert Opin Drug Metab Toxicol 2011; ESPA Pain Guidelines 2020"
+    "source": "BNFC 2020-21, Paracetamol (p. 288)"
   },
   {
     "id": "succinilcolina",
@@ -1192,18 +1211,18 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "ISR / Intubação de emergência",
-        "val": "2 mg/kg EV (< 10 kg); 1–1,5 mg/kg EV (> 10 kg)",
-        "max": "150 mg",
-        "freq": "Dose única. Onset 30–60 seg; duração 8–12 min",
-        "note": "Crianças pequenas necessitam dose mais alta (2 mg/kg) por maior volume de distribuição relativo"
+        "ind": "Bloqueio neuromuscular curto — EV",
+        "val": "RN e 1–11 meses: 2 mg/kg; 1–17 anos: 1 mg/kg",
+        "max": "—",
+        "freq": "Dose única (5–10 min de bloqueio)",
+        "note": "BNFC 2020-21 (p. 872)."
       },
       {
-        "ind": "Laringoespasmo grave",
-        "val": "0,1–1 mg/kg EV; ou 4 mg/kg IM/IT se sem acesso EV",
-        "max": "—",
-        "freq": "Dose única de emergência",
-        "note": "IM: onset 3–4 min; IT (intratraqueal) via cricotirotomia se necessário"
+        "ind": "Sem acesso EV — IM",
+        "val": "RN: até 4 mg/kg; 1–11 meses: até 5 mg/kg; 1–11 anos: até 4 mg/kg",
+        "max": "150 mg/dose",
+        "freq": "Dose única (10–30 min de bloqueio)",
+        "note": "BNFC 2020-21 (p. 872). Início em 2–3 min."
       }
     ],
     "prep": "EV: administrar NÃO DILUÍDO (20 mg/ml) em bólus rápido < 10 segundos. IM emergência (sem acesso EV): injecção profunda no músculo vasto lateral, concentração 20 mg/ml. Refrigerar 2–8°C; estável 2 semanas à T ambiente. ⚠️ Pré-medicar com atropina 0,02 mg/kg em < 5 anos (bradicardia). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -1222,6 +1241,8 @@ var DRUGS_SEDACAO = [
       "Rocurônio 1,2 mg/kg + sugammadex disponível é alternativa segura sem as contra-indicações da succinilcolina",
       "Miotonia paradoxal em distrofias musculares — pode tornar intubação impossível"
     ],
-    "source": "BNF for Children 2023-24; Martyn JAJ et al. NEJM 2006; ESAIC Guidelines RSI 2023"
+    "source": "BNFC 2020-21, Suxamethonium chloride (p. 872)",
+    "review": ["Dose em laringoespasmo (0,1–1 mg/kg EV, intratraqueal) removida: não consta do BNFC 2020-21."]
+  
   },
   ];
