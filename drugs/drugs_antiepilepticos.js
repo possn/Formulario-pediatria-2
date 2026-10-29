@@ -209,18 +209,18 @@ var DRUGS_ANTIEPILEPTICOS = [
     ],
     "dose": [
       {
-        "ind": "Status epilepticus — carga EV",
-        "val": "18–20 mg/kg EV",
-        "max": "1500 mg",
-        "freq": "velocidade máx. 1 mg/kg/min (0,5 mg/kg/min em RN/cardíaco)",
-        "note": "Monitorização ECG e TA obrigatória durante infusão. Diluir em SF (precipita em SG)"
+        "ind": "Estado de mal epiléptico / crises agudas sintomáticas — carga EV lenta",
+        "val": "20 mg/kg (RN: 18 mg/kg em 20–30 min)",
+        "max": "1,5 g (Shann)",
+        "freq": "Dose única; depois 2,5–5 mg/kg 2×/dia (12–17 anos: até 100 mg 3–4×/dia)",
+        "note": "BNFC 2020-21 (p. 220). Shann: 15–20 mg/kg (máx. 1,5 g) em 1 h. Monitorizar ECG e TA durante a infusão."
       },
       {
-        "ind": "Manutenção EV/oral",
-        "val": "5–8 mg/kg/dia (< 1 ano: 8–10 mg/kg/dia)",
-        "max": "300 mg/dia",
-        "freq": "2–3 doses/dia",
-        "note": "Nível terapêutico: 10–20 mcg/ml (total); 1–2 mcg/ml (livre)"
+        "ind": "Epilepsia — manutenção oral",
+        "val": "1 mês–11 anos: inicial 1,5–2,5 mg/kg 2×/dia; depois 2,5–5 mg/kg 2×/dia; 12–17 anos: 75–150 mg 2×/dia, depois 150–200 mg 2×/dia",
+        "max": "7,5 mg/kg/dose 2×/dia; 300 mg/dia (1 mês–11 anos)",
+        "freq": "2×/dia, ajustar por níveis plasmáticos",
+        "note": "BNFC 2020-21 (p. 220). Fenitoína sódica e base não são bioequivalentes (100 mg sal ≈ 92 mg base)."
       }
     ],
     "prep": "EV: ⚠️ APENAS em SF (pH alcalino necessário para solubilidade) — precipita imediatamente em SG5%. Concentração máx.: 10 mg/ml (SF). Taxa de infusão máxima: 1 mg/kg/min (máx 50 mg/min) — monitorização ECG e TA contínua durante infusão (hipotensão e arritmias com velocidade excessiva). Linha DEDICADA — incompatível com qualquer outro fármaco. Filtro em linha 0,22 μm. Estabilidade: usar imediatamente.",
@@ -236,7 +236,7 @@ var DRUGS_ANTIEPILEPTICOS = [
       "⚠️ Indutor enzimático CYP450 — múltiplas interacções",
       "Não usar em doença hepática grave; monitorizar LFTs"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Phenytoin (p. 220); Shann Drug Doses (Phenytoin)"
   },
   {
     "id": "levetiracetam",
@@ -283,7 +283,9 @@ var DRUGS_ANTIEPILEPTICOS = [
       "Vantagens: sem indução enzimática, sem cardiotoxicidade, sem necessidade de monitorização de níveis séricos rotina",
       "Não requer monitorização ECG durante infusão (ao contrário da fenitoína)"
     ],
-    "source": "Lyttle MD et al. (ConSEPT). Lancet 2019;393:2178–87; Dalziel SR et al. (ECLIPSE). Lancet 2019;393:2155–64; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Levetiracetam (p. 217: terapêutica adjuvante 6 meses–17 anos < 50 kg — inicial 10 mg/kg/dia, até 30 mg/kg 2×/dia); Shann Drug Doses (Levetiracetam: estado de mal 50 mg/kg, máx. 2,5 g, EV em 10 min); Lyttle MD et al. (ConSEPT). Lancet 2019; 393:2178–87; Dalziel SR et al. (ECLIPSE). Lancet 2019; 393:2155–64",
+    "review": ["O BNFC 2020-21 não inclui estado de mal epiléptico para o levetiracetam. Carga de 40–60 mg/kg (máx. 3 g): Shann refere 50 mg/kg (máx. 2,5 g) em 10 min; confirmar o máximo no protocolo local."]
+
   },
   {
     "id": "acido_valproico",
@@ -327,7 +329,9 @@ var DRUGS_ANTIEPILEPTICOS = [
       "⚠️ Teratogénese: espinha bífida, atraso cognitivo — EVITAR na gravidez",
       "⚠️ Múltiplas interacções: ↑ lamotrigina, ↑ fenitoína livre, ↑ fenobarbital"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "BNFC 2020-21, Sodium valproate (p. 223: 1 mês–11 anos EV inicial 10 mg/kg, depois 20–40 mg/kg/dia em 2–4 doses; manutenção oral 25–30 mg/kg/dia, até 60 mg/kg/dia em espasmos infantis); Formulário de Pediatria 3ª Ed.; Harriet Lane 23rd Ed",
+    "review": ["Carga EV de 20–40 mg/kg no estado de mal epiléptico não consta do BNFC 2020-21 (dose inicial EV 10 mg/kg): confirmar em protocolo local."]
+
   },
   {
     "id": "fosfenitoina",
@@ -408,7 +412,9 @@ var DRUGS_ANTIEPILEPTICOS = [
       "Boa tolerabilidade — sem indução enzimática",
       "Alternativa útil quando valproato/fenitoína contra-indicados"
     ],
-    "source": "BNF for Children 2023-24; Wusthoff CJ. Epilepsia 2021"
+    "source": "BNFC 2020-21, Lacosamide (p. 215: ≥ 50 kg — inicial 50 mg 2×/dia, até 300 mg 2×/dia; 4–17 anos < 50 kg: consultar RCM); Wusthoff CJ. Epilepsia 2021",
+    "review": ["Esquema por peso (< 50 kg) e carga de 5 mg/kg no estado de mal refractário não constam do BNFC 2020-21: confirmar no RCM / protocolo local."]
+
   },
   {
     "id": "topiramato",
