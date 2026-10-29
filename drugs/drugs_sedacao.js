@@ -883,7 +883,9 @@ var DRUGS_SEDACAO = [
       "⚠️ Não suspender abruptamente (convulsões de rebote)",
       "Sem indução enzimática — poucas interacções"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "Harriet Lane 23rd Ed",
+    "review": ["O texto do BNFC 2020-21 sobre gabapentina estava cortado (2–5 anos: 10 mg/kg no dia 1, 10 mg/kg 2×/dia no dia 2, 10 mg/kg 3×/dia no dia 3). As restantes doses não foram verificadas contra o BNFC."]
+
   },
   {
     "id": "amitriptilina_pain",
@@ -900,18 +902,18 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "Dor neuropática / Profilaxia enxaqueca",
-        "val": "0,1–0,5 mg/kg ao deitar",
-        "max": "10 mg/noite (início); 25–75 mg/noite (alvo)",
-        "freq": "1×/dia ao deitar",
-        "note": "Titular lentamente — efeito analgésico em 2–4 semanas"
+        "ind": "Dor neuropática — oral, 2–11 anos",
+        "val": "Inicial 200–500 mcg/kg 1×/dia à noite; aumentar se necessário (máx. 1 mg/kg 2×/dia, sob aconselhamento especializado)",
+        "max": "10 mg/dose inicial",
+        "freq": "1×/dia à noite",
+        "note": "BNFC 2020-21 (p. 255)."
       },
       {
-        "ind": "Enurese nocturna (> 6 anos)",
-        "val": "10–20 mg ao deitar",
-        "max": "50 mg (< 11 anos); 75 mg (> 11 anos)",
-        "freq": "1×/dia ao deitar",
-        "note": ""
+        "ind": "Dor neuropática — oral, 12–17 anos",
+        "val": "Inicial 10 mg 1×/dia à noite; aumentar gradualmente até 75 mg/dia",
+        "max": "75 mg/dia (doses superiores sob aconselhamento especializado)",
+        "freq": "1×/dia à noite",
+        "note": "BNFC 2020-21 (p. 255)."
       }
     ],
     "prep": "Oral: comprimidos 10/25/50 mg — podem ser triturados. Solução extemporânea 5 mg/5 ml estável 14 dias a 4°C. Tomar ao deitar (sedação máxima nocturna). Inicio com dose baixa e titular semanalmente (2–4 semanas para efeito analgésico). Fonte: BNF for Children 2023-24.",
@@ -928,7 +930,9 @@ var DRUGS_SEDACAO = [
       "⚠️ Overdose: arritmias fatais — guardar fora do alcance de crianças",
       "⚠️ Não suspender abruptamente"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Amitriptyline hydrochloride (p. 255); Formulário de Pediatria 3ª Ed.",
+    "review": ["Removidas por não terem sido verificadas no BNFC 2020-21: profilaxia de enxaqueca (0,1–0,5 mg/kg) e enurese noturna (10–20 mg). Monitorizar QTc em doses altas."]
+  
   },
   {
     "id": "clonidina",
@@ -1088,18 +1092,11 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "Conversão EV→oral para desmame UCIP",
-        "val": "Dose total diária de morfina EV × 0,1–0,15 mg/kg/dose PO",
+        "ind": "Síndrome de abstinência opioide neonatal — oral",
+        "val": "Inicial 100 mcg/kg; aumentar 50 mcg/kg a cada 6 h até controlo dos sintomas; manutenção: dose diária total dividida em 2 tomas",
         "max": "—",
-        "freq": "q12–24h PO (semivida longa: 12–50h)",
-        "note": "Equivalência: morfina EV 10 mg = metadona PO 2,5 mg (rácio 4:1). Titular por Withdrawal Assessment Tool (WAT-1 ≥ 3)"
-      },
-      {
-        "ind": "Abstinência neonatal (NAS) — protocolo",
-        "val": "0,05–0,1 mg/kg/dose PO",
-        "max": "—",
-        "freq": "q12–24h; reduzir 10–20% por semana",
-        "note": "Escala de Finnegan modificada para monitorização"
+        "freq": "A cada 6 h na titulação; 2×/dia na manutenção",
+        "note": "BNFC 2020-21 (p. 317). Seguir protocolo local."
       }
     ],
     "prep": "Oral: solução 1 mg/ml (medir com seringa oral graduada de 1 ml para doses pediátricas pequenas). Comprimidos 5/10 mg — esmagar e dissolver em 10 ml água. EV (off-label): diluir em SG5% (não SF — precipita); administrar lentamente 2–3 min. ⚠️ QTc — ECG obrigatório antes e 48h após início. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -1115,7 +1112,9 @@ var DRUGS_SEDACAO = [
       "⚠️ Equação de conversão de opioides complexa — verificar sempre com farmácia clínica",
       "Abstinência após paragem abrupta: aguarda 24–72h (semivida longa) — mais gradual que morfina"
     ],
-    "source": "BNF for Children 2023-24; Berde CB et al. NEJM 2019; Franck LS et al. Ped Crit Care Med 2012 (WAT-1)"
+    "source": "BNFC 2020-21, Methadone hydrochloride (p. 317); Berde CB et al. NEJM 2019; Franck LS et al. Ped Crit Care Med",
+    "review": ["A conversão EV→oral para desmame na UCIP (0,1–0,15 mg/kg/dose a cada 12–24 h) não consta do BNFC 2020-21; removida da secção de doses. A ficha anterior usava 0,05–0,1 mg/kg/dose na abstinência neonatal."]
+  
   },
   {
     "id": "hidrato_cloral",

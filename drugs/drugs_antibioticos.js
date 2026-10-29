@@ -825,11 +825,39 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Infecção grave EV",
-        "val": "30 mg/kg/dose EV",
-        "max": "2 g/dose (8 g/dia)",
-        "freq": "q6–8h",
-        "note": "Infecção por Pseudomonas: q6h. Infusão prolongada (3–4h) para PK/PD optimizado"
+        "ind": "Infeções por Gram-negativos incl. Pseudomonas — EV, RN ≤ 7 dias",
+        "val": "30 mg/kg cada 12 h",
+        "max": "—",
+        "freq": "Cada 12 h",
+        "note": "BNFC 2020-21 (p. 357)."
+      },
+      {
+        "ind": "Infeções por Gram-negativos — EV, RN 7–28 dias",
+        "val": "30 mg/kg cada 6–8 h",
+        "max": "—",
+        "freq": "Cada 6–8 h",
+        "note": "BNFC 2020-21 (p. 357)."
+      },
+      {
+        "ind": "Infeções por Gram-negativos — EV, 1 mês–11 anos",
+        "val": "30 mg/kg cada 6–8 h",
+        "max": "—",
+        "freq": "Cada 6–8 h",
+        "note": "BNFC 2020-21 (p. 357)."
+      },
+      {
+        "ind": "Infeções por Gram-negativos — EV, 12–17 anos",
+        "val": "1 g cada 8 h ou 2 g cada 12 h",
+        "max": "—",
+        "freq": "Cada 8–12 h",
+        "note": "BNFC 2020-21 (p. 357)."
+      },
+      {
+        "ind": "Infeções graves por Gram-negativos e infeção pulmonar na fibrose quística — EV",
+        "val": "2–11 anos: 50 mg/kg cada 6–8 h; 12–17 anos: 2 g cada 6–8 h",
+        "max": "2 g/dose (4×/dia)",
+        "freq": "Cada 6–8 h",
+        "note": "BNFC 2020-21 (p. 357)."
       }
     ],
     "prep": "EV: reconstituir 500 mg em 3 ml SWFI; 1 g em 6 ml; 2 g em 10 ml. Diluir em SF ou SG5%. Concentração ≤ 20 mg/ml para infusão (20–60 min); infusão prolongada (3–4h): concentração ≤ 10 mg/ml. ⚠️ Reactividade cruzada com ceftazidima (mesma cadeia lateral) — usar com cautela em alergia documentada. Estabilidade: 48h a 4°C.",
@@ -843,7 +871,9 @@ var DRUGS_ANTIBIOTICOS = [
       "Monitorizar função hepática em tratamentos prolongados",
       "Ajuste em insuficiência renal grave (TFG < 10 ml/min): reduzir dose 50%"
     ],
-    "source": "BNF for Children 2023-24; Blumenthal KG et al. JACI 2018 (cross-reactivity data)"
+    "source": "BNFC 2020-21, Aztreonam (p. 357); Blumenthal KG et al. JACI 2018 (reatividade cruzada)",
+    "review": ["A ficha anterior só tinha 30 mg/kg cada 6–8 h; o BNFC 2020-21 acrescenta 50 mg/kg cada 6–8 h (máx. 2 g) nas infeções graves e a dose a cada 12 h no RN ≤ 7 dias."]
+  
   },
   {
     "id": "ampicilina_iv",
@@ -1325,7 +1355,9 @@ var DRUGS_ANTIBIOTICOS = [
       "Pode causar hipercaliemia em doses altas (especialmente com IECA/ARA ou insuficiência renal)",
       "Monitorizar hemograma em tratamentos prolongados (megaloblastose, neutropenia)"
     ],
-    "source": "BNF for Children 2023-24; NICE NG224 UTI in Children 2022; Garin EH et al. N Engl J Med 2006"
+    "source": "NICE NG224 UTI in Children 2022; Garin EH et al. N Engl J Med 2006",
+    "review": ["A entrada do BNFC 2020-21 que consegui ler refere apenas toxoplasmose (RN: 50 mg/kg 2×/dia durante 12 meses; 12–17 anos: 1 g 3×/dia na gravidez). As doses de ITU e PJP da ficha não foram verificadas contra o BNFC; ver RCM e NICE NG224."]
+
   },
   {
     "id": "cefotaxima_iv",
@@ -1443,11 +1475,39 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Infecção grave — combinação",
-        "val": "100–200 mg/kg/dia EV",
-        "max": "16–24 g/dia",
-        "freq": "q6–8h",
-        "note": "SEMPRE em combinação — monoterapia selecciona resistência rapidamente. Carga sódica elevada (1 g fosfomicina ≈ 0,32 mEq Na⁺) — monitorizar"
+        "ind": "Osteomielite, infeção respiratória nosocomial ou ITU complicada quando 1.ª linha inadequada — EV, RN ≤ 40 sem IG corrigida",
+        "val": "100 mg/kg/dia em 2 doses",
+        "max": "—",
+        "freq": "2 doses/dia",
+        "note": "BNFC 2020-21 (p. 386)."
+      },
+      {
+        "ind": "Idem — EV, RN 40–44 sem IG corrigida",
+        "val": "200 mg/kg/dia em 3 doses",
+        "max": "—",
+        "freq": "3 doses/dia",
+        "note": "BNFC 2020-21 (p. 386)."
+      },
+      {
+        "ind": "Idem — EV, 1–11 meses (< 10 kg)",
+        "val": "200–300 mg/kg/dia em 3 doses; dose alta em infeção grave",
+        "max": "—",
+        "freq": "3 doses/dia",
+        "note": "BNFC 2020-21 (p. 386)."
+      },
+      {
+        "ind": "Idem — EV, 1–11 anos (10–39 kg)",
+        "val": "200–400 mg/kg/dia em 3–4 doses; dose alta em infeção grave",
+        "max": "—",
+        "freq": "3–4 doses/dia",
+        "note": "BNFC 2020-21 (p. 386)."
+      },
+      {
+        "ind": "Idem — EV, 12–17 anos (≥ 40 kg)",
+        "val": "12–24 g/dia em 2–3 doses; dose alta em infeção grave",
+        "max": "8 g/dose",
+        "freq": "2–3 doses/dia",
+        "note": "BNFC 2020-21 (p. 386)."
       }
     ],
     "prep": "EV: dissolver 1 g em 5 ml SWFI; reconstituir 2–4 g proporcionalmente. Diluir em SF ou SG5% (100–500 ml). Concentração ≤ 20 mg/ml. Administrar em 30–60 min. ⚠️ Carga sódica elevada: 1 g fosfomicina sódica = 0,32 g Na⁺ (≈14 mEq) — monitorizar natremia. Estabilidade: 12h a 25°C.",
@@ -1461,7 +1521,9 @@ var DRUGS_ANTIBIOTICOS = [
       "Hipocaliemia (mecanismo incerto) — monitorizar K⁺",
       "Excelente penetração no SNC, osso e tecidos — vantagem clínica importante"
     ],
-    "source": "BNF for Children 2023-24; Pontikis K et al. Int J Antimicrob Agents 2014; ESCMID Guidelines MDR 2022"
+    "source": "BNFC 2020-21, Fosfomycin (p. 386); Pontikis K et al. Int J Antimicrob Agents 2014; ESCMID",
+    "review": ["A ficha anterior indicava 100–200 mg/kg/dia (máx. 16–24 g/dia); o BNFC 2020-21 indica 200–400 mg/kg/dia de 1 a 11 anos, divididos em 3–4 doses. Uso reservado a situações em que a 1.ª linha é inadequada."]
+  
   },
   {
     "id": "posaconazol",
@@ -1515,11 +1577,39 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Infecção sistémica — ≥ 8 anos",
-        "val": "2,2 mg/kg/dose PO/EV",
+        "ind": "Infeções suscetíveis (clamídia, rickettsia, micoplasma) — oral, 8–11 anos < 45 kg (sob aconselhamento especializado)",
+        "val": "Dia 1: 4,4 mg/kg/dia em 1–2 doses; depois 2,2 mg/kg/dia em 1–2 doses",
+        "max": "—",
+        "freq": "1–2 doses/dia",
+        "note": "BNFC 2020-21 (p. 381)."
+      },
+      {
+        "ind": "Infeções suscetíveis — oral, 8–11 anos ≥ 45 kg e 12–17 anos",
+        "val": "Dia 1: 200 mg/dia; depois 100 mg/dia",
+        "max": "—",
+        "freq": "1–2 doses/dia",
+        "note": "BNFC 2020-21 (p. 381)."
+      },
+      {
+        "ind": "Infeções graves (incl. ITU refratária) — oral, 8–11 anos < 45 kg",
+        "val": "Dia 1: 4,4 mg/kg/dia; depois 2,2–4,4 mg/kg/dia em 1–2 doses",
+        "max": "—",
+        "freq": "1–2 doses/dia",
+        "note": "BNFC 2020-21 (p. 381). ≥ 45 kg e 12–17 anos: 200 mg/dia."
+      },
+      {
+        "ind": "Pneumonia adquirida na comunidade — oral, 12–17 anos",
+        "val": "200 mg no dia 1; depois 100 mg 1×/dia durante 5 dias no total",
+        "max": "—",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 381)."
+      },
+      {
+        "ind": "Doxiciclina EV (não consta do BNFC)",
+        "val": "2,2 mg/kg/dose EV",
         "max": "100 mg/dose",
-        "freq": "q12h",
-        "note": "RIQUETSIOSE GRAVE: iniciar imediatamente mesmo em < 8 anos (AAP 2021 — benefício supera manchas dentárias num curso curto)"
+        "freq": "Cada 12 h",
+        "note": "AAP Red Book 2021; em rickettsioses graves a doxiciclina é de 1.ª linha em qualquer idade (Bou Antoun D et al. Pediatrics 2019)."
       }
     ],
     "prep": "PO: engolir com copo cheio de água; não deitar após toma (esofagite). EV: diluir em SF ou SG5%; concentração ≤ 1 mg/ml; administrar em 1–4h.",
@@ -1535,7 +1625,9 @@ var DRUGS_ANTIBIOTICOS = [
       "Esofagite — tomar com abundante água e não deitar 30 min",
       "AAP 2021: doxiciclina é o tratamento de escolha para riquetsiose em QUALQUER idade"
     ],
-    "source": "BNF for Children 2023-24; AAP Red Book 2021; Bou Antoun D et al. Pediatrics 2019 (rickettsial)"
+    "source": "BNFC 2020-21, Doxycycline (p. 381); AAP Red Book 2021",
+    "review": ["A ficha anterior usava 2,2 mg/kg/dose a cada 12 h (4,4 mg/kg/dia); o BNFC 2020-21 usa 4,4 mg/kg no dia 1 e 2,2 mg/kg/dia de manutenção nas infeções suscetíveis. A dose EV não consta do BNFC."]
+  
   },
 {
     "id": "penicilina_g",
@@ -1612,18 +1704,39 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Infecção moderada EV",
-        "val": "25–50 mg/kg/dose EV",
-        "max": "1,5 g/dose (4,5 g/dia)",
-        "freq": "q8h",
-        "note": "Pneumonia grave: 50 mg/kg q8h. Step-down oral: cefuroxima axetil 20 mg/kg/dose q12h (máx 500 mg)"
+        "ind": "Infeções suscetíveis — EV, RN ≤ 7 dias",
+        "val": "25 mg/kg cada 12 h; até 50 mg/kg cada 12 h em infeção grave",
+        "max": "—",
+        "freq": "Cada 12 h",
+        "note": "BNFC 2020-21 (p. 341)."
       },
       {
-        "ind": "Profilaxia cirúrgica",
-        "val": "30 mg/kg EV",
+        "ind": "Infeções suscetíveis — EV, RN 7–20 dias",
+        "val": "25 mg/kg cada 8 h; até 50 mg/kg cada 8 h em infeção grave",
+        "max": "—",
+        "freq": "Cada 8 h",
+        "note": "BNFC 2020-21 (p. 341)."
+      },
+      {
+        "ind": "Infeções suscetíveis — EV, RN 21–28 dias",
+        "val": "25 mg/kg cada 6 h; até 50 mg/kg cada 6 h em infeção grave",
+        "max": "—",
+        "freq": "Cada 6 h",
+        "note": "BNFC 2020-21 (p. 341)."
+      },
+      {
+        "ind": "Infeções suscetíveis — EV/IM, criança",
+        "val": "20 mg/kg cada 8 h (máx. 750 mg/dose); infeção grave e fibrose quística: 50–60 mg/kg cada 6–8 h (máx. 1,5 g/dose)",
+        "max": "1,5 g/dose",
+        "freq": "Cada 6–8 h",
+        "note": "BNFC 2020-21 (p. 341). Celulite/erisipela: mesma dose."
+      },
+      {
+        "ind": "Profilaxia cirúrgica — EV, criança",
+        "val": "50 mg/kg (máx. 1,5 g) até 30 min antes; se procedimento de alto risco, 30 mg/kg (máx. 750 mg) cada 8 h até 3 doses",
         "max": "1,5 g",
-        "freq": "Dose única 30–60 min antes incisão; repetir q4h em cirurgias longas",
-        "note": ""
+        "freq": "Dose única + até 3 doses",
+        "note": "BNFC 2020-21 (p. 341)."
       }
     ],
     "prep": "EV: reconstituir 750 mg em 8 ml SWFI; 1,5 g em 15 ml. Diluir em SF ou SG5%. Concentração ≤ 30 mg/ml. Administrar em 15–30 min. IM: reconstituir em água para injectáveis (doloroso — lidocaína 1% como solvente reduz dor). Estabilidade: 24h a 4°C.",
@@ -1636,7 +1749,9 @@ var DRUGS_ANTIBIOTICOS = [
       "Actividade limitada contra Enterobacteriaceae produtoras de ESBL",
       "Ajuste em IR (TFG < 30 ml/min): reduzir frequência para q12h"
     ],
-    "source": "BNF for Children 2023-24; IDSA CAP Guidelines 2019; Solomkin JS et al. CID 2010"
+    "source": "BNFC 2020-21, Cefuroxime (p. 341); IDSA CAP Guidelines 2019",
+    "review": ["A ficha anterior tinha 25–50 mg/kg cada 8 h e profilaxia a 30 mg/kg; o BNFC 2020-21 indica 20 mg/kg cada 8 h (máx. 750 mg) e 50–60 mg/kg cada 6–8 h nas infeções graves; profilaxia 50 mg/kg (máx. 1,5 g)."]
+  
   },
   {
     "id": "anidulafungina",
