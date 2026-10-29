@@ -17,25 +17,32 @@ var DRUGS_ANTIEPILEPTICOS = [
     ],
     "dose": [
       {
-        "ind": "Convulsão — rectal",
-        "val": "0,5 mg/kg",
-        "max": "10 mg",
-        "freq": "pode repetir 1× após 10 min",
-        "note": "< 3 anos: 5 mg. > 3 anos: 10 mg (Stesolid)"
-      },
-      {
-        "ind": "Convulsão — EV",
-        "val": "0,3–0,4 mg/kg EV lento",
+        "ind": "Estado de mal epiléptico / convulsão febril / convulsão por intoxicação — EV",
+        "val": "RN: 300–400 mcg/kg; 1 mês–11 anos: 300–400 mcg/kg; 12–17 anos: 10 mg",
         "max": "10 mg/dose",
-        "freq": "pode repetir 1× após 5 min",
-        "note": "Administrar lentamente (< 2 mg/min) — risco apneia"
+        "freq": "Repetir a mesma dose após 10 min se necessário; administrar em 3–5 min",
+        "note": "BNFC 2020-21, Diazepam (p. 236). Preferir emulsão; ventilação disponível (risco de depressão respiratória)."
       },
       {
-        "ind": "Convulsão — IM/intranasal",
-        "val": "0,3 mg/kg IM",
-        "max": "10 mg",
-        "freq": "dose única",
-        "note": "Absorção IM irregular — preferir lorazepam IM ou midazolam IN"
+        "ind": "Estado de mal epiléptico / convulsão febril — rectal",
+        "val": "RN: 1,25–2,5 mg; 1 mês–1 ano: 5 mg; 2–11 anos: 5–10 mg; 12–17 anos: 10–20 mg",
+        "max": "—",
+        "freq": "Repetir após 10 min se necessário",
+        "note": "BNFC 2020-21 (p. 236). Tubos rectais não licenciados < 1 ano."
+      },
+      {
+        "ind": "Reacção distónica aguda grave (EV)",
+        "val": "1 mês–11 anos: 100 mcg/kg; 12–17 anos: 5–10 mg",
+        "max": "—",
+        "freq": "Repetir se necessário; administrar em 3–5 min",
+        "note": "BNFC 2020-21 (p. 236)."
+      },
+      {
+        "ind": "Tétano",
+        "val": "EV: 100–300 mcg/kg cada 1–4 h; ou perfusão 3–10 mg/kg/24 h",
+        "max": "—",
+        "freq": "—",
+        "note": "BNFC 2020-21 (p. 236)."
       }
     ],
     "prep": "EV: NÃO diluir — precipita em qualquer diluente (forma emulsão instável). Administrar NÃO DILUÍDO (5 mg/ml) < 2 mg/min em veia de grande calibre (veia antecubital ou veia central). Via periférica distal → tromboflebite severa. Concentração máxima: 5 mg/ml (não reduzir). Rectal (Stesolid): inserir tubo 3–4 cm, comprimir e manter 5 min em decúbito. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -50,8 +57,7 @@ var DRUGS_ANTIEPILEPTICOS = [
       "Longa semi-vida activa (20–100h + metabolito activo) — sedação prolongada",
       "Tolerância e dependência com uso crónico"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24",
-    "review": ["Existiam 2 fichas com esquemas diferentes: rectal 0,5 mg/kg (máx. 10 mg) vs esquema por idade (< 1 ano 2,5 mg; 1–3 anos 5 mg; 4–12 anos 5–10 mg; > 12 anos 10 mg); EV 0,3–0,4 vs 0,25–0,4 mg/kg; repetição aos 5 vs 10 min. Mantida esta ficha. Confirmar no BNFC / NICE CG137 antes de prescrever."]
+    "source": "BNF for Children 2020-21, Diazepam (p. 236)"
   },
   {
     "id": "lorazepam",

@@ -426,32 +426,28 @@ var DRUGS_GASTROENTEROLOGIA = [
     ],
     "dose": [
       {
-        "ind": "Encefalopatia hepática",
-        "val": "0,5–1 ml/kg/dose PO ou SNG",
-        "max": "30–45 ml/dose (adolescente/adulto)",
-        "freq": "q4–8h; titular para 2–3 dejecções moles/dia",
-        "note": "Também: enema 200 ml + 700 ml água morna retido 30–60 min — para encefalopatia grave"
+        "ind": "Obstipação (PO)",
+        "val": "1–11 meses: 2,5 mL 2×/dia; 1–4 anos: 2,5–10 mL 2×/dia; 5–17 anos: 5–20 mL 2×/dia",
+        "max": "—",
+        "freq": "2×/dia; ajustar à resposta",
+        "note": "BNFC 2020-21, Lactulose (p. 46). Pode demorar até 48 h a actuar."
       },
       {
-        "ind": "Obstipação funcional",
-        "val": "< 1 ano: 2,5 ml/dia; 1–5 anos: 5 ml/dia; 6–12 anos: 10 ml/dia",
-        "max": "30 ml/dia em crianças",
-        "freq": "1–2 doses/dia; ajustar por resposta",
-        "note": ""
+        "ind": "Encefalopatia hepática (PO) — uso não licenciado em crianças",
+        "val": "12–17 anos: 30–50 mL 3×/dia, depois ajustar para 2–3 dejecções moles/dia",
+        "max": "—",
+        "freq": "3×/dia",
+        "note": "BNFC 2020-21 (p. 46). Sem dose pediátrica < 12 anos no BNFC."
       }
     ],
     "prep": "Oral: diluir em água, sumo ou leite para melhorar palatabilidade. Via SNG: pode administrar directamente.",
-    "ci": [
-      "Galactosemia (contém galactose e lactose)",
-      "Obstrução intestinal"
-    ],
+    "ci": ["Galactosemia", "Obstrução gastrointestinal", "Perfuração gastrointestinal ou risco de perfuração (BNFC 2020-21)"],
     "alert": [
       "⚠️ Flatulência e cólicas abdominais — frequentes no início; reduzir dose se incomodativo",
       "⚠️ Diarreia excessiva com sobredose — desidratação e hipernatremia",
       "Administrar com cuidado em diabéticos (contém lactose e galactose — pequenas quantidades)",
       "Efeito 24–48h após início — não esperar resposta imediata"
     ],
-    "source": "BNF for Children 2023-24; ESPGHAN Constipation Guidelines 2014; Bass NM et al. NEJM 2010",
-    "review": ["Existiam 2 fichas com esquemas de obstipação ligeiramente diferentes (< 1 ano: 2,5 ml 2×/dia vs 2,5 ml/dia); mantida a ficha com ESPGHAN 2014. Confirmar no BNFC."]
+    "source": "BNF for Children 2020-21, Lactulose (p. 46)"
   }
 ];

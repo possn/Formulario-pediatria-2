@@ -560,25 +560,39 @@ var DRUGS_ENDOCRINO = [
     ],
     "dose": [
       {
-        "ind": "Hipotiroidismo congénito — RN",
-        "val": "10–15 μg/kg/dia PO",
-        "max": "50 μg/dia inicial",
-        "freq": "1 dose/dia em jejum",
-        "note": "Iniciar nas primeiras 2 semanas de vida para prevenir sequelas neurodesenvolvimentais. Alvo T4 livre: metade superior do normal para a idade"
+        "ind": "Hipotiroidismo — RN (PO)",
+        "val": "Inicial 10–15 mcg/kg 1×/dia; ajustar em passos de 5 mcg/kg cada 2 semanas; manutenção 20–50 mcg/dia",
+        "max": "50 mcg/dose inicial",
+        "freq": "1×/dia, sempre à mesma hora, de preferência 30 min antes das refeições",
+        "note": "BNFC 2020-21, Levothyroxine sodium (p. 524)."
       },
       {
-        "ind": "Hipotiroidismo pediátrico (criança > 1 ano)",
-        "val": "< 3 anos: 4–6 μg/kg/dia; 3–10 anos: 3–5 μg/kg/dia; > 10 anos: 2–3 μg/kg/dia",
-        "max": "150–200 μg/dia (adolescente)",
-        "freq": "1 dose/dia em jejum (30 min antes refeição)",
-        "note": "Ajustar por TSH e T4 livre a cada 4–8 semanas inicialmente"
+        "ind": "Hipotiroidismo — 1 mês–1 ano (PO)",
+        "val": "Inicial 5 mcg/kg 1×/dia; ajustar em passos de 10–25 mcg cada 2–4 semanas; manutenção 25–75 mcg/dia",
+        "max": "50 mcg/dose inicial",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 524)."
       },
       {
-        "ind": "Coma mixedematoso — EV",
-        "val": "4 μg/kg EV (ou 200–400 μg EV dose única)",
-        "max": "500 μg carga",
-        "freq": "Carga; depois 100 μg/dia EV",
-        "note": "Associar hidrocortisona 100 mg EV q8h até excluir insuf. supra-renal concomitante"
+        "ind": "Hipotiroidismo — 2–11 anos (PO)",
+        "val": "Inicial 50 mcg 1×/dia; ajustar em passos de 25 mcg cada 2–4 semanas; manutenção 75–100 mcg/dia",
+        "max": "—",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 524)."
+      },
+      {
+        "ind": "Hipotiroidismo — 12–17 anos (PO)",
+        "val": "Inicial 50 mcg 1×/dia; ajustar em passos de 25–50 mcg cada 3–4 semanas; manutenção 100–200 mcg/dia",
+        "max": "—",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 524)."
+      },
+      {
+        "ind": "Via EV (impossibilidade de via oral)",
+        "val": "1,2 mcg/kg/dia EV",
+        "max": "—",
+        "freq": "1×/dia",
+        "note": "Shann, Drug Doses (entrada Thyroxine/levothyroxine). Não consta do BNFC 2020-21. Dose de carga no coma mixedematoso pediátrico: não verificada nas fontes disponíveis — consultar Endocrinologia Pediátrica."
       }
     ],
     "prep": "Oral: esmagar comprimidos em 5 ml de água para RN. Tomar 30 min antes da refeição. Não tomar com leite, antiácidos, ferro, cálcio (reduzem absorção 25–40%). EV: administrar lentamente.",
@@ -593,7 +607,6 @@ var DRUGS_ENDOCRINO = [
       "Pós-cirurgia cardíaca: hipotiroidismo sub-clínico frequente — rastrear TSH/T4L",
       "Monitorização: TSH e T4L q4–8 sem no início, trimestralmente depois"
     ],
-    "source": "BNF for Children 2023-24; ATA Hypothyroidism Guidelines 2014; ESPE Congenital Hypothyroidism Guidelines 2014",
-    "review": ["Existiam 2 fichas com doses diferentes para > 1 ano (ex.: 1–5 anos 5–6 vs < 3 anos 4–6 μg/kg/dia); mantida a ficha com ATA 2014/ESPE como fonte. Confirmar no BNFC/ESPE antes de prescrever.", "Dose EV de levotiroxina não verificada em fonte primária — confirmar."]
+    "source": "BNF for Children 2020-21, Levothyroxine sodium (p. 524); Shann F. Drug Doses (via EV)"
   }
 ];
