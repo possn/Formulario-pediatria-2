@@ -695,46 +695,32 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "Depressão respiratória — EV/IO/IM/IN",
-        "val": "0,01 mg/kg EV/IO",
-        "max": "0,4 mg/dose (adolescente/adulto)",
-        "freq": "pode repetir cada 2–3 min; perfusão se recorrência",
-        "note": "⚠️ Dose titulada: usar dose baixa (0,001–0,005 mg/kg) se dependente crónico de opioides — risco síndrome abstinência aguda"
+        "ind": "Intoxicação por opioides — EV (RN e 1 mês–11 anos)",
+        "val": "100 mcg/kg",
+        "max": "2 mg/dose",
+        "freq": "Repetir cada 1 min se sem resposta, até máx. 2 mg; depois rever diagnóstico",
+        "note": "BNFC 2020-21 (p. 901). Perfusão se recorrência: ~60% da dose de reversão por hora. Shann (esquema titulado, menos agressivo): 0,01 mg/kg EV cada 2 min (cada 15 min se IM/SC), até 4 doses; depois perfusão 0,01 mg/kg/h."
       },
       {
-        "ind": "RN (opioides maternos)",
-        "val": "0,01 mg/kg EV/IO/IM/ET",
+        "ind": "Intoxicação por opioides — 12–17 anos",
+        "val": "400 mcg; depois 800 mcg (até 2 doses, 1 min); depois 2 mg",
+        "max": "4 mg/dose em intoxicação grave",
+        "freq": "Intervalos de 1 min; rever diagnóstico",
+        "note": "BNFC 2020-21 (p. 901). IM/SC só se EV inviável. Intranasal 14–17 anos: 1,8 mg numa narina, repetir às 2–3 min."
+      },
+      {
+        "ind": "Depressão respiratória pós-operatória por opioide — EV",
+        "val": "1 mcg/kg",
         "max": "—",
-        "freq": "pode repetir",
-        "note": "NÃO usar em RN de mãe dependente (risco convulsões por abstinência)"
+        "freq": "Repetir cada 2–3 min se necessário",
+        "note": "BNFC 2020-21 (p. 901), RN e 1 mês–11 anos. 12–17 anos: 100–200 mcg. Shann: 0,002 mg/kg/dose."
       },
       {
-        "ind": "Perfusão (recorrência)",
-        "val": "0,005–0,01 mg/kg/hora",
+        "ind": "RN — depressão por opioide administrado à mãe no parto",
+        "val": "IM: 200 mcg ou 60 mcg/kg (dose única ao nascer); EV/SC: 10 mcg/kg",
         "max": "—",
-        "freq": "contínua",
-        "note": "Semi-vida naloxona (30–80 min) < maioria opioides — observar >4h"
-      },
-      {
-        "ind": "Depressão respiratória grave — criança",
-        "val": "0,01 mg/kg EV/IO/IM/SC",
-        "max": "0,4 mg/dose",
-        "freq": "q2–3 min até resposta respiratória adequada (não esperar reversão completa)",
-        "note": "Titular para manter FR adequada sem reverter analgesia completa. Infusão: 0,005–0,01 mg/kg/h se recorrência"
-      },
-      {
-        "ind": "Apneia neonatal por opioides maternos",
-        "val": "0,01 mg/kg EV/IM/SC",
-        "max": "—",
-        "freq": "Dose única; repetir se sem resposta em 2–3 min",
-        "note": "NÃO administrar a RN de mãe dependente de opioides (precipita abstinência neonatal grave)"
-      },
-      {
-        "ind": "Intranasal (pré-hospitalar/IM indisponível)",
-        "val": "0,1 mg/kg IN",
-        "max": "4 mg total",
-        "freq": "q2–3 min",
-        "note": "Absorção IN mais lenta — usar EV/IO se acesso disponível"
+        "freq": "EV/SC: repetir cada 2–3 min se necessário",
+        "note": "BNFC 2020-21 (p. 901). Garantir ventilação eficaz antes."
       }
     ],
     "prep": "EV urgência: diluir 0,4 mg em 10 ml SF (0,04 mg/ml) para titulação precisa. Bólus em 15 seg; repetir q2–3 min. Perfusão: 0,4–1 mg em 100 ml SF. IM/SC: usar 0,4 mg/ml não diluído. Intranasal: atomizador MAD — usar solução concentrada (1 mg/ml, máx 0,3 ml/narina, atomizar). Fonte: BNF for Children 2023-24; PALS AHA 2020.",
@@ -755,7 +741,7 @@ var DRUGS_SEDACAO = [
       "Titular para manter FR > 8/min e SpO2 > 94% — não para acordar completamente",
       "Alternativa à naloxona em prurido opioide: doses muito baixas 0,5–2 μg/kg/h"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; WHO 2014; BNF for Children 2023-24; PALS AHA 2020; Boyer EW NEJM 2012"
+    "source": "BNFC 2020-21, Naloxone hydrochloride (p. 901); Shann Drug Doses (Naloxone)"
   },
   {
     "id": "tramadol",

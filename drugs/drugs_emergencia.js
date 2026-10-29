@@ -170,39 +170,18 @@ var DRUGS_EMERGENCIA = [
     ],
     "dose": [
       {
-        "ind": "Acidose / PCR",
-        "val": "1 mmol/kg (= 1 ml/kg da sol. 8,4%)",
-        "max": "50 mmol/dose",
-        "freq": "pode repetir guiado por gasometria",
-        "note": "Usar sol. 4,2% em RN e lactentes < 3 meses"
-      },
-      {
-        "ind": "Hipercaliemia grave",
-        "val": "1–2 mmol/kg EV em 5–10 min",
-        "max": "50 mmol",
-        "freq": "dose única (efeito temporário)",
-        "note": "Não corrige a hipercaliemia — transloca K+ para célula"
-      },
-      {
-        "ind": "Alcalinização urinária (intox. salicilatos)",
-        "val": "1–2 mmol/kg EV",
-        "max": "100 mmol",
-        "freq": "seguido de perfusão para manter pH urinário 7,5–8",
-        "note": ""
-      },
-      {
-        "ind": "Neonatal — Acidose metabólica — EV",
-        "val": "1–2 mmol/kg EV (= 2–4 ml/kg da sol. 4,2%)",
+        "ind": "PCR / acidose grave — EV",
+        "val": "1–2 mmol/kg (= 1–2 ml/kg de bicarbonato 8,4%)",
         "max": "—",
-        "freq": "em 30–60 min; repetir guiado por gasometria",
-        "note": "SEMPRE usar solução 4,2% em RN e prematuros (solução 8,4% é hiperosmolar → risco HIV)"
+        "freq": "Em PCR prolongada: 1 mmol/kg por cada 10 min de paragem",
+        "note": "Shann (tabela de reanimação). Não misturar com adrenalina/cálcio."
       },
       {
-        "ind": "Neonatal — Hipercaliemia grave",
-        "val": "1–2 mmol/kg EV",
+        "ind": "Acidose metabólica — correção guiada por défice de bases",
+        "val": "mmol = BE × peso (kg) / 6 (criança); / 4 se < 5 kg",
         "max": "—",
-        "freq": "em 5–10 min (efeito transitório — não corrige K+)",
-        "note": ""
+        "freq": "EV lento; corrige metade do défice",
+        "note": "Shann. Reavaliar gasometria antes de repetir."
       }
     ],
     "prep": "EV: usar solução 4,2% (0,5 mEq/ml) em RN e lactentes (solução 8,4% é hiperosmolar e associada a HIV e necrose cerebral). Em crianças maiores: 8,4% (1 mEq/ml) pode ser usado diluído. Administrar lentamente (não em bólus rápido em RN). ⚠️ NÃO misturar com cálcio (CaCO3), adrenalina, dopamina, noradrenalina, aminoglicosídeos (inactivação) — linha dedicada. Fonte: BNF for Children 2023-24; PALS AHA 2020.",
@@ -223,7 +202,9 @@ var DRUGS_EMERGENCIA = [
       "⚠️ Paradoxalmente agrava acidose intracelular e cerebral se ventilação inadequada",
       "⚠️ Hipocalcemia após correcção da acidose"
     ],
-    "source": "ILCOR 2021; Harriet Lane 23rd Ed; BNF for Children 2023-24; BNF for Children 2023-24; ILCOR NLS 2021; BNFC Neonatal Formulary 9th Ed"
+    "source": "Shann Drug Doses (Bicarbonate; tabela de reanimação)",
+    "review": ["Doses de hipercaliemia e alcalinização urinária em salicilatos removidas por não estarem verificadas no BNFC 2020-21/Shann; confirmar em fonte vigente (ERC/ILCOR) antes de usar."]
+  
   },
   {
     "id": "calcio_gluconato",
@@ -289,26 +270,29 @@ var DRUGS_EMERGENCIA = [
     ],
     "dose": [
       {
-        "ind": "Reversão sedação/intoxicação BZD",
-        "val": "0,01 mg/kg EV em 15 seg",
-        "max": "0,2 mg/dose; máx acumulado 1 mg",
-        "freq": "Repetir q1 min até resposta; máx 4 doses",
-        "note": "Semi-vida 40–80 min — muito mais curta que benzodiazepinas; ressedação frequente. Monitorizar ≥ 2h após última dose"
+        "ind": "Reversão de sedação por benzodiazepinas — EV",
+        "val": "10 mcg/kg (RN e criança)",
+        "max": "200 mcg/dose; máx. 1 mg e 50 mcg/kg por ciclo (2 mg em cuidados intensivos)",
+        "freq": "Repetir cada 1 min se necessário; administrar em 15 s",
+        "note": "BNFC 2020-21 (p. 899). Shann: 5 mcg/kg cada 60 s até acordar (máx. 50 mcg/kg)."
+      },
+      {
+        "ind": "Recorrência de sonolência — perfusão EV",
+        "val": "2–10 mcg/kg/h",
+        "max": "400 mcg/h",
+        "freq": "Contínua, ajustar à resposta",
+        "note": "BNFC 2020-21 (p. 899); fora de licença. Shann: 2–10 mcg/kg/h."
       }
     ],
     "prep": "EV: administrar não diluído (0,1 mg/ml) em bólus lento 15 seg. Para titulação precisa em criança: diluir 0,5 mg em 50 ml SF (0,01 mg/ml). Ter material de reanimação disponível (ressedação provável). Estabilidade após diluição: 24h. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
-    "ci": [
-      "Intoxicação mista com antidepressivos tricíclicos (pode precipitar convulsões)",
-      "Epilepsia em tratamento crónico com BZD (pode precipitar estado de mal epiléptico)",
-      "Pressão intracraniana elevada (vasodilatação cerebral)"
-    ],
+    "ci": ["Condição grave controlada por benzodiazepinas (hipertensão intracraniana, estado de mal epiléptico)"],
     "alert": [
       "⚠️ Ressedação provável — semi-vida 40 min vs horas para BZD; manter monitorização",
       "⚠️ Pode precipitar síndrome abstinência BZD aguda (convulsões, agitação) em dependentes",
       "⚠️ NÃO reverte depressão por opioides, barbitúricos ou outros hipnóticos",
       "Não usar como diagnóstico de rotina em coma — usar apenas quando BZD documentada ou fortemente suspeita"
     ],
-    "source": "BNF for Children 2023-24; Bhatt M et al. Lancet 2017; TOXBASE UK"
+    "source": "BNFC 2020-21, Flumazenil (p. 899); Shann Drug Doses (Flumazenil)"
   },
   {
     "id": "dextrose_emerg",
