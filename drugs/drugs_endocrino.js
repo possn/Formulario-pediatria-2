@@ -52,118 +52,6 @@ var DRUGS_ENDOCRINO = [
     "source": "Formulário de Pediatria 3ª Ed.; ISPAD Guidelines CAD 2022; BNF for Children 2023-24"
   },
   {
-    "id": "levotiroxina",
-    "name": "Levotiroxina (T4)",
-    "category": "endocrino",
-    "src": "added",
-    "class": "Hormona tiroideia — substituto sintético T4",
-    "brands": "Synthroid; Eutirox comp. 25/50/75/100/150 mcg",
-    "indication": [
-      "Hipotiroidismo congénito — urgência neonatal",
-      "Hipotiroidismo adquirido",
-      "Pan-hipopituitarismo",
-      "Coma mixedematoso"
-    ],
-    "dose": [
-      {
-        "ind": "Hipotiroidismo congénito (RN)",
-        "val": "10–15 mcg/kg/dia oral",
-        "max": "50 mcg/dia (início)",
-        "freq": "1×/dia em jejum",
-        "note": "Iniciar o mais cedo possível — janela crítica de desenvolvimento neurológico"
-      },
-      {
-        "ind": "Lactente 3–12 meses",
-        "val": "6–8 mcg/kg/dia",
-        "max": "—",
-        "freq": "1×/dia",
-        "note": ""
-      },
-      {
-        "ind": "Criança 1–5 anos",
-        "val": "5–6 mcg/kg/dia",
-        "max": "—",
-        "freq": "1×/dia",
-        "note": ""
-      },
-      {
-        "ind": "Criança 6–12 anos",
-        "val": "4–5 mcg/kg/dia",
-        "max": "—",
-        "freq": "1×/dia",
-        "note": ""
-      },
-      {
-        "ind": "Adolescente",
-        "val": "2–3 mcg/kg/dia",
-        "max": "150–200 mcg/dia",
-        "freq": "1×/dia em jejum",
-        "note": ""
-      }
-    ],
-    "prep": "EV: reconstituir 100–500 μg em 2–5 ml SF (sem agitar excessivamente). Usar imediatamente. Administrar em 5–10 min. Oral: esmagar comprimido e dissolver em 5 ml água para RN/lactentes. Tomar 30 min antes da refeição — biodisponibilidade reduz 25–40% com alimentos, cálcio, ferro, antiácidos.",
-    "ci": [
-      "Tirotoxicose não tratada",
-      "IAM recente (relativa)"
-    ],
-    "alert": [
-      "⚠️ Hipotiroidismo congénito: iniciar nas primeiras 2 semanas — atraso causa lesão neurológica permanente",
-      "⚠️ Monitorizar TSH e T4 livre a cada 4–6 semanas no início",
-      "⚠️ Interacção com ferro, cálcio, IBPs (reduzem absorção — espaçar 4h)",
-      "Sintomas de overdose: taquicardia, perda de peso, irritabilidade"
-    ],
-    "source": "BNF for Children 2023-24; European Thyroid Association Guidelines 2022"
-  },
-  {
-    "id": "glucagon",
-    "name": "Glucagon",
-    "category": "endocrino",
-    "src": "added",
-    "class": "Hormona pancreática — glicogenólise + gluconeogénese hepática",
-    "brands": "GlucaGen 1 mg pó + seringa; Baqsimi 3 mg pó nasal",
-    "indication": [
-      "Hipoglicemia grave sem acesso venoso — 1ª linha",
-      "Intoxicação por betabloqueante (doses altas)",
-      "Intoxicação por bloqueadores canais cálcio",
-      "Hipoglicemia neonatal transitória (sem AV)"
-    ],
-    "dose": [
-      {
-        "ind": "Hipoglicemia — IM/SC/IN",
-        "val": "< 25 kg: 0,5 mg IM/SC; ≥ 25 kg: 1 mg IM/SC",
-        "max": "1 mg",
-        "freq": "dose única; virar para lado; alimentar quando consciente",
-        "note": "Nasal (Baqsimi): 3 mg numa narina (≥ 4 anos)"
-      },
-      {
-        "ind": "Intoxicação betabloqueante EV",
-        "val": "50–150 mcg/kg EV em 1 min",
-        "max": "10 mg",
-        "freq": "seguido de perfusão 2–5 mg/hora",
-        "note": ""
-      },
-      {
-        "ind": "Hipoglicemia neonatal EV",
-        "val": "0,02–0,1 mg/kg EV",
-        "max": "1 mg",
-        "freq": "dose única; seguir de glucose EV",
-        "note": ""
-      }
-    ],
-    "prep": "IM/SC: reconstituir pó com solvente aquoso fornecido (1 ml de SWFI). Agitar até dissolver completamente. Usar IMEDIATAMENTE — instável após reconstituição. EV (intoxicação betabloqueante): diluir em SG5% (não SF — coagula). Carga: 0,05–0,15 mg/kg em 3–5 min; perfusão: 0,05–0,1 mg/kg/h em SG5%.",
-    "ci": [
-      "Feocromocitoma (libertação catecolaminas)",
-      "Insulinoma (hipoglicemia rebote)"
-    ],
-    "alert": [
-      "⚠️ Náuseas e vómitos após administração — posição lateral para evitar aspiração",
-      "⚠️ Hipoglicemia de rebote — alimentar logo que possível ou glucose EV",
-      "Eficácia reduzida se reservas hepáticas de glicogénio baixas (desnutrição, alcoolismo)",
-      "Treinar pais/cuidadores de crianças diabéticas na administração"
-    ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
-  },
-  {
     "id": "desmopressina",
     "name": "Desmopressina (DDAVP)",
     "category": "endocrino",
@@ -652,7 +540,8 @@ var DRUGS_ENDOCRINO = [
       "Em intoxicação por BCC e BB: glucagão é adjuvante; associar insulina-euglicemia de alta dose, lipid emulsion, ECMO se refractário",
       "Hiperglicemia transitória após administração — monitorizar glicemia"
     ],
-    "source": "BNF for Children 2023-24; Krentz AJ et al. Diabet Med 2011; Graudins A et al. Emerg Med Australas 2016 (BB/CCB toxicity)"
+    "source": "BNF for Children 2023-24; Krentz AJ et al. Diabet Med 2011; Graudins A et al. Emerg Med Australas 2016 (BB/CCB toxicity)",
+    "review": ["Formulário de Pediatria 3ª Ed. indica hipoglicemia 0,03–0,1 mg/kg/dose (máx. 1 mg) e RN 25–30 mcg/kg; esta ficha usa dose fixa por peso (< 25 kg: 0,5 mg; ≥ 25 kg: 1 mg). Confirmar qual o protocolo local.", "Intoxicação por beta-bloqueante: existiam 2 fichas discordantes (bólus em 1 min vs 3–5 min; perfusão 2–5 mg/h vs 0,05–0,1 mg/kg/h). Dose/velocidade de bólus não verificadas — confirmar com Centro de Informação Antivenenos (CIAV 800 250 250) / ToxBase.", "Dose de glucagon para hipoglicemia neonatal EV (0,02–0,1 mg/kg) removida por duplicação: não verificada."]
   },
   {
     "id": "levotiroxina",
@@ -702,6 +591,7 @@ var DRUGS_ENDOCRINO = [
       "Pós-cirurgia cardíaca: hipotiroidismo sub-clínico frequente — rastrear TSH/T4L",
       "Monitorização: TSH e T4L q4–8 sem no início, trimestralmente depois"
     ],
-    "source": "BNF for Children 2023-24; ATA Hypothyroidism Guidelines 2014; ESPE Congenital Hypothyroidism Guidelines 2014"
+    "source": "BNF for Children 2023-24; ATA Hypothyroidism Guidelines 2014; ESPE Congenital Hypothyroidism Guidelines 2014",
+    "review": ["Existiam 2 fichas com doses diferentes para > 1 ano (ex.: 1–5 anos 5–6 vs < 3 anos 4–6 μg/kg/dia); mantida a ficha com ATA 2014/ESPE como fonte. Confirmar no BNFC/ESPE antes de prescrever.", "Dose EV de levotiroxina não verificada em fonte primária — confirmar."]
   }
 ];

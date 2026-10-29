@@ -162,66 +162,6 @@ var DRUGS_GASTROENTEROLOGIA = [
     "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; EMA Safety Review 2013"
   },
   {
-    "id": "lactulose",
-    "name": "Lactulose",
-    "category": "gastro",
-    "src": "added",
-    "class": "Laxante osmótico — dissacarídeo não absorvível",
-    "brands": "Duphalac 3,35 g/5 ml sol. oral; Laevolac",
-    "indication": [
-      "Obstipação crónica",
-      "Encefalopatia hepática (reduz absorção amónia)"
-    ],
-    "dose": [
-      {
-        "ind": "Obstipação — < 1 ano",
-        "val": "2,5 ml/dose oral",
-        "max": "—",
-        "freq": "2×/dia",
-        "note": ""
-      },
-      {
-        "ind": "Obstipação — 1–5 anos",
-        "val": "5 ml/dose oral",
-        "max": "—",
-        "freq": "2×/dia",
-        "note": ""
-      },
-      {
-        "ind": "Obstipação — 5–10 anos",
-        "val": "10 ml/dose oral",
-        "max": "—",
-        "freq": "2×/dia",
-        "note": ""
-      },
-      {
-        "ind": "Obstipação — > 10 anos / adulto",
-        "val": "15 ml/dose oral",
-        "max": "—",
-        "freq": "2×/dia",
-        "note": "Ajustar para 1–2 dejecções moles/dia"
-      },
-      {
-        "ind": "Encefalopatia hepática",
-        "val": "30–50 ml oral ou 300 ml via retal",
-        "max": "—",
-        "freq": "3–4×/dia (alvo: 2–3 dejecções/dia)",
-        "note": ""
-      }
-    ],
-    "prep": "Oral: solução 3,3 g/5 ml ou 10 g/15 ml — pode diluir em água, sumo ou leite para melhorar palatabilidade. Via SNG: administrar directamente, sem diluição. Enema (encefalopatia hepática grave): 200 ml lactulose + 700 ml água morna — manter 30–60 min. Medir com seringa oral graduada para doses pediátricas. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
-    "ci": [
-      "Galactosemia",
-      "Obstrução intestinal"
-    ],
-    "alert": [
-      "Flatulência e cólicas no início — passageiros",
-      "Pode causar hipernatremia em desidratação",
-      "Efeito após 24–48h (não é laxante de acção imediata)"
-    ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
-  },
-  {
     "id": "sucralfato",
     "name": "Sucralfato",
     "category": "gastro",
@@ -511,6 +451,7 @@ var DRUGS_GASTROENTEROLOGIA = [
       "Administrar com cuidado em diabéticos (contém lactose e galactose — pequenas quantidades)",
       "Efeito 24–48h após início — não esperar resposta imediata"
     ],
-    "source": "BNF for Children 2023-24; ESPGHAN Constipation Guidelines 2014; Bass NM et al. NEJM 2010"
+    "source": "BNF for Children 2023-24; ESPGHAN Constipation Guidelines 2014; Bass NM et al. NEJM 2010",
+    "review": ["Existiam 2 fichas com esquemas de obstipação ligeiramente diferentes (< 1 ano: 2,5 ml 2×/dia vs 2,5 ml/dia); mantida a ficha com ESPGHAN 2014. Confirmar no BNFC."]
   }
 ];

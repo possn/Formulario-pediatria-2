@@ -721,9 +721,10 @@ function showDet(idx){
   var d=DRUGS[idx];
   _calcDrug=d;
   _perfIdx=idx;
-  var st=d.src==='added'
-    ?'<span class="stag st2">★ Adicionado — fontes bibliográficas independentes</span>'
-    :'<span class="stag st1">✓ Formulário de Pediatria 3ª Ed.</span>';
+  var _cf=/Formul[áa]rio de Pediatria/i.test(d.source||'');
+  var st=_cf
+    ?'<span class="stag st1">✓ Cita Formulário de Pediatria 3ª Ed.</span>'
+    :'<span class="stag st2">★ Fontes independentes (não consta do Formulário citado)</span>';
   var hasPkg=d.dose&&d.dose.some(function(dv){return parseDose(dv.val);});
   var calcW='';
   if(hasPkg){
@@ -764,6 +765,7 @@ function showDet(idx){
     alerts+='</div>';
   }
   if(d.source)src='<div class="card"><div class="ctit">Fontes</div><div class="srctxt">'+E(d.source)+'</div></div>';
+  if(d.review&&d.review.length)src='<div class="card" style="background:#fff8e6;border-color:#e8c46a"><div class="ctit" style="color:#9a6700">⚠️ Revisão pendente</div><ul class="ilist">'+d.review.map(function(r){return '<li>'+E(r)+'</li>'}).join('')+'</ul></div>'+src;
   document.getElementById('s-det').innerHTML=
     '<div class="dethd"><button class="backbtn" onclick="goBack()">‹ Voltar</button>'
     +'<div class="detname">'+E(d.name)+'</div>'

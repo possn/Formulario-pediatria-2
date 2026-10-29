@@ -458,7 +458,7 @@ var DRUGS_EMERGENCIA = [
         "note": "Associar hipotermia moderada (35–36°C) e sedação"
       }
     ],
-    "prep": "EV: diluir EXCLUSIVAMENTE em SG5% (precipita em SF). Concentração: 1–6 mg/ml periférico; até 18 mg/ml central. Linha dedicada; adsorve em PVC — usar polietileno ou vidro.",
+    "prep": "EV: diluir EXCLUSIVAMENTE em SG5% (precipita em SF). Concentração: ≤ 2 mg/ml periférico (acima disto, EV central); até 6 mg/ml em carga central e 18 mg/ml em perfusão contínua central. Linha dedicada; adsorve em PVC — usar polietileno ou vidro.",
     "ci": [
       "Bloqueio AV 2º/3º grau sem pacemaker",
       "Bradicardia sinusal grave",
