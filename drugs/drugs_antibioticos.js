@@ -688,7 +688,9 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ Inibidor potente CYP2C19/CYP3A4 — múltiplas interacções (ciclosporina, tacrolimus, varfarina)",
       "Monitorização de nível sérico recomendada (alvo: 1–5,5 mg/L)"
     ],
-    "source": "BNF for Children 2023-24; ESCMID/ECMM Guidelines 2023; Walsh TJ. CID 2008"
+    "source": "BNFC 2020-21, Voriconazole (p. 410: EV 2–11 anos 9 mg/kg cada 12 h × 2, depois 8 mg/kg; 12–14 anos < 50 kg igual; ≥ 50 kg e 15–17 anos 6 mg/kg × 2, depois 4 mg/kg)",
+    "review": ["Esquema «≥ 12 anos» da ficha só é válido para ≥ 50 kg (12–14 anos) ou 15–17 anos; 12–14 anos < 50 kg seguem o esquema pediátrico (9 mg/kg → 8 mg/kg). Duração máxima EV: 6 meses."]
+
   },
   {
     "id": "micafungina",
@@ -803,18 +805,11 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Infecção grave / neutropénia febril",
-        "val": "50 mg/kg/dose EV",
-        "max": "2 g/dose (6 g/dia)",
-        "freq": "q8h",
-        "note": "Infusão prolongada (3h) para maximizar %T>MIC em microrganismos com MIC elevada (PK/PD)"
-      },
-      {
-        "ind": "Meningite nosocomial",
-        "val": "50 mg/kg/dose EV",
-        "max": "2 g/dose",
-        "freq": "q8h",
-        "note": "Boa penetração LCR (~20% sérico)"
+        "ind": "Infeções por bactérias Gram-positivas e Gram-negativas sensíveis — EV/IM",
+        "val": "1 mês: 30 mg/kg cada 8–12 h; 2 meses–17 anos < 41 kg: 50 mg/kg cada 12 h, aumentando se grave",
+        "max": "2 g/dose; 50 mg/kg cada 8 h em infeção grave",
+        "freq": "Cada 12 h (cada 8 h se grave)",
+        "note": "BNFC 2020-21 (p. 346). ≥ 41 kg: 1 g cada 12 h (0,5–1 g em ITU ligeira-moderada); preferir via EV em infeção grave."
       }
     ],
     "prep": "EV: diluir em SF ou SG5%. Concentração 10–40 mg/ml. Administrar em 30 min (padrão) ou 3h (infusão prolongada, vantagem PK/PD para MIC > 4 mg/L).",
@@ -828,7 +823,9 @@ var DRUGS_ANTIBIOTICOS = [
       "Cobertura de Enterobacteriaceae ESBL variável — preferir meropenem se ESBL documentado",
       "Monitorizar função renal diariamente em doentes críticos"
     ],
-    "source": "BNF for Children 2023-24; Hayashi Y et al. Pediatr Infect Dis J 2016; IDSA Guidelines Febrile Neutropenia 2010"
+    "source": "BNFC 2020-21, Cefepime (p. 346)",
+    "review": ["Neutropenia febril e meningite nosocomial (50 mg/kg cada 8 h): doses da ficha anterior ficam por confirmar em protocolo local; o BNFC admite 50 mg/kg cada 8 h (máx. 2 g) em infeção grave."]
+  
   },
   {
     "id": "aztreonam",
@@ -883,39 +880,25 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Meningite / infecção grave",
-        "val": "200–400 mg/kg/dia EV",
-        "max": "12 g/dia",
-        "freq": "q4–6h",
-        "note": "Meningite: 400 mg/kg/dia para maximizar penetração LCR"
+        "ind": "Infecções suscetíveis — EV",
+        "val": "RN < 7 dias: 30 mg/kg cada 12 h; RN 7–28 dias: 30 mg/kg cada 8 h; criança: 20–30 mg/kg cada 8 h (máx. 500 mg/dose)",
+        "max": "Dose aumentada em infeção grave: RN 60 mg/kg; criança 40–60 mg/kg cada 8 h (máx. 1 g)",
+        "freq": "Ver esquema por idade",
+        "note": "BNFC 2020-21 (p. 368)."
       },
       {
-        "ind": "Sépsis neonatal precoce (< 7 dias)",
-        "val": "50 mg/kg/dose EV",
-        "max": "—",
-        "freq": "q12h (< 34 sem GA); q8h (≥ 34 sem GA)",
-        "note": "Associar gentamicina para sinergia"
+        "ind": "Meningite por Listeria (com outro antibiótico) — EV",
+        "val": "RN < 7 dias: 50–100 mg/kg cada 12 h; RN 7–28 dias: 50–100 mg/kg cada 8 h; criança: 50 mg/kg cada 4–6 h",
+        "max": "2 g/dose cada 4 h (criança)",
+        "freq": "Ver esquema por idade",
+        "note": "BNFC 2020-21 (p. 368)."
       },
       {
-        "ind": "Sépsis neonatal tardia (> 7 dias)",
-        "val": "50 mg/kg/dose EV",
-        "max": "—",
-        "freq": "q8h (< 34 sem); q6h (≥ 34 sem)",
-        "note": ""
-      },
-      {
-        "ind": "Sépsis neonatal — EV",
-        "val": "< 7 dias (< 30 sem): 50 mg/kg cada 12h; < 7 dias (≥ 30 sem): 50 mg/kg cada 8h; ≥ 7 dias: 50 mg/kg cada 6–8h",
-        "max": "200 mg/kg/dia",
-        "freq": "conforme idade gestacional e pós-natal",
-        "note": "Associar gentamicina na sépsis. Meningite: 100 mg/kg/dose cada 6–8h"
-      },
-      {
-        "ind": "Neonatal — Meningite por Listeria EV",
-        "val": "100 mg/kg/dose EV",
-        "max": "—",
-        "freq": "cada 6–8h × 14–21 dias",
-        "note": "A única β-lactâmico eficaz em Listeria"
+        "ind": "Infeção por estreptococo do grupo B / endocardite por enterococo (com outro antibiótico) — EV",
+        "val": "RN < 7 dias: 50 mg/kg cada 12 h; RN 7–28 dias: 50 mg/kg cada 8 h; criança: 50 mg/kg cada 4–6 h",
+        "max": "2 g/dose cada 4 h (criança)",
+        "freq": "Ver esquema por idade",
+        "note": "BNFC 2020-21 (p. 368)."
       }
     ],
     "prep": "EV: reconstituir 500 mg em 5 ml SWFI; 1 g em 10 ml. Diluir em SF (NÃO em SG5% — hidrólise). Concentração ≤ 30 mg/ml. Administrar em 15–30 min. ⚠️ INSTABILIDADE CRÍTICA — estável apenas 1h a 25°C após reconstituição (hidrólise rápida). Preparar imediatamente antes de administrar. Incompatível com aminoglicosídeos na mesma linha.",
@@ -932,7 +915,9 @@ var DRUGS_ANTIBIOTICOS = [
       "Rash maculopapular frequente — não é necessariamente alergia verdadeira",
       "Listeria: ÚNICA indicação em que ampicilina é irresubstituível (cefalosporinas ineficazes)"
     ],
-    "source": "BNF for Children 2023-24; Red Book AAP 2021; Polin RA et al. Pediatrics 2012 (neonatal sepsis); BNF for Children 2023-24; BNFC Neonatal Formulary 9th Ed"
+    "source": "BNFC 2020-21, Ampicillin (p. 368)",
+    "review": ["Esquemas neonatais por idade gestacional (< 30/34 sem) removidos: o BNFC 2020-21 usa apenas a idade pós-natal. Dose de meningite bacteriana não listérica: confirmar em protocolo local."]
+  
   },
   {
     "id": "amicacina",
@@ -1043,7 +1028,7 @@ var DRUGS_ANTIBIOTICOS = [
       "Tendinopatia/ruptura tendinosa (raro em criança mas documentado)",
       "Ajuste renal se TFG < 30 ml/min"
     ],
-    "source": "BNF for Children 2023-24; Bradley JS et al. Pediatrics 2011; AAP Committee on Infectious Diseases 2016"
+    "source": "BNFC 2020-21, Ciprofloxacin (p. 377: EV 10 mg/kg cada 8 h, máx. 400 mg; oral 20 mg/kg cada 12 h, máx. 750 mg; RN EV 10 mg/kg cada 12 h)"
   },
   {
     "id": "clindamicina",
@@ -1060,18 +1045,18 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Infecção grave EV",
-        "val": "10–13 mg/kg/dose EV",
-        "max": "600–900 mg/dose (2700 mg/dia)",
-        "freq": "q6–8h",
-        "note": "Infecções osteoarticulares graves: 13 mg/kg q6h"
+        "ind": "EV / IM profunda",
+        "val": "Criança: 3,75–6,25 mg/kg; até 10 mg/kg em infeção grave",
+        "max": "1,2 g/dose (doses > 600 mg só em perfusão EV)",
+        "freq": "Cada 6 h (ou dose diária total repartida em 3 tomas)",
+        "note": "BNFC 2020-21 (p. 351)."
       },
       {
         "ind": "Oral",
-        "val": "7–10 mg/kg/dose PO",
+        "val": "RN < 14 dias: 3–6 mg/kg cada 8 h; RN 14–28 dias: 3–6 mg/kg cada 6 h; criança: 3–6 mg/kg",
         "max": "450 mg/dose",
-        "freq": "q6–8h",
-        "note": "Biodisponibilidade oral 90% — step-down precoce possível"
+        "freq": "Cada 6 h; celulite/erisipela 7 dias e rever",
+        "note": "BNFC 2020-21 (p. 351)."
       }
     ],
     "prep": "EV: diluir em SF ou SG5%. Concentração máx. 18 mg/ml. Administrar em 20–45 min (nunca em bólus — risco hipotensão e colapso). Concentração > 6 mg/ml requer acesso central.",
@@ -1086,7 +1071,9 @@ var DRUGS_ANTIBIOTICOS = [
       "Excelente penetração óssea — fármaco de eleição em osteoartrite séptica pediátrica",
       "Efeito anti-toxina útil em TSS e fasceíte necrotizante (associar a beta-lactâmico)"
     ],
-    "source": "BNF for Children 2023-24; Liu C et al. CID 2011 (MRSA guidelines); Zaoutis TE et al. Pediatrics 2005"
+    "source": "BNFC 2020-21, Clindamycin (p. 351)",
+    "review": ["Doses anteriores (EV 10–13 mg/kg cada 6–8 h; oral 7–10 mg/kg) excediam o BNFC 2020-21 e foram removidas."]
+  
   },
   {
     "id": "rifampicina",
@@ -1155,25 +1142,25 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Candidíase / aspergilose invasiva",
-        "val": "3–5 mg/kg/dia EV",
-        "max": "—",
+        "ind": "AmBisome — micoses sistémicas / neutropenia febril refratária",
+        "val": "Dose-teste 100 mcg/kg (máx. 1 mg) em 10 min; depois 3 mg/kg/dia (RN: 1 mg/kg/dia, aumentar até 3 mg/kg/dia)",
+        "max": "5 mg/kg/dia",
         "freq": "1 dose/dia",
-        "note": "Dose 5 mg/kg/dia para aspergilose. Crianças podem necessitar doses mais altas (5–7 mg/kg) por clearance aumentada"
+        "note": "BNFC 2020-21 (p. 406). AmBisome não licenciada < 1 mês."
       },
       {
-        "ind": "Mucormicose",
-        "val": "5–10 mg/kg/dia EV",
+        "ind": "Abelcet — candidíase invasiva grave / aspergilose / criptococose (intolerância ou resistência)",
+        "val": "Dose-teste 100 mcg/kg (máx. 1 mg); depois 5 mg/kg",
         "max": "—",
         "freq": "1 dose/dia",
-        "note": "Doses elevadas (7,5–10 mg/kg) usadas em mucormicose disseminada grave"
+        "note": "BNFC 2020-21 (p. 406)."
       },
       {
-        "ind": "Leishmaniose visceral",
-        "val": "3 mg/kg/dia EV dias 1–5, 14, 21",
+        "ind": "Leishmaniose visceral (AmBisome)",
+        "val": "1–3 mg/kg/dia durante 10–21 dias (dose cumulativa 21–30 mg/kg), ou 3 mg/kg × 5 dias consecutivos + 1 dose ao dia 6",
         "max": "—",
-        "freq": "Esquema em dias alternados",
-        "note": "Dose total 21 mg/kg"
+        "freq": "1 dose/dia",
+        "note": "BNFC 2020-21 (p. 406)."
       }
     ],
     "prep": "EV: reconstituir 50 mg com 12 ml SWFI (4 mg/ml). Diluir em SG5% (NÃO SF — precipita) para concentração 0,2–2 mg/ml. Administrar em 2h (1h se tolerado). Filtro 5 μm obrigatório.",
@@ -1188,7 +1175,9 @@ var DRUGS_ANTIBIOTICOS = [
       "Hipocaliemia grave pode causar arritmias — monitorizar ECG se K⁺ < 3 mEq/L",
       "Pseudohiponatrémia relatada com formulações lipídicas (interferência no doseamento)"
     ],
-    "source": "BNF for Children 2023-24; Pappas PG et al. CID 2016 (IDSA Candida); Patterson TF et al. CID 2016 (Aspergillus)"
+    "source": "BNFC 2020-21, Amphotericin (p. 406)",
+    "review": ["Dose de mucormicose (5–10 mg/kg/dia) da ficha anterior removida: o BNFC 2020-21 indica máximo de 5 mg/kg/dia; doses superiores só sob decisão especializada (fonte por confirmar)."]
+  
   },
   {
     "id": "fluconazol",
@@ -1205,32 +1194,25 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Candidíase invasiva — tratamento",
-        "val": "12 mg/kg/dia EV/PO",
-        "max": "800 mg/dia",
-        "freq": "1 dose/dia",
-        "note": "Dose de carga: 25 mg/kg (máx 800 mg) no dia 1. Apenas para Candida sensível (não C. krusei, C. glabrata com MIC > 8)"
+        "ind": "Candidíase invasiva / criptococose (incl. meningite) — EV ou oral",
+        "val": "Criança: 6–12 mg/kg/dia; RN < 14 dias: 6–12 mg/kg cada 72 h; RN 14–28 dias: 6–12 mg/kg cada 48 h",
+        "max": "800 mg/dose",
+        "freq": "1 dose/dia; manter conforme resposta (≥ 8 semanas na meningite criptocócica)",
+        "note": "BNFC 2020-21 (p. 407)."
       },
       {
-        "ind": "Candidíase mucocutânea",
-        "val": "3–6 mg/kg/dia PO",
-        "max": "400 mg/dia",
-        "freq": "1 dose/dia",
-        "note": ""
+        "ind": "Candidíase mucosa (exceto genital)",
+        "val": "1.º dia 3–6 mg/kg; depois 3 mg/kg/dia (criança 1 mês–11 anos); RN < 14 dias: 3 mg/kg cada 72 h; RN 14–28 dias: cada 48 h",
+        "max": "100 mg/dose",
+        "freq": "7–14 dias (orofaríngea) ou 14–30 dias (outras mucosas)",
+        "note": "BNFC 2020-21 (p. 407). 12–17 anos: 50 mg/dia (até 100 mg)."
       },
       {
-        "ind": "Profilaxia RNMBP",
-        "val": "3–6 mg/kg/dose EV/PO",
-        "max": "—",
-        "freq": "q48–72h (conforme IG e peso)",
-        "note": "Profilaxia em RNMBP < 1000g ou < 28 sem reduz candidíase invasiva (NNT ~9, Cochrane 2016)"
-      },
-      {
-        "ind": "Neonato (ajuste posológico)",
-        "val": "6–12 mg/kg/dose",
-        "max": "—",
-        "freq": "q48–72h (RN < 2 sem); q24h (RN ≥ 2 sem)",
-        "note": "Semivida neonatal prolongada (55–90h) — intervalos alargados"
+        "ind": "Profilaxia de infeções fúngicas em imunocomprometidos",
+        "val": "Criança: 3–12 mg/kg/dia (12 mg/kg/dia se risco elevado, ex.: pós-TMO); RN < 14 dias: 3–12 mg/kg cada 72 h; RN 14–28 dias: cada 48 h",
+        "max": "400 mg/dose",
+        "freq": "Iniciar antes da neutropenia e manter 7 dias após recuperação de neutrófilos",
+        "note": "BNFC 2020-21 (p. 407)."
       }
     ],
     "prep": "EV: pronto a usar (2 mg/ml). Não diluir adicionalmente. Administrar em 60 min (máximo 10 ml/min). Compatível com SF e SG5%. Estabilidade: usar dentro do prazo do frasco. Oral: biodisponibilidade > 90% — considerar step-down precoce. Suspensão oral 10 mg/ml estável 14 dias a 25°C.",
@@ -1245,7 +1227,7 @@ var DRUGS_ANTIBIOTICOS = [
       "Hepatotoxicidade — monitorizar enzimas hepáticas em tratamentos > 1 semana",
       "Ajuste em insuficiência renal (TFG < 50 ml/min): reduzir dose 50%"
     ],
-    "source": "BNF for Children 2023-24; Pappas PG et al. CID 2016; Kaufman D et al. Pediatrics 2014 (RNMBP prophylaxis)"
+    "source": "BNFC 2020-21, Fluconazole (p. 407)"
   },
   {
     "id": "oseltamivir",
@@ -1416,18 +1398,18 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Infecção sistémica grave — EV",
-        "val": "Dose de carga: 75.000 UI/kg EV (= 5 mg CBA/kg); Manutenção: 50.000–75.000 UI/kg/dia",
-        "max": "Carga: 9 MUI; Manutenção: 9 MUI/dia",
-        "freq": "Manutenção em 2–3 doses/dia; iniciar 12–24h após carga",
-        "note": "SEMPRE usar em combinação (meropenem, rifampicina, fosfomicina) — monoterapia não recomendada. TDM (CSS alvo 2–4 mg/L) em centros com acesso"
+        "ind": "Infeções graves por Gram-negativos aeróbios com opções limitadas — EV",
+        "val": "< 41 kg: 75 000–150 000 unidades/kg/dia; ≥ 41 kg: 9 milhões de unidades/dia",
+        "max": "9 milhões de unidades/dia",
+        "freq": "< 41 kg: 3 doses/dia; ≥ 41 kg: 2–3 doses/dia",
+        "note": "BNFC 2020-21 (p. 375): dados muito limitados; consultar o RCM (usar peso magro)."
       },
       {
-        "ind": "Fibrose quística — inalada",
-        "val": "1,66–2 MUI inalado",
-        "max": "—",
-        "freq": "q12h; via DPI (Colobreathe) ou nebulização",
-        "note": ""
+        "ind": "Infeção pulmonar crónica por Pseudomonas na FQ — nebulizada",
+        "val": "1–23 meses: 0,5–1 milhão U 2×/dia (máx. 2 milhões/dia); 2–17 anos: 1–2 milhões U 2–3×/dia",
+        "max": "6 milhões de unidades/dia (2–17 anos)",
+        "freq": "2–3×/dia",
+        "note": "BNFC 2020-21 (p. 375). Pó inalado ≥ 6 anos: 1,66 milhões U 2×/dia."
       }
     ],
     "prep": "EV: reconstituir CMS 1 MUI em 10 ml SWFI; diluir em SF 100 ml. Administrar em 30–60 min. Dose de carga: perfusão 1h.",
@@ -1442,7 +1424,9 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ ÚLTIMO RECURSO — resistência emerge rapidamente; consulta obrigatória com Infecciologia/Microbiologia",
       "Monitorizar função renal q12–24h; suspender ou ajustar se creatinina duplicar"
     ],
-    "source": "BNF for Children 2023-24; Nation RL et al. Lancet Infect Dis 2015; EUCAST/ESCMID Colistin Guidelines 2016"
+    "source": "BNFC 2020-21, Colistimethate sodium (p. 375)",
+    "review": ["Dose de carga (75 000 U/kg) e manutenção 50 000–75 000 U/kg/dia (Nation 2015) removidas por não constarem do BNFC 2020-21: confirmar em protocolo local."]
+  
   },
   {
     "id": "fosfomicina_iv",
