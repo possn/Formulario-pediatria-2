@@ -139,6 +139,19 @@ var SOURCES = {
       note: "Versão actual das normas europeias de SAV pediátrico."
     },
     {
+      id: "aha_2025_algoritmos",
+      title: "2025 AHA/AAP Pediatric Algorithms: Cardiac Arrest (250123), Bradycardia With a Pulse (250121), Tachyarrhythmia With a Pulse (250117)",
+      publisher: "American Heart Association · American Academy of Pediatrics",
+      year: 2025,
+      note: "Algoritmos reproduzidos (tradução livre) no separador Algoritmos."
+    },
+    {
+      id: "uciep_hff_algoritmos",
+      title: "Algoritmos UCIEP: Hipertensão Intracraniana, Mal Convulsivo, Sepsis Grave, Fármacos de emergência e desfibrilhação",
+      publisher: "Departamento da Criança e do Jovem, Hospital Prof. Doutor Fernando Fonseca (ULS Amadora-Sintra)",
+      note: "Protocolos internos do serviço, reproduzidos no separador Algoritmos."
+    },
+    {
       id: "aha_2025_pals",
       title: "Part 8: Pediatric Advanced Life Support — 2025 AHA and AAP Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care",
       journal: "Circulation 152(16_suppl_2): S479–S537",

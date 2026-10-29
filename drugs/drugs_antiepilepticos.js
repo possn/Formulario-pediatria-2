@@ -284,7 +284,7 @@ var DRUGS_ANTIEPILEPTICOS = [
       "Não requer monitorização ECG durante infusão (ao contrário da fenitoína)"
     ],
     "source": "BNFC 2020-21, Levetiracetam (p. 217: terapêutica adjuvante 6 meses–17 anos < 50 kg — inicial 10 mg/kg/dia, até 30 mg/kg 2×/dia); Shann Drug Doses (Levetiracetam: estado de mal 50 mg/kg, máx. 2,5 g, EV em 10 min); Lyttle MD et al. (ConSEPT). Lancet 2019; 393:2178–87; Dalziel SR et al. (ECLIPSE). Lancet 2019; 393:2155–64",
-    "review": ["O BNFC 2020-21 não inclui estado de mal epiléptico para o levetiracetam. Carga de 40–60 mg/kg (máx. 3 g): Shann refere 50 mg/kg (máx. 2,5 g) em 10 min; confirmar o máximo no protocolo local."]
+    "review": ["O BNFC 2020-21 não inclui estado de mal epiléptico para o levetiracetam. O Protocolo UCIEP/HFF (mal convulsivo) usa 40 mg/kg (máx. 3 g) em 5 min; Shann refere 50 mg/kg (máx. 2,5 g) em 10 min. A ficha mostra 40–60 mg/kg: alinhar com o protocolo do serviço."]
 
   },
   {
@@ -330,7 +330,7 @@ var DRUGS_ANTIEPILEPTICOS = [
       "⚠️ Múltiplas interacções: ↑ lamotrigina, ↑ fenitoína livre, ↑ fenobarbital"
     ],
     "source": "BNFC 2020-21, Sodium valproate (p. 223: 1 mês–11 anos EV inicial 10 mg/kg, depois 20–40 mg/kg/dia em 2–4 doses; manutenção oral 25–30 mg/kg/dia, até 60 mg/kg/dia em espasmos infantis); Formulário de Pediatria 3ª Ed.; Harriet Lane 23rd Ed",
-    "review": ["Carga EV de 20–40 mg/kg no estado de mal epiléptico não consta do BNFC 2020-21 (dose inicial EV 10 mg/kg): confirmar em protocolo local."]
+    "review": ["O BNFC 2020-21 dá 10 mg/kg como dose inicial EV. A carga de 40 mg/kg (máx. 3 g) em 15 min, seguida de perfusão a 1–5 mg/kg/h, consta do Protocolo UCIEP/HFF (mal convulsivo); a ficha mostra 20–40 mg/kg."]
 
   },
   {

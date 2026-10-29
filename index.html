@@ -581,6 +581,66 @@ html,body{font-family:var(--sans);font-feature-settings:'tnum' 1,'lnum' 1}
 .perf-sel{background-repeat:no-repeat;background-position:right 16px center;padding-right:38px}
 input[type=number]{-moz-appearance:textfield}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+
+/* ══════════ ALGORITMOS ══════════ */
+#s-alg,#s-algd{padding-bottom:90px}
+.alg-hd{padding:14px var(--gut) 6px}
+.alg-hd h2{font-family:'Newsreader',Georgia,serif;font-size:30px;font-weight:500;letter-spacing:-.012em;color:var(--navy);line-height:1.1}
+.alg-hd p{font-size:13.5px;color:var(--muted);margin-top:6px}
+.alg-grp{margin:22px var(--gut) 0}
+.alg-grp h3{font-family:'Newsreader',Georgia,serif;font-size:19px;font-weight:500;color:var(--navy);padding-bottom:6px;border-bottom:2px solid #b08a4a}
+.alg-grp .alg-gs{font-size:12.5px;color:var(--muted);margin:6px 0 10px;line-height:1.45}
+.alg-list{display:grid;grid-template-columns:minmax(0,1fr);gap:9px}
+@media(min-width:760px){.alg-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.alg-card{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--t,#17707d);border-radius:4px;padding:13px 12px 13px 13px;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.alg-card:active{transform:scale(.99)}
+.alg-card .ag{flex:none;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;color:var(--t,#17707d);background:color-mix(in srgb,var(--t,#17707d) 11%,#fff)}
+.alg-card .at{font-weight:600;font-size:15px;color:var(--ink);line-height:1.25}
+.alg-card .as{font-size:12.5px;color:var(--muted);margin-top:2px;line-height:1.35}
+.alg-card .darr{margin-left:auto;color:var(--faint);flex:none}
+.alg-t-crit{--t:#b3382c}.alg-t-act{--t:#17707d}.alg-t-q{--t:#b08a4a}.alg-t-info{--t:#7a8791}
+.alg-dh{padding:10px var(--gut) 8px}
+.alg-dh h2{font-family:'Newsreader',Georgia,serif;font-size:28px;font-weight:500;letter-spacing:-.012em;color:var(--navy);line-height:1.1;margin-top:8px}
+.alg-dh .alg-ds{font-size:13.5px;color:var(--muted);margin-top:5px}
+.alg-body{padding:6px var(--gut) 0}
+.alg-flow{display:flex;flex-direction:column}
+.alg-st{display:flex;gap:0;align-items:stretch}
+.alg-lab{flex:none;width:66px;border-radius:8px 0 0 8px;background:color-mix(in srgb,var(--t) 13%,#fff);color:var(--t);font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center;text-align:center;padding:6px 3px;letter-spacing:.01em;line-height:1.2;border:1px solid color-mix(in srgb,var(--t) 28%,#fff);border-right:none}
+.alg-box{flex:1;min-width:0;background:#fff;border:1px solid var(--line);border-left:4px solid var(--t);border-radius:0 8px 8px 0;padding:11px 13px}
+.alg-box .st{font-weight:700;font-size:14.5px;color:var(--ink);margin-bottom:5px;line-height:1.3}
+.alg-box ul{list-style:none;margin:0;padding:0}
+.alg-box li{font-size:13.5px;line-height:1.5;color:var(--ink);padding:3px 0 3px 15px;position:relative}
+.alg-box li:before{content:"";position:absolute;left:2px;top:.78em;width:5px;height:5px;border-radius:50%;background:var(--t)}
+.alg-arrow{height:16px;margin-left:29px;width:2px;background:#9fb1b8;position:relative}
+.alg-arrow:after{content:"";position:absolute;left:-4px;bottom:-1px;border:5px solid transparent;border-top:6px solid #9fb1b8;border-bottom:0}
+.alg-br{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin-top:9px}
+@media(min-width:700px){.alg-br.n2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.alg-b{border:1px solid color-mix(in srgb,var(--t) 35%,#fff);background:color-mix(in srgb,var(--t) 6%,#fff);border-radius:6px;padding:8px 11px}
+.alg-b .bl{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--t);margin-bottom:3px}
+.alg-go{display:inline-block;margin-top:7px;padding:6px 12px;border-radius:999px;border:1px solid #b3382c;color:#b3382c;background:#fff;font:600 12.5px var(--sans);cursor:pointer}
+.alg-side{margin-top:20px}
+.alg-sec{background:#fff;border:1px solid var(--line);border-radius:6px;padding:11px 13px;margin-bottom:9px}
+.alg-sec h4{font-family:'Newsreader',Georgia,serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.alg-sec ul{list-style:none;margin:0;padding:0}
+.alg-sec li{font-size:13.5px;line-height:1.5;padding:3px 0 3px 15px;position:relative}
+.alg-sec li:before{content:"";position:absolute;left:2px;top:.78em;width:5px;height:5px;border-radius:50%;background:#b08a4a}
+.alg-notes{font-size:12px;color:var(--muted);line-height:1.5;margin-top:14px;padding:9px 12px;background:#eef0ea;border-radius:6px}
+.alg-src{font-size:11.5px;color:var(--faint);margin:14px 0 4px;line-height:1.45}
+.alg-warn{font-size:12px;color:#7a2a20;background:#fbefec;border:1px solid #efc7c0;border-radius:6px;padding:8px 11px;margin-top:12px;line-height:1.45}
+a.algdrug{color:#0f5f6c;font-weight:600;border-bottom:1px dotted #0f5f6c;cursor:pointer;text-decoration:none}
+.alg-tbl h3{font-family:'Newsreader',Georgia,serif;font-size:19px;font-weight:500;color:var(--navy);margin:20px 0 8px;padding-bottom:5px;border-bottom:2px solid #b08a4a}
+.alg-row{background:#fff;border:1px solid var(--line);border-radius:6px;margin-bottom:8px;overflow:hidden}
+.alg-row .rn{padding:8px 12px;background:#f3f4f0;font-weight:700;font-size:14px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.alg-row .rn a{font-size:11.5px;font-weight:600;color:#0f5f6c;cursor:pointer;white-space:nowrap}
+.alg-v{padding:8px 12px;border-top:1px solid var(--line2);font-size:13.5px;line-height:1.45}
+.alg-v .w{font-size:11.5px;font-weight:700;color:#b08a4a;text-transform:uppercase;letter-spacing:.04em}
+.alg-v .d{font-weight:700;font-size:15px;color:var(--ink)}
+.alg-v .x{color:var(--muted);font-size:12.5px}
+.home-alg{grid-column:1/-1;display:flex;align-items:center;gap:12px;margin:0;padding:12px 14px;border-radius:10px;background:var(--navy);color:#fff;cursor:pointer}
+.home-alg .ag{flex:none;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.12);color:#e8d6ac}
+.home-alg b{font-size:15px;display:block}
+.home-alg span{font-size:12.5px;color:#cfdadd}
+.home-alg .darr{margin-left:auto;color:#e8d6ac}
 </style>
 </head>
 <body>
@@ -666,10 +726,13 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 
     <!-- SOURCES -->
     <div id="s-src" class="screen"></div>
+    <div id="s-alg" class="screen"></div>
+    <div id="s-algd" class="screen"></div>
   </main>
 
   <nav id="tabbar">
     <div class="tab on" id="t-home" onclick="goTab('home')"><span class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="8.5" width="19" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="M9.2 9.2l5.6 5.6"/></svg></span><span class="tl">Fármacos</span></div>
+    <div class="tab"    id="t-alg"  onclick="goTab('alg')" ><span class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M6 16v-4h12v4"/></svg></span><span class="tl">Algoritmos</span></div>
     <div class="tab"    id="t-cp"   onclick="goTab('cp')"  ><span class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5.2 9.2A2 2 0 0 0 5.5 21h13a2 2 0 0 0 1.7-2.8L14 9V3"/><path d="M7.5 15h9"/></svg></span><span class="tl">Compat.</span></div>
     <div class="tab"    id="t-ai"   onclick="goTab('ai')"  ><span class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9.5L5 20v-4H4z"/><path d="M8 9h8M8 12h5"/></svg></span><span class="tl">Consulta</span></div>
     <div class="tab"    id="t-idx"  onclick="goTab('idx')" ><span class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg></span><span class="tl">Índice</span></div>
@@ -695,6 +758,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   </div>
 </div>
 
+<script src="algorithms.js"></script>
 <script src="compat_data.js"></script>
 <script>
 'use strict';
@@ -742,6 +806,7 @@ window.addEventListener('load', function() {
   buildHome();
   buildIdx();
   buildSrc();
+  buildAlg();
   loadKey();
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(function(){});
 });
@@ -782,6 +847,8 @@ function qd(id){var i=DRUGS.findIndex(function(d){return d.id===id});if(i>=0){pr
 function nMono(n){return '<b>'+n+'</b>'+(n===1?'monografia':'monografias')}
 function buildHome(){
   var h='<div class="home-intro"><h2>Áreas terapêuticas</h2><p>Escolha uma área, ou pesquise acima em todas as monografias.</p></div><div class="cards">';
+  h+='<div class="home-alg" onclick="goTab(\'alg\')"><div class="ag">'+glyph(0,22)+'</div><div><b>Algoritmos</b><span>PCR, bradicardia, taquiarritmia, mal convulsivo, sépsis, HTIC</span></div><span class="darr">'+IC_RIGHT+'</span></div>';
+
   SECS.forEach(function(s,i){
     var drugs=secDrugs(s);
     if(!drugs.length) return;
@@ -964,6 +1031,7 @@ function showDet(idx){
   document.querySelectorAll('.tab').forEach(function(el){el.classList.remove('on');});
 }
 function goBack(){
+  if(prevTab==='algd'){curTab='alg';document.querySelectorAll('.tab').forEach(function(el){el.classList.remove('on')});document.getElementById('t-alg').classList.add('on');show('algd');return}
   if(prevTab==='cat'&&_catIdx>=0){showCat(_catIdx);return}
   var t=(prevTab==='det'||prevTab==='srch')?'home':prevTab;
   curTab=t;
@@ -1085,6 +1153,84 @@ function doCompat(){
     h+='</div>';
   });
   document.getElementById('cres').innerHTML=h;
+}
+
+
+// ─── ALGORITMOS ───────────────────────────────────────────
+function aFmt(t){
+  return E(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')
+    .replace(/\{\{([a-z0-9_]+)\|([^}]+)\}\}/g,function(m,id,tx){return '<a class="algdrug" onclick="algDrug(\''+id+'\')">'+tx+'</a>'});
+}
+function aList(a){return a&&a.length?'<ul>'+a.map(function(x){return '<li>'+aFmt(x)+'</li>'}).join('')+'</ul>':''}
+function buildAlg(){
+  var h='<div class="alg-hd"><h2>Algoritmos</h2><p>Reanimação e protocolos do serviço. As doses abrem a monografia do fármaco.</p></div>';
+  ALG_GROUPS.forEach(function(g){
+    var items=ALGS.filter(function(a){return a.grp===g.id});
+    if(ALG_TABLE.grp===g.id) items=items.concat([ALG_TABLE]);
+    h+='<div class="alg-grp"><h3>'+E(g.t)+'</h3><div class="alg-gs">'+E(g.sub)+'</div><div class="alg-list">';
+    items.forEach(function(a){
+      h+='<div class="alg-card alg-t-'+a.tone+'" onclick="showAlg(\''+a.id+'\')"><div class="ag">'+glyph(a.ico,20)+'</div>'
+        +'<div><div class="at">'+E(a.title)+'</div><div class="as">'+E(a.sub)+'</div></div><span class="darr">'+IC_RIGHT+'</span></div>';
+    });
+    h+='</div></div>';
+  });
+  document.getElementById('s-alg').innerHTML=h;
+}
+function algDrug(id){
+  var i=DRUGS.findIndex(function(d){return d.id===id});
+  if(i>=0){showDet(i);prevTab='algd'}
+}
+var _algId=null;
+function showAlg(id){
+  var a=(id===ALG_TABLE.id)?ALG_TABLE:ALGS.filter(function(x){return x.id===id})[0]; if(!a) return;
+  _algId=id;
+  var h='<div class="alg-dh"><button class="backbtn" onclick="goTab(\'alg\')">'+IC_LEFT+'Algoritmos</button>'
+    +'<h2>'+E(a.title)+'</h2><div class="alg-ds">'+E(a.sub)+'</div></div><div class="alg-body">';
+  if(a.blocks){
+    h+='<div class="alg-tbl">';
+    a.blocks.forEach(function(b){
+      h+='<h3>'+E(b.t)+'</h3>';
+      b.rows.forEach(function(r){
+        h+='<div class="alg-row"><div class="rn"><span>'+E(r.n)+'</span>'+(r.id?'<a onclick="algDrug(\''+r.id+'\')">Ficha</a>':'')+'</div>';
+        r.v.forEach(function(v){
+          h+='<div class="alg-v">'+(v[0]?'<div class="w">'+E(v[0])+'</div>':'')
+            +'<div class="d">'+E(v[1])+'</div>'
+            +(v[2]?'<div class="x">'+E(v[2])+'</div>':'')+(v[3]?'<div class="x">'+E(v[3])+'</div>':'')+'</div>';
+        });
+        h+='</div>';
+      });
+    });
+    h+='</div>';
+  } else {
+    h+='<div class="alg-flow">';
+    a.stages.forEach(function(st,i){
+      if(i) h+='<div class="alg-arrow"></div>';
+      h+='<div class="alg-st alg-t-'+st.tone+'"><div class="alg-lab">'+E(st.lab)+'</div><div class="alg-box">'
+        +(st.title?'<div class="st">'+aFmt(st.title)+'</div>':'')+aList(st.items);
+      if(st.branches){
+        h+='<div class="alg-br'+(st.branches.length%2===0&&st.branches.length<=2?' n2':'')+'">';
+        st.branches.forEach(function(b){
+          h+='<div class="alg-b alg-t-'+b.tone+'"><div class="bl">'+E(b.lab)+'</div>'+aList(b.items)+'</div>';
+        });
+        h+='</div>';
+      }
+      if(st.go) h+='<button class="alg-go" onclick="showAlg(\''+st.go+'\')">Abrir algoritmo de paragem</button>';
+      h+='</div></div>';
+    });
+    h+='</div>';
+    if(a.side){
+      h+='<div class="alg-side">';
+      a.side.forEach(function(s2){h+='<div class="alg-sec"><h4>'+aFmt(s2.t)+'</h4>'+aList(s2.items)+'</div>'});
+      h+='</div>';
+    }
+    if(a.notes) h+='<div class="alg-notes">'+a.notes.map(E).join('<br>')+'</div>';
+  }
+  h+='<div class="alg-src">Fonte: '+E(a.src)+'</div>'
+    +'<div class="alg-warn">Apoio à decisão. Confirmar sempre a dose e a diluição antes de administrar; em caso de discordância, prevalece o protocolo local em vigor.</div></div>';
+  var el=document.getElementById('s-algd'); el.innerHTML=h; el.scrollTo(0,0);
+  prevTab=curTab; curTab='alg'; show('algd');
+  document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});
+  document.getElementById('t-alg').classList.add('on');
 }
 
 // ─── SOURCES ──────────────────────────────────────────────
