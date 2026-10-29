@@ -452,7 +452,6 @@ var DRUGS_ANTIBIOTICOS = [
     "id": "cotrimoxazol",
     "name": "Cotrimoxazol (SMZ/TMP)",
     "category": "antibiotico",
-    "src": "original",
     "class": "Sulfonamida + inibidor dihidrofolato redutase",
     "brands": "Bactrim susp. 200/40 mg/5 ml; comp. 400/80 mg; EV 400/80 mg/5 ml",
     "indication": [
@@ -465,25 +464,32 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Tratamento PCP (calculado em TMP)",
-        "val": "15–20 mg TMP/kg/dia EV ou oral",
+        "ind": "Infeções suscetíveis — oral",
+        "val": "6 sem–5 meses: 120 mg; 6 meses–5 anos: 240 mg; 6–11 anos: 480 mg; 12–17 anos: 960 mg (ou 24 mg/kg)",
         "max": "—",
-        "freq": "3–4 doses/dia × 21 dias",
-        "note": ""
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 378). Doses de cotrimoxazol total (sulfametoxazol + trimetoprim 5:1)."
       },
       {
-        "ind": "Profilaxia PCP",
-        "val": "5 mg TMP/kg/dia oral",
-        "max": "160 mg TMP/dia",
-        "freq": "1×/dia (3 dias/semana ou diária)",
-        "note": ""
+        "ind": "Infeções suscetíveis — EV",
+        "val": "6 semanas–17 anos: 18 mg/kg (27 mg/kg se grave)",
+        "max": "1,44 g/dose",
+        "freq": "Cada 12 h",
+        "note": "BNFC 2020-21 (p. 378)."
       },
       {
-        "ind": "ITU oral",
-        "val": "6 mg TMP/kg/dia",
-        "max": "320 mg TMP/dia",
-        "freq": "2 doses/dia × 5–10 dias",
-        "note": ""
+        "ind": "Pneumocystis jirovecii — tratamento",
+        "val": "120 mg/kg/dia (cotrimoxazol), oral ou EV",
+        "max": "—",
+        "freq": "Em 2–4 doses durante 14–21 dias; preferir via oral",
+        "note": "BNFC 2020-21 (p. 378); equivale a ≈ 20 mg/kg/dia de trimetoprim."
+      },
+      {
+        "ind": "Pneumocystis jirovecii — profilaxia (oral)",
+        "val": "450 mg/m²",
+        "max": "960 mg/dose",
+        "freq": "2×/dia, 3 dias por semana (consecutivos ou alternados)",
+        "note": "BNFC 2020-21 (p. 378); regimes variam — consultar protocolo local."
       }
     ],
     "prep": "EV: diluir 5 ml de ampolação em ≥ 125 ml SF ou SG5% (concentração ≤ 1,6 mg TMP/ml). Administrar em 60–90 min. ⚠️ Concentrações > 1,6 mg/ml TMP causam precipitação do sulfametoxazol. Incompatível com soluções alcalinas. Estabilidade: 6h a 25°C após diluição.",
@@ -499,7 +505,9 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ Hipercaliemia (bloqueia excreção tubular K+)",
       "⚠️ ↑ creatinina (inibe secreção tubular — não é insuf. renal verdadeira)"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Co-trimoxazole (p. 378)",
+    "review": ["Dose de ITU da ficha anterior (6 mg/kg/dia de TMP) removida: usar o esquema de «infeções suscetíveis»."]
+  
   },
   {
     "id": "linezolide",
@@ -516,18 +524,11 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "< 12 anos EV/oral",
-        "val": "10 mg/kg/dose",
+        "ind": "EV / oral — pneumonia, infeções complicadas de pele e partes moles (início sob supervisão especializada)",
+        "val": "RN < 7 dias: 10 mg/kg cada 12 h (até cada 8 h se resposta fraca); RN 7–28 dias: 10 mg/kg cada 8 h; 1 mês–11 anos: 10 mg/kg cada 8 h; 12–17 anos: 600 mg cada 12 h",
         "max": "600 mg/dose",
-        "freq": "3×/dia",
-        "note": ""
-      },
-      {
-        "ind": "≥ 12 anos EV/oral",
-        "val": "600 mg/dose",
-        "max": "600 mg/dose",
-        "freq": "2×/dia",
-        "note": "Biodisponibilidade oral ~100% — transição EV→oral imediata possível"
+        "freq": "Ver esquema por idade",
+        "note": "BNFC 2020-21 (p. 389)."
       }
     ],
     "prep": "EV: pronto a usar (2 mg/ml em 300 ml). Não diluir adicionalmente. Administrar em 30–120 min. Compatível com SF e SG5%; incompatível com vancomicina (precipitação), ceftriaxona, furosemida. Proteger da luz. Estabilidade: usar dentro do prazo do frasco.",
@@ -541,7 +542,7 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ Neuropatia periférica e óptica em uso prolongado (> 4 semanas)",
       "Reservar para organismos resistentes — risco de resistência"
     ],
-    "source": "BNF for Children 2023-24; GOSH Drug Formulary 2023; Harriet Lane 23rd Ed"
+    "source": "BNFC 2020-21, Linezolid (p. 389)"
   },
   {
     "id": "daptomicina",
@@ -558,32 +559,11 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "< 1 ano",
-        "val": "6 mg/kg EV",
+        "ind": "Infeções complicadas de pele e partes moles por Gram-positivos — EV",
+        "val": "12–23 meses: 10 mg/kg; 2–6 anos: 9 mg/kg; 7–11 anos: 7 mg/kg; 12–17 anos: 5 mg/kg",
         "max": "—",
-        "freq": "1×/dia",
-        "note": "Dados limitados — off-label"
-      },
-      {
-        "ind": "1–6 anos",
-        "val": "9 mg/kg EV",
-        "max": "—",
-        "freq": "1×/dia",
-        "note": ""
-      },
-      {
-        "ind": "7–11 anos",
-        "val": "7 mg/kg EV",
-        "max": "—",
-        "freq": "1×/dia",
-        "note": ""
-      },
-      {
-        "ind": "≥ 12 anos",
-        "val": "6–10 mg/kg EV",
-        "max": "—",
-        "freq": "1×/dia",
-        "note": "Bacteriemia/endocardite: 6 mg/kg; Infecções complicadas: 8–10 mg/kg"
+        "freq": "1×/dia até 14 dias",
+        "note": "BNFC 2020-21 (p. 385). Bacteriemia por S. aureus: 12 mg/kg (12–23 m e 2–6 anos), 9 mg/kg (7–11 anos), 7 mg/kg (12–17 anos)."
       }
     ],
     "prep": "EV: reconstituir 350 mg em 7 ml SF ou 500 mg em 10 ml SF (50 mg/ml); girar suavemente sem agitar. Diluir em SF ≤ 20 mg/ml para infusão 30 min; ou bólus 50 mg/ml em 2 min. ⚠️ APENAS em SF (incompatível com SG5% — degrada). Estabilidade: 12h a 25°C; 48h a 4°C.",
@@ -596,7 +576,9 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ Eosinofilia pulmonar (rara)",
       "Ajuste renal se TFG < 30 ml/min"
     ],
-    "source": "BNF for Children 2023-24; Sader HS. Pediatr Infect Dis J 2012"
+    "source": "BNFC 2020-21, Daptomycin (p. 385)",
+    "review": ["Dose < 1 ano (6 mg/kg) removida: o BNFC 2020-21 não indica daptomicina abaixo dos 12 meses."]
+  
   },
   {
     "id": "caspofungina",
@@ -761,18 +743,18 @@ var DRUGS_ANTIBIOTICOS = [
         "note": "Evidência: melhora outcomes auditivos no CMV congénito (Kimberlin 2015)"
       },
       {
-        "ind": "CMV grave EV (ganciclovir)",
-        "val": "5 mg/kg/dose EV",
+        "ind": "CMV — tratamento em imunocomprometidos (EV)",
+        "val": "Criança: 5 mg/kg cada 12 h durante 14–21 dias; manutenção 6 mg/kg/dia (5 dias/semana) ou 5 mg/kg/dia",
         "max": "—",
-        "freq": "cada 12h (indução 14–21 dias) → cada 24h (manutenção)",
-        "note": ""
+        "freq": "Manutenção só se risco de recidiva",
+        "note": "BNFC 2020-21 (p. 443)."
       },
       {
-        "ind": "Profilaxia pós-transplante (valganciclovir oral)",
-        "val": "900 mg/dia (adulto)",
-        "max": "900 mg/dia",
-        "freq": "1×/dia × 100–200 dias",
-        "note": "Dose pediátrica: 7 × SCT × TFGmod (fórmula específica — consultar farmácia)"
+        "ind": "CMV congénito com atingimento do SNC (EV, RN)",
+        "val": "6 mg/kg",
+        "max": "—",
+        "freq": "Cada 12 h durante 6 semanas",
+        "note": "BNFC 2020-21 (p. 443)."
       }
     ],
     "prep": "EV: diluir em SF ou SG5% (concentração ≤ 10 mg/ml). Infusão 60 min. Citotóxico — precauções de manuseamento.",
@@ -788,7 +770,9 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ Ajuste rigoroso na insuf. renal",
       "Monitorizar carga viral CMV (PCR) para guiar duração"
     ],
-    "source": "BNF for Children 2023-24; Kimberlin DW. NEJM 2015"
+    "source": "BNFC 2020-21, Ganciclovir (p. 443); valganciclovir oral: por confirmar",
+    "review": ["Doses de valganciclovir oral (CMV congénito 16 mg/kg 2×/dia; profilaxia pós-transplante) não verificadas neste BNFC: confirmar no RCM / Kimberlin 2015."]
+  
   },
   {
     "id": "cefepime",
@@ -1090,25 +1074,39 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Tuberculose",
-        "val": "10–20 mg/kg/dia PO/EV",
-        "max": "600 mg/dia",
-        "freq": "1 dose/dia em jejum",
-        "note": "Dose habitual: 15 mg/kg/dia. Parte do esquema 2HRZE/4HR"
+        "ind": "Tuberculose — esquema padrão de 6 meses (com outros fármacos)",
+        "val": "15 mg/kg/dia, oral",
+        "max": "450 mg/dia (< 50 kg); 600 mg/dia (≥ 50 kg)",
+        "freq": "1×/dia durante 6 meses; RN com TB congénita: 15 mg/kg/dia",
+        "note": "BNFC 2020-21 (p. 396). Esquema supervisionado intermitente: 15 mg/kg 3×/semana (máx. 900 mg)."
       },
       {
-        "ind": "Profilaxia meningococo",
-        "val": "10 mg/kg/dose PO",
+        "ind": "Infeções estafilocócicas graves, brucelose, legionelose (com outros antibióticos) — oral/EV",
+        "val": "RN e 1–11 meses: 5–10 mg/kg; 1–17 anos: 10 mg/kg",
         "max": "600 mg/dose",
-        "freq": "q12h × 2 dias",
-        "note": "< 1 mês: 5 mg/kg/dose q12h × 2 dias"
+        "freq": "Cada 12 h",
+        "note": "BNFC 2020-21 (p. 396)."
       },
       {
-        "ind": "Profilaxia Hib",
-        "val": "20 mg/kg/dia PO",
-        "max": "600 mg/dia",
-        "freq": "1 dose/dia × 4 dias",
-        "note": ""
+        "ind": "Profilaxia — meningococo (oral)",
+        "val": "RN e 1–11 meses: 5 mg/kg; 1–11 anos: 10 mg/kg; 12–17 anos: 600 mg",
+        "max": "600 mg/dose",
+        "freq": "Cada 12 h durante 2 dias",
+        "note": "BNFC 2020-21 (p. 396)."
+      },
+      {
+        "ind": "Profilaxia — Haemophilus influenzae tipo b (oral)",
+        "val": "1–2 meses: 10 mg/kg; 3 meses–11 anos: 20 mg/kg; 12–17 anos: 600 mg",
+        "max": "600 mg/dose",
+        "freq": "1×/dia durante 4 dias",
+        "note": "BNFC 2020-21 (p. 396)."
+      },
+      {
+        "ind": "Prurido colestático (fora de licença)",
+        "val": "5–10 mg/kg",
+        "max": "600 mg/dose",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 396)."
       }
     ],
     "prep": "EV: reconstituir 600 mg em 10 ml água estéril; diluir em SF 250 ml. Administrar em 3h. Oral: tomar em jejum (1h antes ou 2h após refeição).",
@@ -1124,7 +1122,9 @@ var DRUGS_ANTIBIOTICOS = [
       "Induz metabolismo próprio (auto-indução) — farmacocinética variável nas primeiras semanas",
       "NUNCA usar em monoterapia (excepto profilaxia) — resistência emerge rapidamente"
     ],
-    "source": "BNF for Children 2023-24; WHO TB Guidelines 2022; DGS Norma Tuberculose 2019"
+    "source": "BNFC 2020-21, Rifampicin (p. 396)",
+    "review": ["Dose de 10–20 mg/kg/dia da ficha anterior (WHO/DGS) substituída pela do BNFC (15 mg/kg/dia); confirmar com a Norma de Tuberculose da DGS em vigor."]
+  
   },
   {
     "id": "anfotericina_b_lipo",
@@ -1276,7 +1276,7 @@ var DRUGS_ANTIBIOTICOS = [
       "Benefício clínico modesto em imunocompetentes com doença ligeira (redução mediana: 17h de sintomas)",
       "Ajuste em insuficiência renal: TFG 10–30 ml/min — 30 mg/dose q12h (tratamento)"
     ],
-    "source": "BNF for Children 2023-24; Jefferson T et al. Cochrane 2014; CDC Influenza Antiviral Guidance 2023"
+    "source": "BNFC 2020-21, Oseltamivir (p. 463: tratamento 5 dias — RN e 1–11 meses 3 mg/kg 2×/dia; 1–12 anos por peso 30/45/60/75 mg 2×/dia; profilaxia 1×/dia durante 10 dias)"
   },
   {
     "id": "trimetoprim",
