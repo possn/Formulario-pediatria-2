@@ -1,11 +1,11 @@
 {
-  "name": "UCIP Ped v2",
+  "name": "UCIP Pediatria — Formulário",
   "short_name": "UCIP Ped",
   "description": "Formulário farmacológico pediátrico para UCI",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#0a0f1a",
-  "theme_color": "#0a0f1a",
+  "background_color": "#0f2b46",
+  "theme_color": "#0f2b46",
   "lang": "pt",
   "icons": [
     {"src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png"},

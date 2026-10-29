@@ -50,7 +50,8 @@ var DRUGS_ANTIEPILEPTICOS = [
       "Longa semi-vida activa (20–100h + metabolito activo) — sedação prolongada",
       "Tolerância e dependência com uso crónico"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24",
+    "review": ["Existiam 2 fichas com esquemas diferentes: rectal 0,5 mg/kg (máx. 10 mg) vs esquema por idade (< 1 ano 2,5 mg; 1–3 anos 5 mg; 4–12 anos 5–10 mg; > 12 anos 10 mg); EV 0,3–0,4 vs 0,25–0,4 mg/kg; repetição aos 5 vs 10 min. Mantida esta ficha. Confirmar no BNFC / NICE CG137 antes de prescrever."]
   },
   {
     "id": "lorazepam",

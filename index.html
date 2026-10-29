@@ -6,9 +6,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="UCIP Ped">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#0f2b46">
 <meta name="color-scheme" content="light only">
-<title>UCIP Pediatria</title>
+<title>UCIP Pediatria — Formulário</title>
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
@@ -30,409 +30,352 @@
 <script src="drugs/drugs_sources.js"></script>
 
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html,body{
-  height:100%;width:100%;
-  font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;
-  background:#f5f5f0;color:#1a1a1a;
-  overflow:hidden;-webkit-font-smoothing:antialiased;
+:root{
+  --navy:#0f2b46;--navy2:#183f66;--blue:#1c5a8a;--blue-bg:#eaf2f9;
+  --bg:#f2f4f7;--card:#fff;--line:#d5dbe2;--line2:#e6eaef;
+  --ink:#16202a;--muted:#55616d;--faint:#85909c;
+  --red:#a61e2a;--red-bg:#fbeff0;--amber:#845400;--amber-bg:#fcf5e1;--amber-line:#e3c46c;
+  --green:#1e6b3a;--green-bg:#edf6f0;
+  --serif:Georgia,'Times New Roman',Times,serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;
+  --gut:max(16px,calc((100% - 880px)/2));
   color-scheme:light only
 }
-#app{
-  position:fixed;inset:0;
-  display:grid;
-  grid-template-rows:auto 1fr auto;
-  overflow:hidden
-}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;width:100%;font-family:var(--sans);background:var(--bg);color:var(--ink);
+  overflow:hidden;-webkit-font-smoothing:antialiased;color-scheme:light only}
+svg{display:block}
+#app{position:fixed;inset:0;display:grid;grid-template-rows:auto 1fr auto;overflow:hidden}
 
-/* ── TOPBAR ── */
-#topbar{
-  background:#fff;border-bottom:1px solid #e8e8e3;
-  padding:calc(env(safe-area-inset-top,0px)+12px) 16px 12px
-}
-.tb1{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.logo{background:#d97757;border-radius:10px;width:36px;height:36px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:10px;font-weight:900;color:#fff;line-height:1.2;text-align:center;flex-shrink:0}
-.aname{flex:1}
-.aname h1{font-size:15px;font-weight:700;letter-spacing:-.3px}
-.aname p{font-size:10px;color:#999;margin-top:1px}
-#gbtn{width:36px;height:36px;border-radius:10px;background:#f0eeea;
-  border:1px solid #e0ddd8;color:#666;font-size:17px;cursor:pointer;
+/* ── HEADER ── */
+#topbar{background:var(--navy);color:#fff;
+  padding:calc(env(safe-area-inset-top,0px) + 12px) var(--gut) 14px;
+  border-bottom:3px solid var(--blue)}
+.tb1{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.logo{width:38px;height:38px;border:1.5px solid rgba(255,255,255,.7);border-radius:4px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-family:var(--serif);font-size:11px;font-weight:700;letter-spacing:.8px;color:#fff}
+.aname{flex:1;min-width:0}
+.aname h1{font-family:var(--serif);font-size:18px;font-weight:700;letter-spacing:.2px;line-height:1.15}
+.aname p{font-size:11px;color:#b9c8d8;margin-top:3px;letter-spacing:.3px}
+#gbtn{width:38px;height:38px;border-radius:4px;background:transparent;
+  border:1px solid rgba(255,255,255,.35);color:#fff;cursor:pointer;
   display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.sbar{display:flex;align-items:center;gap:10px;background:#f0eeea;
-  border:1px solid #e0ddd8;border-radius:14px;padding:0 16px;height:54px}
-.sbar input{flex:1;background:none;border:none;outline:none;
-  color:#1a1a1a;font-size:17px;-webkit-appearance:none}
-.sbar input::placeholder{color:#aaa;font-size:16px}
-.sbar .sico{color:#aaa;font-size:18px;flex-shrink:0;pointer-events:none}
-.sbar .sclr{background:none;border:none;color:#aaa;font-size:18px;cursor:pointer;display:none;flex-shrink:0}
+.sbar{display:flex;align-items:center;gap:10px;background:#fff;border-radius:4px;
+  padding:0 14px;height:50px}
+.sbar input{flex:1;background:none;border:none;outline:none;color:var(--ink);
+  font-size:16px;font-family:var(--sans);-webkit-appearance:none}
+.sbar input::placeholder{color:#8a96a3;font-size:15px}
+.sbar .sico{color:var(--muted);flex-shrink:0;pointer-events:none}
+.sbar .sclr{background:none;border:none;color:var(--muted);font-size:20px;cursor:pointer;display:none;flex-shrink:0;line-height:1}
 
 /* ── CONTENT ── */
 #content{position:relative;overflow:hidden}
-.screen{
-  position:absolute;inset:0;overflow-y:auto;
-  -webkit-overflow-scrolling:touch;
-  visibility:hidden;pointer-events:none
-}
+.screen{position:absolute;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;
+  visibility:hidden;pointer-events:none}
 .screen.on{visibility:visible;pointer-events:auto}
-/* ── AI CLINICAL SEARCH ── */
-#s-ai{display:flex;flex-direction:column;background:#f5f5f0}
-#s-ai.on{display:flex!important}
-/* Hero search area */
-.ai-hero{flex-shrink:0;padding:16px 16px 0;text-align:center}
-.ai-hero-title{font-size:13px;font-weight:700;color:#d97757;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px}
-.ai-hero-sub{font-size:11px;color:#999;margin-bottom:14px}
-.ai-search-wrap{display:flex;align-items:center;gap:8px;background:#fff;
-  border:1.5px solid #e0ddd8;border-radius:16px;padding:0 14px;
-  height:52px;transition:border-color .15s}
-.ai-search-wrap:focus-within{border-color:#d97757;box-shadow:0 0 0 3px rgba(217,119,87,.1)}
-.ai-search-ico{font-size:18px;flex-shrink:0}
-.ai-search-wrap input{flex:1;background:none;border:none;outline:none;
-  font-size:16px;color:#1a1a1a;font-family:inherit}
-.ai-search-wrap input::placeholder{color:#bbb;font-size:15px}
-.ai-clr{background:none;border:none;color:#bbb;font-size:18px;
-  cursor:pointer;display:none;flex-shrink:0;padding:0 2px}
-.ai-send{width:38px;height:38px;flex-shrink:0;background:#d97757;border:none;
-  border-radius:12px;color:#fff;font-size:20px;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;transition:opacity .15s}
-.ai-send:disabled{opacity:.3;pointer-events:none}
-/* Suggestions grid */
-.ai-cats{flex-shrink:0;padding:12px 16px 0}
-.ai-cats-lbl{font-size:10px;font-weight:700;color:#bbb;text-transform:uppercase;
-  letter-spacing:.8px;margin-bottom:8px}
-.ai-sug-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
-.ai-sug{background:#fff;border:1px solid #e8e6e1;border-radius:12px;
-  padding:10px 12px;cursor:pointer;transition:border-color .12s,background .12s}
-.ai-sug:active{border-color:#d97757;background:#fff8f5}
-.ai-sug-ico{font-size:16px;margin-bottom:4px}
-.ai-sug-txt{font-size:12px;font-weight:600;color:#333;line-height:1.3}
-.ai-sug-cat{font-size:10px;color:#aaa;margin-top:2px}
-/* Results area */
-.ai-results{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;
-  padding:0 16px 100px}
-/* Each result card */
-.ai-qcard{margin-top:16px;background:#d97757;border-radius:14px 14px 4px 14px;
-  padding:10px 14px;font-size:14px;color:#fff;font-weight:500;align-self:flex-end;
-  max-width:90%;margin-left:auto}
-.ai-acard{margin-top:10px;background:#fff;border:1px solid #e8e6e1;
-  border-radius:4px 14px 14px 14px;padding:14px 16px;font-size:13.5px;
-  color:#1a1a1a;line-height:1.65}
-.ai-acard.sp{color:#aaa;font-style:italic;font-size:13px}
-/* Rich text inside answer */
-.ai-acard h3{font-size:13px;font-weight:700;color:#d97757;margin:12px 0 5px;
-  text-transform:uppercase;letter-spacing:.4px}
-.ai-acard h3:first-child{margin-top:0}
-.ai-acard strong{font-weight:700;color:#111}
-.ai-acard ul{margin:4px 0 8px 0;padding-left:18px}
-.ai-acard li{margin-bottom:3px}
-.ai-acard .ai-src{font-size:10.5px;color:#aaa;margin-top:10px;padding-top:8px;
-  border-top:1px solid #f0eeea;font-style:italic}
-.ai-acard .ai-warn{font-size:11px;color:#92610a;background:#fffbeb;
-  border:1px solid #fde68a;border-radius:8px;padding:7px 10px;margin-top:10px}
-/* Disclaimer bar */
-.ai-disc{flex-shrink:0;margin:10px 16px 0;background:#fffbeb;
-  border:1px solid #fde68a;border-radius:10px;padding:7px 10px;
-  font-size:10.5px;color:#92610a;line-height:1.4}
 
-/* ── TABBAR ── */
-#tabbar{background:#fff;border-top:2px solid #e8e8e3;
-  display:flex;padding-bottom:max(env(safe-area-inset-bottom,0px),16px)}
-.tab{flex:1;display:flex;flex-direction:column;align-items:center;
-  gap:4px;padding:10px 4px 8px;cursor:pointer;-webkit-user-select:none;
-  border-top:3px solid transparent}
-.tab .ti{font-size:22px;line-height:1}
-.tab .tl{font-size:10px;color:#999;letter-spacing:.1px;font-weight:600}
-.tab.on{border-top-color:#d97757}
-.tab.on .tl{color:#d97757}
+/* ── TAB BAR ── */
+#tabbar{background:#fff;border-top:1px solid var(--line);display:flex;
+  padding:0 var(--gut) max(env(safe-area-inset-bottom,0px),10px)}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;
+  padding:9px 4px 6px;cursor:pointer;-webkit-user-select:none;color:var(--faint);
+  border-top:3px solid transparent;margin-top:-1px}
+.tab .ti{height:22px;display:flex;align-items:center}
+.tab .tl{font-size:10px;letter-spacing:.5px;font-weight:600;text-transform:uppercase}
+.tab.on{color:var(--navy);border-top-color:var(--navy)}
 
-/* ── HOME ── */
-#s-home{padding-bottom:100px}
-.grp-hd{padding:18px 16px 7px;font-size:10px;font-weight:700;
-  color:#999;text-transform:uppercase;letter-spacing:1.2px}
-.grp{padding:0 12px}
-.drow{background:#fff;border:1px solid #ebe9e4;border-radius:12px;
-  padding:12px 14px;margin-bottom:6px;cursor:pointer;
+/* ── HOME / LISTS ── */
+#s-home,#s-idx,#s-srch{padding-bottom:30px}
+.grp-hd{display:flex;justify-content:space-between;align-items:baseline;
+  margin:22px var(--gut) 0;padding:0 0 7px;border-bottom:2px solid var(--navy)}
+.grp-hd span:first-child{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--navy)}
+.grp-hd span:last-child{font-size:11px;color:var(--faint);font-weight:600}
+.grp{margin:0 var(--gut);background:var(--card);border:1px solid var(--line);border-top:none}
+.drow{padding:11px 14px 11px 0;border-bottom:1px solid var(--line2);cursor:pointer;
   display:flex;align-items:center;gap:12px}
-.drow:active{background:#f5f0ec;border-color:#d97757}
-.ddot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.drow:last-child{border-bottom:none}
+.drow:active,.idxr:active,.srrow:active{background:var(--blue-bg)}
+.ddot{width:4px;align-self:stretch;flex-shrink:0;margin:-11px 0}
 .dtxt{flex:1;min-width:0}
-.dname{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.dcls{font-size:11px;color:#999;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.dbadge{font-size:9px;font-weight:700;padding:3px 7px;border-radius:5px;
-  text-transform:uppercase;letter-spacing:.4px;flex-shrink:0;white-space:nowrap}
-.darr{color:#ccc;font-size:14px;flex-shrink:0}
+.dname{font-size:15px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dcls{font-size:12px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dbadge{font-size:9px;font-weight:700;padding:3px 6px;border-radius:2px;
+  text-transform:uppercase;letter-spacing:.6px;flex-shrink:0;white-space:nowrap;
+  background:#fff!important;border:1px solid currentColor}
+.darr{color:#aab4bf;flex-shrink:0;display:flex}
+@media(min-width:760px){.grp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .drow{min-width:0;padding-right:14px}
+  .drow:nth-child(odd){border-right:1px solid var(--line2)}
+  .drow:nth-last-child(-n+2):nth-child(odd){border-bottom:none}}
 
 /* ── DETAIL ── */
-#s-det{background:#f5f5f0;padding-bottom:100px}
-.dethd{position:sticky;top:0;z-index:10;background:#fff;
-  border-bottom:1px solid #e8e8e3;padding:12px 16px}
-.backbtn{display:flex;align-items:center;gap:4px;background:none;border:none;
-  color:#d97757;font-size:14px;cursor:pointer;margin-bottom:8px}
-.detname{font-size:20px;font-weight:700;line-height:1.2}
-.detcls{font-size:12px;color:#999;margin-top:4px;line-height:1.4}
-.stag{display:inline-block;margin-top:8px;font-size:10px;font-weight:700;
-  padding:3px 9px;border-radius:6px}
-.st1{background:rgba(74,222,128,.1);color:#16a34a;border:1px solid rgba(74,222,128,.25)}
-.st2{background:rgba(217,119,87,.1);color:#d97757;border:1px solid rgba(217,119,87,.25)}
-.detbody{padding:14px}
-.card{background:#fff;border:1px solid #ebe9e4;border-radius:12px;padding:14px;margin-bottom:10px}
-.ctit{font-size:10px;font-weight:700;color:#d97757;text-transform:uppercase;
-  letter-spacing:.9px;padding-bottom:9px;margin-bottom:10px;border-bottom:1px solid #f0eeea}
+#s-det{background:var(--bg);padding-bottom:30px}
+.dethd{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);
+  padding:10px var(--gut) 14px}
+.backbtn{display:inline-flex;align-items:center;gap:3px;background:none;border:none;
+  color:var(--blue);font-size:13px;font-weight:600;cursor:pointer;margin:0 0 8px -4px;
+  letter-spacing:.2px;font-family:var(--sans)}
+.detname{font-family:var(--serif);font-size:24px;font-weight:700;line-height:1.2;color:var(--navy)}
+.detcls{font-size:12.5px;color:var(--muted);margin-top:5px;line-height:1.45}
+.stag{display:inline-block;margin-top:10px;font-size:10px;font-weight:700;
+  padding:3px 8px;border-radius:2px;letter-spacing:.4px;text-transform:uppercase}
+.st1{background:var(--green-bg);color:var(--green);border:1px solid #b6d8c2}
+.st2{background:var(--blue-bg);color:var(--blue);border:1px solid #b9d1e6}
+.detbody{padding:14px var(--gut);counter-reset:sec}
+.card{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:0 16px 14px;margin-bottom:12px}
+.ctit{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--navy);
+  padding:13px 0 9px;margin-bottom:10px;border-bottom:1px solid var(--navy)}
+.card:not(.nonum) .ctit::before{counter-increment:sec;content:counter(sec) ". ";color:var(--blue)}
+.card.nonum{counter-increment:none}
 .ilist{list-style:none}
-.ilist li{font-size:13px;color:#444;line-height:1.5;padding:5px 0;
-  border-bottom:1px solid #f5f5f0;display:flex;align-items:flex-start;gap:8px}
+.ilist li{font-size:13.5px;color:#2b3641;line-height:1.5;padding:6px 0 6px 16px;
+  border-bottom:1px solid var(--line2);position:relative}
 .ilist li:last-child{border:none;padding-bottom:0}
-.ilist li::before{content:"·";color:#d97757;font-size:18px;line-height:1.1;flex-shrink:0}
-.dblk{border-bottom:1px solid #f5f5f0;padding:10px 0}
+.ilist li::before{content:"";position:absolute;left:2px;top:14px;width:5px;height:5px;background:var(--blue)}
+.dblk{border-bottom:1px solid var(--line2);padding:11px 0}
 .dblk:last-child{border:none;padding-bottom:0}
-.dlbl{font-size:10px;font-weight:700;color:#d97757;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
-.dval{font-size:14px;font-weight:600;line-height:1.4;margin-bottom:2px}
-.dmax{font-size:11px;color:#e67e22;margin-bottom:1px}
-.dfrq{font-size:11px;color:#999}
-.dnot{font-size:11px;color:#777;line-height:1.5;background:#f8f7f4;
-  border-radius:6px;padding:6px 9px;margin-top:6px;border-left:2px solid #e0ddd8}
-.ptxt{font-size:13px;color:#444;line-height:1.7;white-space:pre-wrap}
-.cirow{font-size:13px;color:#444;line-height:1.5;padding:6px 0;
-  border-bottom:1px solid #f5f5f0;display:flex;align-items:flex-start;gap:8px}
+.dlbl{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+.dval{font-size:15px;font-weight:700;line-height:1.4;color:var(--navy);margin-bottom:3px}
+.dmax{font-size:12px;color:var(--red);font-weight:600;margin-bottom:2px}
+.dfrq{font-size:12px;color:var(--muted)}
+.dnot{font-size:12px;color:#3e4a56;line-height:1.55;background:#f6f8fa;
+  padding:7px 10px;margin-top:7px;border-left:3px solid var(--line)}
+.ptxt{font-size:13.5px;color:#2b3641;line-height:1.7;white-space:pre-wrap}
+.cirow{font-size:13.5px;color:#2b3641;line-height:1.5;padding:7px 0 7px 16px;
+  border-bottom:1px solid var(--line2);position:relative}
 .cirow:last-child{border:none}
-.cirow::before{content:"⛔";font-size:11px;flex-shrink:0;margin-top:2px}
-.arow{background:#fff8f6;border:1px solid #fde8e1;border-radius:9px;
-  padding:9px 12px;margin-bottom:6px;font-size:12px;color:#c0392b;line-height:1.5}
+.cirow::before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;background:var(--red)}
+.arow{font-size:13px;line-height:1.55;padding:9px 12px;margin-bottom:7px;border-left:4px solid var(--line);
+  background:#f6f8fa;color:#2b3641}
 .arow:last-child{margin-bottom:0}
-.srctxt{font-size:11px;color:#999;line-height:1.6;font-style:italic}
-
+.arow .alab{display:block;font-size:10px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;margin-bottom:2px}
+.arow.crit{border-left-color:var(--red);background:var(--red-bg);color:#5c1118}
+.arow.crit .alab{color:var(--red)}
+.arow.warn{border-left-color:#c98a00;background:var(--amber-bg);color:#4f3300}
+.arow.warn .alab{color:var(--amber)}
+.arow.info .alab{color:var(--muted)}
+.srctxt{font-size:12px;color:var(--muted);line-height:1.65}
+.card.review{background:var(--amber-bg);border-color:var(--amber-line)}
+.card.review .ctit{color:var(--amber);border-bottom-color:var(--amber)}
 
 /* ── DOSE CALCULATOR ── */
-.calc-wrap{background:linear-gradient(135deg,#fff8f5 0%,#fff3ef 100%);
-  border:1.5px solid #f4c4b0;border-radius:12px;padding:12px 14px;margin-bottom:14px}
-.calc-lbl{font-size:10px;font-weight:700;color:#d97757;text-transform:uppercase;
-  letter-spacing:.8px;margin-bottom:8px}
-.calc-row{display:flex;align-items:center;gap:8px}
-.calc-inp{flex:1;height:44px;border:1.5px solid #e8c4b4;border-radius:10px;
-  background:#fff;padding:0 12px;font-size:17px;font-weight:600;color:#1a1a1a;
-  outline:none;-webkit-appearance:none;text-align:center}
-.calc-inp:focus{border-color:#d97757}
-.calc-unit{font-size:13px;color:#888;white-space:nowrap}
-.calc-results{margin-top:10px}
-.calc-dblk{background:#fff;border:1px solid #f0ddd8;border-radius:9px;
-  padding:9px 12px;margin-bottom:6px}
+.calc-wrap,.perf-wrap{border:1px solid var(--navy2);border-radius:3px;margin:2px 0 14px;overflow:hidden;background:#fff}
+.calc-lbl,.perf-lbl{background:var(--navy2);color:#fff;font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.8px;padding:8px 12px}
+.calc-row{display:flex;align-items:center;gap:8px;padding:12px 12px 4px}
+.calc-inp,.perf-inp,.perf-sel{height:46px;border:1px solid #b5c0cc;border-radius:3px;background:#fff;
+  padding:0 12px;font-size:17px;font-weight:600;color:var(--ink);outline:none;
+  -webkit-appearance:none;font-family:var(--sans);width:100%}
+.calc-inp{flex:1;text-align:center}
+.calc-inp:focus,.perf-inp:focus,.perf-sel:focus{border-color:var(--blue);box-shadow:0 0 0 2px rgba(28,90,138,.18)}
+.calc-unit{font-size:13px;color:var(--muted);white-space:nowrap;font-weight:600}
+#calcout{padding:6px 12px 12px}
+.calc-dblk{border:1px solid var(--line);border-left:4px solid var(--blue);padding:9px 12px;margin-bottom:6px;background:#fff}
 .calc-dblk:last-child{margin-bottom:0}
-.calc-ind{font-size:10px;font-weight:700;color:#d97757;text-transform:uppercase;
-  letter-spacing:.4px;margin-bottom:4px}
-.calc-dose{font-size:16px;font-weight:700;color:#1a1a1a;line-height:1.3}
-.calc-dose span{color:#d97757}
-.calc-max{font-size:11px;color:#e67e22;margin-top:2px}
-.calc-note{font-size:11px;color:#777;margin-top:3px;line-height:1.4}
-.calc-empty{font-size:12px;color:#bbb;text-align:center;padding:8px 0;font-style:italic}
+.calc-ind{font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.calc-dose{font-size:18px;font-weight:700;color:var(--navy);line-height:1.3}
+.calc-max{font-size:11.5px;color:var(--red);font-weight:600;margin-top:3px}
+.calc-frq{font-size:11.5px;color:var(--muted);margin-top:3px}
+.calc-empty,.perf-empty{font-size:12.5px;color:var(--faint);text-align:center;padding:10px 0}
 
 /* ── INFUSION CALCULATOR ── */
-.perf-wrap{background:linear-gradient(135deg,#f0f7ff 0%,#e8f4ff 100%);
-  border:1.5px solid #a8cff0;border-radius:14px;padding:14px;margin-bottom:14px}
-.perf-lbl{font-size:10px;font-weight:700;color:#2980b9;text-transform:uppercase;
-  letter-spacing:.8px;margin-bottom:12px}
-.perf-row4{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.perf-info{font-size:11.5px;color:var(--muted);line-height:1.5;padding:10px 12px 0}
+.perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px}
 .perf-field{display:flex;flex-direction:column;gap:5px}
-.perf-field label{font-size:9px;font-weight:700;color:#555;text-transform:uppercase;
-  letter-spacing:.6px;line-height:1.2}
-.perf-inp{height:52px;border:1.5px solid #b8d8f0;border-radius:11px;background:#fff;
-  padding:0 12px;font-size:20px;font-weight:700;color:#1a1a1a;outline:none;
-  -webkit-appearance:none;text-align:center;width:100%;box-sizing:border-box}
-.perf-inp:focus{border-color:#2980b9;box-shadow:0 0 0 3px rgba(41,128,185,.12)}
-.perf-inp::placeholder{font-size:14px;font-weight:400;color:#ccc}
-.perf-sel{height:52px;border:1.5px solid #b8d8f0;border-radius:11px;background:#fff;
-  padding:0 10px;font-size:14px;font-weight:600;color:#1a1a1a;outline:none;width:100%;
-  -webkit-appearance:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M0 0l5 7 5-7z' fill='%23999'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 12px center;padding-right:30px;
-  box-sizing:border-box}
+.perf-field label{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;line-height:1.2}
+.perf-inp{text-align:center;font-size:19px;font-weight:700}
+.perf-inp::placeholder{font-size:14px;font-weight:400;color:#b3bcc6}
+.perf-sel{font-size:14px;padding-right:30px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M0 0l5 7 5-7z' fill='%2355616d'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center}
 .perf-full{grid-column:1/-1}
-.perf-result{background:#fff;border:1.5px solid #a8cff0;border-radius:12px;
-  padding:14px;margin-top:4px;text-align:center}
-.perf-result-label{font-size:10px;font-weight:700;color:#2980b9;text-transform:uppercase;
-  letter-spacing:.8px;margin-bottom:8px}
-.perf-result-mg{font-size:42px;font-weight:800;color:#1a1a1a;line-height:1;margin-bottom:6px}
-.perf-result-mg span{font-size:22px;font-weight:600;color:#555;margin-left:4px}
-.perf-result-in{font-size:16px;color:#555;margin-bottom:10px}
-.perf-result-in strong{color:#1a1a1a}
+#perfout{padding:0 12px 12px}
+.perf-result{border:1px solid var(--line);padding:14px;text-align:center}
+.perf-result-label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px}
+.perf-result-mg{font-size:40px;font-weight:800;color:var(--navy);line-height:1;margin-bottom:6px}
+.perf-result-mg span{font-size:20px;font-weight:600;color:var(--muted);margin-left:4px}
+.perf-result-in{font-size:15px;color:var(--muted);margin-bottom:10px}
+.perf-result-in strong{color:var(--ink)}
 .perf-result-pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-.perf-pill{background:#f0f7ff;border:1px solid #c8e0f8;border-radius:8px;
-  padding:6px 12px;font-size:12px;font-weight:600;color:#2980b9;text-align:center}
-.perf-pill small{display:block;font-size:9px;font-weight:400;color:#888;margin-bottom:2px;
-  text-transform:uppercase;letter-spacing:.4px}
-.perf-verify{background:#f0fff4;border:1px solid #a8e6c0;border-radius:8px;
-  padding:7px 12px;font-size:12px;color:#27ae60;margin-top:8px;font-weight:600}
-.perf-empty{font-size:12px;color:#bbb;text-align:center;padding:10px 0;font-style:italic}
+.perf-pill{background:var(--blue-bg);border:1px solid #b9d1e6;border-radius:2px;
+  padding:6px 12px;font-size:12.5px;font-weight:700;color:var(--blue);text-align:center}
+.perf-pill small{display:block;font-size:9px;font-weight:600;color:var(--muted);margin-bottom:2px;text-transform:uppercase;letter-spacing:.5px}
+.perf-safety{margin-top:10px;padding:9px 12px;font-size:12px;font-weight:600;line-height:1.5;text-align:left;border:1px solid;border-left-width:4px}
+.perf-safety small{font-weight:500}
+.perf-safety.ok{background:var(--green-bg);border-color:#b6d8c2;color:var(--green)}
+.perf-safety.warn{background:var(--amber-bg);border-color:var(--amber-line);color:var(--amber)}
+.perf-safety.bad{background:var(--red-bg);border-color:#e3b3b7;color:var(--red)}
+.perf-verify{background:#f6f8fa;padding:7px 11px;margin-top:8px;font-size:12px;color:var(--muted);font-weight:600;text-align:left}
+.perf-range-h{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin:12px 0 4px;text-align:left}
+.perf-range{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--line2);align-items:center;text-align:left}
+.perf-range div:first-child{font-size:12px;color:var(--muted)}
+.perf-range span{margin-left:3px;font-size:11px;font-weight:600}
+.perf-range div:last-child{font-size:13px;font-weight:700;color:var(--blue);white-space:nowrap}
+
 /* ── COMPAT ── */
-#s-cp{padding:16px;padding-bottom:100px}
-.ptit{font-size:18px;font-weight:700;margin-bottom:4px}
-.psub{font-size:12px;color:#999;line-height:1.5;margin-bottom:14px}
-.nbox{background:#fffbf0;border:1px solid #fce4a0;border-radius:10px;
-  padding:10px 13px;font-size:11px;color:#92610a;line-height:1.5;margin-bottom:14px}
+#s-cp,#s-src{padding:18px var(--gut) 30px}
+.ptit,.src-title{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.psub,.src-sub{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:14px}
+.nbox{background:var(--amber-bg);border-left:4px solid #c98a00;padding:10px 13px;
+  font-size:12.5px;color:#4f3300;line-height:1.55;margin-bottom:14px}
 .cinpw{position:relative;margin-bottom:8px}
-.cinpw input{display:block;width:100%;background:#fff;border:1px solid #e0ddd8;
-  border-radius:12px;padding:12px 14px 12px 38px;color:#1a1a1a;font-size:15px;
-  outline:none;-webkit-appearance:none}
-.cinpw input:focus{border-color:#d97757}
-.cinpw input::placeholder{color:#aaa}
-.cinpw .cico{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#aaa;font-size:14px;pointer-events:none}
-.csugl{background:#fff;border:1px solid #e0ddd8;border-radius:12px;
-  overflow:hidden;margin-bottom:10px;display:none}
-.csug{padding:13px 14px;border-bottom:1px solid #f5f5f0;cursor:pointer;font-size:14px}
+.cinpw input{display:block;width:100%;background:#fff;border:1px solid #b5c0cc;border-radius:3px;
+  padding:13px 14px 13px 40px;color:var(--ink);font-size:15px;outline:none;-webkit-appearance:none;font-family:var(--sans)}
+.cinpw input:focus{border-color:var(--blue);box-shadow:0 0 0 2px rgba(28,90,138,.18)}
+.cinpw input::placeholder{color:#8a96a3}
+.cinpw .cico{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.csugl{background:#fff;border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-bottom:10px;display:none}
+.csug{padding:13px 14px;border-bottom:1px solid var(--line2);cursor:pointer;font-size:14px}
 .csug:last-child{border:none}
-.csug:active{background:#f5f0ec}
-.chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px;min-height:28px}
-.chip{background:#fff5f2;border:1px solid #d97757;border-radius:20px;
-  padding:6px 10px 6px 13px;font-size:13px;font-weight:600;color:#d97757;
-  display:flex;align-items:center;gap:6px}
-.chipx{color:#ccc;font-size:15px;cursor:pointer}
-.vbtn{display:block;width:100%;background:#d97757;border:none;border-radius:12px;
-  padding:14px;color:#fff;font-size:16px;font-weight:700;cursor:pointer;margin-bottom:16px}
-.vbtn:disabled{opacity:.3;pointer-events:none}
-.cres{border-radius:11px;padding:13px 14px;margin-bottom:9px;border:1px solid}
-.crok{background:#f0fdf4;border-color:#bbf7d0}
-.crno{background:#fff1f0;border-color:#fecaca}
-.crwn{background:#fffbeb;border-color:#fde68a}
-.cruk{background:#f8f8f8;border-color:#e0e0e0}
-.crh{display:flex;align-items:center;gap:9px;margin-bottom:4px}
-.cric{font-size:18px}
-.crpr{font-size:13px;font-weight:700;line-height:1.3}
-.crlb{font-size:11px;font-weight:700;margin-bottom:5px}
-.crnt{font-size:12px;color:#555;line-height:1.5}
-.crsr{font-size:10px;color:#999;margin-top:5px;font-style:italic}
-.allok{text-align:center;padding:18px;color:#16a34a;font-size:16px;font-weight:600}
+.csug:active{background:var(--blue-bg)}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px;min-height:30px}
+.chip{background:var(--blue-bg);border:1px solid #b9d1e6;border-radius:2px;
+  padding:6px 8px 6px 12px;font-size:13px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:8px}
+.chipx{color:var(--muted);font-size:16px;cursor:pointer;line-height:1}
+.vbtn{display:block;width:100%;background:var(--navy);border:none;border-radius:3px;
+  padding:14px;color:#fff;font-size:14px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+  cursor:pointer;margin-bottom:16px;font-family:var(--sans)}
+.vbtn:disabled{opacity:.35;pointer-events:none}
+.cres{padding:12px 14px;margin-bottom:9px;border:1px solid;border-left-width:4px;background:#fff}
+.crok{border-color:#b6d8c2;background:var(--green-bg)}
+.crno{border-color:#e3b3b7;background:var(--red-bg)}
+.crwn{border-color:var(--amber-line);background:var(--amber-bg)}
+.cruk{border-color:var(--line);background:#f6f8fa}
+.crh{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.cric{width:20px;height:20px;border-radius:2px;display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:800;color:#fff;flex-shrink:0}
+.crok .cric{background:var(--green)}.crno .cric{background:var(--red)}
+.crwn .cric{background:#c98a00}.cruk .cric{background:var(--faint)}
+.crpr{font-size:13.5px;font-weight:700;line-height:1.3;color:var(--ink)}
+.crlb{font-size:11px;font-weight:700;margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+.crnt{font-size:12.5px;color:#2b3641;line-height:1.55}
+.crsr{font-size:11px;color:var(--muted);margin-top:5px}
+.allok{text-align:center;padding:14px;color:var(--green);font-size:14px;font-weight:700;
+  background:var(--green-bg);border:1px solid #b6d8c2;margin-bottom:10px}
+.cfoot{font-size:11px;color:var(--muted);margin-top:10px;line-height:1.6}
 
 /* ── AI ── */
+#s-ai{display:flex;flex-direction:column;background:var(--bg)}
+#s-ai.on{display:flex!important}
+.ai-disc{flex-shrink:0;margin:14px var(--gut) 0;background:var(--amber-bg);border-left:4px solid #c98a00;
+  padding:9px 12px;font-size:12px;color:#4f3300;line-height:1.5}
+.ai-hero{flex-shrink:0;padding:12px var(--gut) 0}
+.ai-search-wrap{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #b5c0cc;
+  border-radius:3px;padding:0 8px 0 14px;height:52px}
+.ai-search-wrap:focus-within{border-color:var(--blue);box-shadow:0 0 0 2px rgba(28,90,138,.18)}
+.ai-search-ico{color:var(--muted);flex-shrink:0}
+.ai-search-wrap input{flex:1;background:none;border:none;outline:none;font-size:16px;color:var(--ink);font-family:var(--sans)}
+.ai-search-wrap input::placeholder{color:#8a96a3;font-size:15px}
+.ai-clr{background:none;border:none;color:var(--muted);font-size:20px;cursor:pointer;display:none;flex-shrink:0;padding:0 4px}
+.ai-send{width:38px;height:38px;flex-shrink:0;background:var(--navy);border:none;border-radius:3px;color:#fff;
+  cursor:pointer;display:flex;align-items:center;justify-content:center}
+.ai-send:disabled{opacity:.3;pointer-events:none}
+.ai-cats{flex-shrink:0;padding:16px var(--gut) 0}
+.ai-cats-lbl{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--navy);
+  padding-bottom:7px;border-bottom:2px solid var(--navy);margin-bottom:10px}
+.ai-sug-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ai-sug{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);padding:10px 12px;cursor:pointer}
+.ai-sug:active{background:var(--blue-bg)}
+.ai-sug-txt{font-size:13px;font-weight:600;color:var(--ink);line-height:1.3}
+.ai-sug-cat{font-size:10px;color:var(--muted);margin-top:3px;text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+.ai-results{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 var(--gut) 24px}
+.ai-qcard{margin-top:16px;background:var(--navy);padding:10px 14px;font-size:14px;color:#fff;font-weight:500;
+  margin-left:auto;max-width:90%;border-radius:3px}
+.ai-acard{margin-top:10px;background:#fff;border:1px solid var(--line);padding:14px 16px;font-size:14px;color:var(--ink);line-height:1.65}
+.ai-acard.sp{color:var(--muted);font-size:13px}
+.ai-acard h3{font-family:var(--serif);font-size:14.5px;font-weight:700;color:var(--navy);margin:14px 0 6px;
+  padding-bottom:4px;border-bottom:1px solid var(--line)}
+.ai-acard h3:first-child{margin-top:0}
+.ai-acard strong{font-weight:700;color:#000}
+.ai-acard ul{margin:4px 0 8px 0;padding-left:18px}
+.ai-acard li{margin-bottom:3px}
+.ai-acard .ai-src{font-size:11.5px;color:var(--muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--line2)}
+.ai-acard .ai-warn{font-size:12.5px;color:#4f3300;background:var(--amber-bg);border-left:4px solid #c98a00;padding:8px 11px;margin-top:10px}
 
-
-
-
-
-
-
-
-
-
-
-.msg{max-width:86%;padding:11px 14px;border-radius:14px;font-size:14px;line-height:1.6}
-
-
-
-
-/* ── INDEX ── */
-#s-idx{padding-bottom:100px}
-.idxl{padding:10px 16px 3px;font-size:10px;font-weight:700;color:#999;
-  text-transform:uppercase;letter-spacing:1px;position:sticky;top:0;background:#f5f5f0;z-index:5}
-.idxr{padding:13px 16px;border-bottom:1px solid rgba(0,0,0,.05);
-  cursor:pointer;display:flex;align-items:center;gap:11px}
-.idxr:active{background:#f0eeea}
-.idxn{font-size:14px;flex:1}
-
-/* ── SEARCH ── */
-#s-srch{padding:10px 12px 20px}
-.srct{font-size:11px;color:#999;padding:4px 2px;margin-bottom:8px}
-.srrow{background:#fff;border:1px solid #ebe9e4;border-radius:12px;
-  padding:12px 14px;margin-bottom:6px;cursor:pointer}
-.srrow:active{background:#f5f0ec;border-color:#d97757}
-.srnm{font-size:14px;font-weight:600;margin-bottom:4px}
-.hl{color:#d97757;font-weight:700}
-.nores{text-align:center;padding:50px 20px;color:#999}
-.nores .em{font-size:40px;display:block;margin-bottom:12px}
+/* ── INDEX / SEARCH ── */
+.idxl{padding:6px var(--gut);font-family:var(--serif);font-size:14px;font-weight:700;color:var(--navy);
+  position:sticky;top:0;background:var(--bg);z-index:5;border-bottom:2px solid var(--navy)}
+.idxr{padding:12px var(--gut);border-bottom:1px solid var(--line2);background:#fff;cursor:pointer;
+  display:flex;align-items:center;gap:11px}
+.idxn{font-size:14.5px;flex:1}
+#s-srch{padding:12px var(--gut) 30px}
+.srct{font-size:12px;color:var(--muted);padding:4px 2px 8px;font-weight:600}
+.srrow{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);padding:11px 14px;margin-bottom:6px;cursor:pointer}
+.srnm{font-size:15px;font-weight:600;margin-bottom:5px}
+.hl{background:#fff2a8;font-weight:700}
+.nores{text-align:center;padding:50px 20px;color:var(--muted);font-size:14px}
 
 /* ── SOURCES ── */
-#s-src{padding:16px;padding-bottom:100px}
-.src-title{font-size:18px;font-weight:700;margin-bottom:4px}
-.src-sub{font-size:12px;color:#999;line-height:1.5;margin-bottom:16px}
-.src-section{font-size:11px;font-weight:700;color:#d97757;text-transform:uppercase;
-  letter-spacing:1px;margin:18px 0 8px}
-.src-card{background:#fff;border:1px solid #ebe9e4;border-radius:12px;
-  padding:13px 14px;margin-bottom:8px}
-.src-card-title{font-size:13px;font-weight:700;margin-bottom:3px}
-.src-card-auth{font-size:11px;color:#666;margin-bottom:3px}
-.src-card-pub{font-size:11px;color:#999;margin-bottom:3px}
-.src-card-note{font-size:11px;color:#555;line-height:1.5;margin-top:5px;
-  padding-top:5px;border-top:1px solid #f5f5f0}
-.src-card-doi{font-size:10px;color:#d97757;margin-top:3px;word-break:break-all}
-.disclaimer-box{background:#fff8f0;border:1px solid #fde0cc;border-radius:12px;
-  padding:14px;margin-top:16px;font-size:12px;color:#7a4020;line-height:1.7}
-.disclaimer-box strong{display:block;font-size:13px;margin-bottom:6px}
-.app-version{text-align:center;font-size:10px;color:#ccc;margin-top:20px;padding-bottom:10px}
+.src-section{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--navy);
+  margin:22px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--navy)}
+.src-card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);padding:12px 14px;margin-bottom:8px}
+.src-card-title{font-size:13.5px;font-weight:700;margin-bottom:3px;color:var(--ink)}
+.src-card-auth{font-size:12px;color:var(--muted);margin-bottom:3px}
+.src-card-pub{font-size:12px;color:var(--faint);margin-bottom:3px}
+.src-card-note{font-size:12px;color:#3e4a56;line-height:1.55;margin-top:6px;padding-top:6px;border-top:1px solid var(--line2)}
+.src-card-doi{font-size:11px;color:var(--blue);margin-top:4px;word-break:break-all}
+.src-card-doi a{color:var(--blue);text-decoration:underline}
+.disclaimer-box{background:var(--amber-bg);border-left:4px solid #c98a00;padding:14px;margin-top:20px;
+  font-size:12.5px;color:#4f3300;line-height:1.7}
+.disclaimer-box strong{display:block;font-size:12px;margin-bottom:6px;text-transform:uppercase;letter-spacing:.6px}
+.app-version{text-align:center;font-size:11px;color:var(--faint);margin-top:20px;padding-bottom:10px}
 
 /* ── SETTINGS ── */
-#overlay{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.5);
-  display:flex;align-items:flex-end;justify-content:center;
-  opacity:0;pointer-events:none;visibility:hidden;transition:opacity .2s}
+#overlay{position:fixed;inset:0;z-index:999;background:rgba(15,43,70,.55);display:flex;
+  align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;visibility:hidden;transition:opacity .2s}
 #overlay.open{opacity:1;pointer-events:auto;visibility:visible}
-.sheet{background:#fff;border-top:1px solid #e8e8e3;border-radius:20px 20px 0 0;
-  padding:8px 20px calc(env(safe-area-inset-bottom,0px)+24px);width:100%;max-width:480px}
-.shandle{width:36px;height:4px;background:#e0ddd8;border-radius:2px;margin:10px auto 20px}
-.shtit{font-size:18px;font-weight:700;margin-bottom:6px}
-.shsub{font-size:12px;color:#999;line-height:1.5;margin-bottom:18px}
-.shlbl{display:block;font-size:12px;font-weight:600;color:#555;margin-bottom:8px}
-.shinp{display:block;width:100%;background:#f5f5f0;border:1px solid #e0ddd8;
-  border-radius:12px;padding:13px 14px;color:#1a1a1a;font-size:14px;
-  outline:none;font-family:monospace;letter-spacing:.5px;margin-bottom:6px}
-.shinp:focus{border-color:#d97757}
-.shinp::placeholder{color:#aaa}
-.shhint{font-size:11px;color:#aaa;line-height:1.5;margin-bottom:18px}
-.shst{font-size:12px;min-height:18px;margin-bottom:14px}
+.sheet{background:#fff;border-top:3px solid var(--blue);border-radius:6px 6px 0 0;
+  padding:8px 20px calc(env(safe-area-inset-bottom,0px) + 24px);width:100%;max-width:520px}
+.shandle{width:36px;height:4px;background:var(--line);border-radius:2px;margin:10px auto 18px}
+.shtit{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.shsub{font-size:12.5px;color:var(--muted);line-height:1.55;margin-bottom:18px}
+.shlbl{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.shinp{display:block;width:100%;background:#fff;border:1px solid #b5c0cc;border-radius:3px;padding:13px 14px;
+  color:var(--ink);font-size:14px;outline:none;font-family:ui-monospace,Menlo,monospace;margin-bottom:6px}
+.shinp:focus{border-color:var(--blue)}
+.shhint{font-size:11.5px;color:var(--muted);line-height:1.55;margin-bottom:16px}
+.shst{font-size:12.5px;min-height:18px;margin-bottom:14px;font-weight:600}
 .shbtns{display:flex;gap:10px}
-.shsave{flex:1;background:#d97757;border:none;border-radius:12px;
-  padding:14px;color:#fff;font-size:15px;font-weight:700;cursor:pointer}
-.shcanc{background:#f0eeea;border:1px solid #e0ddd8;border-radius:12px;
-  padding:14px 18px;color:#666;font-size:15px;cursor:pointer}
+.shsave{flex:1;background:var(--navy);border:none;border-radius:3px;padding:14px;color:#fff;font-size:13px;
+  font-weight:700;letter-spacing:.6px;text-transform:uppercase;cursor:pointer;font-family:var(--sans)}
+.shcanc{background:#fff;border:1px solid #b5c0cc;border-radius:3px;padding:14px 18px;color:var(--muted);
+  font-size:13px;font-weight:600;cursor:pointer;font-family:var(--sans)}
 
-/* ── CATEGORY COLOURS ── */
-.ce{color:#e53935;background:rgba(229,57,53,.1)}
-.cs{color:#7b1fa2;background:rgba(123,31,162,.1)}
-.cb{color:#1565c0;background:rgba(21,101,192,.1)}
-.cv{color:#e65100;background:rgba(230,81,0,.1)}
-.ca{color:#2e7d32;background:rgba(46,125,50,.1)}
-.cl{color:#f57f17;background:rgba(245,127,23,.1)}
-.ck{color:#00838f;background:rgba(0,131,143,.1)}
-.cc{color:#6a1b9a;background:rgba(106,27,154,.1)}
-.cr{color:#00695c;background:rgba(0,105,92,.1)}
-.cd{color:#01579b;background:rgba(1,87,155,.1)}
-.cn{color:#ad1457;background:rgba(173,20,87,.1)}
-.ch{color:#bf360c;background:rgba(191,54,12,.1)}
-.cca{color:#880e4f;background:rgba(136,14,79,.1)}
-.cel{color:#33691e;background:rgba(51,105,30,.1)}
-.cm{color:#1b5e20;background:rgba(27,94,32,.1)}
-.cat{color:#e65100;background:rgba(230,81,0,.1)}
-.cg{color:#00695c;background:rgba(0,105,92,.1)}
-.cen{color:#4a148c;background:rgba(74,20,140,.1)}
-.co{color:#b71c1c;background:rgba(183,28,28,.1)}
-.cah{color:#006064;background:rgba(0,96,100,.1)}
-.cis{color:#4527a0;background:rgba(69,39,160,.1)}
-.de{background:#e53935}.ds{background:#7b1fa2}.db{background:#1565c0}
-.dv{background:#e65100}.da{background:#2e7d32}.dl{background:#f57f17}
-.dk{background:#00838f}.dc{background:#6a1b9a}.dr2{background:#00695c}
-.dd{background:#01579b}.dn{background:#ad1457}.dh{background:#bf360c}
-.dca{background:#880e4f}.del{background:#33691e}.dm{background:#1b5e20}
-.dat{background:#e65100}.dg{background:#00695c}.den{background:#4a148c}
-.do{background:#b71c1c}.dah{background:#006064}.dis{background:#4527a0}
+/* ── CATEGORY COLOURS (sóbrias) ── */
+.ce{color:#a61e2a}.cs{color:#5b2a86}.cb{color:#1c4f9c}.cv{color:#a8420a}.ca{color:#25692f}
+.cl{color:#8a6100}.ck{color:#00697a}.cc{color:#6a2a7a}.cr{color:#0b6558}.cd{color:#0d4f85}
+.cn{color:#9c1f5c}.ch{color:#8f3515}.cca{color:#7d1f4a}.cel{color:#41691f}.cm{color:#1d5a2a}
+.cat{color:#a8420a}.cg{color:#0b6558}.cen{color:#4b2488}.co{color:#8e1d1d}.cah{color:#0b5a60}.cis{color:#40308f}
+.de{background:#a61e2a}.ds{background:#5b2a86}.db{background:#1c4f9c}
+.dv{background:#a8420a}.da{background:#25692f}.dl{background:#8a6100}
+.dk{background:#00697a}.dc{background:#6a2a7a}.dr2{background:#0b6558}
+.dd{background:#0d4f85}.dn{background:#9c1f5c}.dh{background:#8f3515}
+.dca{background:#7d1f4a}.del{background:#41691f}.dm{background:#1d5a2a}
+.dat{background:#a8420a}.dg{background:#0b6558}.den{background:#4b2488}
+.do{background:#8e1d1d}.dah{background:#0b5a60}.dis{background:#40308f}
 </style>
 </head>
 <body>
 <div id="app">
-  <div id="topbar">
+  <header id="topbar">
     <div class="tb1">
-      <div class="logo">UCI<br>PED</div>
+      <div class="logo">UCIP</div>
       <div class="aname">
         <h1>UCIP Pediatria</h1>
-        <p id="cnt">A carregar...</p>
+        <p id="cnt">Formulário farmacológico</p>
       </div>
-      <button id="gbtn" onclick="openSet()">⚙️</button>
+      <button id="gbtn" onclick="openSet()" aria-label="Definições"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg></button>
     </div>
     <div class="sbar">
-      <span class="sico">🔍</span>
-      <input id="sinp" type="search" placeholder="Pesquisar fármaco ou indicação..."
+      <span class="sico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span>
+      <input id="sinp" type="search" placeholder="Pesquisar fármaco ou indicação"
         autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-      <button class="sclr" id="sclr" onclick="clrS()">✕</button>
+      <button class="sclr" id="sclr" onclick="clrS()" aria-label="Limpar">&times;</button>
     </div>
-  </div>
+  </header>
 
-  <div id="content">
+  <main id="content">
     <div id="s-home"  class="screen on"></div>
     <div id="s-det"   class="screen"></div>
     <div id="s-srch"  class="screen"></div>
@@ -440,112 +383,82 @@ html,body{
 
     <!-- COMPAT -->
     <div id="s-cp" class="screen">
-      <div class="ptit">🔬 Compatibilidade IV</div>
-      <div class="psub">Seleccione 2 ou mais fármacos para verificar compatibilidade no mesmo acesso venoso.</div>
-      <div class="nbox">⚠️ Compatibilidade pode variar com concentração e diluente. Confirme sempre com o farmacêutico.</div>
+      <div class="ptit">Compatibilidade IV</div>
+      <div class="psub">Seleccione dois ou mais fármacos para verificar a compatibilidade em Y-site no mesmo acesso venoso.</div>
+      <div class="nbox">A compatibilidade pode variar com a concentração e o diluente. Confirme sempre com o farmacêutico.</div>
       <div class="cinpw">
-        <span class="cico">💊</span>
-        <input id="cinp" type="search" placeholder="Adicionar fármaco..."
+        <span class="cico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span>
+        <input id="cinp" type="search" placeholder="Adicionar fármaco"
           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
       </div>
       <div class="csugl" id="csugl"></div>
       <div class="chips" id="chips"></div>
-      <button class="vbtn" id="vbtn" onclick="doCompat()" disabled>Verificar Compatibilidade</button>
+      <button class="vbtn" id="vbtn" onclick="doCompat()" disabled>Verificar compatibilidade</button>
       <div id="cres"></div>
-      <p style="font-size:10px;color:#aaa;margin-top:8px;line-height:1.5">
-        Fontes: Trissel's ASHP · King Guide 2024 · NHS Medusa 2024 · Leeds PICU Chart 2024 · Medicina Intensiva 2020
+      <p class="cfoot">
+        Fontes: Trissel's ASHP &middot; King Guide 2024 &middot; NHS Medusa 2024 &middot; Leeds PICU Chart 2024 &middot; Medicina Intensiva 2020
       </p>
     </div>
 
     <!-- AI CLINICAL SEARCH -->
     <div id="s-ai" class="screen">
-      <div class="ai-disc">⚠️ Apoio à decisão clínica. Não substitui julgamento clínico nem guidelines institucionais.</div>
-
-      <!-- Search bar -->
+      <div class="ai-disc">Apoio à decisão clínica. Não substitui o julgamento clínico nem as normas institucionais. Verifique sempre as doses na fonte primária.</div>
       <div class="ai-hero">
         <div class="ai-search-wrap">
-          <span class="ai-search-ico">🔍</span>
-          <input type="text" id="aitxt" placeholder="Ex: tratamento crises distónicas..."
+          <span class="ai-search-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span>
+          <input type="text" id="aitxt" placeholder="Ex.: tratamento de crises distónicas"
             oninput="aiInput()" onkeydown="aikd(event)" autocomplete="off" autocorrect="off">
-          <button class="ai-clr" id="aiclr" onclick="aiClear()">✕</button>
-          <button class="ai-send" id="aisnd" onclick="sendAI()" disabled>↑</button>
+          <button class="ai-clr" id="aiclr" onclick="aiClear()" aria-label="Limpar">&times;</button>
+          <button class="ai-send" id="aisnd" onclick="sendAI()" disabled aria-label="Pesquisar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
         </div>
       </div>
-
-      <!-- Suggestions -->
       <div class="ai-cats" id="aisg">
         <div class="ai-cats-lbl">Pesquisas frequentes</div>
         <div class="ai-sug-grid">
           <div class="ai-sug" onclick="qask(this)" data-q="Tratamento status epilepticus refractário pediátrico">
-            <div class="ai-sug-ico">🧠</div>
-            <div class="ai-sug-txt">Status epilepticus refractário</div>
-            <div class="ai-sug-cat">Neurologia</div>
-          </div>
+            <div class="ai-sug-txt">Status epilepticus refractário</div><div class="ai-sug-cat">Neurologia</div></div>
           <div class="ai-sug" onclick="qask(this)" data-q="Protocolo cetoacidose diabética pediátrica">
-            <div class="ai-sug-ico">🩺</div>
-            <div class="ai-sug-txt">Cetoacidose diabética</div>
-            <div class="ai-sug-cat">Endocrinologia</div>
-          </div>
+            <div class="ai-sug-txt">Cetoacidose diabética</div><div class="ai-sug-cat">Endocrinologia</div></div>
           <div class="ai-sug" onclick="qask(this)" data-q="Tratamento choque séptico pediátrico doses vasopressores">
-            <div class="ai-sug-ico">❤️</div>
-            <div class="ai-sug-txt">Choque séptico — vasopressores</div>
-            <div class="ai-sug-cat">UCI</div>
-          </div>
+            <div class="ai-sug-txt">Choque séptico — vasopressores</div><div class="ai-sug-cat">Cuidados intensivos</div></div>
           <div class="ai-sug" onclick="qask(this)" data-q="Sedação e analgesia criança ventilada UCIP protocolo">
-            <div class="ai-sug-ico">💉</div>
-            <div class="ai-sug-txt">Sedação no doente ventilado</div>
-            <div class="ai-sug-cat">Sedação</div>
-          </div>
+            <div class="ai-sug-txt">Sedação no doente ventilado</div><div class="ai-sug-cat">Sedação</div></div>
           <div class="ai-sug" onclick="qask(this)" data-q="Anafilaxia grave pediátrica tratamento doses adrenalina">
-            <div class="ai-sug-ico">⚡</div>
-            <div class="ai-sug-txt">Anafilaxia grave — doses</div>
-            <div class="ai-sug-cat">Emergência</div>
-          </div>
+            <div class="ai-sug-txt">Anafilaxia grave — doses</div><div class="ai-sug-cat">Emergência</div></div>
           <div class="ai-sug" onclick="qask(this)" data-q="Tratamento crises distónicas pediátricas">
-            <div class="ai-sug-ico">🫨</div>
-            <div class="ai-sug-txt">Crises distónicas</div>
-            <div class="ai-sug-cat">Neurologia</div>
-          </div>
+            <div class="ai-sug-txt">Crises distónicas</div><div class="ai-sug-cat">Neurologia</div></div>
           <div class="ai-sug" onclick="qask(this)" data-q="Hipertensão pulmonar persistente recém-nascido tratamento">
-            <div class="ai-sug-ico">🍼</div>
-            <div class="ai-sug-txt">HPPN — recém-nascido</div>
-            <div class="ai-sug-cat">Neonatologia</div>
-          </div>
+            <div class="ai-sug-txt">HPPN — recém-nascido</div><div class="ai-sug-cat">Neonatologia</div></div>
           <div class="ai-sug" onclick="qask(this)" data-q="Desmame da ventilação mecânica pediátrica critérios e protocolo">
-            <div class="ai-sug-ico">🫁</div>
-            <div class="ai-sug-txt">Desmame ventilação mecânica</div>
-            <div class="ai-sug-cat">Respiratório</div>
-          </div>
+            <div class="ai-sug-txt">Desmame da ventilação mecânica</div><div class="ai-sug-cat">Respiratório</div></div>
         </div>
       </div>
-
-      <!-- Results -->
       <div class="ai-results" id="aimsgs"></div>
     </div>
 
     <!-- SOURCES -->
     <div id="s-src" class="screen"></div>
-  </div>
+  </main>
 
-  <div id="tabbar">
-    <div class="tab on" id="t-home" onclick="goTab('home')"><span class="ti">💊</span><span class="tl">Fármacos</span></div>
-    <div class="tab"    id="t-cp"   onclick="goTab('cp')"  ><span class="ti">🔬</span><span class="tl">Compat.</span></div>
-    <div class="tab"    id="t-ai"   onclick="goTab('ai')"  ><span class="ti">🤖</span><span class="tl">IA</span></div>
-    <div class="tab"    id="t-idx"  onclick="goTab('idx')" ><span class="ti">📋</span><span class="tl">Índice</span></div>
-    <div class="tab"    id="t-src"  onclick="goTab('src')" ><span class="ti">📚</span><span class="tl">Fontes</span></div>
-  </div>
+  <nav id="tabbar">
+    <div class="tab on" id="t-home" onclick="goTab('home')"><span class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="8.5" width="19" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="M9.2 9.2l5.6 5.6"/></svg></span><span class="tl">Fármacos</span></div>
+    <div class="tab"    id="t-cp"   onclick="goTab('cp')"  ><span class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5.2 9.2A2 2 0 0 0 5.5 21h13a2 2 0 0 0 1.7-2.8L14 9V3"/><path d="M7.5 15h9"/></svg></span><span class="tl">Compat.</span></div>
+    <div class="tab"    id="t-ai"   onclick="goTab('ai')"  ><span class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9.5L5 20v-4H4z"/><path d="M8 9h8M8 12h5"/></svg></span><span class="tl">Consulta</span></div>
+    <div class="tab"    id="t-idx"  onclick="goTab('idx')" ><span class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg></span><span class="tl">Índice</span></div>
+    <div class="tab"    id="t-src"  onclick="goTab('src')" ><span class="ti"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4.5h6A3 3 0 0 1 13 7.5V20a2 2 0 0 0-2-2H4zM20 4.5h-6A3 3 0 0 0 11 7.5V20a2 2 0 0 1 2-2h7z"/></svg></span><span class="tl">Fontes</span></div>
+  </nav>
 </div>
 
 <!-- SETTINGS -->
 <div id="overlay" onclick="osOut(event)">
   <div class="sheet">
     <div class="shandle"></div>
-    <div class="shtit">⚙️ Definições</div>
-    <div class="shsub">Chave API para o assistente IA. Suporta Anthropic Claude e xAI Grok.</div>
+    <div class="shtit">Definições</div>
+    <div class="shsub">Chave API para a consulta assistida. Suporta Anthropic Claude e xAI Grok.</div>
     <label class="shlbl">Chave API</label>
     <input type="password" class="shinp" id="skey" placeholder="sk-ant-... ou xai-...">
-    <div class="shhint">Guardada localmente. Nunca enviada para servidores externos.<br>
-      Claude: console.anthropic.com · Grok: console.x.ai</div>
+    <div class="shhint">Guardada apenas neste dispositivo. Enviada somente ao fornecedor escolhido (Anthropic ou xAI).<br>
+      Claude: console.anthropic.com &middot; Grok: console.x.ai</div>
     <div class="shst" id="shst"></div>
     <div class="shbtns">
       <button class="shsave" onclick="saveSet()">Guardar</button>
@@ -597,7 +510,7 @@ var curTab='home', prevTab='home', selD=[], aiH=[], aKey='';
 
 // ─── INIT ─────────────────────────────────────────────────
 window.addEventListener('load', function() {
-  document.getElementById('cnt').textContent = DRUGS.length + ' fármacos · Evidence-Based';
+  document.getElementById('cnt').textContent = 'Formulário farmacológico · ' + DRUGS.length + ' monografias';
   buildHome();
   buildIdx();
   buildSrc();
@@ -607,6 +520,16 @@ window.addEventListener('load', function() {
 
 function E(s){
   return s ? String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') : '';
+}
+var IC_RIGHT='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>';
+var IC_LEFT='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>';
+function plainTitle(s){return String(s).replace(/^[^A-Za-zÀ-ÿ]+/,'')}
+function stripEmo(s){return String(s||'').replace(/(⛔|⚠️|⚠|✅|❌|❓|📋|📚|💉|⚖️|🔬)\s*/g,'')}
+function alertRow(x){
+  var cls='info',lab='Nota';
+  if(/^\s*⛔/.test(x)){cls='crit';lab='Crítico'}
+  else if(/^\s*⚠/.test(x)){cls='warn';lab='Atenção'}
+  return '<div class="arow '+cls+'"><span class="alab">'+lab+'</span>'+E(stripEmo(x))+'</div>';
 }
 function show(id){
   document.querySelectorAll('.screen').forEach(function(p){p.classList.remove('on')});
@@ -627,7 +550,7 @@ function buildHome(){
   SECS.forEach(function(s){
     var drugs=DRUGS.filter(function(d){return s.c.indexOf(d.category)>=0});
     if(!drugs.length) return;
-    h+='<div class="grp-hd">'+E(s.t)+'</div><div class="grp">';
+    h+='<div class="grp-hd"><span>'+E(plainTitle(s.t))+'</span><span>'+drugs.length+'</span></div><div class="grp">';
     drugs.forEach(function(d){h+=drow(d)});
     h+='</div>';
   });
@@ -640,7 +563,7 @@ function drow(d){
     +'<div class="dtxt"><div class="dname">'+E(d.name)+'</div>'
     +'<div class="dcls">'+E(d.class.split('—')[0].trim())+'</div></div>'
     +'<span class="dbadge '+CP(d.category)+'">'+E(CL(d.category))+'</span>'
-    +'<span class="darr">›</span></div>';
+    +'<span class="darr">'+IC_RIGHT+'</span></div>';
 }
 
 // ─── INDEX ────────────────────────────────────────────────
@@ -654,10 +577,9 @@ function buildIdx(){
     ll[l].forEach(function(d){
       var i=DRUGS.indexOf(d);
       h+='<div class="idxr" onclick="showDet('+i+')">'
-        +'<div class="ddot '+CD(d.category)+'" style="width:7px;height:7px;flex-shrink:0"></div>'
         +'<div class="idxn">'+E(d.name)+'</div>'
-        +'<span class="dbadge '+CP(d.category)+'" style="flex-shrink:0">'+E(CL(d.category))+'</span>'
-        +'<span class="darr">›</span></div>';
+        +'<span class="dbadge '+CP(d.category)+'">'+E(CL(d.category))+'</span>'
+        +'<span class="darr">'+IC_RIGHT+'</span></div>';
     });
   });
   document.getElementById('s-idx').innerHTML=h;
@@ -683,7 +605,9 @@ function parseMax(s){
   if(!s||s==='—'||s==='-')return null;
   s=s.replace(/,/g,'.').replace(/\u00b5/g,'μ');
   var m=s.match(/(\d+\.?\d*)\s*(μg|mcg|mg|g|UI|mEq|ml)/i);
-  return m?{val:parseFloat(m[1]),unit:m[2].replace('mcg','μg')}:null;
+  if(!m)return null;
+  var after=s.slice(m.index+m[0].length);
+  return {val:parseFloat(m[1]),unit:m[2].replace('mcg','μg'),perkg:/^\s*\/\s*kg/i.test(after)};
 }
 function fmtN(v,unit){
   var s=v>=100?Math.round(v):v>=10?(Math.round(v*10)/10):v>=1?(Math.round(v*100)/100):(Math.round(v*1000)/1000);
@@ -694,27 +618,28 @@ function calcUpdate(){
   var out=document.getElementById('calcout');
   if(!inp||!out||!_calcDrug)return;
   var wt=parseFloat(inp.value.replace(',','.'));
-  if(!wt||wt<=0||wt>150){out.innerHTML='<p style="font-size:12px;color:#bbb;text-align:center;padding:6px 0;font-style:italic">Insira um peso entre 0,3 e 150 kg</p>';return;}
+  if(!wt||wt<=0||wt>150){out.innerHTML='<p class="calc-empty">Insira um peso entre 0,3 e 150 kg</p>';return;}
   var h='';
   _calcDrug.dose&&_calcDrug.dose.forEach(function(dv){
     var p=parseDose(dv.val);if(!p)return;
     var mn=p.min*wt,mx=p.max*wt;
     var maxo=parseMax(dv.max);
     var cap=false;
+    var capv=maxo?(maxo.perkg?maxo.val*wt:maxo.val):0;
     if(maxo&&maxo.unit.toLowerCase()===p.unit.toLowerCase()){
-      if(mn>maxo.val){mn=maxo.val;cap=true;}
-      if(mx>maxo.val){mx=maxo.val;cap=true;}
+      if(mn>capv){mn=capv;cap=true;}
+      if(mx>capv){mx=capv;cap=true;}
     }
-    var ds=Math.abs(mx-mn)<0.001?('<span style="color:#d97757;font-size:17px;font-weight:700">'+fmtN(mn,p.unit)+(p.permin?'/min':'')+'</span>')
-      :('<span style="color:#d97757;font-size:17px;font-weight:700">'+fmtN(mn,p.unit)+' – '+fmtN(mx,p.unit)+(p.permin?'/min':'')+'</span>');
-    h+='<div style="background:#fff;border:1px solid #f0ddd8;border-radius:9px;padding:9px 12px;margin-bottom:6px">'
-      +'<div style="font-size:10px;font-weight:700;color:#d97757;text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px">'+E(dv.ind)+'</div>'
-      +'<div>'+ds+'</div>'
-      +(cap?'<div style="font-size:11px;color:#e67e22;margin-top:2px">⚠️ Máx: '+fmtN(maxo.val,maxo.unit)+'</div>':'')
-      +(dv.freq?'<div style="font-size:11px;color:#999;margin-top:2px">'+E(dv.freq)+'</div>':'')
+    var ds=Math.abs(mx-mn)<0.001?(fmtN(mn,p.unit)+(p.permin?'/min':''))
+      :(fmtN(mn,p.unit)+' – '+fmtN(mx,p.unit)+(p.permin?'/min':''));
+    h+='<div class="calc-dblk">'
+      +'<div class="calc-ind">'+E(dv.ind)+'</div>'
+      +'<div class="calc-dose">'+ds+'</div>'
+      +(cap?'<div class="calc-max">Limitado à dose máxima: '+fmtN(capv,maxo.unit)+(maxo.perkg?' ('+fmtN(maxo.val,maxo.unit)+'/kg)':'')+'</div>':'')
+      +(dv.freq?'<div class="calc-frq">'+E(dv.freq)+'</div>':'')
       +'</div>';
   });
-  out.innerHTML=h||'<p style="font-size:12px;color:#bbb;text-align:center;padding:6px 0;font-style:italic">Nenhuma dose em mg/kg encontrada</p>';
+  out.innerHTML=h||'<p class="calc-empty">Nenhuma dose em mg/kg encontrada</p>';
 }
 function showDet(idx){
   prevTab=curTab;
@@ -723,15 +648,15 @@ function showDet(idx){
   _perfIdx=idx;
   var _cf=/Formul[áa]rio de Pediatria/i.test(d.source||'');
   var st=_cf
-    ?'<span class="stag st1">✓ Cita Formulário de Pediatria 3ª Ed.</span>'
-    :'<span class="stag st2">★ Fontes independentes (não consta do Formulário citado)</span>';
+    ?'<span class="stag st1">Cita o Formulário de Pediatria, 3.ª ed.</span>'
+    :'<span class="stag st2">Fontes independentes do Formulário</span>';
   var hasPkg=d.dose&&d.dose.some(function(dv){return parseDose(dv.val);});
   var calcW='';
   if(hasPkg){
     calcW='<div class="calc-wrap">'
-      +'<div class="calc-lbl">⚖️ Calculadora de Dose</div>'
+      +'<div class="calc-lbl">Calculadora de dose por peso</div>'
       +'<div class="calc-row"><input class="calc-inp" id="calcwt" type="number" inputmode="decimal" placeholder="Peso (kg)" min="0.3" max="150" step="0.1" oninput="calcUpdate()" onchange="calcUpdate()"><span class="calc-unit">kg</span></div>'
-      +'<div id="calcout"><p style="font-size:12px;color:#bbb;text-align:center;padding:6px 0;font-style:italic">Insira o peso para calcular</p></div>'
+      +'<div id="calcout"><p class="calc-empty">Insira o peso para calcular</p></div>'
       +'</div>';
   }
   var inds='',doses='',prep='',ci='',alerts='',src='';
@@ -742,32 +667,32 @@ function showDet(idx){
   }
   if(d.dose&&d.dose.length){
     var perfW=buildPerfWidget(d);
-    doses='<div class="card"><div class="ctit">Posologia Pediátrica</div>'+calcW+perfW;
+    doses='<div class="card"><div class="ctit">Posologia pediátrica</div>'+calcW+perfW;
     d.dose.forEach(function(dv){
       doses+='<div class="dblk"><div class="dlbl">'+E(dv.ind)+'</div>'
         +'<div class="dval">'+E(dv.val)+'</div>';
-      if(dv.max)doses+='<div class="dmax">Máx: '+E(dv.max)+'</div>';
+      if(dv.max&&dv.max!=='—')doses+='<div class="dmax">Dose máxima: '+E(dv.max)+'</div>';
       if(dv.freq)doses+='<div class="dfrq">'+E(dv.freq)+'</div>';
       if(dv.note)doses+='<div class="dnot">'+E(dv.note)+'</div>';
       doses+='</div>';
     });
     doses+='</div>';
   }
-  if(d.prep)prep='<div class="card"><div class="ctit">Preparação & Administração</div><div class="ptxt">'+E(d.prep)+'</div></div>';
+  if(d.prep)prep='<div class="card"><div class="ctit">Preparação e administração</div><div class="ptxt">'+E(String(d.prep).replace(/⚠️\s*/g,'ATENÇÃO: ').replace(/⛔\s*/g,'CRÍTICO: ')).replace(/Fonte:/g,'Fonte:')+'</div></div>';
   if(d.ci&&d.ci.length){
     ci='<div class="card"><div class="ctit">Contra-indicações</div>';
-    d.ci.forEach(function(x){ci+='<div class="cirow">'+E(x)+'</div>';});
+    d.ci.forEach(function(x){ci+='<div class="cirow">'+E(stripEmo(x))+'</div>';});
     ci+='</div>';
   }
   if(d.alert&&d.alert.length){
-    alerts='<div class="card"><div class="ctit">⚠️ Alertas Clínicos</div>';
-    d.alert.forEach(function(x){alerts+='<div class="arow">'+E(x)+'</div>';});
+    alerts='<div class="card"><div class="ctit">Alertas clínicos</div>';
+    d.alert.forEach(function(x){alerts+=alertRow(x);});
     alerts+='</div>';
   }
-  if(d.source)src='<div class="card"><div class="ctit">Fontes</div><div class="srctxt">'+E(d.source)+'</div></div>';
-  if(d.review&&d.review.length)src='<div class="card" style="background:#fff8e6;border-color:#e8c46a"><div class="ctit" style="color:#9a6700">⚠️ Revisão pendente</div><ul class="ilist">'+d.review.map(function(r){return '<li>'+E(r)+'</li>'}).join('')+'</ul></div>'+src;
+  if(d.source)src='<div class="card"><div class="ctit">Fontes bibliográficas</div><div class="srctxt">'+E(d.source)+'</div></div>';
+  if(d.review&&d.review.length)src='<div class="card review nonum"><div class="ctit">Revisão pendente — informação por confirmar</div><ul class="ilist">'+d.review.map(function(r){return '<li>'+E(r)+'</li>'}).join('')+'</ul></div>'+src;
   document.getElementById('s-det').innerHTML=
-    '<div class="dethd"><button class="backbtn" onclick="goBack()">‹ Voltar</button>'
+    '<div class="dethd"><button class="backbtn" onclick="goBack()">'+IC_LEFT+'Voltar</button>'
     +'<div class="detname">'+E(d.name)+'</div>'
     +'<div class="detcls">'+E(d.class)+'</div>'+st+'</div>'
     +'<div class="detbody">'+inds+doses+prep+ci+alerts+src+'</div>';
@@ -814,12 +739,12 @@ function doSearch(query){
   });
   m.sort(function(a,b){return b.sc-a.sc});
   var re=new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');
-  var h=m.length?'<div class="srct">'+m.length+' resultado(s)</div>'
-    :'<div class="nores"><span class="em">🔎</span>Sem resultados para "'+E(query)+'"</div>';
+  var h=m.length?'<div class="srct">'+m.length+(m.length===1?' resultado':' resultados')+'</div>'
+    :'<div class="nores">Sem resultados para "'+E(query)+'"</div>';
   m.forEach(function(x){
     h+='<div class="srrow" onclick="showDet('+x.i+')">'
       +'<div class="srnm">'+E(x.d.name).replace(re,function(v){return'<span class="hl">'+v+'</span>'})+'</div>'
-      +'<span class="dbadge '+CP(x.d.category)+'" style="display:inline-block;margin-top:4px">'+E(CL(x.d.category))+'</span>'
+      +'<span class="dbadge '+CP(x.d.category)+'">'+E(CL(x.d.category))+'</span>'
       +'</div>';
   });
   document.getElementById('s-srch').innerHTML=h;
@@ -867,7 +792,7 @@ function remD(id){
 function rChips(){
   document.getElementById('chips').innerHTML=selD.map(function(d){
     return'<div class="chip">'+E(d.name)
-      +'<span class="chipx" onclick="remD(\''+d.id+'\')">✕</span></div>'
+      +'<span class="chipx" onclick="remD(\''+d.id+'\')">&times;</span></div>'
   }).join('');
 }
 function doCompat(){
@@ -879,14 +804,14 @@ function doCompat(){
     pairs.push({a:selD[i].name,b:selD[j].name,data:data});
     if(!data||data.s!=='C')allok=false;
   }
-  var h=allok?'<div class="allok">✅ Todos os pares são compatíveis</div>':'';
+  var h=allok?'<div class="allok">Todos os pares são compatíveis em Y-site</div>':'';
   pairs.forEach(function(p){
     var d=p.data,cls,ic,lb;
-    if(!d){cls='cruk';ic='❓';lb='Sem dados na literatura'}
-    else if(d.s==='C'){cls='crok';ic='✅';lb='Compatível em Y-site'}
-    else if(d.s==='I'){cls='crno';ic='⛔';lb='INCOMPATÍVEL'}
-    else if(d.s==='X'){cls='crwn';ic='⚠️';lb='Dados conflituosos'}
-    else{cls='cruk';ic='❓';lb='Sem dados'}
+    if(!d){cls='cruk';ic='?';lb='Sem dados na literatura'}
+    else if(d.s==='C'){cls='crok';ic='✓';lb='Compatível em Y-site'}
+    else if(d.s==='I'){cls='crno';ic='✕';lb='Incompatível'}
+    else if(d.s==='X'){cls='crwn';ic='!';lb='Dados conflituosos'}
+    else{cls='cruk';ic='?';lb='Sem dados'}
     h+='<div class="cres '+cls+'"><div class="crh"><span class="cric">'+ic+'</span>'
       +'<span class="crpr">'+E(p.a)+' + '+E(p.b)+'</span></div>'
       +'<div class="crlb">'+lb+'</div>';
@@ -910,21 +835,22 @@ function buildSrc(){
     if(s.year)      pub.push(String(s.year));
     if(pub.length)  h+='<div class="src-card-pub">'+E(pub.join(' · '))+'</div>';
     if(s.doi)       h+='<div class="src-card-doi">DOI: '+E(s.doi)+'</div>';
+    if(s.url)       h+='<div class="src-card-doi"><a href="'+E(s.url)+'" target="_blank" rel="noopener noreferrer">'+E(s.url.replace(/^https?:\/\//,''))+'</a></div>';
     if(s.note)      h+='<div class="src-card-note">'+E(s.note)+'</div>';
     h+='</div>';
     return h;
   }
-  var h='<div class="src-title">📚 Fontes Bibliográficas</div>';
-  h+='<div class="src-sub">Base de dados compilada com rigor a partir das seguintes referências.</div>';
-  h+='<div class="src-section">Referências Primárias de Posologia</div>';
+  var h='<div class="src-title">Fontes bibliográficas</div>';
+  h+='<div class="src-sub">Referências utilizadas na compilação das monografias. Cada ficha indica as fontes específicas que a sustentam.</div>';
+  h+='<div class="src-section">Referências primárias de posologia</div>';
   SOURCES.primary.forEach(function(s){h+=srcCard(s)});
   h+='<div class="src-section">Compatibilidade IV</div>';
   SOURCES.compatibility.forEach(function(s){h+=srcCard(s)});
-  h+='<div class="src-section">Guidelines Clínicas</div>';
+  h+='<div class="src-section">Normas de orientação clínica</div>';
   SOURCES.guidelines.forEach(function(s){h+=srcCard(s)});
-  h+='<div class="src-section">Ensaios Clínicos Relevantes</div>';
+  h+='<div class="src-section">Ensaios clínicos relevantes</div>';
   SOURCES.trials.forEach(function(s){h+=srcCard(s)});
-  h+='<div class="disclaimer-box"><strong>⚠️ Aviso Legal</strong>'+E(SOURCES.disclaimer)+'</div>';
+  h+='<div class="disclaimer-box"><strong>Aviso legal</strong>'+E(SOURCES.disclaimer)+'</div>';
   h+='<div class="app-version">'+E(SOURCES.version)+' · '+E(SOURCES.app)+'</div>';
   document.getElementById('s-src').innerHTML=h;
 }
@@ -937,8 +863,8 @@ function openSet(){
   var inp=document.getElementById('skey');
   inp.value='';
   inp.placeholder=aKey?'Chave guardada — introduza nova para alterar':'sk-ant-... ou xai-...';
-  document.getElementById('shst').textContent=aKey?'✅ Chave API configurada':'';
-  document.getElementById('shst').style.color='#16a34a';
+  document.getElementById('shst').textContent=aKey?'Chave API configurada':'';
+  document.getElementById('shst').style.color='#1e6b3a';
   document.getElementById('overlay').classList.add('open');
 }
 function closeSet(){document.getElementById('overlay').classList.remove('open')}
@@ -946,13 +872,13 @@ function osOut(e){if(e.target===document.getElementById('overlay'))closeSet()}
 function saveSet(){
   var k=document.getElementById('skey').value.trim();
   if(!k){
-    document.getElementById('shst').textContent='⚠️ Chave inválida.';
-    document.getElementById('shst').style.color='#e53935';return
+    document.getElementById('shst').textContent='Chave inválida.';
+    document.getElementById('shst').style.color='#a61e2a';return
   }
   aKey=k;
   try{localStorage.setItem('ucip_k3',k)}catch(e){}
-  document.getElementById('shst').textContent='✅ Guardada!';
-  document.getElementById('shst').style.color='#16a34a';
+  document.getElementById('shst').textContent='Guardada.';
+  document.getElementById('shst').style.color='#1e6b3a';
   setTimeout(closeSet,800);
 }
 
@@ -972,9 +898,9 @@ function aiMarkdown(t) {
   t = t.replace(/^[-•]\s+(.+)$/gm, '<li>$1</li>');
   t = t.replace(/(<li>.*<\/li>\n?)+/g, function(m){ return '<ul>'+m+'</ul>'; });
   // ⚠️ lines → warning box
-  t = t.replace(/(⚠️[^\n]+)/g, '<div class="ai-warn">$1</div>');
+  t = t.replace(/⚠️\s*([^\n]+)/g, '<div class="ai-warn"><strong>Atenção:</strong> $1</div>');
   // Source lines (Fontes: ...)
-  t = t.replace(/((?:Fonte|Source|Referência)[s]?:[^\n]+)/gi, '<div class="ai-src">📚 $1</div>');
+  t = t.replace(/((?:Fonte|Source|Referência)[s]?:[^\n]+)/gi, '<div class="ai-src">$1</div>');
   // Line breaks
   t = t.replace(/\n{2,}/g, '</p><p>').replace(/\n/g, '<br>');
   return '<p>'+t+'</p>';
@@ -1019,7 +945,7 @@ function addAiResult(q, placeholder) {
   // Answer card (loading state)
   var ac = document.createElement('div');
   ac.className = 'ai-acard sp';
-  ac.innerHTML = '⟳ A pesquisar em fontes clínicas...';
+  ac.innerHTML = 'A consultar as fontes clínicas…';
   msgs.appendChild(ac);
   msgs.scrollTop = msgs.scrollHeight;
   return ac;
@@ -1095,7 +1021,7 @@ async function sendAI() {
           'anthropic-dangerous-direct-browser-access': 'true'
         },
         body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
+          model: 'claude-sonnet-5-5',
           max_tokens: 2000,
           system: sys,
           messages: aiH
@@ -1113,8 +1039,8 @@ async function sendAI() {
 
   } catch(err) {
     acard.classList.remove('sp');
-    acard.innerHTML = '<strong>❌ Erro:</strong> ' + E(err.message)
-      + '<br><small style="color:#aaa">Verifique a chave API em ⚙️ Definições.</small>';
+    acard.innerHTML = '<strong>Erro:</strong> ' + E(err.message)
+      + '<br><small>Verifique a chave API em Definições (ícone no cabeçalho).</small>';
     aiH.pop();
   }
   document.getElementById('aisnd').disabled = false;
@@ -1228,24 +1154,24 @@ function fmtConcMgml(mg, vol) {
  */
 function checkConc(drugId, conc_mgml) {
   var lim = PERF_CONC_LIMITS[drugId];
-  if(!lim) return {ok:true, periph_ok:true, central_ok:true, msg:'', color:''};
+  if(!lim) return {ok:true, periph_ok:true, central_ok:true, msg:'', cls:''};
   var p_ok = conc_mgml <= lim.p;
   var c_ok = conc_mgml <= lim.c;
   if(p_ok) {
     return {ok:true, periph_ok:true, central_ok:true,
-      msg:'✓ Concentração segura — via periférica ou central<br><small>'+lim.src+'</small>',
-      color:'#f0fff4', border:'#a8e6c0', text:'#27ae60'};
+      msg:'Concentração dentro do limite — via periférica ou central<br><small>'+lim.src+'</small>',
+      cls:'ok'};
   } else if(c_ok) {
     return {ok:true, periph_ok:false, central_ok:true,
-      msg:'⚠️ CENTRAL OBRIGATÓRIO — concentração excede limite periférico<br>'
+      msg:'VIA CENTRAL OBRIGATÓRIA — concentração excede o limite periférico<br>'
         +'<small>Máx periférico: '+fmtConcMgml(lim.p,1)+' &nbsp;|&nbsp; Máx central: '+fmtConcMgml(lim.c,1)+'<br>'+lim.src+'</small>',
-      color:'#fffbeb', border:'#fde68a', text:'#92610a'};
+      cls:'warn'};
   } else {
     return {ok:false, periph_ok:false, central_ok:false,
-      msg:'⛔ CONCENTRAÇÃO EXCEDE LIMITE MÁXIMO CENTRAL<br>'
+      msg:'CONCENTRAÇÃO EXCEDE O LIMITE MÁXIMO CENTRAL<br>'
         +'<small>Máx central: '+fmtConcMgml(lim.c,1)+' &nbsp;|&nbsp; Esta: '+fmtConcMgml(conc_mgml,1)
         +'<br>Reduzir dose ou aumentar volume de diluição<br>'+lim.src+'</small>',
-      color:'#fff1f0', border:'#ffa39e', text:'#cf1322'};
+      cls:'bad'};
   }
 }
 
@@ -1308,19 +1234,10 @@ function perfUpdate() {
       var mgMin = calcMgToDilute(dMin,peso,vol,taxa,ui);
       var mgMax = calcMgToDilute(dMax,peso,vol,taxa,ui);
       var same = Math.abs(mgMax-mgMin)<0.001;
-      var rng = same ? fmtMg(mgMin) : fmtMg(mgMin).replace(/<span>.*?<\/span>/,'')+'–'+fmtMg(mgMax);
-      rangeRows += '<div style="display:flex;justify-content:space-between;padding:5px 0;'
-        +'border-bottom:1px solid #f0f5ff;align-items:center">'
-        +'<div style="font-size:11px;color:#666">'+E(dv.ind)+'</div>'
-        +'<div style="font-size:13px;font-weight:700;color:#2980b9">'+rng+'</div>'
-        +'</div>';
+      var rng = same ? fmtMg(mgMin) : fmtMg(mgMin).replace(/<span>(.*?)<\/span>/,' $1')+' – '+fmtMg(mgMax).replace(/<span>(.*?)<\/span>/,' $1');
+      rangeRows += '<div class="perf-range"><div>'+E(dv.ind)+'</div><div>'+rng+'</div></div>';
     });
   }
-
-  // Safety badge colour
-  var safetyBg = safety.color || '#f0f7ff';
-  var safetyBorder = safety.border || '#a8cff0';
-  var safetyText = safety.text || '#2980b9';
 
   out.innerHTML =
     '<div class="perf-result">'
@@ -1331,15 +1248,9 @@ function perfUpdate() {
     +'<div class="perf-pill"><small>Concentração</small>'+fmtConcMgml(mg,vol)+'</div>'
     +'<div class="perf-pill"><small>Taxa</small>'+taxa+' ml/h</div>'
     +'</div>'
-    +'<div style="background:'+safetyBg+';border:1.5px solid '+safetyBorder+';border-radius:9px;'
-    +'padding:9px 12px;margin-top:10px;font-size:12px;font-weight:600;color:'+safetyText+';line-height:1.5">'
-    +safety.msg+'</div>'
-    +'<div style="background:#f8f9fa;border-radius:8px;padding:7px 11px;margin-top:8px;'
-    +'font-size:11.5px;color:#555;font-weight:600">'
-    +'✓ A '+taxa+' ml/h → <strong>'+verifyStr+'</strong></div>'
-    +(rangeRows ? '<div style="margin-top:10px"><div style="font-size:9px;font-weight:700;color:#888;'
-      +'text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px">Gama terapêutica (mesmo vol/taxa)</div>'
-      +rangeRows+'</div>' : '')
+    +(safety.msg?'<div class="perf-safety '+(safety.cls||'ok')+'">'+safety.msg+'</div>':'')
+    +'<div class="perf-verify">Verificação: a '+taxa+' ml/h → <strong>'+verifyStr+'</strong></div>'
+    +(rangeRows ? '<div class="perf-range-h">Gama terapêutica (mesmo volume e taxa)</div>'+rangeRows : '')
     +'</div>';
 }
 
@@ -1357,9 +1268,8 @@ function buildPerfWidget(drug) {
   // Show concentration limits if available
   var lim = PERF_CONC_LIMITS[drug.id];
   var limInfo = lim
-    ? '<div style="font-size:10px;color:#888;margin-bottom:8px;line-height:1.4">'
-      +'📋 Limites: periférico ≤ <strong>'+fmtConcMgml(lim.p,1)+'</strong> | central ≤ <strong>'+fmtConcMgml(lim.c,1)+'</strong>'
-      +' <span style="color:#bbb">('+lim.src+')</span></div>'
+    ? '<div class="perf-info">Limites de concentração: periférico ≤ <strong>'+fmtConcMgml(lim.p,1)+'</strong> · central ≤ <strong>'+fmtConcMgml(lim.c,1)+'</strong>'
+      +' <span>('+lim.src+')</span></div>'
     : '';
 
   var unitOpts = PERF_UNITS.map(function(u,i){
@@ -1367,7 +1277,7 @@ function buildPerfWidget(drug) {
   }).join('');
 
   return '<div class="perf-wrap">'
-    +'<div class="perf-lbl">💉 Preparação de Perfusão</div>'
+    +'<div class="perf-lbl">Preparação de perfusão</div>'
     +limInfo
     +'<div class="perf-grid">'
     +'<div class="perf-field"><label>Peso (kg)</label>'

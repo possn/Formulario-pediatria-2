@@ -4,7 +4,12 @@ const fs=require('fs'),vm=require('vm'),path=require('path');
 const root=path.join(__dirname,'..');
 const ctx={console:{log(){}}};vm.createContext(ctx);
 const load=f=>vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f});
-fs.readdirSync(path.join(root,'drugs')).filter(f=>/^drugs_.*\.js$/.test(f)).sort().forEach(f=>load('drugs/'+f));
+// Carrega os scripts pela MESMA ordem do index.html (o master tem de correr depois dos módulos)
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const order=[...html.matchAll(/<script src="(drugs\/[^"]+)"><\/script>/g)].map(m=>m[1]);
+order.forEach(f=>load(f));
+const onDisk=fs.readdirSync(path.join(root,'drugs')).filter(f=>/^drugs_.*\.js$/.test(f)).map(f=>'drugs/'+f);
+onDisk.filter(f=>!order.includes(f)).forEach(f=>console.log('AVISO ficheiro não carregado pelo index.html: '+f));
 load('compat_data.js');
 const errs=[],warns=[];
 const D=ctx.DRUGS||[];
