@@ -109,6 +109,25 @@ svg{display:block}
   .drow:nth-child(odd){border-right:1px solid var(--line2)}
   .drow:nth-last-child(-n+2):nth-child(odd){border-bottom:none}}
 
+/* ── CARTÕES DE CATEGORIA ── */
+.home-intro{margin:20px var(--gut) 0}
+.home-intro h2{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--navy)}
+.home-intro p{font-size:12.5px;color:var(--muted);margin-top:3px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px var(--gut) 0}
+.catcard{background:var(--card);border:1px solid var(--line);border-left-width:5px;border-radius:3px;
+  padding:13px 13px 12px;cursor:pointer;display:flex;flex-direction:column;min-height:118px;min-width:0}
+.catcard:active{background:var(--blue-bg)}
+.cc-name{font-family:var(--serif);font-size:15.5px;font-weight:700;color:var(--navy);line-height:1.25}
+.cc-n{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-top:4px}
+.cc-ex{font-size:12px;color:var(--muted);line-height:1.45;margin-top:auto;padding-top:8px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media(min-width:760px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.cathd{padding:12px var(--gut) 14px;background:#fff;border-bottom:1px solid var(--line)}
+.cathd h2{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--navy);line-height:1.2}
+.cathd p{font-size:12.5px;color:var(--muted);margin-top:4px}
+#s-cat{padding-bottom:30px}
+#s-cat .grp{margin-top:14px;border-top:2px solid var(--navy)}
+
 /* ── DETAIL ── */
 #s-det{background:var(--bg);padding-bottom:30px}
 .dethd{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);
@@ -377,6 +396,7 @@ svg{display:block}
 
   <main id="content">
     <div id="s-home"  class="screen on"></div>
+    <div id="s-cat"   class="screen"></div>
     <div id="s-det"   class="screen"></div>
     <div id="s-srch"  class="screen"></div>
     <div id="s-idx"   class="screen"></div>
@@ -545,17 +565,37 @@ function goTab(t){
 }
 
 // ─── HOME ─────────────────────────────────────────────────
+function secDrugs(s){return DRUGS.filter(function(d){return s.c.indexOf(d.category)>=0})}
 function buildHome(){
-  var h='';
-  SECS.forEach(function(s){
-    var drugs=DRUGS.filter(function(d){return s.c.indexOf(d.category)>=0});
+  var h='<div class="home-intro"><h2>Áreas terapêuticas</h2><p>Seleccione uma área para consultar as monografias. A pesquisa no topo procura em todas.</p></div><div class="cards">';
+  SECS.forEach(function(s,i){
+    var drugs=secDrugs(s);
     if(!drugs.length) return;
-    h+='<div class="grp-hd"><span>'+E(plainTitle(s.t))+'</span><span>'+drugs.length+'</span></div><div class="grp">';
-    drugs.forEach(function(d){h+=drow(d)});
-    h+='</div>';
+    var ex=drugs.slice(0,4).map(function(d){return d.name.split(' (')[0]}).join(' · ');
+    h+='<div class="catcard '+CP(drugs[0].category)+'" style="border-left-color:currentColor" onclick="showCat('+i+')">'
+      +'<div class="cc-name">'+E(plainTitle(s.t))+'</div>'
+      +'<div class="cc-n">'+drugs.length+(drugs.length===1?' monografia':' monografias')+'</div>'
+      +'<div class="cc-ex">'+E(ex)+'…</div></div>';
   });
+  h+='</div>';
   document.getElementById('s-home').innerHTML=h;
 }
+var _catIdx=-1;
+function showCat(i){
+  var s=SECS[i]; if(!s) return;
+  _catIdx=i;
+  var drugs=secDrugs(s).slice().sort(function(a,b){return a.name.localeCompare(b.name,'pt')});
+  var h='<div class="cathd"><button class="backbtn" onclick="goHome()">'+IC_LEFT+'Áreas terapêuticas</button>'
+    +'<h2>'+E(plainTitle(s.t))+'</h2><p>'+drugs.length+(drugs.length===1?' monografia':' monografias')+' · por ordem alfabética</p></div>'
+    +'<div class="grp">';
+  drugs.forEach(function(d){h+=drow(d)});
+  h+='</div>';
+  var el=document.getElementById('s-cat'); el.innerHTML=h; el.scrollTo(0,0);
+  prevTab=curTab; curTab='cat'; show('cat');
+  document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});
+  document.getElementById('t-home').classList.add('on');
+}
+function goHome(){ _catIdx=-1; goTab('home'); }
 function drow(d){
   var i=DRUGS.indexOf(d);
   return '<div class="drow" onclick="showDet('+i+')">'
@@ -701,6 +741,7 @@ function showDet(idx){
   document.querySelectorAll('.tab').forEach(function(el){el.classList.remove('on');});
 }
 function goBack(){
+  if(prevTab==='cat'&&_catIdx>=0){showCat(_catIdx);return}
   var t=(prevTab==='det'||prevTab==='srch')?'home':prevTab;
   curTab=t;
   document.querySelectorAll('.tab').forEach(function(el){el.classList.remove('on')});
