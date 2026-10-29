@@ -116,11 +116,11 @@ var DRUGS_VASOACTIVOS = [
     ],
     "dose": [
       {
-        "ind": "Vasopressor",
-        "val": "0,05–0,3 mcg/kg/min",
-        "max": "1–2 mcg/kg/min (choque refractário)",
-        "freq": "perfusão contínua",
-        "note": "Titular pela TAM alvo (PAM ≥ 55–65 mmHg ou > percentil 5 para idade)"
+        "ind": "Hipotensão aguda (choque séptico) / choque por vasodilatação excessiva",
+        "val": "0,02–0,1 mcg/kg/min, ajustada à resposta",
+        "max": "1 mcg/kg/min",
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21, Noradrenaline/Norepinephrine (p. 131): RN e criança 20–100 ng/kg/min; máx. 1 mcg/kg/min; diluir o concentrado de 1 mg/mL. Shann (Drug Doses): preparação para 0,02–0,2 mcg/kg/min e para 0,1–0,5 mcg/kg/min; via periférica de curta duração 0,05–0,1 mcg/kg/min. Doses acima de 1 mcg/kg/min não constam das fontes disponíveis."
       }
     ],
     "prep": "EV CENTRAL obrigatório. Diluir em SG5% ou SF. Concentração periférica de emergência: ≤ 16 μg/ml com vigilância estrita de flebite (cada 1h). Central habitual: 32–200 μg/ml. Regra dos 3: peso(kg)×0,3 mg/50 ml → 1 ml/h = 0,1 μg/kg/min. Proteger da luz. Antídoto extravasamento: fentolamina 5 mg em 10 ml SF, injectar SC na área. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -135,7 +135,7 @@ var DRUGS_VASOACTIVOS = [
       "Monitorização com linha arterial obrigatória",
       "Associar vasopressina se dose elevada necessária"
     ],
-    "source": "Surviving Sepsis Campaign 2020; BNF for Children 2023-24"
+    "source": "BNF for Children 2020-21, Noradrenaline/Norepinephrine (p. 131); Shann F. Drug Doses (preparação)"
   },
   {
     "id": "vasopressina",

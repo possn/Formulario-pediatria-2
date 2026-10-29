@@ -332,7 +332,9 @@ var DRUGS_ENDOCRINO = [
       "⚠️ Não administrar em infecção activa (ferro pode potenciar crescimento bacteriano)",
       "Verificar ferritina e saturação transferrina antes de cada dose"
     ],
-    "source": "BNF for Children 2023-24; Ferinject SmPC 2023"
+    "source": "BNF for Children 2020-21, Iron (p. 617)",
+    "review": ["O BNFC 2020-21 não dá doses fixas: calcular pelo peso e défice de ferro (consultar RCM). A fórmula e as doses de carboximaltose férrica não têm fonte verificada neste conjunto de documentos."]
+
   },
   {
     "id": "metimazol",
@@ -453,7 +455,9 @@ var DRUGS_ENDOCRINO = [
       "Cicatrização deficiente — evitar sirolímus peri-operatório (descontinuar 1 semana antes)",
       "TDM obrigatório — variabilidade farmacocinética grande; nível sérico 24h pós-dose"
     ],
-    "source": "BNF for Children 2023-24; Franz DN et al. Lancet 2013 (TSC-SEGA); KDIGO Transplant Guidelines 2022"
+    "source": "BNF for Children 2020-21, Sirolimus (p. 561)",
+    "review": ["BNFC 2020-21: transplante renal em criança — \"consultar protocolo local\". As doses em mg/m² não têm fonte verificada neste conjunto de documentos."]
+
   },
   {
     "id": "desmopressina_ddavp",

@@ -503,25 +503,11 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "Intubação",
-        "val": "0,1 mg/kg EV",
+        "ind": "Bloqueio neuromuscular na UCI",
+        "val": "0,1 mg/kg EV, repetir se necessário",
         "max": "—",
-        "freq": "dose única",
-        "note": "Início 2–3 min (mais lento que rocurônio). Duração 25–40 min"
-      },
-      {
-        "ind": "Manutenção",
-        "val": "0,02–0,05 mg/kg EV PRN",
-        "max": "—",
-        "freq": "guiado por TOF",
-        "note": "OU perfusão 0,05–0,1 mg/kg/hora"
-      },
-      {
-        "ind": "RN",
-        "val": "0,05–0,1 mg/kg EV",
-        "max": "—",
-        "freq": "dose única",
-        "note": "Maior sensibilidade e duração prolongada no RN"
+        "freq": "SOS, guiado por monitorização do bloqueio (TOF)",
+        "note": "Shann, Drug Doses (entrada Vecuronium): UCI 0,1 mg/kg SOS; no bloco operatório 0,1 mg/kg e depois 0,5–2 mcg/kg/min. BNFC 2020-21 (p. 875) não indica dose (\"consultar o RCM\"). Calcular pelo peso ideal em obesos."
       }
     ],
     "prep": "EV: reconstituir pó 10 mg com 5 ml SWFI (2 mg/ml). Perfusão: diluir em SF, SG5% ou LR para 0,1–0,2 mg/ml. Estabilidade: 24h a 25°C; 5 dias a 4°C após reconstituição. Reversão: sugammadex 2–4 mg/kg (moderado) ou 16 mg/kg (profundo/urgência). Fonte: BNF for Children 2023-24; Trissel's 2023.",
@@ -536,7 +522,9 @@ var DRUGS_SEDACAO = [
       "Reversão com neostigmina (0,05 mg/kg) + atropina (0,02 mg/kg) OU sugammadex",
       "Monitorização TOF em perfusão"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; Norcuron SmPC"
+    "source": "Shann F. Drug Doses; BNF for Children 2020-21, Vecuronium bromide (p. 875)",
+    "review": ["A ficha anterior incluía manutenção 0,02–0,05 mg/kg e dose neonatal 0,05–0,1 mg/kg sem fonte verificável nos documentos disponíveis: removidas. Consultar o RCM para doses neonatais."]
+  
   },
   {
     "id": "sugammadex",
@@ -550,25 +538,25 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "Reversão bloqueio moderado (TOF ≥ T2)",
+        "ind": "Reversão de bloqueio moderado por rocurónio (recuperação espontânea)",
         "val": "2 mg/kg EV",
         "max": "—",
-        "freq": "bólus único",
-        "note": "Reversão completa em 3 min"
+        "freq": "Bólus único",
+        "note": "BNFC 2020-21 (p. 875): 2–17 anos, 2 mg/kg (consultar RCM). Shann: 2 mg/kg após recuperação espontânea."
       },
       {
-        "ind": "Reversão bloqueio profundo (TOF = 0, PTC 1–2)",
+        "ind": "Reversão de bloqueio profundo (1–2 contagens pós-tetânicas)",
         "val": "4 mg/kg EV",
         "max": "—",
-        "freq": "bólus único",
-        "note": ""
+        "freq": "Bólus único",
+        "note": "Shann, Drug Doses (entrada Sugammadex). Não consta do BNFC 2020-21."
       },
       {
-        "ind": "Reversão imediata pós-ISR (3 min após rocurônio 1,2 mg/kg)",
+        "ind": "Reversão imediata de rocurónio",
         "val": "16 mg/kg EV",
         "max": "—",
-        "freq": "bólus único",
-        "note": "Cenário 'CICO' — alternativa à cricotirotomia"
+        "freq": "Bólus único",
+        "note": "Shann, Drug Doses: para reversão imediata de rocurónio (não de vecurónio)."
       }
     ],
     "prep": "EV: administrar NÃO DILUÍDO (100 mg/ml = 200 mg/2 ml) em bólus rápido em 10 segundos. Preparar seringa imediatamente antes (estabilidade 8h após saída de embalagem). Refrigerar 2–8°C; estável 5 dias a 25°C. ⚠️ Dose de emergência (cannot intubate): 16 mg/kg = 3,2 ml/kg (bólus muito rápido). Fonte: BNF for Children 2023-24; SmPC Bridion.",
@@ -583,7 +571,7 @@ var DRUGS_SEDACAO = [
       "⚠️ Contraceptivos hormonais: eficácia reduzida 7 dias após sugammadex (equivale a dose de contracetivo oral falhada)",
       "Não reverte succinilcolina, atracúrio ou cisatracúrio"
     ],
-    "source": "BNF for Children 2023-24; Bridion SmPC 2023; ESA Guidelines 2021"
+    "source": "BNF for Children 2020-21, Sugammadex (p. 875); Shann F. Drug Doses"
   },
   {
     "id": "paracetamol",

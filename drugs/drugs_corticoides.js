@@ -173,7 +173,6 @@ var DRUGS_CORTICOIDES = [
     "id": "prednisolona",
     "name": "Prednisolona",
     "category": "corticoide",
-    "src": "original",
     "class": "Corticoide oral — potência 4× cortisol, actividade mineralocorticóide mínima",
     "brands": "Lepicortinolo comp. 5/20 mg; sol. oral 1 mg/ml; 5 mg/ml",
     "indication": [
@@ -186,32 +185,32 @@ var DRUGS_CORTICOIDES = [
     ],
     "dose": [
       {
-        "ind": "Asma aguda oral",
-        "val": "1–2 mg/kg/dia oral",
-        "max": "40 mg/dia",
-        "freq": "1–2 doses/dia × 3–5 dias",
-        "note": "Não necessita desmame se < 7 dias"
+        "ind": "Asma aguda (PO)",
+        "val": "1 mês–11 anos: 1–2 mg/kg/dia; 12–17 anos: 40–50 mg/dia",
+        "max": "40 mg/dia (1 mês–11 anos)",
+        "freq": "1×/dia, ≥3 dias (12–17 anos: ≥5 dias)",
+        "note": "BNFC 2020-21, Prednisolone (p. 478). Asma grave/em risco de vida: 2 mg/kg/dia (máx. 60 mg) se corticoide oral >alguns dias."
       },
       {
-        "ind": "Síndrome nefrótico — indução",
-        "val": "2 mg/kg/dia oral",
+        "ind": "Laringite (croup)",
+        "val": "1–2 mg/kg PO (antes da transferência)",
+        "max": "—",
+        "freq": "Dose única",
+        "note": "BNFC 2020-21 (p. 478). Shann: 1 mg/kg e repetir às 12 h; grave 4 mg/kg e depois 1 mg/kg 8/8 h."
+      },
+      {
+        "ind": "Doenças auto-imunes inflamatórias (AIJ, LES, etc.)",
+        "val": "Inicial 1–2 mg/kg/dia, reduzir ao fim de alguns dias",
         "max": "60 mg/dia",
-        "freq": "1 dose/dia (manhã) × 4–6 semanas",
-        "note": ""
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 478). Hepatite auto-imune: 2 mg/kg/dia (máx. 40 mg)."
       },
       {
-        "ind": "Síndrome nefrótico — manutenção",
-        "val": "1,5 mg/kg em dias alternados",
-        "max": "40 mg",
-        "freq": "dias alternados × 4–6 semanas",
-        "note": ""
-      },
-      {
-        "ind": "Anti-inflamatório geral",
-        "val": "1–2 mg/kg/dia",
-        "max": "60 mg/dia",
-        "freq": "1–2 doses/dia",
-        "note": ""
+        "ind": "Síndrome nefrótico / rejeição de transplante",
+        "val": "60 mg/m²/dia, reduzir ao longo de vários meses",
+        "max": "80 mg/dia",
+        "freq": "1×/dia",
+        "note": "Shann, Drug Doses (entrada Prednisolone)."
       }
     ],
     "prep": "Oral: solução 1 mg/ml ou 5 mg/ml — pode misturar em sumo ou leite para mascarar sabor amargo. Comprimidos 5/25 mg — podem ser triturados. EV (metilprednisolona succinato = forma EV; prednisolona = oral/IM): solução IM/EV 25 mg/ml. Tomar com alimentos (reduz irritação gástrica). Fonte: BNF for Children 2023-24.",
@@ -226,7 +225,7 @@ var DRUGS_CORTICOIDES = [
       "⚠️ Efeito imunossupressor — risco infecções oportunistas",
       "Equivalência: prednisolona 5 mg = dexametasona 0,75 mg = hidrocortisona 20 mg"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNF for Children 2020-21, Prednisolone (p. 478); Shann F. Drug Doses"
   },
   {
     "id": "ciclosporina",
@@ -542,7 +541,9 @@ var DRUGS_CORTICOIDES = [
       "Hiperlipidémia, hiperglicemia — monitorizar",
       "Cicatrização deficiente — descontinuar peri-operatório"
     ],
-    "source": "BNF for Children 2023-24; Franz DN et al. Lancet 2013 (TSC); KDIGO Transplant 2022"
+    "source": "BNF for Children 2020-21, Everolimus (p. 605)",
+    "review": ["BNFC 2020-21: SEGA/epilepsia na esclerose tuberosa — \"consultar RCM\". As doses em mg/m² e os alvos de nível não têm fonte verificada neste conjunto de documentos. Confirmar no RCM / protocolo de transplante."]
+
   },
   {
     "id": "basiliximab",

@@ -72,25 +72,11 @@ var DRUGS_RESPIRATORIO = [
     ],
     "dose": [
       {
-        "ind": "Prurido / Urticária oral",
-        "val": "0,5 mg/kg/dose",
-        "max": "25 mg/dose (< 6 anos); 50 mg/dose (> 6 anos)",
-        "freq": "3–4×/dia",
-        "note": ""
-      },
-      {
-        "ind": "Ansiedade / Pré-medicação oral",
-        "val": "1 mg/kg/dose",
-        "max": "50 mg/dose",
-        "freq": "dose única 30–60 min antes procedimento",
-        "note": "Efeito sedativo útil em pré-medicação"
-      },
-      {
-        "ind": "Adulto",
-        "val": "25 mg",
-        "max": "100 mg/dose",
-        "freq": "3–4×/dia",
-        "note": ""
+        "ind": "Prurido (PO)",
+        "val": "6 meses–5 anos: 5–15 mg/dia em doses divididas (máx. 2 mg/kg/dia); 6–17 anos <40 kg: inicial 15–25 mg/dia (máx. 2 mg/kg/dia); 6–17 anos ≥40 kg: 15–25 mg/dia, subir se necessário até 50–100 mg/dia",
+        "max": "2 mg/kg/dia (≤40 kg); 100 mg/dia (≥40 kg)",
+        "freq": "Doses divididas",
+        "note": "BNFC 2020-21, Hydroxyzine hydrochloride (p. 187). Contra-indicada com QT longo ou factores de risco (MHRA/CHM 2015)."
       }
     ],
     "prep": "Oral: xarope 2 mg/ml ou 10 mg/5 ml — pode misturar em água ou sumo. Comprimidos 10/25 mg. EV/IM (uso hospitalar): IM profunda — não EV (risco hemólise e trombose). Concentração IM: solução 50 mg/ml. Fonte: BNF for Children 2023-24.",
@@ -105,7 +91,7 @@ var DRUGS_RESPIRATORIO = [
       "⚠️ Efeitos anticolinérgicos: retenção urinária, obstipação, xerostomia",
       "Efeito antiemético e antipruriginoso duplo — útil em UCIP"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "BNF for Children 2020-21, Hydroxyzine hydrochloride (p. 187)"
   },
   {
     "id": "cetirizina",
@@ -122,39 +108,11 @@ var DRUGS_RESPIRATORIO = [
     ],
     "dose": [
       {
-        "ind": "6 meses – 1 ano oral",
-        "val": "2,5 mg/dia",
-        "max": "2,5 mg/dia",
-        "freq": "1×/dia",
-        "note": ""
-      },
-      {
-        "ind": "1–2 anos oral",
-        "val": "2,5 mg",
-        "max": "5 mg/dia",
-        "freq": "1–2×/dia",
-        "note": ""
-      },
-      {
-        "ind": "2–6 anos oral",
-        "val": "2,5–5 mg",
-        "max": "5 mg/dia",
-        "freq": "1–2×/dia",
-        "note": ""
-      },
-      {
-        "ind": "6–12 anos oral",
-        "val": "5–10 mg",
+        "ind": "Alergia (PO)",
+        "val": "6 meses–2 anos: 2,5 mg/dia; 2–5 anos: 2,5–5 mg/dia; >5 anos: 5–10 mg/dia",
         "max": "10 mg/dia",
         "freq": "1×/dia",
-        "note": ""
-      },
-      {
-        "ind": "≥ 12 anos / adulto",
-        "val": "10 mg",
-        "max": "10 mg/dia",
-        "freq": "1×/dia",
-        "note": ""
+        "note": "Shann, Drug Doses (entrada Cetirizine). Cetirizina não localizada no índice do BNFC 2020-21; para levocetirizina o BNFC indica 1,25 mg 2×/dia (2–5 anos) e 5 mg 1×/dia (6–17 anos), p. 184."
       }
     ],
     "prep": "Oral: gotas 10 mg/ml (1 gota = 0,5 mg; 20 gotas = 10 mg = 1 ml). Xarope 5 mg/5 ml. Comprimidos 10 mg. Pode misturar em água, sumo ou leite. Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
@@ -166,7 +124,7 @@ var DRUGS_RESPIRATORIO = [
       "Ajuste renal: TFG 30–50: 5 mg/dia; TFG < 30: 5 mg em dias alternados",
       "Seguro a partir dos 6 meses"
     ],
-    "source": "BNF for Children 2023-24"
+    "source": "Shann F. Drug Doses; BNF for Children 2020-21 (levocetirizina, p. 184)"
   },
   {
     "id": "loratadina",
@@ -304,7 +262,6 @@ var DRUGS_RESPIRATORIO = [
     "id": "aminofilina",
     "name": "Aminofilina",
     "category": "broncodilatador",
-    "src": "original",
     "class": "Metilxantina — inibidor PDE, antagonista adenosina, estimulante centro respiratório",
     "brands": "Aminofilina 25 mg/ml amp. EV",
     "indication": [
@@ -314,25 +271,18 @@ var DRUGS_RESPIRATORIO = [
     ],
     "dose": [
       {
-        "ind": "Asma grave — carga EV",
-        "val": "5 mg/kg EV em 20–30 min",
+        "ind": "Asma aguda grave sem tratamento prévio com teofilina — carga EV",
+        "val": "5 mg/kg EV lento",
         "max": "500 mg",
-        "freq": "dose única de carga",
-        "note": "Omitir carga se já em teofilina. Monitorização ECG obrigatória"
+        "freq": "Dose única, seguida de perfusão",
+        "note": "BNFC 2020-21, Aminophylline (p. 176). Em doentes obesos calcular pelo peso ideal para a altura."
       },
       {
-        "ind": "Manutenção EV",
-        "val": "< 9 anos: 1 mg/kg/hora; 9–16 anos: 0,8 mg/kg/hora; adulto: 0,5 mg/kg/hora",
+        "ind": "Asma aguda grave — perfusão EV",
+        "val": "1 mês–11 anos: 1 mg/kg/h; 12–17 anos: 0,5–0,7 mg/kg/h",
         "max": "—",
-        "freq": "perfusão contínua",
-        "note": "Nível terapêutico: 10–20 mg/L. Colher nível 4h após início"
-      },
-      {
-        "ind": "Apneia prematuridade (alternativa cafeína)",
-        "val": "Carga 6 mg/kg → manutenção 2–3 mg/kg cada 8–12h",
-        "max": "—",
-        "freq": "cada 8–12h",
-        "note": ""
+        "freq": "Perfusão contínua, ajustar à teofilinémia",
+        "note": "BNFC 2020-21 (p. 176). Interacções frequentes: fumo, álcool, insuficiência cardíaca/hepática, infecções virais alteram a depuração."
       }
     ],
     "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 25 mg/ml periférico. Carga: administrar em 20–30 min (NUNCA bólus rápido — arritmias fatais). Perfusão contínua: 250 mg em 100 ml SF (2,5 mg/ml). ⚠️ Incompatível com cefepime, fenitoína, bicarbonato na mesma linha. Estabilidade: 24h a 25°C.",
@@ -348,7 +298,9 @@ var DRUGS_RESPIRATORIO = [
       "⚠️ Fumadores: clearance aumentada (precisam doses maiores)",
       "Monitorizar nível sérico e ECG"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNF for Children 2020-21, Aminophylline (p. 176)",
+    "review": ["Retirada a dose para apneia da prematuridade (carga 6 mg/kg): não consta do BNFC 2020-21 para aminofilina; ver cafeína."]
+  
   },
   {
     "id": "montelucaste",

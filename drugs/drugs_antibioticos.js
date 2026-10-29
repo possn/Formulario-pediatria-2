@@ -210,32 +210,25 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "RN sépsis (dose única diária)",
-        "val": "< 29 sem: 5 mg/kg cada 48h; 29–35 sem: 4,5 mg/kg cada 36h; > 35 sem: 4 mg/kg cada 24h",
+        "ind": "Septicémia, meningite, endocardite, pneumonia nosocomial — criança (EV, dose única diária)",
+        "val": "Inicial 7 mg/kg 1×/dia; doses seguintes ajustadas pelo nível sérico (não adequado a endocardite/meningite)",
         "max": "—",
-        "freq": "ver esquema",
-        "note": "Dose única diária preferida (melhor índice AUC/MIC, menor toxicidade)"
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21, Gentamicin (p. 333). Shann: 1 sem–10 anos 8 mg/kg no dia 1 e depois 6 mg/kg/dia; >10 anos 7 mg/kg no dia 1 e depois 5 mg/kg/dia; nível residual <1,0 mg/L."
       },
       {
-        "ind": "Criança > 1 mês (dose única diária)",
-        "val": "5–7 mg/kg/dose",
+        "ind": "Esquema de dose múltipla — criança (IM/EV lento)",
+        "val": "1 mês–11 anos: 2,5 mg/kg 8/8 h; 12–17 anos: 2 mg/kg 8/8 h",
         "max": "—",
-        "freq": "1 vez/dia",
-        "note": "Nível vale < 1 mg/L antes da 2ª dose. Ajustar intervalo pela função renal"
+        "freq": "8/8 h",
+        "note": "BNFC 2020-21 (p. 333). Fibrose quística (Pseudomonas): 3 mg/kg 8/8 h."
       },
       {
-        "ind": "Sépsis neonatal — EV (dose única diária)",
-        "val": "< 29 sem: 5 mg/kg cada 48h; 29–35 sem: 4,5 mg/kg cada 36h; ≥ 36 sem: 4 mg/kg cada 24h; > 7 dias (≥ 36 sem): 4,5 mg/kg cada 24h",
+        "ind": "Sépsis neonatal (intervalo alargado)",
+        "val": "RN ≤7 dias: 5 mg/kg 36/36 h; RN 7–28 dias: 5 mg/kg 24/24 h",
         "max": "—",
-        "freq": "ver esquema por IG",
-        "note": "Dose única diária preferida — melhor eficácia (AUC/MIC) e menor toxicidade que doses divididas"
-      },
-      {
-        "ind": "Neonatal — Meningite gram-negativo",
-        "val": "2,5 mg/kg cada 8h (dose dividida)",
-        "max": "—",
-        "freq": "cada 8h × 21 dias (bacilo gram-negativo)",
-        "note": "Dose dividida na meningite para melhor penetração LCR"
+        "freq": "36/36 h ou 24/24 h",
+        "note": "BNFC 2020-21 (p. 333). Shann (5 mg/kg): <1200 g 48 h (0–7 d), 36 h (8–30 d), 24 h (>30 d); 1200–2500 g 36 h (0–7 d), 24 h (>7 d); termo 24 h."
       }
     ],
     "prep": "EV: diluir em SF ou SG5%. Concentração: 1–10 mg/ml periférico; até 25 mg/ml central. Administrar em 30–60 min (NUNCA bólus — bloqueia neuromuscular). Incompatível na mesma linha com penicilinas e cefalosporinas — separar por pelo menos 30 min e lavar linha. Estabilidade: 24h a 25°C após diluição.",
@@ -254,7 +247,9 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ Monitorizar nível vale (< 1 mg/L antes da 2ª dose). Ajustar intervalo",
       "⚠️ Risco ↑ com furosemida e vancomicina (evitar associação se possível)"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; BNFC Neonatal Formulary; BNF for Children 2023-24; BNFC Neonatal Formulary 9th Ed"
+    "source": "BNF for Children 2020-21, Gentamicin (p. 333); Shann F. Drug Doses",
+    "review": ["Foram retirados o esquema neonatal por idade gestacional (<29, 29–35, ≥36 semanas) e a dose de 2,5 mg/kg 8/8 h para meningite neonatal por Gram-negativos: não constam do BNFC nem do Shann. Para neonatos usar o esquema BNFC/Shann por peso e dias de vida ou o protocolo local."]
+  
   },
   {
     "id": "metronidazol",
@@ -410,7 +405,6 @@ var DRUGS_ANTIBIOTICOS = [
     "id": "piperacilina_tazobactam",
     "name": "Piperacilina/Tazobactam",
     "category": "antibiotico",
-    "src": "original",
     "class": "Penicilina + inibidor β-lactamase de amplo espectro",
     "brands": "Tazocin 2,25 g; 4,5 g pó EV",
     "indication": [
@@ -422,18 +416,25 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Infecção grave EV",
-        "val": "90 mg/kg/dose (piperacilina)",
-        "max": "4,5 g/dose",
-        "freq": "3–4×/dia",
-        "note": "Infusão extendida 4h melhora %T>MIC contra P. aeruginosa"
+        "ind": "Septicémia, pneumonia nosocomial, infecções complicadas urinárias / pele / tecidos moles (EV, perfusão)",
+        "val": "RN: 90 mg/kg 8/8 h; 1 mês–11 anos: 90 mg/kg 6–8/8 h; 12–17 anos: 4,5 g 8/8 h (até 6/6 h se grave)",
+        "max": "4,5 g por dose (4,5 g 6/6 h)",
+        "freq": "6/6 h a 8/8 h",
+        "note": "BNFC 2020-21, Piperacillin with tazobactam (p. 362). Doses expressas como associação piperacilina + tazobactam."
       },
       {
-        "ind": "Febre neutropénica",
-        "val": "100 mg/kg/dia (piperacilina)",
-        "max": "16 g piperacilina/dia",
-        "freq": "4×/dia",
-        "note": ""
+        "ind": "Infecção intra-abdominal complicada",
+        "val": "2–11 anos: 112,5 mg/kg 8/8 h; 12–17 anos: 4,5 g 8/8 h (até 6/6 h)",
+        "max": "4,5 g por dose",
+        "freq": "8/8 h",
+        "note": "BNFC 2020-21 (p. 362)."
+      },
+      {
+        "ind": "Infecção em doente neutropénico",
+        "val": "90 mg/kg 6/6 h",
+        "max": "4,5 g por dose",
+        "freq": "6/6 h",
+        "note": "BNFC 2020-21 (p. 362). A ficha anterior indicava 100 mg/kg/dia, o que é cerca de um quarto da dose do BNFC."
       }
     ],
     "prep": "EV: reconstituir 2,25 g em 10 ml; 4,5 g em 20 ml SWFI ou SF. Diluir em SF ou SG5%. Concentração piperacilina ≤ 45 mg/ml. Infusão padrão: 30 min. Infusão prolongada (4h): mantém > 40% T>MIC vs Pseudomonas resistente — diluir a ≤ 22 mg/ml, manter a 4°C durante infusão. ⚠️ Incompatível com vancomicina (precipitação), aminoglicosídeos, furosemida, midazolam. Estabilidade: SF — 12h a 25°C; 4h em infusão prolongada a 25°C (24h a 4°C).",
@@ -445,7 +446,7 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ Neurotoxicidade em doses altas + insuf. renal",
       "Ajuste renal obrigatório se TFG < 40 ml/min"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNF for Children 2020-21, Piperacillin with tazobactam (p. 362)"
   },
   {
     "id": "cotrimoxazol",
@@ -1558,25 +1559,32 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Meningite bacteriana / sépsis grave",
-        "val": "200.000–300.000 UI/kg/dia EV",
-        "max": "24 MUI/dia",
-        "freq": "q4–6h (EV contínuo ou intermitente)",
-        "note": "= 120–180 mg/kg/dia. Em meningite: fraccionado q4h (6 doses) para manter nível acima MIC"
+        "ind": "Infecções moderadas sensíveis (EV/IM)",
+        "val": "RN ≤7 dias: 25 mg/kg 12/12 h (até 8/8 h); RN 7–28 dias: 25 mg/kg 8/8 h (até 50 mg/kg 8/8 h se grave); criança: 25 mg/kg 6/6 h, até 50 mg/kg 4–6/6 h se grave",
+        "max": "2,4 g/dose, 4/4 h",
+        "freq": "Ver esquema",
+        "note": "BNFC 2020-21, Benzylpenicillin sodium (p. 364). Via EV recomendada em neonatos e lactentes."
       },
       {
-        "ind": "Neonato — sépsis/meningite",
-        "val": "100.000–200.000 UI/kg/dia EV",
-        "max": "—",
-        "freq": "q12h (< 7 dias, prematuro); q8h (7–28 dias); q6h (> 28 dias)",
-        "note": ""
+        "ind": "Meningite / doença meningocócica (EV)",
+        "val": "RN ≤7 dias: 50 mg/kg 12/12 h; RN 7–28 dias: 50 mg/kg 8/8 h; criança: 50 mg/kg 4–6/6 h",
+        "max": "2,4 g/dose, 4/4 h",
+        "freq": "Ver esquema",
+        "note": "BNFC 2020-21 (p. 364)."
       },
       {
-        "ind": "Sífilis congénita",
-        "val": "50.000 UI/kg/dose EV",
+        "ind": "Endocardite (EV)",
+        "val": "Criança: 25 mg/kg 4/4 h, até 50 mg/kg 4/4 h",
+        "max": "2,4 g/dose",
+        "freq": "4/4 h",
+        "note": "BNFC 2020-21 (p. 364)."
+      },
+      {
+        "ind": "Suspeita de doença meningocócica antes da transferência (EV/IM, dose única)",
+        "val": "1–11 meses: 300 mg; 1–9 anos: 600 mg; 10–17 anos: 1,2 g",
         "max": "—",
-        "freq": "q8–12h × 10–14 dias",
-        "note": ""
+        "freq": "Dose única",
+        "note": "BNFC 2020-21 (p. 364). Não atrasar a transferência."
       }
     ],
     "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 50.000 UI/ml periférico (100.000 UI/ml central). Administrar em 15–30 min. Estável apenas 1h à T ambiente após reconstituição — preparar fresco.",
@@ -1590,7 +1598,9 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ Instabilidade após reconstituição — preparar fresco e usar imediatamente",
       "Eliminação renal — ajuste obrigatório se TFG < 30 ml/min"
     ],
-    "source": "BNF for Children 2023-24; Tunkel AR et al. CID 2004; ECDC Meningococcal Guidelines 2019"
+    "source": "BNF for Children 2020-21, Benzylpenicillin sodium (p. 364)",
+    "review": ["A ficha anterior expressava as doses em UI/kg/dia (meningite 200–300 mil UI/kg/dia; sífilis congénita 50 000 UI/kg/dose). O BNFC 2020-21 usa mg/kg; não foi feita conversão. Dose para sífilis congénita: consultar Nelson 2020 ou o Manual de Neonatologia."]
+  
   },
   {
     "id": "cefuroxima",

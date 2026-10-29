@@ -111,25 +111,39 @@ var DRUGS_EMERGENCIA = [
     ],
     "dose": [
       {
-        "ind": "Bradicardia / PCR",
+        "ind": "Bradicardia intra-operatória / controlo de efeitos muscarínicos (EV)",
+        "val": "RN: 10–20 mcg/kg; 1 mês–11 anos: 10–20 mcg/kg; 12–17 anos: 300–600 mcg",
+        "max": "—",
+        "freq": "—",
+        "note": "BNFC 2020-21, Atropine sulfate (p. 869)."
+      },
+      {
+        "ind": "Pré-medicação anestésica (EV, imediatamente antes da indução)",
+        "val": "RN: 10 mcg/kg; 1 mês–11 anos: 20 mcg/kg; 12–17 anos: 300–600 mcg",
+        "max": "600 mcg (mín. 100 mcg em 1 mês–11 anos)",
+        "freq": "Dose única",
+        "note": "BNFC 2020-21 (p. 869). IM/SC: 10–30 mcg/kg 30–60 min antes (1 mês–11 anos)."
+      },
+      {
+        "ind": "Intoxicação por organofosforados / agente neurotóxico (com pralidoxima)",
+        "val": "20 mcg/kg EV",
+        "max": "2 mg/dose",
+        "freq": "Repetir cada 5–10 min até pele seca e corada, midríase e abolição da bradicardia",
+        "note": "BNFC 2020-21 (p. 869). Shann refere regimes mais elevados e perfusão posterior (leitura OCR duvidosa — confirmar no original)."
+      },
+      {
+        "ind": "Bradicardia por sobredosagem de beta-bloqueante",
+        "val": "40 mcg/kg EV",
+        "max": "3 mg/dose",
+        "freq": "—",
+        "note": "BNFC 2020-21 (p. 869)."
+      },
+      {
+        "ind": "Bradicardia — reanimação",
         "val": "0,02 mg/kg EV/IO",
-        "max": "0,5 mg (criança); 1 mg (adolescente)",
-        "freq": "pode repetir 1x após 5 min",
-        "note": "Dose mínima 0,1 mg (doses menores podem causar bradicardia paradoxal)"
-      },
-      {
-        "ind": "Intoxicação organofosforados",
-        "val": "0,05 mg/kg EV",
-        "max": "sem limite definido",
-        "freq": "cada 5–10 min até secar secreções",
-        "note": "Titular pelo efeito: secreções, broncoespasmo. Doses muito altas podem ser necessárias"
-      },
-      {
-        "ind": "Pré-intubação",
-        "val": "0,02 mg/kg EV",
-        "max": "0,5 mg",
-        "freq": "dose única 1–2 min antes",
-        "note": "Previne bradicardia vagal na laringoscopia, especialmente < 1 ano"
+        "max": "0,6 mg",
+        "freq": "Depois 0,01 mg/kg cada 4–6 h",
+        "note": "Shann, Drug Doses (entrada Atropine). Para PCR/bradicardia pediátrica seguir o algoritmo vigente (ERC/AHA) — ver revisão."
       }
     ],
     "prep": "EV emergência: administrar não diluída (0,5 mg/ml ou 1 mg/ml) em bólus rápido 10–30 seg. Para perfusão: diluir em SF ou SG5% a 0,1–0,5 mg/ml. IO: mesma dose que EV. ET (endotraqueal — última opção): 2–3× dose EV diluída em 5 ml SF. Oral: solução extemporânea 0,1 mg/ml.",
@@ -142,7 +156,7 @@ var DRUGS_EMERGENCIA = [
       "Efeitos: midríase, retenção urinária, boca seca, hipertermia",
       "Na intoxicação por OFs: doses 10–100× superiores ao normal são frequentes"
     ],
-    "source": "ILCOR 2021; BNF for Children 2023-24; Harriet Lane 23rd Ed",
+    "source": "BNF for Children 2020-21, Atropine sulfate (p. 869); Shann F. Drug Doses",
     "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
   },
   {

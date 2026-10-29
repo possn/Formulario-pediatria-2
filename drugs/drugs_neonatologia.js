@@ -139,18 +139,11 @@ var DRUGS_NEONATOLOGIA = [
     ],
     "dose": [
       {
-        "ind": "Manutenção ductal — EV",
-        "val": "0,01–0,1 mcg/kg/min",
+        "ind": "Manutenção da perviedade do canal arterial (RN)",
+        "val": "Inicial 0,005 mcg/kg/min (5 ng/kg/min); ajustar em passos de 0,005 mcg/kg/min",
         "max": "0,1 mcg/kg/min",
-        "freq": "perfusão contínua EV",
-        "note": "Iniciar com 0,05–0,1 mcg/kg/min (urgência). Reduzir para dose mínima eficaz (0,01–0,02 mcg/kg/min) logo que SpO2 estável. Doses ≥ 0,05 mcg/kg/min ↑ risco apneia"
-      },
-      {
-        "ind": "Dose de resgate (cianose grave)",
-        "val": "0,1 mcg/kg/min",
-        "max": "0,1 mcg/kg/min",
-        "freq": "perfusão; reduzir assim que resposta",
-        "note": ""
+        "freq": "Perfusão contínua EV",
+        "note": "BNFC 2020-21, Alprostadil (p. 151): máx. 100 ng/kg/min; a dose máxima associa-se a mais efeitos adversos. A ficha anterior indicava 0,01–0,1 mcg/kg/min e dose de resgate 0,1 mcg/kg/min."
       }
     ],
     "prep": "Diluir em SF ou SG5%. Fórmula prática: (0,3 × Peso kg) mg em 50 ml SF → 1 ml/h = 0,1 mcg/kg/min. EV central preferido (flebite em periférico). Estável 24h.",
@@ -167,7 +160,7 @@ var DRUGS_NEONATOLOGIA = [
       "⚠️ Convulsões (raras)",
       "Monitorização SpO2, ECG e TA contínuos obrigatórios"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; Wren C. Arch Dis Child 2012"
+    "source": "BNF for Children 2020-21, Alprostadil (p. 151)"
   },
   {
     "id": "indometacina_neo",
@@ -182,18 +175,11 @@ var DRUGS_NEONATOLOGIA = [
     ],
     "dose": [
       {
-        "ind": "Encerramento PCA — EV (1º ciclo)",
-        "val": "< 48h vida: 0,1 mg/kg × 3 doses; 2–7 dias: 0,2 mg/kg × 3 doses; > 7 dias: 0,25 mg/kg × 3 doses",
+        "ind": "Persistência do canal arterial sintomática (RN, perfusão EV em 20–30 min)",
+        "val": "Inicial 100–200 mcg/kg (1 dose), depois 100 mcg/kg 24 h depois, 2 doses com intervalo de 24 h; se persistir permeabilidade, mais 3 doses de 100 mcg/kg com intervalo de 24 h",
         "max": "—",
-        "freq": "cada 12–24h (3 doses)",
-        "note": "2º ciclo possível se reabertura. Velocidade infusão: 20–30 min"
-      },
-      {
-        "ind": "Profilaxia (< 28 sem) — EV",
-        "val": "0,1 mg/kg/dose EV",
-        "max": "—",
-        "freq": "cada 24h × 3 doses (início nas primeiras 6–12h de vida)",
-        "note": "Reduz incidência HIV e necessidade de ligadura ductal"
+        "freq": "Intervalo 24 h",
+        "note": "BNFC 2020-21, Indometacin (p. 710)."
       }
     ],
     "prep": "EV: reconstituir com 1–2 ml SF ou água estéril (SEM conservantes). Usar imediatamente após reconstituição — estável apenas 4h. NÃO agitar. Administrar em 30 min (infusão lenta reduz risco de redução do fluxo renal e cerebral). Fonte: BNF for Children 2023-24; Neofax 2023.",
@@ -212,7 +198,9 @@ var DRUGS_NEONATOLOGIA = [
       "⚠️ Reduz agregação plaquetar — monitorizar plaquetas",
       "Ibuprofeno EV é alternativa com menor toxicidade renal (BNFC 2023)"
     ],
-    "source": "BNF for Children 2023-24; Schmidt B. NEJM 2001 (profilaxia); Cooke L. Cochrane 2003"
+    "source": "BNF for Children 2020-21, Indometacin (p. 710)",
+    "review": ["Retirados o esquema por idade pós-natal (<48 h 0,1; 2–7 d 0,2; >7 d 0,25 mg/kg) e a profilaxia em <28 semanas: não constam do BNFC 2020-21. Para profilaxia consultar protocolo da unidade/Manual de Neonatologia."]
+  
   },
   {
     "id": "vitamina_d_neo",
@@ -378,6 +366,8 @@ var DRUGS_NEONATOLOGIA = [
       "Requer suplementação de ferro para eficácia — ferritina alvo > 100 μg/L",
       "Impacto clínico em anemia da prematuridade limitado — estratégias de minimização de flebotomias e clampagem tardia do cordão mais eficazes (WHO 2014)"
     ],
-    "source": "BNF for Children 2023-24; Ohlsson A et al. Cochrane 2020; Wu YW et al. JAMA 2022 (HEAL trial)"
+    "source": "Shann F. Drug Doses (epoetina); Manual Prático de Neonatologia (SPN)",
+    "review": ["O BNFC 2020-21 só indica epoetina alfa para anemia da insuficiência renal crónica. As doses neonatais (200–400 UI/kg SC; neuroprotecção 1000 UI/kg) não têm fonte verificada. O Manual Prático de Neonatologia classifica a eritropoietina como utilização não consensual e não recomendada por rotina no RN de muito baixo peso."]
+
   }
 ];

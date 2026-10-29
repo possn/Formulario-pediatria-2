@@ -181,18 +181,18 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Impregnação EV (dose total de digitalização)",
-        "val": "RN prematuro: 20 mcg/kg; RN termo: 30 mcg/kg; 1 mês–2 anos: 35 mcg/kg; 2–10 anos: 25 mcg/kg; > 10 anos: 15 mcg/kg",
-        "max": "1 mg total",
-        "freq": "Dar metade da dose total, depois ¼ cada 8h × 2 doses. Monitorizar ECG",
-        "note": ""
+        "ind": "Arritmias supraventriculares / insuficiência cardíaca crónica — via oral",
+        "val": "Digitalização (3 doses divididas em 24 h): RN <1,5 kg 25 mcg/kg; 1,5–2,5 kg 30 mcg/kg; ≥2,6 kg 45 mcg/kg; 1 mês–1 ano 45 mcg/kg; 2–4 anos 35 mcg/kg; 5–9 anos 25 mcg/kg (máx. 750 mcg/dia); 10–17 anos 0,75–1,5 mg. Manutenção: RN <2,5 kg 4–6 mcg/kg/dia; RN ≥2,6 kg 10 mcg/kg/dia; 1 mês–4 anos 10 mcg/kg/dia; 5–9 anos 6 mcg/kg/dia (máx. 250 mcg/dia); 10–17 anos 62,5–250 mcg/dia",
+        "max": "250 mcg/dia (manutenção, 5–9 anos)",
+        "freq": "Manutenção em 1–2 doses/dia",
+        "note": "BNFC 2020-21, Digoxin (p. 86). Reduzir a dose para metade com amiodarona, dronedarona ou quinino. Pode ser necessária redução se tomou digoxina nas 2 semanas anteriores."
       },
       {
-        "ind": "Manutenção oral/EV",
-        "val": "RN: 5 mcg/kg/dia; < 2 anos: 10–12 mcg/kg/dia; > 2 anos: 8–10 mcg/kg/dia",
-        "max": "250 mcg/dia",
-        "freq": "2 doses/dia",
-        "note": "Nível sérico terapêutico: 0,8–2 ng/ml (colher 6–8h após última dose)"
+        "ind": "Arritmias supraventriculares / insuficiência cardíaca crónica — perfusão EV",
+        "val": "Digitalização (3 doses divididas em 24 h): RN <1,5 kg 20 mcg/kg; 1,5–2,5 kg 30 mcg/kg; ≥2,6 kg 35 mcg/kg; 1 mês–4 anos 35 mcg/kg; 5–9 anos 25 mcg/kg (máx. 500 mcg/dia); 10–17 anos 0,5–1 mg. Manutenção igual à oral",
+        "max": "250 mcg/dia (manutenção, 5–9 anos)",
+        "freq": "Manutenção em 1–2 doses/dia",
+        "note": "BNFC 2020-21 (p. 86). Ao passar de EV para oral pode ser preciso aumentar a dose 20–33%. Shann (alternativa): 15 mcg/kg e 5 mcg/kg 6 h depois, depois 3–5 mcg/kg 12/12 h (EV máx. habitual 200 mcg; oral 250 mcg); nível ≥6 h após a dose 1,0–2,5 nmol/L."
       }
     ],
     "prep": "EV: diluir ≥ 4× em SF ou SG5% para ≤ 50 μg/ml. Administrar em 30 min. Neonatos: preparar solução 10 μg/ml (diluições seriadas obrigatórias — verificar com farmácia). Oral: elixir pediátrico 50 μg/ml. Comprimidos 62,5/125 μg. Concentração máxima EV: 100 μg/ml (central apenas). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -208,7 +208,7 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Interacções: amiodarona, quinidina, eritromicina ↑ nível digoxina",
       "Antídoto: anticorpos antidigoxina (Digibind)"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNF for Children 2020-21, Digoxin (p. 86); Shann F. Drug Doses"
   },
   {
     "id": "nicardipina",
@@ -223,11 +223,11 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Perfusão EV",
-        "val": "Início 0,5–1 mcg/kg/min; titular cada 15–30 min",
-        "max": "4–5 mcg/kg/min",
-        "freq": "perfusão contínua",
-        "note": "Adulto: 5 mg/hora → titular até 15 mg/hora"
+        "ind": "Hipertensão potencialmente fatal ou pós-operatória (uso especializado) — perfusão EV",
+        "val": "Inicial 0,5 mcg/kg/min; ajustar à resposta; manutenção 1–4 mcg/kg/min",
+        "max": "5 mcg/kg/min (máx. 250 mcg/min na criança)",
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21, Nicardipine (p. 115): RN e criança."
       }
     ],
     "prep": "EV: diluir em SG5% ou SF. Concentração: 0,1–0,2 mg/ml periférico; até 0,5 mg/ml central. Linha central preferida (flebite intensa em periférico). ⚠️ Incompatível com heparina, furosemida, bicarbonato. Proteger da luz durante infusão prolongada. Estabilidade: 24h a 25°C.",
@@ -242,7 +242,7 @@ var DRUGS_CARDIOVASCULAR = [
       "Vantagem sobre nitroprussiato: sem toxicidade por tiocianato",
       "⚠️ Uso off-label em pediatria"
     ],
-    "source": "Flynn JT et al. Pediatrics 2017;140(3); BNF for Children 2023-24"
+    "source": "BNF for Children 2020-21, Nicardipine hydrochloride (p. 115)"
   },
   {
     "id": "captopril",
@@ -738,25 +738,18 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Controlo frequência FA/flutter — EV",
+        "ind": "Controlo da frequência em FA/flutter — EV (dose não verificada)",
         "val": "0,25 mg/kg EV em 2 min",
         "max": "25 mg",
-        "freq": "Bólus; pode repetir 0,35 mg/kg (máx 25 mg) após 15 min se insuficiente",
-        "note": "Monitorização ECG e TA contínua durante administração"
+        "freq": "Bólus; pode repetir 0,35 mg/kg (máx. 25 mg) após 15 min; depois perfusão 5–15 mg/h",
+        "note": "Dose EV NÃO consta do BNFC 2020-21 nem do Shann. Origem da ficha original sem fonte verificada — confirmar antes de usar."
       },
       {
-        "ind": "Perfusão contínua pós-bólus",
-        "val": "5–15 mg/h",
+        "ind": "Via oral",
+        "val": "1 mg/kg 8/8 h, aumentar se necessário até 3 mg/kg 8/8 h",
         "max": "—",
-        "freq": "Perfusão contínua",
-        "note": ""
-      },
-      {
-        "ind": "Oral — controlo frequência crónica",
-        "val": "1,5–2 mg/kg/dia PO",
-        "max": "360 mg/dia",
-        "freq": "3–4 doses/dia (formulação regular) ou 1–2 doses/dia (libertação prolongada)",
-        "note": ""
+        "freq": "8/8 h (formulação regular)",
+        "note": "Shann, Drug Doses (entrada Diltiazem). BNFC 2020-21: só indica diltiazem oral no síndrome de Raynaud, 12–17 anos, 30–60 mg 2–3×/dia (p. 152)."
       }
     ],
     "prep": "EV: diluir em SF ou SG5% para 1 mg/ml. Bólus em 2 min. Perfusão: 125 mg em 100 ml SG5% (1,25 mg/ml). Oral: comprimidos 60/90/120 mg; cápsulas LP. Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
@@ -772,8 +765,9 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Associação com beta-bloqueante aumenta risco de bloqueio AV e bradicardia grave",
       "Hipotensão com administração EV rápida — monitorizar TA durante bólus"
     ],
-    "source": "BNF for Children 2023-24; PALS AHA 2020; Moak JP Pediatric Cardiology 2000",
-    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
+    "source": "BNF for Children 2020-21, Diltiazem (p. 152); Shann F. Drug Doses (via oral)",
+    "review": ["A dose EV (0,25 mg/kg) não tem suporte nas fontes disponíveis (BNFC 2020-21 e Shann). Verificar em fonte primária antes de usar."]
+  
   },
   {
     "id": "flecainida",
@@ -833,11 +827,11 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Síndrome baixo débito pós-cirurgia cardíaca",
-        "val": "Perfusão 0,25–0,75 μg/kg/min EV",
-        "max": "1 μg/kg/min",
-        "freq": "Perfusão contínua; titrar por resposta hemodinâmica",
-        "note": "Dose de carga 50–75 μg/kg EV em 10–60 min (OPCIONAL — omitir se hipotensão). Estudo PRIMACORP: milrinona profiláctica reduziu LCOS pós-cirurgia congenita (NNT=6)"
+        "ind": "Insuficiência cardíaca, baixo débito pós-cirurgia cardíaca, choque (RN e criança)",
+        "val": "Carga 50–75 mcg/kg em 30–60 min (reduzir ou omitir se risco de hipotensão); depois perfusão 0,5–0,75 mcg/kg/min (30–45 mcg/kg/h) durante 2–3 dias",
+        "max": "—",
+        "freq": "Perfusão contínua; tipicamente 12 h após cirurgia cardíaca",
+        "note": "BNFC 2020-21, Milrinone (p. 134). A ficha anterior indicava 0,25–0,75 mcg/kg/min e máx. 1 mcg/kg/min: o limite inferior e o máximo não constam do BNFC."
       }
     ],
     "prep": "Perfusão: diluir em SF, SG5% ou SRL. Concentração habitual: 200 μg/ml (20 mg em 100 ml). Cálculo: dose (μg/kg/min) × peso (kg) × 60 / concentração (μg/ml) = ml/h. Linha dedicada; proteger da luz.",
@@ -854,7 +848,7 @@ var DRUGS_CARDIOVASCULAR = [
       "Sem taquifilaxia ao contrário das catecolaminas — vantagem em uso prolongado",
       "Monitorizar K⁺ (hipocaliemia agrava arritmias)"
     ],
-    "source": "BNF for Children 2023-24; Hoffman TM et al. Circulation 2003 (PRIMACORP); Brissaud O et al. CCM 2016"
+    "source": "BNF for Children 2020-21, Milrinone (p. 134)"
   },
   {
     "id": "nifedipina",

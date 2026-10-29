@@ -40,7 +40,7 @@ var DRUGS_ONCOLOGIA = [
       "Monitorizar nível paracetamol, LFTs, INR, creatinina",
       "Se INR > 3 em D2 ou hepatotoxicidade grave — contactar centro de transplante"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; Prescott LF. Lancet 1979"
+    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2020-21, Acetylcysteine (p. 902); Prescott LF. Lancet 1979"
   },
   {
     "id": "ondansetron_chemo",
@@ -77,7 +77,6 @@ var DRUGS_ONCOLOGIA = [
     "id": "alopurinol_onco",
     "name": "Alopurinol",
     "category": "oncologia",
-    "src": "original",
     "class": "Inibidor xantina oxidase — reduz produção ácido úrico",
     "brands": "Zyloric comp. 100/300 mg",
     "indication": [
@@ -416,6 +415,8 @@ var DRUGS_ONCOLOGIA = [
       "Dor muscular e cãibras — suplementação de magnésio oral pode ajudar",
       "TDM crescentemente utilizado — nível mínimo alvo > 1000 ng/mL"
     ],
-    "source": "BNF for Children 2023-24; Champagne MA et al. Blood 2004 (pediátrico); ELN CML Guidelines 2022"
+    "source": "BNF for Children 2020-21, Imatinib (p. 606)",
+    "review": ["BNFC 2020-21: dose em criança \"consultar protocolo local\". A dose de 340 mg/m²/dia não tem fonte verificada neste conjunto de documentos — confirmar no protocolo de Hemato-Oncologia."]
+
   }
 ];
