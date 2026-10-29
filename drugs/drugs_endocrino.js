@@ -129,39 +129,32 @@ var DRUGS_ENDOCRINO = [
     ],
     "dose": [
       {
-        "ind": "Hiperinsulinismo neonatal EV/SC",
-        "val": "1–10 mcg/kg/hora EV",
-        "max": "40 mcg/kg/dia",
-        "freq": "perfusão contínua; titular pela glicemia",
-        "note": ""
+        "ind": "Hipoglicemia hiperinsulinémica persistente (sem resposta a diazóxido e glicose) — SC, RN",
+        "val": "Inicial 2–5 mcg/kg cada 6–8 h; aumentar se necessário até 7 mcg/kg cada 4 h",
+        "max": "7 mcg/kg/dose",
+        "freq": "Cada 6–8 h",
+        "note": "BNFC 2020-21 (p. 504). Doses até 7 mcg/kg raramente necessárias."
       },
       {
-        "ind": "Varizes esofágicas EV",
-        "val": "1–2 mcg/kg/hora EV",
-        "max": "50 mcg/hora",
-        "freq": "perfusão contínua × 2–5 dias",
-        "note": "Bólus inicial opcional: 1–2 mcg/kg"
+        "ind": "Hipoglicemia hiperinsulinémica persistente — SC, criança",
+        "val": "Inicial 1–2 mcg/kg cada 4–6 h; aumentar se necessário até 7 mcg/kg cada 4 h",
+        "max": "7 mcg/kg/dose",
+        "freq": "Cada 4–6 h",
+        "note": "BNFC 2020-21 (p. 504)."
       },
       {
-        "ind": "Quilotórax SC",
+        "ind": "Hemorragia por varizes esofágicas ou gástricas — perfusão EV contínua, criança",
+        "val": "1 mcg/kg/h (podem ser necessárias doses superiores inicialmente); sem hemorragia ativa, reduzir ao longo de 24 h",
+        "max": "50 mcg/h",
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21 (p. 504)."
+      },
+      {
+        "ind": "Quilotórax — SC (não consta do BNFC)",
         "val": "1–4 mcg/kg/dose SC",
         "max": "—",
         "freq": "3×/dia",
-        "note": ""
-      },
-      {
-        "ind": "Hemorragia varicosa esofágica",
-        "val": "1–2 μg/kg EV bólus, depois 1–5 μg/kg/h",
-        "max": "50 μg bólus; 50 μg/h perfusão",
-        "freq": "Perfusão contínua 2–5 dias",
-        "note": "Iniciar imediatamente na suspeita — antes da endoscopia"
-      },
-      {
-        "ind": "Hiperinsulinismo congénito",
-        "val": "1–10 μg/kg/dia SC/EV",
-        "max": "40 μg/kg/dia",
-        "freq": "q6–8h SC ou perfusão contínua",
-        "note": "Titular por glicemia; pode necessitar associar diazóxido"
+        "note": "Uso fora de indicação; confirmar com protocolo local."
       }
     ],
     "prep": "EV bólus: administrar não diluído (50–500 μg/ml) lentamente 3 min. Perfusão: diluir em SF ou SG5% para 1–50 μg/ml em seringa-bomba. SC: não diluir; rodar locais (braços, coxas, abdómen). ⚠️ Incompatível com NP (adsorção) — linha separada. Refrigerar; estável 14 dias a 4°C após abertura. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -182,7 +175,9 @@ var DRUGS_ENDOCRINO = [
       "Litíase biliar em uso prolongado (> 4 semanas)",
       "Diarreia e cólica abdominal frequentes"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; BNF for Children 2023-24; Eroglu Y et al. J Pediatr Gastroenterol Nutr 2004; ESPGHAN Variceal Guidelines 2018"
+    "source": "BNFC 2020-21, Octreotide (p. 504)",
+    "review": ["A ficha anterior tinha perfusão EV de 1–10 mcg/kg/h no hiperinsulinismo e 1–5 mcg/kg/h nas varizes, acima do BNFC 2020-21 (hiperinsulinismo: SC 1–7 mcg/kg; varizes: 1 mcg/kg/h, máx. 50 mcg/h).", "O bólus EV inicial de 1–2 mcg/kg nas varizes não consta do BNFC 2020-21: removido."]
+  
   },
   {
     "id": "vitamina_k",
@@ -199,32 +194,46 @@ var DRUGS_ENDOCRINO = [
     ],
     "dose": [
       {
-        "ind": "Profilaxia RN IM",
-        "val": "1 mg IM dose única ao nascimento",
-        "max": "—",
-        "freq": "dose única",
-        "note": "RN < 1,5 kg: 0,5 mg IM"
+        "ind": "Profilaxia da doença hemorrágica do RN — IM ao nascimento",
+        "val": "RN de termo: 1 mg dose única; pré-termo: 400 mcg/kg (máx. 1 mg) dose única",
+        "max": "1 mg",
+        "freq": "Dose única ao nascimento",
+        "note": "BNFC 2020-21 (p. 687). Pré-termo de muito baixo peso: EV se IM impossível; depois doses orais."
       },
       {
-        "ind": "Profilaxia RN oral (alternativa)",
-        "val": "2 mg oral ao nascimento → 2 mg semana 1 → 2 mg semana 4",
+        "ind": "Profilaxia da doença hemorrágica do RN — oral (Konakion MM Paediatric)",
+        "val": "2 mg ao nascimento; 2 mg aos 4–7 dias; se amamentação exclusiva, 2 mg adicionais com 1 mês",
         "max": "—",
-        "freq": "3 doses conforme protocolo",
-        "note": "Menos eficaz que IM para doença hemorrágica tardia"
+        "freq": "2–3 doses",
+        "note": "BNFC 2020-21 (p. 687)."
       },
       {
-        "ind": "Reversão varfarina (hemorragia grave)",
-        "val": "0,3 mg/kg EV lento",
-        "max": "10 mg",
-        "freq": "dose única; pode repetir",
-        "note": "Efeito em 6–8h. Se hemorragia ameaçadora de vida: CCP ou PFC + vitamina K"
+        "ind": "Hipoprotrombinemia / défice de vitamina K do RN — EV",
+        "val": "1 mg cada 8 h, se necessário",
+        "max": "—",
+        "freq": "Cada 8 h",
+        "note": "BNFC 2020-21 (p. 687)."
       },
       {
-        "ind": "Deficiência / colestase",
-        "val": "1–10 mg oral/EV",
+        "ind": "Atresia biliar e hepatopatia neonatal — oral",
+        "val": "1 mg 1×/dia",
         "max": "—",
-        "freq": "1–3×/semana",
-        "note": ""
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 687)."
+      },
+      {
+        "ind": "Reversão de cumarínicos sem hemorragia significativa — EV, criança",
+        "val": "15–30 mcg/kg, pode repetir",
+        "max": "1 mg/dose",
+        "freq": "Dose única",
+        "note": "BNFC 2020-21 (p. 687). Pedir aconselhamento especializado."
+      },
+      {
+        "ind": "Hemorragia grave por cumarínicos ou défice de vitamina K — EV, criança",
+        "val": "250–300 mcg/kg",
+        "max": "10 mg/dose",
+        "freq": "Dose única",
+        "note": "BNFC 2020-21 (p. 687). Associar concentrado de complexo protrombínico em hemorragia com risco de vida. Pedir aconselhamento especializado."
       }
     ],
     "prep": "EV: diluir em SF ou SG5% para concentração ≤ 1 mg/ml. Administrar MUITO LENTAMENTE — máximo 1 mg/min (reacções anafilactóides graves, incluindo morte, com infusão rápida). IM/SC preferidos para doses não urgentes (sem risco anafilactóide, absorção adequada). Oral: solução 10 mg/ml. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -236,7 +245,9 @@ var DRUGS_ENDOCRINO = [
       "⚠️ Reversão varfarina — aguardar 6–8h para efeito. Se urgente: CCP",
       "Vitamina K IM preferida à oral para profilaxia neonatal"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Phytomenadione (p. 687); Formulário de Pediatria 3ª Ed.",
+    "review": ["A ficha anterior usava 0,3 mg/kg (máx. 10 mg) para qualquer reversão de varfarina; o BNFC 2020-21 distingue 15–30 mcg/kg (máx. 1 mg) sem hemorragia significativa de 250–300 mcg/kg (máx. 10 mg) na hemorragia grave."]
+  
   },
   {
     "id": "acido_folico",
@@ -371,8 +382,8 @@ var DRUGS_ENDOCRINO = [
       "Propiltiouracil (PTU) EVITAR em < 18 anos por risco maior de hepatotoxicidade grave (FDA Black Box Warning 2010)",
       "Monitorizar TSH, T4L, T3L a cada 4–8 semanas no início"
     ],
-    "source": "ETA/ESPE Guidelines Paediatric Hyperthyroidism 2022; FDA PTU Black Box 2010",
-    "review": ["Sem monografia no BNFC 2020-21; citação «BNF for Children 2023-24» removida por não ser verificável. Shann: 0,3–1 mg/kg/dia, reduzindo para 0,1–0,5 mg/kg/dia; BNFC (carbimazol, p. 522): 750 mcg/kg/dia inicial, depois 30–60%. Doses iniciais da ficha (0,2–0,5) são inferiores ao Shann — confirmar."]
+    "source": "ETA/ESPE Guidelines Paediatric Hyperthyroidism 2022; FDA PTU alert 2010",
+    "review": ["O BNFC 2020-21 inclui carbimazol (não tiamazol/metimazol); a extração do texto do PDF não permitiu confirmar os valores com segurança (1 mg de carbimazol ≈ 10 mg de propiltiouracilo). As doses da ficha mantêm-se das normas ETA/ESPE e não foram verificadas contra o BNFC.", "Para dose em RN com tireotoxicose, confirmar com a Endocrinologia."]
 
   },
   {
@@ -389,11 +400,18 @@ var DRUGS_ENDOCRINO = [
     ],
     "dose": [
       {
-        "ind": "Insuf. supra-renal / HSC — substituição",
-        "val": "< 1 ano: 100–200 μg/dia PO; 1–18 anos: 50–100 μg/dia PO",
-        "max": "200 μg/dia",
-        "freq": "1 dose/dia (manhã)",
-        "note": "Lactentes com HSC perdem sal e podem necessitar NaCl adicional (2–4 g/dia) nas primeiras semanas"
+        "ind": "Reposição mineralocorticoide na insuficiência suprarrenal — oral, RN",
+        "val": "Inicial 50 mcg 1×/dia; habitual 50–200 mcg 1×/dia, ajustar à resposta",
+        "max": "—",
+        "freq": "1×/dia (manhã)",
+        "note": "BNFC 2020-21 (p. 476). Pode ser necessário ajustar com suplemento de sal."
+      },
+      {
+        "ind": "Reposição mineralocorticoide na insuficiência suprarrenal — oral, criança",
+        "val": "Inicial 50–100 mcg 1×/dia; manutenção 50–300 mcg 1×/dia, ajustar à resposta",
+        "max": "300 mcg/dia",
+        "freq": "1×/dia (manhã)",
+        "note": "BNFC 2020-21 (p. 476)."
       }
     ],
     "prep": "Oral exclusivamente: comprimidos 0,1 mg — podem ser partidos (dose habitual pediátrica 50–150 μg). Solução extemporânea 0,1 mg/ml estável 14 dias refrigerada. Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
@@ -408,7 +426,9 @@ var DRUGS_ENDOCRINO = [
       "Adequação da dose: alvo renina plasmática no limite superior do normal; aldosterona suprimida",
       "Em stress/doença: apenas aumentar hidrocortisona (glucocorticoide) — fludrocortisona manter igual"
     ],
-    "source": "BNF for Children 2023-24; Bornstein SR et al. J Clin Endocrinol Metab 2016; ESPE CAH Guidelines 2018"
+    "source": "BNFC 2020-21, Fludrocortisone acetate (p. 476); Bornstein SR et al. J Clin Endocrinol Metab 2016",
+    "review": ["A ficha anterior limitava a 200 mcg/dia; o BNFC 2020-21 admite manutenção até 300 mcg/dia na criança."]
+  
   },
   {
     "id": "sirolimus",
