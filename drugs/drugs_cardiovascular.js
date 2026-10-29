@@ -983,11 +983,11 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Perfusão EV contínua",
-        "val": "0,5–8 μg/kg/min",
-        "max": "10 μg/kg/min",
-        "freq": "Perfusão contínua; iniciar com dose mínima e titular",
-        "note": "Duração máxima recomendada: 72h (risco toxicidade por cianeto). Dose > 4 μg/kg/min > 2h: monitorizar cianeto ou lactato"
+        "ind": "Emergência hipertensiva — perfusão EV contínua (RN e criança)",
+        "val": "Inicial 0,5 mcg/kg/min; aumentar de 0,2 em 0,2 mcg/kg/min conforme resposta",
+        "max": "8 mcg/kg/min; máx. 4 mcg/kg/min se > 24 h",
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21 (p. 124). Proteger da luz. Risco de toxicidade por cianeto/tiocianato: vigorar lactato, gasimetria e PA invasiva; considerar tiossulfato de sódio em perfusões prolongadas."
       }
     ],
     "prep": "Perfusão: reconstituir 50 mg em 2–3 ml SWFI; diluir em SG5% (nunca SF ou RL). Concentração 200–400 μg/ml. PROTEGER DA LUZ (papel de alumínio) — degrada rapidamente. Preparar fresco a cada 24h.",
@@ -1005,7 +1005,9 @@ var DRUGS_CARDIOVASCULAR = [
       "Tiocinato acumula em IR (metabolito do cianeto) — nefrotóxico; monitorizar nível tiocinato se tratamento prolongado",
       "Alternativas com melhor perfil de segurança disponíveis: nicardipina, labetalol, clevidipina"
     ],
-    "source": "BNF for Children 2023-24; Flynn JT et al. Pediatrics 2017; Brimioulle S et al. Crit Care Med 2000"
+    "source": "BNFC 2020-21, Sodium nitroprusside (p. 124); Flynn JT et al. Pediatrics 2017",
+    "review": ["A ficha anterior indicava 0,5–8 mcg/kg/min com máximo de 10; o BNFC 2020-21 limita a 8 mcg/kg/min (4 se > 24 h)."]
+  
   },
   {
     "id": "atenolol",
@@ -1077,46 +1079,18 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "HAP — crianças 1–17 anos",
-        "val": "< 20 kg: 10 mg/dose PO; ≥ 20 kg: 20 mg/dose PO",
-        "max": "20 mg/dose (3× dose não mostrou benefício adicional — STARTS-2)",
-        "freq": "q8h",
-        "note": "ATENÇÃO: doses altas (≥ 2,5 mg/kg/dose ou 60–80 mg/dose) associadas a MAIOR mortalidade no ensaio STARTS-2 — usar dose baixa"
+        "ind": "HAP — oral, RN e 1–11 meses",
+        "val": "Inicial 250–500 mcg/kg a cada 4–8 h, ajustar à resposta; começar pela dose e frequência mais baixas, sobretudo se associado a outros vasodilatadores",
+        "max": "30 mg/dia",
+        "freq": "Cada 4–8 h",
+        "note": "BNFC 2020-21 (p. 124)."
       },
       {
-        "ind": "PPHN / desmame iNO — EV",
-        "val": "0,25–1 mg/kg/dose EV em 3h",
+        "ind": "HAP — oral, 1–17 anos",
+        "val": "< 20 kg: 10 mg 3×/dia; ≥ 20 kg: 20 mg 3×/dia",
         "max": "—",
-        "freq": "q6–8h",
-        "note": "Oral: 0,5–1 mg/kg/dose q6h. Evidência limitada em PPHN — uso off-label"
-      },
-      {
-        "ind": "HAP oral (< 20 kg)",
-        "val": "10 mg × 3/dia",
-        "max": "10 mg × 3/dia",
         "freq": "3×/dia",
-        "note": "⚠️ EMA 2014: NÃO usar doses altas em crianças (↑ mortalidade). Doses ≤ 10 mg 3×/dia"
-      },
-      {
-        "ind": "HAP oral (20–45 kg)",
-        "val": "20 mg × 3/dia",
-        "max": "20 mg × 3/dia",
-        "freq": "3×/dia",
-        "note": ""
-      },
-      {
-        "ind": "HAP oral (> 45 kg)",
-        "val": "20 mg × 3/dia",
-        "max": "40 mg × 3/dia",
-        "freq": "3×/dia",
-        "note": ""
-      },
-      {
-        "ind": "HPPRN oral (off-label)",
-        "val": "0,5–1 mg/kg/dose oral",
-        "max": "2 mg/kg/dose",
-        "freq": "3–4×/dia",
-        "note": "Dados limitados em RN"
+        "note": "BNFC 2020-21 (p. 124). Reduzir dose com inibidores moderados/potentes do CYP3A4; evitar com cetoconazol, itraconazol e ritonavir. Doses superiores não mostraram benefício adicional (STARTS-2)."
       }
     ],
     "prep": "EV: Revatio 0,8 mg/ml — usar sem diluição adicional. Administrar em 3h se dose alta; pode ser mais rápido para doses baixas. Oral: suspensão 10 mg/ml (Revatio) — agitar bem; estável 30 dias após abertura. Comprimidos 20 mg.",
@@ -1139,7 +1113,9 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Visão turva (inibição PDE6 retiniana) — transitória",
       "⚠️ Priapismo (raro)"
     ],
-    "source": "BNF for Children 2023-24; Barst RJ et al. Circulation 2012 (STARTS-1/2); ESC/ERS PAH Guidelines 2022; EMA SmPC Revatio 2023; TOPP trial 2012; Barst RJ et al. NEJM 2005 (SUPER-1)"
+    "source": "BNFC 2020-21, Sildenafil (p. 124); Barst RJ et al. Circulation 2012 (STARTS-1/2); ESC/ERS PAH Guidelines 2022",
+    "review": ["As doses EV (0,25–1 mg/kg em 3 h) e de HPPRN oral (0,5–1 mg/kg/dose) da ficha anterior não constam do BNFC 2020-21: confirmar em protocolo local antes de usar.", "Doses por escalão de peso > 45 kg (40 mg 3×/dia) removidas: não constam do BNFC 2020-21."]
+  
   },
   {
     "id": "warfarina",
@@ -1155,11 +1131,18 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Indução anticoagulação",
-        "val": "0,2 mg/kg PO (dose de indução — dia 1)",
-        "max": "10 mg/dose",
-        "freq": "1 dose/dia; ajustar INR",
-        "note": "Manutenção habitual: 0,05–0,1 mg/kg/dia. Alvo INR: 2–3 (trombose venosa); 2,5–3,5 (válvulas mecânicas). Nomograma de ajuste por INR disponível (Michelson et al.)"
+        "ind": "Tratamento e profilaxia de tromboembolismo — indução, RN (sob supervisão especializada)",
+        "val": "200 mcg/kg dose única no dia 1; depois 100 mcg/kg 1×/dia nos 3 dias seguintes; seguintes conforme INR",
+        "max": "—",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21 (p. 102). Ajustar indução em disfunção hepática, insuficiência cardíaca, fármacos interagentes e INR basal > 1,3."
+      },
+      {
+        "ind": "Tratamento e profilaxia de tromboembolismo — indução, criança",
+        "val": "200 mcg/kg dose única no dia 1 (máx. 10 mg); depois 100 mcg/kg 1×/dia (máx. 5 mg) nos 3 dias seguintes; seguintes conforme INR",
+        "max": "10 mg (dia 1); 5 mg (dias 2–4)",
+        "freq": "1×/dia, à mesma hora",
+        "note": "BNFC 2020-21 (p. 102). INR-alvo habitual 2–3 (2,5–3,5 em válvula mecânica mitral), segundo Monagle, CHEST 2012."
       }
     ],
     "prep": "Oral: comprimidos 0,5/1/3/5 mg — podem ser partidos mas não triturados. Solução magistral 1 mg/ml estável 14 dias. Tomar ao MESMO HORA diariamente (monitorização INR consistente). ⚠️ Dieta consistente em vitamina K. Fonte: BNF for Children 2023-24.",
@@ -1177,7 +1160,9 @@ var DRUGS_CARDIOVASCULAR = [
       "Resistência em lactentes amamentados ao seio (vitamina K no leite materno baixa) vs fórmula",
       "Monitorizar INR em 3–5 dias após qualquer alteração de dose ou medicação"
     ],
-    "source": "BNF for Children 2023-24; Michelson AD et al. Chest 2012; ACCP Antithrombotic Guidelines 2012"
+    "source": "BNFC 2020-21, Warfarin sodium (p. 102); Monagle P et al. Chest 2012",
+    "review": ["A ficha anterior tinha só a dose de indução 0,2 mg/kg; o BNFC 2020-21 acrescenta a redução para 100 mcg/kg nos dias 2–4 (máx. 5 mg)."]
+  
   },
   {
     "id": "tolvaptan",
@@ -1278,11 +1263,25 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Antiarrítmico oral pediátrico",
-        "val": "2–8 mg/kg/dia PO",
-        "max": "160 mg/dose (320 mg/dia em adolescentes)",
-        "freq": "q12h",
-        "note": "Iniciar com dose baixa (2 mg/kg/dia) e titular semanalmente. Hospitalização para início com ECG contínuo recomendada"
+        "ind": "Arritmias ventriculares e supraventriculares, flutter auricular — oral, RN",
+        "val": "Inicial 1 mg/kg 2×/dia; aumentar se necessário até 4 mg/kg 2×/dia, a intervalos de 3–4 dias",
+        "max": "—",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 85). Iniciar sob supervisão especializada; ECG e QTc de controlo."
+      },
+      {
+        "ind": "Arritmias ventriculares e supraventriculares, flutter auricular — oral, 1 mês–11 anos",
+        "val": "Inicial 1 mg/kg 2×/dia; aumentar se necessário até 4 mg/kg 2×/dia, a intervalos de 2–3 dias",
+        "max": "80 mg/dose (2×/dia)",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 85). Não licenciado < 12 anos."
+      },
+      {
+        "ind": "Arritmias — oral, 12–17 anos",
+        "val": "Inicial 80 mg 1×/dia ou 40 mg 2×/dia; aumentar gradualmente para 80–160 mg 2×/dia, a intervalos de 2–3 dias",
+        "max": "480–640 mg/dia em arritmia ventricular com risco de vida (supervisão especializada)",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 85). Reduzir a dose para metade se TFG 30–60 e para um quarto se TFG 10–30 mL/min/1,73 m²; evitar se TFG < 10."
       }
     ],
     "prep": "Oral: comprimidos 40/80/160 mg — podem ser esmagados. Solução extemporânea 5 mg/ml. Tomar em JEJUM (antiácidos reduzem absorção 20%). Fonte: BNF for Children 2023-24.",
@@ -1300,7 +1299,9 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Excreção renal — ajuste obrigatório se TFG < 60 ml/min",
       "Início hospitalar com monitorização ECG 72h recomendado (PACES/HRS 2014)"
     ],
-    "source": "BNF for Children 2023-24; PACES/HRS Expert Consensus 2014; Pfammatter JP et al. Eur Heart J 2001"
+    "source": "BNFC 2020-21, Sotalol hydrochloride (p. 85); PACES/HRS Expert Consensus 2014",
+    "review": ["Corrigir hipocaliemia e hipomagnesemia antes e durante o tratamento; reduzir ou suspender se QTc > 550 ms (BNFC 2020-21).", "A ficha anterior indicava 2–8 mg/kg/dia com máximo de 160 mg/dose; o BNFC 2020-21 refere 1–4 mg/kg por toma, máx. 80 mg/dose até aos 11 anos."]
+  
   },
   {
     "id": "amiodarona_oral",
