@@ -72,18 +72,25 @@ var DRUGS_ANTIEPILEPTICOS = [
     ],
     "dose": [
       {
-        "ind": "Status epilepticus / convulsão — EV/IO",
-        "val": "0,1 mg/kg EV lento",
+        "ind": "Estado de mal epiléptico / convulsão febril / convulsão por intoxicação — EV lento",
+        "val": "0,1 mg/kg (RN e 1 mês–11 anos); 12–17 anos 4 mg",
         "max": "4 mg/dose",
-        "freq": "pode repetir 1× após 5–10 min",
-        "note": "Preferida ao diazepam EV: duração de acção mais longa (4–6h vs 15–30 min), menor redistribuição"
+        "freq": "Repetir 1× após 10 min se necessário",
+        "note": "BNFC 2020-21 (p. 238). Administrar em veia de grande calibre."
       },
       {
-        "ind": "IM",
-        "val": "0,1 mg/kg IM",
-        "max": "4 mg",
-        "freq": "dose única",
-        "note": "Absorção IM boa (ao contrário do diazepam)"
+        "ind": "Pré-medicação — oral",
+        "val": "1 mês–11 anos: 50–100 mcg/kg; 12–17 anos: 1–4 mg",
+        "max": "4 mg/dose",
+        "freq": "≥ 1 h antes do procedimento",
+        "note": "BNFC 2020-21 (p. 238)."
+      },
+      {
+        "ind": "Pré-medicação — EV",
+        "val": "50–100 mcg/kg",
+        "max": "4 mg/dose",
+        "freq": "30–45 min antes do procedimento",
+        "note": "BNFC 2020-21 (p. 238). Não licenciado < 12 anos."
       }
     ],
     "prep": "EV: conservar no frio 2–8°C. Diluir 1:1 com SF ou SG5% imediatamente antes de administrar (2 mg/ml → 1 mg/ml). Administrar em bólus lento 2 min. Concentração máxima: 2 mg/ml não diluído; 1 mg/ml diluído (reduz precipitação). Incompatível com solução alcalinas e propofol concentrado. Estabilidade após diluição: 24h a 4°C.",
@@ -96,7 +103,9 @@ var DRUGS_ANTIEPILEPTICOS = [
       "Semi-vida 10–20h (sem metabolito activo — vantagem sobre diazepam)",
       "Requer refrigeração — verificar disponibilidade em emergência"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; APLS Guidelines 2021"
+    "source": "BNFC 2020-21, Lorazepam (p. 238); Formulário de Pediatria 3ª Ed.",
+    "review": ["A via IM (0,1 mg/kg, máx. 4 mg) e a vantagem de duração sobre o diazepam constavam da ficha anterior e não estão no BNFC 2020-21 (lorazepam só EV lento para estado de mal): removidas; confirmar se deseja manter."]
+  
   },
   {
     "id": "fenobarbital",
@@ -118,39 +127,25 @@ var DRUGS_ANTIEPILEPTICOS = [
     ],
     "dose": [
       {
-        "ind": "Status epilepticus — carga EV",
-        "val": "20 mg/kg EV em 20–30 min",
-        "max": "40 mg/kg total (adicionar 10–20 mg/kg se sem resposta)",
-        "freq": "dose única de carga",
-        "note": "Monitorização TA e FR contínuas"
+        "ind": "Estado de mal epiléptico — carga EV lenta",
+        "val": "20 mg/kg EV (RN, 1 mês–11 anos); 12–17 anos 20 mg/kg",
+        "max": "1 g (12–17 anos); velocidade máx. 1 mg/kg/min",
+        "freq": "Carga única; depois 2,5–5 mg/kg 1–2×/dia (12–17 anos: 300 mg 2×/dia)",
+        "note": "BNFC 2020-21 (p. 232). Monitorizar TA e FR."
       },
       {
-        "ind": "Epilepsia neonatal",
-        "val": "20 mg/kg EV em 30 min (carga) → 3–5 mg/kg/dia manutenção",
-        "max": "40 mg/kg carga",
-        "freq": "manutenção em 1–2 doses/dia",
-        "note": "1ª linha em RN"
-      },
-      {
-        "ind": "Manutenção oral/EV",
-        "val": "3–5 mg/kg/dia",
+        "ind": "Convulsões neonatais — carga e manutenção",
+        "val": "20 mg/kg EV lenta; depois 2,5–5 mg/kg 1×/dia EV ou oral",
         "max": "—",
-        "freq": "1–2 doses/dia",
-        "note": "Nível sérico terapêutico: 15–40 mcg/ml"
+        "freq": "Manutenção 1×/dia, ajustar à resposta",
+        "note": "BNFC 2020-21 (p. 232). 1.ª linha no RN."
       },
       {
-        "ind": "Convulsões neonatais — carga EV",
-        "val": "20 mg/kg EV em 15–30 min",
-        "max": "40 mg/kg total (2ª dose 10–20 mg/kg se sem resposta)",
-        "freq": "dose de carga",
-        "note": "Se sem resposta após 40 mg/kg total → considerar fenitoína/levetiracetam/midazolam"
-      },
-      {
-        "ind": "Neonatal — Manutenção EV/oral",
-        "val": "3–5 mg/kg/dia",
+        "ind": "Epilepsia (excepto ausências típicas) — oral",
+        "val": "1 mês–11 anos: inicial 1–1,5 mg/kg 2×/dia, subir 2 mg/kg/dia; manutenção 2,5–4 mg/kg 1–2×/dia; 12–17 anos: 60–180 mg 1×/dia",
         "max": "—",
-        "freq": "1–2 doses/dia",
-        "note": "Iniciar 12–24h após carga. Nível terapêutico: 20–40 mcg/ml"
+        "freq": "1–2×/dia",
+        "note": "BNFC 2020-21 (p. 232). Nível terapêutico 15–40 mg/L; a tolerância torna a monitorização menos útil."
       },
       {
         "ind": "Neonatal — NAS — oral (2ª linha)",
@@ -194,7 +189,9 @@ var DRUGS_ANTIEPILEPTICOS = [
       "⚠️ Efeito não imediato (3–7 dias para indução enzimática)",
       "Papel clínico limitado na hiperbilirrubinemia — fototerapia é o tratamento principal"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; BNF for Children 2023-24; Volpe JJ. Neurology of the Newborn 6th Ed; ILCOR NNS Guidelines 2021; BNF for Children 2023-24; NICE NG98 Jaundice Guidelines 2016"
+    "source": "BNFC 2020-21, Phenobarbital (p. 232); Formulário de Pediatria 3ª Ed.; Volpe JJ. Neurology of the Newborn 6th Ed; ILCOR NNS Guidelines 2021; NICE NG98 Jaundice Guidelines 2016",
+    "review": ["O BNFC 2020-21 indica uma carga única de 20 mg/kg. A repetição até 40 mg/kg cumulativos consta do Protocolo UCIEP/HFF (mal convulsivo, risco de apneia) e de Volpe, não do BNFC.", "Doses de síndrome de abstinência neonatal, hiperbilirrubinemia e colestase não constam do BNFC 2020-21: confirmar."]
+  
   },
   {
     "id": "fenitoina",
@@ -431,18 +428,25 @@ var DRUGS_ANTIEPILEPTICOS = [
     ],
     "dose": [
       {
-        "ind": "Epilepsia — dose inicial oral",
-        "val": "0,5–1 mg/kg/dia",
-        "max": "—",
-        "freq": "2 doses/dia; aumentar 0,5–1 mg/kg/semana",
-        "note": ""
+        "ind": "Monoterapia de crises tónico-clónicas generalizadas ou focais — oral",
+        "val": "6–17 anos: inicial 0,5–1 mg/kg 1×/dia (máx. 25 mg) à noite, 1 semana; depois subir 250–500 mcg/kg 2×/dia",
+        "max": "Dose habitual 50 mg 2×/dia; máx. 7,5 mg/kg/dose 2×/dia; 500 mg/dia",
+        "freq": "Aumentos cada 1–2 semanas (máx. 25 mg 2×/dia por passo)",
+        "note": "BNFC 2020-21 (p. 227)."
       },
       {
-        "ind": "Epilepsia — dose alvo",
-        "val": "5–9 mg/kg/dia",
-        "max": "400 mg/dia",
-        "freq": "2 doses/dia",
-        "note": "Titular lentamente para minimizar efeitos cognitivos"
+        "ind": "Terapêutica adjuvante (crises generalizadas/focais, síndrome de Lennox-Gastaut) — oral",
+        "val": "2–17 anos: inicial 1–3 mg/kg 1×/dia (máx. 25 mg) à noite, 1 semana; depois subir 0,5–1,5 mg/kg 2×/dia",
+        "max": "Dose habitual 2,5–4,5 mg/kg 2×/dia; máx. 7,5 mg/kg/dose 2×/dia; 400 mg/dia",
+        "freq": "Aumentos cada 1–2 semanas (máx. 25 mg 2×/dia por passo)",
+        "note": "BNFC 2020-21 (p. 227). Se não tolerar, passos menores ou intervalos maiores."
+      },
+      {
+        "ind": "Profilaxia de enxaqueca — oral (não licenciado)",
+        "val": "16–17 anos: inicial 25 mg 1×/dia à noite, 1 semana; subir 25 mg por semana",
+        "max": "200 mg/dia",
+        "freq": "Habitual 50–100 mg/dia em 2 doses",
+        "note": "BNFC 2020-21 (p. 227)."
       }
     ],
     "prep": "Oral: cápsulas sprinkle 15/25 mg — podem ser abertas e conteúdo misturado em 1 colher de alimento mole (não mastigar grânulos). Comprimidos 25/50/100/200 mg — NÃO triturar (amargor intenso). Suspensão oral 6 mg/ml (magistral). Tomar com ou sem alimentos. Hidratação adequada (risco nefrolitíase). Fonte: BNF for Children 2023-24.",
@@ -457,7 +461,7 @@ var DRUGS_ANTIEPILEPTICOS = [
       "⚠️ Perda de peso (monitorizar crescimento em crianças)",
       "⚠️ Acidose metabólica hiperclorémica — monitorizar bicarbonato"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "BNFC 2020-21, Topiramate (p. 227)"
   },
   {
     "id": "vigabatrina",
@@ -551,11 +555,25 @@ var DRUGS_ANTIEPILEPTICOS = [
     ],
     "dose": [
       {
-        "ind": "Dravet — adjuvante oral",
-        "val": "50 mg/kg/dia",
-        "max": "3000 mg/dia",
-        "freq": "2–3 doses/dia com refeições",
-        "note": "Iniciar 50 mg/kg/dia. Inibidor potente CYP3A4/CYP2C19 — reduzir clobazam 25% e valproato"
+        "ind": "Síndrome de Dravet — adjuvante a clobazam e valproato (sob supervisão especializada) — 3–5 anos",
+        "val": "20 mg/kg/dia 1 semana; 30 mg/kg/dia 1 semana; depois 50 mg/kg/dia",
+        "max": "50 mg/kg/dia",
+        "freq": "2–3 doses/dia",
+        "note": "BNFC 2020-21 (p. 226)."
+      },
+      {
+        "ind": "Síndrome de Dravet — 6–11 anos",
+        "val": "20 mg/kg/dia 1 semana; depois +10 mg/kg/dia por semana até 50 mg/kg/dia",
+        "max": "50 mg/kg/dia",
+        "freq": "2–3 doses/dia",
+        "note": "BNFC 2020-21 (p. 226)."
+      },
+      {
+        "ind": "Síndrome de Dravet — 12–17 anos",
+        "val": "20 mg/kg/dia 1 semana; 30 mg/kg/dia 1 semana; depois +5 mg/kg/dia por semana até à dose óptima",
+        "max": "50 mg/kg/dia",
+        "freq": "2–3 doses/dia",
+        "note": "BNFC 2020-21 (p. 226). Cápsulas e saquetas de pó não são bioequivalentes; trocar de formulação sob supervisão clínica."
       }
     ],
     "prep": "Oral: cápsulas 250/500 mg ou sachets de pó 250/500 mg — dissolver pó em água ou sumo; cápsulas podem ser abertas. Tomar COM refeições (absorção aumenta com alimentos). ⚠️ SEMPRE em combinação com valproato e/ou clobazam — inibe CYP2C19 e CYP3A4 (ajustar doses dos outros AE). Fonte: BNF for Children 2023-24; SmPC Diacomit.",
@@ -568,7 +586,9 @@ var DRUGS_ANTIEPILEPTICOS = [
       "⚠️ Sedação, ataxia",
       "Medicamento órfão — uso exclusivo em Síndrome de Dravet confirmada"
     ],
-    "source": "BNF for Children 2023-24; Wirrell EC. Epilepsia 2017"
+    "source": "BNFC 2020-21, Stiripentol (p. 226); Wirrell EC. Epilepsia 2017",
+    "review": ["A ficha anterior indicava iniciar a 50 mg/kg/dia; o BNFC 2020-21 exige titulação semanal. Corrigido. Interacções (reduzir clobazam e valproato) mantêm-se nos alertas."]
+  
   },
   {
     "id": "canabidiol",
@@ -619,18 +639,18 @@ var DRUGS_ANTIEPILEPTICOS = [
     ],
     "dose": [
       {
-        "ind": "Adjuvante — epilepsia focal (≥ 4 anos)",
-        "val": "1 mg/kg/dia PO",
-        "max": "4 mg/kg/dia (200 mg/dia)",
-        "freq": "q12h; iniciar com 0,5 mg/kg/dia",
-        "note": "Pode substituir levetiracetam 1:1 (mg por mg) se switch necessário por comportamento"
+        "ind": "Terapêutica adjuvante de crises focais — 4–17 anos, < 50 kg (oral, EV)",
+        "val": "Inicial 0,5–1 mg/kg 2×/dia; manutenção habitual 1 mg/kg 2×/dia",
+        "max": "2 mg/kg/dose 2×/dia",
+        "freq": "2×/dia, ajustar à resposta",
+        "note": "BNFC 2020-21 (p. 208). Oral, injecção EV ou perfusão EV. Doses por toma, não por dia."
       },
       {
-        "ind": "EV — SE refractário",
-        "val": "1–2 mg/kg EV em 15 min",
-        "max": "100 mg/dose",
-        "freq": "q12h EV; converter para oral quando possível",
-        "note": "EV=oral em biodisponibilidade — conversão directa 1:1"
+        "ind": "Terapêutica adjuvante de crises focais — 4–17 anos, ≥ 50 kg (oral, EV)",
+        "val": "Inicial 25–50 mg 2×/dia; manutenção habitual 50 mg 2×/dia",
+        "max": "100 mg/dose 2×/dia",
+        "freq": "2×/dia, ajustar à resposta",
+        "note": "BNFC 2020-21 (p. 208)."
       }
     ],
     "prep": "EV: pode administrar não diluído (10 mg/ml) em bólus 15 min, OU diluir em SF, SG5% ou RL. Concentração após diluição 1–10 mg/ml. Oral: solução 10 mg/ml — compatível com SNG. Equivalência oral/EV 1:1 — conversão directa sem ajuste. Fonte: BNF for Children 2023-24; SmPC Briviact.",
@@ -641,7 +661,9 @@ var DRUGS_ANTIEPILEPTICOS = [
       "Ajuste em insuficiência hepática (reduzir 50% em moderada, evitar em grave)",
       "Interacção com fenitoína/carbamazepina (indutores CYP2C19 — reduzem brivaracetam)"
     ],
-    "source": "BNF for Children 2023-24; Riesgo R et al. Epileptic Disord 2018; EMA Briviact SmPC 2022"
+    "source": "BNFC 2020-21, Brivaracetam (p. 208); EMA Briviact SmPC",
+    "review": ["A ficha anterior indicava 1 mg/kg/dia (máx. 4 mg/kg/dia): no BNFC as doses são por toma, 2×/dia. Corrigido.", "A dose EV de 1–2 mg/kg em 15 min no estado de mal refractário não consta do BNFC 2020-21: removida; confirmar em protocolo local."]
+  
   },
   {
     "id": "perampanel",
@@ -656,11 +678,18 @@ var DRUGS_ANTIEPILEPTICOS = [
     ],
     "dose": [
       {
-        "ind": "Epilepsia focal / TCG — adjuvante",
-        "val": "Início: 2 mg PO à noite",
-        "max": "12 mg/noite (sem indutores); 16–20 mg/noite (com indutores CYP3A4)",
-        "freq": "1 dose/dia ao deitar (sedação nocturna)",
-        "note": "Titular: aumentar 2 mg/semana. Com indutores (carbamazepina, fenitoína, oxcarbazepina): dobrar a dose"
+        "ind": "Terapêutica adjuvante de crises focais — 12–17 anos",
+        "val": "Inicial 2 mg 1×/dia ao deitar; subir 2 mg a intervalos ≥ 2 semanas; manutenção 4–8 mg 1×/dia",
+        "max": "12 mg/dia",
+        "freq": "1×/dia ao deitar",
+        "note": "BNFC 2020-21 (p. 219). Com carbamazepina, fosfenitoína, oxcarbazepina ou fenitoína, titular a intervalos ≥ 1 semana."
+      },
+      {
+        "ind": "Terapêutica adjuvante de crises tónico-clónicas generalizadas primárias — 12–17 anos",
+        "val": "Inicial 2 mg 1×/dia ao deitar; subir 2 mg a intervalos ≥ 2 semanas; manutenção até 8 mg 1×/dia",
+        "max": "12 mg/dia",
+        "freq": "1×/dia ao deitar",
+        "note": "BNFC 2020-21 (p. 219)."
       }
     ],
     "prep": "Oral: comprimidos 2/4/6/8/10/12 mg — engolir inteiros com água. Suspensão oral 0,5 mg/ml. Tomar AO DEITAR (sedação; não na manhã). ⚠️ Não partir comprimidos (perda de dose). Fonte: BNF for Children 2023-24.",
@@ -674,7 +703,7 @@ var DRUGS_ANTIEPILEPTICOS = [
       "Tonturas e sonolência — muito frequentes; administração nocturna minimiza impacto",
       "Substância controlada (Lista II em Portugal) — risco de abuso baixo mas registado"
     ],
-    "source": "BNF for Children 2023-24; French JA et al. Epilepsia 2012; Steinhoff BJ et al. Epilepsia 2013"
+    "source": "BNFC 2020-21, Perampanel (p. 219)"
   },
   {
     "id": "midazolam_in",
@@ -730,11 +759,18 @@ var DRUGS_ANTIEPILEPTICOS = [
     ],
     "dose": [
       {
-        "ind": "Epilepsia — adjuvante",
-        "val": "Início: 0,1 mg/kg/dia PO",
-        "max": "1 mg/kg/dia (60 mg/dia)",
-        "freq": "2 doses/dia; dose maior à noite",
-        "note": "Titular semanalmente. Dose de manutenção habitual: 0,3–0,5 mg/kg/dia"
+        "ind": "Epilepsia — terapêutica adjuvante — 1 mês–5 anos",
+        "val": "Inicial 125 mcg/kg 2×/dia; manutenção 250 mcg/kg 2×/dia",
+        "max": "500 mcg/kg/dose 2×/dia; 30 mg/dia",
+        "freq": "Aumentar cada 5 dias se necessário",
+        "note": "BNFC 2020-21 (p. 234). Não licenciado < 6 anos."
+      },
+      {
+        "ind": "Epilepsia — terapêutica adjuvante — 6–17 anos",
+        "val": "Inicial 5 mg/dia; manutenção 0,3–1 mg/kg/dia",
+        "max": "60 mg/dia",
+        "freq": "Aumentar cada 5 dias; até 30 mg/dia em toma única à noite, doses maiores fraccionadas",
+        "note": "BNFC 2020-21 (p. 234). Não confundir clobazam com clonazepam."
       }
     ],
     "prep": "Oral: comprimidos 10 mg — podem ser triturados e dissolvidos em água. Solução oral 1 mg/ml. Tomar com ou sem alimentos. Substância psicotrópica — receita especial. Fonte: BNF for Children 2023-24.",
@@ -750,6 +786,6 @@ var DRUGS_ANTIEPILEPTICOS = [
       "Sedação inferior às BZD 1,4 (diazepam, lorazepam) — vantagem em uso crónico",
       "Substância psicotrópica — prescrição especial"
     ],
-    "source": "BNF for Children 2023-24; Sankar R Epilepsia 2012; Ng YT et al. Neurology 2011 (LGS)"
+    "source": "BNFC 2020-21, Clobazam (p. 234); Sankar R Epilepsia 2012; Ng YT et al. Neurology 2011 (LGS)"
   }
 ];
