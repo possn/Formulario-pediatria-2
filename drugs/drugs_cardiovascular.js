@@ -677,7 +677,8 @@ var DRUGS_CARDIOVASCULAR = [
       "Fototoxicidade, pneumonite, hepatotoxicidade — riscos em uso prolongado",
       "Monitorizar TFH, função tiroideia e Rx tórax em uso > 1 semana"
     ],
-    "source": "BNF for Children 2023-24; PALS Guidelines AHA 2020; Saul JP et al. JACC 2005"
+    "source": "BNF for Children 2023-24; PALS Guidelines AHA 2020; Saul JP et al. JACC 2005",
+    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
   },
   {
     "id": "carvedilol",
@@ -771,7 +772,8 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Associação com beta-bloqueante aumenta risco de bloqueio AV e bradicardia grave",
       "Hipotensão com administração EV rápida — monitorizar TA durante bólus"
     ],
-    "source": "BNF for Children 2023-24; PALS AHA 2020; Moak JP Pediatric Cardiology 2000"
+    "source": "BNF for Children 2023-24; PALS AHA 2020; Moak JP Pediatric Cardiology 2000",
+    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
   },
   {
     "id": "flecainida",
@@ -1247,7 +1249,8 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Acumulação em IH e IC — monitorizar nível sérico (alvo 1,5–5 mg/L)",
       "Janela terapêutica estreita — TDM em perfusões > 24h"
     ],
-    "source": "BNF for Children 2023-24; PALS AHA 2020; Dorian P et al. NEJM 2002"
+    "source": "BNF for Children 2023-24; PALS AHA 2020; Dorian P et al. NEJM 2002",
+    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
   },
   {
     "id": "sotalol",

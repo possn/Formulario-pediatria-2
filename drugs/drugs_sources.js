@@ -26,8 +26,23 @@ var SOURCES = {
       title: "Formulário de Pediatria — 3ª Edição",
       authors: "Rui Anjos, Teresa Bandeira, José Gonçalo Marques",
       publisher: "Edição dos autores",
-      year: "c. 2005",
-      note: "Formulário de referência nacional português. Base bibliográfica desta aplicação."
+      year: "s.d.",
+      note: "3.ª edição, revista e actualizada (conforme a capa; o ano de edição não consta). Formulário de referência nacional português. Base bibliográfica desta aplicação."
+    },
+    {
+      id: "who_mfc",
+      title: "WHO Model Formulary for Children 2010",
+      publisher: "World Health Organization",
+      year: 2010,
+      url: "https://www.who.int/publications/i/item/9789241599320",
+      note: "Acesso livre. Útil como segunda referência independente; doses podem diferir das do BNFC."
+    },
+    {
+      id: "anmf",
+      title: "Australasian Neonatal Medicines Formulary (ANMF)",
+      publisher: "Consórcio ANMF / SESLHD",
+      url: "https://www.seslhd.health.nsw.gov.au/services-clinics/directory/newborn-care-centre-nicu/australasian-neonatal-medicines-formulary-anmf",
+      note: "Monografias neonatais de acesso livre."
     },
     {
       id: "gosh",
@@ -99,10 +114,30 @@ var SOURCES = {
     },
     {
       id: "erc_2021",
-      title: "European Resuscitation Council Guidelines 2021",
-      publisher: "European Resuscitation Council",
+      title: "European Resuscitation Council Guidelines 2021: Paediatric Life Support",
+      authors: "Van de Voorde P, Turner NM, Djakow J, et al.",
+      journal: "Resuscitation 161:327–387",
       year: 2021,
-      doi: "10.1016/j.resuscitation.2021.02.010"
+      doi: "10.1016/j.resuscitation.2021.02.015",
+      note: "Substituída pela edição de 2025 (ver abaixo). Algumas fichas de emergência ainda citam esta versão."
+    },
+    {
+      id: "erc_2025",
+      title: "European Resuscitation Council Guidelines 2025: Paediatric Life Support",
+      journal: "Resuscitation 215 (Suppl 1): 110767",
+      year: 2025,
+      doi: "10.1016/j.resuscitation.2025.110767",
+      url: "https://pubmed.ncbi.nlm.nih.gov/41117571/",
+      note: "Versão actual das normas europeias de SAV pediátrico."
+    },
+    {
+      id: "aha_2025_pals",
+      title: "Part 8: Pediatric Advanced Life Support — 2025 AHA and AAP Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care",
+      journal: "Circulation 152(16_suppl_2): S479–S537",
+      year: 2025,
+      doi: "10.1161/CIR.0000000000001368",
+      url: "https://pubmed.ncbi.nlm.nih.gov/41122885/",
+      note: "Versão actual das normas AHA/AAP. Substitui o PALS 2020 citado em várias fichas."
     },
     {
       id: "pals_2020",
@@ -112,10 +147,12 @@ var SOURCES = {
     },
     {
       id: "surviving_sepsis",
-      title: "Surviving Sepsis Campaign: International Guidelines 2020",
-      journal: "Intensive Care Medicine",
-      year: 2021,
-      doi: "10.1007/s00134-021-06398-6"
+      title: "Executive summary: Surviving Sepsis Campaign International Guidelines for the Management of Septic Shock and Sepsis-Associated Organ Dysfunction in Children",
+      authors: "Weiss SL, Peters MJ, Alhazzani W, et al.",
+      journal: "Intensive Care Medicine 46(Suppl 1):1–9",
+      year: 2020,
+      doi: "10.1007/s00134-019-05877-7",
+      note: "Texto completo: Pediatr Crit Care Med 2020;21(2):e52–e106."
     },
     {
       id: "gina_2023",
@@ -145,9 +182,11 @@ var SOURCES = {
     },
     {
       id: "ispad_cad",
-      title: "ISPAD Clinical Practice Consensus Guidelines 2022 — DKA",
+      title: "ISPAD Clinical Practice Consensus Guidelines 2022: Diabetic ketoacidosis and the hyperglycemic hyperosmolar state",
+      authors: "Glaser N, Fritsch M, Priyambada L, et al.",
       journal: "Pediatric Diabetes",
-      year: 2022
+      year: 2022,
+      doi: "10.1111/pedi.13406"
     },
     {
       id: "monagle_2018",
@@ -227,6 +266,6 @@ var SOURCES = {
   // ── NOTA DE AVISO LEGAL ───────────────────────────────────────
   disclaimer: "Esta aplicação é uma ferramenta de apoio à decisão clínica destinada a profissionais de saúde experientes. As informações de posologia, preparação e alertas são baseadas nas fontes bibliográficas listadas e foram compiladas com rigor. Contudo, não substitui o julgamento clínico, as guidelines institucionais locais, a informação de prescrição oficial (RCM/SmPC) nem a consulta ao farmacêutico. O utilizador é responsável pela verificação das doses e pela adequação ao doente individual. Os autores desta aplicação não assumem responsabilidade por erros de utilização clínica.",
 
-  version: "v1.0 — Maio 2026",
+  version: "v1.1 — Outubro 2026",
   app: "UCIP Pediatria — Formulário Farmacológico Pediátrico"
 };

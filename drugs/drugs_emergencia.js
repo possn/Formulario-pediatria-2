@@ -142,7 +142,8 @@ var DRUGS_EMERGENCIA = [
       "Efeitos: midríase, retenção urinária, boca seca, hipertermia",
       "Na intoxicação por OFs: doses 10–100× superiores ao normal são frequentes"
     ],
-    "source": "ILCOR 2021; BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "ILCOR 2021; BNF for Children 2023-24; Harriet Lane 23rd Ed",
+    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
   },
   {
     "id": "bicarbonato",
@@ -292,7 +293,8 @@ var DRUGS_EMERGENCIA = [
       "⛔ Incompatível com bicarbonato de sódio e fosfato (precipitação)",
       "⚠️ Potencia toxicidade digitálica"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; PALS AHA 2020; BNF for Children 2023-24; Jain A. Paediatr Child Health 2010; BNFC Neonatal Formulary 9th Ed"
+    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; PALS AHA 2020; BNF for Children 2023-24; Jain A. Paediatr Child Health 2010; BNFC Neonatal Formulary 9th Ed",
+    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
   },
   {
     "id": "flumazenil",
@@ -471,7 +473,8 @@ var DRUGS_EMERGENCIA = [
       "⚠️ Tirotoxicidade e hipotiroidismo em uso crónico — monitorizar função tiroideia",
       "Diluir SEMPRE em SG5%, nunca em SF"
     ],
-    "source": "BNF for Children 2023-24; PALS AHA 2020; ERC Guidelines 2021; Saul JP et al. JACC 2005"
+    "source": "BNF for Children 2023-24; PALS AHA 2020; ERC Guidelines 2021; Saul JP et al. JACC 2005",
+    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
   },
   {
     "id": "lidocaina_pcr",
@@ -557,6 +560,7 @@ var DRUGS_EMERGENCIA = [
       "⚠️ Potencia toxicidade digoxina — usar gluconato de cálcio se doente digitalizado",
       "⚠️ Nunca misturar com bicarbonato na mesma linha — precipitação imediata"
     ],
-    "source": "BNF for Children 2023-24; PALS AHA 2020; DeWitt CR et al. Crit Care Clin 2005"
+    "source": "BNF for Children 2023-24; PALS AHA 2020; DeWitt CR et al. Crit Care Clin 2005",
+    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
   }
 ];
