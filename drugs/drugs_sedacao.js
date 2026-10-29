@@ -448,32 +448,25 @@ var DRUGS_SEDACAO = [
     ],
     "dose": [
       {
-        "ind": "ISR",
+        "ind": "Bloqueio neuromuscular (intubação / cirurgia) — RN e criança",
+        "val": "0,6 mg/kg EV, depois 0,15 mg/kg conforme necessário; ou perfusão 0,3–0,6 mg/kg/h",
+        "max": "—",
+        "freq": "Bólus ou perfusão",
+        "note": "BNFC 2020-21, Rocuronium bromide (p. 874). Em obesos calcular pelo peso ideal."
+      },
+      {
+        "ind": "Ventilação assistida em cuidados intensivos",
+        "val": "Inicial 0,6 mg/kg (opcional), depois perfusão 0,3–0,6 mg/kg/h na 1.ª hora e ajustar à resposta",
+        "max": "—",
+        "freq": "Perfusão",
+        "note": "BNFC 2020-21 (p. 874). Shann: 0,6–1,2 mg/kg EV; manutenção 0,1–0,2 mg/kg em bólus ou 5–15 mcg/kg/min."
+      },
+      {
+        "ind": "Intubação de sequência rápida",
         "val": "1,2 mg/kg EV",
-        "max": "150 mg",
-        "freq": "dose única",
-        "note": "Condições de intubação em 60 seg. Reversível com sugammadex 16 mg/kg"
-      },
-      {
-        "ind": "Intubação electiva",
-        "val": "0,6 mg/kg EV",
         "max": "—",
-        "freq": "dose única",
-        "note": "Início 60–90 seg, duração 30–40 min"
-      },
-      {
-        "ind": "Manutenção UCIP",
-        "val": "0,1–0,2 mg/kg EV bólus PRN",
-        "max": "—",
-        "freq": "guiado por TOF",
-        "note": "OU perfusão 0,3–0,6 mg/kg/hora. Monitorização TOF obrigatória em perfusão"
-      },
-      {
-        "ind": "RN",
-        "val": "0,3–0,6 mg/kg EV",
-        "max": "—",
-        "freq": "dose única",
-        "note": "Maior sensibilidade — iniciar com dose baixa. Duração prolongada"
+        "freq": "Dose única",
+        "note": "Shann, Drug Doses (entrada Rocuronium: 0,6–1,2 mg/kg). O BNFC 2020-21 indica 0,6 mg/kg; 1,2 mg/kg é o limite superior do Shann."
       }
     ],
     "prep": "EV bólus ISR: administrar NÃO DILUÍDO (10 mg/ml) em bólus rápido 5–10 seg. Perfusão: diluir em SF, SG5% ou LR para 0,5–2 mg/ml. Refrigerar 2–8°C; estável 12h à T ambiente após abertura. ⚠️ Incompatível com tiopental, dantroleno, furosemida — não misturar. Ter sugammadex disponível. Fonte: BNF for Children 2023-24; SmPC Esmeron.",
@@ -488,7 +481,9 @@ var DRUGS_SEDACAO = [
       "Reversão com sugammadex (não com neostigmina)",
       "Monitorização TOF (Train-of-Four) em perfusões prolongadas"
     ],
-    "source": "ESA Pediatric Anesthesia Guidelines 2021; BNF for Children 2023-24; Esmeron SmPC"
+    "source": "BNF for Children 2020-21, Rocuronium bromide (p. 874); Shann F. Drug Doses",
+    "review": ["Removido o máximo de 150 mg e a faixa neonatal 0,3–0,6 mg/kg (o BNFC indica 0,6 mg/kg no RN) por falta de fonte."]
+  
   },
   {
     "id": "vecuronio",
@@ -1059,7 +1054,7 @@ var DRUGS_SEDACAO = [
       "Sem acumulação em IR, IH ou RN — metabolismo independente de órgãos",
       "Não substitui sedação — associar midazolam ou propofol"
     ],
-    "source": "BNF for Children 2023-24; Wilhelm W et al. Paediatric Anaesthesia 2007; Playfor SD et al. Paediatr Anaesth 2006"
+    "source": "BNF for Children 2020-21, Remifentanil (p. 878); Shann F. Drug Doses"
   },
   {
     "id": "cisatracurio",
@@ -1100,7 +1095,7 @@ var DRUGS_SEDACAO = [
       "Vantagem: eliminação de Hofmann — independente de fígado e rins (ideal em falência orgânica)",
       "Sugammadex NÃO reverte cisatracúrio (apenas rocurônio/vecurônio) — reversão espontânea ou neostigmina"
     ],
-    "source": "BNF for Children 2023-24; Papazian L et al. NEJM 2010 (ACURASYS); Moss M et al. NEJM 2019 (ROSE)"
+    "source": "BNF for Children 2020-21, Cisatracurium (p. 873)"
   },
   {
     "id": "metadona_desmame",

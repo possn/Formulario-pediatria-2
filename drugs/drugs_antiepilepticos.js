@@ -341,18 +341,18 @@ var DRUGS_ANTIEPILEPTICOS = [
     ],
     "dose": [
       {
-        "ind": "Status epilepticus — carga EV",
-        "val": "15–20 mg PE/kg EV",
-        "max": "1500 mg PE",
-        "freq": "velocidade máxima 3 mg PE/kg/min (vs 1 mg PE/kg/min da fenitoína)",
-        "note": "Conversão completa em 15 min após infusão"
+        "ind": "Estado de mal epiléptico (perfusão EV)",
+        "val": "5–17 anos: 20 mg PE/kg inicial a 2–3 mg PE/kg/min; depois 4–5 mg PE/kg/dia em 1–4 doses",
+        "max": "150 mg PE/min (carga); 100 mg PE/min (manutenção)",
+        "freq": "Manutenção a 1–2 mg PE/kg/min",
+        "note": "BNFC 2020-21, Fosphenytoin sodium (p. 213). Doses em equivalentes de fenitoína (PE): fosfenitoína 1,5 mg = fenitoína 1 mg. Ajustar pelo nível residual de fenitoína."
       },
       {
-        "ind": "Manutenção",
-        "val": "4–8 mg PE/kg/dia EV/IM",
-        "max": "—",
-        "freq": "2 doses/dia",
-        "note": "Nível fenitoína: colher 2h após dose EV"
+        "ind": "Profilaxia/tratamento de convulsões em neurocirurgia ou traumatismo craniano",
+        "val": "5–17 anos: 10–15 mg PE/kg inicial; depois 4–5 mg PE/kg/dia",
+        "max": "100 mg PE/min",
+        "freq": "1–4 doses/dia",
+        "note": "BNFC 2020-21 (p. 213)."
       }
     ],
     "prep": "EV: diluir em SF OU SG5% (vantagem sobre fenitoína — compatível com ambos). Concentração: 1,5–25 mg EPE/ml (EPE = equivalentes de fenitoína). Taxa máx.: 3 mg EPE/kg/min (máx 150 mg EPE/min) — monitorização ECG contínua. Conversão: 1,5 mg fosfenitoína = 1 mg EPE = 1 mg fenitoína. Estabilidade: 48h a 25°C após diluição.",
@@ -366,7 +366,9 @@ var DRUGS_ANTIEPILEPTICOS = [
       "⚠️ EQUIVALÊNCIA: 1,5 mg fosfenitoína = 1 mg PE = 1 mg fenitoína",
       "Vantagem: pode ser administrada IM e em SG5%; menos flebite; ritmo mais rápido"
     ],
-    "source": "Abend NS et al. Epilepsia 2019; BNF for Children 2023-24; Pro-Epanutin SmPC"
+    "source": "BNF for Children 2020-21, Fosphenytoin sodium (p. 213)",
+    "review": ["O BNFC 2020-21 só dá dose a partir dos 5 anos. A ficha anterior indicava 15–20 mg PE/kg (máx. 1500 mg PE) e 4–8 mg PE/kg/dia sem restrição de idade: dose abaixo dos 5 anos sem fonte verificada."]
+  
   },
   {
     "id": "lacosamida",

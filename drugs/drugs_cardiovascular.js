@@ -133,25 +133,32 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Anticoagulação terapêutica — EV",
-        "val": "CARGA: 75 UI/kg em 10 min; MANUTENÇÃO: < 1 ano: 28 UI/kg/hora; 1–18 anos: 20 UI/kg/hora",
+        "ind": "Tratamento de tromboembolismo (bólus + perfusão EV)",
+        "val": "RN ≤35 sem IG corrigida: 50 U/kg, depois 25 U/kg/h; RN: 75 U/kg, depois 25 U/kg/h; 1–11 meses: 75 U/kg, depois 25 U/kg/h; 1–17 anos: 75 U/kg, depois 20 U/kg/h",
         "max": "—",
-        "freq": "perfusão contínua; ajustar por APTT",
-        "note": "Alvo APTT: 60–85 seg (anti-Xa 0,35–0,7 UI/ml preferida em RN)"
+        "freq": "Perfusão contínua, ajustada ao APTT",
+        "note": "BNFC 2020-21, Heparin (unfractionated) (p. 101)."
       },
       {
-        "ind": "Permeabilidade linha arterial / CVC",
-        "val": "0,5–1 UI/ml na solução de lavagem",
+        "ind": "Tratamento — via subcutânea",
+        "val": "250 U/kg 2×/dia, ajustar ao APTT",
         "max": "—",
-        "freq": "contínua",
-        "note": ""
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 101)."
       },
       {
-        "ind": "ECMO — dose inicial",
-        "val": "50–100 UI/kg EV bólus → perfusão 20–60 UI/kg/hora",
+        "ind": "Profilaxia de trombose (SC)",
+        "val": "100 U/kg 2×/dia",
+        "max": "5000 U/dose",
+        "freq": "2×/dia, ajustar ao APTT",
+        "note": "BNFC 2020-21 (p. 101)."
+      },
+      {
+        "ind": "Manutenção de cateter arterial umbilical (RN)",
+        "val": "0,5 U/h EV",
         "max": "—",
-        "freq": "titulado por ACT alvo 180–220 seg",
-        "note": ""
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21 (p. 101). Circuitos extracorporais e shunts/stents: \"consultar o RCM / protocolo local\"."
       }
     ],
     "prep": "Perfusão: diluir em SF. Concentrações pediátricas: 0,5–1 UI/ml (flushes); 25 UI/ml (linhas); 100 UI/ml (perfusão UCIP); até 500 UI/ml (central). Seringas de seringa-bomba: tipicamente 50 UI/kg em 50 ml SF (1 UI/kg/ml). ⚠️ Compatível com a maioria dos fármacos mas verificar — heparina inactiva por adsorção a várias superfícies.",
@@ -166,7 +173,9 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Monitorizar APTT ou anti-Xa 4–6h após início/ajuste",
       "⚠️ Osteoporose em uso prolongado"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; Monagle P et al. CHEST Guidelines 2018; BNF for Children 2023-24"
+    "source": "BNF for Children 2020-21, Heparin (unfractionated) (p. 101)",
+    "review": ["Removidas as doses de ECMO (bólus 50–100 U/kg, perfusão 20–60 U/kg/h, ACT 180–220 s) e a heparina de lavagem de linha (0,5–1 U/mL): o BNFC remete para o RCM/protocolo local; sem fonte verificada neste conjunto."]
+  
   },
   {
     "id": "digoxina",

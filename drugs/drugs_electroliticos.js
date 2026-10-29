@@ -56,7 +56,9 @@ var DRUGS_ELECTROLITICOS = [
       "Comprimidos LP (Slow-K): não triturar — risco úlcera esofágica",
       "Reposição IV preferida se K⁺ < 2,5 mEq/L ou sintomático"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed; BNF for Children 2023-24; Gennari FJ NEJM 1998"
+    "source": "BNF for Children 2020-21, Potassium chloride (p. 635)",
+    "review": ["O BNFC 2020-21 indica apenas \"dose de acordo com o défice ou as necessidades de manutenção\". As doses fixas desta ficha (0,5–1 mEq/kg, máx. 40 mEq/dose; manutenção 2–4 mEq/kg/dia; velocidades) não têm fonte verificada neste conjunto de documentos; seguir o protocolo local de reposição."]
+
   },
   {
     "id": "glicose",

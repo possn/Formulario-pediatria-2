@@ -551,18 +551,25 @@ var DRUGS_RESPIRATORIO = [
     ],
     "dose": [
       {
-        "ind": "Status asmático grave — SC",
-        "val": "0,01 mg/kg SC",
-        "max": "0,3 mg/dose",
-        "freq": "q20 min × 3; monitorizar FC e glicemia",
-        "note": "Alternativa: EV 2–10 μg/kg em 10 min (carga); perfusão 0,1–10 μg/kg/min"
+        "ind": "Asma aguda — SC ou EV lento",
+        "val": "2–14 anos: 10 mcg/kg até 4×/dia; 15–17 anos: 250–500 mcg até 4×/dia",
+        "max": "300 mcg/dose (2–14 anos)",
+        "freq": "Até 4×/dia",
+        "note": "BNFC 2020-21, Terbutaline sulfate (p. 166). Reservar a via EV para quem não pode usar via inalada ou sem resposta. Shann: SC 5–10 mcg/kg."
       },
       {
-        "ind": "Broncoespasmo grave — EV perfusão",
-        "val": "Carga 2–10 μg/kg EV em 10 min; manutenção 0,1–4 μg/kg/min",
-        "max": "10 μg/kg/min",
-        "freq": "Perfusão contínua; titular por resposta e FC",
-        "note": "Monitorizar K⁺, glicemia e ECG. Diminuir se FC > 200 bpm ou arritmias"
+        "ind": "Asma aguda — perfusão EV contínua",
+        "val": "Carga 2–4 mcg/kg, depois 1–10 mcg/kg/h, ajustar à resposta e à FC",
+        "max": "10 mcg/kg/h (monitorização apertada acima desta dose)",
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21 (p. 166). Shann (criança): 3–6 mcg/kg/min durante 1 h, depois 0,4–1 mcg/kg/min — valores superiores aos do BNFC."
+      },
+      {
+        "ind": "Asma moderada a grave — nebulização",
+        "val": "1 mês–4 anos: 5 mg; 5–11 anos: 5–10 mg; 12–17 anos: 10 mg",
+        "max": "—",
+        "freq": "Repetir cada 20–30 min se necessário",
+        "note": "BNFC 2020-21 (p. 166). Nebulizador accionado a oxigénio."
       }
     ],
     "prep": "SC: injecção não diluída (0,5 mg/ml) em coxa anterior ou abdómen. EV carga: diluir 0,1–0,2 mg/kg em 10 ml SF, infusão 10 min. Perfusão: 5 mg em 250 ml SF (20 μg/ml). ⚠️ Monitorizar K⁺ q1h — hipocaliemia significativa. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -578,6 +585,8 @@ var DRUGS_RESPIRATORIO = [
       "⚠️ Tremor e agitação frequentes — efeito β2 sistémico",
       "Reservar para falência da via inalatória — risco CV superior ao salbutamol nebulizado"
     ],
-    "source": "BNF for Children 2023-24; GINA 2023; BTS/SIGN Asthma Guidelines 2022"
+    "source": "BNF for Children 2020-21, Terbutaline sulfate (p. 166); Shann F. Drug Doses",
+    "review": ["BNFC (1–10 mcg/kg/h) e Shann (0,4–1 mcg/kg/min = 24–60 mcg/kg/h) divergem na perfusão EV; a ficha anterior indicava 0,1–4 mcg/kg/min. Seguir o protocolo local e monitorizar FC, potássio e lactato."]
+  
   }
 ];

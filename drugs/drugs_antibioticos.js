@@ -613,18 +613,11 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "≥ 3 meses EV",
-        "val": "70 mg/m² (dose de carga) → 50 mg/m²/dia",
-        "max": "70 mg carga; 50 mg/dia manutenção",
+        "ind": "Aspergilose invasiva, candidíase invasiva, tratamento empírico em neutropenia febril (perfusão EV)",
+        "val": "RN e 1–2 meses: 25 mg/m² 1×/dia; 3–11 meses: 50 mg/m² 1×/dia; 1–17 anos: 70 mg/m² no dia 1 (máx. 70 mg), depois 50 mg/m² 1×/dia (máx. 70 mg)",
+        "max": "70 mg/dia",
         "freq": "1×/dia",
-        "note": "Se sem resposta: 70 mg/m²/dia"
-      },
-      {
-        "ind": "Alternativa por peso < 3 meses",
-        "val": "25 mg/m²/dia EV",
-        "max": "—",
-        "freq": "1×/dia",
-        "note": "Dados limitados em neonatos"
+        "note": "BNFC 2020-21, Caspofungin (p. 405). Pode aumentar para 70 mg/m²/dia (máx. 70 mg) se tolerado e resposta insuficiente, ou com indutores enzimáticos (carbamazepina, dexametasona, fenitoína, rifampicina)."
       }
     ],
     "prep": "EV: aquecer frasco a T ambiente. Reconstituir com 10,5 ml SWFI (5 mg/ml). Diluir em SF ≤ 0,5 mg/ml (70 mg → SF 250 ml). ⚠️ NÃO diluir em SG5% (turvação). ⚠️ NÃO usar solução de albumina. Administrar em 60 min. Incompatível com heparina na mesma linha. Estabilidade: 24h a 25°C.",
@@ -637,7 +630,7 @@ var DRUGS_ANTIBIOTICOS = [
       "↑ ciclosporina (monitorizar níveis)",
       "Rifampicina e outros indutores CYP podem reduzir eficácia"
     ],
-    "source": "BNF for Children 2023-24; ESCMID/ECMM Guidelines 2023"
+    "source": "BNF for Children 2020-21, Caspofungin (p. 405)"
   },
   {
     "id": "voriconazol",
@@ -955,18 +948,32 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Dose única diária (extended interval — crianças > 1 mês)",
-        "val": "15–22,5 mg/kg/dose EV",
-        "max": "1500 mg/dose",
-        "freq": "q24h",
-        "note": "Preferir dose única diária (maximiza Cmax/MIC, reduz nefrotoxicidade). Monitorizar nível pré-dose (< 1 mg/L antes da 2ª dose)"
+        "ind": "Infecções graves por Gram-negativos resistentes à gentamicina — dose única diária",
+        "val": "Criança: 15 mg/kg 1×/dia; ajustar à concentração sérica (não usar em endocardite/meningite)",
+        "max": "—",
+        "freq": "1×/dia",
+        "note": "BNFC 2020-21, Amikacin (p. 332)."
       },
       {
-        "ind": "Neonatos < 29 semanas GA",
-        "val": "18 mg/kg/dose EV",
+        "ind": "Esquema de dose múltipla",
+        "val": "1 mês–11 anos: 7,5 mg/kg 12/12 h; 12–17 anos: 7,5 mg/kg 12/12 h, até 8/8 h se grave",
+        "max": "500 mg por dose (8/8 h), 15 g por curso",
+        "freq": "12/12 h ou 8/8 h",
+        "note": "BNFC 2020-21 (p. 332). Em perfusão ou injecção EV lenta (3–5 min)."
+      },
+      {
+        "ind": "Sépsis neonatal",
+        "val": "Intervalo alargado: 15 mg/kg 24/24 h; ou dose de carga 10 mg/kg, depois 7,5 mg/kg 12/12 h",
         "max": "—",
-        "freq": "q48h",
-        "note": "Neonatos 29–34 sem: 15 mg/kg q36h. ≥ 35 sem: 15 mg/kg q24h"
+        "freq": "24/24 h ou 12/12 h",
+        "note": "BNFC 2020-21 (p. 332)."
+      },
+      {
+        "ind": "Fibrose quística — infecção pulmonar por Pseudomonas",
+        "val": "10 mg/kg 8/8 h",
+        "max": "500 mg por dose",
+        "freq": "8/8 h",
+        "note": "BNFC 2020-21 (p. 332)."
       }
     ],
     "prep": "EV: diluir em SF ou SG5%. Concentração ≤ 10 mg/ml periférico; ≤ 25 mg/ml central. Administrar em 30–60 min. ⚠️ NUNCA em bólus — bloqueio neuromuscular. ⚠️ Incompatível na mesma linha com beta-lactâmicos — separar com flush SF. Estabilidade: 24h a 25°C.",
@@ -981,7 +988,9 @@ var DRUGS_ANTIBIOTICOS = [
       "Hidratar bem — nefrotoxicidade aumenta com depleção volumétrica",
       "Ototoxicidade pode ser irreversível — avaliar audiograma em tratamentos > 5 dias"
     ],
-    "source": "BNF for Children 2023-24; Moise-Broder PA et al. CID 2004; Neofax 2023"
+    "source": "BNF for Children 2020-21, Amikacin (p. 332)",
+    "review": ["Removidos 15–22,5 mg/kg (máx. 1500 mg) e o esquema neonatal por IG (<29 sem: 18 mg/kg 48/48 h) que citavam Neofax/Moise-Broder: não verificados neste conjunto de documentos."]
+  
   },
   {
     "id": "ciprofloxacina",
@@ -1354,25 +1363,25 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Meningite bacteriana / infecção grave",
-        "val": "50–75 mg/kg/dose EV",
-        "max": "2 g/dose (12 g/dia)",
-        "freq": "q6–8h (q6h na meningite)",
-        "note": "Neonatos: 50 mg/kg q12h (< 7 dias de vida); q8h (7–28 dias). Preferir a ceftriaxona em RN por não deslocar bilirrubina"
-      },
-      {
-        "ind": "Neonatal — Meningite / Sépsis grave EV",
-        "val": "< 7 dias: 50 mg/kg cada 12h; 7–28 dias: 50 mg/kg cada 8h; > 28 dias: 50 mg/kg cada 6–8h",
-        "max": "200 mg/kg/dia",
-        "freq": "conforme idade pós-natal",
-        "note": "Meningite gram-negativo: 50 mg/kg cada 6h × ≥ 21 dias"
-      },
-      {
-        "ind": "Neonatal — Sépsis tardia moderada EV",
-        "val": "50 mg/kg/dose EV",
+        "ind": "Infecções sensíveis, epiglotite, profilaxia cirúrgica",
+        "val": "RN ≤7 dias: 25 mg/kg 12/12 h; 7–20 dias: 25 mg/kg 8/8 h; 21–28 dias: 25 mg/kg 6–8/8 h; criança: 50 mg/kg 8–12/12 h",
         "max": "—",
-        "freq": "cada 8–12h (conforme idade)",
-        "note": ""
+        "freq": "Ver esquema",
+        "note": "BNFC 2020-21, Cefotaxime (p. 342)."
+      },
+      {
+        "ind": "Infecções graves / meningite",
+        "val": "RN ≤7 dias: 50 mg/kg 12/12 h; 7–20 dias: 50 mg/kg 8/8 h; 21–28 dias: 50 mg/kg 6–8/8 h; criança: 50 mg/kg 6/6 h",
+        "max": "12 g/dia",
+        "freq": "Ver esquema",
+        "note": "BNFC 2020-21 (p. 342). Fibrose quística (H. influenzae): 50 mg/kg 6–8/8 h, máx. 12 g/dia."
+      },
+      {
+        "ind": "Suspeita de meningite/doença meningocócica antes da transferência (alergia à penicilina)",
+        "val": "1 mês–11 anos: 50 mg/kg; 12–17 anos: 1 g",
+        "max": "—",
+        "freq": "Dose única",
+        "note": "BNFC 2020-21 (p. 342)."
       }
     ],
     "prep": "EV: reconstituir 500 mg em 10 ml SWFI; 1 g em 14 ml; 2 g em 20 ml. Diluir em SF ou SG5%. Concentração ≤ 40 mg/ml. Administrar em 30 min (infusão) ou 3–5 min (bólus lento ≤ 20 mg/ml). ⚠️ Em neonatos: NÃO administrar em linha com solução de cálcio EV. Estabilidade: 6h a 25°C; 24h a 4°C.",
@@ -1390,7 +1399,7 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ Ineficaz contra Listeria — manter ampicilina quando Listeria suspeita/confirmada",
       "Preferida à ceftriaxona em RN pela ausência de problemas com cálcio"
     ],
-    "source": "BNF for Children 2023-24; Tunkel AR et al. CID 2004; Neofax 2023; BNF for Children 2023-24; FDA Safety Alert 2007; BNFC Neonatal Formulary 9th Ed"
+    "source": "BNF for Children 2020-21, Cefotaxime (p. 342)"
   },
   {
     "id": "colistina",

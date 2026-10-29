@@ -20,18 +20,18 @@ var DRUGS_VASOACTIVOS = [
     ],
     "dose": [
       {
-        "ind": "Inotrópico / vasopressor",
-        "val": "5–20 mcg/kg/min",
+        "ind": "Hipotensão aguda, choque, insuficiência cardíaca, pós-cirurgia cardíaca — criança (perfusão EV)",
+        "val": "Inicial 5 mcg/kg/min, ajustar à resposta",
         "max": "20 mcg/kg/min",
-        "freq": "perfusão contínua",
-        "note": "< 5 mcg/kg/min: efeito dopaminérgico (vasodilatação renal — benefício clínico não comprovado). 5–10: inotrópico β1. > 10: vasopressor α1"
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21, Dopamine hydrochloride (p. 130). Diluir até máx. 3,2 mg/mL em glicose 5% ou NaCl 0,9%; concentrações superiores por cateter venoso central. Incompatível com bicarbonato e soluções alcalinas."
       },
       {
-        "ind": "Vasopressor / Inotrópico neonatal",
-        "val": "2–20 mcg/kg/min EV",
+        "ind": "Idem — recém-nascido",
+        "val": "Inicial 3 mcg/kg/min, ajustar à resposta",
         "max": "20 mcg/kg/min",
-        "freq": "perfusão contínua; titular pela TA e FC",
-        "note": "RN prematuro: iniciar com 2–5 mcg/kg/min. Doses baixas (2–5): efeito predominantemente dopaminérgico; doses altas (10–20): efeito α vasopressor"
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21 (p. 130): diluir 30 mg/kg de peso em 50 mL; 0,3 mL/h dá 3 mcg/kg/min."
       }
     ],
     "prep": "EV CENTRAL obrigatório (extravasamento → necrose; antídoto: fentolamina SC local). Diluir em SG5% (preferido) ou SF. Regra dos 3: peso(kg)×3 mg/50 ml SG5% → 1 ml/h = 1 μg/kg/min. Concentração habitual 400–3200 μg/ml conforme restrição de volume. ⚠️ Incompatível com bicarbonato, furosemida, gentamicina na mesma linha. Proteger da luz. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -52,7 +52,7 @@ var DRUGS_VASOACTIVOS = [
       "⚠️ Monitorização ECG e TA invasiva contínuas",
       "Surviving Sepsis Campaign Neonatal 2020: adrenalina preferida em choque séptico neonatal"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; Surviving Sepsis Campaign 2020; BNF for Children 2023-24; BNF for Children 2023-24; Valverde E. Pediatrics 2006; SSC Neonatal Guidelines 2020"
+    "source": "BNF for Children 2020-21, Dopamine hydrochloride (p. 130)"
   },
   {
     "id": "dobutamina",
@@ -71,18 +71,11 @@ var DRUGS_VASOACTIVOS = [
     ],
     "dose": [
       {
-        "ind": "Inotrópico",
-        "val": "2,5–20 mcg/kg/min",
-        "max": "40 mcg/kg/min",
-        "freq": "perfusão contínua",
-        "note": "Iniciar com dose baixa e titular. Efeito vasodilatador periférico — pode baixar TA se hipovolémico"
-      },
-      {
-        "ind": "Inotrópico neonatal",
-        "val": "5–20 mcg/kg/min EV",
+        "ind": "Suporte inotrópico em baixo débito, pós-cirurgia cardíaca, cardiomiopatia, choque — RN e criança",
+        "val": "Inicial 5 mcg/kg/min, ajustar para 2–20 mcg/kg/min",
         "max": "20 mcg/kg/min",
-        "freq": "perfusão contínua",
-        "note": "Iniciar com 5 mcg/kg/min e titular pela contractilidade (ecocardiografia) e hemodinâmica"
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21, Dobutamine (p. 129): usadas doses tão baixas como 0,5–1 mcg/kg/min. A ficha anterior indicava máx. 40 mcg/kg/min, valor que o BNFC não suporta."
       }
     ],
     "prep": "EV CENTRAL obrigatório. Diluir em SG5%, SF ou LR. Regra dos 3: peso(kg)×3 mg/50 ml → 1 ml/h = 1 μg/kg/min. Concentração 500–2000 μg/ml. ⚠️ NÃO misturar com bicarbonato (inactivação em pH alcalino), cefalosporinas, aminoglicosídeos na mesma linha. Estabilidade: 24h. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -101,7 +94,7 @@ var DRUGS_VASOACTIVOS = [
       "⚠️ Hipotensão se hipovolemia (efeito vasodilatador)",
       "Frequentemente associada à dopamina ou adrenalina em choque misto"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; BNF for Children 2023-24; BNFC Neonatal Formulary 9th Ed"
+    "source": "BNF for Children 2020-21, Dobutamine (p. 129)"
   },
   {
     "id": "noradrenalina",
@@ -175,7 +168,9 @@ var DRUGS_VASOACTIVOS = [
       "⚠️ Hiponatremia (efeito antidiurético) — monitorizar Na+ seriadamente",
       "Não tem efeito inotrópico — não usar como inotrópico isolado"
     ],
-    "source": "Surviving Sepsis Campaign 2020; BNF for Children 2023-24"
+    "source": "BNF for Children 2020-21, Vasopressin (p. 72); Surviving Sepsis Campaign Children 2020",
+    "review": ["O BNFC 2020-21 só indica vasopressina para hemorragia digestiva por varizes: 0,3 U/kg (máx. 20 U) em 20–30 min, depois 0,3 U/kg/h (máx. 1 U/kg/h), máx. 72 h. As doses desta ficha para choque vasoplégico e diabetes insípida central não estão no BNFC e não têm fonte verificada neste conjunto de documentos."]
+
   },
   {
     "id": "levosimendan",
@@ -257,7 +252,9 @@ var DRUGS_VASOACTIVOS = [
       "Pallor e dor abdominal durante infusão — sinais de alarme de isquemia esplâncnica",
       "Evidência pediátrica crescente mas ainda limitada vs adultos"
     ],
-    "source": "BNF for Children 2023-24; Matok I et al. Pediatr Crit Care Med 2005; EASL Clinical Practice Guidelines 2018"
+    "source": "BNF for Children 2020-21, Terlipressin acetate (p. 72); EASL 2018",
+    "review": ["BNFC 2020-21 só indica terlipressina para hemorragia por varizes em 12–17 anos: Glypressin 2 mg 4/4 h (reduzir para 1 mg 4/4 h), máx. 48 h; Variquel 1–2 mg inicial, depois 1 mg 4–6/6 h até 72 h. As doses em mcg/kg para crianças mais novas e para choque séptico não têm fonte verificada neste conjunto de documentos."]
+
   },
   {
     "id": "fenilefrina",
@@ -273,18 +270,25 @@ var DRUGS_VASOACTIVOS = [
     ],
     "dose": [
       {
-        "ind": "Hipotensão aguda — bólus",
-        "val": "5–10 μg/kg/dose EV/IO",
-        "max": "200 μg/dose",
-        "freq": "q5–10 min conforme necessidade",
-        "note": "Perfusão: 0,1–0,5 μg/kg/min; titular por resposta"
+        "ind": "Hipotensão aguda — injecção EV lenta",
+        "val": "1–11 anos: 5–20 mcg/kg; 12–17 anos: 100–500 mcg",
+        "max": "500 mcg/dose",
+        "freq": "Repetir após ≥ 15 min se necessário",
+        "note": "BNFC 2020-21, Phenylephrine hydrochloride (p. 132)."
       },
       {
-        "ind": "Crise hipóxica Fallot",
-        "val": "10–20 μg/kg EV rápido",
-        "max": "500 μg",
-        "freq": "Dose única; repetir se necessário",
-        "note": "Associar morfina 0,1 mg/kg EV e posição genupeitoral"
+        "ind": "Hipotensão aguda — perfusão EV",
+        "val": "1–15 anos: inicial 0,1–0,5 mcg/kg/min, ajustar à resposta",
+        "max": "—",
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21 (p. 132). 16–17 anos: até 180 mcg/min inicialmente, reduzir para 30–60 mcg/min."
+      },
+      {
+        "ind": "Hipotensão aguda — IM/SC",
+        "val": "1–11 anos: 100 mcg/kg; 12–17 anos: 2–5 mg inicial",
+        "max": "5 mg/dose",
+        "freq": "A cada 1–2 h (1–11 anos)",
+        "note": "BNFC 2020-21 (p. 132)."
       }
     ],
     "prep": "EV bólus: diluir a 100–200 μg/ml em SF (10 mg em 50 ml = 200 μg/ml). Perfusão: 50 mg em 250 ml SF (200 μg/ml). Via periférica aceitável para perfusão de curta duração e bólus; central para perfusão prolongada. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -299,6 +303,8 @@ var DRUGS_VASOACTIVOS = [
       "Vasoconstricção periférica — monitorizar perfusão de extremidades",
       "Vantagem: sem efeito cronotrópico positivo — útil quando taquicardia é problema"
     ],
-    "source": "BNF for Children 2023-24; Zaritsky A et al. Pediatrics 1992; Park MK Pediatric Cardiology 2014"
+    "source": "BNF for Children 2020-21, Phenylephrine hydrochloride (p. 132)",
+    "review": ["A ficha anterior indicava bólus 5–10 mcg/kg (máx. 200 mcg) a cada 5–10 min e crise hipóxica de Fallot 10–20 mcg/kg: não correspondem ao BNFC (5–20 mcg/kg, máx. 500 mcg, intervalo ≥ 15 min). A dose para crise de Fallot não tem fonte verificada neste conjunto de documentos."]
+  
   }
 ];
