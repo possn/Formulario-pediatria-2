@@ -45,7 +45,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "BNFC 2020-21 (p. 236)."
       }
     ],
-    "prep": "EV: NÃO diluir — precipita em qualquer diluente (forma emulsão instável). Administrar NÃO DILUÍDO (5 mg/ml) < 2 mg/min em veia de grande calibre (veia antecubital ou veia central). Via periférica distal → tromboflebite severa. Concentração máxima: 5 mg/ml (não reduzir). Rectal (Stesolid): inserir tubo 3–4 cm, comprimir e manter 5 min em decúbito. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: NÃO diluir — precipita em qualquer diluente (forma emulsão instável). Administrar NÃO DILUÍDO (5 mg/ml) < 2 mg/min em veia de grande calibre (veia antecubital ou veia central). Via periférica distal → tromboflebite severa. Concentração máxima: 5 mg/ml (não reduzir). Rectal (Stesolid): inserir tubo 3–4 cm, comprimir e manter 5 min em decúbito. Fonte: NHS Medusa 2024.",
     "ci": [
       "Depressão respiratória grave",
       "Miastenia gravis",
@@ -449,7 +449,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "BNFC 2020-21 (p. 227)."
       }
     ],
-    "prep": "Oral: cápsulas sprinkle 15/25 mg — podem ser abertas e conteúdo misturado em 1 colher de alimento mole (não mastigar grânulos). Comprimidos 25/50/100/200 mg — NÃO triturar (amargor intenso). Suspensão oral 6 mg/ml (magistral). Tomar com ou sem alimentos. Hidratação adequada (risco nefrolitíase). Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: cápsulas sprinkle 15/25 mg — podem ser abertas e conteúdo misturado em 1 colher de alimento mole (não mastigar grânulos). Comprimidos 25/50/100/200 mg — NÃO triturar (amargor intenso). Suspensão oral 6 mg/ml (magistral). Tomar com ou sem alimentos. Hidratação adequada (risco nefrolitíase).",
     "ci": [
       "Nefrolitíase recorrente (relativa)",
       "Glaucoma (relativa)"
@@ -490,7 +490,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "BNFC 2020-21 (p. 230). Via rectal (granulado): mesmas doses em 1 mês–11 anos."
       }
     ],
-    "prep": "Oral: sachets 500 mg — dissolver em 10 ml água fria imediatamente antes de administrar. Comprimidos 500 mg — podem ser triturados. Tomar com ou sem alimentos. Solução magistral disponível para lactentes. Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: sachets 500 mg — dissolver em 10 ml água fria imediatamente antes de administrar. Comprimidos 500 mg — podem ser triturados. Tomar com ou sem alimentos. Solução magistral disponível para lactentes.",
     "ci": [
       "Neuropatia óptica prévia",
       "Campos visuais alterados"
@@ -530,7 +530,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "Nível terapêutico (10-OH-CBZ): 3–35 mcg/ml"
       }
     ],
-    "prep": "Oral: suspensão 300 mg/5 ml (60 mg/ml) — agitar bem antes de usar (30 seg); medir com seringa oral graduada. Comprimidos 150/300/600 mg. Pode misturar suspensão em água. Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: suspensão 300 mg/5 ml (60 mg/ml) — agitar bem antes de usar (30 seg); medir com seringa oral graduada. Comprimidos 150/300/600 mg. Pode misturar suspensão em água. Tomar com ou sem alimentos.",
     "ci": [
       "Hipersensibilidade à carbamazepina (reacção cruzada 25–30%)"
     ],
@@ -576,7 +576,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "BNFC 2020-21 (p. 226). Cápsulas e saquetas de pó não são bioequivalentes; trocar de formulação sob supervisão clínica."
       }
     ],
-    "prep": "Oral: cápsulas 250/500 mg ou sachets de pó 250/500 mg — dissolver pó em água ou sumo; cápsulas podem ser abertas. Tomar COM refeições (absorção aumenta com alimentos). ⚠️ SEMPRE em combinação com valproato e/ou clobazam — inibe CYP2C19 e CYP3A4 (ajustar doses dos outros AE). Fonte: BNF for Children 2023-24; SmPC Diacomit.",
+    "prep": "Oral: cápsulas 250/500 mg ou sachets de pó 250/500 mg — dissolver pó em água ou sumo; cápsulas podem ser abertas. Tomar COM refeições (absorção aumenta com alimentos). ⚠️ SEMPRE em combinação com valproato e/ou clobazam — inibe CYP2C19 e CYP3A4 (ajustar doses dos outros AE). Fonte: SmPC Diacomit.",
     "ci": [
       "Uso sem valproato + clobazam no Dravet"
     ],
@@ -604,14 +604,21 @@ var DRUGS_ANTIEPILEPTICOS = [
     ],
     "dose": [
       {
-        "ind": "Dravet / Lennox-Gastaut / esclerose tuberosa",
-        "val": "Início: 2,5 mg/kg/dose PO × 2/dia (5 mg/kg/dia)",
-        "max": "10–20 mg/kg/dia (máx 20 mg/kg/dia na ETC)",
-        "freq": "q12h com alimentos gordurosos (aumenta absorção 3–4×)",
-        "note": "Titular: aumentar 2,5 mg/kg/dose (5 mg/kg/dia) a cada semana até resposta ou efeito adverso"
+        "ind": "Síndrome de Lennox-Gastaut (adjuvante com clobazam; uso especializado) — oral, 2–17 anos",
+        "val": "Inicial 2,5 mg/kg 2×/dia durante 1 semana; depois 5 mg/kg 2×/dia; aumentar em passos de 2,5 mg/kg 2×/dia com intervalos semanais conforme resposta",
+        "max": "20 mg/kg/dia",
+        "freq": "2×/dia, sempre com o mesmo padrão alimentar",
+        "note": "BNFC 2020-21 (p. 208). Os alimentos afetam a absorção."
+      },
+      {
+        "ind": "Síndrome de Dravet / esclerose tuberosa (RCM; não consta do BNFC)",
+        "val": "Inicial 2,5 mg/kg 2×/dia; alvo habitual 5 mg/kg 2×/dia (10 mg/kg/dia), até 10 mg/kg 2×/dia",
+        "max": "20 mg/kg/dia",
+        "freq": "2×/dia",
+        "note": "Devinsky O et al. NEJM 2017 (Dravet); RCM do Epidyolex. Monitorizar transaminases."
       }
     ],
-    "prep": "Oral: solução 100 mg/ml (Epidyolex) — seringa de dosagem calibrada incluída na embalagem. Tomar SEMPRE com alimentos ricos em gordura (aumenta biodisponibilidade 3–4×). Refrigerar após abertura; estável 12 semanas. ⚠️ Não substituir por outros produtos de canábis — Epidyolex é formulação padronizada e aprovada. Fonte: BNF for Children 2023-24; SmPC Epidyolex.",
+    "prep": "Oral: solução 100 mg/ml (Epidyolex) — seringa de dosagem calibrada incluída na embalagem. Tomar SEMPRE com alimentos ricos em gordura (aumenta biodisponibilidade 3–4×). Refrigerar após abertura; estável 12 semanas. ⚠️ Não substituir por outros produtos de canábis — Epidyolex é formulação padronizada e aprovada. Fonte: SmPC Epidyolex.",
     "ci": [
       "Insuficiência hepática moderada a grave (ajuste de dose)",
       "Hipersensibilidade"
@@ -624,7 +631,9 @@ var DRUGS_ANTIEPILEPTICOS = [
       "Substância controlada em Portugal — prescrição obrigatoriamente por neurologista pediátrico",
       "Epidyolex ≠ produtos de canábis medicinal — formulação padronizada e aprovada"
     ],
-    "source": "BNF for Children 2023-24; Devinsky O et al. NEJM 2017 (Dravet); Thiele EA et al. Lancet 2018 (LGS); EMA Epidyolex EPAR 2019"
+    "source": "BNFC 2020-21, Cannabidiol (p. 208); Devinsky O et al. NEJM 2017 (Dravet)",
+    "review": ["Indicações Dravet e esclerose tuberosa: fora do BNFC 2020-21 (usar RCM)."]
+  
   },
   {
     "id": "brivaracetam",
@@ -653,7 +662,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "BNFC 2020-21 (p. 208)."
       }
     ],
-    "prep": "EV: pode administrar não diluído (10 mg/ml) em bólus 15 min, OU diluir em SF, SG5% ou RL. Concentração após diluição 1–10 mg/ml. Oral: solução 10 mg/ml — compatível com SNG. Equivalência oral/EV 1:1 — conversão directa sem ajuste. Fonte: BNF for Children 2023-24; SmPC Briviact.",
+    "prep": "EV: pode administrar não diluído (10 mg/ml) em bólus 15 min, OU diluir em SF, SG5% ou RL. Concentração após diluição 1–10 mg/ml. Oral: solução 10 mg/ml — compatível com SNG. Equivalência oral/EV 1:1 — conversão directa sem ajuste. Fonte: SmPC Briviact.",
     "ci": ["Hipersensibilidade a levetiracetam ou brivaracetam (reactividade cruzada possível)"],
     "alert": [
       "Menores efeitos comportamentais que levetiracetam (agitação, irritabilidade) — preferir se LEV mal tolerado",
@@ -692,7 +701,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "BNFC 2020-21 (p. 219)."
       }
     ],
-    "prep": "Oral: comprimidos 2/4/6/8/10/12 mg — engolir inteiros com água. Suspensão oral 0,5 mg/ml. Tomar AO DEITAR (sedação; não na manhã). ⚠️ Não partir comprimidos (perda de dose). Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: comprimidos 2/4/6/8/10/12 mg — engolir inteiros com água. Suspensão oral 0,5 mg/ml. Tomar AO DEITAR (sedação; não na manhã). ⚠️ Não partir comprimidos (perda de dose).",
     "ci": [
       "Psicose activa ou história de comportamento agressivo grave (relativa — monitorizar)",
       "Hipersensibilidade"
@@ -718,21 +727,42 @@ var DRUGS_ANTIEPILEPTICOS = [
     ],
     "dose": [
       {
-        "ind": "SE agudo — bucal (Buccolam aprovado)",
-        "val": "< 3 meses: 0,3 mg/kg; 3m–1a: 2,5 mg; 1–5a: 5 mg; 5–10a: 7,5 mg; ≥ 10a: 10 mg",
-        "max": "10 mg",
-        "freq": "Dose única; repetir 1× após 10 min se sem resposta",
-        "note": "Eficácia equivalente ao diazepam EV (Appleton R et al. Lancet 2008)"
+        "ind": "Estado de mal epilético / convulsão febril — bucal, RN",
+        "val": "300 mcg/kg; repetir 300 mcg/kg após 10 min, se necessário",
+        "max": "—",
+        "freq": "Repetir 1× aos 10 min",
+        "note": "BNFC 2020-21 (p. 239)."
       },
       {
-        "ind": "SE agudo — intranasal (off-label)",
-        "val": "0,2–0,3 mg/kg IN",
+        "ind": "Estado de mal epilético / convulsão febril — bucal, 1–2 meses",
+        "val": "300 mcg/kg (máx. 2,5 mg); repetir após 10 min",
+        "max": "2,5 mg/dose",
+        "freq": "Repetir 1× aos 10 min",
+        "note": "BNFC 2020-21 (p. 239)."
+      },
+      {
+        "ind": "Estado de mal epilético / convulsão febril — bucal, 3 meses–17 anos",
+        "val": "3–11 meses: 2,5 mg; 1–4 anos: 5 mg; 5–9 anos: 7,5 mg; 10–17 anos: 10 mg; repetir a mesma dose após 10 min",
+        "max": "10 mg/dose",
+        "freq": "Repetir 1× aos 10 min",
+        "note": "BNFC 2020-21 (p. 239). Buccolam."
+      },
+      {
+        "ind": "Estado de mal epilético — EV (RN e criança)",
+        "val": "Inicial 150–200 mcg/kg; depois perfusão 60 mcg/kg/h, aumentar 60 mcg/kg/h cada 15 min até controlo",
+        "max": "300 mcg/kg/h",
+        "freq": "Perfusão contínua",
+        "note": "BNFC 2020-21 (p. 239)."
+      },
+      {
+        "ind": "Estado de mal epilético — intranasal (off-label)",
+        "val": "0,2–0,3 mg/kg intranasal",
         "max": "10 mg",
-        "freq": "Dose única; 0,5 mg/dose por narina usando atomizador MAD",
-        "note": "Solução 5 mg/ml — concentração suficiente para volume IN mínimo. Onset 5–10 min"
+        "freq": "Dose única; metade da dose em cada narina",
+        "note": "Não consta do BNFC 2020-21. Uso fora de indicação."
       }
     ],
-    "prep": "Bucal (Buccolam): pronto a usar — seringa oral calibrada. Aplicar metade do volume em cada bochecha, entre gengiva e mucosa; não engolir durante 1 min. Intranasal (off-label): atomizador MAD — usar solução 5 mg/ml para mínimo volume (0,5 ml/narina máx). Buccolam 2,5 ml: aplicar 1,25 ml por bochecha. Fonte: BNF for Children 2023-24; SmPC Buccolam.",
+    "prep": "Bucal (Buccolam): pronto a usar — seringa oral calibrada. Aplicar metade do volume em cada bochecha, entre gengiva e mucosa; não engolir durante 1 min. Intranasal (off-label): atomizador MAD — usar solução 5 mg/ml para mínimo volume (0,5 ml/narina máx). Buccolam 2,5 ml: aplicar 1,25 ml por bochecha. Fonte: SmPC Buccolam.",
     "ci": [
       "Depressão respiratória grave",
       "Idade < 3 meses sem monitorização"
@@ -743,7 +773,9 @@ var DRUGS_ANTIEPILEPTICOS = [
       "Buccolam: solução aprovada para uso pediátrico pré-hospitalar — preferir ao diazepam rectal",
       "Via IN absorção rápida e reprodutível — alternativa valiosa quando IV indisponível"
     ],
-    "source": "BNF for Children 2023-24; Appleton R et al. Lancet 2008; NICE CG137 Epilepsies 2022"
+    "source": "BNFC 2020-21, Midazolam (p. 239); Appleton R et al. Lancet 2008; NICE CG137 (2022)",
+    "review": ["A ficha anterior tinha < 3 meses 0,3 mg/kg sem limite, 1–5 anos 5 mg e 5–10 anos 7,5 mg; o BNFC 2020-21 limita a 2,5 mg em 1–2 meses e define 1–4 e 5–9 anos."]
+  
   },
   {
     "id": "clobazam",
@@ -773,7 +805,7 @@ var DRUGS_ANTIEPILEPTICOS = [
         "note": "BNFC 2020-21 (p. 234). Não confundir clobazam com clonazepam."
       }
     ],
-    "prep": "Oral: comprimidos 10 mg — podem ser triturados e dissolvidos em água. Solução oral 1 mg/ml. Tomar com ou sem alimentos. Substância psicotrópica — receita especial. Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: comprimidos 10 mg — podem ser triturados e dissolvidos em água. Solução oral 1 mg/ml. Tomar com ou sem alimentos. Substância psicotrópica — receita especial.",
     "ci": [
       "Miastenia gravis",
       "Insuf. respiratória grave",

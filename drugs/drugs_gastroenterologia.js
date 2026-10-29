@@ -193,7 +193,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": "BNFC 2020-21 (p. 58). A ficha anterior indicava 40–80 mg/kg/dia, esquema que o BNFC não usa."
       }
     ],
-    "prep": "Oral: suspensão 1 g/5 ml (ou comprimidos 1 g dissolvidos em 10 ml água). Tomar 30 min ANTES das refeições e ao deitar — forma barreira física na mucosa gástrica. ⚠️ Separar 2h de outros fármacos (adsorção); antiácidos reduzem eficácia. Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: suspensão 1 g/5 ml (ou comprimidos 1 g dissolvidos em 10 ml água). Tomar 30 min ANTES das refeições e ao deitar — forma barreira física na mucosa gástrica. ⚠️ Separar 2h de outros fármacos (adsorção); antiácidos reduzem eficácia.",
     "ci": [
       "Insuf. renal grave (acumulação alumínio)"
     ],
@@ -247,7 +247,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": "BNFC 2020-21 (p. 34)."
       }
     ],
-    "prep": "Oral: comprimidos de libertação prolongada (Pentasa, Asacol) — engolir INTEIROS, nunca triturar (revestimento gastroresistente é crítico). Granulados: misturar em água ou sumo, ingerir imediatamente. Rectal: supositórios — inserir com ponta lubrificada após dejecção; enema 1 g/100 ml — reter 30 min. Fonte: BNF for Children 2023-24; SmPC Pentasa.",
+    "prep": "Oral: comprimidos de libertação prolongada (Pentasa, Asacol) — engolir INTEIROS, nunca triturar (revestimento gastroresistente é crítico). Granulados: misturar em água ou sumo, ingerir imediatamente. Rectal: supositórios — inserir com ponta lubrificada após dejecção; enema 1 g/100 ml — reter 30 min. Fonte: SmPC Pentasa.",
     "ci": [
       "Hipersensibilidade a salicilatos",
       "Insuf. renal grave",
@@ -309,7 +309,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": "BNFC 2020-21 (p. 59). Pode ser dada em perfusão intermitente a 25 mg/h; 12–17 anos: passar a 150 mg 2×/dia oral."
       }
     ],
-    "prep": "EV (famotidina — ranitidina retirada do mercado): diluir em SF até 2 mg/ml (concentração máxima 4 mg/ml). Administrar em 15–30 min. Bólus lento aceitável: 2 mg/ml em 2 min se necessário. Oral: comprimidos 20/40 mg; solução extemporânea 8 mg/ml. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV (famotidina — ranitidina retirada do mercado): diluir em SF até 2 mg/ml (concentração máxima 4 mg/ml). Administrar em 15–30 min. Bólus lento aceitável: 2 mg/ml em 2 min se necessário. Oral: comprimidos 20/40 mg; solução extemporânea 8 mg/ml. Fonte: NHS Medusa 2024.",
     "ci": [
       "Hipersensibilidade a anti-H2",
       "Insuficiência renal grave sem ajuste"
@@ -357,7 +357,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": "BNFC 2020-21 (p. 278)."
       }
     ],
-    "prep": "Oral: suspensão 1 mg/ml — medir com seringa oral graduada (não colher de chá). Tomar 15–30 min ANTES das refeições (procinético — acção sobre motilidade gástrica). Comprimidos 10 mg para crianças maiores. ⚠️ Dose máxima 0,5 mg/kg/dia — doses superiores aumentam risco QT. Fonte: BNF for Children 2023-24; SmPC Motilium.",
+    "prep": "Oral: suspensão 1 mg/ml — medir com seringa oral graduada (não colher de chá). Tomar 15–30 min ANTES das refeições (procinético — acção sobre motilidade gástrica). Comprimidos 10 mg para crianças maiores. ⚠️ Dose máxima 0,5 mg/kg/dia — doses superiores aumentam risco QT. Fonte: SmPC Motilium.",
     "ci": [
       "QT prolongado / arritmias cardíacas",
       "Insuf. hepática grave",
@@ -417,7 +417,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": "BNFC 2020-21 (p. 71)."
       }
     ],
-    "prep": "Oral: suspensão 250 mg/5 ml — agitar bem antes de usar (30 segundos); conservar a 4°C após abertura, usar em 3 meses. Cápsulas 250 mg — podem ser abertas e misturadas em alimentos moles. Tomar COM refeições para maximizar circulação entero-hepática e minimizar intolerância GI. Fonte: BNF for Children 2023-24; SmPC Ursofalk.",
+    "prep": "Oral: suspensão 250 mg/5 ml — agitar bem antes de usar (30 segundos); conservar a 4°C após abertura, usar em 3 meses. Cápsulas 250 mg — podem ser abertas e misturadas em alimentos moles. Tomar COM refeições para maximizar circulação entero-hepática e minimizar intolerância GI. Fonte: SmPC Ursofalk.",
     "ci": [
       "Inflamação aguda da vesícula biliar ou vias biliares",
       "Obstrução biliar completa"
@@ -459,7 +459,7 @@ var DRUGS_GASTROENTEROLOGIA = [
         "note": ""
       }
     ],
-    "prep": "Oral: comprimidos 200 mg e 550 mg — engolir inteiros com água. Tomar com ou sem alimentos. Não triturar (revestimento entérico garante acção intestinal localizada; triturar reduz eficácia e aumenta absorção sistémica). Fonte: BNF for Children 2023-24; SmPC Normix.",
+    "prep": "Oral: comprimidos 200 mg e 550 mg — engolir inteiros com água. Tomar com ou sem alimentos. Não triturar (revestimento entérico garante acção intestinal localizada; triturar reduz eficácia e aumenta absorção sistémica). Fonte: SmPC Normix.",
     "ci": [
       "Hipersensibilidade a rifamicinas",
       "Obstrução intestinal",

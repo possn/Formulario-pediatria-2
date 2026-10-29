@@ -1343,7 +1343,7 @@ var DRUGS_ANTIBIOTICOS = [
         "note": "Quando cotrimoxazol não tolerado por intolerância à sulfa; eficácia ligeiramente inferior"
       }
     ],
-    "prep": "Oral: suspensão 50 mg/5 ml (10 mg/ml) — agitar bem; estável 14 dias após abertura. Comprimidos 100/200 mg — podem ser triturados e dissolvidos em água. Tomar com ou sem alimentos. Assegurar hidratação adequada (pode cristalizar nos túbulos renais em doses altas). Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: suspensão 50 mg/5 ml (10 mg/ml) — agitar bem; estável 14 dias após abertura. Comprimidos 100/200 mg — podem ser triturados e dissolvidos em água. Tomar com ou sem alimentos. Assegurar hidratação adequada (pode cristalizar nos túbulos renais em doses altas).",
     "ci": [
       "Deficiência de folato documentada (anemia megaloblástica)",
       "Insuficiência renal grave (TFG < 15 ml/min) sem ajuste",

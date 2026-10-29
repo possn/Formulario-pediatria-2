@@ -34,7 +34,7 @@ var DRUGS_VASOACTIVOS = [
         "note": "BNFC 2020-21 (p. 130): diluir 30 mg/kg de peso em 50 mL; 0,3 mL/h dá 3 mcg/kg/min."
       }
     ],
-    "prep": "EV CENTRAL obrigatório (extravasamento → necrose; antídoto: fentolamina SC local). Diluir em SG5% (preferido) ou SF. Regra dos 3: peso(kg)×3 mg/50 ml SG5% → 1 ml/h = 1 μg/kg/min. Concentração habitual 400–3200 μg/ml conforme restrição de volume. ⚠️ Incompatível com bicarbonato, furosemida, gentamicina na mesma linha. Proteger da luz. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV CENTRAL obrigatório (extravasamento → necrose; antídoto: fentolamina SC local). Diluir em SG5% (preferido) ou SF. Regra dos 3: peso(kg)×3 mg/50 ml SG5% → 1 ml/h = 1 μg/kg/min. Concentração habitual 400–3200 μg/ml conforme restrição de volume. ⚠️ Incompatível com bicarbonato, furosemida, gentamicina na mesma linha. Proteger da luz. Fonte: NHS Medusa 2024.",
     "ci": [
       "Feocromocitoma",
       "FV/TV não tratada",
@@ -78,7 +78,7 @@ var DRUGS_VASOACTIVOS = [
         "note": "BNFC 2020-21, Dobutamine (p. 129): usadas doses tão baixas como 0,5–1 mcg/kg/min. A ficha anterior indicava máx. 40 mcg/kg/min, valor que o BNFC não suporta."
       }
     ],
-    "prep": "EV CENTRAL obrigatório. Diluir em SG5%, SF ou LR. Regra dos 3: peso(kg)×3 mg/50 ml → 1 ml/h = 1 μg/kg/min. Concentração 500–2000 μg/ml. ⚠️ NÃO misturar com bicarbonato (inactivação em pH alcalino), cefalosporinas, aminoglicosídeos na mesma linha. Estabilidade: 24h. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV CENTRAL obrigatório. Diluir em SG5%, SF ou LR. Regra dos 3: peso(kg)×3 mg/50 ml → 1 ml/h = 1 μg/kg/min. Concentração 500–2000 μg/ml. ⚠️ NÃO misturar com bicarbonato (inactivação em pH alcalino), cefalosporinas, aminoglicosídeos na mesma linha. Estabilidade: 24h. Fonte: NHS Medusa 2024.",
     "ci": [
       "Cardiomiopatia hipertrófica obstrutiva",
       "Feocromocitoma",
@@ -116,7 +116,7 @@ var DRUGS_VASOACTIVOS = [
         "note": "BNFC 2020-21, Noradrenaline/Norepinephrine (p. 131): RN e criança 20–100 ng/kg/min; máx. 1 mcg/kg/min; diluir o concentrado de 1 mg/mL. Shann (Drug Doses): preparação para 0,02–0,2 mcg/kg/min e para 0,1–0,5 mcg/kg/min; via periférica de curta duração 0,05–0,1 mcg/kg/min. Doses acima de 1 mcg/kg/min não constam das fontes disponíveis."
       }
     ],
-    "prep": "EV CENTRAL obrigatório. Diluir em SG5% ou SF. Concentração periférica de emergência: ≤ 16 μg/ml com vigilância estrita de flebite (cada 1h). Central habitual: 32–200 μg/ml. Regra dos 3: peso(kg)×0,3 mg/50 ml → 1 ml/h = 0,1 μg/kg/min. Proteger da luz. Antídoto extravasamento: fentolamina 5 mg em 10 ml SF, injectar SC na área. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV CENTRAL obrigatório. Diluir em SG5% ou SF. Concentração periférica de emergência: ≤ 16 μg/ml com vigilância estrita de flebite (cada 1h). Central habitual: 32–200 μg/ml. Regra dos 3: peso(kg)×0,3 mg/50 ml → 1 ml/h = 0,1 μg/kg/min. Proteger da luz. Antídoto extravasamento: fentolamina 5 mg em 10 ml SF, injectar SC na área. Fonte: NHS Medusa 2024.",
     "ci": [
       "Hipovolemia não corrigida",
       "Oclusão vascular periférica"
@@ -157,7 +157,7 @@ var DRUGS_VASOACTIVOS = [
         "note": ""
       }
     ],
-    "prep": "EV: diluir em SF ou SG5% para 0,1–1 UI/ml. Via central preferida; periférico aceitável a ≤ 0,4 UI/ml com vigilância. Regra prática: 1–4 UI em 50 ml SF. Estabilidade: 24h a 25°C. ⚠️ Isquemia periférica com doses altas — monitorizar extremidades. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: diluir em SF ou SG5% para 0,1–1 UI/ml. Via central preferida; periférico aceitável a ≤ 0,4 UI/ml com vigilância. Regra prática: 1–4 UI em 50 ml SF. Estabilidade: 24h a 25°C. ⚠️ Isquemia periférica com doses altas — monitorizar extremidades. Fonte: NHS Medusa 2024.",
     "ci": [
       "Doença coronária grave (relativa)",
       "Insuf. cardíaca grave (relativa)"
@@ -228,7 +228,7 @@ var DRUGS_VASOACTIVOS = [
         "note": ""
       }
     ],
-    "prep": "EV bólus: reconstituir 0,2 mg/ml em SF; bólus lento 2 min. Perfusão: diluir para 0,1 mg/ml em SF ou SG5%. Estabilidade: 24h a 25°C. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV bólus: reconstituir 0,2 mg/ml em SF; bólus lento 2 min. Perfusão: diluir para 0,1 mg/ml em SF ou SG5%. Estabilidade: 24h a 25°C. Fonte: NHS Medusa 2024.",
     "ci": [
       "Isquemia miocárdica activa",
       "Doença vascular periférica grave",
@@ -281,7 +281,7 @@ var DRUGS_VASOACTIVOS = [
         "note": "BNFC 2020-21 (p. 132)."
       }
     ],
-    "prep": "EV bólus: diluir a 100–200 μg/ml em SF (10 mg em 50 ml = 200 μg/ml). Perfusão: 50 mg em 250 ml SF (200 μg/ml). Via periférica aceitável para perfusão de curta duração e bólus; central para perfusão prolongada. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV bólus: diluir a 100–200 μg/ml em SF (10 mg em 50 ml = 200 μg/ml). Perfusão: 50 mg em 250 ml SF (200 μg/ml). Via periférica aceitável para perfusão de curta duração e bólus; central para perfusão prolongada. Fonte: NHS Medusa 2024.",
     "ci": [
       "Hipertensão grave",
       "Doença coronária severa",

@@ -65,7 +65,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "BNFC 2020-21 (p. 164)."
       }
     ],
-    "prep": "Nebulização: diluir em SF para volume total 3–5 ml. Débito O2: 6–8 L/min. MDI: 1 puff de cada vez com câmara expansora (5 respirações entre puffs). Nebulização contínua (status asmático): diluir dose horária em 10–16 ml SF, débito O2 constante. EV bólus: 15 μg/kg em 10 ml SF em 10 min. EV perfusão: 5 mg em 50 ml SF (100 μg/ml). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "Nebulização: diluir em SF para volume total 3–5 ml. Débito O2: 6–8 L/min. MDI: 1 puff de cada vez com câmara expansora (5 respirações entre puffs). Nebulização contínua (status asmático): diluir dose horária em 10–16 ml SF, débito O2 constante. EV bólus: 15 μg/kg em 10 ml SF em 10 min. EV perfusão: 5 mg em 50 ml SF (100 μg/ml). Fonte: NHS Medusa 2024.",
     "ci": [
       "Taquicardia não explicada (relativa)"
     ],
@@ -102,7 +102,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "BNFC 2020-21, Hydroxyzine hydrochloride (p. 187). Contra-indicada com QT longo ou factores de risco (MHRA/CHM 2015)."
       }
     ],
-    "prep": "Oral: xarope 2 mg/ml ou 10 mg/5 ml — pode misturar em água ou sumo. Comprimidos 10/25 mg. EV/IM (uso hospitalar): IM profunda — não EV (risco hemólise e trombose). Concentração IM: solução 50 mg/ml. Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: xarope 2 mg/ml ou 10 mg/5 ml — pode misturar em água ou sumo. Comprimidos 10/25 mg. EV/IM (uso hospitalar): IM profunda — não EV (risco hemólise e trombose). Concentração IM: solução 50 mg/ml.",
     "ci": [
       "Prolongamento QT congénito",
       "Porfiria",
@@ -138,7 +138,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "Shann, Drug Doses (entrada Cetirizine). Cetirizina não localizada no índice do BNFC 2020-21; para levocetirizina o BNFC indica 1,25 mg 2×/dia (2–5 anos) e 5 mg 1×/dia (6–17 anos), p. 184."
       }
     ],
-    "prep": "Oral: gotas 10 mg/ml (1 gota = 0,5 mg; 20 gotas = 10 mg = 1 ml). Xarope 5 mg/5 ml. Comprimidos 10 mg. Pode misturar em água, sumo ou leite. Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: gotas 10 mg/ml (1 gota = 0,5 mg; 20 gotas = 10 mg = 1 ml). Xarope 5 mg/5 ml. Comprimidos 10 mg. Pode misturar em água, sumo ou leite. Tomar com ou sem alimentos.",
     "ci": [
       "Insuf. renal grave (ajustar dose)"
     ],
@@ -177,7 +177,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "Doses do RCM da loratadina."
       }
     ],
-    "prep": "Oral: xarope 5 mg/5 ml (1 mg/ml). Comprimidos 10 mg (podem ser dissolvidos em água para crianças pequenas). Comprimidos orodispersíveis disponíveis. Tomar de preferência em jejum (absorção pode reduzir ligeiramente com alimentos gordurosos). Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: xarope 5 mg/5 ml (1 mg/ml). Comprimidos 10 mg (podem ser dissolvidos em água para crianças pequenas). Comprimidos orodispersíveis disponíveis. Tomar de preferência em jejum (absorção pode reduzir ligeiramente com alimentos gordurosos).",
     "ci": [
       "Hipersensibilidade"
     ],
@@ -362,7 +362,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "BNFC 2020-21 (p. 174). Vigiar alterações neuropsiquiátricas (alerta FDA 2020)."
       }
     ],
-    "prep": "Oral granulados (4 mg): misturar em colher de alimento mole (iogurte, puré, gelado) — NÃO dissolver em água. Ingerir imediatamente. Comprimidos mastigáveis (5 mg) e normais (10 mg). Tomar ao deitar (metabolismo circadiano do leucotrieno). Fonte: BNF for Children 2023-24; SmPC Singulair.",
+    "prep": "Oral granulados (4 mg): misturar em colher de alimento mole (iogurte, puré, gelado) — NÃO dissolver em água. Ingerir imediatamente. Comprimidos mastigáveis (5 mg) e normais (10 mg). Tomar ao deitar (metabolismo circadiano do leucotrieno). Fonte: SmPC Singulair.",
     "ci": [
       "Hipersensibilidade"
     ],
@@ -409,7 +409,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "Efeito em 30–60 min — similar à dexametasona oral"
       }
     ],
-    "prep": "Nebulização: solução 0,125/0,25/0,5 mg/ml. Pode misturar com SF ou com salbutamol/ipratrópio no mesmo nebulizador. Agitar suavemente antes de usar. Débito O2: 6–8 L/min. Inalador (DPI/MDI): expirar completamente antes; inspiração lenta e profunda; suspender respiração 10 seg. Lavar boca após cada inalação (candidíase oral). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "Nebulização: solução 0,125/0,25/0,5 mg/ml. Pode misturar com SF ou com salbutamol/ipratrópio no mesmo nebulizador. Agitar suavemente antes de usar. Débito O2: 6–8 L/min. Inalador (DPI/MDI): expirar completamente antes; inspiração lenta e profunda; suspender respiração 10 seg. Lavar boca após cada inalação (candidíase oral). Fonte: NHS Medusa 2024.",
     "ci": [
       "Infecção respiratória fúngica activa"
     ],
@@ -451,7 +451,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "Associar dexametasona EV 0,15–0,6 mg/kg"
       }
     ],
-    "prep": "Nebulização: diluir adrenalina 1:1000 (1 mg/ml) em SF para volume total 5 ml. Administrar com máscara facial, débito O2 6–8 L/min. Usar solução para injecção (não solução tópica). Monitorização SpO2 e FC durante e após. ⚠️ Observar 2–4h após administração (efeito rebote). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "Nebulização: diluir adrenalina 1:1000 (1 mg/ml) em SF para volume total 5 ml. Administrar com máscara facial, débito O2 6–8 L/min. Usar solução para injecção (não solução tópica). Monitorização SpO2 e FC durante e após. ⚠️ Observar 2–4h após administração (efeito rebote). Fonte: NHS Medusa 2024.",
     "ci": [
       "Taquicardia grave",
       "Cardiopatia com obstrução de saída do VE (efeito α pode ser prejudicial)"
@@ -500,7 +500,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "BNFC 2020-21 (p. 161)."
       }
     ],
-    "prep": "Nebulização: pode misturar directamente com salbutamol no mesmo nebulizador (compatíveis). Diluir em SF para volume total 3–4 ml. Débito O2: 6–8 L/min. MDI: 1 puff de cada vez com câmara expansora. ⚠️ Evitar exposição ocular com máscara (risco glaucoma agudo). Fonte: BNF for Children 2023-24.",
+    "prep": "Nebulização: pode misturar directamente com salbutamol no mesmo nebulizador (compatíveis). Diluir em SF para volume total 3–4 ml. Débito O2: 6–8 L/min. MDI: 1 puff de cada vez com câmara expansora. ⚠️ Evitar exposição ocular com máscara (risco glaucoma agudo).",
     "ci": [
       "Hipersensibilidade à atropina ou derivados",
       "Glaucoma de ângulo fechado (evitar exposição ocular)"
@@ -535,7 +535,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "Se SpO2 < 92% com Heliox 70:30, usar 60:40 (hélio 60% / O2 40%) — menos eficaz mas maior FiO2"
       }
     ],
-    "prep": "Inalar directamente de cilindro de Heliox 70:30 via máscara não-reinalação com reservatório. Fluxómetros de O2 subestimam débito de heliox por 1,8× — ajustar. NÃO funciona em ventiladores convencionais sem adaptador específico. Verificar SpO2 — FiO2 máxima 30% (Heliox 70:30). Fonte: BNF for Children 2023-24; Ho AM et al. Chest 2003.",
+    "prep": "Inalar directamente de cilindro de Heliox 70:30 via máscara não-reinalação com reservatório. Fluxómetros de O2 subestimam débito de heliox por 1,8× — ajustar. NÃO funciona em ventiladores convencionais sem adaptador específico. Verificar SpO2 — FiO2 máxima 30% (Heliox 70:30). Fonte: Ho AM et al. Chest 2003.",
     "ci": [
       "Necessidade de FiO2 > 40% (formulações standard limitam O2 a 30%)",
       "Pneumotórax",
@@ -571,7 +571,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "Evidência heterogénea em PARDS — sem recomendação forte. Ensaios em curso. Associar a estratégia VNI/HFNC quando possível"
       }
     ],
-    "prep": "IT: aquecer frasco a 37°C (banho de água ou mão). NÃO agitar — girar suavemente. Administrar em bólus via TOT com desconexão breve do ventilador (5–10 seg), seguido de reconexão e ventilação manual/mecânica para distribuição. FiO2 100% durante ± 30 min. Não aspirar TOT nas 2h seguintes. Fonte: BNF for Children 2023-24; PALICC-2 2023.",
+    "prep": "IT: aquecer frasco a 37°C (banho de água ou mão). NÃO agitar — girar suavemente. Administrar em bólus via TOT com desconexão breve do ventilador (5–10 seg), seguido de reconexão e ventilação manual/mecânica para distribuição. FiO2 100% durante ± 30 min. Não aspirar TOT nas 2h seguintes. Fonte: PALICC-2 2023.",
     "ci": [
       "ARDS de causa não pulmonar primária (benefício improvável)",
       "Doença pulmonar crónica sem componente surfactante"
@@ -621,7 +621,7 @@ var DRUGS_RESPIRATORIO = [
         "note": "BNFC 2020-21 (p. 166). Nebulizador accionado a oxigénio."
       }
     ],
-    "prep": "SC: injecção não diluída (0,5 mg/ml) em coxa anterior ou abdómen. EV carga: diluir 0,1–0,2 mg/kg em 10 ml SF, infusão 10 min. Perfusão: 5 mg em 250 ml SF (20 μg/ml). ⚠️ Monitorizar K⁺ q1h — hipocaliemia significativa. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "SC: injecção não diluída (0,5 mg/ml) em coxa anterior ou abdómen. EV carga: diluir 0,1–0,2 mg/kg em 10 ml SF, infusão 10 min. Perfusão: 5 mg em 250 ml SF (20 μg/ml). ⚠️ Monitorizar K⁺ q1h — hipocaliemia significativa. Fonte: NHS Medusa 2024.",
     "ci": [
       "Taquiarritmias graves",
       "Tirotoxicose não tratada",

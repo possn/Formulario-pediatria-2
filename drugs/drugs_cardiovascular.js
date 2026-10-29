@@ -45,7 +45,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 148). Se não houver resposta, provável necessidade de diálise."
       }
     ],
-    "prep": "EV: pode administrar não diluído (10 mg/ml) em bólus (≤ 4 mg/min — ototoxicidade) ou diluir em SF (pH alcalino — incompatível com soluções ácidas). Perfusão: 20–50 mg em 50 ml SF (0,4–1 mg/ml). ⚠️ NÃO misturar com milrinona, nicardipina, ciprofloxacina, mid. Oral: solução 4 mg/ml ou 10 mg/ml. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: pode administrar não diluído (10 mg/ml) em bólus (≤ 4 mg/min — ototoxicidade) ou diluir em SF (pH alcalino — incompatível com soluções ácidas). Perfusão: 20–50 mg em 50 ml SF (0,4–1 mg/ml). ⚠️ NÃO misturar com milrinona, nicardipina, ciprofloxacina, mid. Oral: solução 4 mg/ml ou 10 mg/ml. Fonte: NHS Medusa 2024.",
     "ci": [
       "Anúria por obstrução",
       "Hipocaliemia grave não corrigida",
@@ -222,7 +222,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 86). Ao passar de EV para oral pode ser preciso aumentar a dose 20–33%. Shann (alternativa): 15 mcg/kg e 5 mcg/kg 6 h depois, depois 3–5 mcg/kg 12/12 h (EV máx. habitual 200 mcg; oral 250 mcg); nível ≥6 h após a dose 1,0–2,5 nmol/L."
       }
     ],
-    "prep": "EV: diluir ≥ 4× em SF ou SG5% para ≤ 50 μg/ml. Administrar em 30 min. Neonatos: preparar solução 10 μg/ml (diluições seriadas obrigatórias — verificar com farmácia). Oral: elixir pediátrico 50 μg/ml. Comprimidos 62,5/125 μg. Concentração máxima EV: 100 μg/ml (central apenas). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: diluir ≥ 4× em SF ou SG5% para ≤ 50 μg/ml. Administrar em 30 min. Neonatos: preparar solução 10 μg/ml (diluições seriadas obrigatórias — verificar com farmácia). Oral: elixir pediátrico 50 μg/ml. Comprimidos 62,5/125 μg. Concentração máxima EV: 100 μg/ml (central apenas). Fonte: NHS Medusa 2024.",
     "ci": [
       "Cardiomiopatia hipertrófica obstrutiva",
       "Síndrome WPW com FA (via accessória)",
@@ -292,7 +292,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 118). Vigiar a PA 1–2 h após a dose-teste. RN: 10–50 mcg/kg 2–3×/dia; pré-termo: dose-teste 10 mcg/kg e máx. 300 mcg/kg/dia. 12–17 anos: 12,5–25 mg 2–3×/dia."
       }
     ],
-    "prep": "Oral: comprimidos 12,5/25/50 mg — triturar e dissolver em 10 ml água. Solução extemporânea 1 mg/ml (estável em ácido cítrico 28 dias). Tomar em JEJUM (30 min antes refeição — alimentos reduzem absorção 30–40%). ⚠️ Hipotensão na 1ª dose — iniciar deitado, monitorizar TA 1h. Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: comprimidos 12,5/25/50 mg — triturar e dissolver em 10 ml água. Solução extemporânea 1 mg/ml (estável em ácido cítrico 28 dias). Tomar em JEJUM (30 min antes refeição — alimentos reduzem absorção 30–40%). ⚠️ Hipotensão na 1ª dose — iniciar deitado, monitorizar TA 1h.",
     "ci": [
       "Estenose artéria renal bilateral",
       "Gravidez (2º e 3º trimestres — teratogénico)",
@@ -338,7 +338,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 120)."
       }
     ],
-    "prep": "Oral: comprimidos 2,5/5/10/20 mg — triturar e dissolver em água. Solução extemporânea 1 mg/ml estável 30 dias (refrigerada). Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: comprimidos 2,5/5/10/20 mg — triturar e dissolver em água. Solução extemporânea 1 mg/ml estável 30 dias (refrigerada). Tomar com ou sem alimentos.",
     "ci": [
       "Estenose artéria renal bilateral",
       "Gravidez",
@@ -420,7 +420,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "Monitorizar FC, glicemia e TA."
       }
     ],
-    "prep": "EV: administrar não diluído (1 mg/ml) MUITO LENTAMENTE — 1 mg/min máximo (arritmias e colapso cardiovascular com infusão rápida). Monitorização ECG contínua. Oral: solução 1 mg/ml ou 5 mg/ml; comprimidos 10/40/80 mg — podem ser triturados. Tomar COM alimentos (aumenta biodisponibilidade 50%). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: administrar não diluído (1 mg/ml) MUITO LENTAMENTE — 1 mg/min máximo (arritmias e colapso cardiovascular com infusão rápida). Monitorização ECG contínua. Oral: solução 1 mg/ml ou 5 mg/ml; comprimidos 10/40/80 mg — podem ser triturados. Tomar COM alimentos (aumenta biodisponibilidade 50%). Fonte: NHS Medusa 2024.",
     "ci": [
       "Asma / DPOC (broncoespasmo)",
       "Bloqueio AV 2º/3º grau",
@@ -467,7 +467,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": ""
       }
     ],
-    "prep": "Oral (ivabradina, confusão de id — produto oral): solução 1 mg/ml ou comprimidos 5/7,5 mg — podem ser triturados. Tomar COM refeições. Solução oral magistral: 0,2 mg/ml estável 30 dias. Fonte: BNF for Children 2023-24.",
+    "prep": "Oral (ivabradina, confusão de id — produto oral): solução 1 mg/ml ou comprimidos 5/7,5 mg — podem ser triturados. Tomar COM refeições. Solução oral magistral: 0,2 mg/ml estável 30 dias.",
     "ci": [
       "Bloqueio AV 2º/3º grau",
       "FC repouso < 60/min",
@@ -481,7 +481,9 @@ var DRUGS_CARDIOVASCULAR = [
       "Usar apenas em ritmo sinusal (ineficaz em FA)",
       "Off-label < 18 anos — dados pediátricos em expansão"
     ],
-    "source": "BNF for Children 2023-24; SHIFT trial; Procoralan SmPC 2023"
+    "source": "SHIFT trial; Procoralan SmPC 2023",
+    "review": ["Nota: esta ficha é de ivabradina (o id interno «adenosina_triphosphate» está trocado). A ivabradina não consta do BNFC 2020-21; as doses (0,05 mg/kg 2×/dia, alvo 0,1–0,2 mg/kg, máx. 7,5 mg/dose) vêm do RCM/estudos e não foram verificadas contra as fontes do utilizador."]
+
   },
   {
     "id": "amlodipina",
@@ -511,7 +513,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 114). Os sais (besilato, maleato, mesilato) são equivalentes pela dose de amlodipina base."
       }
     ],
-    "prep": "Oral: suspensão extemporânea 1 mg/ml (estável 35 dias refrigerada em frasco âmbar). Comprimidos 5/10 mg — podem ser triturados. Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: suspensão extemporânea 1 mg/ml (estável 35 dias refrigerada em frasco âmbar). Comprimidos 5/10 mg — podem ser triturados. Tomar com ou sem alimentos.",
     "ci": [
       "Choque cardiogénico",
       "Hipotensão grave",
@@ -560,7 +562,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 123)."
       }
     ],
-    "prep": "EV: administrar em SF APENAS (não em SG5% — hidrólise rápida com perda de 50% actividade em 2h). Bólus em 3–5 min; perfusão: 20 mg em 100 ml SF. Oral: comprimidos 25/50 mg — podem ser triturados. Instabilidade em SG5% é clinicamente relevante — preparar em SF imediatamente antes. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: administrar em SF APENAS (não em SG5% — hidrólise rápida com perda de 50% actividade em 2h). Bólus em 3–5 min; perfusão: 20 mg em 100 ml SF. Oral: comprimidos 25/50 mg — podem ser triturados. Instabilidade em SG5% é clinicamente relevante — preparar em SF imediatamente antes. Fonte: NHS Medusa 2024.",
     "ci": [
       "Lúpus eritematoso sistémico",
       "Taquicardia grave não controlada",
@@ -599,7 +601,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 133). Razão espironolactona:furosemida habitualmente 100:40 (Formulário)."
       }
     ],
-    "prep": "Oral: suspensão extemporânea 5 mg/ml (estável 28 dias refrigerada). Comprimidos 25/50/100 mg — triturar. Tomar COM alimentos (aumenta absorção 50%). Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: suspensão extemporânea 5 mg/ml (estável 28 dias refrigerada). Comprimidos 25/50/100 mg — triturar. Tomar COM alimentos (aumenta absorção 50%).",
     "ci": [
       "Hipercaliemia",
       "Insuf. renal grave (TFG < 30)",
@@ -651,7 +653,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 101)."
       }
     ],
-    "prep": "SC: injecção na prega abdominal (perpendicularmente, sem expulsar bolha de ar antes da injecção — perda de dose). NÃO massajar após injecção. NÃO administrar IM. EV (trombólise/circulação extracorporal): ver protocolo específico. Fonte: BNF for Children 2023-24.",
+    "prep": "SC: injecção na prega abdominal (perpendicularmente, sem expulsar bolha de ar antes da injecção — perda de dose). NÃO massajar após injecção. NÃO administrar IM. EV (trombólise/circulação extracorporal): ver protocolo específico.",
     "ci": [
       "Hemorragia activa major",
       "Trombocitopenia induzida por heparina (HIT)",
@@ -689,7 +691,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 132). O ensaio PRCCTFHF não mostrou diferença significativa vs placebo: evidência mais fraca que em adultos."
       }
     ],
-    "prep": "Oral: comprimidos 3,125/6,25/12,5/25 mg — podem ser esmagados e dissolvidos em 5 ml água. Solução extemporânea 1,25 mg/ml. Tomar COM alimentos (reduz hipotensão ortostática, melhora absorção). Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: comprimidos 3,125/6,25/12,5/25 mg — podem ser esmagados e dissolvidos em 5 ml água. Solução extemporânea 1,25 mg/ml. Tomar COM alimentos (reduz hipotensão ortostática, melhora absorção).",
     "ci": [
       "Asma brônquica / broncoespasmo significativo",
       "Bradicardia < 60 bpm",
@@ -735,7 +737,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "Shann, Drug Doses (entrada Diltiazem). BNFC 2020-21: só indica diltiazem oral no síndrome de Raynaud, 12–17 anos, 30–60 mg 2–3×/dia (p. 152)."
       }
     ],
-    "prep": "EV: diluir em SF ou SG5% para 1 mg/ml. Bólus em 2 min. Perfusão: 125 mg em 100 ml SG5% (1,25 mg/ml). Oral: comprimidos 60/90/120 mg; cápsulas LP. Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
+    "prep": "EV: diluir em SF ou SG5% para 1 mg/ml. Bólus em 2 min. Perfusão: 125 mg em 100 ml SG5% (1,25 mg/ml). Oral: comprimidos 60/90/120 mg; cápsulas LP. Tomar com ou sem alimentos.",
     "ci": [
       "Disfunção sistólica grave / insuficiência cardíaca descompensada",
       "Bloqueio AV 2º/3º grau sem pacemaker",
@@ -780,7 +782,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "Monitorização ECG contínua obrigatória."
       }
     ],
-    "prep": "EV: diluir em SG5% para 1–2 mg/ml. Administrar em 10–30 min (monitorização ECG contínua durante infusão). Oral: comprimidos 50/100 mg; solução oral 5 mg/ml (extemporânea, estável 14 dias). Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24; SmPC Tambocor.",
+    "prep": "EV: diluir em SG5% para 1–2 mg/ml. Administrar em 10–30 min (monitorização ECG contínua durante infusão). Oral: comprimidos 50/100 mg; solução oral 5 mg/ml (extemporânea, estável 14 dias). Tomar com ou sem alimentos. Fonte: SmPC Tambocor.",
     "ci": [
       "Disfunção sistólica / insuficiência cardíaca (efeito inotrópico negativo significativo)",
       "Bloqueio de ramo (alarga QRS — efeito proarrítmico)",
@@ -878,7 +880,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 115)."
       }
     ],
-    "prep": "Oral: cápsulas — perfurar e extrair conteúdo para administração oral (NÃO sublingual — queda TA imprevisível). Comprimidos LP — engolir inteiros, NÃO triturar. Solução extemporânea 1 mg/ml (estável 7 dias refrigerada). Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: cápsulas — perfurar e extrair conteúdo para administração oral (NÃO sublingual — queda TA imprevisível). Comprimidos LP — engolir inteiros, NÃO triturar. Solução extemporânea 1 mg/ml (estável 7 dias refrigerada).",
     "ci": [
       "Choque cardiogénico",
       "Insuficiência cardíaca descompensada",
@@ -930,7 +932,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 124)."
       }
     ],
-    "prep": "Oral: comprimidos dispersíveis 32 mg — dissolver em 5 ml água; comprimidos 62,5/125 mg — podem ser partidos mas não triturados. Tomar com ou sem alimentos. Manipulação com cuidado — pó potencialmente teratogénico. Fonte: BNF for Children 2023-24; SmPC Tracleer.",
+    "prep": "Oral: comprimidos dispersíveis 32 mg — dissolver em 5 ml água; comprimidos 62,5/125 mg — podem ser partidos mas não triturados. Tomar com ou sem alimentos. Manipulação com cuidado — pó potencialmente teratogénico. Fonte: SmPC Tracleer.",
     "ci": [
       "Gravidez (teratogénico — categoria X)",
       "Insuficiência hepática moderada a grave (AST/ALT > 3× LSN)",
@@ -1070,7 +1072,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "Reduz a taxa de dilatação da raiz aórtica (Shores et al. NEJM 1994). Evidência crescente para o losartan como alternativa ou associação."
       }
     ],
-    "prep": "Oral: comprimidos 25/50/100 mg — podem ser esmagados. Suspensão magistral 2 mg/ml estável 14 dias (refrigerada). Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: comprimidos 25/50/100 mg — podem ser esmagados. Suspensão magistral 2 mg/ml estável 14 dias (refrigerada). Tomar com ou sem alimentos.",
     "ci": [
       "Asma brônquica / broncoespasmo (menos selectividade em doses altas)",
       "Bradicardia sinusal grave (FC < 60 bpm)",
@@ -1170,7 +1172,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 102). INR-alvo habitual 2–3 (2,5–3,5 em válvula mecânica mitral), segundo Monagle, CHEST 2012."
       }
     ],
-    "prep": "Oral: comprimidos 0,5/1/3/5 mg — podem ser partidos mas não triturados. Solução magistral 1 mg/ml estável 14 dias. Tomar ao MESMO HORA diariamente (monitorização INR consistente). ⚠️ Dieta consistente em vitamina K. Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: comprimidos 0,5/1/3/5 mg — podem ser partidos mas não triturados. Solução magistral 1 mg/ml estável 14 dias. Tomar ao MESMO HORA diariamente (monitorização INR consistente). ⚠️ Dieta consistente em vitamina K.",
     "ci": [
       "Hemorragia activa",
       "Gravidez (teratogénico no 1º trimestre)",
@@ -1209,7 +1211,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "Iniciar SEMPRE em internamento com monitorização de Na⁺ q4–6h nas primeiras 24h — risco de correcção excessiva e mielinólise"
       }
     ],
-    "prep": "Oral: comprimidos 15/30/45/60/90 mg — engolir inteiros (não partir ou esmagar — formulação específica de libertação). Tomar com ou sem alimentos. ⚠️ INICIAR SEMPRE EM HOSPITAL — monitorização Na⁺ q4–6h nas primeiras 24h (risco correcção excessiva). Fonte: BNF for Children 2023-24; SmPC Samsca.",
+    "prep": "Oral: comprimidos 15/30/45/60/90 mg — engolir inteiros (não partir ou esmagar — formulação específica de libertação). Tomar com ou sem alimentos. ⚠️ INICIAR SEMPRE EM HOSPITAL — monitorização Na⁺ q4–6h nas primeiras 24h (risco correcção excessiva). Fonte: SmPC Samsca.",
     "ci": [
       "Hipovolemia (não é diurético de eliminação de sódio — eleva Na⁺ por eliminação de água livre)",
       "Anúria",
@@ -1309,7 +1311,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 85). Reduzir a dose para metade se TFG 30–60 e para um quarto se TFG 10–30 mL/min/1,73 m²; evitar se TFG < 10."
       }
     ],
-    "prep": "Oral: comprimidos 40/80/160 mg — podem ser esmagados. Solução extemporânea 5 mg/ml. Tomar em JEJUM (antiácidos reduzem absorção 20%). Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: comprimidos 40/80/160 mg — podem ser esmagados. Solução extemporânea 5 mg/ml. Tomar em JEJUM (antiácidos reduzem absorção 20%).",
     "ci": [
       "QTc > 450 ms basal",
       "Insuf. renal (TFG < 30 ml/min — acumulação)",
@@ -1363,7 +1365,7 @@ var DRUGS_CARDIOVASCULAR = [
         "note": "BNFC 2020-21 (p. 83). Monitorizar função tiroideia, hepática e pulmonar."
       }
     ],
-    "prep": "Oral: comprimidos 100/200 mg — tomar COM refeições (reduz intolerância GI). Podem ser triturados. Solução extemporânea 5 mg/ml para lactentes. ⚠️ Semi-vida 40–55 dias — carga obrigatória por 7–10 dias (efectivo em 1–3 semanas). Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: comprimidos 100/200 mg — tomar COM refeições (reduz intolerância GI). Podem ser triturados. Solução extemporânea 5 mg/ml para lactentes. ⚠️ Semi-vida 40–55 dias — carga obrigatória por 7–10 dias (efectivo em 1–3 semanas).",
     "ci": [
       "Disfunção tiroideia grave não tratada",
       "Iodo: hipersensibilidade",

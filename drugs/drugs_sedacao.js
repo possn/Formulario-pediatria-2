@@ -63,7 +63,7 @@ var DRUGS_SEDACAO = [
         "note": "BNFC 2020-21 (p. 239). Shann: oral 0,5 mg/kg (máx. 20 mg); nasal 0,2 mg/kg."
       }
     ],
-    "prep": "EV: diluir em SF ou SG5%. Perfusão UCIP: (0,3 × Peso kg) mg em 50 ml → 1 ml/h = 0,1 mg/kg/h. Concentração máxima periférico: 1 mg/ml. Concentração central: até 5 mg/ml. Bólus procedimento: 0,1 mg/kg em 2 min (diluir a 0,5–1 mg/ml). Bucal (Buccolam): aplicar entre gengiva e mucosa bocal — não engolir. Intranasal: atomizador MAD, 0,5 ml/narina. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: diluir em SF ou SG5%. Perfusão UCIP: (0,3 × Peso kg) mg em 50 ml → 1 ml/h = 0,1 mg/kg/h. Concentração máxima periférico: 1 mg/ml. Concentração central: até 5 mg/ml. Bólus procedimento: 0,1 mg/kg em 2 min (diluir a 0,5–1 mg/ml). Bucal (Buccolam): aplicar entre gengiva e mucosa bocal — não engolir. Intranasal: atomizador MAD, 0,5 ml/narina. Fonte: NHS Medusa 2024.",
     "ci": [
       "Glaucoma de ângulo fechado",
       "Miastenia gravis (relativa)",
@@ -147,7 +147,7 @@ var DRUGS_SEDACAO = [
         "note": "Desmame 10% da dose/dia quando score < 8 por 48h. Protocolo institucional obrigatório"
       }
     ],
-    "prep": "EV: diluir em SF ou SG5%. Perfusão UCIP: Peso(kg) mg em 50 ml SG5% → 1 ml/h = 0,02 mg/kg/h. Concentrações standard: 1 mg/ml (pediátrico) ou 5–10 mg/ml (central). Periférico: ≤ 2 mg/ml. Bólus: 0,1 mg/kg em SF, administrar em 5 min. ⚠️ Incompatível com furosemida e ciclosporina na mesma linha. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: diluir em SF ou SG5%. Perfusão UCIP: Peso(kg) mg em 50 ml SG5% → 1 ml/h = 0,02 mg/kg/h. Concentrações standard: 1 mg/ml (pediátrico) ou 5–10 mg/ml (central). Periférico: ≤ 2 mg/ml. Bólus: 0,1 mg/kg em SF, administrar em 5 min. ⚠️ Incompatível com furosemida e ciclosporina na mesma linha. Fonte: NHS Medusa 2024.",
     "ci": [
       "Depressão respiratória grave não monitorizada",
       "Íleo paralítico (relativa)",
@@ -212,7 +212,7 @@ var DRUGS_SEDACAO = [
         "note": "Shann: perfusão 2–4 mcg/kg/h."
       }
     ],
-    "prep": "EV bólus: administrar não diluído (50 μg/ml) ou diluir em SF para 10–25 μg/ml em 3–5 min. Perfusão UCIP: (Peso kg × 0,05) mg em 50 ml SG5% → 1 ml/h = 1 μg/kg/h. Concentração padrão 10 μg/ml. EV central preferido. Patch transdérmico: não usar em < 2 anos ou opioides-naive. Intranasal: 2 μg/kg de concentração 150 μg/ml (volume ≤ 0,3 ml/narina). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV bólus: administrar não diluído (50 μg/ml) ou diluir em SF para 10–25 μg/ml em 3–5 min. Perfusão UCIP: (Peso kg × 0,05) mg em 50 ml SG5% → 1 ml/h = 1 μg/kg/h. Concentração padrão 10 μg/ml. EV central preferido. Patch transdérmico: não usar em < 2 anos ou opioides-naive. Intranasal: 2 μg/kg de concentração 150 μg/ml (volume ≤ 0,3 ml/narina). Fonte: NHS Medusa 2024.",
     "ci": [
       "Depressão respiratória grave não monitorizada",
       "Depressão respiratória não monitorizada"
@@ -299,7 +299,7 @@ var DRUGS_SEDACAO = [
         "note": "Broncodilatação por mecanismo simpatomimético e antagonismo NMDA"
       }
     ],
-    "prep": "EV bólus (dissociativo): diluir a 10 mg/ml em SF; administrar 1–2 mg/kg em 1–2 min. EV sub-dissociativo: diluir a 1 mg/ml; administrar 0,3–0,5 mg/kg em 10 min. Perfusão analgesia: 10 mg/kg em 50 ml SF → concentração variável. IM: usar solução 50 mg/ml não diluída. Status asmático: carga 1–2 mg/kg EV seguida de 0,5–2 mg/kg/h. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV bólus (dissociativo): diluir a 10 mg/ml em SF; administrar 1–2 mg/kg em 1–2 min. EV sub-dissociativo: diluir a 1 mg/ml; administrar 0,3–0,5 mg/kg em 10 min. Perfusão analgesia: 10 mg/kg em 50 ml SF → concentração variável. IM: usar solução 50 mg/ml não diluída. Status asmático: carga 1–2 mg/kg EV seguida de 0,5–2 mg/kg/h. Fonte: NHS Medusa 2024.",
     "ci": [
       "HTA grave não controlada",
       "Hipertensão intracraniana (relativa — evidência recente questiona esta CI)",
@@ -444,7 +444,7 @@ var DRUGS_SEDACAO = [
         "note": "Shann, Drug Doses (entrada Rocuronium: 0,6–1,2 mg/kg). O BNFC 2020-21 indica 0,6 mg/kg; 1,2 mg/kg é o limite superior do Shann."
       }
     ],
-    "prep": "EV bólus ISR: administrar NÃO DILUÍDO (10 mg/ml) em bólus rápido 5–10 seg. Perfusão: diluir em SF, SG5% ou LR para 0,5–2 mg/ml. Refrigerar 2–8°C; estável 12h à T ambiente após abertura. ⚠️ Incompatível com tiopental, dantroleno, furosemida — não misturar. Ter sugammadex disponível. Fonte: BNF for Children 2023-24; SmPC Esmeron.",
+    "prep": "EV bólus ISR: administrar NÃO DILUÍDO (10 mg/ml) em bólus rápido 5–10 seg. Perfusão: diluir em SF, SG5% ou LR para 0,5–2 mg/ml. Refrigerar 2–8°C; estável 12h à T ambiente após abertura. ⚠️ Incompatível com tiopental, dantroleno, furosemida — não misturar. Ter sugammadex disponível. Fonte: SmPC Esmeron.",
     "ci": [
       "Hipersensibilidade ao rocurônio ou brometo",
       "Miastenia gravis (hipersensibilidade extrema — doses muito reduzidas se necessário)"
@@ -480,7 +480,7 @@ var DRUGS_SEDACAO = [
         "note": "Shann, Drug Doses (entrada Vecuronium): UCI 0,1 mg/kg SOS; no bloco operatório 0,1 mg/kg e depois 0,5–2 mcg/kg/min. BNFC 2020-21 (p. 875) não indica dose (\"consultar o RCM\"). Calcular pelo peso ideal em obesos."
       }
     ],
-    "prep": "EV: reconstituir pó 10 mg com 5 ml SWFI (2 mg/ml). Perfusão: diluir em SF, SG5% ou LR para 0,1–0,2 mg/ml. Estabilidade: 24h a 25°C; 5 dias a 4°C após reconstituição. Reversão: sugammadex 2–4 mg/kg (moderado) ou 16 mg/kg (profundo/urgência). Fonte: BNF for Children 2023-24; Trissel's 2023.",
+    "prep": "EV: reconstituir pó 10 mg com 5 ml SWFI (2 mg/ml). Perfusão: diluir em SF, SG5% ou LR para 0,1–0,2 mg/ml. Estabilidade: 24h a 25°C; 5 dias a 4°C após reconstituição. Reversão: sugammadex 2–4 mg/kg (moderado) ou 16 mg/kg (profundo/urgência). Fonte: Trissel's 2023.",
     "ci": [
       "Hipersensibilidade",
       "Miastenia gravis"
@@ -529,7 +529,7 @@ var DRUGS_SEDACAO = [
         "note": "Shann, Drug Doses: para reversão imediata de rocurónio (não de vecurónio)."
       }
     ],
-    "prep": "EV: administrar NÃO DILUÍDO (100 mg/ml = 200 mg/2 ml) em bólus rápido em 10 segundos. Preparar seringa imediatamente antes (estabilidade 8h após saída de embalagem). Refrigerar 2–8°C; estável 5 dias a 25°C. ⚠️ Dose de emergência (cannot intubate): 16 mg/kg = 3,2 ml/kg (bólus muito rápido). Fonte: BNF for Children 2023-24; SmPC Bridion.",
+    "prep": "EV: administrar NÃO DILUÍDO (100 mg/ml = 200 mg/2 ml) em bólus rápido em 10 segundos. Preparar seringa imediatamente antes (estabilidade 8h após saída de embalagem). Refrigerar 2–8°C; estável 5 dias a 25°C. ⚠️ Dose de emergência (cannot intubate): 16 mg/kg = 3,2 ml/kg (bólus muito rápido). Fonte: SmPC Bridion.",
     "ci": [
       "Insuf. renal grave TFG < 30 ml/min (não recomendado — acumulação)",
       "Hipersensibilidade"
@@ -584,7 +584,7 @@ var DRUGS_SEDACAO = [
         "note": "BNFC 2020-21 (p. 288)."
       }
     ],
-    "prep": "EV: ver paracetamol_ev (Perfalgan). Oral: suspensão 120 mg/5 ml (lactentes), 250 mg/5 ml (crianças) — agitar bem; medir com seringa oral. Comprimidos 500/1000 mg. Rectal: supositórios 60/125/250/500 mg — absorção mais lenta e variável que oral. Fonte: BNF for Children 2023-24.",
+    "prep": "EV: ver paracetamol_ev (Perfalgan). Oral: suspensão 120 mg/5 ml (lactentes), 250 mg/5 ml (crianças) — agitar bem; medir com seringa oral. Comprimidos 500/1000 mg. Rectal: supositórios 60/125/250/500 mg — absorção mais lenta e variável que oral.",
     "ci": [
       "Insuf. hepática grave",
       "Hipersensibilidade"
@@ -650,7 +650,7 @@ var DRUGS_SEDACAO = [
         "note": "Eficácia semelhante à indometacina com menor efeito na perfusão cerebral e renal (Ohlsson A et al. Cochrane 2020). Segundo ciclo possível se ecocardiograma confirmar PCA persistente"
       }
     ],
-    "prep": "Oral: suspensão 20 mg/ml (100 mg/5 ml) — agitar antes. Comprimidos 200/400/600 mg. Tomar SEMPRE com alimentos ou leite (reduz irritação gástrica). EV (Caldolor, quando disponível): diluir em SF para ≤ 4 mg/ml; infusão 30 min. PCA neonatal (Pedea): ver ficha específica. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "Oral: suspensão 20 mg/ml (100 mg/5 ml) — agitar antes. Comprimidos 200/400/600 mg. Tomar SEMPRE com alimentos ou leite (reduz irritação gástrica). EV (Caldolor, quando disponível): diluir em SF para ≤ 4 mg/ml; infusão 30 min. PCA neonatal (Pedea): ver ficha específica. Fonte: NHS Medusa 2024.",
     "ci": [
       "< 3 meses ou < 5–6 kg",
       "Asma induzida por AINEs",
@@ -729,7 +729,7 @@ var DRUGS_SEDACAO = [
         "note": "BNFC 2020-21 (p. 901). Garantir ventilação eficaz antes."
       }
     ],
-    "prep": "EV urgência: diluir 0,4 mg em 10 ml SF (0,04 mg/ml) para titulação precisa. Bólus em 15 seg; repetir q2–3 min. Perfusão: 0,4–1 mg em 100 ml SF. IM/SC: usar 0,4 mg/ml não diluído. Intranasal: atomizador MAD — usar solução concentrada (1 mg/ml, máx 0,3 ml/narina, atomizar). Fonte: BNF for Children 2023-24; PALS AHA 2020.",
+    "prep": "EV urgência: diluir 0,4 mg em 10 ml SF (0,04 mg/ml) para titulação precisa. Bólus em 15 seg; repetir q2–3 min. Perfusão: 0,4–1 mg em 100 ml SF. IM/SC: usar 0,4 mg/ml não diluído. Intranasal: atomizador MAD — usar solução concentrada (1 mg/ml, máx 0,3 ml/narina, atomizar). Fonte: PALS AHA 2020.",
     "ci": [
       "NÃO há contra-indicações absolutas em emergência",
       "Hipersensibilidade à naloxona",
@@ -776,7 +776,7 @@ var DRUGS_SEDACAO = [
         "note": "BNFC 2020-21 (p. 305)."
       }
     ],
-    "prep": "EV: diluir em SF ou SG5% (50–100 ml). Administrar LENTAMENTE em 15–20 min (bólus rápido causa náuseas, tonturas, convulsões). Concentração máxima EV: 50 mg/ml não diluído para IM/SC; ≤ 4 mg/ml para infusão EV. Oral: gotas 100 mg/ml (1 gota = 2,5 mg); cápsulas 50 mg. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: diluir em SF ou SG5% (50–100 ml). Administrar LENTAMENTE em 15–20 min (bólus rápido causa náuseas, tonturas, convulsões). Concentração máxima EV: 50 mg/ml não diluído para IM/SC; ≤ 4 mg/ml para infusão EV. Oral: gotas 100 mg/ml (1 gota = 2,5 mg); cápsulas 50 mg. Fonte: NHS Medusa 2024.",
     "ci": [
       "< 12 anos (EMA 2019)",
       "Epilepsia não controlada",
@@ -821,7 +821,7 @@ var DRUGS_SEDACAO = [
         "note": ""
       }
     ],
-    "prep": "Oral: cápsulas 25/50/75/100/150/200/300 mg — podem ser abertas e conteúdo misturado em água ou sumo. Solução oral 20 mg/ml. Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: cápsulas 25/50/75/100/150/200/300 mg — podem ser abertas e conteúdo misturado em água ou sumo. Solução oral 20 mg/ml. Tomar com ou sem alimentos.",
     "ci": [
       "Hipersensibilidade"
     ],
@@ -872,7 +872,7 @@ var DRUGS_SEDACAO = [
         "note": ""
       }
     ],
-    "prep": "Oral: cápsulas 100/300/400 mg — podem ser abertas e conteúdo misturado em sumo ou alimento mole. Solução oral 50 mg/ml (extemporânea ou importada). Tomar com ou sem alimentos (com alimentos reduz variabilidade de absorção). Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: cápsulas 100/300/400 mg — podem ser abertas e conteúdo misturado em sumo ou alimento mole. Solução oral 50 mg/ml (extemporânea ou importada). Tomar com ou sem alimentos (com alimentos reduz variabilidade de absorção).",
     "ci": [
       "Hipersensibilidade"
     ],
@@ -916,7 +916,7 @@ var DRUGS_SEDACAO = [
         "note": "BNFC 2020-21 (p. 255)."
       }
     ],
-    "prep": "Oral: comprimidos 10/25/50 mg — podem ser triturados. Solução extemporânea 5 mg/5 ml estável 14 dias a 4°C. Tomar ao deitar (sedação máxima nocturna). Inicio com dose baixa e titular semanalmente (2–4 semanas para efeito analgésico). Fonte: BNF for Children 2023-24.",
+    "prep": "Oral: comprimidos 10/25/50 mg — podem ser triturados. Solução extemporânea 5 mg/5 ml estável 14 dias a 4°C. Tomar ao deitar (sedação máxima nocturna). Inicio com dose baixa e titular semanalmente (2–4 semanas para efeito analgésico).",
     "ci": [
       "< 6 anos",
       "Arritmia cardíaca / QTc prolongado",
@@ -978,7 +978,7 @@ var DRUGS_SEDACAO = [
         "note": "BNFC 2020-21 (p. 108). Oral: 0,5–1 mcg/kg 3×/dia, até 25 mcg/kg/dia (máx. 1,2 mg/dia)."
       }
     ],
-    "prep": "EV: diluir em SF para concentração 15–45 μg/ml. Infusão em 10–15 min (bólus rápido → HTA paradoxal transitória por estimulação α1 periférica antes do efeito central). Perfusão: 150 μg em 50 ml SF (3 μg/ml). Oral: comprimidos 25/100/150 μg; solução extemporânea 5 μg/ml. Patch transdérmico (TTS): para desmame lento. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: diluir em SF para concentração 15–45 μg/ml. Infusão em 10–15 min (bólus rápido → HTA paradoxal transitória por estimulação α1 periférica antes do efeito central). Perfusão: 150 μg em 50 ml SF (3 μg/ml). Oral: comprimidos 25/100/150 μg; solução extemporânea 5 μg/ml. Patch transdérmico (TTS): para desmame lento. Fonte: NHS Medusa 2024.",
     "ci": [
       "Bradicardia sinusal grave",
       "Bloqueio AV 2º/3º grau",
@@ -1023,7 +1023,7 @@ var DRUGS_SEDACAO = [
         "note": "Associar midazolam se sedação também necessária (remifentanil é apenas analgésico)"
       }
     ],
-    "prep": "EV: reconstituir liofilizado com SWFI; diluir em SF ou SG5% para 20–250 μg/ml. Concentração UCIP habitual: 20–50 μg/ml. Via central ou periférica de grande calibre (metabolismo ubíquo — sem risco acumulação). ⚠️ NÃO administrar em bólus rápido (rigidez torácica). Sem efeito memória — paragem imediata elimina fármaco em 3–5 min. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: reconstituir liofilizado com SWFI; diluir em SF ou SG5% para 20–250 μg/ml. Concentração UCIP habitual: 20–50 μg/ml. Via central ou periférica de grande calibre (metabolismo ubíquo — sem risco acumulação). ⚠️ NÃO administrar em bólus rápido (rigidez torácica). Sem efeito memória — paragem imediata elimina fármaco em 3–5 min. Fonte: NHS Medusa 2024.",
     "ci": [
       "Administração peridural ou intratecal (contém glicina — neurotóxico)",
       "Sem suporte ventilatório disponível"
@@ -1066,7 +1066,7 @@ var DRUGS_SEDACAO = [
         "note": "Alvo: 1–2 twitch em TOF (2/4 respostas). ARDS grave: 48h conforme ACURASYS"
       }
     ],
-    "prep": "EV bólus: administrar não diluído (2 mg/ml) ou diluir em SF/SG5%. Perfusão: diluir em SF, SG5% ou LR para 0,1–2 mg/ml. Refrigerar 2–8°C; estável 24h à T ambiente após abertura (proteger da luz). ⚠️ Incompatível com heparina, furosemida, ceftriaxona na mesma linha. Reversão: espontânea (Hofmann) — sugammadex NÃO reverte. Fonte: BNF for Children 2023-24; Trissel's 2023.",
+    "prep": "EV bólus: administrar não diluído (2 mg/ml) ou diluir em SF/SG5%. Perfusão: diluir em SF, SG5% ou LR para 0,1–2 mg/ml. Refrigerar 2–8°C; estável 24h à T ambiente após abertura (proteger da luz). ⚠️ Incompatível com heparina, furosemida, ceftriaxona na mesma linha. Reversão: espontânea (Hofmann) — sugammadex NÃO reverte. Fonte: Trissel's 2023.",
     "ci": [
       "Miastenia gravis ou síndrome miasténico (hipersensibilidade extrema)"
     ],
@@ -1099,7 +1099,7 @@ var DRUGS_SEDACAO = [
         "note": "BNFC 2020-21 (p. 317). Seguir protocolo local."
       }
     ],
-    "prep": "Oral: solução 1 mg/ml (medir com seringa oral graduada de 1 ml para doses pediátricas pequenas). Comprimidos 5/10 mg — esmagar e dissolver em 10 ml água. EV (off-label): diluir em SG5% (não SF — precipita); administrar lentamente 2–3 min. ⚠️ QTc — ECG obrigatório antes e 48h após início. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "Oral: solução 1 mg/ml (medir com seringa oral graduada de 1 ml para doses pediátricas pequenas). Comprimidos 5/10 mg — esmagar e dissolver em 10 ml água. EV (off-label): diluir em SG5% (não SF — precipita); administrar lentamente 2–3 min. ⚠️ QTc — ECG obrigatório antes e 48h após início. Fonte: NHS Medusa 2024.",
     "ci": [
       "Prolongamento QT (QTc > 500 ms)",
       "IMAOs",
@@ -1136,7 +1136,7 @@ var DRUGS_SEDACAO = [
         "note": "BNFC 2020-21 (p. 311). Via rectal só se a oral não for possível."
       }
     ],
-    "prep": "Oral: solução 100 mg/ml — misturar em sumo açucarado para mascarar sabor amargo. Rectal: mesma solução administrada com seringa oral. Medir com seringa oral graduada. Refrigerar após abertura (prazo curto — verificar com farmácia). ⚠️ Monitorização contínua SpO2 e FC obrigatória durante sedação. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "Oral: solução 100 mg/ml — misturar em sumo açucarado para mascarar sabor amargo. Rectal: mesma solução administrada com seringa oral. Medir com seringa oral graduada. Refrigerar após abertura (prazo curto — verificar com farmácia). ⚠️ Monitorização contínua SpO2 e FC obrigatória durante sedação. Fonte: NHS Medusa 2024.",
     "ci": [
       "Cardiopatia grave (sensibilização miocárdica)",
       "Insuf. hepática grave (metabolização deficiente)",
@@ -1181,7 +1181,7 @@ var DRUGS_SEDACAO = [
         "note": "BNFC 2020-21 (p. 288). RN ≥ 32 sem IGc: 7,5 mg/kg cada 8 h."
       }
     ],
-    "prep": "EV: frascos 10 mg/ml (Perfalgan 100 ml ou 50 ml) prontos a usar — NÃO diluir adicionalmente. Administrar em 15 min. Para < 10 kg: retirar volume calculado do frasco para seringa; administrar da seringa. ⚠️ Verificar peso e dose — dose pediátrica é 15 mg/kg; neonatos 7,5–10 mg/kg. Estabilidade após abertura: 6h. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: frascos 10 mg/ml (Perfalgan 100 ml ou 50 ml) prontos a usar — NÃO diluir adicionalmente. Administrar em 15 min. Para < 10 kg: retirar volume calculado do frasco para seringa; administrar da seringa. ⚠️ Verificar peso e dose — dose pediátrica é 15 mg/kg; neonatos 7,5–10 mg/kg. Estabilidade após abertura: 6h. Fonte: NHS Medusa 2024.",
     "ci": [
       "Insuficiência hepática grave (necrose hepática dose-dependente)",
       "Hipersensibilidade ao paracetamol",
@@ -1224,7 +1224,7 @@ var DRUGS_SEDACAO = [
         "note": "BNFC 2020-21 (p. 872). Início em 2–3 min."
       }
     ],
-    "prep": "EV: administrar NÃO DILUÍDO (20 mg/ml) em bólus rápido < 10 segundos. IM emergência (sem acesso EV): injecção profunda no músculo vasto lateral, concentração 20 mg/ml. Refrigerar 2–8°C; estável 2 semanas à T ambiente. ⚠️ Pré-medicar com atropina 0,02 mg/kg em < 5 anos (bradicardia). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: administrar NÃO DILUÍDO (20 mg/ml) em bólus rápido < 10 segundos. IM emergência (sem acesso EV): injecção profunda no músculo vasto lateral, concentração 20 mg/ml. Refrigerar 2–8°C; estável 2 semanas à T ambiente. ⚠️ Pré-medicar com atropina 0,02 mg/kg em < 5 anos (bradicardia). Fonte: NHS Medusa 2024.",
     "ci": [
       "Hipercaliemia documentada ou risco elevado (rabdomiólise, queimaduras extensas > 24h, lesão medular, imobilização prolongada, doença neuromuscular)",
       "Miopatias / distrofinopatias (rabdomiólise grave — evitar)",

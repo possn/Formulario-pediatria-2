@@ -184,7 +184,7 @@ var DRUGS_EMERGENCIA = [
         "note": "Shann. Reavaliar gasometria antes de repetir."
       }
     ],
-    "prep": "EV: usar solução 4,2% (0,5 mEq/ml) em RN e lactentes (solução 8,4% é hiperosmolar e associada a HIV e necrose cerebral). Em crianças maiores: 8,4% (1 mEq/ml) pode ser usado diluído. Administrar lentamente (não em bólus rápido em RN). ⚠️ NÃO misturar com cálcio (CaCO3), adrenalina, dopamina, noradrenalina, aminoglicosídeos (inactivação) — linha dedicada. Fonte: BNF for Children 2023-24; PALS AHA 2020.",
+    "prep": "EV: usar solução 4,2% (0,5 mEq/ml) em RN e lactentes (solução 8,4% é hiperosmolar e associada a HIV e necrose cerebral). Em crianças maiores: 8,4% (1 mEq/ml) pode ser usado diluído. Administrar lentamente (não em bólus rápido em RN). ⚠️ NÃO misturar com cálcio (CaCO3), adrenalina, dopamina, noradrenalina, aminoglicosídeos (inactivação) — linha dedicada. Fonte: PALS AHA 2020.",
     "ci": [
       "Alcalose metabólica",
       "Hipocaliemia não corrigida",
@@ -284,7 +284,7 @@ var DRUGS_EMERGENCIA = [
         "note": "BNFC 2020-21 (p. 899); fora de licença. Shann: 2–10 mcg/kg/h."
       }
     ],
-    "prep": "EV: administrar não diluído (0,1 mg/ml) em bólus lento 15 seg. Para titulação precisa em criança: diluir 0,5 mg em 50 ml SF (0,01 mg/ml). Ter material de reanimação disponível (ressedação provável). Estabilidade após diluição: 24h. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "EV: administrar não diluído (0,1 mg/ml) em bólus lento 15 seg. Para titulação precisa em criança: diluir 0,5 mg em 50 ml SF (0,01 mg/ml). Ter material de reanimação disponível (ressedação provável). Estabilidade após diluição: 24h. Fonte: NHS Medusa 2024.",
     "ci": ["Condição grave controlada por benzodiazepinas (hipertensão intracraniana, estado de mal epiléptico)"],
     "alert": [
       "⚠️ Ressedação provável — semi-vida 40 min vs horas para BZD; manter monitorização",
@@ -322,7 +322,7 @@ var DRUGS_EMERGENCIA = [
         "note": "BNFC 2020-21 (p. 638): a glucose 10% é irritante — administrar em veia de grande calibre. As duas fontes divergem (250 vs 500 mg/kg): seguir o protocolo da unidade."
       }
     ],
-    "prep": "EV: G10% — periférico ou central; administrar em 1–3 min (bólus de emergência). G20% — central preferida (periférico aceitável em emergência absoluta com vigilância rigorosa). G50% — CENTRAL OBRIGATÓRIO (risco de necrose tecidular grave se extravasamento). ⚠️ Verificar glicemia 15 min após bólus. Concentração máxima periférico: G10% (100 mg/ml). Fonte: BNF for Children 2023-24; PALS AHA 2020.",
+    "prep": "EV: G10% — periférico ou central; administrar em 1–3 min (bólus de emergência). G20% — central preferida (periférico aceitável em emergência absoluta com vigilância rigorosa). G50% — CENTRAL OBRIGATÓRIO (risco de necrose tecidular grave se extravasamento). ⚠️ Verificar glicemia 15 min após bólus. Concentração máxima periférico: G10% (100 mg/ml). Fonte: PALS AHA 2020.",
     "ci": [
       "Hiperosmolaridade grave",
       "Hiperglicemia (obviar causa antes de infundir)",
@@ -541,7 +541,8 @@ var DRUGS_EMERGENCIA = [
       "⚠️ Potencia toxicidade digoxina — usar gluconato de cálcio se doente digitalizado",
       "⚠️ Nunca misturar com bicarbonato na mesma linha — precipitação imediata"
     ],
-    "source": "BNF for Children 2023-24; PALS AHA 2020; DeWitt CR et al. Crit Care Clin 2005",
-    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação."]
+    "source": "PALS AHA 2020; DeWitt CR et al. Crit Care Clin 2005",
+    "review": ["Fonte citada é ERC 2021 / PALS 2020. Existem versões de 2025 (ERC 2025 e AHA/AAP 2025 — ver ecrã Fontes): confirmar se a dose e o intervalo se mantêm antes de usar em reanimação.", "O BNFC 2020-21 não dá dose pediátrica de cloreto de cálcio para PCR. A dose segue AHA/PALS."]
+
   }
 ];

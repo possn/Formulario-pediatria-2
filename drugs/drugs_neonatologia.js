@@ -113,7 +113,7 @@ var DRUGS_NEONATOLOGIA = [
         "note": "Melhora oxigenação mas sem benefício na mortalidade (Cochrane)"
       }
     ],
-    "prep": "Sistema de administração dedicado integrado no ventilador (INOmax DSIR ou equivalente). Concentração stock: 800 ppm → dose final 1–20 ppm. Não interromper abruptamente (efeito rebote de hipertensão pulmonar). Monitorização contínua de NO, NO2 e MetaHb. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
+    "prep": "Sistema de administração dedicado integrado no ventilador (INOmax DSIR ou equivalente). Concentração stock: 800 ppm → dose final 1–20 ppm. Não interromper abruptamente (efeito rebote de hipertensão pulmonar). Monitorização contínua de NO, NO2 e MetaHb. Fonte: NHS Medusa 2024.",
     "ci": [
       "Lesões cardíacas dependentes do foramen ovale para manutenção do débito sistémico (ex: HVE, coarctação grave)"
     ],
@@ -240,7 +240,7 @@ var DRUGS_NEONATOLOGIA = [
         "note": "Confirmar com doseamento 25-OH-D após tratamento"
       }
     ],
-    "prep": "Oral: gotas de vitamina D3 (colecalciferol) — 1 gota = dose variável consoante concentração do produto (verificar sempre o rótulo). Misturar na tetina ou em 1 ml de leite. Evitar temperatura acima de 25°C (degradação). Fonte: BNF for Children 2023-24; DGS Vitamina D 2019.",
+    "prep": "Oral: gotas de vitamina D3 (colecalciferol) — 1 gota = dose variável consoante concentração do produto (verificar sempre o rótulo). Misturar na tetina ou em 1 ml de leite. Evitar temperatura acima de 25°C (degradação). Fonte: DGS Vitamina D 2019.",
     "ci": [
       "Hipercalcemia",
       "Hipervitaminose D",
@@ -283,7 +283,7 @@ var DRUGS_NEONATOLOGIA = [
         "note": "Intubação breve → surfactante → extubação imediata para CPAP"
       }
     ],
-    "prep": "IT (surfactante + LISA): pré-aquecer frasco a 37°C (banho de água 5 min). NÃO agitar. LISA: usar cateter específico (sonda Ch4–5 ou cateter LISA dedicado) — inserir até 1–2 cm abaixo das cordas vocais; infundir em 1–2 min enquanto mantém respiração espontânea. INSURE: intubação rápida → surfactante → extubação precoce < 1h. Fonte: BNF for Children 2023-24; ERS Neonatal Guidelines 2019.",
+    "prep": "IT (surfactante + LISA): pré-aquecer frasco a 37°C (banho de água 5 min). NÃO agitar. LISA: usar cateter específico (sonda Ch4–5 ou cateter LISA dedicado) — inserir até 1–2 cm abaixo das cordas vocais; infundir em 1–2 min enquanto mantém respiração espontânea. INSURE: intubação rápida → surfactante → extubação precoce < 1h. Fonte: ERS Neonatal Guidelines 2019.",
     "ci": [
       "SDR grave com apneia (LISA não adequada — intubação convencional)",
       "Instabilidade hemodinâmica grave"
