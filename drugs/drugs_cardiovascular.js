@@ -17,25 +17,32 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "EV bólus",
-        "val": "0,5–1 mg/kg/dose",
-        "max": "6 mg/kg/dose; 40 mg/dose habitual",
-        "freq": "cada 6–12h conforme resposta",
-        "note": "RN prematuro: 0,5–1 mg/kg cada 24h"
+        "ind": "Edema (ICC, doença renal ou hepática), edema pulmonar — EV lento",
+        "val": "RN: 0,5–1 mg/kg cada 12–24 h (cada 24 h se IG corrigida < 31 sem); 1 mês–11 anos: 0,5–1 mg/kg cada 8 h; 12–17 anos: 20–40 mg cada 8 h",
+        "max": "40 mg/dose e 6 mg/kg/dia (1 mês–11 anos)",
+        "freq": "Conforme resposta; doses maiores em edema resistente",
+        "note": "BNFC 2020-21 (p. 148). Injecção EV lenta."
       },
       {
-        "ind": "Oral",
-        "val": "1–3 mg/kg/dia",
-        "max": "80 mg/dia",
-        "freq": "1–2 doses/dia",
-        "note": ""
+        "ind": "Edema — oral",
+        "val": "RN: 0,5–2 mg/kg cada 12–24 h; 1 mês–11 anos: 0,5–2 mg/kg 2–3×/dia; 12–17 anos: 20–40 mg/dia, até 80–120 mg/dia em edema resistente",
+        "max": "80 mg/dia e 12 mg/kg/dia (1 mês–11 anos)",
+        "freq": "2–3×/dia",
+        "note": "BNFC 2020-21 (p. 148)."
       },
       {
-        "ind": "Perfusão contínua UCIP",
-        "val": "0,1–0,4 mg/kg/hora",
+        "ind": "Edema — perfusão EV contínua",
+        "val": "0,1–2 mg/kg/h",
         "max": "—",
-        "freq": "contínua (melhor eficácia e menor ototoxicidade vs bólus)",
-        "note": ""
+        "freq": "Contínua",
+        "note": "BNFC 2020-21 (p. 148). Pós-cirurgia cardíaca: iniciar 100 mcg/kg/h e duplicar cada 2 h até diurese > 1 mL/kg/h."
+      },
+      {
+        "ind": "Oligúria por insuficiência renal (TFG < 20 mL/min) — perfusão EV",
+        "val": "1 mês–11 anos: 2–5 mg/kg até 4×/dia; 12–17 anos: 250 mg em 1 h, subindo para 500 mg e 1 g conforme resposta",
+        "max": "1 g/dia (1 mês–11 anos)",
+        "freq": "Ver BNFC p. 148",
+        "note": "BNFC 2020-21 (p. 148). Se não houver resposta, provável necessidade de diálise."
       }
     ],
     "prep": "EV: pode administrar não diluído (10 mg/ml) em bólus (≤ 4 mg/min — ototoxicidade) ou diluir em SF (pH alcalino — incompatível com soluções ácidas). Perfusão: 20–50 mg em 50 ml SF (0,4–1 mg/ml). ⚠️ NÃO misturar com milrinona, nicardipina, ciprofloxacina, mid. Oral: solução 4 mg/ml ou 10 mg/ml. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -51,7 +58,9 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Alcalose metabólica hipoclorémica",
       "Nefrocalcinose em RN prematuro com uso prolongado"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Furosemide (p. 148); Formulário de Pediatria 3ª Ed.",
+    "review": ["A ficha anterior indicava máximo de 6 mg/kg por dose EV; o BNFC 2020-21 dá 6 mg/kg por dia (máx. 40 mg/dose). A perfusão passa de 0,1–0,4 para 0,1–2 mg/kg/h (BNFC)."]
+  
   },
   {
     "id": "acido_tranexamico",
@@ -267,11 +276,11 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "HTA / ICC — oral",
-        "val": "INICIAL: 0,1–0,3 mg/kg/dose oral; MANUTENÇÃO: 0,5–2 mg/kg/dia",
-        "max": "6 mg/kg/dia; 150 mg/dia",
-        "freq": "3 doses/dia",
-        "note": "RN: INICIAR com 0,01–0,05 mg/kg/dose (hipotensão grave — 1ª dose em contexto hospitalar)"
+        "ind": "Hipertensão ou insuficiência cardíaca — oral (início sob supervisão especializada)",
+        "val": "Dose-teste: 100 mcg/kg (máx. 6,25 mg) em 1 mês–11 anos; 10–50 mcg/kg em RN; 100 mcg/kg ou 6,25 mg em 12–17 anos. Depois 1 mês–11 anos: 100–300 mcg/kg 2–3×/dia",
+        "max": "1–11 meses 4 mg/kg/dia; 1–11 anos 6 mg/kg/dia; 12–17 anos 150 mg/dia; RN 2 mg/kg/dia",
+        "freq": "2–3×/dia; só continuar se a dose-teste for tolerada",
+        "note": "BNFC 2020-21 (p. 118). Vigiar a PA 1–2 h após a dose-teste. RN: 10–50 mcg/kg 2–3×/dia; pré-termo: dose-teste 10 mcg/kg e máx. 300 mcg/kg/dia. 12–17 anos: 12,5–25 mg 2–3×/dia."
       }
     ],
     "prep": "Oral: comprimidos 12,5/25/50 mg — triturar e dissolver em 10 ml água. Solução extemporânea 1 mg/ml (estável em ácido cítrico 28 dias). Tomar em JEJUM (30 min antes refeição — alimentos reduzem absorção 30–40%). ⚠️ Hipotensão na 1ª dose — iniciar deitado, monitorizar TA 1h. Fonte: BNF for Children 2023-24.",
@@ -289,7 +298,7 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Angioedema (raro mas grave)",
       "Monitorizar função renal e K+ no início e ajustes de dose"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Captopril (p. 118); Formulário de Pediatria 3ª Ed."
   },
   {
     "id": "enalapril",
@@ -306,18 +315,18 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "ICC / HTA oral",
-        "val": "INÍCIO 0,1 mg/kg/dia → ALVO 0,5 mg/kg/dia",
-        "max": "40 mg/dia",
-        "freq": "1–2 doses/dia",
-        "note": "RN: iniciar 0,01 mg/kg/dose (hipotensão grave — monitorizar)"
+        "ind": "Hipertensão ou insuficiência cardíaca — oral (sob supervisão especializada)",
+        "val": "RN: inicial 10 mcg/kg 1×/dia, até 500 mcg/kg/dia em 1–3 doses; 1 mês–11 anos: inicial 100 mcg/kg 1×/dia, até 1 mg/kg/dia em 1–2 doses",
+        "max": "RN 500 mcg/kg/dia; 1 mês–11 anos 1 mg/kg/dia",
+        "freq": "1–2×/dia",
+        "note": "BNFC 2020-21 (p. 120). Vigiar a PA 1–2 h após a primeira dose. Informação limitada em RN."
       },
       {
-        "ind": "Adulto",
-        "val": "2,5–5 mg 1×/dia inicial → 10–40 mg/dia",
-        "max": "40 mg/dia",
-        "freq": "1–2 doses/dia",
-        "note": ""
+        "ind": "Hipertensão ou insuficiência cardíaca — 12–17 anos",
+        "val": "Inicial 2,5 mg 1×/dia; manutenção 10–20 mg/dia",
+        "max": "40 mg/dia (≥ 50 kg)",
+        "freq": "1–2×/dia",
+        "note": "BNFC 2020-21 (p. 120)."
       }
     ],
     "prep": "Oral: comprimidos 2,5/5/10/20 mg — triturar e dissolver em água. Solução extemporânea 1 mg/ml estável 30 dias (refrigerada). Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
@@ -334,7 +343,7 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Angioedema (raro mas grave)",
       "Monitorizar creatinina e K+ ao início e ajustes"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Enalapril maleate (p. 120); Formulário de Pediatria 3ª Ed."
   },
   {
     "id": "propranolol",
@@ -353,32 +362,53 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Antiarrítmico EV",
-        "val": "0,01–0,1 mg/kg EV lento",
-        "max": "1 mg/dose (lactente); 3 mg/dose (criança)",
-        "freq": "pode repetir cada 6–8h",
-        "note": "Monitorização ECG e TA obrigatória"
+        "ind": "Arritmias — EV lento (monitorização ECG)",
+        "val": "RN: 20–50 mcg/kg; 1 mês–17 anos: 25–50 mcg/kg",
+        "max": "5 mg/dose (tirotoxicose)",
+        "freq": "Repetir cada 6–8 h se necessário; injectar em 10 min",
+        "note": "BNFC 2020-21 (p. 111). ECG e TA obrigatórios."
       },
       {
-        "ind": "HTA / Arritmia oral",
-        "val": "0,5–1 mg/kg/dia",
-        "max": "4 mg/kg/dia (máx. 160 mg/dia)",
-        "freq": "3–4 doses/dia",
-        "note": ""
+        "ind": "Arritmias — oral",
+        "val": "RN: 250–500 mcg/kg 3×/dia; criança: 250–500 mcg/kg 3–4×/dia",
+        "max": "1 mg/kg/dose 4×/dia; 160 mg/dia",
+        "freq": "3–4×/dia, ajustar à resposta",
+        "note": "BNFC 2020-21 (p. 111)."
       },
       {
-        "ind": "Hemangioma infantil",
+        "ind": "Hipertensão — oral",
+        "val": "RN: inicial 250 mcg/kg 3×/dia, até 2 mg/kg 3×/dia; 1 mês–11 anos: 0,25–1 mg/kg 3×/dia, até 5 mg/kg/dia; 12–17 anos: 80 mg 2×/dia, até 160–320 mg/dia",
+        "max": "5 mg/kg/dia (1 mês–11 anos)",
+        "freq": "Aumentar em intervalos semanais",
+        "note": "BNFC 2020-21 (p. 111)."
+      },
+      {
+        "ind": "Tetralogia de Fallot — EV lento",
+        "val": "RN e 1 mês–11 anos: inicial 15–20 mcg/kg",
+        "max": "100 mcg/kg/dose",
+        "freq": "Repetir 15–20 mcg/kg cada 6–8 h (RN cada 12 h) se necessário",
+        "note": "BNFC 2020-21 (p. 111). ECG obrigatório durante a administração."
+      },
+      {
+        "ind": "Tetralogia de Fallot — oral",
+        "val": "RN: 0,25–1 mg/kg 2–3×/dia; 1 mês–11 anos: 0,25–1 mg/kg 3–4×/dia",
+        "max": "RN 2 mg/kg/dose 3×/dia; 5 mg/kg/dia",
+        "freq": "3–4×/dia",
+        "note": "BNFC 2020-21 (p. 111)."
+      },
+      {
+        "ind": "Hipertiroidismo com sintomas autonómicos / tirotoxicose — oral",
+        "val": "RN: 250–500 mcg/kg cada 6–8 h; criança: 250–500 mcg/kg cada 8 h, até 1 mg/kg",
+        "max": "40 mg/dose",
+        "freq": "Cada 6–8 h",
+        "note": "BNFC 2020-21 (p. 111). EV: RN 20–50 mcg/kg; criança 25–50 mcg/kg (máx. 5 mg) cada 6–8 h em 10 min."
+      },
+      {
+        "ind": "Hemangioma infantil (não consta do BNFC)",
         "val": "1 mg/kg/dia (semana 1) → 2 mg/kg/dia (semana 2) → 3 mg/kg/dia",
         "max": "3 mg/kg/dia",
         "freq": "2 doses/dia",
-        "note": "Monitorizar FC, glicemia e TA. Duração: até 6 meses de idade"
-      },
-      {
-        "ind": "Crises hipóxicas (Fallot)",
-        "val": "0,01–0,25 mg/kg EV lento",
-        "max": "1 mg/dose",
-        "freq": "dose única em crise",
-        "note": ""
+        "note": "Monitorizar FC, glicemia e TA."
       }
     ],
     "prep": "EV: administrar não diluído (1 mg/ml) MUITO LENTAMENTE — 1 mg/min máximo (arritmias e colapso cardiovascular com infusão rápida). Monitorização ECG contínua. Oral: solução 1 mg/ml ou 5 mg/ml; comprimidos 10/40/80 mg — podem ser triturados. Tomar COM alimentos (aumenta biodisponibilidade 50%). Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -396,7 +426,9 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Não suspender abruptamente (angina de rebote em adultos)",
       "Antídoto: glucagon 50–150 mcg/kg EV"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Propranolol hydrochloride (p. 111); Formulário de Pediatria 3ª Ed.",
+    "review": ["A ficha anterior tinha o EV antiarrítmico em 10–100 mcg/kg e a crise hipóxica de Fallot em 10–250 mcg/kg (máx. 1 mg), muito acima do BNFC 2020-21 (Fallot: 15–20 mcg/kg, máx. 100 mcg/kg). Corrigido.", "Hemangioma infantil não consta do BNFC 2020-21: o esquema 1→2→3 mg/kg/dia deve ser confirmado no RCM do medicamento específico."]
+  
   },
   {
     "id": "adenosina_triphosphate",
@@ -456,18 +488,18 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "HTA oral (6–17 anos)",
-        "val": "2,5–5 mg/dia",
-        "max": "5 mg/dia (< 6 anos); 10 mg/dia (≥ 6 anos)",
-        "freq": "1×/dia",
-        "note": "Início 2,5 mg; aumentar após 4 semanas se necessário"
+        "ind": "Hipertensão — oral, 1 mês–11 anos",
+        "val": "Inicial 100–200 mcg/kg 1×/dia; subir até 400 mcg/kg 1×/dia",
+        "max": "10 mg/dia",
+        "freq": "1×/dia; ajustar cada 1–2 semanas",
+        "note": "BNFC 2020-21 (p. 114)."
       },
       {
-        "ind": "Adulto",
-        "val": "5–10 mg/dia",
+        "ind": "Hipertensão — oral, 12–17 anos",
+        "val": "Inicial 5 mg 1×/dia; subir até 10 mg 1×/dia",
         "max": "10 mg/dia",
-        "freq": "1×/dia",
-        "note": ""
+        "freq": "1×/dia; ajustar cada 1–2 semanas",
+        "note": "BNFC 2020-21 (p. 114). Os sais (besilato, maleato, mesilato) são equivalentes pela dose de amlodipina base."
       }
     ],
     "prep": "Oral: suspensão extemporânea 1 mg/ml (estável 35 dias refrigerada em frasco âmbar). Comprimidos 5/10 mg — podem ser triturados. Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
@@ -482,7 +514,7 @@ var DRUGS_CARDIOVASCULAR = [
       "Semi-vida longa (~35–50h) — estado estacionário ao fim de 7–8 dias",
       "Efeito anti-hipertensor persiste alguns dias após suspensão"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "BNFC 2020-21, Amlodipine (p. 114)"
   },
   {
     "id": "hidralazina",
@@ -498,18 +530,25 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Emergência hipertensiva EV",
-        "val": "0,1–0,5 mg/kg/dose EV",
-        "max": "20 mg/dose",
-        "freq": "cada 4–6h (ou perfusão 0,1–0,5 mg/kg/hora)",
-        "note": "Início de acção 5–20 min EV"
+        "ind": "Hipertensão resistente (adjuvante) — EV lento",
+        "val": "RN e 1 mês–11 anos: 100–500 mcg/kg; 12–17 anos: 5–10 mg",
+        "max": "3 mg/kg/dia e 60 mg/dia (1 mês–11 anos)",
+        "freq": "Repetir cada 4–6 h se necessário",
+        "note": "BNFC 2020-21 (p. 123)."
       },
       {
-        "ind": "HTA crónica oral",
-        "val": "0,75–1 mg/kg/dia",
-        "max": "25 mg/dose; 200 mg/dia",
-        "freq": "3–4 doses/dia",
-        "note": ""
+        "ind": "Hipertensão resistente — perfusão EV contínua",
+        "val": "RN e 1 mês–11 anos: 12,5–50 mcg/kg/h; 12–17 anos: 3–9 mg/h",
+        "max": "RN 2 mg/kg/dia; 1 mês–11 anos 3 mg/kg/dia",
+        "freq": "Contínua (via preferida em doentes cardíacos)",
+        "note": "BNFC 2020-21 (p. 123). Atenção às unidades: mcg/kg/h."
+      },
+      {
+        "ind": "Hipertensão resistente — oral",
+        "val": "RN: 250–500 mcg/kg cada 8–12 h, até 2–3 mg/kg cada 8 h; 1 mês–11 anos: 250–500 mcg/kg cada 8–12 h, até 7,5 mg/kg/dia; 12–17 anos: 25 mg 2×/dia, até 50–100 mg 2×/dia",
+        "max": "200 mg/dia (1 mês–11 anos)",
+        "freq": "2–3×/dia",
+        "note": "BNFC 2020-21 (p. 123)."
       }
     ],
     "prep": "EV: administrar em SF APENAS (não em SG5% — hidrólise rápida com perda de 50% actividade em 2h). Bólus em 3–5 min; perfusão: 20 mg em 100 ml SF. Oral: comprimidos 25/50 mg — podem ser triturados. Instabilidade em SG5% é clinicamente relevante — preparar em SF imediatamente antes. Fonte: BNF for Children 2023-24; NHS Medusa 2024.",
@@ -524,7 +563,9 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Retenção hídrica — associar diurético",
       "Usado frequentemente em emergência obstétrica (HTA na gravidez)"
     ],
-    "source": "BNF for Children 2023-24; Harriet Lane 23rd Ed"
+    "source": "BNFC 2020-21, Hydralazine hydrochloride (p. 123)",
+    "review": ["A ficha anterior indicava perfusão de 0,1–0,5 mg/kg/h, cerca de 10 vezes acima do BNFC 2020-21 (12,5–50 mcg/kg/h). Corrigido."]
+  
   },
   {
     "id": "espironolactona",
@@ -542,25 +583,11 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "ICC / HTA oral",
-        "val": "1–3 mg/kg/dia",
-        "max": "100 mg/dia",
-        "freq": "1–2 doses/dia",
-        "note": ""
-      },
-      {
-        "ind": "Ascite oral",
-        "val": "1–3 mg/kg/dia",
-        "max": "100 mg/dia",
-        "freq": "1 dose/dia",
-        "note": "Ratio espironolactona:furosemida habitualmente 100:40"
-      },
-      {
-        "ind": "Adulto (ICC)",
-        "val": "25 mg/dia",
-        "max": "50 mg/dia",
-        "freq": "1×/dia",
-        "note": ""
+        "ind": "Edema (ICC, ascite, síndrome nefrótico) e hipocaliemia induzida por diuréticos ou anfotericina — oral",
+        "val": "RN: 1–2 mg/kg/dia em 1–2 doses; 1 mês–11 anos: inicial 1–3 mg/kg/dia em 1–2 doses; 12–17 anos: 50–100 mg/dia em 1–2 doses",
+        "max": "Ascite resistente: RN 7 mg/kg/dia; 1 mês–17 anos 9 mg/kg/dia; 12–17 anos máx. 400 mg/dia",
+        "freq": "1–2×/dia",
+        "note": "BNFC 2020-21 (p. 133). Razão espironolactona:furosemida habitualmente 100:40 (Formulário)."
       }
     ],
     "prep": "Oral: suspensão extemporânea 5 mg/ml (estável 28 dias refrigerada). Comprimidos 25/50/100 mg — triturar. Tomar COM alimentos (aumenta absorção 50%). Fonte: BNF for Children 2023-24.",
@@ -575,7 +602,9 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Ginecomastia em adolescentes do sexo masculino (efeito anti-androgénico)",
       "Efeito diurético lento (2–3 dias para início) — não é diurético de emergência"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24; RALES trial"
+    "source": "BNFC 2020-21, Spironolactone (p. 133); Formulário de Pediatria 3ª Ed.",
+    "review": ["A ficha anterior limitava a 100 mg/dia; o BNFC 2020-21 admite até 9 mg/kg/dia na ascite resistente (máx. 400 mg/dia em 12–17 anos)."]
+  
   },
   {
     "id": "enoxaparina",
@@ -592,32 +621,25 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Tratamento TVP/TEP — SC (< 2 meses)",
-        "val": "1,5 mg/kg/dose SC",
+        "ind": "Tratamento de tromboembolismo — SC",
+        "val": "RN: 1,5–2 mg/kg 2×/dia; 1 mês: 1,5 mg/kg 2×/dia; 2 meses–17 anos: 1 mg/kg 2×/dia",
         "max": "—",
-        "freq": "cada 12h",
-        "note": "Alvo anti-Xa 0,5–1 UI/ml (colher 4h após dose)"
+        "freq": "Cada 12 h",
+        "note": "BNFC 2020-21 (p. 101). Alvo anti-Xa 0,5–1 UI/mL, 4 h após a dose (Monagle, CHEST 2018). 1 mg = 100 UI."
       },
       {
-        "ind": "Tratamento TVP/TEP — SC (≥ 2 meses)",
-        "val": "1 mg/kg/dose SC",
-        "max": "—",
-        "freq": "cada 12h",
-        "note": "Alvo anti-Xa 0,5–1 UI/ml"
+        "ind": "Profilaxia de tromboembolismo — SC",
+        "val": "RN e 1 mês: 750 mcg/kg 2×/dia; 2 meses–17 anos: 500 mcg/kg 2×/dia",
+        "max": "40 mg/dia (2 meses–17 anos)",
+        "freq": "Cada 12 h",
+        "note": "BNFC 2020-21 (p. 101). Alvo anti-Xa 0,2–0,4 UI/mL."
       },
       {
-        "ind": "Profilaxia SC",
-        "val": "0,5 mg/kg/dose SC",
-        "max": "40 mg/dose",
-        "freq": "1×/dia",
-        "note": "Alvo anti-Xa 0,2–0,4 UI/ml"
-      },
-      {
-        "ind": "Adulto (tratamento)",
-        "val": "1 mg/kg SC cada 12h ou 1,5 mg/kg SC 1×/dia",
+        "ind": "Tromboembolismo na gravidez — 12–17 anos",
+        "val": "< 50 kg: 40 mg; 50–69 kg: 60 mg; 70–89 kg: 80 mg; ≥ 90 kg: 100 mg",
         "max": "—",
-        "freq": "conforme esquema",
-        "note": ""
+        "freq": "2×/dia, pelo peso no início da gravidez",
+        "note": "BNFC 2020-21 (p. 101)."
       }
     ],
     "prep": "SC: injecção na prega abdominal (perpendicularmente, sem expulsar bolha de ar antes da injecção — perda de dose). NÃO massajar após injecção. NÃO administrar IM. EV (trombólise/circulação extracorporal): ver protocolo específico. Fonte: BNF for Children 2023-24.",
@@ -633,7 +655,9 @@ var DRUGS_CARDIOVASCULAR = [
       "⚠️ Insuf. renal: ajustar dose ou usar HNF",
       "Dose pediátrica MG superior à adulto — crianças têm volume distribuição maior"
     ],
-    "source": "Monagle P. CHEST 2018; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Enoxaparin sodium (p. 101); Monagle P. CHEST 2018 (alvos anti-Xa)",
+    "review": ["A ficha anterior tinha a profilaxia a 0,5 mg/kg 1×/dia; o BNFC 2020-21 indica 2×/dia (máx. 40 mg/dia). Corrigido."]
+  
   },
   {
     "id": "carvedilol",
@@ -649,18 +673,11 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Insuficiência cardíaca — início",
-        "val": "0,05 mg/kg/dose PO",
-        "max": "3,125 mg/dose",
-        "freq": "q12h × 2 semanas",
-        "note": "Titular lentamente: duplicar dose a cada 2 semanas se tolerado"
-      },
-      {
-        "ind": "Insuficiência cardíaca — alvo",
-        "val": "0,4–0,8 mg/kg/dose PO",
-        "max": "25 mg/dose (> 85 kg: 50 mg/dose)",
-        "freq": "q12h",
-        "note": "Ensaio PRCCTFHF mostrou tendência de benefício mas sem diferença estatística significativa vs. placebo — evidência mais fraca que em adultos"
+        "ind": "Insuficiência cardíaca (adjuvante; informação limitada) — 2–17 anos",
+        "val": "50 mcg/kg 2×/dia (máx. 3,125 mg/dose) ≥ 2 semanas; depois 100 mcg/kg 2×/dia ≥ 2 semanas; depois 200 mcg/kg 2×/dia; se necessário até 350 mcg/kg 2×/dia",
+        "max": "25 mg/dose",
+        "freq": "2×/dia",
+        "note": "BNFC 2020-21 (p. 132). O ensaio PRCCTFHF não mostrou diferença significativa vs placebo: evidência mais fraca que em adultos."
       }
     ],
     "prep": "Oral: comprimidos 3,125/6,25/12,5/25 mg — podem ser esmagados e dissolvidos em 5 ml água. Solução extemporânea 1,25 mg/ml. Tomar COM alimentos (reduz hipotensão ortostática, melhora absorção). Fonte: BNF for Children 2023-24.",
@@ -677,7 +694,9 @@ var DRUGS_CARDIOVASCULAR = [
       "Bradicardia e hipotensão são sinais de dose excessiva — monitorizar FC e TA",
       "Evidência pediátrica limitada — baseada principalmente em extrapolação de adultos (COPERNICUS, MERIT-HF)"
     ],
-    "source": "BNF for Children 2023-24; Shaddy RE et al. JAMA 2007 (PRCCTFHF); Rossano JW Heart Failure 2021"
+    "source": "BNFC 2020-21, Carvedilol (p. 132); Shaddy RE et al. JAMA 2007 (PRCCTFHF)",
+    "review": ["A ficha anterior indicava alvo de 0,4–0,8 mg/kg/dose (máx. 25–50 mg), acima do BNFC 2020-21 (máx. 350 mcg/kg/dose, 25 mg/dose). Corrigido."]
+  
   },
   {
     "id": "diltiazem",
@@ -738,18 +757,18 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Oral — manutenção TSV",
-        "val": "2–3 mg/kg/dia PO",
-        "max": "200 mg/dia",
-        "freq": "2 doses/dia (q12h)",
-        "note": "Iniciar com dose baixa e titular por resposta e nível sérico (alvo: 0,2–1 mg/L)"
+        "ind": "TSV por reentrada resistente, ectopia ventricular, TV, vias acessórias, FA paroxística — oral (não licenciado < 12 anos)",
+        "val": "RN e 1 mês–11 anos: 2 mg/kg 2–3×/dia; 12–17 anos: inicial 50–100 mg 2×/dia, até 300 mg/dia",
+        "max": "8 mg/kg/dia e 300 mg/dia (1 mês–11 anos); 400 mg/dia em arritmia ventricular com constituição robusta",
+        "freq": "2–3×/dia; ajustar pela resposta e pelo nível plasmático",
+        "note": "BNFC 2020-21 (p. 82). Reduzir a dose para metade se associada a amiodarona. Nível-alvo 0,2–1 mg/L."
       },
       {
-        "ind": "EV — TSV aguda",
+        "ind": "TSV aguda — EV (não consta do BNFC)",
         "val": "1–2 mg/kg EV em 10 min",
         "max": "150 mg",
-        "freq": "Dose única; repetir apenas se necessário com intervalo ≥ 1h",
-        "note": "Monitorização ECG contínua obrigatória"
+        "freq": "Dose única; repetir apenas se necessário com intervalo ≥ 1 h",
+        "note": "Monitorização ECG contínua obrigatória."
       }
     ],
     "prep": "EV: diluir em SG5% para 1–2 mg/ml. Administrar em 10–30 min (monitorização ECG contínua durante infusão). Oral: comprimidos 50/100 mg; solução oral 5 mg/ml (extemporânea, estável 14 dias). Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24; SmPC Tambocor.",
@@ -766,7 +785,9 @@ var DRUGS_CARDIOVASCULAR = [
       "Monitorização de níveis séricos recomendada (alvo 0,2–1 mg/L)",
       "Inibidores CYP2D6 (fluoxetina, paroxetina) aumentam os níveis de flecainida"
     ],
-    "source": "BNF for Children 2023-24; Perry JC et al. J Cardiovasc Electrophysiol 1996; PACES/HRS Expert Consensus 2014"
+    "source": "BNFC 2020-21, Flecainide acetate (p. 82); Perry JC et al. J Cardiovasc Electrophysiol 1996; PACES/HRS Expert Consensus 2014",
+    "review": ["O BNFC 2020-21 só inclui flecainida oral; a dose EV de 1–2 mg/kg não está verificada nesta edição: confirmar em protocolo.", "A ficha anterior tinha a dose oral em 2–3 mg/kg/dia; o BNFC indica 2 mg/kg por toma, 2–3×/dia. Corrigido."]
+  
   },
   {
     "id": "milrinona",
@@ -820,18 +841,32 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Crise hipertensiva (urgência — não emergência)",
-        "val": "0,25–0,5 mg/kg/dose PO/SL",
+        "ind": "Crise hipertensiva / angina aguda na doença de Kawasaki — oral, libertação imediata",
+        "val": "250–500 mcg/kg",
         "max": "10 mg/dose",
-        "freq": "Dose única; repetir q4–6h se necessário",
-        "note": "Uso SL controverso e não recomendado por algumas guidelines (queda de TA imprevisível). Via oral preferida"
+        "freq": "Repetir uma vez se necessário",
+        "note": "BNFC 2020-21 (p. 115). Pode causar descida imprevisível e grave da PA: monitorizar de perto; se ineficaz, considerar alternativa."
       },
       {
-        "ind": "Hipertensão crónica",
-        "val": "0,5–3 mg/kg/dia PO",
-        "max": "120 mg/dia",
-        "freq": "2–3 doses/dia (formulação regular) ou 1–2 doses/dia (LP)",
-        "note": "Preferir formulações LP para melhor controlo tensional"
+        "ind": "Hipertensão — oral, libertação imediata",
+        "val": "1 mês–11 anos: 200–300 mcg/kg 3×/dia; 12–17 anos: 5–20 mg 3×/dia",
+        "max": "3 mg/kg/dia e 90 mg/dia",
+        "freq": "Frequência depende da preparação",
+        "note": "BNFC 2020-21 (p. 115). Formulações de libertação prolongada: seguir o RCM."
+      },
+      {
+        "ind": "Fenómeno de Raynaud — oral, 2–17 anos",
+        "val": "2,5–10 mg 2–4×/dia",
+        "max": "—",
+        "freq": "Iniciar com doses baixas à noite",
+        "note": "BNFC 2020-21 (p. 115)."
+      },
+      {
+        "ind": "Hipoglicemia hiperinsulinémica persistente — RN",
+        "val": "100–200 mcg/kg 4×/dia",
+        "max": "600 mcg/kg/dose",
+        "freq": "4×/dia",
+        "note": "BNFC 2020-21 (p. 115)."
       }
     ],
     "prep": "Oral: cápsulas — perfurar e extrair conteúdo para administração oral (NÃO sublingual — queda TA imprevisível). Comprimidos LP — engolir inteiros, NÃO triturar. Solução extemporânea 1 mg/ml (estável 7 dias refrigerada). Fonte: BNF for Children 2023-24.",
@@ -847,7 +882,9 @@ var DRUGS_CARDIOVASCULAR = [
       "Edema periférico frequente (vasodilatação capilar)",
       "Inibidor CYP3A4 — aumenta níveis de ciclosporina, tacrolímus"
     ],
-    "source": "BNF for Children 2023-24; NHBPEP Working Group 2004; Flynn JT et al. Pediatrics 2017"
+    "source": "BNFC 2020-21, Nifedipine (p. 115)",
+    "review": ["A via sublingual constava da ficha anterior e não consta do BNFC 2020-21 (oral): removida. Máximo diário passou de 120 para 90 mg."]
+  
   },
   {
     "id": "bosentano",
@@ -985,18 +1022,25 @@ var DRUGS_CARDIOVASCULAR = [
     ],
     "dose": [
       {
-        "ind": "Hipertensão / antiarrítmico",
-        "val": "0,5–1 mg/kg/dia PO",
-        "max": "100 mg/dia",
-        "freq": "1–2 doses/dia (semivida longa: 6–9h em criança)",
-        "note": "Iniciar com dose baixa (0,5 mg/kg) e titular por resposta e tolerância"
+        "ind": "Hipertensão — oral",
+        "val": "RN e 1 mês–11 anos: 0,5–2 mg/kg 1×/dia; 12–17 anos: 25–50 mg 1×/dia",
+        "max": "Doses > 50 mg/dia raramente necessárias",
+        "freq": "1×/dia, pode dividir em 2 tomas",
+        "note": "BNFC 2020-21 (p. 112)."
       },
       {
-        "ind": "Síndrome de Marfan",
-        "val": "0,5–2 mg/kg/dia PO",
+        "ind": "Arritmias — oral",
+        "val": "RN e 1 mês–11 anos: 0,5–2 mg/kg 1×/dia; 12–17 anos: 50–100 mg 1×/dia",
+        "max": "100 mg/dia (1 mês–11 anos)",
+        "freq": "1×/dia, pode dividir em 2 tomas",
+        "note": "BNFC 2020-21 (p. 112)."
+      },
+      {
+        "ind": "Síndrome de Marfan (não consta do BNFC)",
+        "val": "0,5–2 mg/kg/dia",
         "max": "100 mg/dia",
         "freq": "1–2 doses/dia",
-        "note": "Reduz taxa de dilatação da raíz aórtica (Shores et al. NEJM 1994). Evidência crescente para losartan como alternativa/combinação"
+        "note": "Reduz a taxa de dilatação da raiz aórtica (Shores et al. NEJM 1994). Evidência crescente para o losartan como alternativa ou associação."
       }
     ],
     "prep": "Oral: comprimidos 25/50/100 mg — podem ser esmagados. Suspensão magistral 2 mg/ml estável 14 dias (refrigerada). Tomar com ou sem alimentos. Fonte: BNF for Children 2023-24.",
@@ -1012,7 +1056,9 @@ var DRUGS_CARDIOVASCULAR = [
       "Excreção renal predominante — ajustar dose se TFG < 35 ml/min",
       "Cardioselectividade diminui com doses altas — cautela em asmáticos mesmo com doses habituais"
     ],
-    "source": "BNF for Children 2023-24; Shores J et al. N Engl J Med 1994; NHBPEP Working Group 2004"
+    "source": "BNFC 2020-21, Atenolol (p. 112); Shores J et al. N Engl J Med 1994",
+    "review": ["A indicação Síndrome de Marfan não consta do BNFC 2020-21: fundamentada em Shores et al."]
+  
   },
   {
     "id": "sildenafil_cardio",
