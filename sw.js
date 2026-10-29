@@ -1,4 +1,4 @@
-const CACHE = 'ucip-v44';
+const CACHE = 'ucip-v45';
 const ASSETS = [
   './', './index.html', './compat_data.js', './manifest.json',
   './apple-touch-icon.png', './icon-192.png', './icon-512.png',
@@ -9,7 +9,9 @@ const ASSETS = [
   './drugs/drugs_respiratorio.js', './drugs/drugs_corticoides.js',
   './drugs/drugs_gastroenterologia.js', './drugs/drugs_endocrino.js',
   './drugs/drugs_electroliticos.js', './drugs/drugs_neonatologia.js',
-  './drugs/drugs_oncologia.js'
+  './drugs/drugs_oncologia.js',
+  './fonts/newsreader.woff2', './fonts/plex-400.woff2', './fonts/plex-500.woff2',
+  './fonts/plex-600.woff2', './fonts/plex-700.woff2'
 ];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
