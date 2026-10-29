@@ -17,18 +17,18 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Oral (calculado como amoxicilina)",
-        "val": "40–90 mg/kg/dia",
-        "max": "3 g/dia amoxicilina",
-        "freq": "3 doses/dia (susp. 125/31); 2 doses/dia (susp. 400/57 ou comp 875/125)",
-        "note": "OMA em criança < 2 anos ou recorrente: 80–90 mg/kg/dia"
+        "ind": "EV — infecções por estirpes produtoras de beta-lactamase",
+        "val": "RN e 1–2 meses: 30 mg/kg cada 12 h; 3 meses–17 anos: 30 mg/kg cada 8 h",
+        "max": "1,2 g/dose",
+        "freq": "Cada 12 h (< 3 meses) ou cada 8 h; em < 3 meses preferir perfusão",
+        "note": "BNFC 2020-21 (p. 370). Doses expressas em amoxicilina-clavulanato (total)."
       },
       {
-        "ind": "EV grave",
-        "val": "100–200 mg/kg/dia (de amoxicilina)",
-        "max": "12 g/dia amoxicilina",
-        "freq": "3–4 doses/dia",
-        "note": ""
+        "ind": "Oral — suspensão 125/31",
+        "val": "RN e 1–11 meses: 0,25 ml/kg 3×/dia (dobrar se grave); 1–5 anos: 0,25 ml/kg 3×/dia ou 5 ml 3×/dia",
+        "max": "—",
+        "freq": "3×/dia",
+        "note": "BNFC 2020-21 (p. 370). 12–17 anos (comprimidos): 250/125 mg cada 8 h, até 500/125 mg cada 8 h se grave."
       }
     ],
     "prep": "EV: reconstituir 600 mg em 10 ml SWFI; 1,2 g em 20 ml SWFI. Diluir em SF ou SG5% até concentração ≤ 40 mg/ml (amoxicilina). Administrar em 30 min. Periférico: ≤ 40 mg/ml. Estabilidade: preparar fresco — estável apenas 20 min à T ambiente após diluição. Oral: suspensão 125/5 ml ou 250/5 ml — reconstituir com água, refrigerar, usar em 7 dias.",
@@ -42,7 +42,9 @@ var DRUGS_ANTIBIOTICOS = [
       "Diarreia frequente — pode usar probiótico",
       "Ajuste renal se TFG < 30 ml/min"
     ],
-    "source": "BNF for Children 2023-24; DGS Orientação 2019"
+    "source": "BNFC 2020-21, Co-amoxiclav (p. 370)",
+    "review": ["Doses EV da ficha anterior (100–200 mg/kg/dia de amoxicilina, até 12 g/dia) removidas: excedem largamente o BNFC 2020-21. Esquemas orais de maior dose (40–90 mg/kg/dia, DGS) por confirmar."]
+  
   },
   {
     "id": "ceftriaxona",
@@ -59,18 +61,11 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Meningite / infecção grave",
-        "val": "100 mg/kg/dia EV/IM",
-        "max": "4 g/dia",
-        "freq": "1 dose/dia (ou 2 doses/dia na meningite)",
-        "note": "Meningite: 100 mg/kg/dia em 2 doses nos primeiros dias"
-      },
-      {
-        "ind": "Infecções moderadas",
-        "val": "50–75 mg/kg/dia",
-        "max": "2 g/dia",
-        "freq": "1 dose/dia",
-        "note": ""
+        "ind": "Infecções graves (pneumonia, intra-abdominal, ITU complicada) — EV",
+        "val": "RN < 15 dias: 20–50 mg/kg/dia; RN 15–28 dias: 50–80 mg/kg/dia; 1 mês–11 anos < 50 kg: 50–80 mg/kg/dia; ≥ 50 kg e 12–17 anos: 1–2 g/dia",
+        "max": "4 g/dia (criança); 2 g/dose ≥ 50 kg",
+        "freq": "1 dose/dia; extremo superior em casos graves",
+        "note": "BNFC 2020-21 (p. 343). IM profunda: mesmas doses."
       }
     ],
     "prep": "EV: reconstituir 1 g em 10 ml SWFI (100 mg/ml); diluir em SF, SG5% ou Lactato Ringer. Concentração para infusão: ≤ 40 mg/ml periférico; ≤ 100 mg/ml central. Administrar em 30 min (≥ 60 min se dose > 50 mg/kg ou para reduzir flebite). ⚠️ NUNCA misturar com solução contendo cálcio EV na mesma linha (precipitação letal em neonatos). Estabilidade: 24h a 25°C; 48h a 4°C após reconstituição.",
@@ -85,7 +80,9 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ Diarreia associada a Clostridioides difficile",
       "Boa penetração LCR — opção preferida na meningite"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Ceftriaxone (p. 343)",
+    "review": ["Dose de meningite (100 mg/kg/dia em 2 doses) retirada: o BNFC 2020-21 não tem secção própria de meningite para a ceftriaxona (máx. 80 mg/kg/dia, 4 g/dia); confirmar em protocolo local."]
+  
   },
   {
     "id": "vancomicina",
@@ -105,32 +102,25 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "EV (doseamento por AUC/MIC)",
-        "val": "15 mg/kg/dose",
-        "max": "750 mg/dose (inicial)",
-        "freq": "4 doses/dia (RN: 2–3/dia; < 1 mês: cada 12h)",
-        "note": "Dose de carga opcional: 25–30 mg/kg (infecção grave) em 1h. Monitorizar AUC24/MIC alvo 400–600"
+        "ind": "EV — 1 mês–11 anos",
+        "val": "10–15 mg/kg",
+        "max": "60 mg/kg/dia (doses superiores não recomendadas)",
+        "freq": "Cada 6 h, ajustar por níveis plasmáticos",
+        "note": "BNFC 2020-21 (p. 349). Duração conforme tipo e gravidade da infecção. 12–17 anos: 15–20 mg/kg (máx. 2 g/dose) cada 8–12 h."
       },
       {
-        "ind": "Oral (C. difficile — RAREmente usado)",
-        "val": "10–40 mg/kg/dia oral",
-        "max": "500 mg/dia",
-        "freq": "4 doses/dia",
-        "note": "Via oral não tem absorção sistémica"
-      },
-      {
-        "ind": "Sépsis / Meningite neonatal EV",
-        "val": "< 29 sem (< 14 dias): 15 mg/kg cada 24h; < 29 sem (≥ 14 dias): 15 mg/kg cada 18h; 29–35 sem: 15 mg/kg cada 12h; ≥ 36 sem: 15 mg/kg cada 8h",
+        "ind": "EV — RN (uso sob aconselhamento especializado)",
+        "val": "15 mg/kg; < 29 sem IGc: cada 24 h; 29–35 sem: cada 12 h; ≥ 35 sem: cada 8 h",
         "max": "—",
-        "freq": "conforme esquema por IG e idade pós-natal",
-        "note": "Monitorização AUC/MIC preferida a monitorização de nível vale isolado (ASHP 2020)"
+        "freq": "Ajustar por níveis plasmáticos",
+        "note": "BNFC 2020-21 (p. 349)."
       },
       {
-        "ind": "Neonatal — Ajuste por nível vale (se AUC não disponível)",
-        "val": "Alvo vale: 10–15 mg/L (sépsis); 15–20 mg/L (meningite)",
-        "max": "—",
-        "freq": "colher antes da 4ª dose",
-        "note": ""
+        "ind": "Oral — infecção por C. difficile",
+        "val": "RN e 1 mês–11 anos: 10 mg/kg; 12–17 anos: 125 mg (até 500 mg se grave)",
+        "max": "2 g/dia (1 mês–11 anos)",
+        "freq": "Cada 6 h durante 10 dias",
+        "note": "BNFC 2020-21 (p. 349). Sem absorção sistémica por via oral."
       }
     ],
     "prep": "EV: diluir para ≤ 5 mg/ml. Infusão 60 min (para dose ≤ 15 mg/kg) ou 120 min (dose de carga). Linha dedicada.",
@@ -148,7 +138,9 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ Ototoxicidade (rara com guidelines actuais)",
       "⚠️ Monitorização farmacocinética obrigatória em RN — farmacocinética muito variável"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; Rybak MJ et al. Am J Health-Syst Pharm 2020; BNF for Children 2023-24; BNF for Children 2023-24; Rybak MJ. AJHP 2020; BNFC Neonatal Formulary 9th Ed"
+    "source": "BNFC 2020-21, Vancomycin (p. 349)",
+    "review": ["Dose de carga, alvos de AUC/vale e esquema neonatal «cada 18 h» (anteriores) removidos por não constarem do BNFC 2020-21: confirmar em protocolo local / Rybak 2020."]
+  
   },
   {
     "id": "meropenem",
@@ -165,18 +157,25 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Infecção grave / sépsis",
-        "val": "20 mg/kg/dose EV",
-        "max": "1 g/dose (2 g em meningite/pseudomonas)",
-        "freq": "3 doses/dia",
-        "note": "Infusão extendida: 3–4 horas para maximizar %T>MIC (PK/PD — organismos com MIC elevado)"
+        "ind": "Infecção / septicémia nosocomial — EV",
+        "val": "RN < 7 dias: 20 mg/kg cada 12 h; RN 7–28 dias: 20 mg/kg cada 8 h; 1 mês–11 anos < 50 kg: 10–20 mg/kg cada 8 h; ≥ 50 kg e 12–17 anos: 0,5–1 g cada 8 h",
+        "max": "1 g/dose",
+        "freq": "Cada 8 h (RN < 7 dias: cada 12 h)",
+        "note": "BNFC 2020-21 (p. 337)."
       },
       {
-        "ind": "Meningite",
-        "val": "40 mg/kg/dose",
+        "ind": "Infecção grave (RN)",
+        "val": "40 mg/kg; < 7 dias: cada 12 h; 7–28 dias: cada 8 h",
+        "max": "—",
+        "freq": "—",
+        "note": "BNFC 2020-21 (p. 337)."
+      },
+      {
+        "ind": "Meningite / fibrose quística (exacerbações)",
+        "val": "1 mês–11 anos < 50 kg: 40 mg/kg; ≥ 50 kg e 12–17 anos: 2 g; RN: 40 mg/kg (< 7 dias cada 12 h; 7–28 dias cada 8 h)",
         "max": "2 g/dose",
-        "freq": "3 doses/dia",
-        "note": ""
+        "freq": "Cada 8 h",
+        "note": "BNFC 2020-21 (p. 337)."
       }
     ],
     "prep": "EV: reconstituir 500 mg em 10 ml SWFI (50 mg/ml); 1 g em 20 ml. Diluir em SF ou SG5%. Concentração: 1–20 mg/ml (infusão padrão 30 min); ≤ 50 mg/ml para bólus EV (administrar em 5 min). Infusão prolongada (3h): diluir a ≤ 10 mg/ml em SF — melhor PK/PD para MIC > 2 mg/L. Estabilidade CRÍTICA: SF 4h a 25°C; 24h a 4°C. SG5%: usar imediatamente (degradação rápida).",
@@ -191,7 +190,7 @@ var DRUGS_ANTIBIOTICOS = [
       "Reservar para organismos resistentes — preservar para evitar resistências",
       "Ajuste renal obrigatório"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Meropenem (p. 337)"
   },
   {
     "id": "gentamicina",
@@ -265,25 +264,25 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Infecção anaeróbia — EV/oral",
-        "val": "7,5 mg/kg/dose",
-        "max": "500 mg/dose",
-        "freq": "3 doses/dia",
-        "note": "Casos graves: 15 mg/kg dose de carga → 7,5 mg/kg 3×/dia"
+        "ind": "Oral — infecções anaeróbias",
+        "val": "1 mês: 7,5 mg/kg cada 12 h; 2 meses–11 anos: 7,5 mg/kg cada 8 h; 12–17 anos: 400 mg cada 8 h",
+        "max": "400 mg/dose (2 meses–11 anos)",
+        "freq": "7 dias (10–14 dias em C. difficile)",
+        "note": "BNFC 2020-21 (p. 358)."
       },
       {
-        "ind": "C. difficile — oral",
-        "val": "7,5 mg/kg/dose oral",
+        "ind": "EV — 2 meses–17 anos",
+        "val": "7,5 mg/kg",
         "max": "500 mg/dose",
-        "freq": "3 doses/dia × 10 dias",
-        "note": "Vancomicina oral é superior em casos graves"
+        "freq": "Cada 8 h; 1 mês: carga 15 mg/kg, depois 7,5 mg/kg cada 8 h",
+        "note": "BNFC 2020-21 (p. 358)."
       },
       {
-        "ind": "Giardíase",
-        "val": "15 mg/kg/dia",
-        "max": "750 mg/dia",
-        "freq": "3 doses/dia × 5–7 dias",
-        "note": ""
+        "ind": "EV — RN",
+        "val": "Carga 15 mg/kg; depois 7,5 mg/kg: < 26 sem IGc cada 24 h; 26–34 sem cada 12 h; ≥ 34 sem cada 8 h",
+        "max": "—",
+        "freq": "7 dias (10–14 dias em C. difficile)",
+        "note": "BNFC 2020-21 (p. 358)."
       }
     ],
     "prep": "EV: pronto a usar em frasco (5 mg/ml = 500 mg/100 ml). Não diluir adicionalmente. Administrar em 20–60 min. Proteger da luz durante infusão. Compatível com SF, SG5%; incompatível com bicarbonato na mesma linha. Estabilidade: 24h após abertura do frasco.",
@@ -296,13 +295,14 @@ var DRUGS_ANTIBIOTICOS = [
       "Neuropatia periférica com uso prolongado",
       "↑ INR com varfarina"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Metronidazole (p. 358)",
+    "review": ["Dose para giardíase (15 mg/kg/dia) removida por não ter sido verificada neste BNFC."]
+  
   },
   {
     "id": "aciclovir",
     "name": "Aciclovir",
     "category": "antibiotico",
-    "src": "original",
     "class": "Antiviral — inibidor DNA polimerase viral (HSV, VZV, CMV)",
     "brands": "Zovirax 250 mg pó EV; comp. 200/400/800 mg; susp. 200 mg/5 ml",
     "indication": [
@@ -314,32 +314,32 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Encefalite HSV / Infecção neonatal EV",
-        "val": "20 mg/kg/dose EV",
+        "ind": "Herpes simples — EV",
+        "val": "RN e 1–2 meses: 20 mg/kg; 3 meses–11 anos: 250 mg/m²; 12–17 anos: 5 mg/kg",
         "max": "—",
-        "freq": "cada 8h × 14–21 dias",
-        "note": "Hidratação adequada obrigatória — nefrotóxico"
+        "freq": "Cada 8 h; RN/1–2 meses 14 dias (≥ 21 se SNC); restantes ~5 dias",
+        "note": "BNFC 2020-21 (p. 440). Confirmar LCR negativo para HSV antes de parar."
       },
       {
-        "ind": "Varicela grave EV",
-        "val": "10–15 mg/kg/dose EV",
+        "ind": "Varicela / zoster — EV",
+        "val": "RN e 1–2 meses: 10–20 mg/kg; 3 meses–11 anos: 250 mg/m²; 12–17 anos: 5 mg/kg. Imunocomprometido: 500 mg/m² (3 meses–11 anos) ou 10 mg/kg (12–17 anos)",
         "max": "—",
-        "freq": "cada 8h × 7–10 dias",
-        "note": ""
+        "freq": "Cada 8 h; ≥ 7 dias (RN/1–2 meses), ~5 dias nos restantes",
+        "note": "BNFC 2020-21 (p. 440). Encefalite: RN 10–20 mg/kg cada 8 h durante 10–14 dias."
       },
       {
-        "ind": "Varicela oral (imunocompetente > 2 anos)",
-        "val": "20 mg/kg/dose oral",
-        "max": "800 mg/dose",
-        "freq": "4×/dia × 5 dias",
-        "note": "Iniciar < 24h do exantema"
+        "ind": "Varicela / zoster — oral",
+        "val": "1–23 meses: 200 mg; 2–5 anos: 400 mg; 6–11 anos: 800 mg 4×/dia; 12–17 anos: 800 mg 5×/dia",
+        "max": "—",
+        "freq": "4×/dia × 5 dias (12–17 anos: 5×/dia × 7 dias)",
+        "note": "BNFC 2020-21 (p. 440)."
       },
       {
-        "ind": "Profilaxia oral",
-        "val": "20 mg/kg/dia",
-        "max": "400 mg 2×/dia",
-        "freq": "2 doses/dia",
-        "note": ""
+        "ind": "Herpes simples — profilaxia no imunocomprometido, oral",
+        "val": "1–23 meses: 100–200 mg; 2–17 anos: 200–400 mg",
+        "max": "—",
+        "freq": "4×/dia",
+        "note": "BNFC 2020-21 (p. 440)."
       }
     ],
     "prep": "EV: reconstituir 250 mg em 10 ml SWFI (25 mg/ml); 500 mg em 20 ml. Diluir em SF (concentração ≤ 7 mg/ml — OBRIGATÓRIO para evitar cristalização renal). Concentração máxima ABSOLUTA: 7 mg/ml periférico e central. Administrar em 60 min mínimo (1–2h preferível). ⚠️ Concentrações > 7 mg/ml causam flebite grave e cristalização intratubular renal. Estabilidade: 12h a 25°C após reconstituição.",
@@ -351,7 +351,7 @@ var DRUGS_ANTIBIOTICOS = [
       "⚠️ Neurotoxicidade (confusão, tremor) em insuf. renal",
       "Ajuste obrigatório se TFG < 50 ml/min"
     ],
-    "source": "Formulário de Pediatria 3ª Ed.; BNF for Children 2023-24"
+    "source": "BNFC 2020-21, Aciclovir (p. 440)"
   },
   {
     "id": "flucloxacilina",
@@ -368,25 +368,25 @@ var DRUGS_ANTIBIOTICOS = [
     ],
     "dose": [
       {
-        "ind": "Infecção moderada oral",
-        "val": "12,5–25 mg/kg/dose oral",
-        "max": "500 mg/dose",
-        "freq": "4×/dia (jejum)",
-        "note": "Tomar 30 min antes das refeições"
+        "ind": "EV — infecções por estafilococos produtores de beta-lactamase",
+        "val": "Criança: 12,5–25 mg/kg; RN: 25 mg/kg",
+        "max": "1 g/dose",
+        "freq": "Criança cada 6 h; RN < 7 dias cada 12 h, 7–20 dias cada 8 h, 21–28 dias cada 6 h",
+        "note": "BNFC 2020-21 (p. 373). IM: 12,5–25 mg/kg cada 6 h (máx. 500 mg)."
       },
       {
-        "ind": "Infecção grave EV",
-        "val": "25–50 mg/kg/dose EV",
+        "ind": "EV — endocardite, osteomielite, abcesso cerebral, meningite estafilocócica",
+        "val": "Criança: 50 mg/kg; RN: 50–100 mg/kg (osteomielite, abcesso, meningite)",
         "max": "2 g/dose",
-        "freq": "4–6×/dia",
-        "note": ""
+        "freq": "Criança cada 6 h; RN conforme idade (12 h, 8 h, 6 h)",
+        "note": "BNFC 2020-21 (p. 373)."
       },
       {
-        "ind": "Osteomielite / endocardite",
-        "val": "50 mg/kg/dose EV",
-        "max": "2 g/dose",
-        "freq": "6×/dia × 4–6 semanas",
-        "note": ""
+        "ind": "Oral",
+        "val": "RN: 25 mg/kg; 1 mês–1 ano: 62,5–125 mg; 2–9 anos: 125–250 mg; 10–17 anos: 250–500 mg",
+        "max": "—",
+        "freq": "4×/dia (RN < 7 dias 2×/dia; 7–20 dias 3×/dia)",
+        "note": "BNFC 2020-21 (p. 373). Fibrose quística: 25 mg/kg 4×/dia (máx. 1 g/dose; máx. 4 g/dia)."
       }
     ],
     "prep": "EV: reconstituir 250 mg em 5 ml SWFI; 500 mg em 10 ml; 1 g em 15–20 ml. Diluir em SF. Concentração ≤ 40 mg/ml. Administrar em 15–30 min. ⚠️ Extremamente instável — preparar imediatamente antes e administrar em < 1h após reconstituição (hidrólise rápida do anel beta-lactâmico). Oral: tomar em jejum (30 min antes refeição — absorção reduz 50% com alimentos).",
@@ -399,7 +399,7 @@ var DRUGS_ANTIBIOTICOS = [
       "Ineficaz em MRSA",
       "Absorção oral reduzida com alimentos"
     ],
-    "source": "BNF for Children 2023-24; GOSH Drug Formulary 2023"
+    "source": "BNFC 2020-21, Flucloxacillin (p. 373)"
   },
   {
     "id": "piperacilina_tazobactam",
